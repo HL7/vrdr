@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="images/favicon.ico" />
+
+        <script src="bundles/vendor/jquery.min.js?v=wNQJi8izTG-Ho9dyOYiugSFKU6C7Sh1NNqZ2QPmO0Hk"></script>
+        <script src="bundles/vendor/bootstrap.min.js?v=j0NHkhZ1vyapUzvRjB9N8DMjnMo6Y4JpsbeMfCUxsd8"></script>
+
+        
+
+        
+
+            <link rel="stylesheet" href="bundles/app/igViewer.min.css?v=IhsJkRY_hW93A1jbw0aWVDU2WQsFLKJTXMhxtWKPpF8" />
+
+            <script src="bundles/app/treetable.min.js?v=9i1fVUidvUtR0JjiBJDPI_4HtH_4r2I8kbW4A_1g5Ko"></script>
+
+        
+
+        
+
+    
+
+    
+
+            <style type="text/css">
+                html, body {
+  padding: 0;
+  margin: 0; }
+
+#ig-viewer {
+  position: relative;
+  height: 100%; }
+  #ig-viewer .ig-view-content {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+    height: auto !important;
+    margin-bottom: -155px;
+    padding-bottom: 155px; }
+    #ig-viewer .ig-view-content #ig-view-treetable {
+      min-height: 100%;
+      width: 70%;
+      margin: 0 auto; }
+      #ig-viewer .ig-view-content #ig-view-treetable .segment-default-header {
+        margin-bottom: 0;
+        padding-left: 10px; }
+      #ig-viewer .ig-view-content #ig-view-treetable .container-fluid {
+        padding: 0;
+        width: 100%; }
+        #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          display: table;
+          border-top: 1px solid #e6e6e6; }
+          #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .tree-panel {
+            width: 300px;
+            height: 100%;
+            float: left;
+            padding: 10px;
+            overflow: hidden;
+            position: relative; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .tree-panel .treenode a {
+              color: black;
+              cursor: pointer;
+              text-decoration: none;
+              text-overflow: ellipsis;
+              overflow: hidden; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .tree-panel .ui-resizable-handle {
+              right: 0; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .tree-panel table {
+              width: 100%; }
+              #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .tree-panel table td:first-child {
+                min-width: 170px;
+                max-width: 300px;
+                text-overflow: ellipsis;
+                overflow: hidden; }
+          #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel {
+            width: 40%;
+            height: 100%;
+            float: right;
+            padding: 30px 45px;
+            position: relative;
+            border-left: 1px solid #e6e6e6; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel table {
+              width: 100%;
+              overflow: auto;
+              display: block; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel .preview-bar {
+              overflow: auto; }
+            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel.full-width {
+              width: auto;
+              overflow: hidden;
+              float: none; }
+  #ig-viewer .ig-view-footer {
+    background-color: #808080;
+    color: #eee;
+    height: 155px;
+    position: relative;
+    padding-top: 40px; }
+
+            </style>
+
+    
+
+
+    </head>
+
+    <body>
+        
+
+
+
+<header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 fhir-logo">
+
+                    <a href="http://hl7.org/fhir/STU3/">
+                        <img src="images/fhir-logo.png" alt="logo fhir">
+                    </a>
+
+            </div>
+            <div class="col-md-16 title">
+                <div>
+                    <a href="Introduction.html">
+                        Vital Records Death Reporting
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 hl7-logo">
+                <a href="http://www.hl7.org">
+                    <img src="images/hl7-logo.png" alt="visit the hl7 website" width="42" height="50">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                            <li>
+                                <a href="Introduction.html">
+                                    Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Background.html">
+                                    Background
+                                </a>
+                            </li>
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Profiles <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="Profiles.html">
+                                                Profiles
+                                            </a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+
+                                        <li>
+                                            <a href="VRDRDecedent.html">
+                                                VRDR Decedent
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="AutopsyPerformed.html">
+                                                AutopsyPerformed
+                                            </a>
+                                        </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="Extensions.html">
+                                    Extensions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Vocabulary.html">
+                                    Vocabulary
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Examples.html">
+                                    Examples
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Downloads.html">
+                                    Downloads
+                                </a>
+                            </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<div class="content container">
+
+        <div class="row">
+
+
+            <div class="col-md-24">
+
+                <div id="preview-content" class="item-VRDRDecedent">
+                    <h1 id="vrdr-decedent">VRDR Decedent</h1>
+<p>
+
+<img src="data:image;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAEnAQQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4&#x2B;Tl5ufo6erx8vP09fb3&#x2B;Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3&#x2B;Pn6/9oADAMBAAIRAxEAPwD3&#x2B;iiuNll1TWdd1eOPWrvT7WwuFto4rSOLLnyo5GZjIjHOZMADAwO&#x2B;amUlFXY4xcnZHZUVyH9kap/0Nutf982v/wAZo/sjVP8Aobda/wC&#x2B;bX/4zWft4GnspHX0VyH9kap/0Nutf982v/xmj&#x2B;yNU/6G3Wv&#x2B;&#x2B;bX/AOM0e3gHspHX0VyH9kap/wBDbrX/AHza/wDxmj&#x2B;yNU/6G3Wv&#x2B;&#x2B;bX/wCM0e3gHspHX0VyH9kap/0Nutf982v/AMZo/sjVP&#x2B;ht1r/vm1/&#x2B;M0e3gHsZHX0Vx/8AZOqf9DbrX/fNr/8AGaP7J1T/AKG3Wv8Avm1/&#x2B;M0fWIB7GR2FFcd/ZWqf9DbrX/fNr/8AGaP7K1T/AKG3Wv8Avm1/&#x2B;M0vrEA9jI7GiuO/srVP&#x2B;ht1r/vm1/8AjNJ/ZWqf9DZrX/fNr/8AGaPrEB&#x2B;wmdlRXG/2Xqn/AENmtf8AfNr/APGaP7L1X/obNa/75tf/AIzR9ZgHsJnZUVxn9l6r/wBDZrX/AHza/wDxmj&#x2B;zNV/6GzWf&#x2B;&#x2B;bX/wCM0vrMA9hM7OiuL/szVf8AobNZ/wC&#x2B;LX/4zR/Zuq/9DZrP/fFr/wDGaPrNMPYTO0ori/7N1X/obNZ/74tf/jNH9m6r/wBDZrP/AHxa/wDxmj61TH9XmdpRXFf2bqv/AENms/8AfFr/APGaP7O1b/obNZ/74tf/AIzS&#x2B;tUw&#x2B;rzO1orif7O1b/obNZ/74tf/AIzR/Z2rf9DZrP8A3xa//GaPrVMPq8ztqK4j&#x2B;z9W/wChs1n/AL4tf/jNH9n6t/0Nms/98Wv/AMZo&#x2B;t0w&#x2B;rzO3orh/sGr9vFms5/3LX/4zW14R1W41XRN17Isl3BPPbSSKu0SeXK0YfHQEhQSBxkmtKdaNR2iROlKGrN6iiitTMK5DSP&#x2B;Q34n/wCwoP8A0mgrr65DSP8AkN&#x2B;J/wDsKD/0mgrGv8BrS&#x2B;I2KKKK4jpCiiigAooooGBpKU0lACUGig0hlWbUbG3kljmvbeN4lV5FeVQUVjhSQTwCQQPU1y2ufEfT9D1u60t9J1q8ltI1luJbK1EkcSsMgsdwIGPase98Ia2PEF5diEX0K6rDqSeZKq/akA2&#x2B;U3OQYsbk/hPfnpBe&#x2B;C5fEfxM197y41mx097W3UPaSGGO6&#x2B;XDIxwQ4HoPWrjGOl3/AFYlyev9dT0bTdRtdX0231Cxl821uEEkb4IyD7HpUc2r2MGsW2lST7b65jeWKLYx3Kv3jnGBjI6mvJfiP4cP2uy0uw8LXt1b22nCGxubeKadY3BOFO2VAh6HcwfPocUtz4ZU694L1jVfDuq37y2MSXzwrIzx3CqgRpBuGwLznOOhzmmqcZO99Nf1t&#x2B;RLnKKtbW3&#x2B;X&#x2B;Z6xp2pf2i14PsV5a/ZrhoM3UWzzduPnTn5kOeDV2vE9Z0LXpdC11IdOvntX8US3FzbpC5e4tio5VQyGRc9lYZ9RjNJbeH72fwPDZW9nrccDa/Ay2stjJbvbRYG8oDJIwTnO4twc0lTTSd&#x2B;342/zKc2m1bv&#x2B;F/8j2PUtQtdJ0641C&#x2B;l8q1t0Mkr7S21R3wASfwpVv7R47dxcRgXK7oQzbTIMbuAeenNeR33gTyrTxzotjpN4dOjjt7jS4i0hVphG24oxPzHJ5GT2HpW1ZeHm1DwBounaLo95pDpeJM8l4Ck1oyHLyqrMSSxBAHTDcgCp5I9&#x2B;34/5D5pXtbv/X9f8P6JbXNveW6XFrPFPBIMpJE4ZWHqCODUhrm/Bej3mkabeG8T7Obu8luY7IOGW1VjwgI4JP3jjjJOK6Q1nJJPQ0Tb3CiiioGJQaKDSGJSUtJQMQ0UGikMSqvgH/jxvv8AsI3v/pTJVqqvgH/jxvv&#x2B;wje/&#x2B;lMldeD&#x2B;JnLivhR19FFFeicQVyGkf8hvxP8A9hQf&#x2B;k0FdfXIaR/yG/E//YUH/pNBWNf4DWl8RsUUUVxHSFFFFABRRRQMDSUprlfiJpEmseCb&#x2B;O3yLu3UXVsy9RJGdwx78EfjRp1Czex1FBryU6onja/utajANtpvhtyR/cuZ0JYD6KuPxrnPhtYfZvFnhvy9OOhtLYPPJIbxpRqylcAhfupg5YrnI9K09lvfdf8AB/y/Eh1NE11/4H&#x2B;Z75SV4DbeH9J074XXHjC3klsfEENzKYbyO4ZS7CYqE252kEcYxz&#x2B;dQ&#x2B;NoGvPFOv3914fa8lh0&#x2B;0droXbQ/wBnOyf6zYvLgHnGDjbS9nruPnt/XnY&#x2B;hKQ1zUiPF8MpEkvBeuukEG5ByJj5X3vx615nb6Jp3hbwp4P8Q6IZLTW72a1SREuGIvA&#x2B;N6lCSMfQDH5VKp3k436pfff/ACG52ipeTf3W/wAz3GkrzC3&#x2B;IviO&#x2B;8RTLY6JHcaRDqJsZEjtbl5wA20yeYF8oAddpOf51paZ4x13VdbvLiKz01PD9reyWLh5iLtmQHLgfdIJH3etS6btf&#x2B;un&#x2B;ZXOr2/r&#x2B;tDvTVe5vbWyERurmGASyCKPzZAu9z0UZ6k9h1rzjwt8Q/Eeu6lZTz6LGdGvS4Vra2ud9sFBwXkZfKYEjHynv&#x2B;FYmpeIvEHiez8M6re2&#x2B;lw6Pc6/b/ZFhkc3C7XZcSA/Keh6Yx6VSoy5kn5CdRWbR7RSGvMbf4ieIr7xFMtjosdxpEOomxkSO1uXnADbTJ5gXygB12k5/nTNV8f&#x2B;KbP&#x2B;3b&#x2B;3sNJfSdGv/s03mNIJpFLKBtAOARu5J456cVKpSbS7/wDA/wA0U6i1/rv/AJHqNFedWF94rl&#x2B;Lt9am5sTpi20cjQGSU7YSTtKr90S56npivRazlGyT7jjJSbsJQaKDUFiUlLSUDENFBopDEqr4B/48b7/sI3v/AKUyVaqr4B/48b7/ALCN7/6UyV14P4mcuK&#x2B;FHX0UUV6JxBXIaR/yG/E//YUH/pNBXX159BBrkniPxM2m6jp9vD/aKgpc2LzMW&#x2B;zQc7lmQY6cY/Gsa/wGlL4jqqKwvsniv/oNaL/4KJf/AJJo&#x2B;yeK/wDoNaL/AOCiX/5Jrjt5nTc3aKwvsniv/oNaL/4KJf8A5Jo&#x2B;yeK/&#x2B;g1ov/gol/8Akmi3mFzdorC&#x2B;yeK/&#x2B;g1ov/gol/8Akmj7J4r/AOg1ov8A4KJf/kmi3mO5umkrD&#x2B;yeK/8AoNaL/wCCiX/5JpPsniv/AKDWi/8Agol/&#x2B;SaLLuFx2meEtD0bTr3T9PsFgtb1ma4jWRjvLDB5JyOOwxjtS/8ACLaME0lVs8f2R/x4kSuDEMYxnOWGAAQ2c1H9k8V/9BrRf/BRL/8AJNH2TxX/ANBrRf8AwUS//JNGvcPkZ1n8MfBthqa6jBocX2pX8wNJLJIA3XO1mIzn24rZbw/pb3mo3TWgabUYVgu2LsRKgBAGM4HBPTFVvsniv/oNaN/4KZf/AJJo&#x2B;y&#x2B;K/wDoNaN/4KZf/kmhtvRsa01sXbbRbC00NdGhhYaesJgETSM2EIxt3E7uh9eKxdG&#x2B;HXhLw/qC32maNFFdIPkkeR5SvuN7HB9xzV37L4r/AOg1o3/gpl/&#x2B;SaT7L4q/6DWjf&#x2B;CmX/5JpXd277hZWSsVZ/h74VudfXXJNIT&#x2B;0RMs/nJLIn7wHIYqGCk556c96mTwT4bi8SHxAmlQrqhYsZwzfePVtuduT64zUn2XxV/0GdG/8FMv/wAk0n2XxV/0GdG/8FMv/wAk0rv&#x2B;b8x2T6FSx&#x2B;HvhXS9cXWbHSEt79WZlkjlkCqWBBwm7aOCeMVHH8N/CMOpf2jFosSXfnrcCRZHG11O4EDdgc9hwfSr32XxV/0GdG/8FMv/AMk0fZfFX/QZ0b/wUy//ACTRzSvfm/MLJ9CpP8PvCtzry63JpCf2iJln85JZE/eA5DFQwUnPPTnvVufwlodzY6lZS2W631Kbz7tPNceY&#x2B;Qc5zkfdHAwOKT7L4q/6DOjf&#x2B;CmX/wCSaT7L4q/6DOjf&#x2B;CmX/wCSaV3/ADfmPrexJceFtEutftddmsFbU7VdkU&#x2B;9gVHPUA4PU9Qa2Kw/svir/oM6N/4KZf8A5Jo&#x2B;y&#x2B;Kv&#x2B;gzo3/gpl/8Akmpfa41psjboNYf2XxT/ANBnRv8AwUy//JNBtfFP/QZ0b/wUy/8AyTU2Xcq77G3SVifZfFP/AEGdG/8ABTL/APJNH2XxT/0GdH/8FMv/AMkUrLuF32No0VifZfFP/QZ0f/wUy/8AyRR9l8U/9BnR/wDwVS//ACRSsu47vsbVVfAP/Hjff9hG9/8ASmSs77L4p/6DGj/&#x2B;CqX/AOSKu/DoTLpN0Lh0kmF/eB3jQorN9okyQpJIHtk/WuvBq0nqc2JeiOzooor0DjCuQ0j/AJDfif8A7Cg/9JoK6&#x2B;uO0xPM1fxUm5l3akBuU4I/0WDkVjX&#x2B;A1o/EbVFZmjaN/Y0Uqf2lqN95jA7r6fzSvsOBgVp1xu3Q6V5hVe6v7Oy2/a7uCDcCV82QLkAZOM&#x2B;gqxXNeJdDfWda0FntEubK3mka5EhXaAV4yD15HvQld2YPRGydW00WIvjqFoLQnAn85fLJ/3s4pRqunNbR3K39qYJW2RyiZdrt6A5wTwePauEl8Nava6PqFrZ6PbTRvrDzxW7GH/UFcApvDIp&#x2B;o4Haq9p4P1ZtBisrrTVCtriXUkBljIEG0Bvu4X1GAB7CtFCL69v0Icmunf9f6&#x2B;Z3w13R2SN11WxKyvsjYXCYdvQc8nkcVLcanp9pcx21zfW0M8n3IpJVVm&#x2B;gJya4G/8CM9p4m&#x2B;z6NbiaeVDp&#x2B;3YMKMZ28/J39Kra74Q1efWr&#x2B;f&#x2B;yn1KC8SPDx3FvG8W1QCMyIxHTqpFChF9f60G5SXQ9LS6t5LmS3SeJp4gDJErgsgPTI6jNc3feJ9VTX7vStL8P/2gbVEeST7asWNwyOGH171r2UTxanchtMSJBFGovt6l7jA6MAM/L7&#x2B;vFcZr3h29m8Z3epnwx/a8DLF5D/b1t9jKOTjOTz6jtUwUebUbb5bo3n8YRw&#x2B;MP7BntDGhCKt0ZOPMZdyoRjjOCBz2rS0fV/7W&#x2B;3/uPK&#x2B;yXklr9/dv24&#x2B;boMZz0rEuPDU&#x2B;qapr7XUZgivIrc20wYEpKinkYOeDj0zSeGrfXtJ0u4e70tZLy61FpJUW4QBUbG6QHnOCD8vWi0bef/Df8ELyT8v&#x2B;AQ3vjy6s7nUWGgtLp&#x2B;n3HkT3S3agjnqEIyevr&#x2B;NXB40h/wCErTRpLRo4ZFTZdM/Bd13KpXHBOCOvUVS03wRZ3Ou6vqGtaYkjSXjSWrPJkMnuoOOvYirF34Zm1LVvEHnp5UF1Fb/ZZwwysiA/MADkYOPTNH7uyv2/yD39bf1qbWj6v/a32/8AceV9ku5LX7&#x2B;7ftx83QYznpWZp2valcXOtyz2sUtpY3DW8MdqjGd2GOoJx0I5470vguw1Ox0&#x2B;9OrQLDdXF485CurA7gORg&#x2B;oNUdBvZIG8ULZQpeXyalI62nnLGzAhRnJ6Drz7VPKrtLt/kO7aTff/ADNzw7rR1/SftrWptm814zGX34KnHXAq1ql7/Z2mz3nl&#x2B;Z5S7tm7G7npn1rl/C6&#x2B;IdI0S8t5/D/71JGmhX7ZH&#x2B;9LtkrkZ24B6nrXT29xeSXs8U1j5NuiKY5/ODeYSPmG0cjHr3qZxs9CovTU5iz8WanqXhfUL&#x2B;2tIIbyzXeVuVZVZRkn5Qcj5Rgc8n0rptKunvtIsruUKJJ4EkYKOASoJxVLxCLTT/COpIPJtoRayqqjCLllOAO2ST&#x2B;JNTeHv&#x2B;Ra0v8A69Iv/QRRKzi2l1BXTSb6P9DSooorE0EoNFBpDEpKWkoGIaKDRSGJVXwD/wAeN9/2Eb3/ANKZKtVV8A/8eN9/2Eb3/wBKZK68H8TOXFfCjr6KKK9E4grkNI/5Dfif/sKD/wBJoK6&#x2B;uO0wsur&#x2B;KmRN7jUgVXOMn7LBxmsa/wABrR&#x2B;I2qKzNGvtUvYpW1TR/wCzXVgEX7Ss28euV6Vp1xtW0OlO4UUVxnjfWdXsLvT7PSZLhGmSSSQ2lotzLhcAfISAFyeTQld2B6K52dFebapr3iXStN0K0vL8W15eLJJcXTQwgpjBCYdljHB5yRU/9ueI7uz8PQR39tBdX0s8UlwixzIyqOH&#x2B;Ulc&#x2B;wOM/lV&#x2B;zfcjnR6EapwalaXOoXVhFLuubUIZk2kbdwyvOMHI9K4OXxRrdvoU0M2owpdR6wdOfUnhUKiDneV&#x2B;7/T&#x2B;dZ0WuXukt4t1G21C31O5RbRBexRqEbOV3bQccdOuM01Sbv/Xb/Mbmer0GvNYfE2vReHNcuG1KC7a2jjeC5H2curFsFWSJ3XHoT7/h1NlHqcH9mjUPEcLzSyO7RG3RDOpUYjXnPy8nI5PeodNrqNTv0Nu4uYLOBp7meOCFfvSSuFUfUmqj65pEVvHcSarYpBKSI5WuECuR1wc4Ncx4zNp/wk/h0awV/sfdLv8AM/1fm7fl39sfX37ZrN1YeFhrGh/ZP7N/sz7ZN9pxt8jf5S&#x2B;vy/3enGfenGCaXmEpWbXY9Dtrq3vIFntZ4p4W&#x2B;7JE4ZT9CKkNcV4S&#x2B;x/8Jbrv9i&#x2B;X/ZG2L/U/6rzsc7O3T09q7U1nONmXF3Cq0NhZ21xLcQWkEU8xzLIkYVn/AN4jk/jVmkqCgNJSmkpDILm0tr2BoLq3inhbGY5UDKcdODT440hjSKJFSNAFVVGAoHQAU&#x2B;kNABRRRUjEoNFBpDEpKWkoGIaKDRSGJVXwD/x433/YRvf/AEpkq1VXwD/x433/AGEb3/0pkrrwfxM5cV8KOvooor0TiCuQ0j/kN&#x2B;J/&#x2B;woP/SaCuvrj9KZU1nxQzEKo1MEknAA&#x2B;ywVjX&#x2B;A1pfEbNFVbLUrHUVZrG9trpUOGMEquFPvg1arjtY6QrmPE/hKXxBe2t3DqQtXgRkCS2qXCHPcK3APvXT1yXi7VZtK1vw/Ihu3iaWbzLe1BZpsJwNo&#x2B;9z60435lYUtmauneHLO10K30q8VdRjh53XUYcE5J4ByABnAHYVdi0vT4FgWKwtY1tyTCEhUeUT1K8cZ9q5yfxdBf2FjcWU95ZM2qR2c0Ulqpk3HOY2DH5QePmGSPSpbnxvbpPqFta6XqlzLZF0kaK23orL6kHv8A0qmpat/1/VxLl2N5tMsHgnhaxtjFO5kmQxLtkY9WYY5PA5NJDpWnW8ciQ2FrGkiBJFSFQHUdAcDkcniuEvPF95qHg7TdUeK7spRfwrM0aMizLkk7OSWUjj610MHjfS5dP1C7nhvbQ2G3z4LmHZIN33cLnv2ocJJP&#x2B;u3&#x2B;YKcXY1YtD0iCGaCHSrGOKYASxpboFkx03ADnHvVmS0tpJIZJLeJ5ICTEzICY8jB2ntx6Vxll4mkv/GrS&#x2B;TqltaRaS8rWdxEyMWEn3gmcEkcAj6VfXxxbzRXqLpWqw3lvB5621xa7XkXOMqM8gEjPSplGS1GnHY6O5tbe9gMF1bxTwt1jlQMp/A1UfQtIkt47d9KsWgjJKRtboVUnrgYwKwNL8dRy&#x2B;GYNT1Gxu455JBCkUVuf9Ic5I8oEncOOpPWtKz8U219ZfaILHUWdbkW0tubf97Cx7uueFA5JocJJtDUotJmxbWtvZwLBawRQQr92OJAqj6AVIaw/FS6qmky3el6r9ha1iklcfZ1l80BcgfN93p1965qW/wDFNl4PttUOqvdteeTI8iWKFrOIqSzBRw/br6VKjza3G5culj0GkrD8KX8moaQZpNWg1QCQhLiKLyyRgcOn8LdePTFc99r8T3lxr13Z63HHFp1zIkdpJaIyuqjOC4wRxx/Wk4atN7DUrpNdTvTSVxmoeI9R1PRNGGiuLbUNSRpc7A/lqiktweOWwAT60&#x2B;41LU9X8FQa1pmqiylitnlnUW6SeY6ryvzfd5B/Oh02twU02rdTr6Q153eap4g03wbaatceIdz3skBEn2KMfZ0YEtwB83bsOnvXT&#x2B;FLt77SWuG1r&#x2B;11aUhZ/sv2fAAHy7fr396JU2k3fYI1E2l3N2ivPn1W/wBOt/EeoxXc81wNR&#x2B;x28U8haGIErghe33j&#x2B;Q4rZ0C91WDxBfaJqt6l&#x2B;8UCXEdwsIiODwVIHHXp/nCdN2v8A13/UfOr2/rex09BqC8&#x2B;1G0kFkYRckfIZs7AfU45NchbXeoat8PdQuLvUJ1u4TORPbkRN&#x2B;7JIHyjgcYPtWajdXLb1SO1pKoaFI83h/TpZXZ5Hto2ZmOSxKjJJq/SkrNoIvmSYhooNFSWJVXwD/wAeN9/2Eb3/ANKZKtVV8A/8eN9/2Eb3/wBKZK68H8TOXFfCjr6KKK9E4grj9KVX1nxQrAMp1MAgjII&#x2B;ywV2FchpH/Ib8T/9hQf&#x2B;k0FY1/gNaXxF6y02x05WWxsra1VzlhBEqBj74FWqKK473OkKwvEHh&#x2B;fWbnT7m21JrGeyZ3jdYRJywx0PGP5&#x2B;1btFCdndAcjD4IKWcKzao892NTTUZ7hoQPNZf4QoPyj861tN0EWB1fdcGRdRuHmICbTGGGMdTn61sUU3JtWf9bf5ISik7/11/wA2chb&#x2B;C7mLQ7TS59ZM8dpdx3EJNsF2ohzs4POTnkn8Kn1DwbFqM&#x2B;uSS3jKNTWHaFTBhaMcHOeeee1dHczfZrWWfypJfLQv5cS7nbAzhR3J7VTh1m0lnsrZ/NguryEzR280ZVwoAJDdgRnpmnzSev8AX9aByxSt/X9amDD4OvmvLi8v/EM11czWL2XmLbrEUBOQV2nt&#x2B;uetRaD4EOj6hJdzaklwXtWtSsVmkHBIOflPJ4PJyTmuyrlz41tYra&#x2B;mubWYNb6g1hFFB&#x2B;9kncYxtGByfT260uaUrpf1/Vw5YrV/1/VikfAMkvhyHSbnV/ONrMJbSRrRMRAD7rISQ45PWtDSvDl/pOnfZodVt0lNysrywadFEHjAGUKrxz/e61at/FOnS6W1/cLc2UazCB47mBlkRzjAKjPXI/OtmiUp63CMY9CtqNp/aGmXdlv8v7RC8W/Gdu4EZx361lS6DepoenWGn6zLZT2UaoJ0iDLIAu35kJwfXrxWpJqVpFqUGnvLi6nRnjj2n5lXqc4xVk1ndo00Zzmm&#x2B;GbrS7eUwau3225uluLq4NuuJQOqBOig&#x2B;o5qjN4M1F7rUfJ8RSW9jqEzSz28Vqu4huoDk5HHH9K7GkNPnd7/ANf1oLkW39f1qcrceAtKvbyFr1TPZW1qttbWuWTy8HJYsGBJNT6f4UTTNG1XSre6ItLwyeSpQn7OHXGMlvmx&#x2B;FNi8b6bcagLa3t7&#x2B;WAzCD7aluTb7ycY3/Xjp&#x2B;lVofiDpkhV5bHU7e0aQx/bJrfEAbOPvAnvVP2rVhLkTv2LN/4Xku/DOnaTDqHkS2RiZLjyd2TGMA7Sfx6mtLSLPUrO3dNS1X&#x2B;0ZS2Vk&#x2B;zrDtGOmF6/WtEHIyKQ1m5t3TLUUrWOHtNIbVv&#x2B;Ek0i6t721Et&#x2B;bmG6MRCH7u0qT1OV/I9a07Pwzf2i3102uSS6vdIqC9a3XEar0AjziuloodR7IORXuzKnsdVk&#x2B;1&#x2B;TrPlebGiwf6KreQw&#x2B;83P3s&#x2B;h6Vzh0PUPDfhbVYGvbjVY7iJ1it7ezAZXfILcEkjJ59BXb0GpU2tB8q3M7Qo3h8P6dFKjJIltGrKwwVIUZBFX6WkqZO7bHFcqSENFBoqSxKq&#x2B;Af&#x2B;PG&#x2B;/7CN7/6UyVaqr4B/wCPG&#x2B;/7CN7/AOlMldeD&#x2B;JnLivhR19FFFeicQVx2mBm1fxUqPsc6kArYzg/ZYOcV2NchpH/Ib8T/APYUH/pNBWNf4DWj8RLo1jqllFKuqax/aTswKN9mWHYPTC9a06KK4276nSlYK5HxZo51nxH4ehlt7iWxzcC5aLcAFKDAZl6AkY68111FCdncGrqx5RaeFri0sbG&#x2B;itNRF/bawIos&#x2B;YTHbBz0XsmOc&#x2B;9MubC/fxtHeQaFfW1wmqKZLlYZWV4i&#x2B;CfML7SCD0CDA716rPdW9qIzcTxQiRxGnmOF3MeijPUn0qWtFVaaf9dP8vxIdNNNf11/z/A88h8OeYfFuoTWNyb3zLlLMsHG5Wjx8i9GznGcGqDeHYodS8K3t3od9cKbOOO5EKOWjlVVCFxkbQO/Tp3r1I0lJVGvw/Kw3BO/z/NP9DyW5sL9/Gsd5BoV9bXCaopkuFilZXiL4J8wvtIIPQIMDvWjJYFdP1lNR0HUruCXWppUNqhE0YwNsiDjcM55HFeg3d7a2EPnXlzDbxZxvmkCLn0yamyCAQcg9CKXtHZL&#x2B;un&#x2B;Q&#x2B;RXb/rr/meV3&#x2B;jarqvhCWS/stRu/s14rWKXIP2vyCRv3Kp5P1569qb4o037XHYw2fhnUBAtiBakxSyNC2T8rASAIRxy276cV6tSUe1f9elgVNf163PMp9CB1bwzqV/o1/dtJaIt20auWWYBQpcZG3HfPoetQ6tDqcOmeJ9GXRNSmlvb5rqKaKHdEULKfvZ5PHQA16nTZHSKNpJHVEUFmZjgADqSaPbO97f1e41Ttt5flY4I2U6fESO6j068udzKryXEDKluoTGY5Q20jn7pHXPeum0W3tDoTQWVldafCxkAiuFIdSScnkk8nkc1pWt5bX0AntLiG4hJIEkTh1J&#x2B;oqWs5ybXKxwjZ3Rwvhe/1HQ7C18PXHh&#x2B;/aeGUx/aI4x9nKFs7y/0JOPb3rHtm1ObwhN4Yi0DUhdzyuPPng8uBVMhbduPt7V6dPPDbQtLPKkUS9XdgoH4mop7&#x2B;ztZooLi7ghlmOIo5JArSH0UHr1HSq9pd3a3DksrX2HWsP2e0hgLFvLjVNx74GM1IaWkNYt3dzRKysFFFFSMSg0UGkMSkpaSgYhooNFIYlVfAP8Ax433/YRvf/SmSrVVfAP/AB433/YRvf8A0pkrrwfxM5cV8KOvooor0TiCuO0x/L1fxU&#x2B;1m26kDtUZJ/0WDgV2NchpH/Ib8T/9hQf&#x2B;k0FY1/gNaPxEujaz/bMUr/2bqNj5bAbb6Dyi3uOTkVp0UVxu3Q6V5hXM6/cRw&#x2B;L/AA0r20cjMbkrIxbdHiME7QCAc9OQfbFdNVS4020ur60vZod1xaFjA&#x2B;4jZuGG4Bwcj1oi7O/9bA9Uec3ut6xr1toOoXUOnx6bPrEP2dYnYzLhmHz54Pfpj6VqQ&#x2B;Ndbu9akFppaTabFem1dUt52mwDgvvC&#x2B;WPXBOf51ux&#x2B;CPDcV99tj0uNbjzRMHDuMODkEDOBz2HFPm8G&#x2B;H59XGqvpy/bRIJfMWR1&#x2B;cHO7AOM59ua154dtP8AhjNxlrZ/1qc5qHjHxBbf2teQ2enNp2l3nkS7y4ldcgDbg4zzyT69KsWl34hk&#x2B;I95bme1NitujtEXkwsRJwVHTzPXtXRy&#x2B;HNJmtL61ktMw30vnXK&#x2B;Y/zvkHOc5HQdMUs/h7SrjWINWltFa&#x2B;gXbHLuYYHPYHB6nqKnmja1v6t/mU4yd9f6ueZYvNR0rwnFa2Wlpay3U2y2m8xozIGfO4EsSuOevUntWwviSTRbTUxp&#x2B;n2y3M&#x2B;uSWqYErITgfOygsxPsuPYV2UHhzSbWKyjhtNqWMjSW48xzsZs5PJ56nrmmz&#x2B;F9FubO6tZrFZIbqc3Mqs7cyHqwOcqfpim6kW/L/goOR3v/XX/ADOck8W69BoSzzaZDHffb0tV8yKWOKZW6MocBhzxzXS2P9u&#x2B;bb/2h/Z3l&#x2B;SfP&#x2B;z78&#x2B;bu425/h2&#x2B;vOagtvCWh2ditlBY7LdbhboJ5rnEgxhsls9hx0rQbTbRtUTUjFm7SIwrJuPCE5IxnHX2qJSj0/rT/ADHFS6/1r/kcb4m/5GzUf&#x2B;xbn/8AQzWtZf8AJNIf&#x2B;wSP/RVa9zoun3l3JdT2&#x2B;&#x2B;aS2a0dt7DMROSuAcfj1pLjTUXQZdMs1WNPszQRBmJCjbtGTyamUk4cv9df8y4r3&#x2B;b&#x2B;un&#x2B;RwcOnWmoL4R0e6Tbps9g1xLBG3lrLIEU5bGMnqa6LwDK8nhtozK0sUF1LFA7NuzGG&#x2B;XnvTrPwpFe&#x2B;G7HTfElraXMlmuyNoGcAKAAPm4OSAM9q1U0HTI/sPl2iILDJtghIEeRg8A85981dSad1/W9/&#x2B;AZwg1Z/1tb/AIJR8V&#x2B;H5vEFhHFBc&#x2B;RLG24EEqTnHG4ZwPwOeKyNc0mLTbHwzCdk00GpxRrOYwGIJYnnnrxn1IzXWafp1ppVoLWyi8qEMzBdxbknJ5JJ6msrxDpWo6pe6T9me1W0tbpLmfzCwkJU8BcAjoT19qiErSSvpcuUbpvrY3aQ0tIaxNQooopAJQaKDSGJSUtJQMQ0UGikMSqvgH/jxvv&#x2B;wje/&#x2B;lMlWqq&#x2B;Af8Ajxvv&#x2B;wje/wDpTJXXg/iZy4r4UdfRRRXonEFchpH/ACG/E/8A2FB/6TQV19cdpkay6v4qjcZR9SCsPUG1grGv8BrR&#x2B;I2qKzNG8PaX4fili0u1&#x2B;zpKwZx5jPkj/eJrTrjduh0q/UKy9Z8RaV4fjifVLsW6ykhPkZi2OvCgnuK1K5vxTpOt6lJaPpN5BEke8TRTSyxB84wd0RDcY6ZAoW&#x2B;oPYtXXi3QrLS7fUp9RjW0ueIXCs2/1wAM8d&#x2B;OKydD8X27abrGp6pqKGxh1F4beXZx5eAVACjLdfc1St/Bms6dpuiPY3Ng2o6Y8/E&#x2B;8wushJzwMggY/wAaB4L1f&#x2B;zJibqxOojVv7SiO1vJY4HysMZHOfWtbQ11/q/&#x2B;RF5af10Za0rxlbXeqa/dyair6LaJbtC4j&#x2B;5uB3dBu&#x2B;969K05PG3hyLT1v31SMWzStErbHJZhjOBjJAyOQMc1hzeEdcvbTxC17cad9r1WOAL5O9Y0Kdc5BOMY55z7Ve8SeF7/AFGXS7zTJ4I7qxRo9ksksaMrADhoyGGMdutJqF/67f5heRpT&#x2B;LdCgs7W7fUEMN0CYSiM5YDrwASMd8jipv8AhItJOrLpa3Ya8bH7tUYgZGQCwGAcc4Jrlp/B2rHR7G3tYtLtryEysbiK4uA0LM33kYklsjqG4zV9PDurp4qi1JLi0hhBX7RLC8gkugExh4/udc8jmk4w7j5p9jo9P1K01W0F1ZS&#x2B;bCWZQ20ryDg8EA9RXNDxZdHxeLHyIBpJuDZCfneZwm4jrjGfl6da6Oz/ALS/s8/bhaG9&#x2B;bAgLCPqdvXnpjNcQ3w5uzoyn&#x2B;2ro6qJftIQzn7KJt2S23bn156/yqYKPM&#x2B;bYcua2hqXus&#x2B;JZ/Euoabo0OltFZxxyH7V5gd9wzgFTjseuK2PD2tLr2jx3whMMmWSWInOx1OCM96xLnRvFEPiG91LS5dJQXkMSP8AaDIWQquCVAGOpPWtvw9oq6Do8diJjNICzyykY3uxyTjtSly8g1fmMHRdW15/CE&#x2B;qtImo3LySeWkirEsKIWBJK/eHy56Z5x710Hh/UJdW0Cxv51RZZ4g7CMEKCfTJNcn4ZlvNQ8CSWGiyWhvI55YpxdBwqqzMeCo64IPcVr6Fp/iTSdCtrCRtJZ4JERSpkIMI&#x2B;9ngfP6dqc0tV5r&#x2B;vyBN3Xz/ADLfiXWbrSoLSGwgjmvr2cQQiYkIpIyWbHOBjoK5vUfEeut4f1J/tEFlqWk3SR3H2eMSRzKxAGN&#x2B;SvXP4e/G1rOj61qixzpNYR3VleieyyHKMmMYk7557VzviCyk0TwhqkmrXcUmpatdRsRCjeXuDKQq8dAqnk4/xKajonvdfmv0uE738v8Ah/8AgHoq8qD7UGhfuj6UGsGarYKKKKkYlBooNIYlJS0lAxDRQaKQxKq&#x2B;Af8Ajxvv&#x2B;wje/wDpTJVqqvgH/jxvv&#x2B;wje/8ApTJXXg/iZy4r4UdfRRRXonEFchpH/Ib8T/8AYUH/AKTQV19chpH/ACG/E/8A2FB/6TQVjX&#x2B;A1pfEbFFFcjrnj200bUb2zS1e6azij8zy3wWuJTiKBRjlmGST2A79uNJt2R0t2V2ddRXlXxA8W6lo/irTrF/FA8OWc1gZpXFgt4PN3Y24256Z54HHTmuiu/Hum&#x2B;GobWz1ia7ublrBLiK7W3VFv24BWNc8SEkHZxjNUoNpNf1v/kTzK9v66f5nZ0Vwdl8Qbq4&#x2B;Ilz4el0PUIrRIlIla15jbnLyNuKiPjAYDk1b0f4laNrWrW9jBa6nFHds62l7PalLe5K5JCPnnoeoHSjkdrj50diaSuGsfirol/fWduljq8UV1cfZUu5bXEAmyQEL5PJx2z1&#x2B;uLEvjq01C216PT4dSiGnQ3AbURbK0SyRqchQW5YHoGABx1xScWlew003Y7Cg1w4&#x2B;IVlpuk6NHJBq2s6jd2Ed20djYhpShA/eOittXJ7AnFSz/EzQo9K0vUIYdQu49SaRIIra33yb06oVzndnjjI98c0OnJMFJWudlSVykPju0vfCt3r1lp948djMY7y1mTy54ApHmErzkqp3Yz&#x2B;tXfD/AIptteu7&#x2B;0VFjmtWV12yb1mgcbo5VOBww7diMVPI9RqSN6kNLSGoLCkpaSkAGkpTSUhiUhpaQ0hhRRRSASg0UGkMSkpaSgYhooNFIYlVfAP/AB433/YRvf8A0pkq1VXwD/x433/YRvf/AEpkrrwfxM5cV8KOvooor0TiCuQ0j/kN&#x2B;J/&#x2B;woP/AEmgrr65DSP&#x2B;Q34n/wCwoP8A0mgrGv8AAa0viNiuf1fwbpOtX1xd3Syh7m1&#x2B;yzrGwVZFDBkY8Z3oRlWBGM966CiuNaanTvocXrvgvVr7XrLV9I8Tvpl1bWf2MySWSXDSLuySdxAyeO1Qa58PLzxJ9nk1TxFJJc2lqqWssVsI/LuAys05UNgk7QNowAPzru6KpTat5f1&#x2B;ouVHJv4QvH8YR68utFFltFtb&#x2B;1FqpW5Cg9GJygyc4GTx1rG8NfC0&#x2B;GdctruDVbSext2cxwSaPB5&#x2B;CDjNwPnyCevtjpXd3epWljNaw3MuyS6k8qEbSdzYzjgcfjVS01n7V4i1HSfs&#x2B;37HHG/m78794JxjHGMetNSl0/r&#x2B;ricY9f66HOQ/DzyfDukaT/amf7O1Yal5v2f/AFmHZtmN3H3sZyenSon&#x2B;HM1xrOq6lcazGXvrS4tVEFgkJxKMZlKn96VGMZx0rvTVO4vvs99aWv2W5k&#x2B;0lh5sceY4toz85/hz0Hqanmk9P62/yKst/wCt7/mcZL8O762bTLnRPE0umahaadHp004tFlWeNOh2McKc89TVmw&#x2B;HsGmHw79n1CVv7ImmnkMqbmuXlUhiTkbeTnof6119zN9mtZp/Kkl8tC/lxLudsDOFHcntVSHWbSWeytn82C6u4TNHbzRlXCgchuwIz0zT55v&#x2B;vmLliv6&#x2B;X/AMO08D28dhrdjd3ks9tq2pPfSpGvl/KxU&#x2B;UTk5X5cEjGQe1a2k6DZaNNez2wdpryXzJZJMZwBhUGAMIoGAO1atJUcz/r&#x2B;vIuy3CkNc5e&#x2B;NtNs9QntEtr&#x2B;6FsdtzPa25kjgPo59vbNQXHj3T7e7uon07VWhtZTFPdJbboYyO5YHIH4Zpckn0DnSOqpKZBPFc28c8DrJFIodHU8MDyDT6h6FLUDSUppKQxKQ0tIaQwooopAJQaKDSGJSUtJQMQ0UGikMSqvgH/jxvv8AsI3v/pTJVqqvgH/jxvv&#x2B;wje/&#x2B;lMldeD&#x2B;JnLivhR19FFFeicQVx2mBm1fxUqPsc6kArYzg/ZYOcV2NchpH/Ib8T/9hQf&#x2B;k0FY1/gNaPxEujWOqWUUq6prH9pOzAo32ZYdg9ML1rToorjbvqdKVgrhPiJp99eT6Yy2lxeaahk&#x2B;0QQRPKdxA2koroT353DH44Pd0URdncGrqx5Ne&#x2B;HFk8P6Bd3Ol6rqCwXDRzQm3dJ1gyxCeXvJAB6HPTHNaGq&#x2B;F01XWPEM82n3ZSOwiayA3gGQRnAGPvMDgY5616TRVuoyFTR50vh6TXNV0SPWLS8e3GiqLgtvQGUEfK5GOe&#x2B;D6VFoun6sF8Heda3ayWxvFkaWJv3QIITdkcDpjNelGkodRv8Ar1/zGqaX9eVjyvR9LuEsdSWfRdYXWms7lbu7lJMdwxB2heTvPTGB&#x2B;dObw7HDqPha9u9DvrhTZxx3IhRy0cqqoQuMjaB36dO9eo0Gj2rvf&#x2B;uv&#x2B;YezVrf10/yPM5dPuj4qfwiq50ya7Gpsc9Iepj&#x2B;hcYrtdHjtI59SNrYXNqzXTGVplIEz4GXTJOV&#x2B;mKtx6ZZxapNqSQ4vJoxG8hYnKjoACcD8KtVDndW/r&#x2B;tEUo6t/wBf1ds4LSrvUfClzqmnyaDqF6bi8e4tri1jDJIH6B2z8vTr/k1o73UNPl8SWCeH9UuJr&#x2B;6kMDrBiEhlC5LnjHv0r0akNHOuq6W/L/IfK&#x2B;j63/r7zM8O6dLpPh2wsJ2DSwwhXIORnuBWlS0lZyfM22VFcqSQGkpTSVJQlIaWkNIYUUUUgEoNFBpDEpKWkoGIaKDRSGJVXwD/AMeN9/2Eb3/0pkq1VXwD/wAeN9/2Eb3/ANKZK68H8TOXFfCjr6KKK9E4grjtMfy9X8VPtZtupA7VGSf9Fg4FdjXIaR/yG/E//YUH/pNBWNf4DWj8RLo2s/2zFK/9m6jY&#x2B;WwG2&#x2B;g8ot7jk5FadFFcbt0OleYVznibWdU0&#x2B;&#x2B;0qy0mK0knv3kTN1u2qVXIPy/jXR1VudNtLy8tLueLfPaMzQNuI2EjB4BwePWhWT1B7aHF6/wCMdb0W5lKJpk8NqIhdJHHOzhmAz8wGxOScBjnFaE3iTV7jxDd2mm21gLLT2iF011KVkffg/J2GAe9aGo&#x2B;C/D2q38l9e6aktzIMO/mOueMdAQM&#x2B;/Wprvwrod9qsWp3OnxyXke0rJuYfd6ZAODj3BrRShpdEOMtbHMw&#x2B;Ndbu9akFppaTabFem1dUgnabAOC&#x2B;8L5Y9cE5/nXZ2f8AaHmXP277Ns80/Z/I3Z8vtvz/ABdenFZk3g3w/Pq41V9OX7aJBL5iyOvzg5ztBxnPtzWnZ6baWElzJaxeW11KZpjuJ3Oep5PHTtUtxtp/WxSTu/67nBaRpGneJrnW9S1y5m&#x2B;3Wt7JEhFw0f2ONfulecDvyeOPrVVNA0m&#x2B;HivVLsvFd2l5KYbtZmQx4UEEYOOvt3rtL/wd4f1PUft95pkUlzkEvuZQxHqAQD&#x2B;IqGfwN4budQe/n0tJLh38xmaRyGb3Xdj8MYp867taf5f5C5db263/ADLfhe7ub7wvpt1dkm4lgVnY9W46/j1/GtWhVVFCqAqgYAAwAKKzk7ttFxVopMKQ0tIagsKSlpKQAaSlNJSGJSGlpDSGFFFFIBKDRQaQxKSlpKBiGig0UhiVV8A/8eN9/wBhG9/9KZKtVV8A/wDHjff9hG9/9KZK68H8TOXFfCjr6KKK9E4grkNI/wCQ34n/AOwoP/SaCuvrkNI/5Dfif/sKD/0mgrGv8BrS&#x2B;I2KKKK4jpCiiigAooooGBpKU0lACUGig0hiUlLSUhhSGlpDSGFJS0lIANJSmkpDEpDS0hpDCiiikAlBooNIYlJS0lAxDRQaKQxKq&#x2B;Af&#x2B;PG&#x2B;/wCwje/&#x2B;lMlWqq&#x2B;Af&#x2B;PG&#x2B;/7CN7/6UyV14P4mcuK&#x2B;FHX0UUV6JxBXLX&#x2B;gavb6nfX2iajaRreuss1vd2jS4kCKm5WWRcAqi5BzyM966mik0mrMabWxxn2Pxl/z&#x2B;6P/AOC6X/4/R9j8Zf8AP7o//gul/wDj9dnRUeyh2K9pLucZ9j8Zf8/uj/8Agul/&#x2B;P0fY/GX/P7o/wD4Lpf/AI/XZ0Ueyh2D2ku5xn2Pxl/z&#x2B;6P/AOC6X/4/R9j8Zf8AP7o//gul/wDj9dnRR7KHYPaS7nGfYvGX/P7o/wD4Lpf/AI/R9i8Zf8/uj/8Agul/&#x2B;P12dFHsodg9pLucX9h8Zf8AP7pH/gul/wDj9H2Hxl/z/aR/4Lpf/j9dpRR7KHYPaS7nF/YfGX/P9pH/AILpf/j9J9g8Zf8AP9pH/gul/wDj9drRR7KHYPaT7nFfYPGX/P8AaR/4Lpf/AI/R9g8Zf8/2kf8Agul/&#x2B;P12tFHsYdg9pPucV9g8Y/8AP9pH/gul/wDj9H9n&#x2B;Mf&#x2B;f7SP/BdL/wDH67Wij2MOw/az7nE/2f4x/wCf7SP/AAXS/wDx&#x2B;j&#x2B;z/GP/AD/aR/4Lpf8A4/XbUUvY0&#x2B;we1n3OJ/s7xj/z/aR/4Lpf/j9H9neMf&#x2B;f7SP8AwXS//Hq7aij2NPsHtZ9zif7O8Y/8/wBpH/gul/8Aj1J/ZvjH/n&#x2B;0j/wXS/8Ax6u3oo9hT7B7Wfc4j&#x2B;zfGP8Az/aR/wCC6X/49R/ZvjH/AJ/tI/8ABdL/APHq7eij2FPsHtZ9ziP7M8Y/8/2kf&#x2B;C6X/49Sf2Z4w/5/tJ/8F0v/wAeruKKPYU&#x2B;we2n3OH/ALL8Yf8AP9pP/gul/wDj1H9l&#x2B;MP&#x2B;f7Sf/BdL/wDHq7iil7Cn2D20&#x2B;5w39leMP&#x2B;f/AEkf9w2X/wCP1ueGNGfRbD7O8jyuWeSSVwAZJHcu5wOgyx47Ct2irjTjD4UKU5S3YUUUVZAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf//Z" class="img-responsive">
+</p>
+<p>Information about a person who has died as it is collected for inclusion within the death certificate.  The age may be provided using different units of measure, i.e., years, months, days, and minutes depending on how long the person lived. Currently, when information is being passed to NCHS, additional decedent records are provided, one for each alias.</p>
+<p><div id="529dc92b3438434f8d63104b4ccfb3d9" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="e401fda0-790f-4164-a197-4fcb9b054f0a" class="collapsed"><td><span class="baseIcon resource"></span><span>Patient</span></td><td></td><td></td><td><a title="Type Patient from core specification" href="http://hl7.org/fhir/STU3/patient.html" target="_blank">Patient</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Patient from core specification" href="http://hl7.org/fhir/STU3/patient.html" target="_blank">Patient</a></p></td></tr><tr id="Patient.extension" data-id="eb4f453e-df6e-4967-90b5-43ca481ab16f" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class="collapsed sliced"><td><span class="baseIcon extension"></span><span>extension</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain exactly one [1..1] extension (CONF:4393-45).</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by url(Value)</span></p></td></tr><tr id="Patient.extension:ethnicity" data-id="738e8b75-b476-4966-b9bd-ebd95abd3f94" data-parentId="eb4f453e-df6e-4967-90b5-43ca481ab16f" class=""><td><span class="baseIcon extension"></span><span>ethnicity</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td><a title="Type Extension from core specification" href="http://hl7.org/fhir/STU3/extensibility.html#Extension" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension:ethnicity</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] ethnicity (CONF:4393-44).</p>
+</div><span><b>Data Type </b></span><p><a title="Type Extension from core specification" href="http://hl7.org/fhir/STU3/extensibility.html#Extension" target="_blank">Extension</a></p><span><b>Extension URL </b></span><p><a  href="https://simplifier.net/us-core/ethnicity" target="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</a></p></td></tr><tr id="Patient.extension:race" data-id="8315b851-3cd9-44af-9064-bbf463e06c66" data-parentId="eb4f453e-df6e-4967-90b5-43ca481ab16f" class=""><td><span class="baseIcon extension"></span><span>race</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td><a title="Type Extension from core specification" href="http://hl7.org/fhir/STU3/extensibility.html#Extension" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension:race</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] race (CONF:4393-45).</p>
+</div><span><b>Data Type </b></span><p><a title="Type Extension from core specification" href="http://hl7.org/fhir/STU3/extensibility.html#Extension" target="_blank">Extension</a></p><span><b>Extension URL </b></span><p><a  href="https://simplifier.net/us-core/race" target="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories: - American Indian or Alaska Native - Asian - Black or African American - Native Hawaiian or Other Pacific Islander - White.">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</a></p></td></tr><tr id="Patient.identifier" data-id="9dcb903c-f394-4475-8bc4-1625cbf50cd6" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class="collapsed"><td><span class="baseIcon primitive"></span><span>identifier</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>identifier</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] identifier (CONF:4393-6).</p>
+</div></td></tr><tr id="Patient.identifier.type" data-id="8ad5e8f2-2729-45d7-81ef-6e6717003000" data-parentId="9dcb903c-f394-4475-8bc4-1625cbf50cd6" class=""><td><span class="baseIcon primitive"></span><span>type</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHALL contain exactly one [1..1] type=&quot;BR&quot; Social Beneficiary Identifier (CONF:4393-27).</p>
+</div><span><b>Fixed Value </b></span><div>
+<pre class="">{
+  &quot;coding&quot;: [
+    {
+      &quot;code&quot;: &quot;BR&quot;,
+      &quot;display&quot;: &quot;Social Beneficiary Identifier&quot;
+    }
+  ]
+}</pre></div></td></tr><tr id="Patient.identifier.system" data-id="285d4ee2-3fce-4d6d-9d2a-e442c2c1851f" data-parentId="9dcb903c-f394-4475-8bc4-1625cbf50cd6" class=""><td><span class="baseIcon primitive"></span><span>system</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>system</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHOULD contain zero or one [0..1] system=&quot;2.16.840.1.113883.4.1&quot; United States of America Social Security Number (CONF:4393-28).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">2.16.840.1.113883.4.1</pre></div></td></tr><tr id="Patient.identifier.value" data-id="8a275a50-d3ba-44cc-9d33-13f919c0dd9e" data-parentId="9dcb903c-f394-4475-8bc4-1625cbf50cd6" class=""><td><span class="baseIcon primitive"></span><span>value</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHALL contain exactly one [1..1] value (CONF:4393-29).</p>
+</div></td></tr><tr id="Patient.name" data-id="569f93b1-9f80-4fb4-88a9-321bec5c225a" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class="collapsed sliced"><td><span class="baseIcon slice"></span><span>name</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] name (CONF:4393-43) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by use(Value)</span></p></td></tr><tr id="Patient.name:official" data-id="d8805a29-e730-46b1-818f-0cacb3bafa43" data-parentId="569f93b1-9f80-4fb4-88a9-321bec5c225a" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>official</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>name</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] name (CONF:4393-1) such that it</p>
+</div></td></tr><tr id="Patient.name:official.use" data-id="2310cf52-d668-4e7e-b18b-410ae0332854" data-parentId="d8805a29-e730-46b1-818f-0cacb3bafa43" class=""><td><span class="baseIcon primitive"></span><span>official</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] use=&quot;official&quot; Official (CONF:4393-2).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">official</pre></div></td></tr><tr id="Patient.name:official.family" data-id="4e9353a1-36c5-4114-a492-a5b56f4a328a" data-parentId="d8805a29-e730-46b1-818f-0cacb3bafa43" class=""><td><span class="baseIcon primitive"></span><span>official</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>family</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] family (CONF:4393-3).</p>
+</div></td></tr><tr id="Patient.name:official.given" data-id="f8a98e7f-8770-43e0-af73-b6ac149b8697" data-parentId="d8805a29-e730-46b1-818f-0cacb3bafa43" class=""><td><span class="baseIcon primitive"></span><span>official</span></td><td></td><td><span>0</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>given</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or more [0..*] given (CONF:4393-4).</p>
+</div></td></tr><tr id="Patient.name:nickname" data-id="f34a3aac-c01e-4bc5-aa6f-b62c76eaa9a6" data-parentId="569f93b1-9f80-4fb4-88a9-321bec5c225a" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>nickname</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>name</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] name (CONF:4393-43) such that it</p>
+</div></td></tr><tr id="Patient.name:nickname.use" data-id="6dcb8cb2-cc40-4d88-9c57-4ae09047c0ca" data-parentId="f34a3aac-c01e-4bc5-aa6f-b62c76eaa9a6" class=""><td><span class="baseIcon primitive"></span><span>nickname</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] use=&quot;nickname&quot; Nickname (CONF:4393-46).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">nickname</pre></div></td></tr><tr id="Patient.name:nickname.family" data-id="fdfd46bb-9e5e-4ab3-81fd-05216c2d0f7d" data-parentId="f34a3aac-c01e-4bc5-aa6f-b62c76eaa9a6" class=""><td><span class="baseIcon primitive"></span><span>nickname</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>family</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] family (CONF:4393-47).</p>
+</div></td></tr><tr id="Patient.name:nickname.given" data-id="afaa514d-d47f-4b1b-9dc0-b0830adea0e8" data-parentId="f34a3aac-c01e-4bc5-aa6f-b62c76eaa9a6" class=""><td><span class="baseIcon primitive"></span><span>nickname</span></td><td></td><td><span>0</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>given</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or more [0..*] given (CONF:4393-48).</p>
+</div></td></tr><tr id="Patient.gender" data-id="29191b72-2dbf-42b4-91fc-41946d3326a8" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class=""><td><span class="baseIcon primitive"></span><span>gender</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>gender</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] gender, which SHALL be selected from ValueSet FHIR AdministrativeGender http://hl7.org/fhir/v3/vs/AdministrativeGender DYNAMIC (CONF:4393-7).</p>
+</div><span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a></p><span><b>Binding </b></span><p><a  href="http://hl7.org/fhir/v3/vs/AdministrativeGender" >FHIR AdministrativeGender</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr><tr id="Patient.birthDate" data-id="0afbccb5-914c-4483-8485-c719ee3ba900" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class=""><td><span class="baseIcon primitive"></span><span>birthDate</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>birthDate</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] birthDate (CONF:4393-8).</p>
+</div></td></tr><tr id="Patient.address" data-id="6d33debd-0554-4a7f-aade-2d6174a9ee06" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class="collapsed sliced"><td><span class="baseIcon slice"></span><span>address</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] address (CONF:4393-35) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by use(Value)</span></p></td></tr><tr id="Patient.address:birthAddress" data-id="4e301490-db45-4fb6-89a0-8551bcfe2a64" data-parentId="6d33debd-0554-4a7f-aade-2d6174a9ee06" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>birthAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>address</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] address (CONF:4393-5) such that it</p>
+</div></td></tr><tr id="Patient.address:birthAddress.use" data-id="bf7d717b-d72b-4484-93d0-4111d6e23028" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] use=&quot;BR&quot; Residence at birth (CONF:4393-26).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">BR</pre></div></td></tr><tr id="Patient.address:birthAddress.type" data-id="a232c475-4f82-4eec-98b2-b70db6c92801" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] type (CONF:4393-30).</p>
+</div></td></tr><tr id="Patient.address:birthAddress.line" data-id="085db64e-1fb0-4488-bd59-3f6fcee7bec3" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>1</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>line</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain at least one [1..*] line (CONF:4393-31).</p>
+</div></td></tr><tr id="Patient.address:birthAddress.city" data-id="15f1c0a4-23d1-488d-9aaa-0e9bbdeca37b" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>city</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] city (CONF:4393-32).</p>
+</div></td></tr><tr id="Patient.address:birthAddress.state" data-id="64560422-eaca-4672-bfbb-8a58357d595b" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>state</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] state (CONF:4393-33).</p>
+</div></td></tr><tr id="Patient.address:birthAddress.postalCode" data-id="8669241a-6bd3-4677-9300-c11750867433" data-parentId="4e301490-db45-4fb6-89a0-8551bcfe2a64" class=""><td><span class="baseIcon primitive"></span><span>birthAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>postalCode</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] postalCode (CONF:4393-34).</p>
+</div></td></tr><tr id="Patient.address:homeAddress" data-id="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" data-parentId="6d33debd-0554-4a7f-aade-2d6174a9ee06" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>address</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] address (CONF:4393-35) such that it</p>
+</div></td></tr><tr id="Patient.address:homeAddress.extension:insidecitylimits" data-id="ec9a804e-845e-449d-b927-7db2ba9b0264" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type boolean from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#boolean" target="_blank">boolean</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>insidecitylimits</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-36).</p>
+</div><span><b>Data Type </b></span><p><a title="Type boolean from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#boolean" target="_blank">boolean</a></p></td></tr><tr id="Patient.address:homeAddress.use" data-id="d99ce0fb-b0be-46cc-8215-8379a3372f2c" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] use=&quot;H&quot; Home (CONF:4393-37).</p>
+</div><span><b>Fixed Value </b></span><div>
+<pre class="">H</pre></div></td></tr><tr id="Patient.address:homeAddress.type" data-id="1df925ad-8402-4519-af78-2f3bec79759a" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] type (CONF:4393-38).</p>
+</div><span><b>Binding </b></span><p><a  href=" http://hl7.org/fhir/ValueSet/address-type" >FHIR AddressType</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr><tr id="Patient.address:homeAddress.line" data-id="5baa95a6-289a-4eb9-af4a-51768be77f08" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>1</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>line</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain at least one [1..*] line (CONF:4393-39).</p>
+</div></td></tr><tr id="Patient.address:homeAddress.city" data-id="3d54e7eb-6417-4f52-b481-fdd8f278bc11" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>city</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] city (CONF:4393-40).</p>
+</div></td></tr><tr id="Patient.address:homeAddress.state" data-id="ab4e043b-6e1f-4a55-86c8-6053da1e55d3" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>state</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] state (CONF:4393-41).</p>
+</div></td></tr><tr id="Patient.address:homeAddress.postalCode" data-id="081176f6-0f53-4498-a054-42578b924c38" data-parentId="65e0ebd2-8b1c-4dce-89bb-f8e6a0834f14" class=""><td><span class="baseIcon primitive"></span><span>homeAddress</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>postalCode</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] postalCode (CONF:4393-42).</p>
+</div></td></tr><tr id="Patient.maritalStatus" data-id="3e6a2eb1-c4fd-402c-aa6f-5e86c8af9c9e" data-parentId="e401fda0-790f-4164-a197-4fcb9b054f0a" class=""><td><span class="baseIcon datatype"></span><span>maritalStatus</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>maritalStatus</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] maritalStatus, which SHALL be selected from ValueSet FHIR MaritalStatus http://hl7.org/fhir/vs/marital-status (CONF:4393-16).</p>
+</div><span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p><span><b>Binding </b></span><p><a  href="http://hl7.org/fhir/vs/marital-status" >FHIR MaritalStatus</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable529dc92b3438434f8d63104b4ccfb3d9 = new Stu3TreeTable(false);
+resourceTreeTable529dc92b3438434f8d63104b4ccfb3d9.init("529dc92b3438434f8d63104b4ccfb3d9");
+}
+})();
+</script></p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div>
+                Version: Draft 0.01 FHIR Version: STU3
+            </div>
+            <br />
+            <p>Powered by <b>SIMPLIFIER.NET</b></p>
+            <div>
+                HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    </body>
+
+</html>
