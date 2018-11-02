@@ -1,5 +1,7 @@
 # **Introduction**
 
+**This text is for Adam!**
+
 The purpose of the VRDR FHIR IG is to provide guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. National Center for Health Statistics (NCHS).
 
 Bidirectional exchange of mortality data between PHA Vital Records offices and NCHS is essential to effective public health surveillance and emergency response efforts. Automation of the reporting process adds efficiencies that dramatically improves the efficacy of event response, data analysis, and evidence-based measurable prevention of the causes of death. 
