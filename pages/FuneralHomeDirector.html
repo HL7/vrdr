@@ -1,311 +1,352 @@
-
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Apple macOS version 5.6.0" />
+<meta charset="utf-8" />
+<title>Vital Records Death Reporting</title>
+<link rel="icon" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
 
-    <head>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
 
-        <meta charset="utf-8" />
-        <title>Vital Records Death Reporting</title>
-
-        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
-
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
-
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
-
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4c47b58c64b80" />
-
-    </head>
-
-    <body>
-
-        <header>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 fhir-logo">
-                        <a href="http://hl7.org/fhir/STU3/">
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4c47b58c64b80" alt="logo fhir">
-                        </a>
-                    </div>
-                    <div class="col-md-16 title">
-                        <div>
-                            <a href="/">
-                                Vital Records Death Reporting
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 hl7-logo">
-                        <a href="http://www.hl7.org">
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4c47b58c64b80" alt="visit the hl7 website" width="42" height="50">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4c47b58c64b80" />
+</head>
+<body>
+<header>
+<div class="container">
+<div class="row">
+<div class="col-md-4 fhir-logo"><a href=
+"http://hl7.org/fhir/STU3/"><img src=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4c47b58c64b80"
+alt="logo fhir" /></a></div>
+<div class="col-md-16 title">
+<div><a href="/">Vital Records Death Reporting</a></div>
+</div>
+<div class="col-md-4 hl7-logo"><a href=
+"http://www.hl7.org"><img src=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4c47b58c64b80"
+alt="visit the hl7 website" width="42" height="50" /></a></div>
+</div>
+</div>
 <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-                        <li>
-                            <a href="Introduction.html">
-                                Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Background.html">
-                                Background
-                            </a>
-                        </li>
-                        <li class="dropdown">
-
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Profiles <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu">
-
-                                    <li>
-                                        <a href="Profiles.html">
-                                            Profiles
-                                        </a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-
-                                    <li>
-                                        <a href="AutopsyPerformedIndicator.html">
-                                             Autopsy Performed Indicator
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="BirthRecordIdentifier.html">
-                                             Birth Record Identifier
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="CauseOfDeathCondition.html">
-                                             Cause Of Death Condition
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="CauseofDeathPathway.html">
-                                             Cause of Death Pathway
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Certifier.html">
-                                             Certifier
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ConditionContributingtoDeath.html">
-                                            Condition Contributing to Death
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificate.html">
-                                             Death Certificate
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificateDocument.html">
-                                             Death Certificate Document
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificateReference.html">
-                                             Death Certificate Reference
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertification.html">
-                                             Death Certification
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathDate.html">
-                                             Death Date
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathLocation.html">
-                                             Death Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathPronouncementPerformer.html">
-                                             Death Pronouncement Performer
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Decedent.html">
-                                             Decedent
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentAge.html">
-                                             Decedent Age
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentDispositionMethod.html">
-                                             Decedent Disposition Method
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentEducationLevel.html">
-                                             Decedent Education Level
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentEmploymentHistory.html">
-                                             Decedent Employment History
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentFather.html">
-                                             Decedent Father
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentMother.html">
-                                             Decedent Mother
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentPregnancy.html">
-                                             Decedent Pregnancy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentSpouse.html">
-                                             Decedent Spouse
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentTransportationRole.html">
-                                             Decedent Transportation Role
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DispositionLocation.html">
-                                             Disposition Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ExaminerContacted.html">
-                                             Examiner Contacted
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="FuneralHome.html">
-                                             Funeral Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="FuneralHomeDirector.html">
-                                             Funeral Home Director
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InjuryIncident.html">
-                                             Injury Incident
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InjuryLocation.html">
-                                             Injury Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InterestedParty.html">
-                                             Interested Party
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="MannerofDeath.html">
-                                             Manner of Death
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Mortician.html">
-                                             Mortician
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="TobaccoUseContributedToDeath.html">
-                                             Tobacco Use Contributed To Death
-                                        </a>
-                                    </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Terminologies.html">
-                                Terminologies
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Examples.html">
-                                Examples
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Downloads.html">
-                                Downloads
-                            </a>
-                        </li>
-
-            </ul>
-        </div>
-    </div>
+<div class="container">
+<div class="navbar-header"><button type="button" class=
+"navbar-toggle" data-toggle="collapse" data-target=
+"#bs-example-navbar-collapse-1"><span class="sr-only">Toggle
+navigation</span> </button></div>
+<div class="collapse navbar-collapse" id=
+"bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="Introduction.html">Introduction</a></li>
+<li><a href="Background.html">Background</a></li>
+<li class="dropdown"><a href="#" class="dropdown-toggle"
+data-toggle="dropdown">Profiles</a>
+<ul class="dropdown-menu">
+<li><a href="Profiles.html">Profiles</a></li>
+<li><a href="AutopsyPerformedIndicator.html">Autopsy Performed
+Indicator</a></li>
+<li><a href="BirthRecordIdentifier.html">Birth Record
+Identifier</a></li>
+<li><a href="CauseOfDeathCondition.html">Cause Of Death
+Condition</a></li>
+<li><a href="CauseofDeathPathway.html">Cause of Death
+Pathway</a></li>
+<li><a href="Certifier.html">Certifier</a></li>
+<li><a href="ConditionContributingtoDeath.html">Condition
+Contributing to Death</a></li>
+<li><a href="DeathCertificate.html">Death Certificate</a></li>
+<li><a href="DeathCertificateDocument.html">Death Certificate
+Document</a></li>
+<li><a href="DeathCertificateReference.html">Death Certificate
+Reference</a></li>
+<li><a href="DeathCertification.html">Death Certification</a></li>
+<li><a href="DeathDate.html">Death Date</a></li>
+<li><a href="DeathLocation.html">Death Location</a></li>
+<li><a href="DeathPronouncementPerformer.html">Death Pronouncement
+Performer</a></li>
+<li><a href="Decedent.html">Decedent</a></li>
+<li><a href="DecedentAge.html">Decedent Age</a></li>
+<li><a href="DecedentDispositionMethod.html">Decedent Disposition
+Method</a></li>
+<li><a href="DecedentEducationLevel.html">Decedent Education
+Level</a></li>
+<li><a href="DecedentEmploymentHistory.html">Decedent Employment
+History</a></li>
+<li><a href="DecedentFather.html">Decedent Father</a></li>
+<li><a href="DecedentMother.html">Decedent Mother</a></li>
+<li><a href="DecedentPregnancy.html">Decedent Pregnancy</a></li>
+<li><a href="DecedentSpouse.html">Decedent Spouse</a></li>
+<li><a href="DecedentTransportationRole.html">Decedent
+Transportation Role</a></li>
+<li><a href="DispositionLocation.html">Disposition
+Location</a></li>
+<li><a href="ExaminerContacted.html">Examiner Contacted</a></li>
+<li><a href="FuneralHome.html">Funeral Home</a></li>
+<li><a href="FuneralHomeDirector.html">Funeral Home
+Director</a></li>
+<li><a href="InjuryIncident.html">Injury Incident</a></li>
+<li><a href="InjuryLocation.html">Injury Location</a></li>
+<li><a href="InterestedParty.html">Interested Party</a></li>
+<li><a href="MannerofDeath.html">Manner of Death</a></li>
+<li><a href="Mortician.html">Mortician</a></li>
+<li><a href="TobaccoUseContributedToDeath.html">Tobacco Use
+Contributed To Death</a></li>
+</ul>
+</li>
+<li><a href="Terminologies.html">Terminologies</a></li>
+<li><a href="Examples.html">Examples</a></li>
+<li><a href="Downloads.html">Downloads</a></li>
+</ul>
+</div>
+</div>
 </nav>
-
-        </header>
-
-        <div class="content container">
-            
-
-    <div class="row">
-
-
-        <div class="col-md-24">
-
-            <div id="preview-content">
-                <h2 id="funeral-home-director">Funeral Home Director</h2>
-<p>Decedent Age is a profile of the <a href="http://www.hl7.org/fhir/observation.html">FHIR STU3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>&quot;minutes&quot;</em>, when age is less than or equal to one year then unit shall be <em>&quot;days&quot;</em>, otherwise unit shall be <em>&quot;years&quot;</em>.</p>
+</header>
+<div class="content container">
+<div class="row">
+<div class="col-md-24">
+<div id="preview-content">
+<h2 id="funeral-home-director">Funeral Home Director</h2>
+<p>Decedent Age is a profile of the <a href=
+"http://www.hl7.org/fhir/observation.html">FHIR STU3
+Observation</a> resource. It is used to communicate the decedent's
+chronological age at the time of death. When present, the effective
+date of this observation shall be equal to the decedent's date of
+death. Age (Observation.valueQuantity.value) is derived as the
+difference in time between the decedent's death date and birth
+date. When age is less than or equal to one day then unit shall be
+<em>"minutes"</em>, when age is less than or equal to one year then
+unit shall be <em>"days"</em>, otherwise unit shall be
+<em>"years"</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<p><div class='error'>Command 'render' could not render: File was not found for vrdr/vrdrfuneralhomedirector-duplicate-2</div></center></p>
+<div class='error'>Command 'render' could not render: File was not
+found for vrdr/vrdrfuneralhomedirector-duplicate-2</div>
+</center>
 <hr />
-<h3 id="structure-definition"><strong>Structure Definition</strong></h3>
-<p><div id="ac2e5b4fc5b7431b819c87785f79403d" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed"><td><span class="baseIcon resource"></span><span>PractitionerRole</span></td><td></td><td></td><td><a title="Type PractitionerRole from core specification" href="http://hl7.org/fhir/STU3/practitionerrole.html" target="_blank">PractitionerRole</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type PractitionerRole from core specification" href="http://hl7.org/fhir/STU3/practitionerrole.html" target="_blank">PractitionerRole</a></p></td></tr><tr id="PractitionerRole.id" data-id="ae39425c-9c43-4c62-a3d8-85c1d27eb29c" data-parentId="bba7902f-1022-4440-9065-b88da64c97a5" class=""><td><span class="baseIcon primitive"></span><span>id</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>id</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] id (CONF:4393-136).</p>
-</div></td></tr><tr id="PractitionerRole.meta" data-id="ad40874f-eef1-4003-8281-ffbc04305eb3" data-parentId="bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed"><td><span class="baseIcon primitive"></span><span>meta</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>meta</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] meta (CONF:4393-132).</p>
-</div></td></tr><tr id="PractitionerRole.meta.profile" data-id="f4d444cc-77e9-4aca-8a83-eb1e87b81d44" data-parentId="ad40874f-eef1-4003-8281-ffbc04305eb3" class=""><td><span class="baseIcon reference"></span><span>profile</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHomeDirector.xml" >VRDR Funeral Home Director</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>profile</span></p><span><b>Definition </b></span><div class="markdown"><p>The meta, if present, SHALL contain exactly one [1..1] profile=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home-Director&quot; (CONF:4393-137).</p>
-</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHomeDirector.xml" >VRDR Funeral Home Director</a><span>)</span></p></td></tr><tr id="PractitionerRole.practitioner" data-id="bdb38477-e024-4e81-b873-4a2349b1c846" data-parentId="bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed"><td><span class="baseIcon primitive"></span><span>practitioner</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>practitioner</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] practitioner (CONF:4393-133).</p>
-</div></td></tr><tr id="PractitionerRole.practitioner.reference" data-id="2c64efbb-4b2b-4a0d-8633-ec347b8eeb8c" data-parentId="bdb38477-e024-4e81-b873-4a2349b1c846" class=""><td><span class="baseIcon reference"></span><span>reference</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRMortician.xml" >VRDR Mortician</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>reference</span></p><span><b>Definition </b></span><div class="markdown"><p>This practitioner SHALL contain exactly one [1..1] reference=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician&quot; (CONF:4393-138).</p>
-</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRMortician.xml" >VRDR Mortician</a><span>)</span></p></td></tr><tr id="PractitionerRole.organization" data-id="92459ba6-a7d4-48c7-9cb0-248bee2d56bc" data-parentId="bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed"><td><span class="baseIcon primitive"></span><span>organization</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>organization</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] organization (CONF:4393-134).</p>
-</div></td></tr><tr id="PractitionerRole.organization.reference" data-id="17e9df81-c367-4cce-8698-0117049a9b06" data-parentId="92459ba6-a7d4-48c7-9cb0-248bee2d56bc" class=""><td><span class="baseIcon reference"></span><span>reference</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHome.xml" >VRDR Funeral Home</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>reference</span></p><span><b>Definition </b></span><div class="markdown"><p>This organization SHALL contain exactly one [1..1] reference=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home&quot; (CONF:4393-139).</p>
-</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHome.xml" >VRDR Funeral Home</a><span>)</span></p></td></tr><tr id="PractitionerRole.code" data-id="e053228b-625d-4622-b60a-3bbfdb9f6744" data-parentId="bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] code (CONF:4393-135).</p>
-</div></td></tr><tr id="PractitionerRole.code.coding" data-id="731d7346-7c5a-4533-beb8-5a1db864782b" data-parentId="e053228b-625d-4622-b60a-3bbfdb9f6744" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding, which SHALL be selected from ValueSet PractitionerRole http://hl7.org/fhir/ValueSet/practitioner-role (CONF:4393-140).</p>
-</div><span><b>Binding </b></span><p><a title="practitioner-role" href="http://hl7.org/fhir/STU3/valueset-practitioner-role.html" target="_blank">PractitionerRole</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+<h3 id="structure-definition"><strong>Structure
+Definition</strong></h3>
+<div id="ac2e5b4fc5b7431b819c87785f79403d" data-level="10" class=
+"stu3-treetable">
+<div class="treetable-wrapper snapshot">
+<div class="treetable-left-panel">
+<table class="treetable">
+<tr data-id="bba7902f-1022-4440-9065-b88da64c97a5" class=
+"collapsed">
+<td><span>PractitionerRole</span></td>
+<td></td>
+<td></td>
+<td><a title="Type PractitionerRole from core specification" href=
+"http://hl7.org/fhir/STU3/practitionerrole.html" target=
+"_blank">PractitionerRole</a></td>
+<td class="details hidden"><span><b>Data Type</b></span>
+<p><a title="Type PractitionerRole from core specification" href=
+"http://hl7.org/fhir/STU3/practitionerrole.html" target=
+"_blank">PractitionerRole</a></p>
+</td>
+</tr>
+<tr id="PractitionerRole.id" data-id=
+"ae39425c-9c43-4c62-a3d8-85c1d27eb29c" data-parentid=
+"bba7902f-1022-4440-9065-b88da64c97a5" class="">
+<td><span>id</span></td>
+<td></td>
+<td><span>0</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>id</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHOULD contain zero or one [0..1] id (CONF:4393-136).</p>
+</div>
+</td>
+</tr>
+<tr id="PractitionerRole.meta" data-id=
+"ad40874f-eef1-4003-8281-ffbc04305eb3" data-parentid=
+"bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed">
+<td><span>meta</span></td>
+<td></td>
+<td><span>0</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>meta</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHOULD contain zero or one [0..1] meta (CONF:4393-132).</p>
+</div>
+</td>
+</tr>
+<tr id="PractitionerRole.meta.profile" data-id=
+"f4d444cc-77e9-4aca-8a83-eb1e87b81d44" data-parentid=
+"ad40874f-eef1-4003-8281-ffbc04305eb3" class="">
+<td><span>profile</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHomeDirector.xml">VRDR Funeral Home
+Director</a><span>)</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>profile</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>The meta, if present, SHALL contain exactly one [1..1]
+profile="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home-Director"
+(CONF:4393-137).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHomeDirector.xml">VRDR Funeral Home
+Director</a><span>)</span></p>
+</td>
+</tr>
+<tr id="PractitionerRole.practitioner" data-id=
+"bdb38477-e024-4e81-b873-4a2349b1c846" data-parentid=
+"bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed">
+<td><span>practitioner</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>practitioner</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] practitioner
+(CONF:4393-133).</p>
+</div>
+</td>
+</tr>
+<tr id="PractitionerRole.practitioner.reference" data-id=
+"2c64efbb-4b2b-4a0d-8633-ec347b8eeb8c" data-parentid=
+"bdb38477-e024-4e81-b873-4a2349b1c846" class="">
+<td><span>reference</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRMortician.xml">VRDR Mortician</a><span>)</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>reference</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>This practitioner SHALL contain exactly one [1..1]
+reference="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"
+(CONF:4393-138).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRMortician.xml">VRDR Mortician</a><span>)</span></p>
+</td>
+</tr>
+<tr id="PractitionerRole.organization" data-id=
+"92459ba6-a7d4-48c7-9cb0-248bee2d56bc" data-parentid=
+"bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed">
+<td><span>organization</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>organization</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] organization
+(CONF:4393-134).</p>
+</div>
+</td>
+</tr>
+<tr id="PractitionerRole.organization.reference" data-id=
+"17e9df81-c367-4cce-8698-0117049a9b06" data-parentid=
+"92459ba6-a7d4-48c7-9cb0-248bee2d56bc" class="">
+<td><span>reference</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHome.xml">VRDR Funeral
+Home</a><span>)</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>reference</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>This organization SHALL contain exactly one [1..1]
+reference="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"
+(CONF:4393-139).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHome.xml">VRDR Funeral
+Home</a><span>)</span></p>
+</td>
+</tr>
+<tr id="PractitionerRole.code" data-id=
+"e053228b-625d-4622-b60a-3bbfdb9f6744" data-parentid=
+"bba7902f-1022-4440-9065-b88da64c97a5" class="collapsed">
+<td><span>code</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>code</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] code (CONF:4393-135).</p>
+</div>
+</td>
+</tr>
+<tr id="PractitionerRole.code.coding" data-id=
+"731d7346-7c5a-4533-beb8-5a1db864782b" data-parentid=
+"e053228b-625d-4622-b60a-3bbfdb9f6744" class="">
+<td><span>coding</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>coding</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>This code SHALL contain exactly one [1..1] coding, which SHALL
+be selected from ValueSet PractitionerRole
+http://hl7.org/fhir/ValueSet/practitioner-role (CONF:4393-140).</p>
+</div>
+<span><b>Binding</b></span>
+<p><a title="practitioner-role" href=
+"http://hl7.org/fhir/STU3/valueset-practitioner-role.html" target=
+"_blank">PractitionerRole</a> <span>(</span><a title=
+"To be conformant, instances of this element SHALL include a code from the specified valueset"
+href=
+"http://hl7.org/fhir/STU3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="treetable-right-panel"></div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
@@ -313,9 +354,11 @@ var resourceTreeTableac2e5b4fc5b7431b819c87785f79403d = new Stu3TreeTable(false)
 resourceTreeTableac2e5b4fc5b7431b819c87785f79403d.init("ac2e5b4fc5b7431b819c87785f79403d");
 }
 })();
-</script></p>
+//]]>
+</script>
 <hr />
-<h3 id="terminolgy-bindings"><strong>Terminolgy Bindings</strong></h3>
+<h3 id="terminolgy-bindings"><strong>Terminolgy
+Bindings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -327,12 +370,12 @@ resourceTreeTableac2e5b4fc5b7431b819c87785f79403d.init("ac2e5b4fc5b7431b819c8778
 <tbody>
 <tr>
 <td>Observation.status</td>
-<td>&quot;final&quot; - Final</td>
+<td>"final" - Final</td>
 <td>observation-status</td>
 </tr>
 <tr>
 <td>Observation.code</td>
-<td>&quot;30525-0&quot; - Age</td>
+<td>"30525-0" - Age</td>
 <td>LOINC</td>
 </tr>
 <tr>
@@ -344,9 +387,78 @@ resourceTreeTableac2e5b4fc5b7431b819c87785f79403d.init("ac2e5b4fc5b7431b819c8778
 </table>
 <hr />
 <h3 id="element-table"><strong>Element Table</strong></h3>
-<p><div class="path"><table><tr><td><span class="field">PractitionerRole</span></td><td></td><td>.. </td></tr><tr><td>PractitionerRole.<span class="field">id</span></td><td></td><td>0..1 </td></tr><tr><td>PractitionerRole.<span class="field">meta</span></td><td></td><td>0..1 </td></tr><tr><td>PractitionerRole.meta.<span class="field">profile</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHomeDirector.xml" >VRDR Funeral Home Director</a><span>)</span></td><td>1..1 </td></tr><tr><td>PractitionerRole.<span class="field">practitioner</span></td><td></td><td>1..1 </td></tr><tr><td>PractitionerRole.practitioner.<span class="field">reference</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRMortician.xml" >VRDR Mortician</a><span>)</span></td><td>1..1 </td></tr><tr><td>PractitionerRole.<span class="field">organization</span></td><td></td><td>1..1 </td></tr><tr><td>PractitionerRole.organization.<span class="field">reference</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRFuneralHome.xml" >VRDR Funeral Home</a><span>)</span></td><td>1..1 </td></tr><tr><td>PractitionerRole.<span class="field">code</span></td><td></td><td>1..1 </td></tr><tr><td>PractitionerRole.code.<span class="field">coding</span></td><td></td><td>1..1 </td></tr></table></div><br></br></p>
+<div class="path">
+<table>
+<tr>
+<td><span class="field">PractitionerRole</span></td>
+<td></td>
+<td>..</td>
+</tr>
+<tr>
+<td>PractitionerRole.<span class="field">id</span></td>
+<td></td>
+<td>0..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.<span class="field">meta</span></td>
+<td></td>
+<td>0..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.meta.<span class="field">profile</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHomeDirector.xml">VRDR Funeral Home
+Director</a><span>)</span></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.<span class="field">practitioner</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.practitioner.<span class=
+"field">reference</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRMortician.xml">VRDR Mortician</a><span>)</span></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.<span class="field">organization</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.organization.<span class=
+"field">reference</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRFuneralHome.xml">VRDR Funeral
+Home</a><span>)</span></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.<span class="field">code</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>PractitionerRole.code.<span class="field">coding</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+</table>
+</div>
+<br />
+<br />
 <hr />
-<h3 id="requirements-traceability-mappings"><strong>Requirements Traceability Mappings</strong></h3>
+<h3 id="requirements-traceability-mappings"><strong>Requirements
+Traceability Mappings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -371,31 +483,21 @@ resourceTreeTableac2e5b4fc5b7431b819c87785f79403d.init("ac2e5b4fc5b7431b819c8778
 </tr>
 </tbody>
 </table>
-
-            </div>
-
-
-        </div>
-    </div>
-
-        </div>
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <span>Version: undefined</span>
-                        <span>FHIR Version: STU3</span>
-                    </div>
-                    <br />
-                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
-                    <div>
-                        HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </body>
-
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div><span>Version: undefined</span> <span>FHIR Version:
+STU3</span></div>
+<br />
+<p>Powered by <b>SIMPLIFIER.NET</b></p>
+<div>HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered
+trademarks of Health Level Seven International</div>
+</div>
+</div>
+</footer>
+</body>
 </html>
