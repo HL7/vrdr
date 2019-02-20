@@ -1,0 +1,82 @@
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Funeral-Home" />
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home" />
+    <name value="VRDR Funeral Home" />
+    <status value="draft" />
+    <publisher value="Hi3 Solutions" />
+    <contact>
+        <name value="AbdulMalik Shakir" />
+        <telecom>
+            <system value="email" />
+            <value value="abdulmalik.shakir@hi3solutions.com" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <kind value="resource" />
+    <abstract value="false" />
+    <contextType value="resource" />
+    <context value="Organization" />
+    <type value="Organization" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Organization">
+            <path value="Organization" />
+        </element>
+        <element id="Organization.id">
+            <path value="Organization.id" />
+            <short value="id" />
+            <definition value="SHOULD contain zero or one [0..1] id (CONF:4393-120)." />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Organization.meta">
+            <path value="Organization.meta" />
+            <short value="meta" />
+            <definition value="SHOULD contain zero or one [0..1] meta (CONF:4393-118)." />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Organization.meta.profile">
+            <path value="Organization.meta.profile" />
+            <short value="profile" />
+            <definition value="The meta, if present, SHALL contain exactly one [1..1] profile=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home&quot; (CONF:4393-121)." />
+            <min value="1" />
+            <max value="1" />
+            <patternString value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home" />
+        </element>
+        <element id="Organization.type">
+            <path value="Organization.type" />
+            <short value="type" />
+            <definition value="SHALL contain exactly one [1..1] type (CONF:4393-119)." />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Organization.type.coding">
+            <path value="Organization.type.coding" />
+            <short value="coding" />
+            <definition value="This type SHALL contain exactly one [1..1] coding=&quot;bus&quot; Non-Healthcare Business or Corporation (CONF:4393-122)." />
+            <min value="1" />
+            <max value="1" />
+            <patternCoding>
+                <code value="bus" />
+                <display value="Non-Healthcare Business or Corporation" />
+            </patternCoding>
+        </element>
+        <element id="Organization.name">
+            <path value="Organization.name" />
+            <short value="name" />
+            <definition value="SHALL contain exactly one [1..1] name (CONF:4393-123)." />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Organization.address">
+            <path value="Organization.address" />
+            <short value="address" />
+            <definition value="SHALL contain exactly one [1..1] address (CONF:4393-124)." />
+            <min value="1" />
+            <max value="1" />
+        </element>
+    </differential>
+</StructureDefinition>
