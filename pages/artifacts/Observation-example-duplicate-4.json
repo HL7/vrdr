@@ -1,0 +1,50 @@
+{
+    "resourceType":"Observation",
+    "id":"example-death-date",
+    "meta":{
+        "profile":[
+            "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"
+        ]
+    },
+    "extension":[
+        {
+            "url":"http://hl7.org/fhir/us/vrdr/StructureDefinition/Patient-Location",
+            "valueReference":{
+                "reference":"Location/example-patient-location"
+            }
+        }
+    ],
+    "status":"final",
+    "code":{
+        "coding":[
+            {
+                "system":"urn:oid:2.16.840.1.113883.6.1",
+                "code":"81956-5",
+                "display":"Date and time of death"
+            }
+        ]
+    },
+    "subject":{
+        "reference":"Patient/example-decedent"
+    },
+    "performer":[
+        {
+            "reference":"Practitioner/example-death-pronouncement-performer"
+        }
+    ],
+    "effectiveDateTime":"2018-04-24T00:00:00+00:00",
+    "component":[
+        {
+            "code":{
+                "coding":[
+                    {
+                        "system":"urn:oid:2.16.840.1.113883.6.1",
+                        "code":"80616-6",
+                        "display":"Date and time pronounced dead"
+                    }
+                ]
+            },
+            "valueDateTime":"2018-04-25T00:00:00+00:00"
+        }
+    ]
+}
