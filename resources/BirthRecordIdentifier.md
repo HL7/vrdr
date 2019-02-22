@@ -8,7 +8,7 @@ Birth Record Identifier is a profile of the [FHIR STU3 Observation](http://www.h
 
 <center>
 
-{{render:vrdr/birthRecordIdentifier}}</center>
+{{render:vrdr/birthRecordIdentifierUML}}</center>
 
 ---
 

@@ -1,467 +1,408 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="generator" content=
-"HTML Tidy for HTML5 for Apple macOS version 5.6.0" />
-<meta charset="utf-8" />
-<title>Vital Records Death Reporting</title>
-<link rel="icon" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+<html>
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+    <head>
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4c47b58c64b80" />
-</head>
-<body>
-<header>
-<div class="container">
-<div class="row">
-<div class="col-md-4 fhir-logo"><a href=
-"http://hl7.org/fhir/STU3/"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4c47b58c64b80"
-alt="logo fhir" /></a></div>
-<div class="col-md-16 title">
-<div><a href="/">Vital Records Death Reporting</a></div>
-</div>
-<div class="col-md-4 hl7-logo"><a href=
-"http://www.hl7.org"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4c47b58c64b80"
-alt="visit the hl7 website" width="42" height="50" /></a></div>
-</div>
-</div>
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4ca6e6331a800" />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://hl7.org/fhir/STU3/">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4ca6e6331a800" alt="logo fhir">
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a href="/">
+                                Vital Records Death Reporting
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.hl7.org">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4ca6e6331a800" alt="visit the hl7 website" width="42" height="50">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
 <nav class="navbar navbar-default" role="navigation">
-<div class="container">
-<div class="navbar-header"><button type="button" class=
-"navbar-toggle" data-toggle="collapse" data-target=
-"#bs-example-navbar-collapse-1"><span class="sr-only">Toggle
-navigation</span> </button></div>
-<div class="collapse navbar-collapse" id=
-"bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<li><a href="Introduction.html">Introduction</a></li>
-<li><a href="Background.html">Background</a></li>
-<li class="dropdown"><a href="#" class="dropdown-toggle"
-data-toggle="dropdown">Profiles</a>
-<ul class="dropdown-menu">
-<li><a href="Profiles.html">Profiles</a></li>
-<li><a href="AutopsyPerformedIndicator.html">Autopsy Performed
-Indicator</a></li>
-<li><a href="BirthRecordIdentifier.html">Birth Record
-Identifier</a></li>
-<li><a href="CauseOfDeathCondition.html">Cause Of Death
-Condition</a></li>
-<li><a href="CauseofDeathPathway.html">Cause of Death
-Pathway</a></li>
-<li><a href="Certifier.html">Certifier</a></li>
-<li><a href="ConditionContributingtoDeath.html">Condition
-Contributing to Death</a></li>
-<li><a href="DeathCertificate.html">Death Certificate</a></li>
-<li><a href="DeathCertificateDocument.html">Death Certificate
-Document</a></li>
-<li><a href="DeathCertificateReference.html">Death Certificate
-Reference</a></li>
-<li><a href="DeathCertification.html">Death Certification</a></li>
-<li><a href="DeathDate.html">Death Date</a></li>
-<li><a href="DeathLocation.html">Death Location</a></li>
-<li><a href="DeathPronouncementPerformer.html">Death Pronouncement
-Performer</a></li>
-<li><a href="Decedent.html">Decedent</a></li>
-<li><a href="DecedentAge.html">Decedent Age</a></li>
-<li><a href="DecedentDispositionMethod.html">Decedent Disposition
-Method</a></li>
-<li><a href="DecedentEducationLevel.html">Decedent Education
-Level</a></li>
-<li><a href="DecedentEmploymentHistory.html">Decedent Employment
-History</a></li>
-<li><a href="DecedentFather.html">Decedent Father</a></li>
-<li><a href="DecedentMother.html">Decedent Mother</a></li>
-<li><a href="DecedentPregnancy.html">Decedent Pregnancy</a></li>
-<li><a href="DecedentSpouse.html">Decedent Spouse</a></li>
-<li><a href="DecedentTransportationRole.html">Decedent
-Transportation Role</a></li>
-<li><a href="DispositionLocation.html">Disposition
-Location</a></li>
-<li><a href="ExaminerContacted.html">Examiner Contacted</a></li>
-<li><a href="FuneralHome.html">Funeral Home</a></li>
-<li><a href="FuneralHomeDirector.html">Funeral Home
-Director</a></li>
-<li><a href="InjuryIncident.html">Injury Incident</a></li>
-<li><a href="InjuryLocation.html">Injury Location</a></li>
-<li><a href="InterestedParty.html">Interested Party</a></li>
-<li><a href="MannerofDeath.html">Manner of Death</a></li>
-<li><a href="Mortician.html">Mortician</a></li>
-<li><a href="TobaccoUseContributedToDeath.html">Tobacco Use
-Contributed To Death</a></li>
-</ul>
-</li>
-<li><a href="Terminologies.html">Terminologies</a></li>
-<li><a href="Examples.html">Examples</a></li>
-<li><a href="Downloads.html">Downloads</a></li>
-</ul>
-</div>
-</div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li>
+                            <a href="Introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Background.html">
+                                Background
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Profiles.html">
+                                            Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AutopsyPerformedIndicator.html">
+                                             Autopsy Performed Indicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BirthRecordIdentifier.html">
+                                             Birth Record Identifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseOfDeathCondition.html">
+                                             Cause Of Death Condition
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseofDeathPathway.html">
+                                             Cause of Death Pathway
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Certifier.html">
+                                             Certifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionContributingtoDeath.html">
+                                            Condition Contributing to Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificate.html">
+                                             Death Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateDocument.html">
+                                             Death Certificate Document
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateReference.html">
+                                             Death Certificate Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertification.html">
+                                             Death Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathDate.html">
+                                             Death Date
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathLocation.html">
+                                             Death Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathPronouncementPerformer.html">
+                                             Death Pronouncement Performer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Decedent.html">
+                                             Decedent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentAge.html">
+                                             Decedent Age
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentDispositionMethod.html">
+                                             Decedent Disposition Method
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEducationLevel.html">
+                                             Decedent Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEmploymentHistory.html">
+                                             Decedent Employment History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentFather.html">
+                                             Decedent Father
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentMother.html">
+                                             Decedent Mother
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentPregnancy.html">
+                                             Decedent Pregnancy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentSpouse.html">
+                                             Decedent Spouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentTransportationRole.html">
+                                             Decedent Transportation Role
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionLocation.html">
+                                             Disposition Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ExaminerContacted.html">
+                                             Examiner Contacted
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHome.html">
+                                             Funeral Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHomeDirector.html">
+                                             Funeral Home Director
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryIncident.html">
+                                             Injury Incident
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryLocation.html">
+                                             Injury Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InterestedParty.html">
+                                             Interested Party
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MannerofDeath.html">
+                                             Manner of Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Mortician.html">
+                                             Mortician
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TobaccoUseContributedToDeath.html">
+                                             Tobacco Use Contributed To Death
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Terminologies.html">
+                                Terminologies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
-</header>
-<div class="content container">
-<div class="row">
-<div class="col-md-24">
-<div id="preview-content">
-<h1 id="examples">Examples</h1>
-<div class='error'>Command 'table' could not render: File was not
-found for vrdr/vrdrdecedent-duplicate-3</div>
-<pre><span class="brace">&lt;</span><span class=
-"element">Patient</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">id</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">example-decedent</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</span><span class="symbol">"</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">text</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueString</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Hispanic or Latino</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">ombCategory</span><span class="symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">urn:oid:2.16.840.1.113883.6.238</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">2135-2</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Hispanic or Latino</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">text</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueString</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Puerto Rican</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">detailed</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">urn:oid:2.16.840.1.113883.6.238</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">2180-8</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Puerto Rican</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</span><span class="symbol">"</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">text</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueString</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Native Hawaiian or Other Pacific Islander</span><span class="symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">ombCategory</span><span class="symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">urn:oid:2.16.840.1.113883.6.238</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">2076-8</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Native Hawaiian or Other Pacific Islander</span><span class="symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">text</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueString</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">Tahitian</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">detailed</span><span class=
-"symbol">"</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">urn:oid:2.16.840.1.113883.6.238</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">2081-8</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">Tahitian</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">valueCoding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">extension</span> <span class=
-"attr">url</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</span><span class="symbol">"</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">valueCodeableConcept</span><span class=
-"brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">http://hl7.org/fhir/us/core/ValueSet/us-core-birthsex</span><span class="symbol">"</span><span class="brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">M</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">Male</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">valueCodeableConcept</span><span class=
-"brace">&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">extension</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">identifier</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">type</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">BR</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-                <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Social Beneficiary Identifier</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;/</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">type</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">urn:oid:2.16.840.1.113883.4.1</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">value</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">123-45-6789</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">identifier</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">name</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">use</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">official</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">family</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">Smith</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">given</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">Robert</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">given</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">John</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">suffix</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">Jr.</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">name</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">name</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">use</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">nickname</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">text</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">Bobby</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">name</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">gender</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">male</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">birthDate</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">1974-12-31</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">deceasedDateTime</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class="string">2017-12-31</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-    <span class="brace">&lt;</span><span class=
-"element">maritalStatus</span><span class="brace">&gt;</span>
-        <span class="brace">&lt;</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">system</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">http://hl7.org/fhir/ValueSet/marital-status</span><span class="symbol">"</span><span class="brace"> /&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">code</span> <span class="attr">value</span><span class=
-"symbol">=</span><span class="symbol">"</span><span class=
-"string">S</span><span class="symbol">"</span><span class=
-"brace"> /&gt;</span>
-            <span class="brace">&lt;</span><span class=
-"element">display</span> <span class=
-"attr">value</span><span class="symbol">=</span><span class=
-"symbol">"</span><span class=
-"string">Never Married</span><span class=
-"symbol">"</span><span class="brace"> /&gt;</span>
-        <span class="brace">&lt;/</span><span class=
-"element">coding</span><span class="brace">&gt;</span>
-    <span class="brace">&lt;/</span><span class=
-"element">maritalStatus</span><span class="brace">&gt;</span>
-<span class="brace">&lt;/</span><span class=
-"element">Patient</span><span class="brace">&gt;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<footer>
-<div class="container">
-<div class="row">
-<div><span>Version: undefined</span> <span>FHIR Version:
-STU3</span></div>
-<br />
-<p>Powered by <b>SIMPLIFIER.NET</b></p>
-<div>HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered
-trademarks of Health Level Seven International</div>
-</div>
-</div>
-</footer>
-</body>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+                <h1 id="examples">Examples</h1>
+<p><div class='error'>Command 'table' could not render: File was not found for vrdr/vrdrdecedent-duplicate-3</div></p>
+<p><pre><span class="brace">&lt;</span><span class="element">Patient</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">id</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">example-decedent</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">text</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueString</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Hispanic or Latino</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ombCategory</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2135-2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Hispanic or Latino</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">text</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueString</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Puerto Rican</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">detailed</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2180-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Puerto Rican</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">text</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueString</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Native Hawaiian or Other Pacific Islander</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ombCategory</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2076-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Native Hawaiian or Other Pacific Islander</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">text</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueString</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Tahitian</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">detailed</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2081-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Tahitian</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">extension</span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">valueCodeableConcept</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">coding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/ValueSet/us-core-birthsex</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">M</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Male</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">valueCodeableConcept</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">identifier</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">type</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">coding</span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">BR</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Social Beneficiary Identifier</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.4.1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">value</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">123-45-6789</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">name</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">use</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">official</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">family</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Smith</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">given</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Robert</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">given</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">John</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">suffix</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Jr.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">name</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">use</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">nickname</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;</span><span class="element">text</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Bobby</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element">gender</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">male</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element">birthDate</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1974-12-31</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element">deceasedDateTime</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2017-12-31</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element">maritalStatus</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element">coding</span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element">system</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/ValueSet/marital-status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;</span><span class="element">code</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">S</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;</span><span class="element">display</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Never Married</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">maritalStatus</span><span class="brace">&gt;</span>
+<span class="brace">&lt;/</span><span class="element">Patient</span><span class="brace">&gt;</span>
+</pre></p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: undefined</span>
+                        <span>FHIR Version: STU3</span>
+                    </div>
+                    <br />
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
 </html>

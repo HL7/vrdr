@@ -1,371 +1,331 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="generator" content=
-"HTML Tidy for HTML5 for Apple macOS version 5.6.0" />
-<meta charset="utf-8" />
-<title>Vital Records Death Reporting</title>
-<link rel="icon" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+<html>
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+    <head>
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4c47b58c64b80" />
-</head>
-<body>
-<header>
-<div class="container">
-<div class="row">
-<div class="col-md-4 fhir-logo"><a href=
-"http://hl7.org/fhir/STU3/"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4c47b58c64b80"
-alt="logo fhir" /></a></div>
-<div class="col-md-16 title">
-<div><a href="/">Vital Records Death Reporting</a></div>
-</div>
-<div class="col-md-4 hl7-logo"><a href=
-"http://www.hl7.org"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4c47b58c64b80"
-alt="visit the hl7 website" width="42" height="50" /></a></div>
-</div>
-</div>
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4ca6e6331a800" />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://hl7.org/fhir/STU3/">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4ca6e6331a800" alt="logo fhir">
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a href="/">
+                                Vital Records Death Reporting
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.hl7.org">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4ca6e6331a800" alt="visit the hl7 website" width="42" height="50">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
 <nav class="navbar navbar-default" role="navigation">
-<div class="container">
-<div class="navbar-header"><button type="button" class=
-"navbar-toggle" data-toggle="collapse" data-target=
-"#bs-example-navbar-collapse-1"><span class="sr-only">Toggle
-navigation</span> </button></div>
-<div class="collapse navbar-collapse" id=
-"bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<li><a href="Introduction.html">Introduction</a></li>
-<li><a href="Background.html">Background</a></li>
-<li class="dropdown"><a href="#" class="dropdown-toggle"
-data-toggle="dropdown">Profiles</a>
-<ul class="dropdown-menu">
-<li><a href="Profiles.html">Profiles</a></li>
-<li><a href="AutopsyPerformedIndicator.html">Autopsy Performed
-Indicator</a></li>
-<li><a href="BirthRecordIdentifier.html">Birth Record
-Identifier</a></li>
-<li><a href="CauseOfDeathCondition.html">Cause Of Death
-Condition</a></li>
-<li><a href="CauseofDeathPathway.html">Cause of Death
-Pathway</a></li>
-<li><a href="Certifier.html">Certifier</a></li>
-<li><a href="ConditionContributingtoDeath.html">Condition
-Contributing to Death</a></li>
-<li><a href="DeathCertificate.html">Death Certificate</a></li>
-<li><a href="DeathCertificateDocument.html">Death Certificate
-Document</a></li>
-<li><a href="DeathCertificateReference.html">Death Certificate
-Reference</a></li>
-<li><a href="DeathCertification.html">Death Certification</a></li>
-<li><a href="DeathDate.html">Death Date</a></li>
-<li><a href="DeathLocation.html">Death Location</a></li>
-<li><a href="DeathPronouncementPerformer.html">Death Pronouncement
-Performer</a></li>
-<li><a href="Decedent.html">Decedent</a></li>
-<li><a href="DecedentAge.html">Decedent Age</a></li>
-<li><a href="DecedentDispositionMethod.html">Decedent Disposition
-Method</a></li>
-<li><a href="DecedentEducationLevel.html">Decedent Education
-Level</a></li>
-<li><a href="DecedentEmploymentHistory.html">Decedent Employment
-History</a></li>
-<li><a href="DecedentFather.html">Decedent Father</a></li>
-<li><a href="DecedentMother.html">Decedent Mother</a></li>
-<li><a href="DecedentPregnancy.html">Decedent Pregnancy</a></li>
-<li><a href="DecedentSpouse.html">Decedent Spouse</a></li>
-<li><a href="DecedentTransportationRole.html">Decedent
-Transportation Role</a></li>
-<li><a href="DispositionLocation.html">Disposition
-Location</a></li>
-<li><a href="ExaminerContacted.html">Examiner Contacted</a></li>
-<li><a href="FuneralHome.html">Funeral Home</a></li>
-<li><a href="FuneralHomeDirector.html">Funeral Home
-Director</a></li>
-<li><a href="InjuryIncident.html">Injury Incident</a></li>
-<li><a href="InjuryLocation.html">Injury Location</a></li>
-<li><a href="InterestedParty.html">Interested Party</a></li>
-<li><a href="MannerofDeath.html">Manner of Death</a></li>
-<li><a href="Mortician.html">Mortician</a></li>
-<li><a href="TobaccoUseContributedToDeath.html">Tobacco Use
-Contributed To Death</a></li>
-</ul>
-</li>
-<li><a href="Terminologies.html">Terminologies</a></li>
-<li><a href="Examples.html">Examples</a></li>
-<li><a href="Downloads.html">Downloads</a></li>
-</ul>
-</div>
-</div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li>
+                            <a href="Introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Background.html">
+                                Background
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Profiles.html">
+                                            Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AutopsyPerformedIndicator.html">
+                                             Autopsy Performed Indicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BirthRecordIdentifier.html">
+                                             Birth Record Identifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseOfDeathCondition.html">
+                                             Cause Of Death Condition
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseofDeathPathway.html">
+                                             Cause of Death Pathway
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Certifier.html">
+                                             Certifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionContributingtoDeath.html">
+                                            Condition Contributing to Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificate.html">
+                                             Death Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateDocument.html">
+                                             Death Certificate Document
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateReference.html">
+                                             Death Certificate Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertification.html">
+                                             Death Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathDate.html">
+                                             Death Date
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathLocation.html">
+                                             Death Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathPronouncementPerformer.html">
+                                             Death Pronouncement Performer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Decedent.html">
+                                             Decedent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentAge.html">
+                                             Decedent Age
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentDispositionMethod.html">
+                                             Decedent Disposition Method
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEducationLevel.html">
+                                             Decedent Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEmploymentHistory.html">
+                                             Decedent Employment History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentFather.html">
+                                             Decedent Father
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentMother.html">
+                                             Decedent Mother
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentPregnancy.html">
+                                             Decedent Pregnancy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentSpouse.html">
+                                             Decedent Spouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentTransportationRole.html">
+                                             Decedent Transportation Role
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionLocation.html">
+                                             Disposition Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ExaminerContacted.html">
+                                             Examiner Contacted
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHome.html">
+                                             Funeral Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHomeDirector.html">
+                                             Funeral Home Director
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryIncident.html">
+                                             Injury Incident
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryLocation.html">
+                                             Injury Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InterestedParty.html">
+                                             Interested Party
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MannerofDeath.html">
+                                             Manner of Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Mortician.html">
+                                             Mortician
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TobaccoUseContributedToDeath.html">
+                                             Tobacco Use Contributed To Death
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Terminologies.html">
+                                Terminologies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
-</header>
-<div class="content container">
-<div class="row">
-<div class="col-md-24">
-<div id="preview-content">
-<h2 id="decedent-age"><strong>Decedent Age</strong></h2>
-<p>Decedent Age is a profile of the <a href=
-"http://www.hl7.org/fhir/observation.html">FHIR STU3
-Observation</a> resource. It is used to communicate the decedent's
-chronological age at the time of death. When present, the effective
-date of this observation shall be equal to the decedent's date of
-death. Age (Observation.valueQuantity.value) is derived as the
-difference in time between the decedent's death date and birth
-date. When age is less than or equal to one day then unit shall be
-<em>"minutes"</em>, when age is less than or equal to one year then
-unit shall be <em>"days"</em>, otherwise unit shall be
-<em>"years"</em>.</p>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+                <h2 id="decedent-age"><strong>Decedent Age</strong></h2>
+<p>Decedent Age is a profile of the <a href="http://www.hl7.org/fhir/observation.html">FHIR STU3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>&quot;minutes&quot;</em>, when age is less than or equal to one year then unit shall be <em>&quot;days&quot;</em>, otherwise unit shall be <em>&quot;years&quot;</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<p><img src=
-"data:image;base64,%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"
-class="img-responsive" /></p>
-</center>
+<p><div class='error'>Command 'render' could not render: File was not found for vrdr/decedentageUML</div></center></p>
 <hr />
-<h3 id="structure-definition"><strong>Structure
-Definition</strong></h3>
-<div id="4a3b65cac98c4e2291b2ebb6021ee897" data-level="10" class=
-"stu3-treetable">
-<div class="treetable-wrapper snapshot">
-<div class="treetable-left-panel">
-<table class="treetable">
-<tr data-id="7048134a-51cc-4c52-bb52-937fc3ef56ff" class=
-"collapsed">
-<td><span>Observation</span></td>
-<td></td>
-<td></td>
-<td><a title="Type Observation from core specification" href=
-"http://hl7.org/fhir/STU3/observation.html" target=
-"_blank">Observation</a></td>
-<td class="details hidden"><span><b>Data Type</b></span>
-<p><a title="Type Observation from core specification" href=
-"http://hl7.org/fhir/STU3/observation.html" target=
-"_blank">Observation</a></p>
-</td>
-</tr>
-<tr id="Observation.status" data-id=
-"920144b5-80ed-464e-a982-bd45773566fd" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="">
-<td><span>status</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a><span class="fixed-label">Fixed Value</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>status</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] status="final" Final
-(CONF:4393-20).</p>
-</div>
-<span><b>Data Type</b></span>
-<p><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a></p>
-<span><b>Fixed Value</b></span>
-<div>
-<pre class="">final</pre></div>
-</td>
-</tr>
-<tr id="Observation.code" data-id=
-"233954bb-62bf-4afd-bf0f-28f332f83a09" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="">
-<td><span>code</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a><span class="fixed-label">Fixed
-Value</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>code</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] code=" 30525-0" AGE
-(CodeSystem: LOINC urn:oid:2.16.840.1.113883.6.1)
-(CONF:4393-21).</p>
-</div>
-<span><b>Data Type</b></span>
-<p><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a></p>
-<span><b>Fixed Value</b></span>
-<div>
+<h3 id="structure-definition"><strong>Structure Definition</strong></h3>
+<p><div id="50e57214415f432c975a6758d2f63f67" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="collapsed"><td><span class="baseIcon resource"></span><span>Observation</span></td><td></td><td></td><td><a title="Type Observation from core specification" href="http://hl7.org/fhir/STU3/observation.html" target="_blank">Observation</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Observation from core specification" href="http://hl7.org/fhir/STU3/observation.html" target="_blank">Observation</a></p></td></tr><tr id="Observation.status" data-id="549c3dc8-d9f9-425f-af96-0363b406a17c" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon primitive"></span><span>status</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>status</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] status=&quot;final&quot; Final (CONF:4393-20).</p>
+</div><span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a></p><span><b>Fixed Value </b></span><div>
+<pre class="">final</pre></div></td></tr><tr id="Observation.code" data-id="8a85a16d-b63a-48ee-87c1-6b3a40f61bf1" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon datatype"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] code=&quot; 30525-0&quot; AGE (CodeSystem: LOINC urn:oid:2.16.840.1.113883.6.1) (CONF:4393-21).</p>
+</div><span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p><span><b>Fixed Value </b></span><div>
 <pre class="">{
-  "coding": [
+  &quot;coding&quot;: [
     {
-      "system": "urn:oid:2.16.840.1.113883.6.1",
-      "code": "30525-0",
-      "display": "AGE"
+      &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.1&quot;,
+      &quot;code&quot;: &quot;30525-0&quot;,
+      &quot;display&quot;: &quot;AGE&quot;
     }
   ]
-}</pre></div>
-</td>
-</tr>
-<tr id="Observation.subject" data-id=
-"14abb81a-e8aa-49b4-af34-bb57c596d9fb" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="">
-<td><span>subject</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><a title="Type Reference from core specification" href=
-"http://hl7.org/fhir/STU3/references.html" target=
-"_blank">Reference</a><span>(</span><a title="Profile" href=
-"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>subject</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] subject (CONF:4393-22).</p>
-</div>
-<span><b>Data Type</b></span>
-<p><a title="Type Reference from core specification" href=
-"http://hl7.org/fhir/STU3/references.html" target=
-"_blank">Reference</a><span>(</span><a title="Profile" href=
-"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></p>
-</td>
-</tr>
-<tr id="Observation.effective[x]" data-id=
-"e6bf00ec-6dae-4b3b-bca3-e6b43c563c9b" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="sliced">
-<td><span>effective[x]</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>effective[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] effective[x], where effective[x]
-is (CONF:4393-17)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Observation.effective[x]:effectiveDateTime" data-id=
-"2e1d6335-18d9-4a13-b86f-ba776f373845" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="">
-<td><span>effectiveDateTime</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>effectiveDateTime</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>effectiveDateTime (CONF:4393-23)</p>
-</div>
-</td>
-</tr>
-<tr id="Observation.value[x]" data-id=
-"b97983b1-4cbc-4714-ba1c-e0bf0cf50d79" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="sliced">
-<td><span>value[x]</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] value[x], where value[x] is
-(CONF:4393-18)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Observation.value[x]:valueQuantity" data-id=
-"18cb3f07-6fcb-4c92-a2f8-9cf1dcdb6c92" data-parentid=
-"7048134a-51cc-4c52-bb52-937fc3ef56ff" class="collapsed">
-<td><span>valueQuantity</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueQuantity</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>valueQuantity (CONF:4393-19)</p>
-</div>
-</td>
-</tr>
-<tr id="Observation.valueQuantity:value" data-id=
-"f294857e-5bb1-4f72-9bc9-7d251d30b188" data-parentid=
-"18cb3f07-6fcb-4c92-a2f8-9cf1dcdb6c92" class="">
-<td><span>value</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] value (CONF:4393-24).</p>
-</div>
-</td>
-</tr>
-<tr id="Observation.valueQuantity:unit" data-id=
-"46a3c18c-2054-4716-888c-3434d7735060" data-parentid=
-"18cb3f07-6fcb-4c92-a2f8-9cf1dcdb6c92" class="">
-<td><span>unit</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><span class="binding-label">Binding</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>unit</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] unit (CONF:4393-25).</p>
-</div>
-<span><b>Binding</b></span>
-<p><a title="age-units" href=
-"http://hl7.org/fhir/STU3/valueset-age-units.html" target=
-"_blank">AgeUnitOfMeasure</a> <span>(</span><a title=
-"To be conformant, instances of this element SHALL include a code from the specified valueset"
-href=
-"http://hl7.org/fhir/STU3/terminologies.html#required">required</a><span>)</span></p>
-</td>
-</tr>
-</table>
-</div>
-<div class="treetable-right-panel"></div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
+}</pre></div></td></tr><tr id="Observation.subject" data-id="37ebf62e-5494-47f7-9d8e-132c64136ce4" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon reference"></span><span>subject</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>subject</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] subject (CONF:4393-22).</p>
+</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></p></td></tr><tr id="Observation.effective[x]" data-id="21fab7d7-453a-4446-9571-4933c42bd3e5" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced"><td><span class="baseIcon slice"></span><span>effective[x]</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effective[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] effective[x], where effective[x] is (CONF:4393-17)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.effective[x]:effectiveDateTime" data-id="0936cef8-e023-46d3-a927-7be9528faea3" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon primitive"></span><span>effectiveDateTime</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effectiveDateTime</span></p><span><b>Definition </b></span><div class="markdown"><p>effectiveDateTime (CONF:4393-23)</p>
+</div></td></tr><tr id="Observation.value[x]" data-id="eb0c86f3-bce1-47e2-9d7e-58cb95b6c412" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-18)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.value[x]:valueQuantity" data-id="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueQuantity</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueQuantity</span></p><span><b>Definition </b></span><div class="markdown"><p>valueQuantity (CONF:4393-19)</p>
+</div></td></tr><tr id="Observation.valueQuantity:value" data-id="b9ca7858-19c0-40e5-9c4f-703f646d8384" data-parentId="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class=""><td><span class="baseIcon primitive"></span><span>value</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value (CONF:4393-24).</p>
+</div></td></tr><tr id="Observation.valueQuantity:unit" data-id="7d5dcb7b-fa5e-4c9a-b067-a53fa1a5b9e6" data-parentId="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class=""><td><span class="baseIcon primitive"></span><span>unit</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>unit</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] unit (CONF:4393-25).</p>
+</div><span><b>Binding </b></span><p><a title="age-units" href="http://hl7.org/fhir/STU3/valueset-age-units.html" target="_blank">AgeUnitOfMeasure</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTable4a3b65cac98c4e2291b2ebb6021ee897 = new Stu3TreeTable(false);
-resourceTreeTable4a3b65cac98c4e2291b2ebb6021ee897.init("4a3b65cac98c4e2291b2ebb6021ee897");
+var resourceTreeTable50e57214415f432c975a6758d2f63f67 = new Stu3TreeTable(false);
+resourceTreeTable50e57214415f432c975a6758d2f63f67.init("50e57214415f432c975a6758d2f63f67");
 }
 })();
-//]]>
-</script>
+</script></p>
 <hr />
-<h3 id="terminolgy-bindings"><strong>Terminolgy
-Bindings</strong></h3>
+<h3 id="terminolgy-bindings"><strong>Terminolgy Bindings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -377,12 +337,12 @@ Bindings</strong></h3>
 <tbody>
 <tr>
 <td>Observation.status</td>
-<td>"final" - Final</td>
+<td>&quot;final&quot; - Final</td>
 <td>observation-status</td>
 </tr>
 <tr>
 <td>Observation.code</td>
-<td>"30525-0" - Age</td>
+<td>&quot;30525-0&quot; - Age</td>
 <td>LOINC</td>
 </tr>
 <tr>
@@ -394,76 +354,9 @@ Bindings</strong></h3>
 </table>
 <hr />
 <h3 id="element-table"><strong>Element Table</strong></h3>
-<div class="path">
-<table>
-<tr>
-<td><span class="field">Observation</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Observation.<span class="field">status</span></td>
-<td><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Observation.<span class="field">code</span></td>
-<td><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Observation.<span class="field">subject</span></td>
-<td><a title="Type Reference from core specification" href=
-"http://hl7.org/fhir/STU3/references.html" target=
-"_blank">Reference</a><span>(</span><a title="Profile" href=
-"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Observation.<span class="field">effective[x]</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Observation.<span class=
-"field">effectiveDateTime:effectiveDateTime</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Observation.<span class="field">value[x]</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Observation.<span class=
-"field">valueQuantity:valueQuantity</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Observation.valueQuantity:valueQuantity.<span class=
-"field">value</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Observation.valueQuantity:valueQuantity.<span class=
-"field">unit</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-</table>
-</div>
-<br />
-<br />
+<p><div class="path"><table><tr><td><span class="field">Observation</span></td><td></td><td>.. </td></tr><tr><td>Observation.<span class="field">status</span></td><td><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">code</span></td><td><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">subject</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">effective[x]</span></td><td></td><td>0..1 </td></tr><tr><td>Observation.<span class="field">effectiveDateTime:effectiveDateTime</span></td><td></td><td>.. </td></tr><tr><td>Observation.<span class="field">value[x]</span></td><td></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">valueQuantity:valueQuantity</span></td><td></td><td>.. </td></tr><tr><td>Observation.valueQuantity:valueQuantity.<span class="field">value</span></td><td></td><td>1..1 </td></tr><tr><td>Observation.valueQuantity:valueQuantity.<span class="field">unit</span></td><td></td><td>1..1 </td></tr></table></div><br></br></p>
 <hr />
-<h3 id="requirements-traceability-mappings"><strong>Requirements
-Traceability Mappings</strong></h3>
+<h3 id="requirements-traceability-mappings"><strong>Requirements Traceability Mappings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -494,21 +387,31 @@ Traceability Mappings</strong></h3>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-<footer>
-<div class="container">
-<div class="row">
-<div><span>Version: undefined</span> <span>FHIR Version:
-STU3</span></div>
-<br />
-<p>Powered by <b>SIMPLIFIER.NET</b></p>
-<div>HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered
-trademarks of Health Level Seven International</div>
-</div>
-</div>
-</footer>
-</body>
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: undefined</span>
+                        <span>FHIR Version: STU3</span>
+                    </div>
+                    <br />
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
 </html>

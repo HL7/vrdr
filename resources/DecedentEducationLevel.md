@@ -9,7 +9,7 @@ Decedent Age is a profile of the [FHIR STU3 Observation](http://www.hl7.org/fhir
 
 <center>
 
-{{render:vrdr/vrdrdecedenteducationlevel-duplicate-2}}</center>
+{{render:vrdr/vrdrdecedenteducationlevelUML}}</center>
 
 ---
 
