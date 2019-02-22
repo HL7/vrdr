@@ -1,321 +1,358 @@
-
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Apple macOS version 5.6.0" />
+<meta charset="utf-8" />
+<title>Vital Records Death Reporting</title>
+<link rel="icon" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
 
-    <head>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
 
-        <meta charset="utf-8" />
-        <title>Vital Records Death Reporting</title>
-
-        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
-
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
-
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
-
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4ca6e6331a800" />
-
-    </head>
-
-    <body>
-
-        <header>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 fhir-logo">
-                        <a href="http://hl7.org/fhir/STU3/">
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4ca6e6331a800" alt="logo fhir">
-                        </a>
-                    </div>
-                    <div class="col-md-16 title">
-                        <div>
-                            <a href="/">
-                                Vital Records Death Reporting
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 hl7-logo">
-                        <a href="http://www.hl7.org">
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4ca6e6331a800" alt="visit the hl7 website" width="42" height="50">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+<script src=
+"guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+<link rel="stylesheet" href=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4ca6e6331a800" />
+</head>
+<body>
+<header>
+<div class="container">
+<div class="row">
+<div class="col-md-4 fhir-logo"><a href=
+"http://hl7.org/fhir/STU3/"><img src=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4ca6e6331a800"
+alt="logo fhir" /></a></div>
+<div class="col-md-16 title">
+<div><a href="/">Vital Records Death Reporting</a></div>
+</div>
+<div class="col-md-4 hl7-logo"><a href=
+"http://www.hl7.org"><img src=
+"guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4ca6e6331a800"
+alt="visit the hl7 website" width="42" height="50" /></a></div>
+</div>
+</div>
 <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-                        <li>
-                            <a href="Introduction.html">
-                                Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Background.html">
-                                Background
-                            </a>
-                        </li>
-                        <li class="dropdown">
-
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Profiles <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu">
-
-                                    <li>
-                                        <a href="Profiles.html">
-                                            Profiles
-                                        </a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-
-                                    <li>
-                                        <a href="AutopsyPerformedIndicator.html">
-                                             Autopsy Performed Indicator
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="BirthRecordIdentifier.html">
-                                             Birth Record Identifier
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="CauseOfDeathCondition.html">
-                                             Cause Of Death Condition
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="CauseofDeathPathway.html">
-                                             Cause of Death Pathway
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Certifier.html">
-                                             Certifier
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ConditionContributingtoDeath.html">
-                                            Condition Contributing to Death
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificate.html">
-                                             Death Certificate
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificateDocument.html">
-                                             Death Certificate Document
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertificateReference.html">
-                                             Death Certificate Reference
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathCertification.html">
-                                             Death Certification
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathDate.html">
-                                             Death Date
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathLocation.html">
-                                             Death Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DeathPronouncementPerformer.html">
-                                             Death Pronouncement Performer
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Decedent.html">
-                                             Decedent
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentAge.html">
-                                             Decedent Age
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentDispositionMethod.html">
-                                             Decedent Disposition Method
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentEducationLevel.html">
-                                             Decedent Education Level
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentEmploymentHistory.html">
-                                             Decedent Employment History
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentFather.html">
-                                             Decedent Father
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentMother.html">
-                                             Decedent Mother
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentPregnancy.html">
-                                             Decedent Pregnancy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentSpouse.html">
-                                             Decedent Spouse
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DecedentTransportationRole.html">
-                                             Decedent Transportation Role
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="DispositionLocation.html">
-                                             Disposition Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ExaminerContacted.html">
-                                             Examiner Contacted
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="FuneralHome.html">
-                                             Funeral Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="FuneralHomeDirector.html">
-                                             Funeral Home Director
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InjuryIncident.html">
-                                             Injury Incident
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InjuryLocation.html">
-                                             Injury Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="InterestedParty.html">
-                                             Interested Party
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="MannerofDeath.html">
-                                             Manner of Death
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Mortician.html">
-                                             Mortician
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="TobaccoUseContributedToDeath.html">
-                                             Tobacco Use Contributed To Death
-                                        </a>
-                                    </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Terminologies.html">
-                                Terminologies
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Examples.html">
-                                Examples
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Downloads.html">
-                                Downloads
-                            </a>
-                        </li>
-
-            </ul>
-        </div>
-    </div>
+<div class="container">
+<div class="navbar-header"><button type="button" class=
+"navbar-toggle" data-toggle="collapse" data-target=
+"#bs-example-navbar-collapse-1"><span class="sr-only">Toggle
+navigation</span> </button></div>
+<div class="collapse navbar-collapse" id=
+"bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="Introduction.html">Introduction</a></li>
+<li><a href="Background.html">Background</a></li>
+<li class="dropdown"><a href="#" class="dropdown-toggle"
+data-toggle="dropdown">Profiles</a>
+<ul class="dropdown-menu">
+<li><a href="Profiles.html">Profiles</a></li>
+<li><a href="AutopsyPerformedIndicator.html">Autopsy Performed
+Indicator</a></li>
+<li><a href="BirthRecordIdentifier.html">Birth Record
+Identifier</a></li>
+<li><a href="CauseOfDeathCondition.html">Cause Of Death
+Condition</a></li>
+<li><a href="CauseofDeathPathway.html">Cause of Death
+Pathway</a></li>
+<li><a href="Certifier.html">Certifier</a></li>
+<li><a href="ConditionContributingtoDeath.html">Condition
+Contributing to Death</a></li>
+<li><a href="DeathCertificate.html">Death Certificate</a></li>
+<li><a href="DeathCertificateDocument.html">Death Certificate
+Document</a></li>
+<li><a href="DeathCertificateReference.html">Death Certificate
+Reference</a></li>
+<li><a href="DeathCertification.html">Death Certification</a></li>
+<li><a href="DeathDate.html">Death Date</a></li>
+<li><a href="DeathLocation.html">Death Location</a></li>
+<li><a href="DeathPronouncementPerformer.html">Death Pronouncement
+Performer</a></li>
+<li><a href="Decedent.html">Decedent</a></li>
+<li><a href="DecedentAge.html">Decedent Age</a></li>
+<li><a href="DecedentDispositionMethod.html">Decedent Disposition
+Method</a></li>
+<li><a href="DecedentEducationLevel.html">Decedent Education
+Level</a></li>
+<li><a href="DecedentEmploymentHistory.html">Decedent Employment
+History</a></li>
+<li><a href="DecedentFather.html">Decedent Father</a></li>
+<li><a href="DecedentMother.html">Decedent Mother</a></li>
+<li><a href="DecedentPregnancy.html">Decedent Pregnancy</a></li>
+<li><a href="DecedentSpouse.html">Decedent Spouse</a></li>
+<li><a href="DecedentTransportationRole.html">Decedent
+Transportation Role</a></li>
+<li><a href="DispositionLocation.html">Disposition
+Location</a></li>
+<li><a href="ExaminerContacted.html">Examiner Contacted</a></li>
+<li><a href="FuneralHome.html">Funeral Home</a></li>
+<li><a href="FuneralHomeDirector.html">Funeral Home
+Director</a></li>
+<li><a href="InjuryIncident.html">Injury Incident</a></li>
+<li><a href="InjuryLocation.html">Injury Location</a></li>
+<li><a href="InterestedParty.html">Interested Party</a></li>
+<li><a href="MannerofDeath.html">Manner of Death</a></li>
+<li><a href="Mortician.html">Mortician</a></li>
+<li><a href="TobaccoUseContributedToDeath.html">Tobacco Use
+Contributed To Death</a></li>
+</ul>
+</li>
+<li><a href="Terminologies.html">Terminologies</a></li>
+<li><a href="Examples.html">Examples</a></li>
+<li><a href="Downloads.html">Downloads</a></li>
+</ul>
+</div>
+</div>
 </nav>
-
-        </header>
-
-        <div class="content container">
-            
-
-    <div class="row">
-
-
-        <div class="col-md-24">
-
-            <div id="preview-content">
-                <h2 id="decedent-age"><strong>Decedent Age</strong></h2>
-<p>Decedent Age is a profile of the <a href="http://www.hl7.org/fhir/observation.html">FHIR STU3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>&quot;minutes&quot;</em>, when age is less than or equal to one year then unit shall be <em>&quot;days&quot;</em>, otherwise unit shall be <em>&quot;years&quot;</em>.</p>
+</header>
+<div class="content container">
+<div class="row">
+<div class="col-md-24">
+<div id="preview-content">
+<h2 id="decedent-age"><strong>Decedent Age</strong></h2>
+<p>Decedent Age is a profile of the <a href=
+"http://www.hl7.org/fhir/observation.html">FHIR STU3
+Observation</a> resource. It is used to communicate the decedent's
+chronological age at the time of death. When present, the effective
+date of this observation shall be equal to the decedent's date of
+death. Age (Observation.valueQuantity.value) is derived as the
+difference in time between the decedent's death date and birth
+date. When age is less than or equal to one day then unit shall be
+<em>"minutes"</em>, when age is less than or equal to one year then
+unit shall be <em>"days"</em>, otherwise unit shall be
+<em>"years"</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<p><div class='error'>Command 'render' could not render: File was not found for vrdr/decedentageUML</div></center></p>
+<div class='error'>Command 'render' could not render: File was not
+found for vrdr/decedentageUML</div>
+</center>
 <hr />
-<h3 id="structure-definition"><strong>Structure Definition</strong></h3>
-<p><div id="50e57214415f432c975a6758d2f63f67" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="collapsed"><td><span class="baseIcon resource"></span><span>Observation</span></td><td></td><td></td><td><a title="Type Observation from core specification" href="http://hl7.org/fhir/STU3/observation.html" target="_blank">Observation</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Observation from core specification" href="http://hl7.org/fhir/STU3/observation.html" target="_blank">Observation</a></p></td></tr><tr id="Observation.status" data-id="549c3dc8-d9f9-425f-af96-0363b406a17c" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon primitive"></span><span>status</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>status</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] status=&quot;final&quot; Final (CONF:4393-20).</p>
-</div><span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a></p><span><b>Fixed Value </b></span><div>
-<pre class="">final</pre></div></td></tr><tr id="Observation.code" data-id="8a85a16d-b63a-48ee-87c1-6b3a40f61bf1" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon datatype"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] code=&quot; 30525-0&quot; AGE (CodeSystem: LOINC urn:oid:2.16.840.1.113883.6.1) (CONF:4393-21).</p>
-</div><span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p><span><b>Fixed Value </b></span><div>
+<h3 id="structure-definition"><strong>Structure
+Definition</strong></h3>
+<div id="50e57214415f432c975a6758d2f63f67" data-level="10" class=
+"stu3-treetable">
+<div class="treetable-wrapper snapshot">
+<div class="treetable-left-panel">
+<table class="treetable">
+<tr data-id="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=
+"collapsed">
+<td><span>Observation</span></td>
+<td></td>
+<td></td>
+<td><a title="Type Observation from core specification" href=
+"http://hl7.org/fhir/STU3/observation.html" target=
+"_blank">Observation</a></td>
+<td class="details hidden"><span><b>Data Type</b></span>
+<p><a title="Type Observation from core specification" href=
+"http://hl7.org/fhir/STU3/observation.html" target=
+"_blank">Observation</a></p>
+</td>
+</tr>
+<tr id="Observation.status" data-id=
+"549c3dc8-d9f9-425f-af96-0363b406a17c" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="">
+<td><span>status</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type code from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#code" target=
+"_blank">code</a><span class="fixed-label">Fixed Value</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>status</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] status="final" Final
+(CONF:4393-20).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type code from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#code" target=
+"_blank">code</a></p>
+<span><b>Fixed Value</b></span>
+<div>
+<pre class="">final</pre></div>
+</td>
+</tr>
+<tr id="Observation.code" data-id=
+"8a85a16d-b63a-48ee-87c1-6b3a40f61bf1" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="">
+<td><span>code</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type CodeableConcept from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
+"_blank">CodeableConcept</a><span class="fixed-label">Fixed
+Value</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>code</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] code=" 30525-0" AGE
+(CodeSystem: LOINC urn:oid:2.16.840.1.113883.6.1)
+(CONF:4393-21).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type CodeableConcept from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
+"_blank">CodeableConcept</a></p>
+<span><b>Fixed Value</b></span>
+<div>
 <pre class="">{
-  &quot;coding&quot;: [
+  "coding": [
     {
-      &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.1&quot;,
-      &quot;code&quot;: &quot;30525-0&quot;,
-      &quot;display&quot;: &quot;AGE&quot;
+      "system": "urn:oid:2.16.840.1.113883.6.1",
+      "code": "30525-0",
+      "display": "AGE"
     }
   ]
-}</pre></div></td></tr><tr id="Observation.subject" data-id="37ebf62e-5494-47f7-9d8e-132c64136ce4" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon reference"></span><span>subject</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>subject</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] subject (CONF:4393-22).</p>
-</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></p></td></tr><tr id="Observation.effective[x]" data-id="21fab7d7-453a-4446-9571-4933c42bd3e5" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced"><td><span class="baseIcon slice"></span><span>effective[x]</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effective[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] effective[x], where effective[x] is (CONF:4393-17)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.effective[x]:effectiveDateTime" data-id="0936cef8-e023-46d3-a927-7be9528faea3" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class=""><td><span class="baseIcon primitive"></span><span>effectiveDateTime</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effectiveDateTime</span></p><span><b>Definition </b></span><div class="markdown"><p>effectiveDateTime (CONF:4393-23)</p>
-</div></td></tr><tr id="Observation.value[x]" data-id="eb0c86f3-bce1-47e2-9d7e-58cb95b6c412" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-18)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.value[x]:valueQuantity" data-id="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" data-parentId="c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueQuantity</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueQuantity</span></p><span><b>Definition </b></span><div class="markdown"><p>valueQuantity (CONF:4393-19)</p>
-</div></td></tr><tr id="Observation.valueQuantity:value" data-id="b9ca7858-19c0-40e5-9c4f-703f646d8384" data-parentId="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class=""><td><span class="baseIcon primitive"></span><span>value</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value (CONF:4393-24).</p>
-</div></td></tr><tr id="Observation.valueQuantity:unit" data-id="7d5dcb7b-fa5e-4c9a-b067-a53fa1a5b9e6" data-parentId="7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class=""><td><span class="baseIcon primitive"></span><span>unit</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>unit</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] unit (CONF:4393-25).</p>
-</div><span><b>Binding </b></span><p><a title="age-units" href="http://hl7.org/fhir/STU3/valueset-age-units.html" target="_blank">AgeUnitOfMeasure</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/STU3/terminologies.html#required" >required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+}</pre></div>
+</td>
+</tr>
+<tr id="Observation.subject" data-id=
+"37ebf62e-5494-47f7-9d8e-132c64136ce4" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="">
+<td><span>subject</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>subject</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] subject (CONF:4393-22).</p>
+</div>
+<span><b>Data Type</b></span>
+<p><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Observation.effective[x]" data-id=
+"21fab7d7-453a-4446-9571-4933c42bd3e5" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced">
+<td><span>effective[x]</span></td>
+<td></td>
+<td><span>0</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>effective[x]</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>MAY contain zero or one [0..1] effective[x], where effective[x]
+is (CONF:4393-17)</p>
+</div>
+<span><b>Sliced:</b></span>
+<p><span>Unordered, Open, by $this(Type)</span></p>
+</td>
+</tr>
+<tr id="Observation.effective[x]:effectiveDateTime" data-id=
+"0936cef8-e023-46d3-a927-7be9528faea3" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="">
+<td><span>effectiveDateTime</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>effectiveDateTime</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>effectiveDateTime (CONF:4393-23)</p>
+</div>
+</td>
+</tr>
+<tr id="Observation.value[x]" data-id=
+"eb0c86f3-bce1-47e2-9d7e-58cb95b6c412" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="sliced">
+<td><span>value[x]</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>value[x]</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] value[x], where value[x] is
+(CONF:4393-18)</p>
+</div>
+<span><b>Sliced:</b></span>
+<p><span>Unordered, Open, by $this(Type)</span></p>
+</td>
+</tr>
+<tr id="Observation.value[x]:valueQuantity" data-id=
+"7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" data-parentid=
+"c27db388-09d7-41f2-9b28-d26d34fdcfa3" class="collapsed">
+<td><span>valueQuantity</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>valueQuantity</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>valueQuantity (CONF:4393-19)</p>
+</div>
+</td>
+</tr>
+<tr id="Observation.valueQuantity:value" data-id=
+"b9ca7858-19c0-40e5-9c4f-703f646d8384" data-parentid=
+"7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class="">
+<td><span>value</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>value</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] value (CONF:4393-24).</p>
+</div>
+</td>
+</tr>
+<tr id="Observation.valueQuantity:unit" data-id=
+"7d5dcb7b-fa5e-4c9a-b067-a53fa1a5b9e6" data-parentid=
+"7267938f-d1e9-4b49-b8b2-1352cfd8e7a5" class="">
+<td><span>unit</span></td>
+<td></td>
+<td><span>1</span><span>..</span><span>1</span></td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden"><span><b>Short description</b></span>
+<p><span>unit</span></p>
+<span><b>Definition</b></span>
+<div class="markdown">
+<p>SHALL contain exactly one [1..1] unit (CONF:4393-25).</p>
+</div>
+<span><b>Binding</b></span>
+<p><a title="age-units" href=
+"http://hl7.org/fhir/STU3/valueset-age-units.html" target=
+"_blank">AgeUnitOfMeasure</a> <span>(</span><a title=
+"To be conformant, instances of this element SHALL include a code from the specified valueset"
+href=
+"http://hl7.org/fhir/STU3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="treetable-right-panel"></div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
@@ -323,9 +360,11 @@ var resourceTreeTable50e57214415f432c975a6758d2f63f67 = new Stu3TreeTable(false)
 resourceTreeTable50e57214415f432c975a6758d2f63f67.init("50e57214415f432c975a6758d2f63f67");
 }
 })();
-</script></p>
+//]]>
+</script>
 <hr />
-<h3 id="terminolgy-bindings"><strong>Terminolgy Bindings</strong></h3>
+<h3 id="terminolgy-bindings"><strong>Terminolgy
+Bindings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -337,12 +376,12 @@ resourceTreeTable50e57214415f432c975a6758d2f63f67.init("50e57214415f432c975a6758
 <tbody>
 <tr>
 <td>Observation.status</td>
-<td>&quot;final&quot; - Final</td>
+<td>"final" - Final</td>
 <td>observation-status</td>
 </tr>
 <tr>
 <td>Observation.code</td>
-<td>&quot;30525-0&quot; - Age</td>
+<td>"30525-0" - Age</td>
 <td>LOINC</td>
 </tr>
 <tr>
@@ -354,9 +393,76 @@ resourceTreeTable50e57214415f432c975a6758d2f63f67.init("50e57214415f432c975a6758
 </table>
 <hr />
 <h3 id="element-table"><strong>Element Table</strong></h3>
-<p><div class="path"><table><tr><td><span class="field">Observation</span></td><td></td><td>.. </td></tr><tr><td>Observation.<span class="field">status</span></td><td><a title="Type code from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#code" target="_blank">code</a></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">code</span></td><td><a title="Type CodeableConcept from core specification" href="http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">subject</span></td><td><a title="Type Reference from core specification" href="http://hl7.org/fhir/STU3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRDecedent.xml" >VRDR Decedent</a><span>)</span></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">effective[x]</span></td><td></td><td>0..1 </td></tr><tr><td>Observation.<span class="field">effectiveDateTime:effectiveDateTime</span></td><td></td><td>.. </td></tr><tr><td>Observation.<span class="field">value[x]</span></td><td></td><td>1..1 </td></tr><tr><td>Observation.<span class="field">valueQuantity:valueQuantity</span></td><td></td><td>.. </td></tr><tr><td>Observation.valueQuantity:valueQuantity.<span class="field">value</span></td><td></td><td>1..1 </td></tr><tr><td>Observation.valueQuantity:valueQuantity.<span class="field">unit</span></td><td></td><td>1..1 </td></tr></table></div><br></br></p>
+<div class="path">
+<table>
+<tr>
+<td><span class="field">Observation</span></td>
+<td></td>
+<td>..</td>
+</tr>
+<tr>
+<td>Observation.<span class="field">status</span></td>
+<td><a title="Type code from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#code" target=
+"_blank">code</a></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>Observation.<span class="field">code</span></td>
+<td><a title="Type CodeableConcept from core specification" href=
+"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
+"_blank">CodeableConcept</a></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>Observation.<span class="field">subject</span></td>
+<td><a title="Type Reference from core specification" href=
+"http://hl7.org/fhir/STU3/references.html" target=
+"_blank">Reference</a><span>(</span><a title="Profile" href=
+"artifacts/VRDRDecedent.xml">VRDR Decedent</a><span>)</span></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>Observation.<span class="field">effective[x]</span></td>
+<td></td>
+<td>0..1</td>
+</tr>
+<tr>
+<td>Observation.<span class=
+"field">effectiveDateTime:effectiveDateTime</span></td>
+<td></td>
+<td>..</td>
+</tr>
+<tr>
+<td>Observation.<span class="field">value[x]</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>Observation.<span class=
+"field">valueQuantity:valueQuantity</span></td>
+<td></td>
+<td>..</td>
+</tr>
+<tr>
+<td>Observation.valueQuantity:valueQuantity.<span class=
+"field">value</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>Observation.valueQuantity:valueQuantity.<span class=
+"field">unit</span></td>
+<td></td>
+<td>1..1</td>
+</tr>
+</table>
+</div>
+<br />
+<br />
 <hr />
-<h3 id="requirements-traceability-mappings"><strong>Requirements Traceability Mappings</strong></h3>
+<h3 id="requirements-traceability-mappings"><strong>Requirements
+Traceability Mappings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -387,31 +493,21 @@ resourceTreeTable50e57214415f432c975a6758d2f63f67.init("50e57214415f432c975a6758
 </tr>
 </tbody>
 </table>
-
-            </div>
-
-
-        </div>
-    </div>
-
-        </div>
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <span>Version: undefined</span>
-                        <span>FHIR Version: STU3</span>
-                    </div>
-                    <br />
-                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
-                    <div>
-                        HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </body>
-
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div><span>Version: undefined</span> <span>FHIR Version:
+STU3</span></div>
+<br />
+<p>Powered by <b>SIMPLIFIER.NET</b></p>
+<div>HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered
+trademarks of Health Level Seven International</div>
+</div>
+</div>
+</footer>
+</body>
 </html>
