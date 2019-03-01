@@ -1,511 +1,322 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="generator" content=
-"HTML Tidy for HTML5 for Apple macOS version 5.6.0" />
-<meta charset="utf-8" />
-<title>Vital Records Death Reporting</title>
-<link rel="icon" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+    <head><meta http-equiv="Content-Type" content="text/html; charset=IBM437" />
 
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
-<script src=
-"guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
-<link rel="stylesheet" href=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css?v=1d4ca6e6331a800" />
-</head>
-<body>
-<header>
-<div class="container">
-<div class="row">
-<div class="col-md-4 fhir-logo"><a href=
-"http://hl7.org/fhir/STU3/"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png?v=1d4ca6e6331a800"
-alt="logo fhir" /></a></div>
-<div class="col-md-16 title">
-<div><a href="/">Vital Records Death Reporting</a></div>
-</div>
-<div class="col-md-4 hl7-logo"><a href=
-"http://www.hl7.org"><img src=
-"guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png?v=1d4ca6e6331a800"
-alt="visit the hl7 website" width="42" height="50" /></a></div>
-</div>
-</div>
-<nav class="navbar navbar-default" role="navigation">
-<div class="container">
-<div class="navbar-header"><button type="button" class=
-"navbar-toggle" data-toggle="collapse" data-target=
-"#bs-example-navbar-collapse-1"><span class="sr-only">Toggle
-navigation</span> </button></div>
-<div class="collapse navbar-collapse" id=
-"bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<li><a href="Introduction.html">Introduction</a></li>
-<li><a href="Background.html">Background</a></li>
-<li class="dropdown"><a href="#" class="dropdown-toggle"
-data-toggle="dropdown">Profiles</a>
-<ul class="dropdown-menu">
-<li><a href="Profiles.html">Profiles</a></li>
-<li><a href="AutopsyPerformedIndicator.html">Autopsy Performed
-Indicator</a></li>
-<li><a href="BirthRecordIdentifier.html">Birth Record
-Identifier</a></li>
-<li><a href="CauseOfDeathCondition.html">Cause Of Death
-Condition</a></li>
-<li><a href="CauseofDeathPathway.html">Cause of Death
-Pathway</a></li>
-<li><a href="Certifier.html">Certifier</a></li>
-<li><a href="ConditionContributingtoDeath.html">Condition
-Contributing to Death</a></li>
-<li><a href="DeathCertificate.html">Death Certificate</a></li>
-<li><a href="DeathCertificateDocument.html">Death Certificate
-Document</a></li>
-<li><a href="DeathCertificateReference.html">Death Certificate
-Reference</a></li>
-<li><a href="DeathCertification.html">Death Certification</a></li>
-<li><a href="DeathDate.html">Death Date</a></li>
-<li><a href="DeathLocation.html">Death Location</a></li>
-<li><a href="DeathPronouncementPerformer.html">Death Pronouncement
-Performer</a></li>
-<li><a href="Decedent.html">Decedent</a></li>
-<li><a href="DecedentAge.html">Decedent Age</a></li>
-<li><a href="DecedentDispositionMethod.html">Decedent Disposition
-Method</a></li>
-<li><a href="DecedentEducationLevel.html">Decedent Education
-Level</a></li>
-<li><a href="DecedentEmploymentHistory.html">Decedent Employment
-History</a></li>
-<li><a href="DecedentFather.html">Decedent Father</a></li>
-<li><a href="DecedentMother.html">Decedent Mother</a></li>
-<li><a href="DecedentPregnancy.html">Decedent Pregnancy</a></li>
-<li><a href="DecedentSpouse.html">Decedent Spouse</a></li>
-<li><a href="DecedentTransportationRole.html">Decedent
-Transportation Role</a></li>
-<li><a href="DispositionLocation.html">Disposition
-Location</a></li>
-<li><a href="ExaminerContacted.html">Examiner Contacted</a></li>
-<li><a href="FuneralHome.html">Funeral Home</a></li>
-<li><a href="FuneralHomeDirector.html">Funeral Home
-Director</a></li>
-<li><a href="InjuryIncident.html">Injury Incident</a></li>
-<li><a href="InjuryLocation.html">Injury Location</a></li>
-<li><a href="InterestedParty.html">Interested Party</a></li>
-<li><a href="MannerofDeath.html">Manner of Death</a></li>
-<li><a href="Mortician.html">Mortician</a></li>
-<li><a href="TobaccoUseContributedToDeath.html">Tobacco Use
-Contributed To Death</a></li>
-</ul>
-</li>
-<li><a href="Terminologies.html">Terminologies</a></li>
-<li><a href="Examples.html">Examples</a></li>
-<li><a href="Downloads.html">Downloads</a></li>
-</ul>
-</div>
-</div>
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css" />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://www.hl7.org/fhir/stu3/">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png" alt="logo fhir" />
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a >
+                                Vital Records Death Reporting
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.www.hl7.org">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+<!--status-bar--><nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li>
+                            <a href="Introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Background.html">
+                                Background
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Profiles.html">
+                                            Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AutopsyPerformedIndicator.html">
+                                             Autopsy Performed Indicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BirthRecordIdentifier.html">
+                                             Birth Record Identifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseOfDeathCondition.html">
+                                             Cause Of Death Condition
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseofDeathPathway.html">
+                                             Cause of Death Pathway
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Certifier.html">
+                                             Certifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionContributingtoDeath.html">
+                                            Condition Contributing to Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificate.html">
+                                             Death Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateDocument.html">
+                                             Death Certificate Document
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateReference.html">
+                                             Death Certificate Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertification.html">
+                                             Death Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathDate.html">
+                                             Death Date
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathLocation.html">
+                                             Death Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathPronouncementPerformer.html">
+                                             Death Pronouncement Performer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Decedent.html">
+                                             Decedent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentAge.html">
+                                             Decedent Age
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentDispositionMethod.html">
+                                             Decedent Disposition Method
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEducationLevel.html">
+                                             Decedent Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEmploymentHistory.html">
+                                             Decedent Employment History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentFather.html">
+                                             Decedent Father
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentMother.html">
+                                             Decedent Mother
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentPregnancy.html">
+                                             Decedent Pregnancy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentSpouse.html">
+                                             Decedent Spouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentTransportationRole.html">
+                                             Decedent Transportation Role
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionLocation.html">
+                                             Disposition Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ExaminerContacted.html">
+                                             Examiner Contacted
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHome.html">
+                                             Funeral Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHomeDirector.html">
+                                             Funeral Home Director
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryIncident.html">
+                                             Injury Incident
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryLocation.html">
+                                             Injury Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InterestedParty.html">
+                                             Interested Party
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MannerofDeath.html">
+                                             Manner of Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Mortician.html">
+                                             Mortician
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TobaccoUseContributedToDeath.html">
+                                             Tobacco Use Contributed To Death
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Terminologies.html">
+                                Terminologies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
-</header>
-<div class="content container">
-<div class="row">
-<div class="col-md-24">
-<div id="preview-content">
-<h2 id="decedent">Decedent</h2>
-<p>Decedent Age is a profile of the <a href=
-"http://www.hl7.org/fhir/observation.html">FHIR STU3
-Observation</a> resource. It is used to communicate the decedent's
-chronological age at the time of death. When present, the effective
-date of this observation shall be equal to the decedent's date of
-death. Age (Observation.valueQuantity.value) is derived as the
-difference in time between the decedent's death date and birth
-date. When age is less than or equal to one day then unit shall be
-<em>"minutes"</em>, when age is less than or equal to one year then
-unit shall be <em>"days"</em>, otherwise unit shall be
-<em>"years"</em>.</p>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+                <h2 id="decedent">Decedent</h2>
+<p>Decedent Age is a profile of the <a href="http://www.www.hl7.org/fhir/observation.html">FHIR stu3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>"minutes"</em>, when age is less than or equal to one year then unit shall be <em>"days"</em>, otherwise unit shall be <em>"years"</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<div class='error'>Command 'render' could not render: File was not
-found for vrdr/vrdrdecedentUML</div>
-</center>
+<p></p><div class="error">Command 'render' could not render: File was not found for vrdrdecedentUML</div></center>
 <hr />
-<h3 id="structure-definition"><strong>Structure
-Definition</strong></h3>
-<div id="ad2628c256884c64bdb9c0e0386fb21b" data-level="10" class=
-"stu3-treetable">
-<div class="treetable-wrapper snapshot">
-<div class="treetable-left-panel">
-<table class="treetable">
-<tr data-id="fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class=
-"collapsed">
-<td><span>Patient</span></td>
-<td></td>
-<td></td>
-<td><a title="Type Patient from core specification" href=
-"http://hl7.org/fhir/STU3/patient.html" target=
-"_blank">Patient</a></td>
-<td class="details hidden"><span><b>Data Type</b></span>
-<p><a title="Type Patient from core specification" href=
-"http://hl7.org/fhir/STU3/patient.html" target=
-"_blank">Patient</a></p>
-</td>
-</tr>
-<tr id="Patient.id" data-id="0ea856a7-e307-4e0c-9a42-616f6f92f647"
-data-parentid="fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="">
-<td><span>id</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>id</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] id (CONF:4393-106).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.meta" data-id=
-"5c9f3315-e95c-40f0-8067-4a678f15aff8" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="">
-<td><span>meta</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>meta</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] meta (CONF:4393-107).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension" data-id=
-"f0809503-d6fa-4c7b-b3b3-69ff62da671a" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="collapsed sliced">
-<td><span>extension</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] extension (CONF:4393-92) such
-that it</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by url(Value)</span></p>
-</td>
-</tr>
-<tr id="Patient.extension:race" data-id=
-"aee9f8ea-8847-4af0-b277-d6906fb9d6f0" data-parentid=
-"f0809503-d6fa-4c7b-b3b3-69ff62da671a" class="collapsed">
-<td><span>race</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>extension</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] extension (CONF:4393-44) such
-that it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:race.@url" data-id=
-"1fc27277-9aaf-41af-ba2d-60a552c1b0f4" data-parentid=
-"aee9f8ea-8847-4af0-b277-d6906fb9d6f0" class="">
-<td><span>race</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>@url</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1]
-@url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-(CONF:4393-94).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:race.value[x]" data-id=
-"aeafb208-3097-4894-8f7c-1cafae11c1c7" data-parentid=
-"aee9f8ea-8847-4af0-b277-d6906fb9d6f0" class="sliced">
-<td><span>race</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>*</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain at least one [1..*] value[x], where value[x] is
-(CONF:4393-88)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Patient.extension:race.value[x]:valueCode" data-id=
-"dbd3528c-6ee4-4868-bec6-728c36708251" data-parentid=
-"aee9f8ea-8847-4af0-b277-d6906fb9d6f0" class="">
-<td><span>valueCode</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueCode</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain at least one [1..*] valueCode, which SHALL be
-selected from CodeSystem Race &amp; Ethnicity - CDC
-(urn:oid:2.16.840.1.113883.6.238) DYNAMIC (CONF:4393-95).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:ethnicity" data-id=
-"2b7b0793-1471-4c23-a9ee-4c2debb31059" data-parentid=
-"f0809503-d6fa-4c7b-b3b3-69ff62da671a" class="collapsed">
-<td><span>ethnicity</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>extension</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] extension (CONF:4393-45) such
-that it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:ethnicity.@url" data-id=
-"b32d83cb-0c2c-413f-b201-5b0935ee9aa0" data-parentid=
-"2b7b0793-1471-4c23-a9ee-4c2debb31059" class="">
-<td><span>ethnicity</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>@url</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1]
-@url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-(CONF:4393-96).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:ethnicity.value[x]" data-id=
-"08cc2f53-b8e7-46f0-a578-6398319357d7" data-parentid=
-"2b7b0793-1471-4c23-a9ee-4c2debb31059" class="sliced">
-<td><span>ethnicity</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] value[x], where value[x] is
-(CONF:4393-89)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Patient.extension:ethnicity.value[x]:valueCode" data-id=
-"1811eda4-c067-418c-b7f4-71dc1b52087e" data-parentid=
-"2b7b0793-1471-4c23-a9ee-4c2debb31059" class="">
-<td><span>valueCode</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueCode</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] valueCode, which SHALL be
-selected from CodeSystem Ethnic group (HL7)
-(urn:oid:2.16.840.1.113883.12.189) DYNAMIC (CONF:4393-97).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthsex" data-id=
-"5b21fbd8-b323-4fb9-b1b6-04cf0cec40fb" data-parentid=
-"f0809503-d6fa-4c7b-b3b3-69ff62da671a" class="collapsed">
-<td><span>birthsex</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>extension</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] extension (CONF:4393-90) such
-that it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthsex.@url" data-id=
-"c85bc52f-30a4-45a6-a3ab-94c1312f1c5b" data-parentid=
-"5b21fbd8-b323-4fb9-b1b6-04cf0cec40fb" class="">
-<td><span>birthsex</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>@url</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1]
-@url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
-(CONF:4393-98).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthsex.value[x]" data-id=
-"858ba88c-e6d0-4590-8a84-60ec0b88e68d" data-parentid=
-"5b21fbd8-b323-4fb9-b1b6-04cf0cec40fb" class="sliced">
-<td><span>birthsex</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain exactly one [1..1] value[x], where value[x] is
-(CONF:4393-91)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Patient.extension:birthsex.value[x]:valueCode" data-id=
-"7f067f49-5257-4f23-ba95-06d9864e9cf5" data-parentid=
-"5b21fbd8-b323-4fb9-b1b6-04cf0cec40fb" class="">
-<td><span>valueCode</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueCode</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain exactly one [1..1] valueCode, which SHALL be
-selected from CodeSystem Administrative Gender
-(urn:oid:2.16.840.1.113883.5.1) DYNAMIC (CONF:4393-99).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthPlace" data-id=
-"294a977c-e0eb-46c5-90f0-bf747fef0245" data-parentid=
-"f0809503-d6fa-4c7b-b3b3-69ff62da671a" class="collapsed">
-<td><span>birthPlace</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>extension</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] extension (CONF:4393-92) such
-that it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthPlace.@url" data-id=
-"2cb19c1b-ec3e-445b-ab6a-a9812a5f3d91" data-parentid=
-"294a977c-e0eb-46c5-90f0-bf747fef0245" class="">
-<td><span>birthPlace</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>@url</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1]
-@url="http://hl7.org/fhir/StructureDefinition/birthPlace"
-(CONF:4393-100).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.extension:birthPlace.value[x]" data-id=
-"7ad1fb3e-17e2-4297-958f-5fb6e2dba3d2" data-parentid=
-"294a977c-e0eb-46c5-90f0-bf747fef0245" class="sliced">
-<td><span>birthPlace</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] value[x], where value[x] is
-(CONF:4393-93)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Patient.extension:birthPlace.value[x]:valueAddress"
-data-id="d9f33c45-a959-4d2b-9732-11dc6cee80e9" data-parentid=
-"294a977c-e0eb-46c5-90f0-bf747fef0245" class="">
-<td><span>valueAddress</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueAddress</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] valueAddress (CONF:4393-101).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.identifier" data-id=
-"8164b984-738c-4150-967f-e228b2d71d88" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="collapsed">
-<td><span>identifier</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>identifier</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] identifier (CONF:4393-6).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.identifier.type" data-id=
-"8cab2ba1-dd7c-4833-a0d6-b42987a9c440" data-parentid=
-"8164b984-738c-4150-967f-e228b2d71d88" class="">
-<td><span>type</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><span class="fixed-label">Fixed Value</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>type</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>The identifier, if present, SHALL contain exactly one [1..1]
-type="BR" Social Beneficiary Identifier (CONF:4393-27).</p>
-</div>
-<span><b>Fixed Value</b></span>
-<div>
+<h3 id="structure-definition"><strong>Structure Definition</strong></h3>
+<p></p><div id="e2aa46decb994b729b42f143edac2dc0" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class="collapsed"><td><span class="baseIcon resource"></span><span>Patient</span></td><td></td><td></td><td><a title="Type Patient from core specification" href="http://www.hl7.org/fhir/stu3/patient.html" target="_blank">Patient</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Patient from core specification" href="http://www.hl7.org/fhir/stu3/patient.html" target="_blank">Patient</a></p></td></tr><tr id="Patient.id" data-id="99cf1b4e-4ab6-4ece-a427-7aecda48344f" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class=""><td><span class="baseIcon primitive"></span><span>id</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>id</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] id (CONF:4393-106).</p>
+</div></td></tr><tr id="Patient.meta" data-id="a744f8a3-1658-48fa-97a7-9d6e6362c107" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class=""><td><span class="baseIcon primitive"></span><span>meta</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>meta</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] meta (CONF:4393-107).</p>
+</div></td></tr><tr id="Patient.extension" data-id="3f72cb2c-00a4-4d08-9d10-579762c57105" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class="collapsed sliced"><td><span class="baseIcon extension"></span><span>extension</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] extension (CONF:4393-92) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by url(Value)</span></p></td></tr><tr id="Patient.extension:race" data-id="a27206c7-2adc-4191-9a05-aca2a89e4c4e" data-parentid="3f72cb2c-00a4-4d08-9d10-579762c57105" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>race</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] extension (CONF:4393-44) such that it</p>
+</div></td></tr><tr id="Patient.extension:race.@url" data-id="0f35cd85-a06c-4aca-907d-6089cb1eb725" data-parentid="a27206c7-2adc-4191-9a05-aca2a89e4c4e" class=""><td><span class="baseIcon primitive"></span><span>race</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/core/StructureDefinition/us-core-race" (CONF:4393-94).</p>
+</div></td></tr><tr id="Patient.extension:race.value[x]" data-id="8fb600b3-53fa-4ab6-ae28-26bd1d4c478c" data-parentid="a27206c7-2adc-4191-9a05-aca2a89e4c4e" class="sliced"><td><span class="baseIcon slice"></span><span>race</span></td><td></td><td><span>1</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain at least one [1..*] value[x], where value[x] is (CONF:4393-88)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Patient.extension:race.value[x]:valueCode" data-id="59956538-7e64-48e6-9e68-c91fbfb91e43" data-parentid="a27206c7-2adc-4191-9a05-aca2a89e4c4e" class=""><td><span class="baseIcon primitive"></span><span>valueCode</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCode</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain at least one [1..*] valueCode, which SHALL be selected from CodeSystem Race &amp; Ethnicity - CDC (urn:oid:2.16.840.1.113883.6.238) DYNAMIC (CONF:4393-95).</p>
+</div></td></tr><tr id="Patient.extension:ethnicity" data-id="4212eef9-1e15-4f67-977c-24dd4b421437" data-parentid="3f72cb2c-00a4-4d08-9d10-579762c57105" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>ethnicity</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] extension (CONF:4393-45) such that it</p>
+</div></td></tr><tr id="Patient.extension:ethnicity.@url" data-id="97dfaae7-fe39-4f7e-8959-cfba7d0de9d4" data-parentid="4212eef9-1e15-4f67-977c-24dd4b421437" class=""><td><span class="baseIcon primitive"></span><span>ethnicity</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" (CONF:4393-96).</p>
+</div></td></tr><tr id="Patient.extension:ethnicity.value[x]" data-id="a84b9f10-4ef3-4c39-9640-462a136cbb59" data-parentid="4212eef9-1e15-4f67-977c-24dd4b421437" class="sliced"><td><span class="baseIcon slice"></span><span>ethnicity</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-89)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Patient.extension:ethnicity.value[x]:valueCode" data-id="13a1f484-bee8-435d-b20f-ec9197a254b8" data-parentid="4212eef9-1e15-4f67-977c-24dd4b421437" class=""><td><span class="baseIcon primitive"></span><span>valueCode</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCode</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] valueCode, which SHALL be selected from CodeSystem Ethnic group (HL7) (urn:oid:2.16.840.1.113883.12.189) DYNAMIC (CONF:4393-97).</p>
+</div></td></tr><tr id="Patient.extension:birthsex" data-id="d7fdff03-4841-4e10-8fc9-47e492d5fe43" data-parentid="3f72cb2c-00a4-4d08-9d10-579762c57105" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>birthsex</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] extension (CONF:4393-90) such that it</p>
+</div></td></tr><tr id="Patient.extension:birthsex.@url" data-id="6f93cad9-1e38-4776-8344-b02831b44e39" data-parentid="d7fdff03-4841-4e10-8fc9-47e492d5fe43" class=""><td><span class="baseIcon primitive"></span><span>birthsex</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" (CONF:4393-98).</p>
+</div></td></tr><tr id="Patient.extension:birthsex.value[x]" data-id="3c8b8f42-ff15-4f49-81c6-71a88b2caf75" data-parentid="d7fdff03-4841-4e10-8fc9-47e492d5fe43" class="sliced"><td><span class="baseIcon slice"></span><span>birthsex</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain exactly one [1..1] value[x], where value[x] is (CONF:4393-91)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Patient.extension:birthsex.value[x]:valueCode" data-id="5e47d3ea-ee46-44e0-aaee-fd831d1764fb" data-parentid="d7fdff03-4841-4e10-8fc9-47e492d5fe43" class=""><td><span class="baseIcon primitive"></span><span>valueCode</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCode</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain exactly one [1..1] valueCode, which SHALL be selected from CodeSystem Administrative Gender (urn:oid:2.16.840.1.113883.5.1) DYNAMIC (CONF:4393-99).</p>
+</div></td></tr><tr id="Patient.extension:birthPlace" data-id="f103ba78-e12a-46ec-83c9-bcb17d273225" data-parentid="3f72cb2c-00a4-4d08-9d10-579762c57105" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>birthPlace</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] extension (CONF:4393-92) such that it</p>
+</div></td></tr><tr id="Patient.extension:birthPlace.@url" data-id="813e0cee-b7a6-4eff-b947-6e6b396a4a64" data-parentid="f103ba78-e12a-46ec-83c9-bcb17d273225" class=""><td><span class="baseIcon primitive"></span><span>birthPlace</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/StructureDefinition/birthPlace" (CONF:4393-100).</p>
+</div></td></tr><tr id="Patient.extension:birthPlace.value[x]" data-id="8533388e-d3f0-41f3-aacb-1606ebe96e6c" data-parentid="f103ba78-e12a-46ec-83c9-bcb17d273225" class="sliced"><td><span class="baseIcon slice"></span><span>birthPlace</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] value[x], where value[x] is (CONF:4393-93)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Patient.extension:birthPlace.value[x]:valueAddress" data-id="572780f4-84a3-49e5-addc-fce789a271dc" data-parentid="f103ba78-e12a-46ec-83c9-bcb17d273225" class=""><td><span class="baseIcon primitive"></span><span>valueAddress</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueAddress</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] valueAddress (CONF:4393-101).</p>
+</div></td></tr><tr id="Patient.identifier" data-id="6d92fb36-3927-410d-b07a-72f98b610fc4" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class="collapsed"><td><span class="baseIcon primitive"></span><span>identifier</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>identifier</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] identifier (CONF:4393-6).</p>
+</div></td></tr><tr id="Patient.identifier.type" data-id="f6f894ee-f6a7-41d3-9b93-05007335cbe5" data-parentid="6d92fb36-3927-410d-b07a-72f98b610fc4" class=""><td><span class="baseIcon primitive"></span><span>type</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHALL contain exactly one [1..1] type="BR" Social Beneficiary Identifier (CONF:4393-27).</p>
+</div><span><b>Fixed Value </b></span><div>
 <pre class="">{
   "coding": [
     {
@@ -513,480 +324,47 @@ type="BR" Social Beneficiary Identifier (CONF:4393-27).</p>
       "display": "Social Beneficiary Identifier"
     }
   ]
-}</pre></div>
-</td>
-</tr>
-<tr id="Patient.identifier.system" data-id=
-"15913136-fb75-48f0-bbec-4e8f893d299d" data-parentid=
-"8164b984-738c-4150-967f-e228b2d71d88" class="">
-<td><span>system</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>system</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>The identifier, if present, SHOULD contain zero or one [0..1]
-system="2.16.840.1.113883.4.1" United States of America Social
-Security Number (CONF:4393-28).</p>
-</div>
-<span><b>Pattern</b></span>
-<div>
-<pre class="">2.16.840.1.113883.4.1</pre></div>
-</td>
-</tr>
-<tr id="Patient.identifier.value" data-id=
-"a4350f48-9863-442f-af62-696524861efe" data-parentid=
-"8164b984-738c-4150-967f-e228b2d71d88" class="">
-<td><span>value</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>The identifier, if present, SHALL contain exactly one [1..1]
-value (CONF:4393-29).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name" data-id=
-"1fa307db-bc03-4a17-a9bd-527c25a2ee20" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="collapsed sliced">
-<td><span>name</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] name (CONF:4393-43) such that
-it</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by use(Value)</span></p>
-</td>
-</tr>
-<tr id="Patient.name:name1" data-id=
-"147bde09-0fc0-49fc-847d-c716b88eab4d" data-parentid=
-"1fa307db-bc03-4a17-a9bd-527c25a2ee20" class="collapsed">
-<td><span>name1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>name</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] name (CONF:4393-1) such that
-it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name:name1.use" data-id=
-"c082df7a-3657-479b-88d5-970f7ba389e2" data-parentid=
-"147bde09-0fc0-49fc-847d-c716b88eab4d" class="">
-<td><span>name1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>use</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] use="official" Official
-(CONF:4393-2).</p>
-</div>
-<span><b>Pattern</b></span>
-<div>
-<pre class="">official</pre></div>
-</td>
-</tr>
-<tr id="Patient.name:name1.family" data-id=
-"dfed3aa1-28d4-4d40-b9ab-07e4ce041d6a" data-parentid=
-"147bde09-0fc0-49fc-847d-c716b88eab4d" class="">
-<td><span>name1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>family</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] family (CONF:4393-3).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name:name1.given" data-id=
-"bf0d6d58-9de1-4add-9eb8-471483ebc07d" data-parentid=
-"147bde09-0fc0-49fc-847d-c716b88eab4d" class="">
-<td><span>name1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>*</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>given</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or more [0..*] given (CONF:4393-4).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name:name2" data-id=
-"d5588454-3ef7-4ba5-a5ba-7a24e48893b1" data-parentid=
-"1fa307db-bc03-4a17-a9bd-527c25a2ee20" class="collapsed">
-<td><span>name2</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>name</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] name (CONF:4393-43) such that
-it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name:name2.use" data-id=
-"f2f64704-a086-49f1-9bc6-5298f78fdad4" data-parentid=
-"d5588454-3ef7-4ba5-a5ba-7a24e48893b1" class="">
-<td><span>name2</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>use</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] use="nickname" Nickname
-(CONF:4393-46).</p>
-</div>
-<span><b>Pattern</b></span>
-<div>
-<pre class="">nickname</pre></div>
-</td>
-</tr>
-<tr id="Patient.name:name2.family" data-id=
-"4db72de4-a66a-43ee-871d-c96bb404187c" data-parentid=
-"d5588454-3ef7-4ba5-a5ba-7a24e48893b1" class="">
-<td><span>name2</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>family</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] family (CONF:4393-47).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.name:name2.given" data-id=
-"0942e2da-9232-42ce-9f7e-cefc612cd8ba" data-parentid=
-"d5588454-3ef7-4ba5-a5ba-7a24e48893b1" class="">
-<td><span>name2</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>*</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>given</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or more [0..*] given (CONF:4393-48).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.gender" data-id=
-"5b4d0f1d-e9ad-41d5-a4b6-08de35e7b5e8" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="">
-<td><span>gender</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a><span class="binding-label">Binding</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>gender</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] gender, which SHALL be selected
-from ValueSet FHIR AdministrativeGender
-http://hl7.org/fhir/v3/vs/AdministrativeGender DYNAMIC
-(CONF:4393-7).</p>
-</div>
-<span><b>Data Type</b></span>
-<p><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a></p>
-<span><b>Binding</b></span>
-<p><a title="administrative-gender" href=
-"http://hl7.org/fhir/STU3/valueset-administrative-gender.html"
-target="_blank">FHIR AdministrativeGender</a>
-<span>(</span><a title=
-"To be conformant, instances of this element SHALL include a code from the specified valueset"
-href=
-"http://hl7.org/fhir/STU3/terminologies.html#required">required</a><span>)</span></p>
-</td>
-</tr>
-<tr id="Patient.birthDate" data-id=
-"0cb763ac-79a6-4871-9a85-025c8bf87354" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="">
-<td><span>birthDate</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>birthDate</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] birthDate (CONF:4393-8).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address" data-id=
-"f4857248-0e2a-4258-bf95-e090d75ee840" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="collapsed sliced">
-<td><span>address</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain zero or one [0..1] address (CONF:4393-35) such
-that it</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by use(Value)</span></p>
-</td>
-</tr>
-<tr id="Patient.address:address1" data-id=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" data-parentid=
-"f4857248-0e2a-4258-bf95-e090d75ee840" class="collapsed">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>address</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain zero or one [0..1] address (CONF:4393-35) such
-that it</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.extension" data-id=
-"184e7deb-2a73-4434-97c1-79dd75cd9059" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="collapsed">
-<td><span>address1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>extension</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] extension (CONF:4393-36).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.extension.@url" data-id=
-"00491810-7dd2-4cfa-afe2-9c7b00f390df" data-parentid=
-"184e7deb-2a73-4434-97c1-79dd75cd9059" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>@url</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>This extension SHALL contain exactly one [1..1]
-@url="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"
-(CONF:4393-108).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.extension.value[x]" data-id=
-"b6f3b9de-870c-4f73-bd7b-080dd4b7ce80" data-parentid=
-"184e7deb-2a73-4434-97c1-79dd75cd9059" class="sliced">
-<td><span>address1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>value[x]</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>This extension SHALL contain exactly one [1..1] value[x], where
-value[x] is (CONF:4393-105)</p>
-</div>
-<span><b>Sliced:</b></span>
-<p><span>Unordered, Open, by $this(Type)</span></p>
-</td>
-</tr>
-<tr id="Patient.address:address1.extension.value[x]:valueBoolean"
-data-id="3448cfb5-36b2-44d4-aa43-654efafcdf1f" data-parentid=
-"184e7deb-2a73-4434-97c1-79dd75cd9059" class="">
-<td><span>valueBoolean</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>valueBoolean</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>This extension SHALL contain exactly one [1..1] valueBoolean
-(CONF:4393-109).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.use" data-id=
-"e00e65ec-5e8a-4281-84b8-370304f8dbc4" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td><span class="fixed-label">Fixed Value</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>use</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain zero or one [0..1] use="H" Home
-(CONF:4393-37).</p>
-</div>
-<span><b>Fixed Value</b></span>
-<div>
-<pre class="">H</pre></div>
-</td>
-</tr>
-<tr id="Patient.address:address1.type" data-id=
-"c28837a9-bccc-44c2-8718-e46ce0814845" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>type</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHOULD contain zero or one [0..1] type (CONF:4393-38).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.line" data-id=
-"1254ff5a-33c2-49b8-ae7c-3eb7e103f7db" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>*</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>line</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain at least one [1..*] line (CONF:4393-39).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.city" data-id=
-"973e0efc-5009-4f82-9d6b-a66ccd79582d" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>city</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] city (CONF:4393-40).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.state" data-id=
-"326e0cb4-e02c-4707-8cf2-35c09e6f9343" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>state</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] state (CONF:4393-41).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.address:address1.postalCode" data-id=
-"3e636ba7-8704-412f-8c33-a5362737b6ac" data-parentid=
-"4510082d-f7ba-4c68-b891-3f4f6a698fa9" class="">
-<td><span>address1</span></td>
-<td></td>
-<td><span>0</span><span>..</span><span>1</span></td>
-<td></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>postalCode</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>MAY contain zero or one [0..1] postalCode (CONF:4393-42).</p>
-</div>
-</td>
-</tr>
-<tr id="Patient.maritalStatus" data-id=
-"dcbddd39-7c48-4d4b-a642-648e67da3618" data-parentid=
-"fa1681b1-8598-4c77-8c23-8c41f6a2bb6b" class="">
-<td><span>maritalStatus</span></td>
-<td></td>
-<td><span>1</span><span>..</span><span>1</span></td>
-<td><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a><span class=
-"binding-label">Binding</span></td>
-<td class="details hidden"><span><b>Short description</b></span>
-<p><span>maritalStatus</span></p>
-<span><b>Definition</b></span>
-<div class="markdown">
-<p>SHALL contain exactly one [1..1] maritalStatus, which SHALL be
-selected from ValueSet FHIR MaritalStatus
-http://hl7.org/fhir/vs/marital-status (CONF:4393-16).</p>
-</div>
-<span><b>Data Type</b></span>
-<p><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a></p>
-<span><b>Binding</b></span>
-<p><a title="marital-status" href=
-"http://hl7.org/fhir/STU3/valueset-marital-status.html" target=
-"_blank">FHIR MaritalStatus</a> <span>(</span><a title=
-"To be conformant, instances of this element SHALL include a code from the specified valueset"
-href=
-"http://hl7.org/fhir/STU3/terminologies.html#required">required</a><span>)</span></p>
-</td>
-</tr>
-</table>
-</div>
-<div class="treetable-right-panel"></div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
+}</pre></div></td></tr><tr id="Patient.identifier.system" data-id="5ce8463b-8ea3-4430-b0d3-4c008839239e" data-parentid="6d92fb36-3927-410d-b07a-72f98b610fc4" class=""><td><span class="baseIcon primitive"></span><span>system</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>system</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHOULD contain zero or one [0..1] system="2.16.840.1.113883.4.1" United States of America Social Security Number (CONF:4393-28).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">2.16.840.1.113883.4.1</pre></div></td></tr><tr id="Patient.identifier.value" data-id="af6cfe59-15fe-4f10-96fa-1f894682e4d5" data-parentid="6d92fb36-3927-410d-b07a-72f98b610fc4" class=""><td><span class="baseIcon primitive"></span><span>value</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p><span><b>Definition </b></span><div class="markdown"><p>The identifier, if present, SHALL contain exactly one [1..1] value (CONF:4393-29).</p>
+</div></td></tr><tr id="Patient.name" data-id="e9379a35-90cf-4284-821a-53ca8b1490ca" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class="collapsed sliced"><td><span class="baseIcon slice"></span><span>name</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] name (CONF:4393-43) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by use(Value)</span></p></td></tr><tr id="Patient.name:name1" data-id="8163be19-a924-4f40-be51-0f97080e648c" data-parentid="e9379a35-90cf-4284-821a-53ca8b1490ca" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>name1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>name</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] name (CONF:4393-1) such that it</p>
+</div></td></tr><tr id="Patient.name:name1.use" data-id="286ed34f-2d5b-4461-a982-d912347cdcdc" data-parentid="8163be19-a924-4f40-be51-0f97080e648c" class=""><td><span class="baseIcon primitive"></span><span>name1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] use="official" Official (CONF:4393-2).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">official</pre></div></td></tr><tr id="Patient.name:name1.family" data-id="3a1e97b0-c87d-403c-89b7-24a8096ef45a" data-parentid="8163be19-a924-4f40-be51-0f97080e648c" class=""><td><span class="baseIcon primitive"></span><span>name1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>family</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] family (CONF:4393-3).</p>
+</div></td></tr><tr id="Patient.name:name1.given" data-id="5054f84a-4b8a-40f9-ba2b-9abed5129f9d" data-parentid="8163be19-a924-4f40-be51-0f97080e648c" class=""><td><span class="baseIcon primitive"></span><span>name1</span></td><td></td><td><span>0</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>given</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or more [0..*] given (CONF:4393-4).</p>
+</div></td></tr><tr id="Patient.name:name2" data-id="7b4452e0-08ad-43f1-a779-264e1bdc28e3" data-parentid="e9379a35-90cf-4284-821a-53ca8b1490ca" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>name2</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>name</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] name (CONF:4393-43) such that it</p>
+</div></td></tr><tr id="Patient.name:name2.use" data-id="6337f5c7-ddcd-47db-9810-4770966c4e81" data-parentid="7b4452e0-08ad-43f1-a779-264e1bdc28e3" class=""><td><span class="baseIcon primitive"></span><span>name2</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] use="nickname" Nickname (CONF:4393-46).</p>
+</div><span><b>Pattern </b></span><div>
+<pre class="">nickname</pre></div></td></tr><tr id="Patient.name:name2.family" data-id="8c817eba-0785-4ff2-a0f5-072298418820" data-parentid="7b4452e0-08ad-43f1-a779-264e1bdc28e3" class=""><td><span class="baseIcon primitive"></span><span>name2</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>family</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] family (CONF:4393-47).</p>
+</div></td></tr><tr id="Patient.name:name2.given" data-id="a64a2866-c531-4383-8d67-be155505801a" data-parentid="7b4452e0-08ad-43f1-a779-264e1bdc28e3" class=""><td><span class="baseIcon primitive"></span><span>name2</span></td><td></td><td><span>0</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>given</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or more [0..*] given (CONF:4393-48).</p>
+</div></td></tr><tr id="Patient.gender" data-id="444ca6f6-4faf-4336-9fdd-019dbdcb37a3" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class=""><td><span class="baseIcon primitive"></span><span>gender</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>gender</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] gender, which SHALL be selected from ValueSet FHIR AdministrativeGender http://www.hl7.org/fhir/v3/vs/AdministrativeGender DYNAMIC (CONF:4393-7).</p>
+</div><span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></p><span><b>Binding </b></span><p><a title="administrative-gender" href="http://www.hl7.org/fhir/stu3/valueset-administrative-gender.html" target="_blank">FHIR AdministrativeGender</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p></td></tr><tr id="Patient.birthDate" data-id="239b0956-83f9-49c0-9447-bc50cbcff37e" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class=""><td><span class="baseIcon primitive"></span><span>birthDate</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>birthDate</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] birthDate (CONF:4393-8).</p>
+</div></td></tr><tr id="Patient.address" data-id="202848c8-c677-48bb-bf09-baac1598c44f" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class="collapsed sliced"><td><span class="baseIcon slice"></span><span>address</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] address (CONF:4393-35) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by use(Value)</span></p></td></tr><tr id="Patient.address:address1" data-id="5bc2e58e-5f33-4470-944c-c115ba374f4b" data-parentid="202848c8-c677-48bb-bf09-baac1598c44f" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>address</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] address (CONF:4393-35) such that it</p>
+</div></td></tr><tr id="Patient.address:address1.extension" data-id="62587d32-1c21-4ddc-9d2c-5b4181d328a1" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class="collapsed"><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-36).</p>
+</div></td></tr><tr id="Patient.address:address1.extension.@url" data-id="dad4107a-06e2-4a70-8f61-674200f8de9c" data-parentid="62587d32-1c21-4ddc-9d2c-5b4181d328a1" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>This extension SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator" (CONF:4393-108).</p>
+</div></td></tr><tr id="Patient.address:address1.extension.value[x]" data-id="5645936b-a1fc-4614-b1ea-e641c625e91c" data-parentid="62587d32-1c21-4ddc-9d2c-5b4181d328a1" class="sliced"><td><span class="baseIcon slice"></span><span>address1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This extension SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-105)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Patient.address:address1.extension.value[x]:valueBoolean" data-id="cd833330-1fd4-4c4d-8ef9-6b1562bcc92d" data-parentid="62587d32-1c21-4ddc-9d2c-5b4181d328a1" class=""><td><span class="baseIcon primitive"></span><span>valueBoolean</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueBoolean</span></p><span><b>Definition </b></span><div class="markdown"><p>This extension SHALL contain exactly one [1..1] valueBoolean (CONF:4393-109).</p>
+</div></td></tr><tr id="Patient.address:address1.use" data-id="0c0ec7b0-1653-4534-9850-86867cae6726" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td><span class="fixed-label">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain zero or one [0..1] use="H" Home (CONF:4393-37).</p>
+</div><span><b>Fixed Value </b></span><div>
+<pre class="">H</pre></div></td></tr><tr id="Patient.address:address1.type" data-id="d949f544-98e5-4f11-b729-ff693d68eb12" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] type (CONF:4393-38).</p>
+</div></td></tr><tr id="Patient.address:address1.line" data-id="1c5f0fc9-fd72-44d4-b5e8-db00c2fe979a" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>1</span><span>..</span><span>*</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>line</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain at least one [1..*] line (CONF:4393-39).</p>
+</div></td></tr><tr id="Patient.address:address1.city" data-id="83a69e8b-056a-4efd-9485-be73baad2c9a" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>city</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] city (CONF:4393-40).</p>
+</div></td></tr><tr id="Patient.address:address1.state" data-id="3879844d-b522-409b-9637-da14d775478f" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>state</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] state (CONF:4393-41).</p>
+</div></td></tr><tr id="Patient.address:address1.postalCode" data-id="75945748-25a4-4593-a7af-7b45523ab958" data-parentid="5bc2e58e-5f33-4470-944c-c115ba374f4b" class=""><td><span class="baseIcon primitive"></span><span>address1</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>postalCode</span></p><span><b>Definition </b></span><div class="markdown"><p>MAY contain zero or one [0..1] postalCode (CONF:4393-42).</p>
+</div></td></tr><tr id="Patient.maritalStatus" data-id="dc5278d9-489e-42f3-8b21-09b3374da3d6" data-parentid="68ac29c7-4ae0-4f97-8649-7727fa347ad4" class=""><td><span class="baseIcon datatype"></span><span>maritalStatus</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>maritalStatus</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] maritalStatus, which SHALL be selected from ValueSet FHIR MaritalStatus http://www.hl7.org/fhir/vs/marital-status (CONF:4393-16).</p>
+</div><span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p><span><b>Binding </b></span><p><a title="marital-status" href="http://www.hl7.org/fhir/stu3/valueset-marital-status.html" target="_blank">FHIR MaritalStatus</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript"><![CDATA[
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTablead2628c256884c64bdb9c0e0386fb21b = new Stu3TreeTable(false);
-resourceTreeTablead2628c256884c64bdb9c0e0386fb21b.init("ad2628c256884c64bdb9c0e0386fb21b");
+var resourceTreeTablee2aa46decb994b729b42f143edac2dc0 = new Stu3TreeTable(false);
+resourceTreeTablee2aa46decb994b729b42f143edac2dc0.init("e2aa46decb994b729b42f143edac2dc0");
 }
 })();
-//]]>
-</script>
+]]></script>
 <hr />
-<h3 id="terminolgy-bindings"><strong>Terminolgy
-Bindings</strong></h3>
+<h3 id="terminolgy-bindings"><strong>Terminolgy Bindings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -1015,280 +393,9 @@ Bindings</strong></h3>
 </table>
 <hr />
 <h3 id="element-table"><strong>Element Table</strong></h3>
-<div class="path">
-<table>
-<tr>
-<td><span class="field">Patient</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">id</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">meta</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">extension</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">extension:race</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.extension:race.<span class="field">url:race</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:race.<span class=
-"field">value[x]:race</span></td>
-<td></td>
-<td>1..*</td>
-</tr>
-<tr>
-<td>Patient.extension:race.<span class=
-"field">valueCode:valueCode</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">extension:ethnicity</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.extension:ethnicity.<span class=
-"field">url:ethnicity</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:ethnicity.<span class=
-"field">value[x]:ethnicity</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:ethnicity.<span class=
-"field">valueCode:valueCode</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">extension:birthsex</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthsex.<span class=
-"field">url:birthsex</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthsex.<span class=
-"field">value[x]:birthsex</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthsex.<span class=
-"field">valueCode:valueCode</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">extension:birthPlace</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthPlace.<span class=
-"field">url:birthPlace</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthPlace.<span class=
-"field">value[x]:birthPlace</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.extension:birthPlace.<span class=
-"field">valueAddress:valueAddress</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">identifier</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.identifier.<span class="field">type</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.identifier.<span class="field">system</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.identifier.<span class="field">value</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">name</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">name:name1</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.name:name1.<span class="field">use:name1</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.name:name1.<span class="field">family:name1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.name:name1.<span class="field">given:name1</span></td>
-<td></td>
-<td>0..*</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">name:name2</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.name:name2.<span class="field">use:name2</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.name:name2.<span class="field">family:name2</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.name:name2.<span class="field">given:name2</span></td>
-<td></td>
-<td>0..*</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">gender</span></td>
-<td><a title="Type code from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#code" target=
-"_blank">code</a></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">birthDate</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">address</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">address:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">extension:address1</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.extension:address1.<span class=
-"field">url:address1</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.extension:address1.<span class=
-"field">value[x]:address1</span></td>
-<td></td>
-<td>1..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.extension:address1.<span class=
-"field">valueBoolean:valueBoolean</span></td>
-<td></td>
-<td>..</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">use:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">type:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">line:address1</span></td>
-<td></td>
-<td>1..*</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">city:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">state:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.address:address1.<span class=
-"field">postalCode:address1</span></td>
-<td></td>
-<td>0..1</td>
-</tr>
-<tr>
-<td>Patient.<span class="field">maritalStatus</span></td>
-<td><a title="Type CodeableConcept from core specification" href=
-"http://hl7.org/fhir/STU3/datatypes.html#codeableconcept" target=
-"_blank">CodeableConcept</a></td>
-<td>1..1</td>
-</tr>
-</table>
-</div>
-<br />
-<br />
+<p></p><div class="path"><table><tr><td><span class="field">Patient</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">id</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.<span class="field">meta</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.<span class="field">extension</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">extension:race</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.extension:race.<span class="field">url:race</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:race.<span class="field">value[x]:race</span></td><td></td><td>1..* </td></tr><tr><td>Patient.extension:race.<span class="field">valueCode:valueCode</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">extension:ethnicity</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.extension:ethnicity.<span class="field">url:ethnicity</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:ethnicity.<span class="field">value[x]:ethnicity</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:ethnicity.<span class="field">valueCode:valueCode</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">extension:birthsex</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.extension:birthsex.<span class="field">url:birthsex</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:birthsex.<span class="field">value[x]:birthsex</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:birthsex.<span class="field">valueCode:valueCode</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">extension:birthPlace</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.extension:birthPlace.<span class="field">url:birthPlace</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.extension:birthPlace.<span class="field">value[x]:birthPlace</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.extension:birthPlace.<span class="field">valueAddress:valueAddress</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">identifier</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.identifier.<span class="field">type</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.identifier.<span class="field">system</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.identifier.<span class="field">value</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.<span class="field">name</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">name:name1</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.name:name1.<span class="field">use:name1</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.name:name1.<span class="field">family:name1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.name:name1.<span class="field">given:name1</span></td><td></td><td>0..* </td></tr><tr><td>Patient.<span class="field">name:name2</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.name:name2.<span class="field">use:name2</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.name:name2.<span class="field">family:name2</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.name:name2.<span class="field">given:name2</span></td><td></td><td>0..* </td></tr><tr><td>Patient.<span class="field">gender</span></td><td><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></td><td>1..1 </td></tr><tr><td>Patient.<span class="field">birthDate</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.<span class="field">address</span></td><td></td><td>.. </td></tr><tr><td>Patient.<span class="field">address:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.address:address1.<span class="field">extension:address1</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.address:address1.extension:address1.<span class="field">url:address1</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.address:address1.extension:address1.<span class="field">value[x]:address1</span></td><td></td><td>1..1 </td></tr><tr><td>Patient.address:address1.extension:address1.<span class="field">valueBoolean:valueBoolean</span></td><td></td><td>.. </td></tr><tr><td>Patient.address:address1.<span class="field">use:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.address:address1.<span class="field">type:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.address:address1.<span class="field">line:address1</span></td><td></td><td>1..* </td></tr><tr><td>Patient.address:address1.<span class="field">city:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.address:address1.<span class="field">state:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.address:address1.<span class="field">postalCode:address1</span></td><td></td><td>0..1 </td></tr><tr><td>Patient.<span class="field">maritalStatus</span></td><td><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td><td>1..1 </td></tr></table></div><br />
 <hr />
-<h3 id="requirements-traceability-mappings"><strong>Requirements
-Traceability Mappings</strong></h3>
+<h3 id="requirements-traceability-mappings"><strong>Requirements Traceability Mappings</strong></h3>
 <table class="regular">
 <thead>
 <tr>
@@ -1300,34 +407,266 @@ Traceability Mappings</strong></h3>
 </thead>
 <tbody>
 <tr>
-<td>Observation.valueQuantity:valueQuantity.value</td>
-<td>Death Certificate</td>
-<td>Item 4</td>
-<td>Age [years, days, or minutes]</td>
+<td>address</td>
+<td>Vital Records DAM</td>
+<td>2.04 Responsible Party</td>
+<td>address</td>
 </tr>
 <tr>
-<td>Observation.valueQuantity:valueQuantity.value</td>
+<td>address</td>
 <td>Vital Records DAM</td>
 <td>3.02 Decedent</td>
-<td>deathAge</td>
+<td>birthAddress</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>residentialAddress</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Death Certificate</td>
+<td>Item 13c</td>
+<td>Mailing Address [Informant]</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Death Certificate</td>
+<td>Item 6</td>
+<td>Birthplace</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Death Certificate</td>
+<td>Item 7</td>
+<td>Residence Address</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.address:shr-core-PostalAddress</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.contact:sdr-decedent-Informant.address</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:birthplace</td>
+</tr>
+<tr>
+<td>birthdate</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>birthDate</td>
+</tr>
+<tr>
+<td>birthdate</td>
+<td>Death Certificate</td>
+<td>Item 5</td>
+<td>Date of Birth</td>
+</tr>
+<tr>
+<td>birthdate</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.birthDate</td>
+</tr>
+<tr>
+<td>birthsex</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>sex</td>
+</tr>
+<tr>
+<td>birthsex</td>
+<td>Death Certificate</td>
+<td>Item 2</td>
+<td>Sex</td>
+</tr>
+<tr>
+<td>birthsex</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:sex</td>
+</tr>
+<tr>
+<td>ethnicity</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>ethnicity</td>
+</tr>
+<tr>
+<td>ethnicity</td>
+<td>Death Certificate</td>
+<td>Item 52</td>
+<td>[is]Decedent of Hispanic Origin?</td>
+</tr>
+<tr>
+<td>ethnicity</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:ethnicity</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>sex</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Death Certificate</td>
+<td>Item 2</td>
+<td>Sex</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:sex</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>socialSecurityNumber</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Death Certificate</td>
+<td>Item 3</td>
+<td>Social Security Number</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Standard Death Record IG</td>
+<td>SDR SocialSecurityNumber Profile</td>
+<td>Patient.identifier:sdr-decedent-DecedentID[Identifier.value]</td>
+</tr>
+<tr>
+<td>maritalStatus</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>maritalStatus</td>
+</tr>
+<tr>
+<td>maritalStatus</td>
+<td>Death Certificate</td>
+<td>Item 9</td>
+<td>Marital Status at Time of Death</td>
+</tr>
+<tr>
+<td>maritalStatus</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:maritalstatusatdeath</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Vital Records DAM</td>
+<td>2.04 Responsible Party</td>
+<td>name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Death Certificate</td>
+<td>Item 1</td>
+<td>Decedent's Legal Name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Death Certificate</td>
+<td>Item 13a</td>
+<td>Informant's Name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.contact:sdr-decedent-Informant.name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.name</td>
+</tr>
+<tr>
+<td>race</td>
+<td>Vital Records DAM</td>
+<td>3.02 Decedent</td>
+<td>raceCode</td>
+</tr>
+<tr>
+<td>race</td>
+<td>Death Certificate</td>
+<td>Item 53</td>
+<td>Decedent's Race</td>
+</tr>
+<tr>
+<td>race</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.extension:race</td>
+</tr>
+<tr>
+<td>relationship</td>
+<td>Vital Records DAM</td>
+<td>2.04 Responsible Party</td>
+<td>relationshipToSubject</td>
+</tr>
+<tr>
+<td>relationship</td>
+<td>Death Certificate</td>
+<td>Item 13b</td>
+<td>Relationship to Decedent</td>
+</tr>
+<tr>
+<td>relationship</td>
+<td>Standard Death Record IG</td>
+<td>SDR Decedent Profile</td>
+<td>Patient.contact:sdr-decedent-Informant.relationship</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-<footer>
-<div class="container">
-<div class="row">
-<div><span>Version: undefined</span> <span>FHIR Version:
-STU3</span></div>
-<br />
-<p>Powered by <b>SIMPLIFIER.NET</b></p>
-<div>HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered
-trademarks of Health Level Seven International</div>
-</div>
-</div>
-</footer>
-</body>
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer igtool="footer">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: undefined</span>
+                        <span>FHIR Version: stu3</span>
+                    </div>
+                    <br />
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>&#174;</sup> and FHIR<sup>&#174;</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
 </html>

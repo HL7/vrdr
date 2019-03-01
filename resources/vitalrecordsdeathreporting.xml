@@ -1,245 +1,445 @@
-<ImplementationGuide xmlns="http://hl7.org/fhir">
-  <url value="http://hl7.org/fhir/us/vrdr" />
-  <name value="Vital Records Death Reporting" />
-  <status value="draft" />
-  <description value="The purpose of the VRDR FHIR IG is to provide guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. National Center for Health Statistics (NCHS)." />
-  <id value="vrdr" />
-  <binary value="VitalRecordDeathReporting-TreeTable.css" />
+<ImplementationGuide xmlns='http://hl7.org/fhir'>
+  <url value='http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr'/>
+  <name value='vrdr'/>
+  <status value='draft'/>
+  <description value='The purpose of the VRDR FHIR IG is to provide guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. National Center for Health Statistics (NCHS).'/>
+  <fhirVersion value='3.0.1'/>
+  <id value='vrdr'/>
+  <publisher value='Health Level Seven International'/>
+  <dependency>
+    <type value='reference'/>
+    <uri value='http://hl7.org/fhir/us/core'/>
+  </dependency>
+  <binary value='VitalRecordDeathReporting-TreeTable.css'/>
+  <package>
+    <name value='Profiles in this Implementation Guide'/>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/PatientLocation'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRAutopsyPerformedIndicator'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRBirthRecordIdentifier'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRCauseOfDeathCondition'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRCauseofDeathPathway'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRCertifier'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRConditionContributintgToDeath'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathCertificate'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathCertificateDocument'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathCertificateReference'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathCertification'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathDate'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathLocation'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDeathPronouncementPerformer'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedent'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentAge'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentDispositionMethod'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentEducationLevel'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentFather'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentMother'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentPregnancy'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentSpouse'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDecedentTransportationRole'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRDispositionLocation'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRExaminerContacted'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRFuneralHome'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRFuneralHomeDirector'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRInjuryIncident'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRInjuryLocation'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRInterestedParty'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRMannerofDeath'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRMortician'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/VRDRTobaccoUseContributedToDeath'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='StructureDefinition/WithinCityLimitsIndicator'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/address-type'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/administrative-gender'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/age-units'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/condition-code'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/detailed-ethnicity'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/detailed-race'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/location-physical-type'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/marital-status'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/omb-ethnicity-category'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/omb-race-category'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/us-core-birthsex'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/v2-2.7-0360'/>
+    </resource>
+    <resource>
+      <example value='false'/>
+      <sourceUri value='ValueSet/v3-ServiceDeliveryLocationRoleType'/>
+    </resource>
+  </package>
   <page>
-    <title value="Vital Records Death Reporting" />
+    <title value='Vital Records Death Reporting'/>
+    <kind value='page'/>
+    <source value='index.html'/>
+    <title value='Vital Records Death Reporting'/>
     <page>
-      <source value="Home-duplicate-3.md" />
-      <title value="Introduction" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Home-duplicate-3.md'/>
+      <title value='Introduction'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
     </page>
     <page>
-      <source value="Background-duplicate-2.md" />
-      <title value="Background" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Background-duplicate-2.md'/>
+      <title value='Background'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
     </page>
     <page>
-      <source value="Profiles-duplicate-2.md" />
-      <title value="Profiles" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Profiles-duplicate-2.md'/>
+      <title value='Profiles'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
       <page>
-        <source value="AutopsyPerformedIndicator.md" />
-        <title value=" Autopsy Performed Indicator" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='AutopsyPerformedIndicator.md'/>
+        <title value='Autopsy Performed Indicator'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="BirthRecordIdentifier.md" />
-        <title value=" Birth Record Identifier" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='BirthRecordIdentifier.md'/>
+        <title value='Birth Record Identifier'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="CauseOfDeathCondition.md" />
-        <title value=" Cause Of Death Condition" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='CauseOfDeathCondition.md'/>
+        <title value='Cause Of Death Condition'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="CauseofDeathPathway.md" />
-        <title value=" Cause of Death Pathway" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='CauseofDeathPathway.md'/>
+        <title value='Cause of Death Pathway'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="Certifier.md" />
-        <title value=" Certifier" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='Certifier.md'/>
+        <title value='Certifier'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="ConditionContributingtoDeath.md" />
-        <title value="Condition Contributing to Death" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='ConditionContributingtoDeath.md'/>
+        <title value='Condition Contributing to Death'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathCertificate.md" />
-        <title value=" Death Certificate" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathCertificate.md'/>
+        <title value='Death Certificate'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathCertificateDocument.md" />
-        <title value=" Death Certificate Document" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathCertificateDocument.md'/>
+        <title value='Death Certificate Document'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathCertificateReference.md" />
-        <title value=" Death Certificate Reference" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathCertificateReference.md'/>
+        <title value='Death Certificate Reference'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathCertification.md" />
-        <title value=" Death Certification" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathCertification.md'/>
+        <title value='Death Certification'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathDate.md" />
-        <title value=" Death Date" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathDate.md'/>
+        <title value='Death Date'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathLocation.md" />
-        <title value=" Death Location" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathLocation.md'/>
+        <title value='Death Location'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DeathPronouncementPerformer.md" />
-        <title value=" Death Pronouncement Performer" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DeathPronouncementPerformer.md'/>
+        <title value='Death Pronouncement Performer'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="Decedent.md" />
-        <title value=" Decedent" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='Decedent.md'/>
+        <title value='Decedent'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentAge.md" />
-        <title value=" Decedent Age" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentAge.md'/>
+        <title value='Decedent Age'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentDispositionMethod.md" />
-        <title value=" Decedent Disposition Method" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentDispositionMethod.md'/>
+        <title value='Decedent Disposition Method'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentEducationLevel.md" />
-        <title value=" Decedent Education Level" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentEducationLevel.md'/>
+        <title value='Decedent Education Level'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentEmploymentHistory.md" />
-        <title value=" Decedent Employment History" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentEmploymentHistory.md'/>
+        <title value='Decedent Employment History'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentFather.md" />
-        <title value=" Decedent Father" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentFather.md'/>
+        <title value='Decedent Father'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentMother.md" />
-        <title value=" Decedent Mother" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentMother.md'/>
+        <title value='Decedent Mother'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentPregnancy.md" />
-        <title value=" Decedent Pregnancy" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentPregnancy.md'/>
+        <title value='Decedent Pregnancy'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentSpouse.md" />
-        <title value=" Decedent Spouse" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentSpouse.md'/>
+        <title value='Decedent Spouse'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DecedentTransportationRole.md" />
-        <title value=" Decedent Transportation Role" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DecedentTransportationRole.md'/>
+        <title value='Decedent Transportation Role'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="DispositionLocation.md" />
-        <title value=" Disposition Location" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='DispositionLocation.md'/>
+        <title value='Disposition Location'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="ExaminerContacted.md" />
-        <title value=" Examiner Contacted" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='ExaminerContacted.md'/>
+        <title value='Examiner Contacted'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="FuneralHome.md" />
-        <title value=" Funeral Home" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='FuneralHome.md'/>
+        <title value='Funeral Home'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="FuneralHomeDirector.md" />
-        <title value=" Funeral Home Director" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='FuneralHomeDirector.md'/>
+        <title value='Funeral Home Director'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="InjuryIncident.md" />
-        <title value=" Injury Incident" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='InjuryIncident.md'/>
+        <title value='Injury Incident'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="InjuryLocation.md" />
-        <title value=" Injury Location" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='InjuryLocation.md'/>
+        <title value='Injury Location'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="InterestedParty.md" />
-        <title value=" Interested Party" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='InterestedParty.md'/>
+        <title value='Interested Party'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="MannerofDeath.md" />
-        <title value=" Manner of Death" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='MannerofDeath.md'/>
+        <title value='Manner of Death'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="Mortician.md" />
-        <title value=" Mortician" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='Mortician.md'/>
+        <title value='Mortician'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
       <page>
-        <source value="TobaccoUseContributedToDeath.md" />
-        <title value=" Tobacco Use Contributed To Death" />
-        <kind value="page" />
-        <format value="text/markdown" />
+        <source value='TobaccoUseContributedToDeath.md'/>
+        <title value='Tobacco Use Contributed To Death'/>
+        <kind value='page'/>
+        <format value='text/markdown'/>
       </page>
     </page>
     <page>
-      <source value="Terminologies.md" />
-      <title value="Terminologies" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Terminologies.md'/>
+      <title value='Terminologies'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
     </page>
     <page>
-      <source value="Examples-duplicate-2.md" />
-      <title value="Examples" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Examples-duplicate-2.md'/>
+      <title value='Examples'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
     </page>
     <page>
-      <source value="Downloads-duplicate-2.md" />
-      <title value="Downloads" />
-      <kind value="page" />
-      <format value="text/markdown" />
+      <source value='Downloads-duplicate-2.md'/>
+      <title value='Downloads'/>
+      <kind value='page'/>
+      <format value='text/markdown'/>
     </page>
   </page>
 </ImplementationGuide>
