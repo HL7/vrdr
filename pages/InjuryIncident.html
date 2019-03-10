@@ -1,392 +1,562 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">&#13;
-&#13;
-    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />&#13;
-&#13;
-        <meta charset="utf-8" />&#13;
-        <title>Vital Records Death Reporting</title>&#13;
-&#13;
-        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />&#13;
-&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>&#13;
-&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />&#13;
-&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>&#13;
-&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css" />&#13;
-&#13;
-    </head>&#13;
-&#13;
-    <body>&#13;
-&#13;
-        <header>&#13;
-&#13;
-            <div class="container">&#13;
-                <div class="row">&#13;
-                    <div class="col-md-4 fhir-logo">&#13;
-                        <a href="http://www.hl7.org/fhir/stu3/">&#13;
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png" alt="logo fhir" />&#13;
-                        </a>&#13;
-                    </div>&#13;
-                    <div class="col-md-16 title">&#13;
-                        <div>&#13;
-                            <a >&#13;
-                                Vital Records Death Reporting&#13;
-                            </a>&#13;
-                        </div>&#13;
-                    </div>&#13;
-                    <div class="col-md-4 hl7-logo">&#13;
-                        <a href="http://www.www.hl7.org">&#13;
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50" />&#13;
-                        </a>&#13;
-                    </div>&#13;
-                </div>&#13;
-            </div>&#13;
-            &#13;
-&#13;
-<!--status-bar--><nav class="navbar navbar-default" role="navigation">&#13;
-    <div class="container">&#13;
-        <div class="navbar-header">&#13;
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">&#13;
-                <span class="sr-only">Toggle navigation</span>&#13;
-                <span class="icon-bar"></span>&#13;
-                <span class="icon-bar"></span>&#13;
-                <span class="icon-bar"></span>&#13;
-            </button>&#13;
-        </div>&#13;
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">&#13;
-            <ul class="nav navbar-nav">&#13;
-&#13;
-                        <li>&#13;
-                            <a href="Introduction.html">&#13;
-                                Introduction&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Background.html">&#13;
-                                Background&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li class="dropdown">&#13;
-&#13;
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">&#13;
-                                Profiles <span class="caret"></span>&#13;
-                            </a>&#13;
-&#13;
-                            <ul class="dropdown-menu">&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="Profiles.html">&#13;
-                                            Profiles&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li role="separator" class="divider"></li>&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="AutopsyPerformedIndicator.html">&#13;
-                                             Autopsy Performed Indicator&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="BirthRecordIdentifier.html">&#13;
-                                             Birth Record Identifier&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="CauseOfDeathCondition.html">&#13;
-                                             Cause Of Death Condition&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="CauseofDeathPathway.html">&#13;
-                                             Cause of Death Pathway&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Certifier.html">&#13;
-                                             Certifier&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="ConditionContributingtoDeath.html">&#13;
-                                            Condition Contributing to Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificate.html">&#13;
-                                             Death Certificate&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificateDocument.html">&#13;
-                                             Death Certificate Document&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificateReference.html">&#13;
-                                             Death Certificate Reference&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertification.html">&#13;
-                                             Death Certification&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathDate.html">&#13;
-                                             Death Date&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathLocation.html">&#13;
-                                             Death Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathPronouncementPerformer.html">&#13;
-                                             Death Pronouncement Performer&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Decedent.html">&#13;
-                                             Decedent&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentAge.html">&#13;
-                                             Decedent Age&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentDispositionMethod.html">&#13;
-                                             Decedent Disposition Method&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentEducationLevel.html">&#13;
-                                             Decedent Education Level&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentEmploymentHistory.html">&#13;
-                                             Decedent Employment History&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentFather.html">&#13;
-                                             Decedent Father&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentMother.html">&#13;
-                                             Decedent Mother&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentPregnancy.html">&#13;
-                                             Decedent Pregnancy&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentSpouse.html">&#13;
-                                             Decedent Spouse&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentTransportationRole.html">&#13;
-                                             Decedent Transportation Role&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DispositionLocation.html">&#13;
-                                             Disposition Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="ExaminerContacted.html">&#13;
-                                             Examiner Contacted&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="FuneralHome.html">&#13;
-                                             Funeral Home&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="FuneralHomeDirector.html">&#13;
-                                             Funeral Home Director&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InjuryIncident.html">&#13;
-                                             Injury Incident&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InjuryLocation.html">&#13;
-                                             Injury Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InterestedParty.html">&#13;
-                                             Interested Party&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="MannerofDeath.html">&#13;
-                                             Manner of Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Mortician.html">&#13;
-                                             Mortician&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="TobaccoUseContributedToDeath.html">&#13;
-                                             Tobacco Use Contributed To Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-&#13;
-                            </ul>&#13;
-                        </li>&#13;
-                        <li class="dropdown">&#13;
-&#13;
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">&#13;
-                                Terminologies <span class="caret"></span>&#13;
-                            </a>&#13;
-&#13;
-                            <ul class="dropdown-menu">&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="Terminologies.html">&#13;
-                                            Terminologies&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li role="separator" class="divider"></li>&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="BundleTypeVS.html">&#13;
-                                            Bundle Type VS&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="BundleTypeCS.html">&#13;
-                                            Bundle Type CS&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-&#13;
-                            </ul>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Examples.html">&#13;
-                                Examples&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Downloads.html">&#13;
-                                Downloads&#13;
-                            </a>&#13;
-                        </li>&#13;
-&#13;
-            </ul>&#13;
-        </div>&#13;
-    </div>&#13;
-</nav>&#13;
-&#13;
-        </header>&#13;
-&#13;
-        <div class="content container">&#13;
-            &#13;
-&#13;
-    <div class="row">&#13;
-&#13;
-&#13;
-        <div class="col-md-24">&#13;
-&#13;
-            <div id="preview-content">&#13;
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=IBM437" />
+
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css" />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://www.hl7.org/fhir/stu3/">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png" alt="logo fhir" />
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a >
+                                Vital Records Death Reporting
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.www.hl7.org">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+<!--status-bar--><nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li>
+                            <a href="Introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Background.html">
+                                Background
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Profiles.html">
+                                            Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AutopsyPerformedIndicator.html">
+                                             Autopsy Performed Indicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BirthRecordIdentifier.html">
+                                             Birth Record Identifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseOfDeathCondition.html">
+                                             Cause Of Death Condition
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseofDeathPathway.html">
+                                             Cause of Death Pathway
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Certifier.html">
+                                             Certifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionContributingtoDeath.html">
+                                            Condition Contributing to Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificate.html">
+                                             Death Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateDocument.html">
+                                             Death Certificate Document
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateReference.html">
+                                             Death Certificate Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertification.html">
+                                             Death Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathDate.html">
+                                             Death Date
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathLocation.html">
+                                             Death Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathPronouncementPerformer.html">
+                                             Death Pronouncement Performer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Decedent.html">
+                                             Decedent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentAge.html">
+                                             Decedent Age
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentDispositionMethod.html">
+                                             Decedent Disposition Method
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEducationLevel.html">
+                                             Decedent Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEmploymentHistory.html">
+                                             Decedent Employment History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentFather.html">
+                                             Decedent Father
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentMother.html">
+                                             Decedent Mother
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentPregnancy.html">
+                                             Decedent Pregnancy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentSpouse.html">
+                                             Decedent Spouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentTransportationRole.html">
+                                             Decedent Transportation Role
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionLocation.html">
+                                             Disposition Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ExaminerContacted.html">
+                                             Examiner Contacted
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHome.html">
+                                             Funeral Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHomeDirector.html">
+                                             Funeral Home Director
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryIncident.html">
+                                             Injury Incident
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryLocation.html">
+                                             Injury Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InterestedParty.html">
+                                             Interested Party
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MannerofDeath.html">
+                                             Manner of Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Mortician.html">
+                                             Mortician
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TobaccoUseContributedToDeath.html">
+                                             Tobacco Use Contributed To Death
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Terminologies <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Terminologies.html">
+                                            Terminologies
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AdministrativeGender.html">
+                                            AdministrativeGender
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="AgeUnitOfMeasure.html">
+                                            AgeUnitOfMeasure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BundleType.html">
+                                            BundleType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CompositionAttestationMode.html">
+                                            CompositionAttestationMode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CompositionStatus.html">
+                                            CompositionStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionCode.html">
+                                            ConditionCode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ContributoryTobaccoUse.html">
+                                            ContributoryTobaccoUse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionType.html">
+                                            DispositionType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DocumentReferenceStatus.html">
+                                            DocumentReferenceStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="EventStatus.html">
+                                            EventStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ISO.3166.2CountrySubdivisions.html">
+                                            ISO.3166.2CountrySubdivisions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListMode.html">
+                                            ListMode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListOrder.html">
+                                            ListOrder
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListStatus.html">
+                                            ListStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="LocationPhysicalType.html">
+                                            LocationPhysicalType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="LOINC.html">
+                                            LOINC
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MaritalStatus.html">
+                                            MaritalStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ObservationStatus.html">
+                                            ObservationStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="OrganizationType.html">
+                                            OrganizationType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PerformerRole.html">
+                                            PerformerRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PractitionerRole.html">
+                                            PractitionerRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PregnancyStatus.html">
+                                            PregnancyStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SNOMED.CT.html">
+                                            SNOMED.CT
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransportationRelationship.html">
+                                            TransportationRelationship
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="US.Core.birthsex.html">
+                                            US.Core.birthsex
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UsualIndustry.html">
+                                            UsualIndustry
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UsualOccupation.html">
+                                            UsualOccupation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0131.ContactRole.html">
+                                            v2.0131.ContactRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0203.IdentifierType.html">
+                                            v2.0203.IdentifierType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0360.DegreeLicenseCertificate.html">
+                                            v2.0360.DegreeLicenseCertificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0532.ExpandedYesNoIndicator.html">
+                                            v2.0532.ExpandedYesNoIndicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.CodeSystemRoleCode.html">
+                                            v3.CodeSystemRoleCode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.EducationLevel.html">
+                                            v3.EducationLevel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.Ethnicity.html">
+                                            v3.Ethnicity
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.Race.html">
+                                            v3.Race
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.ServiceDeliveryLocationRole.html">
+                                            v3.ServiceDeliveryLocationRole
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
                 <h2 id="injury-incident">Injury Incident</h2>
 <p>Decedent Age is a profile of the <a href="http://www.www.hl7.org/fhir/observation.html">FHIR stu3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>"minutes"</em>, when age is less than or equal to one year then unit shall be <em>"days"</em>, otherwise unit shall be <em>"years"</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<p>&#13;
-&#13;
-<img src="data:image;base64, iVBORw0KGgoAAAANSUhEUgAAAm4AAAJvCAIAAABNlsrhAAAAPXRFWHREZXNjcmlwdGlvbgBDcmVhdGVkIHdpdGggRW50ZXJwcmlzZSBBcmNoaXRlY3QgKEJ1aWxkOiAxMzUyKSAykuQ8NAAAIABJREFUeJzs3Xt4E1XCP/BvEd4luEZDurshaQqkCcsayKrh1jKIcgevXBYvKDe5KnIRREF21V0EF+RSFhUQEVQQEAFl5SIXlQ4UwahvIPguDYO0NGbZ1kjcJewPJb8/JlPSNr05bZO238/T52E6OXPmJLT59pyZnJMUDodBREREP1ejeDeAiIiobmOUEhERqcIoJSIiUoVRSkREpAqjlIiISBVGKRERkSqMUiIiIlUax7sBRJVSWFj473//O96toFp1ww03XH/99fFuBVHFGKWU6I4ePTpmzJjjx4/HuyFU2xo1aiQIwrPPPtujR494t4WoPEmc7YgS2YEDB/r163f58uV4N4TipkmTJqIodurUKd4NISoTo5QSWvfu3Q8ePChvt2jRIr6NUaMu/qLFt83hcPj8+fPydvv27d1udxwbQ1Q+RiklrgsXLuh0OvlH9N13323btm1NnzHmr0NZvyPqC9f+GevWc8nJyRkzZoy8XVhY2Lx585hVEcUd7+ClxPX999/L760Gg6EWcpQSjc1m+/Wvfy1vf/fdd/FtDFE5GKVUByQlJcW7CRQfRf/158+f5yVzSliMUiKqA65cufLDDz/EuxVEsTFKiahuuHLlSrybQBQbo5SIiEgVRikREZEqjFIiIiJVGKVEFRL/8vu/iEXf5a4foXwrzr1JNnx9XswjD829WXbLyA2xS1TNuXdGdywy+p1z5ZTcOGbMRuXx7Bc7d34xuyonyts0btymcqonoiiMUqKfS5w76dSTO7766quvvhp3Zp1Y6vFDc2+ehOVffvnll19++cWYM3+sljAFBmUeO3bs2LFjmbbFA+cfrtQh6U9/9tnT6dVydiIqjVFKVIL4Z8efxaJ/KkeYM0cosStvw6r3Bi+f01Up8czaB80AIL5wi+IFUSk6atQLL4xyOp2jNuQByHtndAfZvENlnzOj+yDknD0HZM/vVOSRjecAnNv4yKAlx48vGdy585iN54p3Uc9tGttF9le5n5r91y5/3bRpXHp6enp6+l+zAeRtGjd06fHjmUMzMsZtOodzkR5q9oKMBVXq2hI1FIxSomLEPz+KV/4kiH9+1DtzZMl4LE6Ys7zNwrvKGt3NldwOS2qJnXkbRk7OmfH+F1988cUX78/ImVw07OveijEul+uNB83I2/Ds3t7bPv/8888/z8SUMsP03Durt7bv3S0FSJ91VJFpXfzsxnNIuf/1rdPat5/23mefrb4/pdhRm57f12vLkSNHjhxZgmmRMMW2pd+Mys7Ozl587/Yn/poN832rNk9t337K5sOHV92XgpT7/tRz/9AF2ekPTvFOZ5gSlcYoJYqS+/Yq78yRcpDOfahkEJYizPnqq6929N0TydO89cPlK6MjyhrLPXvGPXiM3DuF+cExg917s+SSjunDI/3XvKy9bveigR06dOjQYcpWeHNLVrV1SseOHTt2HLjYlrnmgRQAOLfxkUindMq28ht87tC+48eXDOnSpUuXLtO2wZsrd1UHLn4qHQDSb7035mEp9/1piveNTZD/4SVUohK4XilRlNSHxlkda0X3n1454Jjz9q1vFqWp92wuhNjRah725lct59606mDesGFvfvmgMiF7nsXhlnIBc7kntLY0A6Vyd1Dm57O7xiouP3hsVkbU9+c2PrvYmnn09XQA5zY+8my55wMwcMmRp6Kvm1biCu65TX/OtI46nJK9INM66nAKuAYGUTHslRIVI/zpFTz6Z1H40yvWBXPezpX33T7kqwXKfUXiugVfDbldAPLWD5+rXOw8ewptWhYPTXO3vo73Js1VxmfzNox8QUTL1o73Vke6rHkbVr/naF0qns3deju2flrONdKS8s4cb99aPnf2W4vLXyE9pWuv9tsOVnWMNntDpnXRzPTsBdOxaCbvXiIqhb1SohKEP7kFAIj8AwDCH3fMHHHX738PALhp5o51AgDzsHG46aab5BJDln9V8sKq+cF1H2DE3TffLH87eNkXDwJYu+zMLffc8lLRLnOpHp75weenjxrYoQMAwDF925oHyu/Yps/K/KTToE6LAWDgwIGRvSlCLwwe3HlJ+2nvrb7/auGU+56dNnZIly4AgPbTtrx2X0rJ+uRGZPTE0KEZme2mbF51X/rMw+kAEPmHiErgeqWUuM6ePduqVSsALVq0+Oijj2rhjPVgjc94Fa6hMw4dOvSf//wngKysrLZt2yYnJ8esjSi+OMBLRESkCqOUiIhIFUYpERGRKoxSIiIiVRilRERE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" class="img-responsive" />&#13;
+<p>
+
+<img src="data:image;base64, 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ERERkfhYZxMRERERiY91NhERERGR+FhnExERERGJj3U2EREREZH4WGcTEREREYmPdTYRERERkfhYZxMRERERiY91NhERERGR+FhnExERERGJj3U2EREREZH4WGcTEREREYmPdTYRERERkfhYZxMRERERiY91NhERERGR+FhnExERERGJj3U2EREREZH4WGcTEREREYmPdTYRERERkfhYZxMRERERiY91NhERERGR+FhnExERERGJj3U2EREREZH4WGcTEREREYmPdTYRERERkfhYZxPpqTMzDAycNisfuw8RPVWYOoj0B+tsIj2k3OxkcOKFTY6P24eInipMHUT6hXU2kR6SvZmj2en7+H2I6KnC1EGkX1hnExERERGJj3U2EREREZH4WGcTEREREYmPdTaRHlJudjIwsJ2bmzvXVrgogHKzk8GMM6iyUbsPET3tmDqI9IuBRqPRdQxEBAAGBvx9pLrx3wY1gP88iPQW57OJiIiIiMTHOpuIiIiISHyss4mIiIiIxMc6m4iIiIhIfKyziYiIiIjExzqbiIiIiEh8El0HQK3GLdz7FX/oOoq2rO+A/sW4o+so2rJuaN8V7XUdxVOHqeNJY+p40pg6qNl40U16tALcCMLHX+J7XQdC9FjawcAZ5svg6gYrXcfSNK30AslMHdQ2tN7UQTrXKnM3taQMFHnjQBke6DoQInEYwfACptrDVNeBNEFrrLOZOqiNaY2pg3Su9eVuamEuiDuPYmHbXGOs22CeDE2dm7rzhINo2vB68Yk0qJ4IazVrDKA2vCds/w3P/huhTzIqkbXGOpupo8UxdTTJU5E6SOe4Ppsa8jN+z0aJsP15WeD/4VndxlNVXWWHpsafdWVSTa222gfLekbW1GrR13ieSDDaR3rz4TQ9nv8nuW3fKwXAl/j+J9zvgQ619iVxMHVUe4Kpg6mDnla83gg15A5+F9KVVGOsV0dKomb4v/Lu0gcdhe2fyn7TbTBtG1MHtSVMHdRsrLOpUQx0HQCRKAwqJqt++OGHsrIyncbyVGDqoLaBqYOah3U2ET2N/vzzz19++UXXURBRK8PUQU3COpuInlJ//vmnrkMgotaHqYMaj3U2EREREZH4WGcTEREREYmPdTa1eakh7cOSdR0EEbU2TB1E9LhYZ1Pbodoy1PCZTobPdDJs38nQdZtKN1EUKdy8FIXaB2fC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" class="img-responsive" />
 </p></center>
 <hr />
 <h3 id="structure-definition"><strong>Structure Definition</strong></h3>
-<p></p><div id="3634e64990374d1585d658610d0f76a3" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon resource"></span><span>Observation</span></td><td></td><td></td><td><a title="Type Observation from core specification" href="http://www.hl7.org/fhir/stu3/observation.html" target="_blank">Observation</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Observation from core specification" href="http://www.hl7.org/fhir/stu3/observation.html" target="_blank">Observation</a></p></td></tr><tr id="Observation.id" data-id="f427e463-ff37-474f-b09a-e3a3cd6a92d0" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class=""><td><span class="baseIcon primitive"></span><span>id</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>id</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] id (CONF:4393-172).</p>
-</div></td></tr><tr id="Observation.meta" data-id="2200f03d-fcff-4351-b003-0d8ccf475f63" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>meta</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>meta</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] meta (CONF:4393-167).</p>
-</div></td></tr><tr id="Observation.meta.profile" data-id="e2c8aaef-c762-4753-8af8-bfdcd5bb6108" data-parentid="2200f03d-fcff-4351-b003-0d8ccf475f63" class=""><td><span class="baseIcon reference"></span><span>profile</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://www.hl7.org/fhir/stu3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRInjuryIncident.xml">VRDR Injury Incident</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>profile</span></p><span><b>Definition </b></span><div class="markdown"><p>The meta, if present, SHALL contain exactly one [1..1] profile="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Incident" (CONF:4393-173).</p>
-</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://www.hl7.org/fhir/stu3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRInjuryIncident.xml">VRDR Injury Incident</a><span>)</span></p></td></tr><tr id="Observation.extension" data-id="11e2ed52-8379-4696-8d2c-8d0b87f079ba" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed sliced"><td><span class="baseIcon extension"></span><span>extension</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-195) such that it</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by value[x](Value), url(Value)</span></p></td></tr><tr id="Observation.extension:extension1" data-id="6278ae6b-27fd-4b6b-abc4-bf9d402c86aa" data-parentid="11e2ed52-8379-4696-8d2c-8d0b87f079ba" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-195) such that it</p>
-</div></td></tr><tr id="Observation.extension:extension1.@url" data-id="64b700bd-205c-4e89-9c12-7f5a420c8f74" data-parentid="6278ae6b-27fd-4b6b-abc4-bf9d402c86aa" class=""><td><span class="baseIcon primitive"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/Patient-Location" (CONF:4393-197).</p>
-</div></td></tr><tr id="Observation.extension:extension1.value[x]" data-id="b00a9938-d611-4a65-82db-9d52c591d87c" data-parentid="6278ae6b-27fd-4b6b-abc4-bf9d402c86aa" class="sliced"><td><span class="baseIcon slice"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-196)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.extension:extension1.value[x]:valueReference" data-id="bccfa61a-ca61-452b-8011-8e5fce03f56b" data-parentid="6278ae6b-27fd-4b6b-abc4-bf9d402c86aa" class=""><td><span class="baseIcon primitive"></span><span>valueReference</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueReference</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] valueReference="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location" (CONF:4393-198).</p>
+<p></p><div id="d35fee5ff74f41d9846167b187903c24" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon resource"></span><span>Observation</span></td><td></td><td></td><td><a title="Type Observation from core specification" href="http://www.hl7.org/fhir/stu3/observation.html" target="_blank">Observation</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Observation from core specification" href="http://www.hl7.org/fhir/stu3/observation.html" target="_blank">Observation</a></p></td></tr><tr id="Observation.id" data-id="9226500d-52a4-4bff-8539-033897b400cf" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class=""><td><span class="baseIcon primitive"></span><span>id</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>id</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] id (CONF:4393-172).</p>
+</div></td></tr><tr id="Observation.meta" data-id="dd9d61de-162d-49b4-b5ce-d4e0f465fdef" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>meta</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>meta</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] meta (CONF:4393-167).</p>
+</div></td></tr><tr id="Observation.meta.profile" data-id="1ddc99c7-bb78-45db-ae68-4f3ad0918d11" data-parentid="dd9d61de-162d-49b4-b5ce-d4e0f465fdef" class=""><td><span class="baseIcon reference"></span><span>profile</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type Reference from core specification" href="http://www.hl7.org/fhir/stu3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRInjuryIncident.xml">VRDR Injury Incident</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>profile</span></p><span><b>Definition </b></span><div class="markdown"><p>The meta, if present, SHALL contain exactly one [1..1] profile="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Incident" (CONF:4393-173).</p>
+</div><span><b>Data Type </b></span><p><a title="Type Reference from core specification" href="http://www.hl7.org/fhir/stu3/references.html" target="_blank">Reference</a><span>(</span><a title="Profile" href="artifacts/VRDRInjuryIncident.xml">VRDR Injury Incident</a><span>)</span></p></td></tr><tr id="Observation.extension" data-id="c5ca3107-a53e-4beb-8262-410dcd9ba44f" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed sliced"><td><span class="baseIcon extension"></span><span>extension</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-195) such that it</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by value[x](Value), url(Value)</span></p></td></tr><tr id="Observation.extension:extension1" data-id="c0511349-f89b-4c5a-b3d1-eddfee0dc005" data-parentid="c5ca3107-a53e-4beb-8262-410dcd9ba44f" class="collapsed"><td><span class="baseIcon individualSlice"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>extension</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] extension (CONF:4393-195) such that it</p>
+</div></td></tr><tr id="Observation.extension:extension1.@url" data-id="e6965d01-28e3-4014-bd95-93a54601239d" data-parentid="c0511349-f89b-4c5a-b3d1-eddfee0dc005" class=""><td><span class="baseIcon primitive"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>@url</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] @url="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/Patient-Location" (CONF:4393-197).</p>
+</div></td></tr><tr id="Observation.extension:extension1.value[x]" data-id="a2e88bef-3429-4959-b132-c47a4390efff" data-parentid="c0511349-f89b-4c5a-b3d1-eddfee0dc005" class="sliced"><td><span class="baseIcon slice"></span><span>extension1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-196)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.extension:extension1.value[x]:valueReference" data-id="3bdee8d2-c397-45f0-b433-97d9f7061b20" data-parentid="c0511349-f89b-4c5a-b3d1-eddfee0dc005" class=""><td><span class="baseIcon primitive"></span><span>valueReference</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueReference</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] valueReference="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location" (CONF:4393-198).</p>
 </div><span><b>Pattern </b></span><div>
-<pre class="">http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location</pre></div></td></tr><tr id="Observation.status" data-id="a765d06e-717b-4c3b-91bc-585ca550076e" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class=""><td><span class="baseIcon primitive"></span><span>status</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>status</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] status="final" Final (CONF:4393-174).</p>
+<pre class="">http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location</pre></div></td></tr><tr id="Observation.status" data-id="732c004f-d659-4a2b-af96-892f19eea6c2" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class=""><td><span class="baseIcon primitive"></span><span>status</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>status</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] status="final" Final (CONF:4393-174).</p>
 </div><span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></p><span><b>Pattern </b></span><div>
-<pre class="">final</pre></div></td></tr><tr id="Observation.code" data-id="bf879c21-2b9d-4c08-a82c-e138abcf436d" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] code (CONF:4393-168).</p>
-</div></td></tr><tr id="Observation.code.coding" data-id="e3560baf-8fa2-4d61-9f0e-b1f118f9a24c" data-parentid="bf879c21-2b9d-4c08-a82c-e138abcf436d" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="11374-6" Injury incident description (CodeSystem: LABCORP urn:oid:2.16.840.1.113883.3.290.2.1.19) (CONF:4393-175).</p>
+<pre class="">final</pre></div></td></tr><tr id="Observation.code" data-id="aa3ccd72-d299-4a16-b28f-c8eb5eeb2dac" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] code (CONF:4393-168).</p>
+</div></td></tr><tr id="Observation.code.coding" data-id="f34ed2e4-98af-4e7d-87f5-d4c42fbf45e6" data-parentid="aa3ccd72-d299-4a16-b28f-c8eb5eeb2dac" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="11374-6" Injury incident description (CodeSystem: LABCORP urn:oid:2.16.840.1.113883.3.290.2.1.19) (CONF:4393-175).</p>
 </div><span><b>Pattern </b></span><div>
-<pre class="">{&#13;
-  "system": "urn:oid:2.16.840.1.113883.3.290.2.1.19",&#13;
-  "code": "11374-6",&#13;
-  "display": "Injury incident description"&#13;
-}</pre></div></td></tr><tr id="Observation.subject" data-id="bc01b35f-ae73-4401-86d5-70d40a748e1e" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>subject</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>subject</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] subject (CONF:4393-169).</p>
-</div></td></tr><tr id="Observation.subject.reference" data-id="d02ca7bd-8c45-4648-b241-e0278e270192" data-parentid="bc01b35f-ae73-4401-86d5-70d40a748e1e" class=""><td><span class="baseIcon primitive"></span><span>reference</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>reference</span></p><span><b>Definition </b></span><div class="markdown"><p>This subject SHALL contain exactly one [1..1] reference="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent" (CONF:4393-176).</p>
+<pre class="">{
+  "system": "urn:oid:2.16.840.1.113883.3.290.2.1.19",
+  "code": "11374-6",
+  "display": "Injury incident description"
+}</pre></div></td></tr><tr id="Observation.subject" data-id="b624ac91-4d71-42dc-a9d4-8f9aac04aea1" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>subject</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>subject</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] subject (CONF:4393-169).</p>
+</div></td></tr><tr id="Observation.subject.reference" data-id="cd72b8ce-2389-40d9-9bba-fa299e7c2eb4" data-parentid="b624ac91-4d71-42dc-a9d4-8f9aac04aea1" class=""><td><span class="baseIcon primitive"></span><span>reference</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>reference</span></p><span><b>Definition </b></span><div class="markdown"><p>This subject SHALL contain exactly one [1..1] reference="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent" (CONF:4393-176).</p>
 </div><span><b>Pattern </b></span><div>
-<pre class="">http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent</pre></div></td></tr><tr id="Observation.effective[x]" data-id="12a3cf7f-1f5f-4566-a82a-6b6b854b3719" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="sliced"><td><span class="baseIcon slice"></span><span>effective[x]</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effective[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] effective[x], where effective[x] is (CONF:4393-170)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.effective[x]:effectiveDateTime" data-id="c853e706-7fcd-4c69-8483-7cc898e02992" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class=""><td><span class="baseIcon primitive"></span><span>effectiveDateTime</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effectiveDateTime</span></p><span><b>Definition </b></span><div class="markdown"><p>effectiveDateTime (CONF:4393-177)</p>
-</div></td></tr><tr id="Observation.value[x]" data-id="806cf5e7-bd3d-46f7-811a-4159818a07dc" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-171)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.value[x]:valueString" data-id="3b93f2f6-d4ec-4544-8312-8c00d37e2fcd" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class=""><td><span class="baseIcon primitive"></span><span>valueString</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueString</span></p><span><b>Definition </b></span><div class="markdown"><p>valueString (CONF:4393-178)</p>
-</div></td></tr><tr id="Observation.component1" data-id="83471547-bb2b-4a60-9dd3-852e7aacebea" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>component1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component1</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-179).</p>
+<pre class="">http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent</pre></div></td></tr><tr id="Observation.effective[x]" data-id="a3336a38-1b81-4adb-b32c-f9aee86d5a4a" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="sliced"><td><span class="baseIcon slice"></span><span>effective[x]</span></td><td></td><td><span>0</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effective[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHOULD contain zero or one [0..1] effective[x], where effective[x] is (CONF:4393-170)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.effective[x]:effectiveDateTime" data-id="863c48d4-6415-4f00-a8ae-643df60046df" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class=""><td><span class="baseIcon primitive"></span><span>effectiveDateTime</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>effectiveDateTime</span></p><span><b>Definition </b></span><div class="markdown"><p>effectiveDateTime (CONF:4393-177)</p>
+</div></td></tr><tr id="Observation.value[x]" data-id="363ee9f1-6a0a-478b-9cb3-b78273266535" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-171)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.value[x]:valueString" data-id="9848c9d7-01b8-415c-b570-0c676f821a6f" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class=""><td><span class="baseIcon primitive"></span><span>valueString</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueString</span></p><span><b>Definition </b></span><div class="markdown"><p>valueString (CONF:4393-178)</p>
+</div></td></tr><tr id="Observation.component1" data-id="b1730ef0-51bf-43ca-a0f5-8b3e417fbd61" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>component1</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component1</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-179).</p>
 </div><span><b>Comments </b></span><div class="markdown"><p>Place of Injury</p>
-</div></td></tr><tr id="Observation.component1.code" data-id="5c291f2f-9739-491c-9473-c1593005ef3e" data-parentid="83471547-bb2b-4a60-9dd3-852e7aacebea" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code (CONF:4393-180).</p>
-</div></td></tr><tr id="Observation.component1.code.coding" data-id="3ac7aeb5-9894-4051-8961-4880d3587ccd" data-parentid="5c291f2f-9739-491c-9473-c1593005ef3e" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="69450-5" Place of injury (CONF:4393-189).</p>
+</div></td></tr><tr id="Observation.component1.code" data-id="f00b374a-ff80-43b5-b3cc-9be34b671c57" data-parentid="b1730ef0-51bf-43ca-a0f5-8b3e417fbd61" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code (CONF:4393-180).</p>
+</div></td></tr><tr id="Observation.component1.code.coding" data-id="b42f2ead-23de-4547-a47d-1b723ba7f956" data-parentid="f00b374a-ff80-43b5-b3cc-9be34b671c57" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="69450-5" Place of injury (CONF:4393-189).</p>
 </div><span><b>Pattern </b></span><div>
-<pre class="">{&#13;
-  "code": "69450-5",&#13;
-  "display": "Place of injury"&#13;
-}</pre></div></td></tr><tr id="Observation.component1.value[x]" data-id="a71a04d1-7c40-4cd4-ab89-89e48cac64a5" data-parentid="83471547-bb2b-4a60-9dd3-852e7aacebea" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-181)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component1.value[x]:valueString" data-id="0496b561-e383-4b64-a5d2-a8cffda16eac" data-parentid="83471547-bb2b-4a60-9dd3-852e7aacebea" class=""><td><span class="baseIcon primitive"></span><span>valueString</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueString</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueString (CONF:4393-190).</p>
-</div></td></tr><tr id="Observation.component2" data-id="17d6f386-b4e1-4bfd-8612-525c34df84d2" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>component2</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component2</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-182).</p>
+<pre class="">{
+  "code": "69450-5",
+  "display": "Place of injury"
+}</pre></div></td></tr><tr id="Observation.component1.value[x]" data-id="95a935a4-0c94-4eb7-8b37-86920e68e604" data-parentid="b1730ef0-51bf-43ca-a0f5-8b3e417fbd61" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-181)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component1.value[x]:valueString" data-id="d329e7cf-fb9d-43ab-b622-3aa44b8bb630" data-parentid="b1730ef0-51bf-43ca-a0f5-8b3e417fbd61" class=""><td><span class="baseIcon primitive"></span><span>valueString</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueString</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueString (CONF:4393-190).</p>
+</div></td></tr><tr id="Observation.component2" data-id="98a34677-a2a6-495e-99d5-59981af089ec" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>component2</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component2</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-182).</p>
 </div><span><b>Comments </b></span><div class="markdown"><p>Work Injury Indicator</p>
-</div></td></tr><tr id="Observation.component2.code" data-id="6580b25b-1798-450e-97a4-3d61a5fc3918" data-parentid="17d6f386-b4e1-4bfd-8612-525c34df84d2" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code (CONF:4393-183).</p>
-</div></td></tr><tr id="Observation.component2.code.coding" data-id="3fda9077-9559-4dd3-b190-bb0e627b44fb" data-parentid="6580b25b-1798-450e-97a4-3d61a5fc3918" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="69444-8" Injury at work? (CONF:4393-191).</p>
+</div></td></tr><tr id="Observation.component2.code" data-id="7c48a6c5-5dff-437d-9e34-d68c43185047" data-parentid="98a34677-a2a6-495e-99d5-59981af089ec" class="collapsed"><td><span class="baseIcon primitive"></span><span>code</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code (CONF:4393-183).</p>
+</div></td></tr><tr id="Observation.component2.code.coding" data-id="6cd81b01-c900-4a85-b6a5-60a5c6605cb5" data-parentid="7c48a6c5-5dff-437d-9e34-d68c43185047" class=""><td><span class="baseIcon primitive"></span><span>coding</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>This code SHALL contain exactly one [1..1] coding="69444-8" Injury at work? (CONF:4393-191).</p>
 </div><span><b>Pattern </b></span><div>
-<pre class="">{&#13;
-  "code": "69444-8",&#13;
-  "display": "Injury at work?"&#13;
-}</pre></div></td></tr><tr id="Observation.component2.value[x]" data-id="57ad949b-99c7-4899-961c-31aba59fb2fe" data-parentid="17d6f386-b4e1-4bfd-8612-525c34df84d2" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-184)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component2.value[x]:valueCodeableConcept" data-id="804dd6a3-0649-4707-afe8-39a26860c34a" data-parentid="17d6f386-b4e1-4bfd-8612-525c34df84d2" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCodeableConcept</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueCodeableConcept (CONF:4393-185).</p>
-</div></td></tr><tr id="Observation.component2.value[x]:valueCodeableConcept.coding" data-id="9c5f4365-f7ed-47cc-a34b-fdb4cbc08b0f" data-parentid="804dd6a3-0649-4707-afe8-39a26860c34a" class=""><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] coding, which SHALL be selected from ValueSet v2-0532 http://www.hl7.org/fhir/ValueSet/v2-0532 (CONF:4393-192).</p>
-</div><span><b>Binding </b></span><p><a title="HL7 v2 Value Set 0532" href="http://www.hl7.org/fhir/stu3/v2/0532/index.html" target="_blank">v2-0532</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p></td></tr><tr id="Observation.component3" data-id="de8ab3c5-56b5-4a1b-9f07-615bd81c7613" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class=""><td><span class="baseIcon primitive"></span><span>component3</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component3</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-186).</p>
+<pre class="">{
+  "code": "69444-8",
+  "display": "Injury at work?"
+}</pre></div></td></tr><tr id="Observation.component2.value[x]" data-id="964c9b37-0309-4a30-92e8-5de91cc0c68d" data-parentid="98a34677-a2a6-495e-99d5-59981af089ec" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-184)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component2.value[x]:valueCodeableConcept" data-id="91d61f12-a816-4fca-9e54-1b7865797d07" data-parentid="98a34677-a2a6-495e-99d5-59981af089ec" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCodeableConcept</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueCodeableConcept (CONF:4393-185).</p>
+</div></td></tr><tr id="Observation.component2.value[x]:valueCodeableConcept.coding" data-id="4ecc3646-37d9-4223-8048-9ba58a0a1015" data-parentid="91d61f12-a816-4fca-9e54-1b7865797d07" class=""><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] coding, which SHALL be selected from ValueSet v2-0532 http://www.hl7.org/fhir/ValueSet/v2-0532 (CONF:4393-192).</p>
+</div><span><b>Binding </b></span><p><a title="HL7 v2 Value Set 0532" href="http://www.hl7.org/fhir/stu3/v2/0532/index.html" target="_blank">v2-0532</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p></td></tr><tr id="Observation.component3" data-id="9a69c2d1-b8cf-4282-8342-df742a8b4cc5" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class=""><td><span class="baseIcon primitive"></span><span>component3</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>component3</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] component (CONF:4393-186).</p>
 </div><span><b>Comments </b></span><div class="markdown"><p>Transportation Event Indicator</p>
-</div></td></tr><tr id="Observation.component" data-id="c0dbb6e8-fb65-4325-8528-f761ca5800f1" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>component</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span></td></tr><tr id="Observation.component3.code" data-id="25c1c893-b8aa-439c-b270-2a8aa7ab5b8f" data-parentid="c0dbb6e8-fb65-4325-8528-f761ca5800f1" class=""><td><span class="baseIcon datatype"></span><span>code3</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code="69448-9" Injury leading to death associated with transportation event (CONF:4393-193).</p>
+</div></td></tr><tr id="Observation.component" data-id="c288b700-3bf8-44a1-85a5-babb114b4f12" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>component</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span></td></tr><tr id="Observation.component3.code" data-id="6b2f3843-b8bc-47b8-88b0-247fe3f6ea2d" data-parentid="c288b700-3bf8-44a1-85a5-babb114b4f12" class=""><td><span class="baseIcon datatype"></span><span>code3</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>code</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] code="69448-9" Injury leading to death associated with transportation event (CONF:4393-193).</p>
 </div><span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p><span><b>Pattern </b></span><div>
-<pre class="">{&#13;
-  "coding": [&#13;
-    {&#13;
-      "code": "69448-9",&#13;
-      "display": "Injury leading to death associated with transportation event"&#13;
-    }&#13;
-  ]&#13;
-}</pre></div></td></tr><tr id="Observation.component3" data-id="4f0530b8-45a4-4097-a8ef-3294f99a5502" data-parentid="ce42ef1f-4fa9-4fa3-a114-395e7f3403a4" class="collapsed"><td><span class="baseIcon primitive"></span><span>component3</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span></td></tr><tr id="Observation.component3.value[x]" data-id="65fdf763-50c2-4dc4-9f62-c51b42baee17" data-parentid="4f0530b8-45a4-4097-a8ef-3294f99a5502" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-187)</p>
-</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component3.value[x]:valueCodeableConcept" data-id="7ca40487-672e-4610-8ab4-609ddc3ac9c8" data-parentid="4f0530b8-45a4-4097-a8ef-3294f99a5502" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCodeableConcept</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueCodeableConcept (CONF:4393-188).</p>
-</div></td></tr><tr id="Observation.component3.value[x]:valueCodeableConcept.coding" data-id="195563aa-5637-4e7c-88f4-dfa2e1d27b12" data-parentid="7ca40487-672e-4610-8ab4-609ddc3ac9c8" class=""><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] coding, which SHALL be selected from ValueSet v2-0532 http://www.hl7.org/fhir/ValueSet/v2-0532 (CONF:4393-194).</p>
+<pre class="">{
+  "coding": [
+    {
+      "code": "69448-9",
+      "display": "Injury leading to death associated with transportation event"
+    }
+  ]
+}</pre></div></td></tr><tr id="Observation.component3" data-id="f0827e65-d140-453c-bcd3-2b1d826faed1" data-parentid="fa44736b-e6d1-40c0-9ec0-158eb1661d04" class="collapsed"><td><span class="baseIcon primitive"></span><span>component3</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span></td></tr><tr id="Observation.component3.value[x]" data-id="89b373ab-c8f5-4e6e-a1ce-58dd0de81ccc" data-parentid="f0827e65-d140-453c-bcd3-2b1d826faed1" class="sliced"><td><span class="baseIcon slice"></span><span>value[x]</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>value[x]</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-187)</p>
+</div><span><b>Sliced: </b></span><p><span>Unordered, Open, by $this(Type)</span></p></td></tr><tr id="Observation.component3.value[x]:valueCodeableConcept" data-id="2e61bf8b-b0b2-493a-bfaf-4f4a9dc28b41" data-parentid="f0827e65-d140-453c-bcd3-2b1d826faed1" class="collapsed"><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td></td><td></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>valueCodeableConcept</span></p><span><b>Definition </b></span><div class="markdown"><p>This component SHALL contain exactly one [1..1] valueCodeableConcept (CONF:4393-188).</p>
+</div></td></tr><tr id="Observation.component3.value[x]:valueCodeableConcept.coding" data-id="9f4ad9cd-2275-40fb-bc89-6ed89ffc0d72" data-parentid="2e61bf8b-b0b2-493a-bfaf-4f4a9dc28b41" class=""><td><span class="baseIcon primitive"></span><span>valueCodeableConcept</span></td><td></td><td><span>1</span><span>..</span><span>1</span></td><td><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Short description </b></span><p><span>coding</span></p><span><b>Definition </b></span><div class="markdown"><p>SHALL contain exactly one [1..1] coding, which SHALL be selected from ValueSet v2-0532 http://www.hl7.org/fhir/ValueSet/v2-0532 (CONF:4393-194).</p>
 </div><span><b>Binding </b></span><p><a title="HL7 v2 Value Set 0532" href="http://www.hl7.org/fhir/stu3/v2/0532/index.html" target="_blank">v2-0532</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript"><![CDATA[
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTable3634e64990374d1585d658610d0f76a3 = new Stu3TreeTable(false);
-resourceTreeTable3634e64990374d1585d658610d0f76a3.init("3634e64990374d1585d658610d0f76a3");
+var resourceTreeTabled35fee5ff74f41d9846167b187903c24 = new Stu3TreeTable(false);
+resourceTreeTabled35fee5ff74f41d9846167b187903c24.init("d35fee5ff74f41d9846167b187903c24");
 }
 })();
 ]]></script>
@@ -571,31 +741,31 @@ resourceTreeTable3634e64990374d1585d658610d0f76a3.init("3634e64990374d1585d65861
 </tr>
 </tbody>
 </table>
-&#13;
-            </div>&#13;
-&#13;
-&#13;
-        </div>&#13;
-    </div>&#13;
-&#13;
-        </div>&#13;
-&#13;
-        <footer igtool="footer">&#13;
-            <div class="container">&#13;
-                <div class="row">&#13;
-                    <div>&#13;
-                        <span>Version: undefined</span>&#13;
-                        <span>FHIR Version: stu3</span>&#13;
-                    </div>&#13;
-                    <br />&#13;
-                    <p>Powered by <b>SIMPLIFIER.NET</b></p>&#13;
-                    <div>&#13;
-                        HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered trademarks of Health Level Seven International&#13;
-                    </div>&#13;
-                </div>&#13;
-            </div>&#13;
-        </footer>&#13;
-&#13;
-    </body>&#13;
-&#13;
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer igtool="footer">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: undefined</span>
+                        <span>FHIR Version: stu3</span>
+                    </div>
+                    <br />
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>&#174;</sup> and FHIR<sup>&#174;</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
 </html>

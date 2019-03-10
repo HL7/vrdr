@@ -1,323 +1,493 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">&#13;
-&#13;
-    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />&#13;
-&#13;
-        <meta charset="utf-8" />&#13;
-        <title>Vital Records Death Reporting</title>&#13;
-&#13;
-        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />&#13;
-&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>&#13;
-&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />&#13;
-&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>&#13;
-        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>&#13;
-&#13;
-        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css" />&#13;
-&#13;
-    </head>&#13;
-&#13;
-    <body>&#13;
-&#13;
-        <header>&#13;
-&#13;
-            <div class="container">&#13;
-                <div class="row">&#13;
-                    <div class="col-md-4 fhir-logo">&#13;
-                        <a href="http://www.hl7.org/fhir/stu3/">&#13;
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png" alt="logo fhir" />&#13;
-                        </a>&#13;
-                    </div>&#13;
-                    <div class="col-md-16 title">&#13;
-                        <div>&#13;
-                            <a >&#13;
-                                Vital Records Death Reporting&#13;
-                            </a>&#13;
-                        </div>&#13;
-                    </div>&#13;
-                    <div class="col-md-4 hl7-logo">&#13;
-                        <a href="http://www.www.hl7.org">&#13;
-                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50" />&#13;
-                        </a>&#13;
-                    </div>&#13;
-                </div>&#13;
-            </div>&#13;
-            &#13;
-&#13;
-<!--status-bar--><nav class="navbar navbar-default" role="navigation">&#13;
-    <div class="container">&#13;
-        <div class="navbar-header">&#13;
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">&#13;
-                <span class="sr-only">Toggle navigation</span>&#13;
-                <span class="icon-bar"></span>&#13;
-                <span class="icon-bar"></span>&#13;
-                <span class="icon-bar"></span>&#13;
-            </button>&#13;
-        </div>&#13;
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">&#13;
-            <ul class="nav navbar-nav">&#13;
-&#13;
-                        <li>&#13;
-                            <a href="Introduction.html">&#13;
-                                Introduction&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Background.html">&#13;
-                                Background&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li class="dropdown">&#13;
-&#13;
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">&#13;
-                                Profiles <span class="caret"></span>&#13;
-                            </a>&#13;
-&#13;
-                            <ul class="dropdown-menu">&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="Profiles.html">&#13;
-                                            Profiles&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li role="separator" class="divider"></li>&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="AutopsyPerformedIndicator.html">&#13;
-                                             Autopsy Performed Indicator&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="BirthRecordIdentifier.html">&#13;
-                                             Birth Record Identifier&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="CauseOfDeathCondition.html">&#13;
-                                             Cause Of Death Condition&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="CauseofDeathPathway.html">&#13;
-                                             Cause of Death Pathway&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Certifier.html">&#13;
-                                             Certifier&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="ConditionContributingtoDeath.html">&#13;
-                                            Condition Contributing to Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificate.html">&#13;
-                                             Death Certificate&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificateDocument.html">&#13;
-                                             Death Certificate Document&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertificateReference.html">&#13;
-                                             Death Certificate Reference&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathCertification.html">&#13;
-                                             Death Certification&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathDate.html">&#13;
-                                             Death Date&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathLocation.html">&#13;
-                                             Death Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DeathPronouncementPerformer.html">&#13;
-                                             Death Pronouncement Performer&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Decedent.html">&#13;
-                                             Decedent&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentAge.html">&#13;
-                                             Decedent Age&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentDispositionMethod.html">&#13;
-                                             Decedent Disposition Method&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentEducationLevel.html">&#13;
-                                             Decedent Education Level&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentEmploymentHistory.html">&#13;
-                                             Decedent Employment History&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentFather.html">&#13;
-                                             Decedent Father&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentMother.html">&#13;
-                                             Decedent Mother&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentPregnancy.html">&#13;
-                                             Decedent Pregnancy&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentSpouse.html">&#13;
-                                             Decedent Spouse&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DecedentTransportationRole.html">&#13;
-                                             Decedent Transportation Role&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="DispositionLocation.html">&#13;
-                                             Disposition Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="ExaminerContacted.html">&#13;
-                                             Examiner Contacted&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="FuneralHome.html">&#13;
-                                             Funeral Home&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="FuneralHomeDirector.html">&#13;
-                                             Funeral Home Director&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InjuryIncident.html">&#13;
-                                             Injury Incident&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InjuryLocation.html">&#13;
-                                             Injury Location&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="InterestedParty.html">&#13;
-                                             Interested Party&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="MannerofDeath.html">&#13;
-                                             Manner of Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="Mortician.html">&#13;
-                                             Mortician&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="TobaccoUseContributedToDeath.html">&#13;
-                                             Tobacco Use Contributed To Death&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-&#13;
-                            </ul>&#13;
-                        </li>&#13;
-                        <li class="dropdown">&#13;
-&#13;
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">&#13;
-                                Terminologies <span class="caret"></span>&#13;
-                            </a>&#13;
-&#13;
-                            <ul class="dropdown-menu">&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="Terminologies.html">&#13;
-                                            Terminologies&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li role="separator" class="divider"></li>&#13;
-&#13;
-                                    <li>&#13;
-                                        <a href="BundleTypeVS.html">&#13;
-                                            Bundle Type VS&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-                                    <li>&#13;
-                                        <a href="BundleTypeCS.html">&#13;
-                                            Bundle Type CS&#13;
-                                        </a>&#13;
-                                    </li>&#13;
-&#13;
-                            </ul>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Examples.html">&#13;
-                                Examples&#13;
-                            </a>&#13;
-                        </li>&#13;
-                        <li>&#13;
-                            <a href="Downloads.html">&#13;
-                                Downloads&#13;
-                            </a>&#13;
-                        </li>&#13;
-&#13;
-            </ul>&#13;
-        </div>&#13;
-    </div>&#13;
-</nav>&#13;
-&#13;
-        </header>&#13;
-&#13;
-        <div class="content container">&#13;
-            &#13;
-&#13;
-    <div class="row">&#13;
-&#13;
-&#13;
-        <div class="col-md-24">&#13;
-&#13;
-            <div id="preview-content">&#13;
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=IBM437" />
+
+        <meta charset="utf-8" />
+        <title>Vital Records Death Reporting</title>
+
+        <link rel="icon" href="guide/VitalRecordsDeathReporting/files/styles/common/favicon.ico" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/VitalRecordsDeathReporting/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/VitalRecordsDeathReporting/files/styles/ballotable/style.css" />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://www.hl7.org/fhir/stu3/">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/fhir-logo.png" alt="logo fhir" />
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a >
+                                Vital Records Death Reporting
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.www.hl7.org">
+                            <img src="guide/VitalRecordsDeathReporting/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+<!--status-bar--><nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li>
+                            <a href="Introduction.html">
+                                Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Background.html">
+                                Background
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Profiles.html">
+                                            Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AutopsyPerformedIndicator.html">
+                                             Autopsy Performed Indicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BirthRecordIdentifier.html">
+                                             Birth Record Identifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseOfDeathCondition.html">
+                                             Cause Of Death Condition
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CauseofDeathPathway.html">
+                                             Cause of Death Pathway
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Certifier.html">
+                                             Certifier
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionContributingtoDeath.html">
+                                            Condition Contributing to Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificate.html">
+                                             Death Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateDocument.html">
+                                             Death Certificate Document
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertificateReference.html">
+                                             Death Certificate Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathCertification.html">
+                                             Death Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathDate.html">
+                                             Death Date
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathLocation.html">
+                                             Death Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DeathPronouncementPerformer.html">
+                                             Death Pronouncement Performer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Decedent.html">
+                                             Decedent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentAge.html">
+                                             Decedent Age
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentDispositionMethod.html">
+                                             Decedent Disposition Method
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEducationLevel.html">
+                                             Decedent Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentEmploymentHistory.html">
+                                             Decedent Employment History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentFather.html">
+                                             Decedent Father
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentMother.html">
+                                             Decedent Mother
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentPregnancy.html">
+                                             Decedent Pregnancy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentSpouse.html">
+                                             Decedent Spouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DecedentTransportationRole.html">
+                                             Decedent Transportation Role
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionLocation.html">
+                                             Disposition Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ExaminerContacted.html">
+                                             Examiner Contacted
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHome.html">
+                                             Funeral Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FuneralHomeDirector.html">
+                                             Funeral Home Director
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryIncident.html">
+                                             Injury Incident
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InjuryLocation.html">
+                                             Injury Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InterestedParty.html">
+                                             Interested Party
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MannerofDeath.html">
+                                             Manner of Death
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Mortician.html">
+                                             Mortician
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TobaccoUseContributedToDeath.html">
+                                             Tobacco Use Contributed To Death
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Terminologies <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Terminologies.html">
+                                            Terminologies
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="AdministrativeGender.html">
+                                            AdministrativeGender
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="AgeUnitOfMeasure.html">
+                                            AgeUnitOfMeasure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BundleType.html">
+                                            BundleType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CompositionAttestationMode.html">
+                                            CompositionAttestationMode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CompositionStatus.html">
+                                            CompositionStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ConditionCode.html">
+                                            ConditionCode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ContributoryTobaccoUse.html">
+                                            ContributoryTobaccoUse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DispositionType.html">
+                                            DispositionType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="DocumentReferenceStatus.html">
+                                            DocumentReferenceStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="EventStatus.html">
+                                            EventStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ISO.3166.2CountrySubdivisions.html">
+                                            ISO.3166.2CountrySubdivisions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListMode.html">
+                                            ListMode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListOrder.html">
+                                            ListOrder
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ListStatus.html">
+                                            ListStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="LocationPhysicalType.html">
+                                            LocationPhysicalType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="LOINC.html">
+                                            LOINC
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="MaritalStatus.html">
+                                            MaritalStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ObservationStatus.html">
+                                            ObservationStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="OrganizationType.html">
+                                            OrganizationType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PerformerRole.html">
+                                            PerformerRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PractitionerRole.html">
+                                            PractitionerRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PregnancyStatus.html">
+                                            PregnancyStatus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SNOMED.CT.html">
+                                            SNOMED.CT
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransportationRelationship.html">
+                                            TransportationRelationship
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="US.Core.birthsex.html">
+                                            US.Core.birthsex
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UsualIndustry.html">
+                                            UsualIndustry
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UsualOccupation.html">
+                                            UsualOccupation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0131.ContactRole.html">
+                                            v2.0131.ContactRole
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0203.IdentifierType.html">
+                                            v2.0203.IdentifierType
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0360.DegreeLicenseCertificate.html">
+                                            v2.0360.DegreeLicenseCertificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v2.0532.ExpandedYesNoIndicator.html">
+                                            v2.0532.ExpandedYesNoIndicator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.CodeSystemRoleCode.html">
+                                            v3.CodeSystemRoleCode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.EducationLevel.html">
+                                            v3.EducationLevel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.Ethnicity.html">
+                                            v3.Ethnicity
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.Race.html">
+                                            v3.Race
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="v3.ServiceDeliveryLocationRole.html">
+                                            v3.ServiceDeliveryLocationRole
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
                 <h2 id="decedent-transportation-role">Decedent Transportation Role</h2>
 <p>Decedent Age is a profile of the <a href="http://www.www.hl7.org/fhir/observation.html">FHIR stu3 Observation</a> resource. It is used to communicate the decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age (Observation.valueQuantity.value) is derived as the difference in time between the decedent's death date and birth date. When age is less than or equal to one day then unit shall be <em>"minutes"</em>, when age is less than or equal to one year then unit shall be <em>"days"</em>, otherwise unit shall be <em>"years"</em>.</p>
 <hr />
 <h3 id="uml-expression"><strong>UML Expression</strong></h3>
 <center>
-<p>&#13;
-&#13;
-<img src="data:image;base64, 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" class="img-responsive" />&#13;
+<p>
+
+<img src="data:image;base64, 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" class="img-responsive" />
 </p></center>
 <hr />
 <h3 id="structure-definition"><strong>Structure Definition</strong></h3>
@@ -383,31 +553,31 @@
 </tr>
 </tbody>
 </table>
-&#13;
-            </div>&#13;
-&#13;
-&#13;
-        </div>&#13;
-    </div>&#13;
-&#13;
-        </div>&#13;
-&#13;
-        <footer igtool="footer">&#13;
-            <div class="container">&#13;
-                <div class="row">&#13;
-                    <div>&#13;
-                        <span>Version: undefined</span>&#13;
-                        <span>FHIR Version: stu3</span>&#13;
-                    </div>&#13;
-                    <br />&#13;
-                    <p>Powered by <b>SIMPLIFIER.NET</b></p>&#13;
-                    <div>&#13;
-                        HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered trademarks of Health Level Seven International&#13;
-                    </div>&#13;
-                </div>&#13;
-            </div>&#13;
-        </footer>&#13;
-&#13;
-    </body>&#13;
-&#13;
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer igtool="footer">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: undefined</span>
+                        <span>FHIR Version: stu3</span>
+                    </div>
+                    <br />
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>&#174;</sup> and FHIR<sup>&#174;</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
 </html>
