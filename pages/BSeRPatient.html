@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta charset="utf-8">
+        <title>BSeR FHIR IG</title>
+
+        <link rel="icon" href="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/favicon.ico">
+
+        <script src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/main.min.css">
+        <link rel="stylesheet" href="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/rendering/rendering.min.css">
+
+        <script src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/ballotable/style.css">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fhir-logo">
+                        <a href="http://www.hl7.org/fhir/stu3/">
+                            <img src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/ballotable/fhir-logo.png" alt="logo fhir">
+                        </a>
+                    </div>
+                    <div class="col-md-16 title">
+                        <div>
+                            <a >
+                                BSeR FHIR IG
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hl7-logo">
+                        <a href="http://www.hl7.org">
+                            <img src="guide/BidirectionalServiceseReferralFHIRimplementationguide/files/styles/ballotable/hl7-logo.png" alt="visit the hl7 website" width="42" height="50">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+<!--status-bar--><nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Introduction <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Introduction.html">
+                                            Introduction
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="Background.html">
+                                            Background
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Scope.html">
+                                            Scope
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRFHIRIGIndex.html">
+                                            BSeR FHIR IG Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Notifications <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Notifications.html">
+                                            Notifications
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="NoticeToBallotCommenters.html">
+                                             Notice to Ballot Commenters
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="NoticetoImplementers.html">
+                                            Notice to Implementers
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Resource Profiles <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ResourceProfiles.html">
+                                            Resource Profiles
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="CommonTransactionProfiles.html">
+                                            Common Transaction Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ReferralRequestTransactionProfiles.html">
+                                            Referral Request Transaction Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ReferralFeedbackTransactionProfiles.html">
+                                            Referral Feedback Transaction Profiles
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profile Definitions <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ProfileDefinitions.html">
+                                            Profile Definitions
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="BSeRArthritisFeedbackObservation-duplicate-2.html">
+                                            BSeR Arthritis Feedback Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRBloodPressureObservation-duplicate-2.html">
+                                            BSeR Blood Pressure Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRBodyHeightObservation-duplicate-2.html">
+                                            BSeR Body Height Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRBodyMassIndexObservation-duplicate-2.html">
+                                            BSeR Body Mass Index Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRBodyWeightObservation-duplicate-2.html">
+                                            BSeR Body Weight Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRChildhoodNutritionFeedbackObs-duplicate-2.html">
+                                            BSeR Childhood Nutrition Feedback Obs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRChildhoodNutritionReferralObs-duplicate-2.html">
+                                            BSeR Childhood Nutrition Referral Obs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRCoverage-duplicate-2.html">
+                                            BSeR Coverage
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRDiagnosis-duplicate-2.html">
+                                            BSeR Diagnosis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeREducationLevel-duplicate-2.html">
+                                            BSeR Education Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeREmploymentStatus-duplicate-2.html">
+                                            BSeR Employment Status
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRHA1cObservation-duplicate-2.html">
+                                            BSeR Hemoglobin A1c Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRMedicationAdministration-duplicate-2.html">
+                                            BSeR Medication Administration
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeROrganization-duplicate-2.html">
+                                            BSeR Organization
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRPatient-duplicate-2.html">
+                                            BSeR Patient
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRPatientAllergy-duplicate-2.html">
+                                            BSeR Patient Allergy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRPatientConsent-duplicate-2.html">
+                                            BSeR Patient Consent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRPractitioner-duplicate-2.html">
+                                            BSeR Practitioner
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralInitiator.html">
+                                            BSeR Referral Initiator
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralRecipient.html">
+                                            BSeR Referral Recipient
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Newitem-duplicate-15.html">
+                                            BSeR Related Person
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Newitem-duplicate-16.html">
+                                            BSeR Service Delivery Location
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRSessionsAttendedObservation-duplicate-2.html">
+                                            BSeR Sessions Attended Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRSmokingStatus-duplicate-2.html">
+                                            BSeR Smoking Status
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRTobaccoCessationFeedbackObs-duplicate-2.html">
+                                            BSeR Tobacco Cessation Feedback Obs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRTobaccoCessationReferralObs-duplicate-2.html">
+                                            BSeR Tobacco Cessation Referral Obs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralStatusObservation.html">
+                                            BSeR Referral Status Observation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralRequest.html">
+                                            BSeR Referral Request
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralFeedback.html">
+                                            BSeR Referral Feedback
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRArthritisRequestSupportBundle.html">
+                                            BSeRArthritisRequestSupportBundle
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeR-Referral-Response-Message-Header.html">
+                                            BSeR-Referral-Response-Message-Header
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeR-Referral-Request-Task.html">
+                                            BSeR-Referral-Request-Task
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeR-Referral-Request-Message-Header.html">
+                                            BSeR-Referral-Request-Message-Header
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="PractitionerRoleExtension.html">
+                                            PractitionerRoleExtension
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Exchange Transactions <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ExchangeTransactions.html">
+                                            Exchange Transactions
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="BSeRMessagingWorkflow.html">
+                                            BSeR Messaging Workflow
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralRequestTransaction.html">
+                                            BSeR Referral Request Transaction
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BSeRReferralFeedbackTransaction.html">
+                                            BSeR Referral Feedback Transaction
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Downloads and History <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Downloads-duplicate-2.html">
+                                            Downloads and History
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider">
+
+                                    <li>
+                                        <a href="history.html">
+                                            history
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        </header>
+
+        <div class="content container">
+            
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+                <h1 id="bser-patient"><strong>BSeR Patient</strong></h1>
+<hr>
+<h3 id="uml-expression"><strong>UML Expression</strong></h3>
+<center>
+<p>
+
+<img src="data:image;base64,%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" class="img-responsive">
+</p>
+</center>
+<hr>
+<h3 id="structure-definition"><strong>Structure Definition</strong></h3>
+<p></p>
+<div id="656f71091f4f4abb9e2fdac33ac6f7dd" data-level="10" class="stu3-treetable"><div class="treetable-wrapper snapshot">
+<div class="treetable-left-panel"><table class="treetable">
+<tr data-id="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon resource"></span><span>Patient</span>
+</td>
+<td></td>
+<td></td>
+<td><a title="Type Patient from core specification" href="http://www.hl7.org/fhir/stu3/patient.html" target="_blank">Patient</a></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Data Type </b></span><p><a title="Type Patient from core specification" href="http://www.hl7.org/fhir/stu3/patient.html" target="_blank">Patient</a></p>
+</td>
+</tr>
+<tr id="Patient.id" data-id="7e78a947-9f10-49f9-b7ca-acbbb4064b55" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="">
+<td>
+<span class="baseIcon primitive"></span><span>id</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>id</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>MAY contain zero or one [0..1] id (CONF:4383-796).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.meta" data-id="754d6cbc-4cb4-4488-b357-b96a29838831" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>meta</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>meta</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>MAY contain zero or one [0..1] meta (CONF:4383-795).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.meta.profile" data-id="b945777f-0d1f-4acf-a5b1-de5a5c7708ad" data-parentid="754d6cbc-4cb4-4488-b357-b96a29838831" class="">
+<td>
+<span class="baseIcon primitive"></span><span>profile</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>profile</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The meta, if present, SHALL contain exactly one [1..1] profile="http://www.hl7.org/fhir/us/bser/StructureDefinition/PatientRole" (CONF:4383-797).</p>
+</div>
+<span><b>Pattern </b></span><div>
+<pre class="">http://www.hl7.org/fhir/us/bser/StructureDefinition/PatientRole</pre>
+</div>
+</td>
+</tr>
+<tr id="Patient.identifier" data-id="97230a33-0921-4722-beb9-ea147a1eee93" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>identifier</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>identifier</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHALL contain at least one [1..*] identifier (CONF:4383-34).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.identifier.type" data-id="87690f2c-240f-41d4-b488-fcfd333c7a39" data-parentid="97230a33-0921-4722-beb9-ea147a1eee93" class="">
+<td>
+<span class="baseIcon primitive"></span><span>type</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>type</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such identifiers SHALL contain exactly one [1..1] type, which SHALL be selected from ValueSet Identifier-type http://www.hl7.org/fhir/ValueSet/identifier-type DYNAMIC (CONF:4383-39).</p>
+</div>
+<span><b>Binding </b></span><p><a title="identifier-type" href="http://www.hl7.org/fhir/stu3/valueset-identifier-type.html" target="_blank">Identifier-type</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.identifier.system" data-id="83f7efa5-18ce-4f54-9a00-9b0de3def7ca" data-parentid="97230a33-0921-4722-beb9-ea147a1eee93" class="">
+<td>
+<span class="baseIcon primitive"></span><span>system</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>system</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such identifiers SHALL contain exactly one [1..1] system (CONF:4383-40).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.identifier.value" data-id="a639749a-e699-47fd-aaf4-5310361d1fef" data-parentid="97230a33-0921-4722-beb9-ea147a1eee93" class="">
+<td>
+<span class="baseIcon primitive"></span><span>value</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such identifiers SHALL contain exactly one [1..1] value (CONF:4383-41).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.name" data-id="92b82f56-3c49-4cf3-8daa-f203848b1909" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>name</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>name</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHALL contain at least one [1..*] name (CONF:4383-54).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.name.use" data-id="bd6c8327-504a-4762-9720-6c4ddc5315a7" data-parentid="92b82f56-3c49-4cf3-8daa-f203848b1909" class="">
+<td>
+<span class="baseIcon primitive"></span><span>use</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such names SHALL contain exactly one [1..1] use, which SHALL be selected from ValueSet Name-use http://www.hl7.org/fhir/ValueSet/name-use DYNAMIC (CONF:4383-110).</p>
+</div>
+<span><b>Binding </b></span><p><a title="name-use" href="http://www.hl7.org/fhir/stu3/valueset-name-use.html" target="_blank">Name-use</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.name.family" data-id="fe00a503-8c0b-477d-ba30-9f2f034a7dfc" data-parentid="92b82f56-3c49-4cf3-8daa-f203848b1909" class="">
+<td>
+<span class="baseIcon primitive"></span><span>family</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>family</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such names SHALL contain exactly one [1..1] family (CONF:4383-60).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.name.given" data-id="f506814f-f171-4571-abd6-31cc42cba9ef" data-parentid="92b82f56-3c49-4cf3-8daa-f203848b1909" class="">
+<td>
+<span class="baseIcon primitive"></span><span>given</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>given</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>Such names SHALL contain at least one [1..*] given (CONF:4383-61).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.telecom" data-id="86d5926c-50d6-427d-94cc-f586c33135d3" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>telecom</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>telecom</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHOULD contain zero or more [0..*] telecom (CONF:4383-35).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.telecom.system" data-id="82e637dd-bf56-4fcb-a6f9-d678e9b23618" data-parentid="86d5926c-50d6-427d-94cc-f586c33135d3" class="">
+<td>
+<span class="baseIcon primitive"></span><span>system</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>system</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The telecom, if present, SHALL contain exactly one [1..1] system, which SHALL be selected from ValueSet Contact-point-system http://www.hl7.org/fhir/ValueSet/contact-point-system DYNAMIC (CONF:4383-42).</p>
+</div>
+<span><b>Binding </b></span><p><a title="contact-point-system" href="http://www.hl7.org/fhir/stu3/valueset-contact-point-system.html" target="_blank">Contact-point-system</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.telecom.value" data-id="45472efa-7495-42cd-994c-daba12c17740" data-parentid="86d5926c-50d6-427d-94cc-f586c33135d3" class="">
+<td>
+<span class="baseIcon primitive"></span><span>value</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>value</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The telecom, if present, SHALL contain exactly one [1..1] value (CONF:4383-43).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.telecom.use" data-id="45827557-4ab0-4007-b9ff-b38011d375d0" data-parentid="86d5926c-50d6-427d-94cc-f586c33135d3" class="">
+<td>
+<span class="baseIcon primitive"></span><span>use</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td><span class="binding-label">Binding</span></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>use</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The telecom, if present, SHALL contain exactly one [1..1] use, which SHALL be selected from ValueSet Contact-point-use http://www.hl7.org/fhir/ValueSet/contact-point-use DYNAMIC (CONF:4383-44).</p>
+</div>
+<span><b>Binding </b></span><p><a title="contact-point-use" href="http://www.hl7.org/fhir/stu3/valueset-contact-point-use.html" target="_blank">Contact-point-use</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.gender" data-id="f66fa801-e0e9-4ae9-9d98-50fc18911f39" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="">
+<td>
+<span class="baseIcon primitive"></span><span>gender</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td>
+<a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a><span class="binding-label">Binding</span>
+</td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>gender</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHALL contain exactly one [1..1] gender, which SHALL be selected from ValueSet Administrative-gender http://www.hl7.org/fhir/ValueSet/administrative-gender DYNAMIC (CONF:4383-55).</p>
+</div>
+<span><b>Data Type </b></span><p><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></p>
+<span><b>Binding </b></span><p><a title="administrative-gender" href="http://www.hl7.org/fhir/stu3/valueset-administrative-gender.html" target="_blank">Administrative-gender</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.birthDate" data-id="68714b8b-1dff-4039-ada4-b6dec96261cb" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="">
+<td>
+<span class="baseIcon primitive"></span><span>birthDate</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>birthDate</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHALL contain exactly one [1..1] birthDate (CONF:4383-56).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address" data-id="298738d2-f609-47f2-87f1-5c31ba910934" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>address</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>address</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHOULD contain zero or more [0..*] address (CONF:4383-36).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.text" data-id="c9948edb-b59d-4494-9695-6cb4f522a5e6" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>text</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>text</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, MAY contain zero or one [0..1] text (CONF:4383-111).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.line" data-id="2f81d7d0-c3f4-42f3-bf0c-df9d1e427fdc" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>line</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>*</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>line</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, SHOULD contain zero or more [0..*] line (CONF:4383-45).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.city" data-id="434240a7-fe72-4e08-912c-b4a731036678" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>city</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>city</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, SHOULD contain zero or one [0..1] city (CONF:4383-46).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.state" data-id="55fd6aac-a39d-49b8-bfd8-9468dd71fd13" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>state</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>state</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, SHOULD contain zero or one [0..1] state (CONF:4383-47).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.postalCode" data-id="843cd078-4168-4cf2-ace1-de9d66ed1440" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>postalCode</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>postalCode</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, SHOULD contain zero or one [0..1] postalCode (CONF:4383-48).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.address.country" data-id="68b0fd19-4917-4e86-a0f4-c1077441fce3" data-parentid="298738d2-f609-47f2-87f1-5c31ba910934" class="">
+<td>
+<span class="baseIcon primitive"></span><span>country</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>country</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The address, if present, SHALL contain exactly one [1..1] country, which SHALL be selected from CodeSystem ISO 3166 Part 1 Country Codes, 2nd Edition, Alpha-2 (urn:oid:1.0.3166.1.2.2) DYNAMIC (CONF:4383-49).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.communication" data-id="7f6ea286-4d05-4948-8970-90568cce4b6c" data-parentid="a970dacc-4c48-4dfa-b281-d5318b60d450" class="collapsed">
+<td>
+<span class="baseIcon primitive"></span><span>communication</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>communication</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>SHOULD contain zero or one [0..1] communication (CONF:4383-107).</p>
+</div>
+</td>
+</tr>
+<tr id="Patient.communication.language" data-id="3926f386-e1e6-4130-8e54-efcbb995fd37" data-parentid="7f6ea286-4d05-4948-8970-90568cce4b6c" class="">
+<td>
+<span class="baseIcon datatype"></span><span>language</span>
+</td>
+<td></td>
+<td>
+<span>1</span><span>..</span><span>1</span>
+</td>
+<td>
+<a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a><span class="binding-label">Binding</span>
+</td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>language</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The communication, if present, SHALL contain exactly one [1..1] language, which SHALL be selected from ValueSet Languages http://www.hl7.org/fhir/ValueSet/languages DYNAMIC (CONF:4383-108).</p>
+</div>
+<span><b>Data Type </b></span><p><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></p>
+<span><b>Binding </b></span><p><a title="languages" href="http://www.hl7.org/fhir/stu3/valueset-languages.html" target="_blank">Languages</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://www.hl7.org/fhir/stu3/terminologies.html#required">required</a><span>)</span></p>
+</td>
+</tr>
+<tr id="Patient.communication.preferred" data-id="a3a910ce-3ae8-4a23-9182-8063e767cd74" data-parentid="7f6ea286-4d05-4948-8970-90568cce4b6c" class="">
+<td>
+<span class="baseIcon primitive"></span><span>preferred</span>
+</td>
+<td></td>
+<td>
+<span>0</span><span>..</span><span>1</span>
+</td>
+<td></td>
+<td class="details hidden">
+<span class="pin-control"></span><span><b>Short description </b></span><p><span>preferred</span></p>
+<span><b>Definition </b></span><div class="markdown">
+<p>The communication, if present, SHALL contain zero or one [0..1] preferred (CONF:4383-109).</p>
+</div>
+</td>
+</tr>
+</table></div>
+<div class="treetable-right-panel"></div>
+</div></div>
+<script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable656f71091f4f4abb9e2fdac33ac6f7dd = new Stu3TreeTable(false);
+resourceTreeTable656f71091f4f4abb9e2fdac33ac6f7dd.init("656f71091f4f4abb9e2fdac33ac6f7dd");
+}
+})();
+</script>
+<hr>
+<h3 id="element-bindings"><strong>Element Bindings</strong></h3>
+<table class="regular">
+<thead>
+<tr>
+<th>Element Name</th>
+<th>Binding Type</th>
+<th>Binding Value</th>
+<th>Fixed Value Code System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address.country</td>
+<td>Code Sytem</td>
+<td>urn:iso:std:iso:3166</td>
+<td>ISO Country &amp; Regional Codes</td>
+</tr>
+<tr>
+<td>communication.language</td>
+<td>Value Set</td>
+<td>languages</td>
+<td></td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Value Set</td>
+<td>administrative-gender</td>
+<td></td>
+</tr>
+<tr>
+<td>identifier.type</td>
+<td>Value Set</td>
+<td>identifier-type</td>
+<td></td>
+</tr>
+<tr>
+<td>name.use</td>
+<td>Value Set</td>
+<td>name-use</td>
+<td></td>
+</tr>
+<tr>
+<td>telecom.system</td>
+<td>Value Set</td>
+<td>contact-point-system</td>
+<td></td>
+</tr>
+<tr>
+<td>telecom.use</td>
+<td>Value Set</td>
+<td>contact-point-use</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="element-table"><strong>Element Table</strong></h3>
+<p></p>
+<div class="path"><table>
+<tr>
+<td><span class="field">Patient</span></td>
+<td></td>
+<td>.. </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">id</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">meta</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.meta.<span class="field">profile</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">identifier</span>
+</td>
+<td></td>
+<td>1..* </td>
+</tr>
+<tr>
+<td>Patient.identifier.<span class="field">type</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.identifier.<span class="field">system</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.identifier.<span class="field">value</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">name</span>
+</td>
+<td></td>
+<td>1..* </td>
+</tr>
+<tr>
+<td>Patient.name.<span class="field">use</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.name.<span class="field">family</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.name.<span class="field">given</span>
+</td>
+<td></td>
+<td>1..* </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">telecom</span>
+</td>
+<td></td>
+<td>0..* </td>
+</tr>
+<tr>
+<td>Patient.telecom.<span class="field">system</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.telecom.<span class="field">value</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.telecom.<span class="field">use</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">gender</span>
+</td>
+<td><a title="Type code from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">birthDate</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">address</span>
+</td>
+<td></td>
+<td>0..* </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">text</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">line</span>
+</td>
+<td></td>
+<td>0..* </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">city</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">state</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">postalCode</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.address.<span class="field">country</span>
+</td>
+<td></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.<span class="field">communication</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+<tr>
+<td>Patient.communication.<span class="field">language</span>
+</td>
+<td><a title="Type CodeableConcept from core specification" href="http://www.hl7.org/fhir/stu3/datatypes.html#codeableconcept" target="_blank">CodeableConcept</a></td>
+<td>1..1 </td>
+</tr>
+<tr>
+<td>Patient.communication.<span class="field">preferred</span>
+</td>
+<td></td>
+<td>0..1 </td>
+</tr>
+</table></div>
+<br>
+<hr>
+
+            </div>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer igtool="footer">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <span>Version: 0.1</span>
+                        <span>FHIR Version: stu3</span>
+                    </div>
+                    <br>
+                    <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                    <div>
+                        HL7<sup>®</sup> and FHIR<sup>®</sup> are the registered trademarks of Health Level Seven International
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
