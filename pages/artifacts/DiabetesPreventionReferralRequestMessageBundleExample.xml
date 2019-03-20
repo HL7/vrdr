@@ -1,0 +1,688 @@
+<Bundle xmlns="http://www.hl7.org/fhir">
+    <id value="DiabetesPreventionReferralRequestMessageBundle-A"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2019-01-12T17:49:02.000+00:00"/>
+        <profile
+            value="http://www.hl7.org/fhir/us/bser/StructureDefinition/DiabetesPreventionReferralRequestMessageBundle"
+        />
+    </meta>
+    <type value="message"/>
+    <entry>
+        <fullUrl value="urn:uuid:fc5857a1-98cb-4d3d-b6a0-fa0c18b3057d"/>
+        <resource>
+            <MessageHeader xmlns="http://www.hl7.org/fhir">
+                <!--MessageHeaderInitiator-->
+                <id value="fc5857a1-98cb-4d3d-b6a0-fa0c18b3057d"/>
+                <event>
+                    <system value="http://terminology.www.hl7.org/CodeSystem/v2-0003"/>
+                    <code value="I12"/>
+                    <display value="Referral Request"/>
+                </event>
+                <receiver>
+                    <!--PractitionerRole/ReferralRecipient goes directluy tp Practioner-->
+					
+                    <extension url="https://eip-fhir.experimental.aimsplatform.com/hapi-fhir/baseDstu3/StructureDefinition/Practioner-Role">
+                        <valueReference>
+                            <reference value="urn:uuid:ffa2bf53-ee09-43a1-b11a-73ed0f1cd73b"
+                            />
+                        </valueReference>
+                    </extension>
+                   
+                    <reference value="urn:uuid:421269ad-abef-49bc-8cac-d3a5d4b00299"/>
+                </receiver>
+                <sender>
+                    <!--PractitionerRole/ReferralInitiator-->
+                  
+                    <extension url="https://eip-fhir.experimental.aimsplatform.com/hapi-fhir/baseDstu3/StructureDefinition/Practioner-Role">
+                        <valueReference>
+                            <reference value="urn:uuid:538791da-3555-460e-9e7f-76d25988a546"
+                            />
+                        </valueReference>
+                    </extension>
+                    
+                    <reference value="urn:uuid:598af951-66e4-4910-a964-7e41533b183c"/>
+                </sender>
+                <timestamp value="2018-12-11T05:05:11Z"/>
+                <source>
+                    <name value="Centricity"/>
+                    <endpoint value="https://apisandbox.gehealthcare.com:9443/demoAPIServer"/>
+                </source>
+                <reason>
+                    <coding>
+                        <system
+                            value="https://www.hl7.org/fhir/valueset-message-reason-encounter.html"/>
+                        <code value="class-enroll"/>
+                        <display value="Enroll in Class"/>
+                    </coding>
+                </reason>
+                <focus>
+                    <!-- ReferralRequest1 -->
+                    <reference value="urn:uuid:1b82e7bd-27bb-49bd-a404-0e5a7d2fa98c"/>
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:1b82e7bd-27bb-49bd-a404-0e5a7d2fa98c"/>
+        <resource>
+            <ReferralRequest xmlns="http://www.hl7.org/fhir">
+                <!-- ReferralRequest1 -->
+                <id value="1b82e7bd-27bb-49bd-a404-0e5a7d2fa98c"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/BSeRReferralRequest"
+                    />
+                </meta>
+                <identifier>
+                    
+                    <value value="71949668"/>
+                </identifier>
+                <status value="active"/>
+                <intent value="order"/>
+                <serviceRequested>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="385804009"/>
+                        <display value="Diabetes care"/>
+                    </coding>
+                </serviceRequested>
+                <subject>
+                    <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                </subject>
+                <authoredOn value="2018-12-11"/>
+                <requester>
+                    <agent>
+                      
+                       <extension url="https://eip-fhir.experimental.aimsplatform.com/hapi-fhir/baseDstu3/StructureDefinition/Practioner-Role">
+                            <valueReference>
+                                <reference
+                                    value="urn:uuid:538791da-3555-460e-9e7f-76d25988a546"/>
+                            </valueReference>
+                        </extension>
+                      
+                        <reference value="urn:uuid:598af951-66e4-4910-a964-7e41533b183c"/>
+                    </agent>
+                </requester>
+                <recipient>
+                	
+                     <extension url="https://eip-fhir.experimental.aimsplatform.com/hapi-fhir/baseDstu3/StructureDefinition/Practioner-Role">
+                        <valueReference>
+                            <reference value="urn:uuid:ffa2bf53-ee09-43a1-b11a-73ed0f1cd73b"
+                            />
+                        </valueReference>
+                    </extension>
+                   
+                    <reference value="urn:uuid:421269ad-abef-49bc-8cac-d3a5d4b00299"/>
+                </recipient>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="15777000"/>
+                        <display value="Prediabetes"/>
+                    </coding>
+                </reasonCode>
+                <supportingInfo>
+                    <!-- ReferralRequestSupportingBundle -->
+                    <reference value="urn:uuid:0bdbb1e5-5016-4291-8249-d16d8d07181f"/>
+                </supportingInfo>
+                <supportingInfo>
+                    <!-- ReferralRequestSupportingBundle -->
+                    <reference value="urn:uuid:29be9d88-0027-4f02-9b2c-f7a27aaaf10b"/>
+                </supportingInfo>
+                <supportingInfo>
+                    <!-- ReferralRequestSupportingBundle -->
+                    <reference value="urn:uuid:22449d51-3d71-49bd-a79a-c1f7557e09ef"/>
+                </supportingInfo>
+            </ReferralRequest>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:ffa2bf53-ee09-43a1-b11a-73ed0f1cd73b"/>
+        <resource>
+            <PractitionerRole xmlns="http://www.hl7.org/fhir">
+                <!--ReferralRecipient-->
+                <id value="ffa2bf53-ee09-43a1-b11a-73ed0f1cd73b"/>
+                <practitioner>
+                    <!-- Practitioner2 -->
+                    <reference value="urn:uuid:421269ad-abef-49bc-8cac-d3a5d4b00299"/>
+                </practitioner>
+                <organization>
+                    <reference value="urn:uuid:f5db0002-3a69-472b-9263-be8d977fdaff"/>
+                </organization>
+                <code>
+                    <coding>
+                        <system value="http://www.hl7.org/fhir/practitioner-role"/>
+                        <code value="doctor"/>
+                        <display value="Doctor"/>
+                    </coding>
+                </code>
+                <location>
+                    <reference value="urn:uuid:17d9e3c9-a6a8-4550-b4db-d6f5a453d983"/>
+                </location>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:538791da-3555-460e-9e7f-76d25988a546"/>
+        <resource>
+            <PractitionerRole xmlns="http://www.hl7.org/fhir">
+                <!-- ReferralInitiator -->
+                <id value="538791da-3555-460e-9e7f-76d25988a546"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/ReferralInitiatorPractitionerRole"
+                    />
+                </meta>
+                <practitioner>
+                    <reference value="urn:uuid:598af951-66e4-4910-a964-7e41533b183c"/>
+                </practitioner>
+                <organization>
+                    <reference value="urn:uuid:e6d1abc8-595f-41ab-a6dc-13a034d3fac7"/>
+                </organization>
+                <code>
+                    <coding>
+                        <system value="http://www.hl7.org/fhir/practitioner-role"/>
+                        <code value="doctor"/>
+                        <display value="Doctor"/>
+                    </coding>
+                </code>
+                <location>
+                    <!-- urn:uuid:ServiceDeliveryLocationInitiator-->
+                    <reference value="urn:uuid:25fa3dbc-dc9e-42c2-b681-0352765645af"/>
+                </location>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:421269ad-abef-49bc-8cac-d3a5d4b00299"/>
+        <resource>
+            <Practitioner xmlns="http://www.hl7.org/fhir">
+                <!-- Practitioner2 -->
+                <id value="421269ad-abef-49bc-8cac-d3a5d4b00299"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/PractitionerPerson"/>
+                </meta>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1972548287"/>
+                </identifier>
+                <name>
+                    <family value="Liyanage"/>
+                    <given value="Udaya"/>
+                    <prefix value="Dr."/>
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(618) 942-2002"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <line value="220 S PARK AVE "/>
+                    <city value="HERRIN"/>
+                    <state value="IL"/>
+                    <postalCode value="62948"/>
+                </address>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:25fa3dbc-dc9e-42c2-b681-0352765645af"/>
+        <resource>
+            <Location xmlns="http://www.hl7.org/fhir">
+                <!-- ServiceDeliveryLocationInitiator -->
+                <id value="25fa3dbc-dc9e-42c2-b681-0352765645af"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/ServiceDeliveryLocation"
+                    />
+                </meta>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1659603009"/>
+                </identifier>
+                <name value="Alliance Of Chicago Therapeutic Services and Supplies"/>
+                <type>
+                    <coding>
+                        <system value="http://www.hl7.org/CodeSystem/organization-type"/>
+                        <code value="prov"/>
+                        <display value="Healthcare Provider"/>
+                    </coding>
+
+                </type>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(909) 427-5000"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <use value="work"/>
+                    <line value="2800 W PETERSON AVE"/>
+                    <city value="Chicago"/>
+                    <state value="IL"/>
+                    <postalCode value="60659"/>
+                    <country value="USA"/>
+                </address>
+            </Location>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:17d9e3c9-a6a8-4550-b4db-d6f5a453d983"/>
+        <resource>
+            <Location xmlns="http://www.hl7.org/fhir">
+                <!-- ServiceDeliveryLocationRecipient-->
+                <id value="17d9e3c9-a6a8-4550-b4db-d6f5a453d983"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/ServiceDeliveryLocation"
+                    />
+                </meta>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1215372123"/>
+                </identifier>
+                <name value="YMCA of Metropolitan Chicago"/>
+                <type>
+                    <coding>
+                        <system value="http://www.hl7.org/CodeSystem/organization-type"/>
+                        <code value="prov"/>
+                        <display value="Healthcare Provider"/>
+                    </coding>
+
+                </type>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(909) 427-5000"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <use value="work"/>
+                    <line value="1030 W Van Buren St"/>
+                    <city value="Chicago"/>
+                    <state value="IL"/>
+                    <postalCode value="60607"/>
+                    <country value="USA"/>
+                </address>
+            </Location>
+        </resource>
+    </entry>
+
+    <entry>
+        <fullUrl value="urn:uuid:598af951-66e4-4910-a964-7e41533b183c"/>
+        <resource>
+            <Practitioner xmlns="http://www.hl7.org/fhir">
+                <!-- Practitioner1 -->
+                <id value="598af951-66e4-4910-a964-7e41533b183c"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/PractitionerPerson"/>
+                </meta>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1063784882"/>
+                </identifier>
+                <name>
+                    <family value="Heard"/>
+                    <given value="Elisa"/>
+                    <prefix value="Dr."/>
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(847) 548-6000"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <line value="18640 West Belvidere Road"/>
+                    <city value="Grayslake"/>
+                    <state value="IL"/>
+                    <postalCode value="60030"/>
+                </address>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+        <resource>
+            <Patient xmlns="http://www.hl7.org/fhir">
+                <id value="cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                <meta>
+                    <profile value="http://www.hl7.org/fhir/us/bser/StructureDefinition/PatientRole"/>
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://www.hl7.org/fhir/v2/0203"/>
+                            <code value="MR"/>
+                            <display value="Medical Record Number"/>
+                        </coding>
+                    </type>
+                    <system value="urn:oid:2.16.840.1.113883.4.3.17"/>
+                    <value value="F255-9215-0094"/>
+                </identifier>
+                <name>
+                    <use value="official"/>
+                    <family value="Beal"/>
+                    <given value="Bradley"/>
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(999) 607-2500"/>
+                </telecom>
+                <gender value="male"/>
+                <birthDate value="1950-03-22"/>
+                <address>
+                    <line value="609 Lizeth Streets"/>
+                    <city value="Chicago"/>
+                    <state value="IL"/>
+                    <postalCode value="60609"/>
+                </address>
+                <communication>
+                    <language>
+                        <coding>
+                            <system value="urn:ietf:bcp:47"/>
+                            <code value="en-US"/>
+                            <display value="English (United States)"/>
+                        </coding>
+                    </language>
+                    <preferred value="true"/>
+                </communication>
+            </Patient>
+        </resource>
+    </entry>
+
+
+    <entry>
+        <fullUrl value="urn:uuid:29be9d88-0027-4f02-9b2c-f7a27aaaf10b"/>
+        <resource>
+            <Observation xmlns="http://www.hl7.org/fhir">
+                <id value="29be9d88-0027-4f02-9b2c-f7a27aaaf10b"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="80913-7"/>
+                        <display value="Highest level of education"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://www.hl7.org/fhir/v3/EducationLevel/vs.html"/>
+                        <code value="BD"/>
+                        <display value="College or baccalaureate degree complete"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:22449d51-3d71-49bd-a79a-c1f7557e09ef"/>
+        <resource>
+            <Observation xmlns="http://www.hl7.org/fhir">
+                <id value="22449d51-3d71-49bd-a79a-c1f7557e09ef"/>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="74165-2"/>
+                        <display value="History of employment status"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://www.hl7.org/fhir/v2-0066"/>
+                        <code value="1"/>
+                        <display value="Full time employed"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:e6d1abc8-595f-41ab-a6dc-13a034d3fac7"/>
+        <resource>
+            <Organization xmlns="http://www.hl7.org/fhir">
+                <id value="e6d1abc8-595f-41ab-a6dc-13a034d3fac7"/>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1659603009"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://www.hl7.org/CodeSystem/organization-type"/>
+                        <code value="prov"/>
+                        <display value="Healthcare Provider"/>
+                    </coding>
+                </type>
+                <name value="Alliance Of Chicago Therapeutic Services and Supplies"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(773)-661-4499"/>
+                </telecom>
+                <address>
+                    <use value="work"/>
+                    <line value="2800 W PETERSON AVE"/>
+                    <city value="Chicago"/>
+                    <state value="IL"/>
+                    <postalCode value="60659"/>
+                    <country value="USA"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:f5db0002-3a69-472b-9263-be8d977fdaff"/>
+        <resource>
+            <Organization xmlns="http://www.hl7.org/fhir">
+                <!-- OrganizationEntity2 -->
+                <id value="f5db0002-3a69-472b-9263-be8d977fdaff"/>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.4.6"/>
+                    <value value="1215372123"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://www.hl7.org/CodeSystem/organization-type"/>
+                        <code value="prov"/>
+                        <display value="Healthcare Provider"/>
+                    </coding>
+                </type>
+                <name value="YMCA of Metropolitan Chicago"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(909) 427-5000"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <use value="work"/>
+                    <line value="1030 W Van Buren St"/>
+                    <city value="Chicago"/>
+                    <state value="IL"/>
+                    <postalCode value="60607"/>
+                    <country value="USA"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:0bdbb1e5-5016-4291-8249-d16d8d07181f"/>
+        <resource>
+            <!-- Support Bundle Starts Here -->
+            <Bundle xmlns="http://www.hl7.org/fhir">
+                <!-- DiabetesRequestSupportBundle -->
+                <id value="0bdbb1e5-5016-4291-8249-d16d8d07181f"/>
+                <meta>
+                    <profile
+                        value="http://www.hl7.org/fhir/us/bser/StructureDefinition/DiabetesRequestSupportBundle"
+                    />
+                </meta>
+                <type value="collection"/>
+                <entry>
+                    <fullUrl value="urn:uuid:f08e2abf-30c5-49b0-9ada-105d52204ca6"/>
+                    <resource>
+                        <Observation xmlns="http://www.hl7.org/fhir">
+                            <!-- BodyMassIndexObservation1 -->
+                            <id value="f08e2abf-30c5-49b0-9ada-105d52204ca6"/>
+                            <meta>
+                                <profile
+                                    value="http://www.hl7.org/fhir/us/bser/StructureDefinition/BodyMassIndexObservation"
+                                />
+                            </meta>
+                            <status value="final"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.hl7.org/fhir/observation-category"/>
+                                    <code value="vital-signs"/>
+                                    <display value="Vital Signs"/>
+                                </coding>
+                            </category>
+                            <code>
+                                <coding>
+                                    <system value="http://loinc.org"/>
+                                    <code value="39156-5"/>
+                                    <display value="Body mass index (BMI) [Ratio]"/>
+                                </coding>
+                            </code>
+                            <subject>
+                                <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                            </subject>
+                            <effectiveDateTime value="2018-12-11"/>
+                            <valueQuantity>
+                                <value value="31.2"/>
+                                <unit value="kg/m2"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="kg/m2"/>
+                            </valueQuantity>
+                        </Observation>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="urn:uuid:6f99e55a-66a7-453f-b78f-e6821dc5e556"/>
+                    <resource>
+                        <Observation xmlns="http://www.hl7.org/fhir">
+                            <!-- BodyWeightObservation1 -->
+                            <id value="6f99e55a-66a7-453f-b78f-e6821dc5e556"/>
+                            <meta>
+                                <profile
+                                    value="http://www.hl7.org/fhir/us/bser/StructureDefinition/BodyWeightObservation"
+                                />
+                            </meta>
+                            <status value="final"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.hl7.org/fhir/observation-category"/>
+                                    <code value="vital-signs"/>
+                                    <display value="Vital Signs"/>
+                                </coding>
+                            </category>
+                            <code>
+                                <coding>
+                                    <system value="http://loinc.org"/>
+                                    <code value="29463-7"/>
+                                    <display value="Body Weight"/>
+                                </coding>
+                            </code>
+                            <subject>
+                                <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                            </subject>
+
+                            <effectiveDateTime value="2018-12-11"/>
+                            <valueQuantity>
+                                <value value="105"/>
+                                <unit value="kg"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="kg"/>
+                            </valueQuantity>
+                        </Observation>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="urn:uuid:cc841086-4f22-4b92-8ab4-4446fc506ebf"/>
+                    <resource>
+                        <Observation xmlns="http://www.hl7.org/fhir">
+                            <!-- HemoglobinA1cObservation1 -->
+                            <id value="cc841086-4f22-4b92-8ab4-4446fc506ebf"/>
+                            <meta>
+                                <profile
+                                    value="http://www.hl7.org/fhir/us/bser/StructureDefinition/A1cObservation"
+                                />
+                            </meta>
+                            <status value="final"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.hl7.org/fhir/observation-category"/>
+                                    <code value="vital-signs"/>
+                                    <display value="Vital Signs"/>
+                                </coding>
+                            </category>
+                            <code>
+                                <coding>
+                                    <system value="http://loinc.org"/>
+                                    <code value="4548-4"/>
+                                    <display value="Hemoglobin A1c/​Hemoglobin.total in Blood"/>
+                                </coding>
+                            </code>
+                            <subject>
+                                <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                            </subject>
+
+                            <effectiveDateTime value="2018-12-11"/>
+                            <valueQuantity>
+                                <value value="128"/>
+                                <unit value="mg/dL"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="mg/dL"/>
+                            </valueQuantity>
+                        </Observation>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="urn:uuid:f4faa626-d79e-4b5b-b898-57f25c9dca0b"/>
+                    <resource>
+
+                        <Observation xmlns="http://www.hl7.org/fhir">
+                            <!--  BodyHeightObservation1 -->
+                            <id value="f4faa626-d79e-4b5b-b898-57f25c9dca0b"/>
+                            <meta>
+                                <profile
+                                    value="http://www.hl7.org/fhir/us/bser/StructureDefinition/BodyHeightObservation"
+                                />
+                            </meta>
+                            <status value="final"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.hl7.org/fhir/observation-category"/>
+                                    <code value="vital-signs"/>
+                                    <display value="Vital Signs"/>
+                                </coding>
+                            </category>
+                            <code>
+                                <coding>
+                                    <system value="http://loinc.org"/>
+                                    <code value="8302-2"/>
+                                    <display value="Body height"/>
+                                </coding>
+                            </code>
+                            <subject>
+                                <reference value="urn:uuid:cec258d7-a76a-4a1d-bc4c-c656b0a5d6f8"/>
+                            </subject>
+                            <effectiveDateTime value="2018-12-11"/>
+                            <valueQuantity>
+                                <value value="182.88"/>
+                                <unit value="cm"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="cm"/>
+                            </valueQuantity>
+                        </Observation>
+                    </resource>
+                </entry>
+            </Bundle>
+        </resource>
+    </entry>
+</Bundle>

@@ -1,36 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://www.hl7.org/fhir">
-  <id value="example-death-date" />
-  <meta>
-    <profile value="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date" />
-  </meta>
-  <extension url="http://www.hl7.org/fhir/us/vrdr/StructureDefinition/Patient-Location">
-    <valueReference>
-      <reference value="Location/example-patient-location" />
-    </valueReference>
-  </extension>
-  <status value="final" />
-  <code>
-    <coding>
-      <system value="urn:oid:2.16.840.1.113883.6.1" />
-      <code value="81956-5" />
-      <display value="Date and time of death" />
-    </coding>
-  </code>
-  <subject>
-    <reference value="Patient/example-decedent" />
-  </subject>
-  <performer>
-    <reference value="Practitioner/example-death-pronouncement-performer" />
-  </performer>
-  <valueDateTime value="2018-04-24T00:00:00+00:00" />
-  <component>
+    <id value="BodyHeightObservation Instance Example"/>
+    <meta>
+        <profile value="http://www.hl7.org/fhir/us/bser/StructureDefinition/BodyHeightObservation"/>
+    </meta>    
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://www.hl7.org/fhir/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>       
+    </category>
     <code>
-      <coding>
-        <system value="urn:oid:2.16.840.1.113883.6.1" />
-        <code value="80616-6" />
-        <display value="Date and time pronounced dead" />
-      </coding>
-    </code>
-    <effectiveDateTime value="2018-04-25T00:00:00+00:00" />
-  </component>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="8302-2"/>
+            <display value="Body height"/>
+        </coding>        
+    </code>    
+    <effectiveDateTime value="2018-09-29"/>
+    <valueQuantity>
+        <value value="111.506"/>
+        <unit value="cm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="cm"/>
+    </valueQuantity>
 </Observation>
