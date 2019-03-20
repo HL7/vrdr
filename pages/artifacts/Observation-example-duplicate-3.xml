@@ -1,32 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Observation xmlns="http://www.hl7.org/fhir">
-    <id value="ArthristisFeedbackObservation Instance Example"/>
-    <meta> 
-        <profile value="http://www.hl7.org/fhir/us/bser/StructureDefinition/ArthristisFeedbackObservation"/> 
-    </meta>
-    <status value="final"/> 
-    <category> 
-        <coding> 
-            <system value="http://www.hl7.org/fhir/observation-category"/> 
-            <code value="therapy"/> 
-            <display value="Therapy"/> 
-        </coding> 
-    </category> 
-    <code> 
-        <coding> 
-            <system value="http://snomed.info/sct"/> 
-            <code value="31007100"/> 
-            <display value="Pain management service"/> 
-        </coding> 
-    </code> 
-    <effectiveDateTime value="2018-09-26"/> 
-    <valueCodeableConcept> 
-        <concept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="18629005" />
-                <display value="Administration of drug"/> 
-            </coding>
-        </concept>
-    </valueCodeableConcept> 
-</Observation> 
+<Observation>
+  <id value="example-decedent-age" />
+  <meta>
+    <profile value="http://www.hl7.org/fhir/us/vrdr/decedentAge" />
+  </meta>
+  <status value="final" />
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.6.1" />
+      <code value="30525-0" />
+      <display value="AGE" />
+    </coding>
+  </code>
+  <subject>
+    <reference value="example-decedent" />
+  </subject>
+  <valueQuantity>
+    <value value="70" />
+    <unit value="a" />
+  </valueQuantity>
+</Observation>
