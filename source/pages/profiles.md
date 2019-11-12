@@ -39,18 +39,6 @@ active: profiles
 <td>{% capture profile-intro %}{% include VRDR-Examiner-Contacted-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-VRDR-Cause-Of-Death-Condition.html">VRDR Cause Of Death Condition</a></td>
-<td>{% capture profile-intro %}{% include VRDR-Cause-Of-Death-Condition-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-VRDR-Cause-of-Death-Pathway.html">VRDR Cause of Death Pathway</a></td>
-<td>{% capture profile-intro %}{% include VRDR-Cause-of-Death-Pathway-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-VRDR-Death-Certificate.html">VRDR Death Certificate</a></td>
-<td>{% capture profile-intro %}{% include VRDR-Death-Certificate-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
-</tr>
-<tr>
 <td><a href="StructureDefinition-VRDR-Death-Certificate-Document.html">VRDR Death Certificate Document</a></td>
 <td>{% capture profile-intro %}{% include VRDR-Death-Certificate-Document-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
@@ -71,12 +59,24 @@ active: profiles
 <td>{% capture profile-intro %}{% include VRDR-Autopsy-Performed-Indicator-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
+<td><a href="StructureDefinition-VRDR-Cause-Of-Death-Condition.html">VRDR_Cause_Of_Death_Condition</a></td>
+<td>{% capture profile-intro %}{% include VRDR-Cause-Of-Death-Condition-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-VRDR-Cause-of-Death-Pathway.html">VRDR_Cause_of_Death_Pathway</a></td>
+<td>{% capture profile-intro %}{% include VRDR-Cause-of-Death-Pathway-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-VRDR-Certifier.html">VRDR_Certifier</a></td>
 <td>{% capture profile-intro %}{% include VRDR-Certifier-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-VRDR-Condition-Contributing-To-Death.html">VRDR_ConditionContributingToDeath</a></td>
 <td>{% capture profile-intro %}{% include VRDR-Condition-Contributing-To-Death-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-VRDR-Death-Certificate.html">VRDR_Death_Certificate</a></td>
+<td>{% capture profile-intro %}{% include VRDR-Death-Certificate-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-VRDR-Death-Certification.html">VRDR_DeathCertification</a></td>
