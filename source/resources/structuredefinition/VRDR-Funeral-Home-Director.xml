@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Funeral-Home-Director"/>
+    <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2019-10-04T19:47:42.000-04:00"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_FuneralServiceLicensee"/>
+    <version value="1.0"/>
+    <name value="VRDR_FuneralServiceLicensee"/>
+    <title value="VRDR Funeral Service Licensee"/>
+    <status value="draft"/>
+    <publisher value="Hi3 Solutions"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <contextType value="resource"/>
+    <context value="PractitionerRole"/>
+    <type value="PractitionerRole"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="PractitionerRole">
+            <path value="PractitionerRole"/>
+        </element>
+        <element id="PractitionerRole.practitioner">
+            <path value="PractitionerRole.practitioner"/>
+            <short value="practitioner"/>
+            <definition value="SHALL contain exactly one [1..1] practitioner (CONF:4393-133)."/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="PractitionerRole.practitioner.reference">
+            <path value="PractitionerRole.practitioner.reference"/>
+            <short value="reference"/>
+            <definition value="This practitioner SHALL contain exactly one [1..1] reference=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician&quot; (CONF:4393-138)."/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"/>
+        </element>
+        <element id="PractitionerRole.organization">
+            <path value="PractitionerRole.organization"/>
+            <short value="organization"/>
+            <definition value="SHALL contain exactly one [1..1] organization (CONF:4393-134)."/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="PractitionerRole.organization.reference">
+            <path value="PractitionerRole.organization.reference"/>
+            <short value="reference"/>
+            <definition value="This organization SHALL contain exactly one [1..1] reference=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home&quot; (CONF:4393-139)."/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"/>
+        </element>
+    </differential>
+</StructureDefinition>

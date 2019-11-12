@@ -1,0 +1,1 @@
+The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is LE one day then unit shall be minutes, when age is LE one year then unit shall be days, else unit shall be years.

@@ -1,27 +1,251 @@
 {
-  "source": "vitalrecordsdeathreporting.xml",
-  "version": "3.0.2",
-  "fixed-business-version": "0.1.0",
-  "license": "CC0-1.0",
-  "npm-name": "hl7.fhir.us.vrdr",
-  "canonicalBase": "http://hl7.org/fhir/us/vrdr",
-  "paths": {
-    "resources": "resources",
-    "pages": "pages",
-    "temp": "temp",
-    "qa": "qa",
-    "output": "output",
-    "specification": "http://hl7.org/fhir/",
-    "history" : "http://hl7.org/fhir/us/vrdr/history.cfml"
-  },
-  "dependencyList": [
-    {
-      "version": "2.0.0",
-      "name": "uscore",
-      "location": "http://hl7.org/fhir/us/core"
-    }
-  ],
-  "resources": {
-    "*": "*"
-  }
+	"tool": "jekyll",
+	"source": "implementationguide/vrdr.xml",
+	"npm-name": "hl7.fhir.us.vrdr",
+	"license": "CC0-1.0",
+	"paths": {
+		"qa": "generated_output/qa",
+		"temp": "generated_output/temp",
+		"output": "output",
+		"txCache": "generated_output/txCache",
+		"specification": "http://hl7.org/fhir/STU3",
+		"pages": [
+			"framework",
+			"source/pages"
+		],
+		"resources": [
+			"source/resources"
+		]
+	},
+	"pages": [
+		"pages"
+	],
+	"version": "3.0.2",
+	"extension-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"allowed-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"sct-edition": "http://snomed.info/sct/731000124108",
+	"extraTemplates": [
+		"mappings"
+	],
+	"canonicalBase": "http://hl7.org/fhir/us/vrdr",
+	"defaults": {
+		"Location": {
+			"template-base": "ex.html"
+		},
+		"ProcedureRequest": {
+			"template-base": "ex.html"
+		},
+		"Organization": {
+			"template-base": "ex.html"
+		},
+		"MedicationStatement": {
+			"template-base": "ex.html"
+		},
+		"SearchParameter": {
+			"template-base": "base.html"
+		},
+		"StructureDefinition": {
+			"template-mappings": "sd-mappings.html",
+			"template-base": "sd.html",
+			"template-defns": "sd-definitions.html",
+			"mappings": "StructureDefinition-{{[id]}}-mappings.html"
+		},
+		"Immunization": {
+			"template-base": "ex.html"
+		},
+		"Patient": {
+			"template-base": "ex.html"
+		},
+		"StructureMap": {
+			"content": false,
+			"script": false,
+			"template-base": "ex.html",
+			"profiles": false
+		},
+		"ConceptMap": {
+			"template-base": "base.html"
+		},
+		"Practitioner": {
+			"template-base": "ex.html"
+		},
+		"OperationDefinition": {
+			"template-base": "base.html"
+		},
+		"CodeSystem": {
+			"template-base": "base.html"
+		},
+		"Communication": {
+			"template-base": "ex.html"
+		},
+		"Any": {
+			"template-format": "format.html",
+			"template-base": "base.html"
+		},
+		"PractitionerRole": {
+			"template-base": "ex.html"
+		},
+		"ValueSet": {
+			"template-base": "base.html"
+		},
+		"CapabilityStatement": {
+			"template-base": "base.html"
+		},
+		"Observation": {
+			"template-base": "ex.html"
+		}
+	},
+	"resources": {
+		"StructureDefinition/VRDR-Decedent": {
+			"base": "StructureDefinition-VRDR-Decedent.html",
+			"defns": "StructureDefinition-VRDR-Decedent-definitions.html"
+		},
+		"StructureDefinition/VRDR-Autopsy-Performed-Indicator": {
+			"base": "StructureDefinition-VRDR-Autopsy-Performed-Indicator.html",
+			"defns": "StructureDefinition-VRDR-Autopsy-Performed-Indicator-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Father": {
+			"base": "StructureDefinition-VRDR-Decedent-Father.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Father-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Mother": {
+			"base": "StructureDefinition-VRDR-Decedent-Mother.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Mother-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Education-Level": {
+			"base": "StructureDefinition-VRDR-Decedent-Education-Level.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Education-Level-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Disposition-Method": {
+			"base": "StructureDefinition-VRDR-Decedent-Disposition-Method.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Disposition-Method-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Age": {
+			"base": "StructureDefinition-VRDR-Decedent-Age.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Age-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Employment-History": {
+			"base": "StructureDefinition-VRDR-Decedent-Employment-History.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Employment-History-definitions.html"
+		},
+		"StructureDefinition/VRDR-Disposition-Location": {
+			"base": "StructureDefinition-VRDR-Disposition-Location.html",
+			"defns": "StructureDefinition-VRDR-Disposition-Location-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Pregnancy": {
+			"base": "StructureDefinition-VRDR-Decedent-Pregnancy.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Pregnancy-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Transportation-Role": {
+			"base": "StructureDefinition-VRDR-Decedent-Transportation-Role.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Transportation-Role-definitions.html"
+		},
+		"StructureDefinition/VRDR-Decedent-Spouse": {
+			"base": "StructureDefinition-VRDR-Decedent-Spouse.html",
+			"defns": "StructureDefinition-VRDR-Decedent-Spouse-definitions.html"
+		},
+		"StructureDefinition/VRDR-Examiner-Contacted": {
+			"base": "StructureDefinition-VRDR-Examiner-Contacted.html",
+			"defns": "StructureDefinition-VRDR-Examiner-Contacted-definitions.html"
+		},
+		"StructureDefinition/patient-birthPlace": {
+			"base": "StructureDefinition-patient-birthPlace.html",
+			"defns": "StructureDefinition-patient-birthPlace-definitions.html"
+		},
+		"StructureDefinition/VRDR-Mortician": {
+			"base": "StructureDefinition-VRDR-Mortician.html",
+			"defns": "StructureDefinition-VRDR-Mortician-definitions.html"
+		},
+		"StructureDefinition/VRDR-Manner-of-Death": {
+			"base": "StructureDefinition-VRDR-Manner-of-Death.html",
+			"defns": "StructureDefinition-VRDR-Manner-of-Death-definitions.html"
+		},
+		"StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death": {
+			"base": "StructureDefinition-VRDR-Tobacco-Use-Contributed-To-Death.html",
+			"defns": "StructureDefinition-VRDR-Tobacco-Use-Contributed-To-Death-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Pronouncement-Performer": {
+			"base": "StructureDefinition-VRDR-Death-Pronouncement-Performer.html",
+			"defns": "StructureDefinition-VRDR-Death-Pronouncement-Performer-definitions.html"
+		},
+		"StructureDefinition/VRDR-Interested-Party": {
+			"base": "StructureDefinition-VRDR-Interested-Party.html",
+			"defns": "StructureDefinition-VRDR-Interested-Party-definitions.html"
+		},
+		"StructureDefinition/VRDR-Injury-Location": {
+			"base": "StructureDefinition-VRDR-Injury-Location.html",
+			"defns": "StructureDefinition-VRDR-Injury-Location-definitions.html"
+		},
+		"StructureDefinition/VRDR-Funeral-Home-Director": {
+			"base": "StructureDefinition-VRDR-Funeral-Home-Director.html",
+			"defns": "StructureDefinition-VRDR-Funeral-Home-Director-definitions.html"
+		},
+		"StructureDefinition/VRDR-Funeral-Home": {
+			"base": "StructureDefinition-VRDR-Funeral-Home.html",
+			"defns": "StructureDefinition-VRDR-Funeral-Home-definitions.html"
+		},
+		"StructureDefinition/VRDR-Injury-Incident": {
+			"base": "StructureDefinition-VRDR-Injury-Incident.html",
+			"defns": "StructureDefinition-VRDR-Injury-Incident-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Certificate-Document": {
+			"base": "StructureDefinition-VRDR-Death-Certificate-Document.html",
+			"defns": "StructureDefinition-VRDR-Death-Certificate-Document-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Date": {
+			"base": "StructureDefinition-VRDR-Death-Date.html",
+			"defns": "StructureDefinition-VRDR-Death-Date-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Certification": {
+			"base": "StructureDefinition-VRDR-Death-Certification.html",
+			"defns": "StructureDefinition-VRDR-Death-Certification-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Location": {
+			"base": "StructureDefinition-VRDR-Death-Location.html",
+			"defns": "StructureDefinition-VRDR-Death-Location-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Certificate": {
+			"base": "StructureDefinition-VRDR-Death-Certificate.html",
+			"defns": "StructureDefinition-VRDR-Death-Certificate-definitions.html"
+		},
+		"StructureDefinition/VRDR-Death-Certificate-Reference": {
+			"base": "StructureDefinition-VRDR-Death-Certificate-Reference.html",
+			"defns": "StructureDefinition-VRDR-Death-Certificate-Reference-definitions.html"
+		},
+		"StructureDefinition/VRDR-Birth-Record-Identifier": {
+			"base": "StructureDefinition-VRDR-Birth-Record-Identifier.html",
+			"defns": "StructureDefinition-VRDR-Birth-Record-Identifier-definitions.html"
+		},
+		"StructureDefinition/VRDR-Cause-of-Death-Pathway": {
+			"base": "StructureDefinition-VRDR-Cause-of-Death-Pathway.html",
+			"defns": "StructureDefinition-VRDR-Cause-of-Death-Pathway-definitions.html"
+		},
+		"StructureDefinition/VRDR-Cause-Of-Death-Condition": {
+			"base": "StructureDefinition-VRDR-Cause-Of-Death-Condition.html",
+			"defns": "StructureDefinition-VRDR-Cause-Of-Death-Condition-definitions.html"
+		},
+		"StructureDefinition/VRDR-Certifier": {
+			"base": "StructureDefinition-VRDR-Certifier.html",
+			"defns": "StructureDefinition-VRDR-Certifier-definitions.html"
+		},
+		"StructureDefinition/VRDR-Condition-Contributing-To-Death": {
+			"base": "StructureDefinition-VRDR-Condition-Contributing-To-Death.html",
+			"defns": "StructureDefinition-VRDR-Condition-Contributing-To-Death-definitions.html"
+		},
+		"Media/VRDRAutopsyPerformedIndicator": {
+			"base": "Media-VRDRAutopsyPerformedIndicator.html",
+			"defns": "Media-VRDRAutopsyPerformedIndicator-definitions.html"
+		}
+	},
+	"fixed-business-version": "1.0",
+	"dependencyList": [
+		{
+			"location": "http://hl7.org/fhir/us/core",
+			"name": "uscore",
+			"version": "2.0.0"
+		}
+	]
 }
