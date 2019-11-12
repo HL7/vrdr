@@ -3,12 +3,12 @@
     xmlns="http://hl7.org/fhir">
     <id value="Within-City-Limits-Indicator"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2019-08-13T20:02:50.000-04:00"/>
+        <versionId value="5"/>
+        <lastUpdated value="2019-11-12T03:54:40.000-05:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
     <version value="1.0"/>
-    <name value="Within City Limits Indicator"/>
+    <name value="Within_City_Limits_Indicator"/>
     <status value="draft"/>
     <publisher value="Hi3 Solutions"/>
     <contact>
@@ -24,6 +24,7 @@
             <use value="work"/>
         </telecom>
     </contact>
+    <fhirVersion value="3.0.2"/>
     <kind value="complex-type"/>
     <abstract value="false"/>
     <contextType value="resource"/>
@@ -35,32 +36,22 @@
         <element id="Extension">
             <path value="Extension"/>
         </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <type>
+                <code value="boolean"/>
+            </type>
+        </element>
         <element id="Extension.@url">
             <path value="Extension.url"/>
             <short value="@url"/>
             <definition value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator&quot; (CONF:4393-102)."/>
             <min value="1"/>
             <max value="1"/>
-        </element>
-        <element id="Extension.value[x]">
-            <path value="Extension.value[x]"/>
-            <slicing>
-                <discriminator>
-                    <type value="type"/>
-                    <path value="$this"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <short value="value[x]"/>
-            <definition value="SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-103)"/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element id="Extension.value[x]:valueBoolean">
-            <path value="Extension.valueBoolean"/>
-            <sliceName value="valueBoolean"/>
-            <short value="valueBoolean"/>
-            <definition value="valueBoolean (CONF:4393-104)"/>
         </element>
     </differential>
 </StructureDefinition>
