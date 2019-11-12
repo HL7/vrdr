@@ -176,6 +176,10 @@ active: profiles
 <td><a href="StructureDefinition-patient-birthPlace.html">birthPlace</a></td>
 <td>{% capture profile-intro %}{% include patient-birthPlace-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
+<tr>
+<td><a href="StructureDefinition-Within-City-Limits-Indicator.html">Within City Limits Indicator</a></td>
+<td>{% capture profile-intro %}{% include Within-City-Limits-Indicator-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
 </tbody>
 </table>
 

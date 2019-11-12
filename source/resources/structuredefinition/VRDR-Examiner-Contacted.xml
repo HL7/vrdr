@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Examiner-Contacted"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2019-11-12T03:12:59.000-05:00"/>
+        <versionId value="9"/>
+        <lastUpdated value="2019-11-12T03:38:08.000-05:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"/>
     <version value="1.0"/>
@@ -96,23 +96,11 @@
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
-            <slicing>
-                <discriminator>
-                    <type value="type"/>
-                    <path value="$this"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <short value="value[x]"/>
-            <definition value="SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-111)"/>
             <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element id="Observation.value[x]:valueBoolean">
-            <path value="Observation.valueBoolean"/>
-            <sliceName value="valueBoolean"/>
-            <short value="valueBoolean"/>
-            <definition value="valueBoolean (CONF:4393-117)"/>
+            <type>
+                <code value="boolean"/>
+            </type>
+            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>
