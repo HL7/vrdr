@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Decedent-Education-Level"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2020-05-10T17:06:52.631+00:00"/>
+        <source value="#IWMw0tFjJN0VP5XT"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_DecedentEducationLevel"/>
+    <version value="1.0"/>
+    <name value="DecedentEducationLevel"/>
+    <title value="VRDR Decedent Education Level"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-10"/>
+    <publisher value="Health Level Seven"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="6266444491"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Observation"/>
+    </context>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+        </element>
+        <element id="Observation.status">
+            <path value="Observation.status"/>
+            <short value="status"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <fixedString value="final"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <short value="code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="80913-7"/>
+                    <display value="Highest level of education"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <short value="subject"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <short value="value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_DecedentEducationLevel_NCHS"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7385"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

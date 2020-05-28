@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Disposition-Location"/>
+    <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2020-05-10T21:54:05.821+00:00"/>
+        <source value="#k2EdpsV911cxQ9CZ"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"/>
+    <version value="1.0"/>
+    <name value="DispositionLocation"/>
+    <title value="VRDR Disposition Location"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-10"/>
+    <publisher value="Health Level Seven"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Location"/>
+    </context>
+    <type value="Location"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Location">
+            <path value="Location"/>
+        </element>
+        <element id="Location.name">
+            <path value="Location.name"/>
+            <short value="name"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Location.description">
+            <path value="Location.description"/>
+            <short value="description"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Location.type">
+            <path value="Location.type"/>
+            <short value="type"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Location.type.coding">
+            <path value="Location.type.coding"/>
+            <binding>
+                <strength value="required"/>
+                <description value="v3.ServiceDeliveryLocationRoleType"/>
+                <valueSet value="http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"/>
+            </binding>
+        </element>
+        <element id="Location.address">
+            <path value="Location.address"/>
+            <short value="address"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Location.physicalType">
+            <path value="Location.physicalType"/>
+            <short value="physicalType"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Location.physicalType.coding">
+            <path value="Location.physicalType.coding"/>
+            <binding>
+                <strength value="required"/>
+                <description value="LocationType"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/location-physical-type"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="vrdr"/>
+    <meta>
+        <versionId value="140"/>
+        <lastUpdated value="2020-05-27T01:07:39.797+00:00"/>
+        <source value="#uIAYUFEoM1hIOFdz"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
+    <version value="1.0"/>
+    <name value="VRDR"/>
+    <title value="Vital Records Mortality and Morbidity Reporting FHIR Implementation Guide"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Health Level Seven International"/>
+    <contact>
+        <name value="HL7 International - Public Health"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov"/>
+    </contact>
+    <contact>
+        <name value="AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"/>
+    </contact>
+    <description value="The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).&#xA;&#xA;Bidirectional exchange of mortality data between PHA Vital Records offices and NCHS is essential to effective public health surveillance and emergency response efforts. Automation of the reporting process adds efficiencies that dramatically improves the efficacy of event response, data analysis, and evidence-based measurable prevention of the causes of death.&#xA;&#xA;The VRDR FHIR IG will provide guidance for the use of standard FHIR resources as a conduit for data required by vital records death reporting. The use of FHIR as a platform for automation of vital records death reporting is expected to improve existing automation by enabling wide-scale adoption and leveraging the potential of electronic health records and clinical decision support systems.&#xA;&#xA;The VRDR FHIR IG will lay a foundation for expansion of automated standards-driven information exchange to include tributary flows of information from entities such as physicians, medical examiners, coroners, funeral directors, and family members to public health agencies and between public health agencies and secondary users of detailed mortality data and aggregate statistics."/>
+    <packageId value="hl7.fhir.us.vrdr"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="3.1.0"/>
+    </dependsOn>
+    <definition>
+        <grouping id="default">
+            <name value="default"/>
+        </grouping>
+        <grouping id="DecedentDemographics">
+            <name value="A. Decedent Demographics"/>
+            <description value="Decedent Demographics is a profile group comprised of profiles containing decedent demographic data. Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."/>
+        </grouping>
+        <grouping id="DeathInvestigation">
+            <name value="B. Death Investigation"/>
+            <description value="Death Investigation is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."/>
+        </grouping>
+        <grouping id="DeathCertification">
+            <name value="C. Death Certification"/>
+            <description value="Death Certification is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner)."/>
+        </grouping>
+        <grouping id="DecedentDisposition">
+            <name value="D. Decedent Disposition"/>
+            <description value="Decedent Disposition is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."/>
+        </grouping>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent"/>
+                <display value="Decedent"/>
+            </reference>
+            <name value="Decedent"/>
+            <description value="The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile. "/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Age"/>
+                <display value="Decedent's Age"/>
+            </reference>
+            <name value="Decedent's age"/>
+            <description value="The Decedent Age resource represents the decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. The VRDR Decedent Age profile builds upon the FHIR R4 Observation Resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Education-Level"/>
+                <display value="Decedent's Education Level"/>
+            </reference>
+            <name value="Decedent's Education Level"/>
+            <description value="The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Father"/>
+                <display value="Decedent's Father"/>
+            </reference>
+            <name value="Decedent's Father"/>
+            <description value="The Decedent's Father represents the paternal parent of the decedent. The VRDR Decedent Father profile builds upon the FHIR R4 Related Person resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Examiner-Contacted"/>
+                <display value="Examiner Contacted"/>
+            </reference>
+            <name value="Examiner Contacted"/>
+            <description value="The Examiner Contacted resource represents an indication as to whether a medical examiner (or coroner) was contacted to conduct an investigation and certify the causes of death. The VRDR Examiner Contacted profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Disposition-Location"/>
+                <display value="Disposition Location"/>
+            </reference>
+            <name value="Disposition Location"/>
+            <description value="The Disposition Location resource represents the place/location where the decedent's remains were disposed of. The VRDR Disposition Location profile builds upon the FHIR R4 Location resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Mother"/>
+                <display value="Decedent's Mother"/>
+            </reference>
+            <name value="Decedent's Mother"/>
+            <description value="The Decedent's Mother resource represents the maternal parent of the decedent. The VRDR Decedent Mother profile builds upon the FHIR R4 Related Person resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Pregnancy"/>
+                <display value="Decedent Pregnancy"/>
+            </reference>
+            <name value="Decedent Pregnancy"/>
+            <description value="The Decedent Pregnancy resource provides an indication of the pregnancy status of the decedent. The VRDR Decedent Pregnancy profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Spouse"/>
+                <display value="Decedent Spouse"/>
+            </reference>
+            <name value="Decedent Spouse"/>
+            <description value="The Decedent Spouse resource represents the surviving spouse of the decedent. The VRDR Decedent Spouse profile builds upon the FHIR R4 Related Person resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Transportation-Role"/>
+                <display value="Decedent Transportation Role"/>
+            </reference>
+            <name value="Decedent Transportation Role"/>
+            <description value="The Decedent Transportation Role resource is used to specify the role of the decedent (e.g. driver, passenger, pedestrian, other) in a transportation-related injury. The VRDR Decedent Transportation Role profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Funeral-Home"/>
+                <display value="Funeral Home"/>
+            </reference>
+            <name value="Funeral Home"/>
+            <description value="The Funeral Home resource represents the business entity conducting ceremony connected with the final disposition of the decedent's remains, such as a burial or cremation, with the attendant observances. The VRDR Funeral Home profile builds upon the FHIR R4 Organization resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Funeral-Home-Director"/>
+                <display value="Funeral Service Licensee"/>
+            </reference>
+            <name value="Funeral Service Licensee"/>
+            <description value="The Funeral Service Licensee resource represents the person that is the primary administrative authority over the funeral home providing funeral services to the decedent. The VRDR Funeral Home Director profile builds upon the FHIR R4 Practitioner Role resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Interested-Party"/>
+                <display value="Interested Party"/>
+            </reference>
+            <name value="Interested Party"/>
+            <description value="The Interested Party resource represents a business entity that assigns one or more identifiers to a death certificate document. Assigning authorities for death certificate identifiers include coroners and medical examiners, local and state public health agencies, and the national center for health statistics. The VRDR Interested Party profile builds upon the FHIR R4 Organization resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Manner-of-Death"/>
+                <display value="Manner of Death"/>
+            </reference>
+            <name value="Manner of Death"/>
+            <description value="The Manner of Death resource represents the conclusion arrived at upon completion of death investigation regarding the manner of death (eg., natural, homicide, suicide, accident, ...). The VRDR Manner of Death profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Mortician"/>
+                <display value="Mortician"/>
+            </reference>
+            <name value="Mortician"/>
+            <description value="The Mortician resource represents the professional practitioner preceding over the funeral services involved in the disposition of the decedent's remains. The VRDR Mortician profile builds upon the FHIR R4 Practitioner resource. "/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"/>
+                <display value="Tobacco Use Contributed To Death"/>
+            </reference>
+            <name value="Tobacco Use Contributed To Death"/>
+            <description value="The Tobacco Use Contributed To Death resource represents the conclusion arrived at during death investigation regarding the extent to which tobacco use contributed to the death of the decedent. The VRDR Tobacco Use Contributed To Death profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Injury-Location"/>
+                <display value="Injury Location"/>
+            </reference>
+            <name value="Injury Location"/>
+            <description value="The Injury Location resource represents the general place (such as restaurant, vacant lot, or home) where a decedent's death-related injury occurred. The VRDR Injury Location profile builds upon the FHIR R4 Location resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
+                <display value="Autopsy Performed Indicator"/>
+            </reference>
+            <name value="Autopsy Performed Indicator"/>
+            <description value="The Autopsy Performed Indicator profile provides an indication as to whether an autopsy was performed and if so, indicates whether the results of the autopsy are available. The Autopsy Performed Indicator profile builds upon the FHIR Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
+                <display value="Cause Of Death Condition"/>
+            </reference>
+            <name value="Cause Of Death Condition"/>
+            <description value="The Cause Of Death Condition resource represents a clinically relevant condition --disease, injury, or complication-- in the causal pathway of events that directly caused the death. The VRDR Cause of Death Condition profile builds upon the FHIR R4 Condition resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Certifier"/>
+                <display value="Certifier"/>
+            </reference>
+            <name value="Certifier"/>
+            <description value="The Certifier resource represents the practitioner (coroner, medical examiner, or physician) who certifies death, the manner of death, and the causes of death. The VRDR Cerfifier profile builds upon the FHIR R4 Practitioner resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
+                <display value="Condition Contributing To Death"/>
+            </reference>
+            <name value="Condition Contributing To Death"/>
+            <description value="The Condition Contributing To Death resource represents a significant condition contributing to death but not resulting in the underlying cause. The VRDR Condition Contributing To Death profile builds upon the FHIR R4 Condition resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Certificate"/>
+                <display value="Death Certificate"/>
+            </reference>
+            <name value="Death Certificate"/>
+            <description value="The Death Certificate resource represents the body of the death certificate document that lays in order to the bundle of resources comprising the death certificate document. The VRDR Death Certificate profile builds upon the FHIR R4 Composition resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Certificate-Document"/>
+                <display value="Death Certificate Document"/>
+            </reference>
+            <name value="Death Certificate Document"/>
+            <description value="The Death Certificate Document resource is the bundle of resources that comprise the death certificate. The VRDR Death Certificate Document profile builds upon the FHIR R4 Bundle resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Certification"/>
+                <display value="Death Certification"/>
+            </reference>
+            <name value="Death Certification"/>
+            <description value="The Death Certification resource represents the act of certifying death. The VRDR Death Certification profile builds upon the FHIR R4 Procedure resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Location"/>
+                <display value="Death Location"/>
+            </reference>
+            <name value="Death Location"/>
+            <description value="The Death Location resource represents the decedent's place of death. The VRDR Death Location profile builds upon the FHIR R4 Location resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Pronouncement-Performer"/>
+                <display value="Death Pronouncement Performer"/>
+            </reference>
+            <name value="Death Pronouncement Performer"/>
+            <description value="The Death Pronouncement Performer resource represents the health practitioner that declared the decedent dead. The VRDR Death Pronouncement Performer profile builds upon the FHIR R4 Practitioner resouce."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Within-City-Limits-Indicator"/>
+                <display value="Within City Limits Indicator"/>
+            </reference>
+            <name value="Within City Limits Indicator"/>
+            <description value="The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-InjuryIncident"/>
+                <display value="Injury Incident"/>
+            </reference>
+            <name value="Injury Incident"/>
+            <description value="The Injury Incident resource represents observations (time, location, and work or transportation-related), discovered regarding an injury event during a death investigation. The VRDR Injury Incident profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-BirthRecordIdentifier"/>
+                <display value="Birth Record Identifier"/>
+            </reference>
+            <name value="Birth Record Identifier"/>
+            <description value="The Birth Record Identifier resource is a reference to a birth record used as a linkage. The VRDR Birth Record Identifier profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Cause-of-Death-Pathway"/>
+                <display value="Cause of Death Pathway"/>
+            </reference>
+            <name value="Cause of Death Pathway"/>
+            <description value="The Cause of Death Pathway resource documents the ordered chain conditions in the causal pathway chain of events with a causal relationship to the decedent's death. The VRDR Cause of Death Pathway profile builds upon the FHIR R4 List resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Certificate-Reference"/>
+                <display value="Death Certificate Reference"/>
+            </reference>
+            <name value="Death Certificate Reference"/>
+            <description value="The Death Certificate Reference resource enables interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathCertification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Disposition-Method"/>
+                <display value="Decedent Disposition Method"/>
+            </reference>
+            <name value="Decedent Disposition Method"/>
+            <description value="The Decedent Disposition Method resource specifies the means by which the decedent's remains were disposed of.  The VRDR Decedent Disposition Method profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Employment-History"/>
+                <display value="Decedent Employment History"/>
+            </reference>
+            <name value="Decedent Employment History"/>
+            <description value="The Decedent Employment History resource provides a historical record of the decedent's employment occupation, industry, and military service.  The VRDR Decedent Employment History profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/f13a8bdb-a95d-4b3b-a450-5dc29c6fd1aa"/>
+                <display value="Autopsy Performed Indicator Example"/>
+            </reference>
+            <name value="Autopsy Performed Indicator Example"/>
+            <description value="An instance example of the VRDR Autopsy Performed Indicator resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/b3669e49-41f5-4638-9092-7ea74bd77939"/>
+                <display value="Birth Record Identifier Example"/>
+            </reference>
+            <name value="Birth Record Identifier Example"/>
+            <description value="An instance example of the Birth Record Identifier resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/394dcc12-64f4-4377-a7bb-1591d8563b85"/>
+                <display value="Cause of Death Condition Example"/>
+            </reference>
+            <name value="Cause of Death Condition Example"/>
+            <description value="An instance example of the VRDR Cause of Death Condition Example resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="List/7d0ec2b7-cd1b-4cfd-8ab4-d0469cb793bd"/>
+                <display value="Cause Of Death Pathway Example"/>
+            </reference>
+            <name value="Cause Of Death Pathway Example"/>
+            <description value="An instance example of the VRDR Cause Of Death Pathway resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/44f71ba9-2179-4020-81c8-9a204cd52150"/>
+                <display value="Certifier Example"/>
+            </reference>
+            <name value="Certifier Example"/>
+            <description value="An instance example of the VRDR Certifier resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/84fd3432-b164-445b-80de-5e87b32f1e49"/>
+                <display value="Condition Contributing to Death Example"/>
+            </reference>
+            <name value="Condition Contributing to Death Example"/>
+            <description value="An instance example of the VRDR Condition Contributing to Death resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/dfa7bb28-0253-488c-8ea1-bbf7030177dc"/>
+                <display value="Death Certificate Example"/>
+            </reference>
+            <name value="Death Certificate Example"/>
+            <description value="An instance example of the VRDR Death Certificate resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/a7fa4757-e2fa-4bdd-9702-8652382fb45a"/>
+                <display value="Death Certification Example"/>
+            </reference>
+            <name value="Death Certification Example"/>
+            <description value="An instance example of the VRDR Death Certification resource profile."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/4cfda0d1-4c84-47c7-b6eb-19a1697916ca"/>
+                <display value="Death Date Example"/>
+            </reference>
+            <name value="Death Date Example"/>
+            <description value="An instance example of the VRDR Death Date resource profile."/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Death-Date"/>
+                <display value="Death Date"/>
+            </reference>
+            <name value="Death Date"/>
+            <description value="The Death Date resource is used to convey the actual or presumed date of death for the decedent. If the date of death unable to be determined then the date the decedent's remains were discovered serves as a surrogate for the death date. The VRDR Death Date resource profile builds upon the FHIR R4 Observation resource. The date the decedent was pronounced dead is included as a component of the death date observation."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DeathInvestigation"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/334293c2-5fb6-4afb-9a32-334dda053bc7"/></reference>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/example-autopsy-performed-indicator"/></reference>
+            <exampleBoolean value="true"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="IG Home Page"/>
+            <generation value="markdown"/>
+            <page>
+                <nameUrl value="VitalRecordsMortalityandMorbidityReportingFHIRImplementationGuideSpecification.html"/>
+                <title value="Vital Records Mortality and Morbidity Reporting FHIR Implementation Guide Specification"/>
+                <generation value="markdown"/>
+                <page>
+                    <nameUrl value="ProjectTeam.html"/>
+                    <title value="Project Team"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="Acknowledgements.html"/>
+                    <title value="Acknowledgements"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="Background.html"/>
+                    <title value="Background"/>
+                    <generation value="markdown"/>
+                    <page>
+                        <nameUrl value="DeathReportingDataflow.html"/>
+                        <title value="Death Reporting Dataflow"/>
+                        <generation value="markdown"/>
+                    </page>
+                    <page>
+                        <nameUrl value="ScopeoftheVRDRFHIRIG.html"/>
+                        <title value="Scope of the VRDR FHIR IG"/>
+                        <generation value="markdown"/>
+                    </page>
+                </page>
+                <page>
+                    <nameUrl value="Profiles.html"/>
+                    <title value="Profiles"/>
+                    <generation value="markdown"/>
+                    <page>
+                        <nameUrl value="VRDRFHIRIGUMLDataModel.html"/>
+                        <title value="VRDR FHIR IG UML Data Model"/>
+                        <generation value="markdown"/>
+                    </page>
+                    <page>
+                        <nameUrl value="DecedentDemographicsResourceProfiles.html"/>
+                        <title value="Decedent Demographics Resource Profiles"/>
+                        <generation value="markdown"/>
+                    </page>
+                    <page>
+                        <nameUrl value="DeathInvestigationResourceProfiles.html"/>
+                        <title value="Death Investigation Resource Profiles"/>
+                        <generation value="markdown"/>
+                    </page>
+                    <page>
+                        <nameUrl value="DeathCertificationResourceProfiles.html"/>
+                        <title value="Death Certification Resource Profiles"/>
+                        <generation value="markdown"/>
+                    </page>
+                    <page>
+                        <nameUrl value="DecedentDispositionResourceProfiles.html"/>
+                        <title value="Decedent Disposition Resource Profiles"/>
+                        <generation value="markdown"/>
+                    </page>
+                </page>
+                <page>
+                    <nameUrl value="TerminologyBindings.html"/>
+                    <title value="Terminology Bindings"/>
+                    <generation value="markdown"/>
+                </page>
+            </page>
+        </page>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Death-Date"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2020-05-26T02:27:47.486+00:00"/>
+        <source value="#8klH5tkesk8gLW1L"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"/>
+    <name value="VRDR_DeathDate"/>
+    <title value="VRDR_DeathDate"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+        </element>
+        <element id="Observation.extension">
+            <path value="Observation.extension"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.extension.value[x]">
+            <path value="Observation.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"/>
+            </type>
+        </element>
+        <element id="Observation.status">
+            <path value="Observation.status"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCode value="final"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="81956-5"/>
+                    <display value="Date and time of death"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Observation.effective[x]">
+            <path value="Observation.effective[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="Observation.performer">
+            <path value="Observation.performer"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"/>
+            </type>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="Observation.note">
+            <path value="Observation.note"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <min value="0"/>
+            <max value="1"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="414135002"/>
+                    <display value="Estimated"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component.code">
+            <path value="Observation.component.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="80616-6"/>
+                    <display value="Date and time pronounced dead"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.component.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

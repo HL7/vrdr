@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Cause-Of-Death-Condition"/>
+    <meta>
+        <versionId value="11"/>
+        <lastUpdated value="2020-05-21T12:42:03.421+00:00"/>
+        <source value="#szJsqKfglua9mBeZ"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
+    <version value="1.0"/>
+    <name value="CauseOfDeathCondition"/>
+    <title value="VRDR Cause Of Death Condition"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-08"/>
+    <publisher value="Health Level Seven"/>
+    <contact>
+        <name value="Salimah Shakir"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="8184306686"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="salimah@shakirconsulting.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Condition"/>
+    </context>
+    <type value="Condition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Condition">
+            <path value="Condition"/>
+        </element>
+        <element id="Condition.id">
+            <path value="Condition.id"/>
+            <short value="id"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Condition.code">
+            <path value="Condition.code"/>
+            <label value="CauseOfDeathCondition.code"/>
+            <short value="code"/>
+            <comment value="The CauseOfDeathCondition.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component."/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="Condition.code.coding">
+            <path value="Condition.code.coding"/>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Condition.code.coding.code">
+            <path value="Condition.code.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_CauseOfDeath_ICD-10_CDC"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.3593"/>
+            </binding>
+        </element>
+        <element id="Condition.code.text">
+            <path value="Condition.code.text"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Condition.subject">
+            <path value="Condition.subject"/>
+            <short value="subject"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Condition.onset[x]">
+            <path value="Condition.onset[x]"/>
+            <slicing>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="onset[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Age"/>
+            </type>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="Condition.asserter">
+            <path value="Condition.asserter"/>
+            <short value="asserter"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

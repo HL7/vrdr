@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="Within-City-Limits-Indicator"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-05-03T23:42:16.065+00:00"/>
+        <source value="#L2dOX2KgdiSC4vhN"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
+    <version value="1.0"/>
+    <name value="Within_City_Limits_IndicatorWithinCityLimitsIndicator"/>
+    <title value="VRDR Within City Limits Indicator"/>
+    <status value="draft"/>
+    <publisher value="Hi3 Solutions"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="6266444491"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="Used to indicate whether or not an address is within city limits. The content of the component shall be a value from the value set Yes No Unknown.  "/>
+    <purpose value="Inclusion within city limits is used in determining juridictional responsiblity."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Extension"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_YesNoUnknown_CDC"/>
+                <valueSet value="2.16.840.1.114222.4.11.888"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

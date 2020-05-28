@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Autopsy-Performed-Indicator"/>
+    <meta>
+        <versionId value="17"/>
+        <lastUpdated value="2020-05-26T02:24:40.929+00:00"/>
+        <source value="#HQ7WCNU1YAzH7gMb"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
+    <version value="1.0"/>
+    <name value="AutopsyPerformedIndicator"/>
+    <title value="VRDR Autopsy Performed Indicator"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-08"/>
+    <publisher value="Hi3 Solutions"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="The Autopsy Performed Indicator profile provides an indication as to whether an autopsy was performed and if so, indicates whether the results of the autopsy are available. The Autopsy Performed Indicator profile builds upon the FHIR Observation resource."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Observation"/>
+    </context>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+        </element>
+        <element id="Observation.id">
+            <path value="Observation.id"/>
+            <short value="id"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.status">
+            <path value="Observation.status"/>
+            <short value="status"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <fixedCode value="final"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <short value="code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="85699-7"/>
+                    <display value="Autopsy was performed"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <short value="subject"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_YesNoNotApplicable_NCHS"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7486"/>
+            </binding>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <label value="Autopsy Results Available"/>
+            <short value="component"/>
+            <comment value="The Autopsy Results Available component of the Autopsy Performed Indicator observation is used only when the Autopsy Performed Indicator is 'Yes'."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component.code">
+            <path value="Observation.component.code"/>
+            <short value="code"/>
+            <definition value="This component SHALL contain exactly one [1..1] code=&quot;69436-4&quot; Autopsy results available  (CONF:4393-416)."/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69436-4"/>
+                    <display value="Autopsy results available"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="Observation.component.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_YesNoNotApplicable_NCHS"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7486"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

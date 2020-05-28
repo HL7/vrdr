@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Funeral-Home"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-05-10T22:17:58.589+00:00"/>
+        <source value="#RsxL5iQkXnbELNxK"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_FuneralHome"/>
+    <version value="1.0"/>
+    <name value="FuneralHome"/>
+    <title value="VRDR Funeral Home"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-10"/>
+    <publisher value="Health Level Seven"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Organization"/>
+    </context>
+    <type value="Organization"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Organization">
+            <path value="Organization"/>
+        </element>
+        <element id="Organization.id">
+            <path value="Organization.id"/>
+            <short value="id"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier"/>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Organization.type">
+            <path value="Organization.type"/>
+            <short value="type"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Organization.type.coding">
+            <path value="Organization.type.coding"/>
+            <short value="coding"/>
+            <definition value="This type SHALL contain exactly one [1..1] coding=&quot;bus&quot; Non-Healthcare Business or Corporation (CONF:4393-122)."/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternCoding>
+                <code value="bus"/>
+                <display value="Non-Healthcare Business or Corporation"/>
+            </patternCoding>
+        </element>
+        <element id="Organization.name">
+            <path value="Organization.name"/>
+            <short value="name"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Organization.address">
+            <path value="Organization.address"/>
+            <short value="address"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+    </differential>
+</StructureDefinition>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="VRDR-Condition-Contributing-To-Death"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2020-05-12T19:57:36.032+00:00"/>
+        <source value="#XlUJBjITIouB18RW"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
+    <version value="1.0"/>
+    <name value="ConditionContributingToDeath"/>
+    <title value="VRDR Condition Contributing To Death"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2020-05-08"/>
+    <publisher value="Health Level Seven"/>
+    <contact>
+        <name value="AbdulMalik Shakir"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="6266444491"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="abdulmalik.shakir@hi3solutions.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="The Condition Contributing to Death profile is used to identify factors contributing to the cause of death as asserted by the death certifier. The Condition Contributing To Death profile builds upon the FHIR condition resource."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Condition"/>
+    </context>
+    <type value="Condition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Condition">
+            <path value="Condition"/>
+        </element>
+        <element id="Condition.id">
+            <path value="Condition.id"/>
+            <short value="id"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Condition.code">
+            <path value="Condition.code"/>
+            <short value="code"/>
+            <comment value="The ConditionContributintgToDeath.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component."/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="Condition.code.coding">
+            <path value="Condition.code.coding"/>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Condition.code.text">
+            <path value="Condition.code.text"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Condition.code.coding.code">
+            <path value="Condition.code.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="code"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_CauseOfDeath_ICD-10_CDC"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.3593"/>
+            </binding>
+        </element>
+        <element id="Condition.subject">
+            <path value="Condition.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Condition.asserter">
+            <path value="Condition.asserter"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>
