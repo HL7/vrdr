@@ -1,13 +1,1 @@
-[Previous Page - IG Home Page](index.html)
-
-This FHIR implementation guide is the primary work product of [project #1475](https://bit.ly/34DRIoA) "Vital Records Mortality and Morbidity Reporting FHIR IG" sponsored by the Health Level Seven (HL7) Public Health Work Group (PHWG). 
-
-The scope of the project is to produce and ballot a Standard for Trail Use (STU) Fast Healthcare Interoperability Resources (FHIR) implementation guide (IG) for use in reporting of death events to the U.S. National Center for Health Statistics (NCHS) by State and Local Public Health Agencies (PHA). The VRDR FHIR IG is based upon FHIR R4. The VRDR FHIR IG was successfully balloted as a standard for trial use (STU) in May 2019.
-
-This is a U.S. Realm Specification. This guide and related materials are based on reporting specifications in U.S. jurisdictions. The data content of this IG are based upon the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf).
-
-
-
-
-
-[Next Page - Project Team](ProjectTeam.html)
+W1ByZXZpb3VzIFBhZ2UgLSBJRyBIb21lIFBhZ2VdKGluZGV4Lmh0bWwpCgpUaGlzIEZISVIgaW1wbGVtZW50YXRpb24gZ3VpZGUgaXMgdGhlIHByaW1hcnkgd29yayBwcm9kdWN0IG9mIFtwcm9qZWN0ICMxNDc1XShodHRwczovL2JpdC5seS8zNERSSW9BKSAiVml0YWwgUmVjb3JkcyBNb3J0YWxpdHkgYW5kIE1vcmJpZGl0eSBSZXBvcnRpbmcgRkhJUiBJRyIgc3BvbnNvcmVkIGJ5IHRoZSBIZWFsdGggTGV2ZWwgU2V2ZW4gKEhMNykgUHVibGljIEhlYWx0aCBXb3JrIEdyb3VwIChQSFdHKS4gCgpUaGUgc2NvcGUgb2YgdGhlIHByb2plY3QgaXMgdG8gcHJvZHVjZSBhbmQgYmFsbG90IGEgU3RhbmRhcmQgZm9yIFRyYWlsIFVzZSAoU1RVKSBGYXN0IEhlYWx0aGNhcmUgSW50ZXJvcGVyYWJpbGl0eSBSZXNvdXJjZXMgKEZISVIpIGltcGxlbWVudGF0aW9uIGd1aWRlIChJRykgZm9yIHVzZSBpbiByZXBvcnRpbmcgb2YgZGVhdGggZXZlbnRzIHRvIHRoZSBVLlMuIE5hdGlvbmFsIENlbnRlciBmb3IgSGVhbHRoIFN0YXRpc3RpY3MgKE5DSFMpIGJ5IFN0YXRlIGFuZCBMb2NhbCBQdWJsaWMgSGVhbHRoIEFnZW5jaWVzIChQSEEpLiBUaGUgVlJEUiBGSElSIElHIGlzIGJhc2VkIHVwb24gRkhJUiBSNC4gVGhlIFZSRFIgRkhJUiBJRyB3YXMgc3VjY2Vzc2Z1bGx5IGJhbGxvdGVkIGFzIGEgc3RhbmRhcmQgZm9yIHRyaWFsIHVzZSAoU1RVKSBpbiBNYXkgMjAxOS4KClRoaXMgaXMgYSBVLlMuIFJlYWxtIFNwZWNpZmljYXRpb24uIFRoaXMgZ3VpZGUgYW5kIHJlbGF0ZWQgbWF0ZXJpYWxzIGFyZSBiYXNlZCBvbiByZXBvcnRpbmcgc3BlY2lmaWNhdGlvbnMgaW4gVS5TLiBqdXJpc2RpY3Rpb25zLiBUaGUgZGF0YSBjb250ZW50IG9mIHRoaXMgSUcgYXJlIGJhc2VkIHVwb24gdGhlIFtVLlMuIFN0YW5kYXJkIENlcnRpZmljYXRlIG9mIERlYXRoXShodHRwczovL3d3dy5jZGMuZ292L25jaHMvZGF0YS9kdnMvREVBVEgxMS0wM2ZpbmFsLUFDQy5wZGYpLgoKCgoKCltOZXh0IFBhZ2UgLSBQcm9qZWN0IFRlYW1dKFByb2plY3RUZWFtLmh0bWwp
