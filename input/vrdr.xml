@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="140"/>
-        <lastUpdated value="2020-05-27T01:07:39.797+00:00"/>
-        <source value="#uIAYUFEoM1hIOFdz"/>
+        <versionId value="143"/>
+        <lastUpdated value="2020-06-03T15:01:50.601+00:00"/>
+        <source value="#ZSe6dQ7ts07jJoFu"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.0"/>
@@ -34,6 +34,11 @@
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0"/>
         <packageId value="hl7.fhir.us.core"/>
         <version value="3.1.0"/>
+    </dependsOn>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork"/>
+        <packageId value="hl7.fhir.us.odh"/>
+        <version value="current"/>
     </dependsOn>
     <definition>
         <grouping id="default">
@@ -386,87 +391,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Observation/f13a8bdb-a95d-4b3b-a450-5dc29c6fd1aa"/>
-                <display value="Autopsy Performed Indicator Example"/>
-            </reference>
-            <name value="Autopsy Performed Indicator Example"/>
-            <description value="An instance example of the VRDR Autopsy Performed Indicator resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/b3669e49-41f5-4638-9092-7ea74bd77939"/>
-                <display value="Birth Record Identifier Example"/>
-            </reference>
-            <name value="Birth Record Identifier Example"/>
-            <description value="An instance example of the Birth Record Identifier resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Condition/394dcc12-64f4-4377-a7bb-1591d8563b85"/>
-                <display value="Cause of Death Condition Example"/>
-            </reference>
-            <name value="Cause of Death Condition Example"/>
-            <description value="An instance example of the VRDR Cause of Death Condition Example resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="List/7d0ec2b7-cd1b-4cfd-8ab4-d0469cb793bd"/>
-                <display value="Cause Of Death Pathway Example"/>
-            </reference>
-            <name value="Cause Of Death Pathway Example"/>
-            <description value="An instance example of the VRDR Cause Of Death Pathway resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Practitioner/44f71ba9-2179-4020-81c8-9a204cd52150"/>
-                <display value="Certifier Example"/>
-            </reference>
-            <name value="Certifier Example"/>
-            <description value="An instance example of the VRDR Certifier resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Condition/84fd3432-b164-445b-80de-5e87b32f1e49"/>
-                <display value="Condition Contributing to Death Example"/>
-            </reference>
-            <name value="Condition Contributing to Death Example"/>
-            <description value="An instance example of the VRDR Condition Contributing to Death resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Composition/dfa7bb28-0253-488c-8ea1-bbf7030177dc"/>
-                <display value="Death Certificate Example"/>
-            </reference>
-            <name value="Death Certificate Example"/>
-            <description value="An instance example of the VRDR Death Certificate resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Procedure/a7fa4757-e2fa-4bdd-9702-8652382fb45a"/>
-                <display value="Death Certification Example"/>
-            </reference>
-            <name value="Death Certification Example"/>
-            <description value="An instance example of the VRDR Death Certification resource profile."/>
-            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/4cfda0d1-4c84-47c7-b6eb-19a1697916ca"/>
-                <display value="Death Date Example"/>
-            </reference>
-            <name value="Death Date Example"/>
-            <description value="An instance example of the VRDR Death Date resource profile."/>
-            <exampleBoolean value="true"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="StructureDefinition/VRDR-Death-Date"/>
                 <display value="Death Date"/>
             </reference>
@@ -477,13 +401,11 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Patient/334293c2-5fb6-4afb-9a32-334dda053bc7"/></reference>
-            <exampleBoolean value="true"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/example-autopsy-performed-indicator"/></reference>
-            <exampleBoolean value="true"/>
+                <reference value="StructureDefinition/VRDR-Decedent-Usual-Work"/>
+                <display value="VRDR_DecedentUsualWork"/>
+            </reference>
+            <name value="VRDR_DecedentUsualWork"/>
+            <exampleBoolean value="false"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
