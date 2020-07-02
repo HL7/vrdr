@@ -1,4 +1,4 @@
-[Previous Page - Vital Records Mortality and Morbidity Reporting FHIR Implementation Guide Specification](VitalRecordsMortalityandMorbidityReportingFHIRImplementationGuideSpecification.html)
+[Previous Page - Home Page](index.html)
 
 **Project Facilitators:**
 
