@@ -1,1 +1,16 @@
-W1ByZXZpb3VzIFBhZ2UgLSBEZWF0aCBJbnZlc3RpZ2F0aW9uIFJlc291cmNlIFByb2ZpbGVzXShEZWF0aEludmVzdGlnYXRpb25SZXNvdXJjZVByb2ZpbGVzLmh0bWwpCgpDLiAqKipEZWF0aCBDZXJ0aWZpY2F0aW9uOioqKiBpcyBhIHByb2ZpbGUgZ3JvdXAgY29tcHJpc2VkIG9mIHByb2ZpbGVzIGNvbnRhaW5pbmcgZGF0YSByZWxhdGVkIHRvIHRoZSBwcmltYXJ5IGNvbmNlcm4gb2YgdGhlIFZSRFIgSUcsIERlYXRoIENlcnRpZmljYXRpb24uIEluIHRoaXMgZ3JvdXAgdGhlIGNhdXNlcyBvZiBkZWF0aCBhbmQgdGhlIGNhdXNhbCBwYXRod2F5IGFyZSBkb2N1bWVudGVkIGFuZCBhdHRlc3RlZCB0byBieSBhIGRlYXRoIGNlcnRpZmllciAoY29yb25lciBvciBtZWRpY2FsIGV4YW1pbmVyKS4KCjxjZW50ZXI+Cgk8dGFibGU+PHRyPjx0ZD48aW1nIHNyYz0iQy4gRGVhdGggQ2VydGlmaWNhdGlvbi5wbmciIHN0eWxlPSJ3aWR0aDoxMDAlOyIvPjwvdGQ+PC90cj48L3RhYmxlPgoJPC9jZW50ZXI+CgkKVGhlIGZvbGxvd2luZyB0YWJsZXMgaW5kaWNhdGVzIHRyYWNpYmlsaXR5IGJldHdlZW4gZGVhdGggY2VydGlmaWNhdGlvbiByZXNvdXJjZSBwcm9maWxlIGVsZW1lbnRzIGFuZCBkYXRhIGl0ZW1zIG9uIHRoZSBbVS5TLiBTdGFuZGFyZCBDZXJ0aWZpY2F0ZSBvZiBEZWF0aF0oaHR0cHM6Ly93d3cuY2RjLmdvdi9uY2hzL2RhdGEvZHZzL0RFQVRIMTEtMDNmaW5hbC1BQ0MucGRmKSBkYXRhIGNvbGxlY3Rpb24gZm9ybS4KCjxjZW50ZXI+Cgk8dGFibGU+PHRyPjx0ZD48aW1nIHNyYz0iRGVhdGggQ2VydGlmaWNhdGlvbiBzdWJkb21haW4gdG8gRENGLnBuZyIgc3R5bGU9IndpZHRoOjEwMCU7Ii8+PC90ZD48L3RyPjwvdGFibGU+Cgk8L2NlbnRlcj4KCQoKW05leHQgUGFnZSAtIERlY2VkZW50IERpc3Bvc2l0aW9uIFJlc291cmNlIFByb2ZpbGVzXShEZWNlZGVudERpc3Bvc2l0aW9uUmVzb3VyY2VQcm9maWxlcy5odG1sKQ==
+[Previous Page - Death Investigation Resource Profiles](DeathInvestigationResourceProfiles.html)
+
+C. ***Death Certification:*** is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).
+
+<center>
+	<table><tr><td><img src="C. Death Certification.png" style="width:100%;"/></td></tr></table>
+	</center>
+	
+The following tables indicates tracibility between death certification resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.
+
+<center>
+	<table><tr><td><img src="Death Certification subdomain to DCF.png" style="width:100%;"/></td></tr></table>
+	</center>
+	
+
+[Next Page - Decedent Disposition Resource Profiles](DecedentDispositionResourceProfiles.html)

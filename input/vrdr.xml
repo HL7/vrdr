@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="143"/>
-        <lastUpdated value="2020-06-03T15:01:50.601+00:00"/>
-        <source value="#ZSe6dQ7ts07jJoFu"/>
+        <versionId value="176"/>
+        <lastUpdated value="2020-07-02T03:28:08.562+00:00"/>
+        <source value="#vm66proSdayOIs2I"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.0"/>
@@ -28,17 +28,24 @@
         <name value="AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com"/>
     </contact>
     <description value="The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).&#xA;&#xA;Bidirectional exchange of mortality data between PHA Vital Records offices and NCHS is essential to effective public health surveillance and emergency response efforts. Automation of the reporting process adds efficiencies that dramatically improves the efficacy of event response, data analysis, and evidence-based measurable prevention of the causes of death.&#xA;&#xA;The VRDR FHIR IG will provide guidance for the use of standard FHIR resources as a conduit for data required by vital records death reporting. The use of FHIR as a platform for automation of vital records death reporting is expected to improve existing automation by enabling wide-scale adoption and leveraging the potential of electronic health records and clinical decision support systems.&#xA;&#xA;The VRDR FHIR IG will lay a foundation for expansion of automated standards-driven information exchange to include tributary flows of information from entities such as physicians, medical examiners, coroners, funeral directors, and family members to public health agencies and between public health agencies and secondary users of detailed mortality data and aggregate statistics."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States"/>
+        </coding>
+    </jurisdiction>
     <packageId value="hl7.fhir.us.vrdr"/>
     <fhirVersion value="4.0.1"/>
     <dependsOn>
-        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0"/>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
         <packageId value="hl7.fhir.us.core"/>
         <version value="3.1.0"/>
     </dependsOn>
     <dependsOn>
-        <uri value="http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork"/>
+        <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
         <packageId value="hl7.fhir.us.odh"/>
-        <version value="current"/>
+        <version value="1.0.0"/>
     </dependsOn>
     <definition>
         <grouping id="default">
@@ -59,6 +66,9 @@
         <grouping id="DecedentDisposition">
             <name value="D. Decedent Disposition"/>
             <description value="Decedent Disposition is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."/>
+        </grouping>
+        <grouping id="Images">
+            <name value="Images"/>
         </grouping>
         <resource>
             <reference>
@@ -87,16 +97,6 @@
             </reference>
             <name value="Decedent's Education Level"/>
             <description value="The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="DecedentDemographics"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/VRDR-Decedent-Father"/>
-                <display value="Decedent's Father"/>
-            </reference>
-            <name value="Decedent's Father"/>
-            <description value="The Decedent's Father represents the paternal parent of the decedent. The VRDR Decedent Father profile builds upon the FHIR R4 Related Person resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDemographics"/>
         </resource>
@@ -167,16 +167,6 @@
             </reference>
             <name value="Funeral Home"/>
             <description value="The Funeral Home resource represents the business entity conducting ceremony connected with the final disposition of the decedent's remains, such as a burial or cremation, with the attendant observances. The VRDR Funeral Home profile builds upon the FHIR R4 Organization resource."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="DecedentDisposition"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/VRDR-Funeral-Home-Director"/>
-                <display value="Funeral Service Licensee"/>
-            </reference>
-            <name value="Funeral Service Licensee"/>
-            <description value="The Funeral Service Licensee resource represents the person that is the primary administrative authority over the funeral home providing funeral services to the decedent. The VRDR Funeral Home Director profile builds upon the FHIR R4 Practitioner Role resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDisposition"/>
         </resource>
@@ -381,16 +371,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/VRDR-Decedent-Employment-History"/>
-                <display value="Decedent Employment History"/>
-            </reference>
-            <name value="Decedent Employment History"/>
-            <description value="The Decedent Employment History resource provides a historical record of the decedent's employment occupation, industry, and military service.  The VRDR Decedent Employment History profile builds upon the FHIR R4 Observation resource."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="DecedentDemographics"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="StructureDefinition/VRDR-Death-Date"/>
                 <display value="Death Date"/>
             </reference>
@@ -404,7 +384,53 @@
                 <reference value="StructureDefinition/VRDR-Decedent-Usual-Work"/>
                 <display value="VRDR_DecedentUsualWork"/>
             </reference>
-            <name value="VRDR_DecedentUsualWork"/>
+            <name value="Decedent's Usual Work"/>
+            <description value="The Decedent Usual Work resource is used to convey the usual work industry and occupation of the decedent. The base profile is lifted directly out of the Occupational Data for Health (ODH), Release 1.0 FHIR Implementation Guide (http://hl7.org/fhir/us/odh/)."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Military-Service"/>
+                <display value="Decedent Military Service"/>
+            </reference>
+            <name value="Decedent Military Service"/>
+            <description value="The Decedent Military Service resource is used to convey whether the decedent was ever in the US armed forces. The VRDR Decedent Military Service profile builds upon the FHIR R4 Observation resource."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Funeral-Service-Licensee"/>
+                <display value="VRDR Funeral Service Licensee"/>
+            </reference>
+            <name value="Funeral Service Licensee"/>
+            <description value="The Funeral Service Licensee resource is used to convey the role of the funeral home mortician responsible for the decedents funeral service."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="DecedentDisposition"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Funeral-Home-Director"/>
+                <display value="VRDR Funeral Service Licensee"/>
+            </reference>
+            <name value="VRDR Funeral Service Licensee"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VRDR-Decedent-Father"/>
+                <display value="Decedent Father"/>
+            </reference>
+            <name value="Decedent Father"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Census-Tract"/>
+                <display value="CensusTract"/>
+            </reference>
+            <name value="CensusTract"/>
             <exampleBoolean value="false"/>
         </resource>
         <page>

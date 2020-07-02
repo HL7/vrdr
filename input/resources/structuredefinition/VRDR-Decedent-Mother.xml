@@ -3,76 +3,30 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Mother"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2020-05-10T17:24:30.170+00:00"/>
-        <source value="#PGjQ4GIqkPuCqZcn"/>
+        <versionId value="11"/>
+        <lastUpdated value="2020-06-17T22:04:34.870+00:00"/>
+        <source value="#n9Ac608P9B8gd4uT"/>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
     </meta>
-    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_DecedentMother"/>
-    <version value="1.0"/>
-    <name value="DecedentMother"/>
-    <title value="VRDR Decedent Mother"/>
+    <url value="http://hl7.org/fhir/caph/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
+    <name value="VRDR_DecedentMother"/>
+    <title value="Decedent Mother"/>
     <status value="draft"/>
     <experimental value="false"/>
-    <date value="2020-05-10"/>
-    <publisher value="Health Level Seven"/>
-    <contact>
-        <name value="AbdulMalik Shakir"/>
-        <telecom>
-            <system value="phone"/>
-            <value value="6266444491"/>
-            <use value="work"/>
-        </telecom>
-        <telecom>
-            <system value="email"/>
-            <value value="abdulmalik.shakir@hi3solutions.com"/>
-            <use value="work"/>
-        </telecom>
-    </contact>
+    <publisher value="CAPH"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
-    <context>
-        <type value="element"/>
-        <expression value="RelatedPerson"/>
-    </context>
     <type value="RelatedPerson"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+    <baseDefinition value="http://hl7.org/fhir/caph/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
     <derivation value="constraint"/>
     <differential>
         <element id="RelatedPerson">
             <path value="RelatedPerson"/>
-        </element>
-        <element id="RelatedPerson.patient">
-            <path value="RelatedPerson.patient"/>
-            <short value="patient"/>
-            <min value="1"/>
-            <max value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
-            </type>
-        </element>
-        <element id="RelatedPerson.relationship">
-            <path value="RelatedPerson.relationship"/>
-            <short value="relationship"/>
-            <min value="1"/>
-            <max value="1"/>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <fixedCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-                    <code value="MTH"/>
-                    <display value="mother"/>
-                </coding>
-            </fixedCodeableConcept>
-        </element>
-        <element id="RelatedPerson.name">
-            <path value="RelatedPerson.name"/>
-            <short value="name"/>
-            <min value="1"/>
-            <max value="1"/>
         </element>
     </differential>
 </StructureDefinition>

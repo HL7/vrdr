@@ -3,17 +3,20 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Autopsy-Performed-Indicator"/>
     <meta>
-        <versionId value="17"/>
-        <lastUpdated value="2020-05-26T02:24:40.929+00:00"/>
-        <source value="#HQ7WCNU1YAzH7gMb"/>
+        <versionId value="28"/>
+        <lastUpdated value="2020-06-10T22:41:15.876+00:00"/>
+        <source value="#jU7oMgwSEIRspNcr"/>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
     <version value="1.0"/>
-    <name value="AutopsyPerformedIndicator"/>
+    <name value="VRDR_AutopsyPerformedIndicator"/>
     <title value="VRDR Autopsy Performed Indicator"/>
     <status value="draft"/>
-    <experimental value="false"/>
-    <date value="2020-05-08"/>
     <publisher value="Hi3 Solutions"/>
     <contact>
         <name value="AbdulMalik Shakir"/>
@@ -23,14 +26,9 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="The Autopsy Performed Indicator profile provides an indication as to whether an autopsy was performed and if so, indicates whether the results of the autopsy are available. The Autopsy Performed Indicator profile builds upon the FHIR Observation resource."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
-    <context>
-        <type value="element"/>
-        <expression value="Observation"/>
-    </context>
     <type value="Observation"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
     <derivation value="constraint"/>
@@ -38,15 +36,10 @@
         <element id="Observation">
             <path value="Observation"/>
         </element>
-        <element id="Observation.id">
-            <path value="Observation.id"/>
-            <short value="id"/>
-            <min value="0"/>
-            <max value="1"/>
-        </element>
         <element id="Observation.status">
             <path value="Observation.status"/>
             <short value="status"/>
+            <definition value="SHALL contain exactly one [1..1] status=&quot;&quot;final&quot;&quot; (CONF:4393-412)."/>
             <min value="1"/>
             <max value="1"/>
             <type>
@@ -57,6 +50,7 @@
         <element id="Observation.code">
             <path value="Observation.code"/>
             <short value="code"/>
+            <definition value="SHALL contain exactly one [1..1] code=&quot;85699-7&quot; Autopsy was performed (CONF:4393-411)."/>
             <min value="1"/>
             <max value="1"/>
             <type>
@@ -73,6 +67,7 @@
         <element id="Observation.subject">
             <path value="Observation.subject"/>
             <short value="subject"/>
+            <definition value="SHALL contain exactly one [1..1] subject=&quot;VRDR Decedent&quot; (CONF:4393-413)."/>
             <min value="1"/>
             <max value="1"/>
             <type>
@@ -82,6 +77,15 @@
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
+            <slicing>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="value[x]"/>
+            <definition value="SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-409)"/>
             <min value="1"/>
             <max value="1"/>
             <type>
@@ -95,9 +99,9 @@
         </element>
         <element id="Observation.component">
             <path value="Observation.component"/>
-            <label value="Autopsy Results Available"/>
             <short value="component"/>
-            <comment value="The Autopsy Results Available component of the Autopsy Performed Indicator observation is used only when the Autopsy Performed Indicator is 'Yes'."/>
+            <definition value="SHALL contain exactly one [1..1] component (CONF:4393-414)."/>
+            <comment value="Autopsy Results Available"/>
             <min value="0"/>
             <max value="1"/>
         </element>
@@ -120,6 +124,15 @@
         </element>
         <element id="Observation.component.value[x]">
             <path value="Observation.component.value[x]"/>
+            <slicing>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="value[x]"/>
+            <definition value="This component SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:4393-415)"/>
             <min value="1"/>
             <max value="1"/>
             <type>
