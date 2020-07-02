@@ -1,16 +1,1 @@
-[Previous Page - Death Certification Resource Profiles](DeathCertificationResourceProfiles.html)
-
-D. ***Decedent Disposition:*** is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director.
-
-<center>
-	<table><tr><td><img src="D. Decedent Disposition.png" style="width:100%;"/></td></tr></table>
-	</center>
-	
-The following tables indicates tracibility between decedent disposition resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.
-
-<center>
-	<table><tr><td><img src="Decedent Disposition subdomain to DCF.png" style="width:100%;"/></td></tr></table>
-	</center>
-	
-
-[Next Page - Terminology Bindings](TerminologyBindings.html)
+W1ByZXZpb3VzIFBhZ2UgLSBEZWF0aCBDZXJ0aWZpY2F0aW9uIFJlc291cmNlIFByb2ZpbGVzXShEZWF0aENlcnRpZmljYXRpb25SZXNvdXJjZVByb2ZpbGVzLmh0bWwpCgpELiAqKipEZWNlZGVudCBEaXNwb3NpdGlvbjoqKiogaXMgYSBwcm9maWxlIGdyb3VwIGNvbXByaXNlZCBvZiBwcm9maWxlcyBjb250YWluaW5nIGRhdGEgcmVsYXRlZCB0byB0aGUgZGlzcG9zaXRpb24gb2YgdGhlIGRlY2VkZW50cyByZW1haW5zLiBUaGUgZGF0YSBpbiB0aGlzIHByb2ZpbGUgZ3JvdXAgaXMgdHlwaWNhbGx5IHByb3ZpZGVkIGJ5IHRoZSBmdW5lcmFsIGhvbWUgcGVyZm9ybWluZyB0aGUgZGlzcG9zaXRpb24gc2VydmljZXMuIFRoZSBjb250ZW50IG9mIHRoaXMgcHJvZmlsZSBncm91cCBpcyBhdXRoZW50aWNhdGVkIGJ5IHRoZSBmdW5lcmFsIGhvbWUgZGlyZWN0b3IuCgo8Y2VudGVyPgoJPHRhYmxlPjx0cj48dGQ+PGltZyBzcmM9IkQuIERlY2VkZW50IERpc3Bvc2l0aW9uLnBuZyIgc3R5bGU9IndpZHRoOjEwMCU7Ii8+PC90ZD48L3RyPjwvdGFibGU+Cgk8L2NlbnRlcj4KCQpUaGUgZm9sbG93aW5nIHRhYmxlcyBpbmRpY2F0ZXMgdHJhY2liaWxpdHkgYmV0d2VlbiBkZWNlZGVudCBkaXNwb3NpdGlvbiByZXNvdXJjZSBwcm9maWxlIGVsZW1lbnRzIGFuZCBkYXRhIGl0ZW1zIG9uIHRoZSBbVS5TLiBTdGFuZGFyZCBDZXJ0aWZpY2F0ZSBvZiBEZWF0aF0oaHR0cHM6Ly93d3cuY2RjLmdvdi9uY2hzL2RhdGEvZHZzL0RFQVRIMTEtMDNmaW5hbC1BQ0MucGRmKSBkYXRhIGNvbGxlY3Rpb24gZm9ybS4KCjxjZW50ZXI+Cgk8dGFibGU+PHRyPjx0ZD48aW1nIHNyYz0iRGVjZWRlbnQgRGlzcG9zaXRpb24gc3ViZG9tYWluIHRvIERDRi5wbmciIHN0eWxlPSJ3aWR0aDoxMDAlOyIvPjwvdGQ+PC90cj48L3RhYmxlPgoJPC9jZW50ZXI+CgkKCltOZXh0IFBhZ2UgLSBUZXJtaW5vbG9neSBCaW5kaW5nc10oVGVybWlub2xvZ3lCaW5kaW5ncy5odG1sKQ==
