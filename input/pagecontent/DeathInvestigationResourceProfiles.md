@@ -1,1 +1,16 @@
-W1ByZXZpb3VzIFBhZ2UgLSBEZWNlZGVudCBEZW1vZ3JhcGhpY3MgUmVzb3VyY2UgUHJvZmlsZXNdKERlY2VkZW50RGVtb2dyYXBoaWNzUmVzb3VyY2VQcm9maWxlcy5odG1sKQoKQi4gKioqRGVhdGggSW52ZXN0aWdhdGlvbjoqKiogaXMgYSBwcm9maWxlIGdyb3VwIGNvbXByaXNlZCBvZiBwcm9maWxlcyBjb250YWluaW5nIGRhdGEgb2J0YWluZWQgZHVyaW5nIHRoZSBjb3Vyc2Ugb2YgaW52ZXN0aWdhdGluZyBhIGRlYXRoLiBNYW55IG9mIHRoZXNlIGl0ZW1zIGFyZSBjb25kaXRpb25hbGx5IHByZXNlbnQgaW4gYSBkZWF0aCBjZXJ0aWZpY2F0aW9uIHRyYW5zYWN0aW9uIGRlcGVuZGluZyBvbiB3aGV0aGVyIG9yIG5vdCBhbiBhdXRvcHkgd2FzIHBlcmZvcm1lZCwgYW4gaW5qdXJ5IGluY2lkZW50IG9jY3VycmVkLCBvciBhIHRyYW5zcG9ydGF0aW9uIGV2ZW50IHdhcyBpbnZvbHZlZC4KCjxjZW50ZXI+Cgk8dGFibGU+PHRyPjx0ZD48aW1nIHNyYz0iQi4gRGVhdGggSW52ZXN0aWdhdGlvbi5wbmciIHN0eWxlPSJ3aWR0aDoxMDAlOyIvPjwvdGQ+PC90cj48L3RhYmxlPgoJPC9jZW50ZXI+CgpUaGUgZm9sbG93aW5nIHRhYmxlcyBpbmRpY2F0ZXMgdHJhY2liaWxpdHkgYmV0d2VlbiBkZWF0aCBpbnZlc3RpZ2F0aW9uIHJlc291cmNlIHByb2ZpbGUgZWxlbWVudHMgYW5kIGRhdGEgaXRlbXMgb24gdGhlIFtVLlMuIFN0YW5kYXJkIENlcnRpZmljYXRlIG9mIERlYXRoXShodHRwczovL3d3dy5jZGMuZ292L25jaHMvZGF0YS9kdnMvREVBVEgxMS0wM2ZpbmFsLUFDQy5wZGYpIGRhdGEgY29sbGVjdGlvbiBmb3JtLgoKPGNlbnRlcj4KCTx0YWJsZT48dHI+PHRkPjxpbWcgc3JjPSJEZWF0aCBJbnZlc3RpZ2F0aW9uIFN1YmRvbWFpbiB0byBEQ0YucG5nIiBzdHlsZT0id2lkdGg6MTAwJTsiLz48L3RkPjwvdHI+PC90YWJsZT4KCTwvY2VudGVyPgoJCgpbTmV4dCBQYWdlIC0gRGVhdGggQ2VydGlmaWNhdGlvbiBSZXNvdXJjZSBQcm9maWxlc10oRGVhdGhDZXJ0aWZpY2F0aW9uUmVzb3VyY2VQcm9maWxlcy5odG1sKQ==
+[Previous Page - Decedent Demographics Resource Profiles](DecedentDemographicsResourceProfiles.html)
+
+B. ***Death Investigation:*** is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopy was performed, an injury incident occurred, or a transportation event was involved.
+
+<center>
+	<table><tr><td><img src="B. Death Investigation.png" style="width:100%;"/></td></tr></table>
+	</center>
+
+The following tables indicates tracibility between death investigation resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.
+
+<center>
+	<table><tr><td><img src="Death Investigation Subdomain to DCF.png" style="width:100%;"/></td></tr></table>
+	</center>
+	
+
+[Next Page - Death Certification Resource Profiles](DeathCertificationResourceProfiles.html)
