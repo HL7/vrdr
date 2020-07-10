@@ -1,3 +1,5 @@
+[Previous Page - Home Page](index.html)
+
 **Project Facilitators:**
 
 - [Paula Braun](https://www.linkedin.com/in/braunpaula/), Entrepreneur in Residence, CDC/Deputy Director for Public Health Science and Surveillance
@@ -33,3 +35,6 @@
 - [Georgia Institute of Technology](https://www.gatech.edu/), a leading research university committed to improving the human condition through advanced science and technology
 
 - [Hi3 Solutions Corporation](https://www.facebook.com/hi3solutions/), a leading HIT vendor providing software solutions and professional services that promote evidence-based best practices in health.
+
+
+[Next Page - Acknowledgements](acknowledgements.html)
