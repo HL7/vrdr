@@ -3,16 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Manner-of-Death"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2020-07-02T05:00:59.360+00:00"/>
-        <source value="#NKIrFxfbUGzJkbLH"/>
+        <versionId value="10"/>
+        <lastUpdated value="2020-07-12T17:55:29.578+00:00"/>
+        <source value="#t7wG7RH4kYhy4V6v"/>
         <tag>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
             <code value="SUBSETTED"/>
             <display value="Resource encoded in summary mode"/>
         </tag>
     </meta>
-    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_MannerOfDeath"/>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"/>
     <version value="1.0"/>
     <name value="MannerOfDeath"/>
     <title value="VRDR Manner of Death"/>
@@ -55,7 +55,7 @@
             <type>
                 <code value="code"/>
             </type>
-            <fixedString value="&quot;final&quot;"/>
+            <fixedCode value="final"/>
         </element>
         <element id="Observation.code">
             <path value="Observation.code"/>
@@ -67,7 +67,9 @@
             </type>
             <fixedCodeableConcept>
                 <coding>
+                    <system value="http://loinc.org"/>
                     <code value="69449-7"/>
+                    <display value="Manner of death"/>
                 </coding>
             </fixedCodeableConcept>
         </element>
@@ -80,7 +82,6 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
             </type>
-            <patternString value="VRDR Decedent"/>
         </element>
         <element id="Observation.performer">
             <path value="Observation.performer"/>
@@ -91,7 +92,6 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
             </type>
-            <patternString value="VRDR Certifier"/>
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent"/>
     <meta>
-        <versionId value="42"/>
-        <lastUpdated value="2020-06-10T23:02:16.318+00:00"/>
-        <source value="#D6mVASmwpQ1jgsF6"/>
+        <versionId value="79"/>
+        <lastUpdated value="2020-07-11T21:36:47.166+00:00"/>
+        <source value="#yeeOVsJZcTgR0CTy"/>
         <tag>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
             <code value="SUBSETTED"/>
@@ -38,27 +38,17 @@
         <element id="Patient">
             <path value="Patient"/>
         </element>
-        <element id="Patient.extension:birthplace">
-            <path value="Patient.extension"/>
-            <sliceName value="birthplace"/>
-            <min value="0"/>
-            <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthPlace"/>
-            </type>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-        </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
             <min value="1"/>
             <max value="*"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Patient.name">
             <path value="Patient.name"/>
             <min value="1"/>
             <max value="*"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Patient.gender">
             <path value="Patient.gender"/>
@@ -75,100 +65,32 @@
             <min value="1"/>
             <max value="1"/>
         </element>
-        <element id="Patient.identifier.type">
-            <path value="Patient.identifier.type"/>
-            <min value="0"/>
-            <max value="1"/>
-        </element>
-        <element id="Patient.identifier.system">
-            <path value="Patient.identifier.system"/>
-            <min value="0"/>
-            <max value="1"/>
-        </element>
-        <element id="Patient.identifier.value">
-            <path value="Patient.identifier.value"/>
-            <short value="value"/>
-            <definition value="The identifier, if present, SHALL contain exactly one [1..1] value (CONF:4393-29)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
         <element id="Patient.address">
             <path value="Patient.address"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="use"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Patient.address.extension">
+            <path value="Patient.address.extension"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
+            </type>
         </element>
         <element id="Patient.maritalStatus">
             <path value="Patient.maritalStatus"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
-            <mustSupport value="false"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_MaritalStatus_NCHS"/>
                 <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"/>
             </binding>
-        </element>
-        <element id="Patient.address:homeAddress">
-            <path value="Patient.address"/>
-            <sliceName value="homeAddress"/>
-            <max value="1"/>
-        </element>
-        <element id="Patient.address:homeAddress.use">
-            <path value="Patient.address.use"/>
-            <min value="1"/>
-            <max value="1"/>
-            <fixedCode value="home"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address:homeAddress.type">
-            <path value="Patient.address.type"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address:homeAddress.line">
-            <path value="Patient.address.line"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address:homeAddress.city">
-            <path value="Patient.address.city"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address:homeAddress.district">
-            <path value="Patient.address.district"/>
-            <min value="0"/>
-            <max value="1"/>
-        </element>
-        <element id="Patient.address:homeAddress.state">
-            <path value="Patient.address.state"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address:homeAddress.postalCode">
-            <path value="Patient.address.postalCode"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address.extension">
-            <path value="Patient.address.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Patient.address.extension:extensionSliceWithinCityLimitsIndicator">
-            <path value="Patient.address.extension"/>
-            <sliceName value="extensionSliceWithinCityLimitsIndicator"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
-            </type>
-            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>

@@ -3,16 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Funeral-Home"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2020-07-02T04:59:34.461+00:00"/>
-        <source value="#X21FpBI508nEJ6lX"/>
+        <versionId value="11"/>
+        <lastUpdated value="2020-07-12T20:48:16.230+00:00"/>
+        <source value="#f0OiHR37z6PHVn6U"/>
         <tag>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
             <code value="SUBSETTED"/>
             <display value="Resource encoded in summary mode"/>
         </tag>
     </meta>
-    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_FuneralHome"/>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"/>
     <version value="1.0"/>
     <name value="FuneralHome"/>
     <title value="VRDR Funeral Home"/>
@@ -32,7 +32,7 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Organization"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Organization">
@@ -54,17 +54,13 @@
             <short value="type"/>
             <min value="1"/>
             <max value="1"/>
-        </element>
-        <element id="Organization.type.coding">
-            <path value="Organization.type.coding"/>
-            <short value="coding"/>
-            <definition value="This type SHALL contain exactly one [1..1] coding=&quot;bus&quot; Non-Healthcare Business or Corporation (CONF:4393-122)."/>
-            <min value="1"/>
-            <max value="1"/>
-            <patternCoding>
-                <code value="bus"/>
-                <display value="Non-Healthcare Business or Corporation"/>
-            </patternCoding>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+                    <code value="bus"/>
+                    <display value="Non-Healthcare Business or Corporation"/>
+                </coding>
+            </fixedCodeableConcept>
         </element>
         <element id="Organization.name">
             <path value="Organization.name"/>

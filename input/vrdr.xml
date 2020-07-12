@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="199"/>
-        <lastUpdated value="2020-07-10T15:45:07.601+00:00"/>
-        <source value="#VdckoTKPIVR1D7Sh"/>
+        <versionId value="214"/>
+        <lastUpdated value="2020-07-12T19:22:08.187+00:00"/>
+        <source value="#Am9dcDkBn6xMdwjp"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.0"/>
@@ -71,16 +71,6 @@
         <grouping id="Images">
             <name value="Images"/>
         </grouping>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/VRDR-Decedent"/>
-                <display value="Decedent"/>
-            </reference>
-            <name value="Decedent"/>
-            <description value="The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile. "/>
-            <exampleBoolean value="false"/>
-            <groupingId value="DecedentDemographics"/>
-        </resource>
         <resource>
             <reference>
                 <reference value="StructureDefinition/VRDR-Decedent-Age"/>
@@ -197,7 +187,7 @@
                 <display value="Mortician"/>
             </reference>
             <name value="Mortician"/>
-            <description value="The Mortician resource represents the professional practitioner preceding over the funeral services involved in the disposition of the decedent's remains. The VRDR Mortician profile builds upon the FHIR R4 Practitioner resource. "/>
+            <description value="The Mortician resource represents the professional practitioner preceding over the funeral services involved in the disposition of the decedent's remains. The VRDR Mortician profile builds upon the FHIR R4 Practitioner resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDisposition"/>
         </resource>
@@ -406,16 +396,9 @@
                 <display value="Decedent Father"/>
             </reference>
             <name value="Decedent Father"/>
+            <description value="The Decedent's Father resource represents the paternal parent of the decedent. The VRDR Decedent Father profile builds upon the FHIR R4 Related Person resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDemographics"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/Census-Tract"/>
-                <display value="CensusTract"/>
-            </reference>
-            <name value="CensusTract"/>
-            <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
@@ -423,17 +406,19 @@
                 <display value="FuneralServiceLicensee"/>
             </reference>
             <name value="Funeral Service Licensee"/>
+            <description value="The Funeral Service Licensee resource represents the professional practitioner affiliated with the funeral home that has met the requirements to be a funeral director and/or an embalmer. The VRDR Funeral Service Licensee profile builds upon the FHIR R4 PractitionerRole resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDisposition"/>
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/VRDR-Funeral-Home-Director"/>
-                <display value="FuneralHomeDirector"/>
+                <reference value="StructureDefinition/VRDR-Decedent"/>
+                <display value="VRDR Decedent"/>
             </reference>
-            <name value="Funeral Home Director"/>
+            <name value="Decedent"/>
+            <description value="The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile."/>
             <exampleBoolean value="false"/>
-            <groupingId value="DecedentDisposition"/>
+            <groupingId value="DecedentDemographics"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
