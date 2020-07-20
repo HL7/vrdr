@@ -5,6 +5,7 @@
 * The VRDR FHIR IG is a work product of the [HL7 Public Health Workgroup](http://www.hl7.org/Special/committees/pher/overview.cfm). The HL7 Project Insight reference number for this project is [1475](http://www.hl7.org/Special/committees/pher/projects.cfm?action=edit&ProjectNumber=1475).
 * Informatics consultation for planning and testing of VRDR FHIR profiles and IHE harmonization provided by eHealthsign, LLC.
 * Health Level Seven, HL7, CDA, CCD, FHIR and the [FLAME DESIGN]  are registered trademarks of Health Level Seven International, registered in the US Trademark Office.
+* This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
 The VRDR project team would like to express a special thanks to the following testing partners in their contribution to the VRDR:
 
