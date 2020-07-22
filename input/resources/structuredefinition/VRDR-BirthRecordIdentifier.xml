@@ -3,14 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-BirthRecordIdentifier"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2020-07-12T03:22:21.521+00:00"/>
-        <source value="#uljg5HEAhQOEtrsV"/>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="subsetted"/>
-        </tag>
+        <versionId value="22"/>
+        <lastUpdated value="2020-07-21T00:29:30.908+00:00"/>
+        <source value="#4JaWwyKmZx3ygQud"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
     <name value="VRDR_BirthRecordIdentifier"/>
@@ -30,7 +25,7 @@
             <path value="Observation.status"/>
             <min value="1"/>
             <max value="1"/>
-            <fixedCode value="FINAL"/>
+            <fixedCode value="final"/>
         </element>
         <element id="Observation.code">
             <path value="Observation.code"/>
@@ -73,27 +68,28 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <min value="1"/>
+            <min value="0"/>
             <max value="*"/>
         </element>
         <element id="Observation.component:birthState">
             <path value="Observation.component"/>
             <sliceName value="birthState"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
         </element>
         <element id="Observation.component:birthState.code">
             <path value="Observation.component.code"/>
             <min value="1"/>
             <max value="1"/>
-            <patternCodeableConcept>
+            <fixedCodeableConcept>
                 <coding>
                     <system value="http://loinc.org"/>
                     <code value="21842-0"/>
+                    <display value="Birthplace"/>
                 </coding>
-            </patternCodeableConcept>
+            </fixedCodeableConcept>
         </element>
-        <element id="Observation.component:birthState.value[x]">
+        <element id="Observation.component:value[x]">
             <path value="Observation.component.value[x]"/>
             <min value="1"/>
             <max value="1"/>
@@ -109,13 +105,11 @@
         <element id="Observation.component:birthYear">
             <path value="Observation.component"/>
             <sliceName value="birthYear"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
         </element>
         <element id="Observation.component:birthYear.code">
             <path value="Observation.component.code"/>
-            <min value="1"/>
-            <max value="1"/>
             <fixedCodeableConcept>
                 <coding>
                     <system value="http://loinc.org"/>

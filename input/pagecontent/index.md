@@ -22,13 +22,13 @@ This is a U.S. Realm Specification. This guide and related materials are based o
 <thead>
 <tr>
 <th>Name</th>
-<th>Email</th>
+<th>Email/URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>HL7 International - Public Health</td>
-<td></td>
+<td><a href="http://www.hl7.org/Special/committees/pher" target="_new">http://www.hl7.org/Special/committees/pher</a></td>
 </tr>
 <tr>
 <td>Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov</td>

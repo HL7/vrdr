@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="214"/>
-        <lastUpdated value="2020-07-12T19:22:08.187+00:00"/>
-        <source value="#Am9dcDkBn6xMdwjp"/>
+        <versionId value="257"/>
+        <lastUpdated value="2020-07-22T05:53:06.552+00:00"/>
+        <source value="#rtEByFhC3maikWNH"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.0"/>
@@ -70,6 +70,10 @@
         </grouping>
         <grouping id="Images">
             <name value="Images"/>
+        </grouping>
+        <grouping id="VRDR-Instance-Examples">
+            <name value="Instance Examples"/>
+            <description value="A collection of VRDR FHIR IG resource profile instance examples."/>
         </grouping>
         <resource>
             <reference>
@@ -419,6 +423,226 @@
             <description value="The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDemographics"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88"/>
+                <display value="AutopsyPerformedIndicatorInstanceExample"/>
+            </reference>
+            <name value="Autopsy Performed Indicator Instance Example"/>
+            <description value="Instance example of the Autopsy Performed Indicator resource profile. This example indicates that an autopsy was performed and that the results of the autopsy are available."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/51b806c8-566f-463e-8783-9fbf6be8161d"/>
+                <display value="VRDRDecedentInstanceExample"/>
+            </reference>
+            <name value="Decedent Instance Example"/>
+            <description value="An instance example of the VRDR Decedent resource profile. Mr. Example Last, a White, Native Hawaiian, Hispanic male born 1940-02-19 and residing in Middlesex, MA."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7"/>
+                <display value="Birth-Record-Identifier-Example"/>
+            </reference>
+            <name value="Birth Record Identifier Example"/>
+            <description value="An instance example of the Birth Record Identifier resource profile.  In this example Birth Record identifier 4242123 denotes Massachusetts and 1940 as the birthplace and birth year of the decedent."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"/>
+                <display value="CertifierInstanceExample"/>
+            </reference>
+            <name value="Certifier Instance Example"/>
+            <description value="An instance example of a Certifier resource profile. This example is a certifying physician."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"/>
+                <display value="DeathCertificationInstanceExample"/>
+            </reference>
+            <name value="Death Certification Instance Example"/>
+            <description value="An instance example of a Death Certification resource profile. This example Death Certification procedure performed by a physician on 2019-01-29."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/1a110397-936f-4be4-ab10-2caed226569d"/>
+                <display value="InterestedPartyInstanceExample"/>
+            </reference>
+            <name value="Interested Party Instance Example"/>
+            <description value="An instance example of the Interested Party resource profile. In the example, Example Hospital from MA is an active Healthcare Provider interested party."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/56b8ce2e-64f8-450b-8885-0699a53fc781"/>
+                <display value="ConditionContributingToDeathExample"/>
+            </reference>
+            <name value="Condition Contributing To Death Example"/>
+            <description value="An instance example of the VRDR-Condition-Contributing-To-Death resource profile. In this example, the condition is noted as text only. This is typical of a death record outbound from a jurisdictional EDRS to the NCHS."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b"/>
+                <display value="DecedentAgeExample"/>
+            </reference>
+            <name value="Decedent Age Example"/>
+            <description value="An instance example of the VRDR-Decedent-Age resource profile. In this example, the decedent is identified as 79 years in age."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/b531cbf7-6290-424c-8155-0549c3fb3243"/>
+                <display value="DeathDateExample"/>
+            </reference>
+            <name value="Death Date Example"/>
+            <description value="An instance example of the VRDR-Death-Date resource profile. In this example, the date and time of death is 2018-02-20T16:48:06-05:00. The Date and time pronounced dead is also  2018-02-20T16:48:06-05:00."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Location/b7de6056-817f-4d73-9830-ce566accd044"/>
+                <display value="DeathLocationExample"/>
+            </reference>
+            <name value="Death Location Example"/>
+            <description value="An instance example of the Death Location resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a"/>
+                <display value="InjuryLocationExample"/>
+            </reference>
+            <name value="Injury Location"/>
+            <description value="An instance example of the VRDR-Injury-Location resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99"/>
+                <display value="TobaccoUseContributedToDeathExample"/>
+            </reference>
+            <name value="Tobacco Use Contributed To Death"/>
+            <description value="An instance example of the VRDR-Tobacco-Use-Contributed-To-Death resource profile.&#xA; "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/4aed1450-ab2d-4cb9-858f-227b127323a6"/>
+                <display value="ExaminerContactedExample"/>
+            </reference>
+            <name value="Examiner Contacted Example"/>
+            <description value="An instance example of the VRDR-Examiner-Contacted resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/092e7b13-224d-46a6-ac31-0d98d4c84126"/>
+                <display value="DecedentPregnancyExample"/>
+            </reference>
+            <name value="Decedent Pregnancy Example"/>
+            <description value="An instance example of the VRDR-Decedent-Pregnancy resource profile.&#xA;"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/d80681ff-9f1d-4915-87b5-eda54534096a"/>
+                <display value="DecedentDispositionMethodExample"/>
+            </reference>
+            <name value="Decedent Disposition Method Example"/>
+            <description value="An instance example of the VRDR-Decedent-Disposition-Method resource profile.&#xA;"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2"/>
+                <display value="MorticianExample"/>
+            </reference>
+            <name value="Mortician Example"/>
+            <description value="An instance example of the VRDR-Mortician resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/636dafac-0d92-4649-b838-004bcf714f5aj"/>
+                <display value="DecedentUsualWorkExample"/>
+            </reference>
+            <name value="Decedent Usual Work Example"/>
+            <description value="An instance example of the VRDR-Decedent-Usual-Work resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/9676ae27-2a89-4295-913c-0d6847300a3a"/>
+                <display value="DecedentEducationLevelExample"/>
+            </reference>
+            <name value="Decedent Education Level Example"/>
+            <description value="An instance example of the VRDR-Decedent-Education-Level resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f"/>
+                <display value="DecedentSpouseExample"/>
+            </reference>
+            <name value="Decedent Spouse Example"/>
+            <description value="An instance example of the VRDR-Decedent-Spouse example."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"/>
+            <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9"/>
+                <display value="DecedentMotherExample"/>
+            </reference>
+            <name value="Decedent Mother Example"/>
+            <description value="An instance example of the VRDR-Decedent-Mother resource profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
+            <groupingId value="VRDR-Instance-Examples"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
