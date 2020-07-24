@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="51b806c8-566f-463e-8783-9fbf6be8161d"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2020-07-21T20:40:45.096+00:00"/>
-        <source value="#ZhH5CvQBIKAHe0hx"/>
+        <versionId value="4"/>
+        <lastUpdated value="2020-07-22T19:41:31.297+00:00"/>
+        <source value="#EoJNRyx11BYIT5J6"/>
         <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     </meta>
     <text>
@@ -43,8 +43,45 @@
             </table>
         </div>
     </text>
-    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
-        <valueCode value="F"/>
+    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+        <extension url="ombCategory">
+            <valueCoding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2106-3"/>
+                <display value="White"/>
+            </valueCoding>
+        </extension>
+        <extension url="ombCategory">
+            <valueCoding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="1002-5"/>
+                <display value="American Indian or Alaska Native"/>
+            </valueCoding>
+        </extension>
+        <extension url="ombCategory">
+            <valueCoding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2028-9"/>
+                <display value="Asian"/>
+            </valueCoding>
+        </extension>
+        <extension url="detailed">
+            <valueCoding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="1586-7"/>
+                <display value="Shoshone"/>
+            </valueCoding>
+        </extension>
+        <extension url="detailed">
+            <valueCoding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2036-2"/>
+                <display value="Filipino"/>
+            </valueCoding>
+        </extension>
+        <extension url="text">
+            <valueString value="Mixed"/>
+        </extension>
     </extension>
     <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
         <extension url="ombCategory">
@@ -57,54 +94,28 @@
         <extension url="detailed">
             <valueCoding>
                 <system value="urn:oid:2.16.840.1.113883.6.238"/>
-                <code value="2180-8"/>
-                <display value="Puerto Rican"/>
-            </valueCoding>
-        </extension>
-        <extension url="text">
-            <valueString value="Hispanic or Latino, Puerto Rican"/>
-        </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
-        <extension url="ombCategory">
-            <valueCoding>
-                <system value="urn:oid:2.16.840.1.113883.6.238"/>
-                <code value="2106-3"/>
-                <display value="White"/>
-            </valueCoding>
-        </extension>
-        <extension url="ombCategory">
-            <valueCoding>
-                <system value="urn:oid:2.16.840.1.113883.6.238"/>
-                <code value="2076-8"/>
-                <display value="Native Hawaiian or Other Pacific Islander"/>
+                <code value="2184-0"/>
+                <display value="Dominican"/>
             </valueCoding>
         </extension>
         <extension url="detailed">
             <valueCoding>
                 <system value="urn:oid:2.16.840.1.113883.6.238"/>
-                <code value="2079-2"/>
-                <display value="Native Hawaiian"/>
+                <code value="2148-5"/>
+                <display value="Mexican"/>
             </valueCoding>
         </extension>
         <extension url="text">
-            <valueString value="White, Native Hawaiian or Other Pacific Islander, Native Hawaiian"/>
+            <valueString value="Hispanic or Latino"/>
         </extension>
     </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
-        <valueAddress>
-            <line value="1011 Example Street"/>
-            <line value="Line 2"/>
-            <city value="Bedford"/>
-            <district value="Middlesex"/>
-            <state value="MA"/>
-            <postalCode value="01730"/>
-            <country value="United States"/>
-        </valueAddress>
+    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
+        <valueCode value="F"/>
     </extension>
     <identifier>
         <type>
             <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
                 <code value="SB"/>
                 <display value="Social Beneficiary Identifier"/>
             </coding>
