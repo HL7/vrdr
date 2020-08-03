@@ -1,0 +1,86 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Funeral-Home",
+	"meta": {
+		"versionId": "11",
+		"lastUpdated": "2020-07-12T20:48:16.230+00:00",
+		"source": "#f0OiHR37z6PHVn6U"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home",
+	"version": "1.0",
+	"name": "FuneralHome",
+	"title": "VRDR Funeral Home",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Organization",
+				"path": "Organization"
+			},
+			{
+				"id": "Organization.id",
+				"path": "Organization.id",
+				"short": "id",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Organization.identifier",
+				"path": "Organization.identifier",
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "Organization.type",
+				"path": "Organization.type",
+				"short": "type",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/organization-type",
+							"code": "bus",
+							"display": "Non-Healthcare Business or Corporation"
+						}
+					]
+				}
+			},
+			{
+				"id": "Organization.name",
+				"path": "Organization.name",
+				"short": "name",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Organization.address",
+				"path": "Organization.address",
+				"short": "address",
+				"min": 1,
+				"max": "1"
+			}
+		]
+	}
+}

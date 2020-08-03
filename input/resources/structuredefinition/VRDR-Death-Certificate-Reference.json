@@ -1,0 +1,139 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Death-Certificate-Reference",
+	"meta": {
+		"versionId": "14",
+		"lastUpdated": "2020-07-12T00:29:05.334+00:00",
+		"source": "#sSJuC4XLANx1tvKj"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference",
+	"version": "1.0",
+	"name": "DeathCertificateReference",
+	"title": "VRDR Death Certificate Reference",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-09",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The Death Certificate Reference profile is used to enable interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource.",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "DocumentReference",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "DocumentReference",
+				"path": "DocumentReference"
+			},
+			{
+				"id": "DocumentReference.identifier",
+				"path": "DocumentReference.identifier",
+				"short": "identifier",
+				"definition": "SHALL contain exactly one [1..1] identifier (CONF:4393-392).",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "DocumentReference.status",
+				"path": "DocumentReference.status",
+				"short": "status",
+				"definition": "SHALL contain exactly one [1..1] status, which SHALL be selected from ValueSet DocumentReferenceStatus http://hl7.org/fhir/ValueSet/DocumentReferenceStatus DYNAMIC (CONF:4393-394).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "Document Type Value Set",
+					"valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
+				}
+			},
+			{
+				"id": "DocumentReference.type",
+				"path": "DocumentReference.type",
+				"short": "type",
+				"definition": "SHALL contain exactly one [1..1] type=\"\"64297-5\"\"(CONF:4393-396).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "64297-5",
+							"display": "Death certificate"
+						}
+					]
+				}
+			},
+			{
+				"id": "DocumentReference.date",
+				"path": "DocumentReference.date",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "DocumentReference.author",
+				"path": "DocumentReference.author",
+				"short": "author",
+				"definition": "SHALL contain exactly one [1..1] author=\"VRDR Interested Party\"(CONF:4393-390).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"
+						]
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context",
+				"path": "DocumentReference.context",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "DocumentReference.context.related",
+				"path": "DocumentReference.context.related",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document"
+						]
+					}
+				]
+			}
+		]
+	}
+}

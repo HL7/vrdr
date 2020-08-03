@@ -1,0 +1,215 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Death-Certificate",
+	"meta": {
+		"versionId": "12",
+		"lastUpdated": "2020-07-11T03:35:44.439+00:00",
+		"source": "#YG6J2AD8L3bLFQ4s"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
+	"version": "1.0",
+	"name": "DeathCertificate",
+	"title": "VRDR Death Certificate",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-09",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource.",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Composition",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Composition",
+				"path": "Composition"
+			},
+			{
+				"id": "Composition.identifier",
+				"path": "Composition.identifier",
+				"short": "identifier",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.status",
+				"path": "Composition.status",
+				"short": "status",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/composition-status"
+				}
+			},
+			{
+				"id": "Composition.type",
+				"path": "Composition.type",
+				"short": "type",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "64297-5",
+							"display": "Death certificate"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.subject",
+				"path": "Composition.subject",
+				"short": "subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Composition.date",
+				"path": "Composition.date",
+				"short": "date",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.attester",
+				"path": "Composition.attester",
+				"short": "attester",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "BackboneElement"
+					}
+				]
+			},
+			{
+				"id": "Composition.attester.mode",
+				"path": "Composition.attester.mode",
+				"short": "mode",
+				"definition": "This attester SHALL contain exactly one [1..1] mode=\"\"legal\"\"(CONF:4393-367).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"fixedCode": "legal"
+			},
+			{
+				"id": "Composition.attester.time",
+				"path": "Composition.attester.time",
+				"short": "time",
+				"definition": "This attester SHALL contain exactly one [1..1] time (CONF:4393-369).",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.attester.party",
+				"path": "Composition.attester.party",
+				"short": "party",
+				"definition": "This attester SHALL contain exactly one [1..1] party=\"VRDR Certifier\"(CONF:4393-368).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+						]
+					}
+				]
+			},
+			{
+				"id": "Composition.event",
+				"path": "Composition.event",
+				"short": "event",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "BackboneElement"
+					}
+				]
+			},
+			{
+				"id": "Composition.event.code",
+				"path": "Composition.event.code",
+				"short": "code",
+				"definition": "This event SHALL contain exactly one [1..1] code=\"\"103693007\"\"(CONF:4393-372).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "103693007",
+							"display": "Diagnostic procedure (procedure)"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.event.detail",
+				"path": "Composition.event.detail",
+				"short": "detail",
+				"definition": "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"
+						]
+					}
+				]
+			}
+		]
+	}
+}

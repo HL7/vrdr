@@ -1,0 +1,97 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Death-Certificate-Document",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-07-27T13:15:14.005+00:00",
+		"source": "#7cRGcSz4DppBYtHn"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
+	"version": "1.0",
+	"name": "DeathCertificateDocument",
+	"title": "VRDR Death Certificate Document",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-09",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The Death Certificate Document profile is a bundle of resources comprising the death certificate composition. The Death Certificate Document builds upon the FHIR Document resource.",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Bundle",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Bundle",
+				"path": "Bundle"
+			},
+			{
+				"id": "Bundle.identifier",
+				"path": "Bundle.identifier",
+				"short": "identifier",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Bundle.type",
+				"path": "Bundle.type",
+				"short": "type",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"fixedCode": "document"
+			},
+			{
+				"id": "Bundle.entry",
+				"path": "Bundle.entry",
+				"short": "entry",
+				"min": 1,
+				"max": "*",
+				"type": [
+					{
+						"code": "BackboneElement"
+					}
+				]
+			},
+			{
+				"id": "Bundle.entry.resource",
+				"path": "Bundle.entry.resource",
+				"short": "resource",
+				"definition": "This entry SHALL contain exactly one [1..1] resource=\"VRDR Death Certificate\" (CONF:4393-360).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Resource",
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"
+						]
+					}
+				]
+			}
+		]
+	}
+}

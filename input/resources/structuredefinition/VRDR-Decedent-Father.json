@@ -1,0 +1,97 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Decedent-Father",
+	"meta": {
+		"versionId": "13",
+		"lastUpdated": "2020-07-12T17:08:13.410+00:00",
+		"source": "#UgDGRjf1iqeh6k0e"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father",
+	"version": "1.0",
+	"name": "DecedentFather",
+	"title": "Decedent Father",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "RelatedPerson",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "RelatedPerson",
+				"path": "RelatedPerson"
+			},
+			{
+				"id": "RelatedPerson.patient",
+				"path": "RelatedPerson.patient",
+				"short": "patient",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "RelatedPerson.relationship",
+				"path": "RelatedPerson.relationship",
+				"short": "relationship",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+							"code": "FTH",
+							"display": "father"
+						}
+					]
+				}
+			},
+			{
+				"id": "RelatedPerson.name",
+				"path": "RelatedPerson.name",
+				"short": "name",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "RelatedPerson.address",
+				"path": "RelatedPerson.address",
+				"min": 0,
+				"max": "1"
+			}
+		]
+	}
+}

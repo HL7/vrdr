@@ -1,0 +1,114 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Decedent-Pregnancy",
+	"meta": {
+		"versionId": "13",
+		"lastUpdated": "2020-07-11T22:49:04.426+00:00",
+		"source": "#Xu6BTOfmEZYcJVsr"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy",
+	"version": "1.0",
+	"name": "DecedentPregnancy",
+	"title": "VRDR Decedent Pregnancy",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation",
+				"path": "Observation"
+			},
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"short": "status",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"fixedCode": "final"
+			},
+			{
+				"id": "Observation.code",
+				"path": "Observation.code",
+				"short": "code",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "69442-2",
+							"display": "Timing of recent pregnancy in relation to death"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"short": "subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.value[x]",
+				"path": "Observation.value[x]",
+				"short": "value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_PregnancyStatus_NCHS",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003"
+				}
+			}
+		]
+	}
+}

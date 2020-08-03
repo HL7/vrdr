@@ -1,0 +1,90 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Decedent-Spouse",
+	"meta": {
+		"versionId": "9",
+		"lastUpdated": "2020-07-11T22:49:29.228+00:00",
+		"source": "#WNGgSjS3ZSZMbp8W"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse",
+	"version": "1.0",
+	"name": "DecedentSpouse",
+	"title": "VRDR Decedent Spouse",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "RelatedPerson",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "RelatedPerson",
+				"path": "RelatedPerson"
+			},
+			{
+				"id": "RelatedPerson.patient",
+				"path": "RelatedPerson.patient",
+				"short": "patient",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "RelatedPerson.relationship",
+				"path": "RelatedPerson.relationship",
+				"short": "relationship",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+							"code": "SPS",
+							"display": "spouse"
+						}
+					]
+				}
+			},
+			{
+				"id": "RelatedPerson.name",
+				"path": "RelatedPerson.name",
+				"min": 1,
+				"max": "1"
+			}
+		]
+	}
+}

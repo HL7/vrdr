@@ -1,0 +1,221 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-InjuryIncident",
+	"meta": {
+		"versionId": "18",
+		"lastUpdated": "2020-07-12T17:46:56.972+00:00",
+		"source": "#QfJRmYloQY1WpbGb"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
+	"name": "InjuryIncident",
+	"title": "VRDR Injury Incident",
+	"status": "active",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation",
+				"path": "Observation"
+			},
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"min": 1,
+				"max": "1",
+				"fixedCode": "final"
+			},
+			{
+				"id": "Observation.code",
+				"path": "Observation.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11374-6",
+							"display": "Injury incident description Narrative"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.effective[x]",
+				"path": "Observation.effective[x]",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					}
+				]
+			},
+			{
+				"id": "Observation.value[x]",
+				"path": "Observation.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					},
+					{
+						"code": "string"
+					}
+				]
+			},
+			{
+				"id": "Observation.component",
+				"path": "Observation.component",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "code"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 3,
+				"max": "3"
+			},
+			{
+				"id": "Observation.component:placeOfInjury",
+				"path": "Observation.component",
+				"sliceName": "placeOfInjury",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Observation.component:placeOfInjury.code",
+				"path": "Observation.component.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "69450-5",
+							"display": "Place of injury Facility"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.component:placeOfInjury.value[x]",
+				"path": "Observation.component.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_PlaceOfInjury_NCHS",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7374"
+				}
+			},
+			{
+				"id": "Observation.component:workInjuryIndicator",
+				"path": "Observation.component",
+				"sliceName": "workInjuryIndicator",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Observation.component:workInjuryIndicator.code",
+				"path": "Observation.component.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "69444-8",
+							"display": "Did death result from injury at work"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.component:workInjuryIndicator.value[x]",
+				"path": "Observation.component.value[x]",
+				"short": "valueCodeableConcept",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_YesNoNotApplicable_NCHS",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7486"
+				}
+			},
+			{
+				"id": "Observation.component:transportationEventIndicator",
+				"path": "Observation.component",
+				"sliceName": "transportationEventIndicator",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Observation.component:transportationEventIndicator.code",
+				"path": "Observation.component.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "69448-9",
+							"display": "Injury leading to death associated with transportation event"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.component:transportationEventIndicator.value[x]",
+				"path": "Observation.component.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_YesNoUnknown_CDC",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.888"
+				}
+			}
+		]
+	}
+}

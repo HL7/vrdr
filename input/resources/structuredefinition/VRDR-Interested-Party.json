@@ -1,0 +1,112 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Interested-Party",
+	"meta": {
+		"versionId": "9",
+		"lastUpdated": "2020-07-12T20:50:19.198+00:00",
+		"source": "#eGOxlRQeMmKTfK2R"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party",
+	"version": "1.0",
+	"name": "InterestedParty",
+	"title": "VRDR Interested Party",
+	"status": "draft",
+	"publisher": "Hi3 Solutions",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Organization",
+				"path": "Organization"
+			},
+			{
+				"id": "Organization.id",
+				"path": "Organization.id",
+				"short": "id",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Organization.identifier",
+				"path": "Organization.identifier",
+				"short": "identifier",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Organization.active",
+				"path": "Organization.active",
+				"short": "active",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Organization.type",
+				"path": "Organization.type",
+				"short": "type",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/organization-type"
+				}
+			},
+			{
+				"id": "Organization.name",
+				"path": "Organization.name",
+				"short": "name",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Organization.address",
+				"path": "Organization.address",
+				"short": "address",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Organization.partOf",
+				"path": "Organization.partOf",
+				"short": "partOf",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"
+						]
+					}
+				]
+			}
+		]
+	}
+}

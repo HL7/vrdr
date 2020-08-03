@@ -1,0 +1,96 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Disposition-Location",
+	"meta": {
+		"versionId": "12",
+		"lastUpdated": "2020-07-23T14:32:42.423+00:00",
+		"source": "#Z9KPADKuXy2lXAzo"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location",
+	"version": "1.0",
+	"name": "DispositionLocation",
+	"title": "VRDR Disposition Location",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Location",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Location",
+				"path": "Location"
+			},
+			{
+				"id": "Location.name",
+				"path": "Location.name",
+				"short": "name",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.description",
+				"path": "Location.description",
+				"short": "description",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Location.type",
+				"path": "Location.type",
+				"short": "type",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Location.type.coding",
+				"path": "Location.type.coding",
+				"binding": {
+					"strength": "extensible",
+					"description": "v3.ServiceDeliveryLocationRoleType",
+					"valueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+				}
+			},
+			{
+				"id": "Location.address",
+				"path": "Location.address",
+				"short": "address",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.physicalType",
+				"path": "Location.physicalType",
+				"short": "physicalType",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.physicalType.coding",
+				"path": "Location.physicalType.coding",
+				"binding": {
+					"strength": "required",
+					"description": "LocationType",
+					"valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,144 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Cause-of-Death-Pathway",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-07-12T04:25:59.999+00:00",
+		"source": "#6uKjje9IIwW1M35K"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway",
+	"name": "VRDR_CauseOfDeathPathway",
+	"title": "VRDR Cause of Death Pathway",
+	"status": "draft",
+	"publisher": "Hi3 Solutions",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "VRDR Cause of Death Pathway is an ordered list of cause of death conditions. It builds upon the FHIR LIST resource. The source of VRDR Cause of Death Pathway (LIST.source) is a cause of death certifier. \n",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "List",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/List",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "List",
+				"path": "List"
+			},
+			{
+				"id": "List.id",
+				"path": "List.id",
+				"short": "id",
+				"definition": "MAY contain zero or one [0..1] id (CONF:4393-317).",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "List.status",
+				"path": "List.status",
+				"short": "status",
+				"definition": "SHALL contain exactly one [1..1] status=\"\"current\"\" (CONF:4393-324).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"fixedCode": "current"
+			},
+			{
+				"id": "List.mode",
+				"path": "List.mode",
+				"short": "mode",
+				"definition": "SHALL contain exactly one [1..1] mode=\"\"snapshot\"\" (CONF:4393-321).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"fixedCode": "snapshot"
+			},
+			{
+				"id": "List.source",
+				"path": "List.source",
+				"short": "source",
+				"definition": "SHALL contain exactly one [1..1] source=\"VRDR Certifier\" (CONF:4393-323).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+						]
+					}
+				]
+			},
+			{
+				"id": "List.orderedBy",
+				"path": "List.orderedBy",
+				"short": "orderedBy",
+				"definition": "SHALL contain exactly one [1..1] orderedBy=\"\"priority\"\" (CONF:4393-322).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/list-order",
+							"code": "priority",
+							"display": "Sorted by Priority"
+						}
+					]
+				}
+			},
+			{
+				"id": "List.entry",
+				"path": "List.entry",
+				"short": "entry",
+				"definition": "MAY contain zero or more [0..*] entry (CONF:4393-319).",
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "List.entry.item",
+				"path": "List.entry.item",
+				"short": "item",
+				"definition": "The entry, if present, SHALL contain exactly one [1..1] item=\"VRDR Cause Of Death Condition\" (CONF:4393-320).",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"
+						]
+					}
+				]
+			}
+		]
+	}
+}

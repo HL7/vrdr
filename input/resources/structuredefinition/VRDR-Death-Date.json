@@ -1,0 +1,172 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Death-Date",
+	"meta": {
+		"versionId": "16",
+		"lastUpdated": "2020-07-21T05:29:48.201+00:00",
+		"source": "#7tGITkQv3tuzZ8mU"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date",
+	"name": "VRDR_DeathDate",
+	"title": "VRDR_DeathDate",
+	"status": "active",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation",
+				"path": "Observation"
+			},
+			{
+				"id": "Observation.extension",
+				"path": "Observation.extension",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Observation.extension.value[x]",
+				"path": "Observation.extension.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"min": 1,
+				"max": "1",
+				"fixedCode": "final"
+			},
+			{
+				"id": "Observation.code",
+				"path": "Observation.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "81956-5",
+							"display": "Date+time of death"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.effective[x]",
+				"path": "Observation.effective[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					}
+				]
+			},
+			{
+				"id": "Observation.performer",
+				"path": "Observation.performer",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.value[x]",
+				"path": "Observation.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					}
+				]
+			},
+			{
+				"id": "Observation.note",
+				"path": "Observation.note",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Observation.method",
+				"path": "Observation.method",
+				"min": 0,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "414135002",
+							"display": "Estimated"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.component",
+				"path": "Observation.component",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Observation.component.code",
+				"path": "Observation.component.code",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "80616-6",
+							"display": "Date and time pronounced dead [US Standard Certificate of Death]"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.component.value[x]",
+				"path": "Observation.component.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					}
+				]
+			}
+		]
+	}
+}
