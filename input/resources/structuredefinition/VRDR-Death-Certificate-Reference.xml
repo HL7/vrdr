@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate-Reference"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2020-07-12T00:29:05.334+00:00"/>
-        <source value="#sSJuC4XLANx1tvKj"/>
+        <versionId value="16"/>
+        <lastUpdated value="2020-08-16T20:39:12.490+00:00"/>
+        <source value="#drWDxwGIRH58zfD6"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"/>
     <version value="1.0"/>
@@ -94,18 +94,22 @@
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"/>
             </type>
         </element>
-        <element id="DocumentReference.context">
-            <path value="DocumentReference.context"/>
+        <element id="DocumentReference.content">
+            <path value="DocumentReference.content"/>
             <min value="1"/>
             <max value="1"/>
         </element>
-        <element id="DocumentReference.context.related">
-            <path value="DocumentReference.context.related"/>
+        <element id="DocumentReference.content.attachment">
+            <path value="DocumentReference.content.attachment"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="DocumentReference.content.attachment.url">
+            <path value="DocumentReference.content.attachment.url"/>
             <min value="1"/>
             <max value="1"/>
             <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document"/>
+                <code value="url"/>
             </type>
         </element>
     </differential>
