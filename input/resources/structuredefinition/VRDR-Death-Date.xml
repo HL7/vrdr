@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Date"/>
     <meta>
-        <versionId value="17"/>
-        <lastUpdated value="2020-08-17T04:06:14.529+00:00"/>
-        <source value="#TrSKoo93LSk9Af3H"/>
+        <versionId value="19"/>
+        <lastUpdated value="2020-08-17T16:46:05.221+00:00"/>
+        <source value="#cWH5FpaiGE9NuPNq"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"/>
     <name value="VRDR_DeathDate"/>
@@ -23,16 +23,27 @@
         </element>
         <element id="Observation.extension">
             <path value="Observation.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="Observation.extension.url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Observation.extension:deathLocation">
+            <path value="Observation.extension"/>
+            <sliceName value="deathLocation"/>
             <min value="0"/>
             <max value="1"/>
         </element>
-        <element id="Observation.extension.url">
+        <element id="Observation.extension:deathLocation.url">
             <path value="Observation.extension.url"/>
             <min value="1"/>
             <max value="1"/>
             <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"/>
         </element>
-        <element id="Observation.extension.value[x]">
+        <element id="Observation.extension:deathLocation.value[x]">
             <path value="Observation.extension.value[x]"/>
             <min value="1"/>
             <max value="1"/>

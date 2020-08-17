@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-InjuryIncident"/>
     <meta>
-        <versionId value="20"/>
-        <lastUpdated value="2020-08-17T04:14:47.846+00:00"/>
-        <source value="#6fyHMKRqkkP3tMZS"/>
+        <versionId value="23"/>
+        <lastUpdated value="2020-08-17T16:17:34.702+00:00"/>
+        <source value="#MuquB0uvBh8BkWDP"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
     <name value="InjuryIncident"/>
@@ -26,19 +26,30 @@
         </element>
         <element id="Observation.extension">
             <path value="Observation.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="Observation.extension.url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.extension:injuryLocation">
+            <path value="Observation.extension"/>
+            <sliceName value="injuryLocation"/>
             <min value="0"/>
             <max value="1"/>
         </element>
-        <element id="Observation.extension.url">
+        <element id="Observation.extension:injuryLocation.url">
             <path value="Observation.extension.url"/>
             <min value="1"/>
             <max value="1"/>
             <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"/>
         </element>
-        <element id="Observation.extension.value[x]">
+        <element id="Observation.extension:injuryLocation.value[x]">
             <path value="Observation.extension.value[x]"/>
-            <min value="1"/>
-            <max value="1"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"/>

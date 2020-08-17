@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Date",
 	"meta": {
-		"versionId": "17",
-		"lastUpdated": "2020-08-17T04:06:14.529+00:00",
-		"source": "#TrSKoo93LSk9Af3H"
+		"versionId": "19",
+		"lastUpdated": "2020-08-17T16:46:05.221+00:00",
+		"source": "#cWH5FpaiGE9NuPNq"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date",
 	"name": "VRDR_DeathDate",
@@ -25,18 +25,32 @@
 			{
 				"id": "Observation.extension",
 				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "Observation.extension.url"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Observation.extension:deathLocation",
+				"path": "Observation.extension",
+				"sliceName": "deathLocation",
 				"min": 0,
 				"max": "1"
 			},
 			{
-				"id": "Observation.extension.url",
+				"id": "Observation.extension:deathLocation.url",
 				"path": "Observation.extension.url",
 				"min": 1,
 				"max": "1",
 				"fixedUri": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"
 			},
 			{
-				"id": "Observation.extension.value[x]",
+				"id": "Observation.extension:deathLocation.value[x]",
 				"path": "Observation.extension.value[x]",
 				"min": 1,
 				"max": "1",

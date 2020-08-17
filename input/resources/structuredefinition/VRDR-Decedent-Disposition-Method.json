@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Decedent-Disposition-Method",
 	"meta": {
-		"versionId": "23",
-		"lastUpdated": "2020-08-17T03:55:23.922+00:00",
-		"source": "#GJDG7xHPKCCCnLQR"
+		"versionId": "32",
+		"lastUpdated": "2020-08-17T14:36:23.009+00:00",
+		"source": "#bReEsnSuWhXVxAUW"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method",
 	"version": "1.0",
@@ -39,18 +39,30 @@
 			{
 				"id": "Observation.extension",
 				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "Observation.extension"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Observation.extension:dispositionLocation",
+				"path": "Observation.extension",
+				"sliceName": "dispositionLocation",
 				"min": 0,
 				"max": "1"
 			},
 			{
-				"id": "Observation.extension.url",
+				"id": "Observation.extension:dispositionLocation.url",
 				"path": "Observation.extension.url",
-				"min": 1,
-				"max": "1",
 				"fixedUri": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"
 			},
 			{
-				"id": "Observation.extension.value[x]",
+				"id": "Observation.extension:dispositionLocation.value[x]",
 				"path": "Observation.extension.value[x]",
 				"min": 1,
 				"max": "1",

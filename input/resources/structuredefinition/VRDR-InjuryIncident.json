@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-InjuryIncident",
 	"meta": {
-		"versionId": "20",
-		"lastUpdated": "2020-08-17T04:14:47.846+00:00",
-		"source": "#6fyHMKRqkkP3tMZS"
+		"versionId": "23",
+		"lastUpdated": "2020-08-17T16:17:34.702+00:00",
+		"source": "#MuquB0uvBh8BkWDP"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
 	"name": "InjuryIncident",
@@ -28,21 +28,35 @@
 			{
 				"id": "Observation.extension",
 				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "Observation.extension.url"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "Observation.extension:injuryLocation",
+				"path": "Observation.extension",
+				"sliceName": "injuryLocation",
 				"min": 0,
 				"max": "1"
 			},
 			{
-				"id": "Observation.extension.url",
+				"id": "Observation.extension:injuryLocation.url",
 				"path": "Observation.extension.url",
 				"min": 1,
 				"max": "1",
 				"fixedUri": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"
 			},
 			{
-				"id": "Observation.extension.value[x]",
+				"id": "Observation.extension:injuryLocation.value[x]",
 				"path": "Observation.extension.value[x]",
-				"min": 1,
-				"max": "1",
 				"type": [
 					{
 						"code": "Reference",
