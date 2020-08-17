@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="318"/>
-        <lastUpdated value="2020-08-13T21:56:58.792+00:00"/>
-        <source value="#2DmbGZc7XlLYLyp2"/>
+        <versionId value="322"/>
+        <lastUpdated value="2020-08-17T03:14:15.293+00:00"/>
+        <source value="#IMHyQcKjYO7JVDoz"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.0"/>
@@ -74,6 +74,10 @@
         <grouping id="VRDR-Instance-Examples">
             <name value="Instance Examples"/>
             <description value="A collection of VRDR FHIR IG resource profile instance examples."/>
+        </grouping>
+        <grouping id="Extensions">
+            <name value="Extensions"/>
+            <description value="Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."/>
         </grouping>
         <resource>
             <reference>
@@ -313,6 +317,7 @@
             <name value="Within City Limits Indicator"/>
             <description value="The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city."/>
             <exampleBoolean value="false"/>
+            <groupingId value="Extensions"/>
         </resource>
         <resource>
             <reference>
@@ -797,6 +802,16 @@
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"/>
             <groupingId value="VRDR-Instance-Examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Observation-Location"/>
+                <display value="Observation Location"/>
+            </reference>
+            <name value="Observation Location"/>
+            <description value="Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="Extensions"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>

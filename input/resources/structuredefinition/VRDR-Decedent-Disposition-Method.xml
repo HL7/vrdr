@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Disposition-Method"/>
     <meta>
-        <versionId value="21"/>
-        <lastUpdated value="2020-07-28T20:11:02.808+00:00"/>
-        <source value="#uNMxQpIKKdH6Sghe"/>
+        <versionId value="23"/>
+        <lastUpdated value="2020-08-17T03:55:23.922+00:00"/>
+        <source value="#GJDG7xHPKCCCnLQR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"/>
     <version value="1.0"/>
@@ -30,6 +30,26 @@
     <differential>
         <element id="Observation">
             <path value="Observation"/>
+        </element>
+        <element id="Observation.extension">
+            <path value="Observation.extension"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.extension.url">
+            <path value="Observation.extension.url"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"/>
+        </element>
+        <element id="Observation.extension.value[x]">
+            <path value="Observation.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"/>
+            </type>
         </element>
         <element id="Observation.status">
             <path value="Observation.status"/>

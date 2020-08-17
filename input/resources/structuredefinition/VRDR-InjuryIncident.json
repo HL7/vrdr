@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-InjuryIncident",
 	"meta": {
-		"versionId": "18",
-		"lastUpdated": "2020-07-12T17:46:56.972+00:00",
-		"source": "#QfJRmYloQY1WpbGb"
+		"versionId": "20",
+		"lastUpdated": "2020-08-17T04:14:47.846+00:00",
+		"source": "#6fyHMKRqkkP3tMZS"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
 	"name": "InjuryIncident",
@@ -24,6 +24,33 @@
 			{
 				"id": "Observation",
 				"path": "Observation"
+			},
+			{
+				"id": "Observation.extension",
+				"path": "Observation.extension",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Observation.extension.url",
+				"path": "Observation.extension.url",
+				"min": 1,
+				"max": "1",
+				"fixedUri": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"
+			},
+			{
+				"id": "Observation.extension.value[x]",
+				"path": "Observation.extension.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"
+						]
+					}
+				]
 			},
 			{
 				"id": "Observation.status",

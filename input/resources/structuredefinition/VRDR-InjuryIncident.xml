@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-InjuryIncident"/>
     <meta>
-        <versionId value="18"/>
-        <lastUpdated value="2020-07-12T17:46:56.972+00:00"/>
-        <source value="#QfJRmYloQY1WpbGb"/>
+        <versionId value="20"/>
+        <lastUpdated value="2020-08-17T04:14:47.846+00:00"/>
+        <source value="#6fyHMKRqkkP3tMZS"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
     <name value="InjuryIncident"/>
@@ -23,6 +23,26 @@
     <differential>
         <element id="Observation">
             <path value="Observation"/>
+        </element>
+        <element id="Observation.extension">
+            <path value="Observation.extension"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.extension.url">
+            <path value="Observation.extension.url"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Observation-Location"/>
+        </element>
+        <element id="Observation.extension.value[x]">
+            <path value="Observation.extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"/>
+            </type>
         </element>
         <element id="Observation.status">
             <path value="Observation.status"/>

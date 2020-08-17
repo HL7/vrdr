@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Mother"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2020-07-12T17:07:38.126+00:00"/>
-        <source value="#JpasDIwELblCLmPX"/>
+        <versionId value="16"/>
+        <lastUpdated value="2020-08-16T23:25:47.997+00:00"/>
+        <source value="#K3ByEHNHauqovaBo"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
     <name value="VRDR_DecedentMother"/>
@@ -22,6 +22,40 @@
     <differential>
         <element id="RelatedPerson">
             <path value="RelatedPerson"/>
+        </element>
+        <element id="RelatedPerson.patient">
+            <path value="RelatedPerson.patient"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="RelatedPerson.relationship">
+            <path value="RelatedPerson.relationship"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+                    <code value="MTH"/>
+                    <display value="mother"/>
+                </coding>
+            </fixedCodeableConcept>
+        </element>
+        <element id="RelatedPerson.name">
+            <path value="RelatedPerson.name"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="RelatedPerson.address">
+            <path value="RelatedPerson.address"/>
+            <min value="0"/>
+            <max value="1"/>
         </element>
     </differential>
 </StructureDefinition>

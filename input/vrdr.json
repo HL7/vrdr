@@ -1,9 +1,9 @@
 {
 	"id": "vrdr",
 	"meta": {
-		"versionId": "316",
-		"lastUpdated": "2020-08-12T22:29:46.786+00:00",
-		"source": "#HDO4iLLYRYXf4h6Z"
+		"versionId": "322",
+		"lastUpdated": "2020-08-17T03:14:15.293+00:00",
+		"source": "#IMHyQcKjYO7JVDoz"
 	},
 	"resourceType": "ImplementationGuide",
 	"extension": [],
@@ -96,6 +96,11 @@
 				"id": "VRDR-Instance-Examples",
 				"name": "Instance Examples",
 				"description": "A collection of VRDR FHIR IG resource profile instance examples."
+			},
+			{
+				"id": "Extensions",
+				"name": "Extensions",
+				"description": "Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."
 			}
 		],
 		"resource": [
@@ -360,7 +365,8 @@
 					"display": "Within City Limits Indicator"
 				},
 				"name": "Within City Limits Indicator",
-				"description": "The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city."
+				"description": "The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city.",
+				"groupingId": "Extensions"
 			},
 			{
 				"extension": [],
@@ -878,6 +884,29 @@
 				"description": "VRDR-Death-Certificate-Document",
 				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
 				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05",
+					"display": "VRDR-Death-Certificate-Reference"
+				},
+				"name": "VRDR-Death-Certificate-Reference",
+				"description": "VRDR-Death-Certificate-Reference",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/Observation-Location",
+					"display": "Observation Location"
+				},
+				"name": "Observation Location",
+				"description": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition.",
+				"groupingId": "Extensions"
 			}
 		],
 		"page": {

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate-Document"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2020-08-12T21:07:24.214+00:00"/>
-        <source value="#OXqVbAWQ7I71X05e"/>
+        <versionId value="11"/>
+        <lastUpdated value="2020-08-16T22:50:45.419+00:00"/>
+        <source value="#UZ7ITCaTqmowrfUT"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document"/>
     <version value="1.0"/>
@@ -42,6 +42,8 @@
         <element id="Bundle.identifier">
             <path value="Bundle.identifier"/>
             <short value="identifier"/>
+            <definition value="A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). "/>
+            <comment value="NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros if concatenated with the other concepts). Two of these concepts can be pulled directly from existing elements of the VRDR IG: the year of death comes from the observation value in the DeathDate resource and the death certificate number assigned by the jurisdiction comes from the identifier specified in the DeathCertification resource.&#xA;&#xA;The remaining concept, the jurisdiction of death, currently comes from the address.district specified in the DeathLocation profile. The value of DeathLocation.address.district are taken from the [PHVS_NationalReportingJurisdiction_NND value set](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785). The concept codes in this value set will need to be translated for use as the jurisdiction of death portion of the NCHS death record identifier. The mapping table for translation is provided below. &#xA;&#xA;|Concept Code|Concept Name|Jurisdiction Code| &#xA;|----------------------|----------------------------------------------|----------------------------------------| &#xA;|01|Alabama|AL| &#xA;|02|Alaska|AK| &#xA;|60|American Samoa|AS| &#xA;|04|Arizona|AZ| &#xA;|05|Arkansas|AR| &#xA;|06|California|CA| &#xA;|08|Colorado|CO| &#xA;|09|Connecticut|CT| &#xA;|10|Delaware|DE| &#xA;|11|District of Columbia|DC| &#xA;|12|Florida|FL| &#xA;|13|Georgia|GA| &#xA;|66|Guam|GU| &#xA;|15|Hawaii|HI| &#xA;|16|Idaho|ID| &#xA;|17|Illinois|IL| &#xA;|18|Indiana|IN| &#xA;|19|Iowa|IA| &#xA;|20|Kansas|KS| &#xA;|21|Kentucky|KY| &#xA;|22|Louisiana|LA| &#xA;|23|Maine|ME| &#xA;|24|Maryland|MD| &#xA;|25|Massachusetts|MA| &#xA;|26|Michigan|MI| &#xA;|27|Minnesota|MN| &#xA;|28|Mississippi|MS| &#xA;|29|Missouri|MO| &#xA;|30|Montana|MT| &#xA;|31|Nebraska|NE| &#xA;|32|Nevada|NV| &#xA;|33|New Hampshire|NH| &#xA;|34|New Jersey|NJ| &#xA;|35|New Mexico|NM| &#xA;|975772|New York|YC| &#xA;|36|New York|NY| &#xA;|37|North Carolina|NC| &#xA;|38|North Dakota|ND| &#xA;|69|Northern Mariana Islands|MP| &#xA;|39|Ohio|OH| &#xA;|40|Oklahoma|OK| &#xA;|41|Oregon|OR| &#xA;|42|Pennsylvania|PA| &#xA;|72|Puerto Rico|PR| &#xA;|44|Rhode Island|RI| &#xA;|45|South Carolina|SC| &#xA;|46|South Dakota|SD| &#xA;|47|Tennessee|TN| &#xA;|48|Texas|TX| &#xA;|49|Utah|UT| &#xA;|50|Vermont|VT| &#xA;|78|Virgin Islands of the U.S.|VI| &#xA;|51|Virginia|VA| &#xA;|53|Washington|WA| &#xA;|54|West Virginia|WV| &#xA;|55|Wisconsin|WI| &#xA;|56|Wyoming|WY| &#xA;"/>
             <min value="1"/>
             <max value="1"/>
         </element>
