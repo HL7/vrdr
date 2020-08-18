@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Certificate-Document",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2020-08-17T16:58:50.915+00:00",
-		"source": "#EmapIzrPOAslT7S5"
+		"versionId": "14",
+		"lastUpdated": "2020-08-18T06:29:51.027+00:00",
+		"source": "#TRof2eLh1VCPPrNl"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
 	"version": "1.0",
@@ -49,7 +49,7 @@
 				"path": "Bundle.identifier",
 				"short": "identifier",
 				"definition": "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). ",
-				"comment": "NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros if concatenated with the other concepts). Two of these concepts can be pulled directly from existing elements of the VRDR IG: the year of death comes from the observation value in the DeathDate resource and the death certificate number assigned by the jurisdiction comes from the identifier specified in the DeathCertification resource.\n\nThe remaining concept, the jurisdiction of death, currently comes from the address.district specified in the DeathLocation profile. The value of DeathLocation.address.district are taken from the [PHVS_NationalReportingJurisdiction_NND value set](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785). The concept codes in this value set will need to be translated for use as the jurisdiction of death portion of the NCHS death record identifier. The mapping table for translation is provided below. \n\n|Concept Code|Concept Name|Jurisdiction Code| \n|----------------------|----------------------------------------------|----------------------------------------| \n|01|Alabama|AL| \n|02|Alaska|AK| \n|60|American Samoa|AS| \n|04|Arizona|AZ| \n|05|Arkansas|AR| \n|06|California|CA| \n|08|Colorado|CO| \n|09|Connecticut|CT| \n|10|Delaware|DE| \n|11|District of Columbia|DC| \n|12|Florida|FL| \n|13|Georgia|GA| \n|66|Guam|GU| \n|15|Hawaii|HI| \n|16|Idaho|ID| \n|17|Illinois|IL| \n|18|Indiana|IN| \n|19|Iowa|IA| \n|20|Kansas|KS| \n|21|Kentucky|KY| \n|22|Louisiana|LA| \n|23|Maine|ME| \n|24|Maryland|MD| \n|25|Massachusetts|MA| \n|26|Michigan|MI| \n|27|Minnesota|MN| \n|28|Mississippi|MS| \n|29|Missouri|MO| \n|30|Montana|MT| \n|31|Nebraska|NE| \n|32|Nevada|NV| \n|33|New Hampshire|NH| \n|34|New Jersey|NJ| \n|35|New Mexico|NM| \n|975772|New York City|YC| \n|36|New York|NY| \n|37|North Carolina|NC| \n|38|North Dakota|ND| \n|69|Northern Mariana Islands|MP| \n|39|Ohio|OH| \n|40|Oklahoma|OK| \n|41|Oregon|OR| \n|42|Pennsylvania|PA| \n|72|Puerto Rico|PR| \n|44|Rhode Island|RI| \n|45|South Carolina|SC| \n|46|South Dakota|SD| \n|47|Tennessee|TN| \n|48|Texas|TX| \n|49|Utah|UT| \n|50|Vermont|VT| \n|78|Virgin Islands of the U.S.|VI| \n|51|Virginia|VA| \n|53|Washington|WA| \n|54|West Virginia|WV| \n|55|Wisconsin|WI| \n|56|Wyoming|WY| \n",
+				"comment": "NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). These concepts can be pulled directly from existing elements of the VRDR IG: the year of death comes from the observation value in the DeathDate resource, the jurisdiction of death come from the location alias in the NationalReportingJurisdiction resource, and the death certificate number assigned by the jurisdiction comes from the identifier specified in the DeathCertification resource.",
 				"min": 1,
 				"max": "1"
 			},

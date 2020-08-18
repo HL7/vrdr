@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Location",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2020-08-17T01:58:28.757+00:00",
-		"source": "#g3dfomVNdv5ZtPbY"
+		"versionId": "12",
+		"lastUpdated": "2020-08-18T05:58:44.067+00:00",
+		"source": "#P6wtLx1XZPiKShlu"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
 	"version": "1.0",
@@ -77,15 +77,18 @@
 				"max": "1"
 			},
 			{
-				"id": "Location.address.district",
-				"path": "Location.address.district",
-				"min": 1,
+				"id": "Location.partOf",
+				"path": "Location.partOf",
+				"min": 0,
 				"max": "1",
-				"binding": {
-					"strength": "required",
-					"description": "PHVS_NationalReportingJurisdiction_NND",
-					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#"
-				}
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-National-Reporting-Jurisdiction"
+						]
+					}
+				]
 			}
 		]
 	}

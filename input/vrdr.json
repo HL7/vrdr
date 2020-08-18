@@ -1,9 +1,9 @@
 {
 	"id": "vrdr",
 	"meta": {
-		"versionId": "322",
-		"lastUpdated": "2020-08-17T03:14:15.293+00:00",
-		"source": "#IMHyQcKjYO7JVDoz"
+		"versionId": "330",
+		"lastUpdated": "2020-08-18T13:47:56.061+00:00",
+		"source": "#7M4PfCa3VfaXs6gd"
 	},
 	"resourceType": "ImplementationGuide",
 	"extension": [],
@@ -89,8 +89,9 @@
 				"description": "Decedent Disposition is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."
 			},
 			{
-				"id": "Images",
-				"name": "Images"
+				"id": "Extensions",
+				"name": "Extensions",
+				"description": "Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."
 			},
 			{
 				"id": "VRDR-Instance-Examples",
@@ -98,9 +99,8 @@
 				"description": "A collection of VRDR FHIR IG resource profile instance examples."
 			},
 			{
-				"id": "Extensions",
-				"name": "Extensions",
-				"description": "Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."
+				"id": "Images",
+				"name": "Images"
 			}
 		],
 		"resource": [
@@ -878,10 +878,10 @@
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85",
-					"display": "VRDR-Death-Certificate-Document"
+					"display": "VRDR-Death-Certificate-Document-Example"
 				},
-				"name": "VRDR-Death-Certificate-Document",
-				"description": "VRDR-Death-Certificate-Document",
+				"name": "Death Certificate Document Example",
+				"description": "An instance example of the VRDR-Death-Certificate-Document resource profile.",
 				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
 				"groupingId": "VRDR-Instance-Examples"
 			},
@@ -890,10 +890,10 @@
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05",
-					"display": "VRDR-Death-Certificate-Reference"
+					"display": "VRDR-Death-Certificate-Reference-Example"
 				},
-				"name": "VRDR-Death-Certificate-Reference",
-				"description": "VRDR-Death-Certificate-Reference",
+				"name": "Death Certificate Reference Example",
+				"description": "An instance example of the VRDR-Death-Certificate-Reference resource profile.",
 				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference",
 				"groupingId": "VRDR-Instance-Examples"
 			},
@@ -907,6 +907,29 @@
 				"name": "Observation Location",
 				"description": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition.",
 				"groupingId": "Extensions"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-National-Reporting-Jurisdiction",
+					"display": "VRDR-National-Reporting-Jurisdiction"
+				},
+				"name": "National Reporting Jurisdiction",
+				"description": "The national jurisdiction reporting a death event to the National Center for Health Statistics (NCHS). The identifier of the National Reporting Jurisdiction guide uses a numeric value for a reporting State, territory, or city based on the FIPS5_2 coding system.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Location/361aaa44-9955-4cd4-8f55-9f7df3537e17",
+					"display": "VRDR-National-Reporting-Jurisdiction"
+				},
+				"name": "National Reporting Jurisdiction Example",
+				"description": "An instance example of the VRDR-National-Reporting-Jurisdiction Location resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-National-Reporting-Jurisdiction",
+				"groupingId": "VRDR-Instance-Examples"
 			}
 		],
 		"page": {
