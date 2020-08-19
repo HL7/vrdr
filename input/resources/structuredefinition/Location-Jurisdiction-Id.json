@@ -1,0 +1,56 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "Location-Jurisdiction-Id",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-19T03:58:34.779+00:00",
+		"source": "#sC7EnkqasPC1nLKT"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id",
+	"name": "LocationJurisdictionId",
+	"title": "Location Jurisdiction Id",
+	"status": "active",
+	"kind": "resource",
+	"abstract": false,
+	"context": [
+		{
+			"type": "extension",
+			"expression": "Location"
+		}
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension"
+			},
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"min": 1,
+				"max": "1",
+				"fixedUri": "jurisdictionID"
+			},
+			{
+				"id": "Extension.value[x]",
+				"path": "Extension.value[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_NationalReportingJurisdiction_NND",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#"
+				}
+			}
+		]
+	},
+	"fhirVersion": "4.0.1"
+}

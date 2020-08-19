@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Location",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2020-08-18T05:58:44.067+00:00",
-		"source": "#P6wtLx1XZPiKShlu"
+		"versionId": "21",
+		"lastUpdated": "2020-08-19T07:31:51.017+00:00",
+		"source": "#V341v7feurVTzlTe"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
 	"version": "1.0",
@@ -44,6 +44,36 @@
 				"path": "Location"
 			},
 			{
+				"id": "Location.extension",
+				"path": "Location.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "Location.extension:nationalReportingJurisdictionId",
+				"path": "Location.extension",
+				"sliceName": "nationalReportingJurisdictionId",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"
+						]
+					}
+				]
+			},
+			{
 				"id": "Location.name",
 				"path": "Location.name",
 				"short": "name",
@@ -75,20 +105,6 @@
 				"short": "address",
 				"min": 1,
 				"max": "1"
-			},
-			{
-				"id": "Location.partOf",
-				"path": "Location.partOf",
-				"min": 0,
-				"max": "1",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-National-Reporting-Jurisdiction"
-						]
-					}
-				]
 			}
 		]
 	}

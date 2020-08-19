@@ -1,9 +1,9 @@
 {
 	"id": "vrdr",
 	"meta": {
-		"versionId": "330",
-		"lastUpdated": "2020-08-18T13:47:56.061+00:00",
-		"source": "#7M4PfCa3VfaXs6gd"
+		"versionId": "339",
+		"lastUpdated": "2020-08-19T08:36:59.011+00:00",
+		"source": "#OypxBAViop3QWjHy"
 	},
 	"resourceType": "ImplementationGuide",
 	"extension": [],
@@ -493,6 +493,17 @@
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
+					"reference": "StructureDefinition/Observation-Location",
+					"display": "Observation Location"
+				},
+				"name": "Observation Location",
+				"description": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition.",
+				"groupingId": "Extensions"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
 					"reference": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88",
 					"display": "AutopsyPerformedIndicatorInstanceExample"
 				},
@@ -601,18 +612,6 @@
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "Location/b7de6056-817f-4d73-9830-ce566accd044",
-					"display": "DeathLocationExample"
-				},
-				"name": "Death Location Example",
-				"description": "An instance example of the Death Location resource profile.",
-				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
-				"groupingId": "VRDR-Instance-Examples"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
 					"reference": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a",
 					"display": "InjuryLocationExample"
 				},
@@ -709,24 +708,24 @@
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f",
-					"display": "DecedentSpouseExample"
-				},
-				"name": "Decedent Spouse Example",
-				"description": "An instance example of the VRDR-Decedent-Spouse example.",
-				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse",
-				"groupingId": "VRDR-Instance-Examples"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
 					"reference": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9",
 					"display": "DecedentMotherExample"
 				},
 				"name": "Decedent Mother Example",
 				"description": "An instance example of the VRDR-Decedent-Mother resource profile.",
 				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f",
+					"display": "DecedentSpouseExample"
+				},
+				"name": "Decedent Spouse Example",
+				"description": "An instance example of the VRDR-Decedent-Spouse example.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse",
 				"groupingId": "VRDR-Instance-Examples"
 			},
 			{
@@ -901,34 +900,23 @@
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "StructureDefinition/Observation-Location",
-					"display": "Observation Location"
+					"reference": "StructureDefinition/Location-Jurisdiction-Id",
+					"display": "LocationJurisdictionId"
 				},
-				"name": "Observation Location",
-				"description": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition.",
+				"name": "LocationJurisdictionId",
+				"description": "An extension intended for use in an FHIR Location resource to identify the national case reporting jurisdiction under which the location falls. The jurisdiction identifier can be express as a string or as a code value from the [PHVS_NationalReportingJurisdiction_NND value set](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#).",
 				"groupingId": "Extensions"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "StructureDefinition/VRDR-National-Reporting-Jurisdiction",
-					"display": "VRDR-National-Reporting-Jurisdiction"
+					"reference": "Location/b7de6056-817f-4d73-9830-ce566accd044",
+					"display": "VRDR-Death-Location-Example"
 				},
-				"name": "National Reporting Jurisdiction",
-				"description": "The national jurisdiction reporting a death event to the National Center for Health Statistics (NCHS). The identifier of the National Reporting Jurisdiction guide uses a numeric value for a reporting State, territory, or city based on the FIPS5_2 coding system.",
-				"groupingId": "DeathInvestigation"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Location/361aaa44-9955-4cd4-8f55-9f7df3537e17",
-					"display": "VRDR-National-Reporting-Jurisdiction"
-				},
-				"name": "National Reporting Jurisdiction Example",
-				"description": "An instance example of the VRDR-National-Reporting-Jurisdiction Location resource profile.",
-				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-National-Reporting-Jurisdiction",
+				"name": "Death Location Example",
+				"description": "An instance example of the VRDR-Death-Location resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
 				"groupingId": "VRDR-Instance-Examples"
 			}
 		],

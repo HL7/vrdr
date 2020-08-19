@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="Location-Jurisdiction-Id"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2020-08-19T03:58:34.779+00:00"/>
+        <source value="#sC7EnkqasPC1nLKT"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"/>
+    <name value="LocationJurisdictionId"/>
+    <title value="Location Jurisdiction Id"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <context>
+        <type value="extension"/>
+        <expression value="Location"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="jurisdictionID"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_NationalReportingJurisdiction_NND"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

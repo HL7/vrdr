@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Location"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2020-08-18T05:58:44.067+00:00"/>
-        <source value="#P6wtLx1XZPiKShlu"/>
+        <versionId value="21"/>
+        <lastUpdated value="2020-08-19T07:31:51.017+00:00"/>
+        <source value="#V341v7feurVTzlTe"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"/>
     <version value="1.0"/>
@@ -38,6 +38,28 @@
         <element id="Location">
             <path value="Location"/>
         </element>
+        <element id="Location.extension">
+            <path value="Location.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Location.extension:nationalReportingJurisdictionId">
+            <path value="Location.extension"/>
+            <sliceName value="nationalReportingJurisdictionId"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"/>
+            </type>
+        </element>
         <element id="Location.name">
             <path value="Location.name"/>
             <short value="name"/>
@@ -66,15 +88,6 @@
             <short value="address"/>
             <min value="1"/>
             <max value="1"/>
-        </element>
-        <element id="Location.partOf">
-            <path value="Location.partOf"/>
-            <min value="0"/>
-            <max value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-National-Reporting-Jurisdiction"/>
-            </type>
         </element>
     </differential>
 </StructureDefinition>
