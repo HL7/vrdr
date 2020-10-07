@@ -2,8 +2,6 @@
 
 **Project Facilitators:**
 
-- [Paula Braun](https://www.linkedin.com/in/braunpaula/), Entrepreneur in Residence, CDC/Deputy Director for Public Health Science and Surveillance
-
 - [Hetty Khan](https://www.linkedin.com/in/hetty-khan-a537a445/), Health Scientist (Informatics), CDC/National Center for Health Statistics
 
 - [Alaina Gregory](https://www.linkedin.com/in/alaina-elliott-aa9923/), IT Specialist, CDC/National Center for Health Statistics
