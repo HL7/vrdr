@@ -7,3 +7,5 @@ The following table contains the teminology bindings for FHIR resource profile e
 <center>
 	<table><tr><td><img src="TerminologyBindings.png" style="width:100%;"/></td></tr></table>
 	</center>
+	
+[Next Page - Downloads](downloads.html)
