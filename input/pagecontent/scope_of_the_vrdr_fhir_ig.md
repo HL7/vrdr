@@ -18,7 +18,7 @@ The actors supported in this implementation guide include:
 
 The sequence of exchanges supported in this implementation guide include:
 
-*** (5) Daft death certificate document from regional EDRS to the NVSS.**
+*** (5) Draft death certificate document from regional EDRS to the NVSS.**
 
 In this exchange the regional EDRS sends a draft of the death certificate document with text values for causes of death and decedent race/ethnicity to the NVSS to be encoded.
 
