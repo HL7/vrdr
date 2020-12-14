@@ -1,112 +1,121 @@
 {
-	"resourceType": "StructureDefinition",
-	"id": "VRDR-Decedent",
-	"meta": {
-		"versionId": "84",
-		"lastUpdated": "2020-08-17T01:34:52.818+00:00",
-		"source": "#znJwDaDCFknl4UOR"
-	},
-	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
-	"version": "1.0",
-	"name": "Decedent",
-	"title": "VRDR Decedent",
-	"status": "active",
-	"experimental": false,
-	"date": "2020-05-09",
-	"publisher": "Health Level Seven",
-	"contact": [
-		{
-			"name": "AbdulMalik Shakir",
-			"telecom": [
-				{
-					"system": "email",
-					"value": "abdulmalik.shakir@hi3solutions.com",
-					"use": "work"
-				}
-			]
-		}
-	],
-	"fhirVersion": "4.0.1",
-	"kind": "resource",
-	"abstract": false,
-	"type": "Patient",
-	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-	"derivation": "constraint",
-	"differential": {
-		"element": [
-			{
-				"id": "Patient",
-				"path": "Patient"
-			},
-			{
-				"id": "Patient.identifier",
-				"path": "Patient.identifier",
-				"min": 1,
-				"max": "*",
-				"mustSupport": true
-			},
-			{
-				"id": "Patient.name",
-				"path": "Patient.name",
-				"min": 1,
-				"max": "*",
-				"mustSupport": true
-			},
-			{
-				"id": "Patient.gender",
-				"path": "Patient.gender",
-				"definition": "The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant.",
-				"comment": "This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. \n\nThis element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as \"must support\". Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown.",
-				"min": 1,
-				"max": "1",
-				"binding": {
-					"strength": "required",
-					"description": "PHVS_Sex_MFU",
-					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"
-				}
-			},
-			{
-				"id": "Patient.birthDate",
-				"path": "Patient.birthDate",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Patient.address",
-				"path": "Patient.address",
-				"min": 0,
-				"max": "*"
-			},
-			{
-				"id": "Patient.address.extension",
-				"path": "Patient.address.extension",
-				"min": 0,
-				"max": "1",
-				"type": [
-					{
-						"code": "Extension",
-						"profile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"
-						]
-					}
-				]
-			},
-			{
-				"id": "Patient.maritalStatus",
-				"path": "Patient.maritalStatus",
-				"min": 0,
-				"max": "1",
-				"type": [
-					{
-						"code": "CodeableConcept"
-					}
-				],
-				"binding": {
-					"strength": "required",
-					"description": "PHVS_MaritalStatus_NCHS",
-					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"
-				}
-			}
-		]
-	}
+    "resourceType": "StructureDefinition",
+    "id": "VRDR-Decedent",
+    "meta": {
+        "versionId": "84",
+        "lastUpdated": "2020-08-17T01:34:52.818+00:00",
+        "source": "#znJwDaDCFknl4UOR"
+    },
+    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
+    "version": "1.0",
+    "name": "Decedent",
+    "title": "VRDR Decedent",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-05-09",
+    "publisher": "Health Level Seven",
+    "contact": [
+        {
+            "name": "AbdulMalik Shakir",
+            "telecom": [
+                {
+                    "system": "email",
+                    "value": "abdulmalik.shakir@hi3solutions.com",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Patient",
+    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Patient",
+                "path": "Patient"
+            },
+            {
+                "sliceName": "patient-birthPlace",
+                "id": "Patient.extension:patient-birthPlace",
+                "path": "Patient.extension",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "Profile": ["http://hl7.org/fhir/StructureDefinition/patient-birthPlace"]
+                    }
+                ]
+            },
+            {
+                "id": "Patient.identifier",
+                "path": "Patient.identifier",
+                "min": 1,
+                "max": "*",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name",
+                "path": "Patient.name",
+                "min": 1,
+                "max": "*",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.gender",
+                "path": "Patient.gender",
+                "definition": "The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant.",
+                "comment": "This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. \n\nThis element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as \"must support\". Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown.",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "PHVS_Sex_MFU",
+                    "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"
+                }
+            },
+            {
+                "id": "Patient.birthDate",
+                "path": "Patient.birthDate",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Patient.address",
+                "path": "Patient.address",
+                "min": 0,
+                "max": "*"
+            },
+            {
+                "id": "Patient.address.extension",
+                "path": "Patient.address.extension",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": ["http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"]
+                    }
+                ]
+            },
+            {
+                "id": "Patient.maritalStatus",
+                "path": "Patient.maritalStatus",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {"code": "CodeableConcept"}
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "PHVS_MaritalStatus_NCHS",
+                    "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"
+                }
+            }
+        ]
+    }
 }
