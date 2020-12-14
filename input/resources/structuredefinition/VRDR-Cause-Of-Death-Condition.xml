@@ -33,7 +33,7 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Condition"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Condition">
@@ -44,6 +44,21 @@
             <short value="id"/>
             <min value="0"/>
             <max value="1"/>
+        </element>        
+        <element id="Condition.category">
+            <path value="Condition.category"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="16100001"/>
+                    <display value="Death diagnosis"/>
+                </coding>
+            </fixedCodeableConcept>
         </element>
         <element id="Condition.code">
             <path value="Condition.code"/>
