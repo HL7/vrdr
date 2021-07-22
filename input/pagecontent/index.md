@@ -31,12 +31,12 @@ This is a U.S. Realm Specification. This guide and related materials are based o
 <td><a href="http://www.hl7.org/Special/committees/pher" target="_new">http://www.hl7.org/Special/committees/pher</a></td>
 </tr>
 <tr>
-<td>Hetty Khan, Health Scientist (Informatics), CDC/National Center for Health Statistics - hdk1@cdc.gov</td>
-<td></td>
+<td>Cynthia Bush, Health Scientist (Informatics), CDC/National Center for Health Statistics</td>
+<td>pdz1@cdc.gov</td>
 </tr>
 <tr>
-<td>AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions - abdulmalik.shakir@hi3solutions.com</td>
-<td></td>
+<td>AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions</td>
+<td>abdulmalik.shakir@hi3solutions.com</td>
 </tr>
 </tbody>
 </table>
