@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition
-    xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="VRDR-BirthRecordIdentifier"/>
     <meta>
         <versionId value="22"/>
@@ -48,16 +47,24 @@
             <max value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+                />
             </type>
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
             <type>
                 <code value="string"/>
             </type>
+            <mustSupport value="true"/>
+        </element>        
+        <element id="Observation.dataAbsentReason">
+            <path value="Observation.dataAbsentReason"/>
+            <min value="0"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Observation.component">
             <path value="Observation.component"/>
@@ -120,7 +127,8 @@
         </element>
         <element id="Observation.component:birthYear.value[x]">
             <path value="Observation.component.value[x]"/>
-            <comment value="The birth year is expressed using the YYYY portion of datetime and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource."/>
+            <comment
+                value="The birth year is expressed using the YYYY portion of datetime and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource."/>
             <min value="1"/>
             <max value="1"/>
             <type>
