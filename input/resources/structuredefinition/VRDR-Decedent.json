@@ -85,6 +85,165 @@
                 "max": "1"
             },
             {
+                "id": "Patient.birthDate.extension",
+                "path": "Patient.birthDate.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "ordered": false,
+                    "rules": "open"
+                },
+                "short": "Extension",
+                "definition": "An Extension",
+                "min": 0,
+                "max": "*",
+                "base": {
+                    "path": "Element.extension",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {"code": "Extension"}
+                ],
+                "constraint": [
+                    {
+                        "key": "ele-1",
+                        "severity": "error",
+                        "human": "All FHIR elements must have a @value or children",
+                        "expression": "hasValue() or (children().count() > id.count())",
+                        "xpath": "@value|f:*|h:div",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+                    },
+                    {
+                        "key": "ext-1",
+                        "severity": "error",
+                        "human": "Must have either extensions or value[x], not both",
+                        "expression": "extension.exists() != value.exists()",
+                        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+                    }
+                ],
+                "isModifier": false,
+                "isSummary": false
+            },
+            {
+                "id": "Patient.birthDate.extension:datePartAbsentReason",
+                "path": "Patient.birthDate.extension",
+                "sliceName": "datePartAbsentReason",
+                "short": "Indicates reason for missing data on either the birthDate or the birthTime.",
+                "definition": "Indicates reason for missing data on either the birthDate or the birthTime.",
+                "min": 0,
+                "max": "*",
+                "base": {
+                    "path": "Element.extension",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": ["http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-date-part-absent-reason"]
+                    }
+                ],
+                "condition": ["ele-1"],
+                "constraint": [
+                    {
+                        "key": "ele-1",
+                        "severity": "error",
+                        "human": "All FHIR elements must have a @value or children",
+                        "expression": "hasValue() or (children().count() > id.count())",
+                        "xpath": "@value|f:*|h:div",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+                    },
+                    {
+                        "key": "ext-1",
+                        "severity": "error",
+                        "human": "Must have either extensions or value[x], not both",
+                        "expression": "extension.exists() != value.exists()",
+                        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.birthDate.extension:birthTime",
+                "path": "Patient.birthDate.extension",
+                "sliceName": "birthTime",
+                "short": "Time of day of birth",
+                "definition": "The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.",
+                "min": 0,
+                "max": "1",
+                "base": {
+                    "path": "Element.extension",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": ["http://hl7.org/fhir/StructureDefinition/patient-birthTime"]
+                    }
+                ],
+                "condition": ["ele-1"],
+                "constraint": [
+                    {
+                        "key": "ele-1",
+                        "severity": "error",
+                        "human": "All FHIR elements must have a @value or children",
+                        "expression": "hasValue() or (children().count() > id.count())",
+                        "xpath": "@value|f:*|h:div",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+                    },
+                    {
+                        "key": "ext-1",
+                        "severity": "error",
+                        "human": "Must have either extensions or value[x], not both",
+                        "expression": "extension.exists() != value.exists()",
+                        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+                        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.birthDate.value",
+                "path": "Patient.birthDate.value",
+                "representation": ["xmlAttr"],
+                "short": "Primitive value for date",
+                "definition": "The actual value",
+                "min": 0,
+                "max": "1",
+                "base": {
+                    "path": "date.value",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                                "valueUrl": "date"
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/regex",
+                                "valueString": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?"
+                            }
+                        ],
+                        "code": "http://hl7.org/fhirpath/System.Date"
+                    }
+                ],
+                "isModifier": false,
+                "isSummary": false
+            },
+            {
                 "id": "Patient.address",
                 "path": "Patient.address",
                 "min": 0,
