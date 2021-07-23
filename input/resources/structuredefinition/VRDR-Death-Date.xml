@@ -66,7 +66,7 @@
                 <coding>
                     <system value="http://loinc.org"/>
                     <code value="81956-5"/>
-                    <display value="Date+time of death"/>
+                    <display value="Date and time of death"/>
                 </coding>
             </fixedCodeableConcept>
         </element>
@@ -103,6 +103,19 @@
             <type>
                 <code value="dateTime"/>
             </type>
+        </element>        
+        <element id="Observation.value[x].extension:datePartAbsentReason">
+            <path value="Observation.value[x].extension"/>
+            <sliceName value="datePartAbsentReason"/>
+            <short value="Indicates reason for missing one or more parts of the decedent's death date."/>
+            <definition value="Indicates reason for missing one or more parts of the decedent's death date."/>
+            <min value="0"/>
+            <max value="*"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-date-part-absent-reason"/>
+            </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Observation.note">
             <path value="Observation.note"/>
