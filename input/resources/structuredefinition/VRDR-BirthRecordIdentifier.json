@@ -74,7 +74,18 @@
                 "path": "Observation.dataAbsentReason",
                 "min": 0,
                 "max": "1",
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                            "valueString": "ObservationValueAbsentReason"
+                        }
+                    ],
+                    "strength": "extensible",
+                    "description": "Codes specifying why the result (`Observation.value[x]`) is missing.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+                }
             },
             {
                 "id": "Observation.component",
