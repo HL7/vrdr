@@ -85,57 +85,11 @@
                 "max": "1"
             },
             {
-                "id": "Patient.birthDate.extension",
-                "path": "Patient.birthDate.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "ordered": false,
-                    "rules": "open"
-                },
-                "short": "Extension",
-                "definition": "An Extension",
-                "min": 0,
-                "max": "*",
-                "base": {
-                    "path": "Element.extension",
-                    "min": 0,
-                    "max": "*"
-                },
-                "type": [
-                    {"code": "Extension"}
-                ],
-                "constraint": [
-                    {
-                        "key": "ele-1",
-                        "severity": "error",
-                        "human": "All FHIR elements must have a @value or children",
-                        "expression": "hasValue() or (children().count() > id.count())",
-                        "xpath": "@value|f:*|h:div",
-                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-                    },
-                    {
-                        "key": "ext-1",
-                        "severity": "error",
-                        "human": "Must have either extensions or value[x], not both",
-                        "expression": "extension.exists() != value.exists()",
-                        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-                        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-                    }
-                ],
-                "isModifier": false,
-                "isSummary": false
-            },
-            {
                 "id": "Patient.birthDate.extension:datePartAbsentReason",
                 "path": "Patient.birthDate.extension",
                 "sliceName": "datePartAbsentReason",
-                "short": "Indicates reason for missing data on either the birthDate or the birthTime.",
-                "definition": "Indicates reason for missing data on either the birthDate or the birthTime.",
+                "short": "Indicates reason for missing one or more parts of the decedent's birthdate.",
+                "definition": "Indicates reason for missing one or more parts of the decedent's birthdate.",
                 "min": 0,
                 "max": "*",
                 "base": {
@@ -147,47 +101,6 @@
                     {
                         "code": "Extension",
                         "profile": ["http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-date-part-absent-reason"]
-                    }
-                ],
-                "condition": ["ele-1"],
-                "constraint": [
-                    {
-                        "key": "ele-1",
-                        "severity": "error",
-                        "human": "All FHIR elements must have a @value or children",
-                        "expression": "hasValue() or (children().count() > id.count())",
-                        "xpath": "@value|f:*|h:div",
-                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-                    },
-                    {
-                        "key": "ext-1",
-                        "severity": "error",
-                        "human": "Must have either extensions or value[x], not both",
-                        "expression": "extension.exists() != value.exists()",
-                        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-                        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "Patient.birthDate.extension:birthTime",
-                "path": "Patient.birthDate.extension",
-                "sliceName": "birthTime",
-                "short": "Time of day of birth",
-                "definition": "The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.",
-                "min": 0,
-                "max": "1",
-                "base": {
-                    "path": "Element.extension",
-                    "min": 0,
-                    "max": "*"
-                },
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": ["http://hl7.org/fhir/StructureDefinition/patient-birthTime"]
                     }
                 ],
                 "condition": ["ele-1"],
