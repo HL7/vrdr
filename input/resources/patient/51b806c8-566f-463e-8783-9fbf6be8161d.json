@@ -6,7 +6,33 @@
             "versionId": {"value": 4},
             "lastUpdated": {"value": "2020-07-22T19:41:31.297+00:00"},
             "source": {"value": "#EoJNRyx11BYIT5J6"},
-            "profile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"}
+            "profile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"},
+            "security": [
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "everyone^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^TKWZUCCU^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^read"}
+                }
+            ]
         },
         "text": {
             "status": {"value": "generated"},
@@ -51,7 +77,7 @@
                             {
                                 "td": [
                                     "Date of birth",
-                                    {"span": "19 February 1940"}
+                                    {"span": "24 February Year Unknown"}
                                 ]
                             }
                         ]
@@ -183,20 +209,11 @@
         "birthDate": {
             "extension": {
                 "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason",
-                "extension": [
-                    {
-                        "url": "year-absent-reason",
-                        "valueCode": {"value": "asked-unknown"}
-                    },
-                    {
-                        "url": "date-month",
-                        "valueInteger": {"value": "02"}
-                    },
-                    {
-                        "url": "date-day",
-                        "valueInteger": {"value": 24}
-                    }
-                ]
+                "date-year-absent-reason": {
+                    "code": {"value": "asked-unknown"}
+                },
+                "date-month": {"value": "02"},
+                "date_day": {"value": 24}
             }
         },
         "address": {
