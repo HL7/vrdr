@@ -1,5 +1,3 @@
-[Previous Page - Decedent Demographics Resource Profiles](decedent_demographics_resource_profiles.html)
-
 B. ***Death Investigation:*** is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopy was performed, an injury incident occurred, or a transportation event was involved.
 
 <center>
@@ -12,5 +10,3 @@ The following tables indicates tracibility between death investigation resource 
 	<table><tr><td><img src="Death Investigation Subdomain to DCF.png" style="width:100%;"/></td></tr></table>
 	</center>
 	
-
-[Next Page - Death Certification Resource Profiles](death_certification_resource_profiles.html)

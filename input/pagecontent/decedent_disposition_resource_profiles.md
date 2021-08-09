@@ -1,5 +1,3 @@
-[Previous Page - Death Certification Resource Profiles](death_certification_resource_profiles.html)
-
 D. ***Decedent Disposition:*** is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director.
 
 <center>
@@ -12,5 +10,3 @@ The following tables indicates tracibility between decedent disposition resource
 	<table><tr><td><img src="Decedent Disposition subdomain to DCF.png" style="width:100%;"/></td></tr></table>
 	</center>
 	
-
-[Next Page - Terminology Bindings](terminology_bindings.html)

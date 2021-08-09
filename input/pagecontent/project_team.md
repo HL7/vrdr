@@ -1,5 +1,3 @@
-[Previous Page - Home Page](index.html)
-
 **Project Facilitators:**
 
 - [Hetty Khan](https://www.linkedin.com/in/hetty-khan-a537a445/), Health Scientist (Informatics), CDC/National Center for Health Statistics
@@ -33,6 +31,3 @@
 - [Georgia Institute of Technology](https://www.gatech.edu/), a leading research university committed to improving the human condition through advanced science and technology
 
 - [Hi3 Solutions Corporation](https://www.facebook.com/hi3solutions/), a leading HIT vendor providing software solutions and professional services that promote evidence-based best practices in health.
-
-
-[Next Page - Acknowledgements](acknowledgements.html)

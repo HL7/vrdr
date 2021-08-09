@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
     <id value="VRDR-BirthRecordIdentifier"/>
     <meta>
-        <versionId value="22"/>
-        <lastUpdated value="2020-07-21T00:29:30.908+00:00"/>
-        <source value="#4JaWwyKmZx3ygQud"/>
+        <versionId value="23"/>
+        <lastUpdated value="2021-08-09T05:57:02.590+00:00"/>
+        <source value="#l9H65jSt19TdAONW"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
     <name value="VRDR_BirthRecordIdentifier"/>
@@ -47,8 +48,7 @@
             <max value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
-                />
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
             </type>
         </element>
         <element id="Observation.value[x]">
@@ -59,20 +59,18 @@
                 <code value="string"/>
             </type>
             <mustSupport value="true"/>
-        </element>        
+        </element>
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>
             <min value="0"/>
             <max value="1"/>
-            <mustSupport value="true"/> 
+            <mustSupport value="true"/>
             <binding>
-                <extension
-                    url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                     <valueString value="ObservationValueAbsentReason"/>
                 </extension>
                 <strength value="extensible"/>
-                <description
-                    value="Codes specifying why the result (`Observation.value[x]`) is missing."/>
+                <description value="Codes specifying why the result (`Observation.value[x]`) is missing."/>
                 <valueSet value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
             </binding>
         </element>
@@ -137,8 +135,7 @@
         </element>
         <element id="Observation.component:birthYear.value[x]">
             <path value="Observation.component.value[x]"/>
-            <comment
-                value="The birth year is expressed using the YYYY portion of datetime and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource."/>
+            <comment value="The birth year is expressed using the YYYY portion of datetime and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource."/>
             <min value="1"/>
             <max value="1"/>
             <type>

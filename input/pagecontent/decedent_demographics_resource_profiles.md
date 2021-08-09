@@ -1,5 +1,3 @@
-[Previous Page - VRDR FHIR IG UML Data Model](vrdr_fhir_ig_uml_data_model.html)
-
 A. ***Decedent Demographics:*** is a profile group comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.
 
 <center>
@@ -11,5 +9,3 @@ The following tables indicates tracibility between decedent demographic resource
 <center>
 <table><tr><td><img src="Decedent subdomain to DCF.png" style="width:100%;"/></td></tr></table>
 </center>
-
-[Next Page - Death Investigation Resource Profiles](death_investigation_resource_profiles.html)

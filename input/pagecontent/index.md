@@ -32,16 +32,13 @@ This is a U.S. Realm Specification. This guide and related materials are based o
 </tr>
 <tr>
 <td>Cynthia Bush, Health Scientist (Informatics), CDC/National Center for Health Statistics</td>
-<td>pdz1@cdc.gov</td>
+<td><a href="mailto:pdz1@cdc.gov">pdz1@cdc.gov</a></td>
 </tr>
 <tr>
 <td>AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions</td>
-<td>abdulmalik.shakir@hi3solutions.com</td>
+<td><a href="mailto:abdulmalik.shakir@hi3solutions.com">abdulmalik.shakir@hi3solutions.com</a></td>
 </tr>
 </tbody>
 </table>
 
 
-
-
-[Next Page - Project Team](project_team.html)

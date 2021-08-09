@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent"/>
     <meta>
-        <versionId value="84"/>
-        <lastUpdated value="2020-08-17T01:34:52.818+00:00"/>
-        <source value="#znJwDaDCFknl4UOR"/>
+        <versionId value="90"/>
+        <lastUpdated value="2021-08-09T06:00:13.203+00:00"/>
+        <source value="#uyXAEWQu3pNMx6UB"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -57,18 +58,14 @@
         </element>
         <element id="Patient.gender">
             <path value="Patient.gender"/>
-            <definition
-                value="The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant."/>
-            <comment
-                value="This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. &#xA;&#xA;This element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as &quot;must support&quot;. Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide &quot;support&quot; for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown."/>
+            <definition value="The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant."/>
+            <comment value="This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. &#xA;&#xA;This element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as &quot;must support&quot;. Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide &quot;support&quot; for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown."/>
             <min value="1"/>
             <max value="1"/>
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_Sex_MFU"/>
-                <valueSet
-                    value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"
-                />
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"/>
             </binding>
         </element>
         <element id="Patient.birthDate">
@@ -79,17 +76,13 @@
         <element id="Patient.birthDate.extension:partialDatePartAbsentReason">
             <path value="Patient.birthDate.extension"/>
             <sliceName value="partialDatePartAbsentReason"/>
-            <short
-                value="partialDatePartAbsentReason"/>
-            <definition
-                value="Indicates reason for missing one or more parts of the decedent's birthdate."/>
+            <short value="partialDatePartAbsentReason"/>
+            <definition value="Indicates reason for missing one or more parts of the decedent's birthdate."/>
             <min value="0"/>
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile
-                    value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason"
-                />
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -104,25 +97,19 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile
-                    value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"
-                />
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
             </type>
         </element>
         <element id="Patient.address.city">
             <path value="Patient.address.city"/>
-            <comment
-                value="The city portion of the decedent's resident address shall be expressed as a five-digit numeric value greater than zero and less than 100,000."
-            />
+            <comment value="The city portion of the decedent's resident address shall be expressed as a five-digit numeric value greater than zero and less than 100,000."/>
         </element>
         <element id="Patient.address.district">
             <path value="Patient.address.district"/>
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_DivisionVitalStatistics__County"/>
-                <valueSet
-                    value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212"
-                />
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212"/>
             </binding>
         </element>
         <element id="Patient.maritalStatus">
@@ -135,9 +122,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_MaritalStatus_NCHS"/>
-                <valueSet
-                    value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"
-                />
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"/>
             </binding>
         </element>
         <element id="Patient.contact.relationship">
@@ -150,9 +135,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_RelatedPersonRelationshipType_NCHS"/>
-                <valueSet
-                    value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"
-                />
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"/>
             </binding>
         </element>
     </differential>

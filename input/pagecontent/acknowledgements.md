@@ -1,5 +1,3 @@
-[Previous Page - Project Team](project_team.html)
-
 * The content of this implementation guide draws heavily upon [Standard Death Record Implementation Guide](https://nightingaleproject.github.io/fhir-death-record/guide/index.html) developed by [MITRE](https://www.mitre.org/). 
 * This guide was developed using tooling and professional guidance provided by [Lantana Consulting Group](https://www.lantanagroup.com/), the makers of [Trifolia-on-FHIR](https://trifolia-fhir-dev.lantanagroup.com/)
 * The VRDR FHIR IG is a work product of the [HL7 Public Health Workgroup](http://www.hl7.org/Special/committees/pher/overview.cfm). The HL7 Project Insight reference number for this project is [1475](http://www.hl7.org/Special/committees/pher/projects.cfm?action=edit&ProjectNumber=1475).
@@ -31,6 +29,3 @@ The VRDR project team would like to express a special thanks to the following te
 - Outcome Healthcare
 - Ruvos
 - VitalChek
-
-
-[Next Page - Background](background.html)
