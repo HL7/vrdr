@@ -1,16 +1,55 @@
 {
-	"resourceType": "StructureDefinition",
 	"id": "VRDR-Cause-Of-Death-Condition",
 	"meta": {
 		"versionId": "14",
 		"lastUpdated": "2020-07-02T04:43:46.543+00:00",
-		"source": "#NwabvMXcrlCFwY9G"
+		"source": "#NwabvMXcrlCFwY9G",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^TKWZUCCU^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^read"
+			}
+		],
+		"tag": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+				"code": "SUBSETTED",
+				"display": "Resource encoded in summary mode"
+			}
+		]
 	},
+	"resourceType": "StructureDefinition",
+	"status": "draft",
+	"kind": "resource",
+	"derivation": "constraint",
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition",
 	"version": "1.0",
 	"name": "CauseOfDeathCondition",
 	"title": "VRDR Cause Of Death Condition",
-	"status": "draft",
 	"experimental": false,
 	"date": "2020-05-08",
 	"publisher": "Health Level Seven",
@@ -33,11 +72,9 @@
 	],
 	"description": "The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource.",
 	"fhirVersion": "4.0.1",
-	"kind": "resource",
 	"abstract": false,
 	"type": "Condition",
-    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
-	"derivation": "constraint",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
 	"differential": {
 		"element": [
 			{
@@ -51,21 +88,6 @@
 				"min": 0,
 				"max": "1"
 			},
-            {
-                "id": "Condition.category",
-                "path": "Condition.category",
-                "min": 1,
-                "max": "1",
-                "fixedCodeableConcept": {
-                    "coding": [
-                        {
-                            "code": "16100001",
-                            "display": "Death diagnosis",
-                            "system": "http://snomed.info/sct"
-                        }
-                    ]
-                }
-            },
 			{
 				"id": "Condition.code",
 				"path": "Condition.code",
