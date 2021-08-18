@@ -6,6 +6,39 @@
         <versionId value="90"/>
         <lastUpdated value="2021-08-09T06:00:13.203+00:00"/>
         <source value="#uyXAEWQu3pNMx6UB"/>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^TKWZUCCU^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -43,6 +76,22 @@
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthPlace"/>
             </type>
+        </element>
+        <element id="Patient.extension:patient-birthPlace.value[x]">
+            <path value="Patient.extension.value[x]"/>
+            <type>
+                <code value="Address"/>
+            </type>
+        </element>
+        <element id="Patient.extension:patient-birthPlace.value[x].country">
+            <path value="Patient.extension.value[x].country"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_DecedentBirthplace_Country"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7"/>
+            </binding>
         </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
@@ -110,6 +159,16 @@
                 <strength value="required"/>
                 <description value="PHVS_DivisionVitalStatistics__County"/>
                 <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212"/>
+            </binding>
+        </element>
+        <element id="Patient.address.country">
+            <path value="Patient.address.country"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_DecedentResident_Country"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C"/>
             </binding>
         </element>
         <element id="Patient.maritalStatus">
