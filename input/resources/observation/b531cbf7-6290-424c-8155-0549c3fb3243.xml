@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Observation
-    xmlns="http://hl7.org/fhir">
+<Observation xmlns="http://hl7.org/fhir">
     <id value="b531cbf7-6290-424c-8155-0549c3fb3243"/>
     <meta>
         <versionId value="1"/>
@@ -23,7 +22,20 @@
     <performer>
         <reference value="Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"/>
     </performer>
-    <valueDateTime value="2018-02-20T16:48:06-05:00"/>
+    <valueDateTime>
+        <extension
+            url="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason">
+            <extension url="date-year">
+                <valueInteger value="2021"/>
+            </extension>
+            <extension url="date-month">
+                <valueInteger value="2"/>
+            </extension>
+            <extension url="day-absent-reason">
+                <valueCode value="asked-unknown"/>
+            </extension>
+        </extension>
+    </valueDateTime>
     <component>
         <code>
             <coding>
