@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition
-    xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Age"/>
     <meta>
         <versionId value="14"/>
@@ -28,7 +27,8 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."/>
+    <description
+        value="The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -72,11 +72,15 @@
             <max value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+                />
             </type>
         </element>
         <element id="Observation.effective[x]">
             <path value="Observation.effective[x]"/>
+            <short value="The decedent's date of death"/>
+            <definition
+                value="The effective date of this observation shall be equal to the decedent's date of death."/>
             <min value="1"/>
             <max value="1"/>
             <type>
@@ -85,6 +89,9 @@
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
+            <short value="The decedent's chronological age at the time of death"/>
+            <definition
+                value="The decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."/>
             <min value="0"/>
             <max value="1"/>
             <type>
