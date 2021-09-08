@@ -3,10 +3,87 @@
         "xmlns": "http://hl7.org/fhir",
         "id": {"value": "51b806c8-566f-463e-8783-9fbf6be8161d"},
         "meta": {
-            "versionId": {"value": 6},
-            "lastUpdated": {"value": "2021-08-18T12:13:30.341+00:00"},
-            "source": {"value": "#EA5PrKCCVEwaBe1B"},
-            "profile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"}
+            "versionId": {"value": 4},
+            "lastUpdated": {"value": "2020-07-22T19:41:31.297+00:00"},
+            "source": {"value": "#EoJNRyx11BYIT5J6"},
+            "profile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"},
+            "security": [
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "everyone^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^TKWZUCCU^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^read"}
+                }
+            ]
+        },
+        "text": {
+            "status": {"value": "generated"},
+            "div": {
+                "xmlns": "http://www.w3.org/1999/xhtml",
+                "div": {
+                    "class": "hapiHeaderText",
+                    "content": [
+                        "Example Something Middle",
+                        "Jr."
+                    ],
+                    "b": "LAST"
+                },
+                "table": {
+                    "class": "hapiPropertyTable",
+                    "tbody": {
+                        "tr": [
+                            {
+                                "td": [
+                                    "Identifier",
+                                    123456789
+                                ]
+                            },
+                            {
+                                "td": [
+                                    "Address",
+                                    {
+                                        "span": [
+                                            "101 Example Street",
+                                            "Line 2",
+                                            "Bedford",
+                                            "MA",
+                                            "United States"
+                                        ],
+                                        "br": [
+                                            "",
+                                            ""
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "td": [
+                                    "Date of birth",
+                                    {"span": "24 February Year Unknown"}
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
         },
         "extension": [
             {
@@ -94,17 +171,6 @@
             {
                 "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
                 "valueCode": {"value": "F"}
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-                "valueAddress": {
-                    "line": {"value": "101 Example Birth Street"},
-                    "city": {"value": 12345},
-                    "district": {"value": 13121},
-                    "state": {"value": "UNK"},
-                    "postalCode": {"value": "01730"},
-                    "country": {"value": "US"}
-                }
             }
         ],
         "identifier": {
@@ -143,20 +209,11 @@
         "birthDate": {
             "extension": {
                 "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason",
-                "extension": [
-                    {
-                        "url": "year-absent-reason",
-                        "valueCode": {"value": "unknown"}
-                    },
-                    {
-                        "url": "date-month",
-                        "valueInteger": {"value": 2}
-                    },
-                    {
-                        "url": "date-day",
-                        "valueInteger": {"value": 24}
-                    }
-                ]
+                "date-year-absent-reason": {
+                    "code": {"value": "asked-unknown"}
+                },
+                "date-month": {"value": "02"},
+                "date_day": {"value": 24}
             }
         },
         "address": {
@@ -164,19 +221,19 @@
                 "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator",
                 "valueCoding": {
                     "system": {"value": "http://terminology.hl7.org/CodeSystem/v2-0136"},
-                    "code": {"value": "Y"},
-                    "display": {"value": "YES"}
+                    "code": {"value": "N"},
+                    "display": {"value": "No"}
                 }
             },
             "line": [
-                {"value": "101 Example Residence Street"},
-                {"value": "Address Line 2"}
+                {"value": "101 Example Street"},
+                {"value": "Line 2"}
             ],
-            "city": {"value": 54321},
-            "district": {"value": "OTH"},
+            "city": {"value": "Bedford"},
+            "district": {"value": "Middlesex"},
             "state": {"value": "MA"},
             "postalCode": {"value": "01730"},
-            "country": {"value": "US"}
+            "country": {"value": "United States"}
         },
         "maritalStatus": {
             "coding": {
