@@ -4,6 +4,7 @@ Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 
+
 ValueSet: USStatesAndTerritoriesVS
 Id: USStates-Territories-VS
 Title: "US States, Territories Value Set"
@@ -91,3 +92,17 @@ Description: "Yes No Not Applicable Valueset built HL7 Administrative Gender Cod
 * $admingender#male "male"
 * $admingender#female "female"
 * $admingender#unknown "unknown"
+
+
+ValueSet: PlaceOfDeathVS
+Id: vrdr-PlaceOfDeath
+Title: "Place of Death VS -- PHVS_PlaceOfDeath_NCHS"
+Description: "PHVS_PlaceOfDeath_NCHS"
+* $sct#63238001 "Hospital Dead on Arrival"
+* $sct#440081000124100 "Decedent's Home"
+* $sct#440071000124103 "Hospice"
+* $sct#16983000 "Hospital Inpatient"
+* $sct#450391000124102  "Death in emergency Room/Outpatient"
+* $sct#450381000124100 "Death in nursing home/Long term care facility"
+* $v3-NullFlavor#OTH "Other"
+* $v3-NullFlavor#UNK "Unknown"
