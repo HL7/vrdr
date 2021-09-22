@@ -62,8 +62,8 @@ Description: "2 Letter States and Provinces Value Set"
 Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $admingender = http://hl7.org/fhir/administrative-gender
 
-ValueSet: YesNoVS
-Id: vrdr-YesNo
+ValueSet: YesNoUnknownVS
+Id: vrdr-YesNoUnknown
 Title: "Yes No Unknown  Value Set"
 Description: "Yes No Unknown Valueset built HL7 Expanded Yes/No Codesystem"
 * ^status = #active

@@ -28,6 +28,7 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * ^contact.telecom[=].use = #work
 * id 0..1
 * id ^short = "id"
+* category = $sct#16100001 "Death diagnosis" (exactly)
 * code 1..1
 * code only CodeableConcept
 * code ^label = "CauseOfDeathCondition.code"
