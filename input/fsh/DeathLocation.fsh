@@ -27,9 +27,8 @@ Title: "VRDR Death Location"
 * description 1..1
 * description ^short = "description"
 * type 1..1
-* type from $ViewValueSet.action_13 (required)
+* type from PlaceOfDeathVS (required)
 * type ^short = "type"
-* type ^binding.description = "PHVS_PlaceOfDeath_NCHS"
 * address 1..1
 * address ^short = "address"
 * position 0..1
@@ -52,4 +51,4 @@ Usage: #example
 * address.state = "MA"
 * address.postalCode = "01730"
 * address.country = "United States"
-* extension[nationalReportingJurisdictionId].value[x] = urn:oid:2.16.840.1.113883.6.92#MA "Massachusets"
+* extension[nationalReportingJurisdictionId].value[x] = #MA "Massachusets"
