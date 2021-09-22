@@ -1,6 +1,6 @@
 Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $admingender = http://hl7.org/fhir/administrative-gender
-Alias: $statesVS = http://hl7.org/fhir/ValueSet/usps-state
+Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 
@@ -10,7 +10,7 @@ Title: "US States, Territories Value Set"
 Description: "2 Letter States and Territories Value Set"
 * ^status = #active
 * ^version = "1.0.0"
-* include codes from valueset $statesCS
+* include codes from valueset $statesVS
 * exclude $statesCS#FM
 * exclude $statesCS#MH
 * exclude $statesCS#PW
