@@ -3,6 +3,8 @@ Alias: $admingender = http://hl7.org/fhir/administrative-gender
 Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
+Alias: $maritalStatus = http://hl7.org/fhir/ValueSet/marital-status
+Alias: $roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 
 ValueSet: USStatesAndTerritoriesVS
@@ -106,3 +108,34 @@ Description: "PHVS_PlaceOfDeath_NCHS"
 * $sct#450381000124100 "Death in nursing home/Long term care facility"
 * $v3-NullFlavor#OTH "other"
 * $v3-NullFlavor#UNK "unknown"
+
+ValueSet: MaritalStatusVS
+Id: vrdr-MaritalStatus
+Title: "Marital Status VS -- PHVS_MaritalStatus_NCHS"
+Description: "PHVS_MaritalStatus_NCHS"
+* include codes from valueset $maritalStatus
+* exclude $maritalStatus#I
+* exclude $maritalStatus#L
+* exclude $maritalStatus#P
+* exclude $maritalStatus#T
+* exclude $v3-NullFlavor#UNK
+
+ValueSet: RelatedPersonRelationshipTypeVS
+Id: vrdr-RelatedPersonRelationshipType
+Title: "RelatedPerson Relationship type VS -- RelatedPersonRelationshipType"
+Description: "RelatedPersonRelationshipType"
+* $roleCode#CHLDADOPT	"adopted child"
+* $roleCode#DAUADOPT	"adopted daughter"
+* $roleCode#SONADOPT "adopted son"
+* $roleCode#ADOPTF "adoptive father"
+* $roleCode#ADOPTM "adoptive mother"
+* $roleCode#ADOPTP "adoptive parent"
+* $roleCode#AUNT "aunt"
+* $roleCode#BRO "brother"
+* $roleCode#BROINLAW "brother-in-law"
+* $roleCode#CHILD "child"
+* $roleCode#CHLDINLAW "child-in-law"
+* $roleCode#COUSN "cousin"
+* $roleCode#DAUC "daughter"
+* $roleCode#DAUINLAW "daughter in-law"
+* $roleCode#DOMPART "domestic partner"

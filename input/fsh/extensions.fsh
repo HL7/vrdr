@@ -20,8 +20,7 @@ Description: "Used to indicate whether or not an address is within city limits. 
 * ^context.expression = "Address"
 * value[x] 1..1
 * value[x] only Coding
-* value[x] from $ViewValueSet.action_2 (required)
-* value[x] ^binding.description = "PHVS_YesNoUnknown_CDC"
+* value[x] from YesNoUnknownVS (required)
 
 Extension: ExtensionPartialDatePartAbsentReason
 Id: VRDR-Partial-date-part-absent-reason
