@@ -29,10 +29,9 @@ Title: "VRDR Decedent"
 * identifier 1..* MS
 * name 1..* MS
 * gender 1..1
-* gender from $ViewValueSet.action_15 (required)
+* gender from AdministrativeGenderVS (required)
 * gender ^definition = "The observed sex (male, female, or unknown) of the decedent at the time of death as determined by the death certifier or authoritative informant."
 * gender ^comment = "This item aids in the identification of the decedent. It is also used in research and statistical analysis to determine sex-specific death rates. \n\nThis element differs from the US Core BirthSex element. Birthsex is not a concept required for completion of a death record for submission to NCHS. It is included in the VRDR FHIR IG by virtue of using the US Core Patient as the base profile for Decedent. The US Core IG defined BirthSex as a code classifying the person's sex assigned at birth and declares the element as \"must support\". Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way. For VRDR meaningful support of the US Core BirthSex element would be the inclusion of birth sex as recorded in the decedents birth record, if known. Birthsex is an optional element and need not be completed if it is unknown."
-* gender ^binding.description = "PHVS_Sex_MFU"
 * birthDate 0..1
 * birthDate.extension contains ExtensionPartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS
 * birthDate.extension[partialDatePartAbsentReason] ^short = "partialDatePartAbsentReason"
@@ -98,7 +97,7 @@ Usage: #example
 * name[=].given[0] = "FirstNameAlias"
 * name[=].given[+] = "MiddleAlias"
 * name[=].suffix = "Jr."
-* gender = #male
+* gender = $admingender#male "male"
 * birthDate.extension.extension[0].url = "year-absent-reason"
 * birthDate.extension.extension[=].valueCode = #asked-unknown
 * birthDate.extension.extension[+].url = "date-month"
