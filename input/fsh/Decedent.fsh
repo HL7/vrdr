@@ -44,12 +44,10 @@ Title: "VRDR Decedent"
 * address.country ^binding.description = "PHVS_DecedentResident_Country"
 * maritalStatus 0..1
 * maritalStatus only CodeableConcept
-* maritalStatus from $ViewValueSet.action_17 (required)
-* maritalStatus ^binding.description = "PHVS_MaritalStatus_NCHS"
+* maritalStatus from MaritalStatusVS (required)
 * contact.relationship 0..1
 * contact.relationship only CodeableConcept
-* contact.relationship from $ViewValueSet.action_18 (required)
-* contact.relationship ^binding.description = "PHVS_RelatedPersonRelationshipType_NCHS"
+* contact.relationship from RelatedPersonRelationshipTypeVS (required)
 
 Instance: 51b806c8-566f-463e-8783-9fbf6be8161d
 InstanceOf: Decedent
