@@ -85,8 +85,8 @@ Description: "Yes No Not Applicable Valueset built HL7 Expanded Yes/No Codesyste
 
 ValueSet: AdministrativeGenderVS
 Id: vrdr-administrative-gender
-Title: "Yes No Not Applicable  Value Set"
-Description: "Yes No Not Applicable Valueset built HL7 Administrative Gender Codesystem.  If the 'other' value were included, this could use the standard valuesystem used by USCore http://hl7.org/fhir/R4/valueset-administrative-gender.html#4.4.1.369"
+Title: "Administrative Gender"
+Description: "Gender Valueset built HL7 Administrative Gender Codesystem.  If the 'other' value were included, this could use the standard valuesystem used by USCore http://hl7.org/fhir/R4/valueset-administrative-gender.html#4.4.1.369"
 * ^status = #active
 * ^version = "1.0.0"
 * $admingender#male "male"
@@ -104,5 +104,5 @@ Description: "PHVS_PlaceOfDeath_NCHS"
 * $sct#16983000 "Hospital Inpatient"
 * $sct#450391000124102  "Death in emergency Room/Outpatient"
 * $sct#450381000124100 "Death in nursing home/Long term care facility"
-* $v3-NullFlavor#OTH "Other"
-* $v3-NullFlavor#UNK "Unknown"
+* $v3-NullFlavor#OTH "other"
+* $v3-NullFlavor#UNK "unknown"
