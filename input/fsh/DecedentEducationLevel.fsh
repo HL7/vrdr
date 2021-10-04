@@ -32,9 +32,9 @@ Title: "VRDR Decedent Education Level"
 * subject ^short = "subject"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $PHVS_DecedentEducationLevel_NCHS (required)
+* value[x] from DecedentEducationLevelVS (required)
 * value[x] ^short = "value[x]"
-* value[x] ^binding.description = "PHVS_DecedentEducationLevel_NCHS"
+* value[x] ^binding.description = "DecedentEducationLevel"
 
 Instance: 9676ae27-2a89-4295-913c-0d6847300a3a
 InstanceOf: DecedentEducationLevel
@@ -47,4 +47,4 @@ Usage: #example
 * status = #final
 * code = $loinc#80913-7 "Highest level of education [US Standard Certificate of Death]"
 * subject.reference = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
-* valueCodeableConcept = $PH_PHINVS_CDC#PHC1453 "Bachelor's Degree"
+* valueCodeableConcept = $HL7_EducationLevelCS#BD "Bachelor's Degree"
