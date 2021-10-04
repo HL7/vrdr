@@ -140,3 +140,10 @@ Description: "RelatedPersonRelationshipType"
 * $roleCode#DAUC "daughter"
 * $roleCode#DAUINLAW "daughter in-law"
 * $roleCode#DOMPART "domestic partner"
+
+ValueSet: DecedentEducationLevelVS
+Id: vrdr-EducationLevel
+Title: "Education Level VS "
+Description: "EducationLevel"
+* include codes from system $HL7_EducationLevelCS
+* $v3-NullFlavor#UNK "unknown"

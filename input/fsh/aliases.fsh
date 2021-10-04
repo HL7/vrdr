@@ -18,6 +18,9 @@ Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-bir
 Alias: $VRDR_Mortician = http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_Mortician
 Alias: $VRDR_FuneralHome = http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_FuneralHome
 Alias: $ViewValueSet.action_1 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
+Alias: $PHVS_DecedentEducationLevel_NCHS = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7385
+Alias: $PH_PHINVS_CDC = urn:oid:2.16.840.1.114222.4.5.274
+Alias: $HL7_EducationLevelCS = 	http://terminology.hl7.org/CodeSystem/v3-EducationLevel
 Alias: $ViewValueSet.action_2 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7486
 Alias: $ViewValueSet.action_3 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3593
 Alias: $ViewValueSet.action_4 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.6001
