@@ -36,10 +36,19 @@ Title:  "Death Message Parameters"
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-* parameter contains {jurisdiction_id} 1..1 MS
-* parameter[jurisdiction_id].name = "jurisdiction_id"
+* parameter contains
+    jurisdiction_id 1..1 and
+    cert_no 1..1 and
+    death_year 1..1 and
+    state_auxiliary_id 0..1 MS
+* parameter[jurisdiction_id].name from VRDRJurisdictionVS (required)
 * parameter[jurisdiction_id].value[x] only string   // restricted to Jurisdiction code
-
+* parameter[cert_no].name = "cert_no"
+* parameter[cert_no].value[x] only string   // restricted to Jurisdiction code
+* parameter[death_year].name = "death_year"
+* parameter[death_year].value[x] only string   // restricted to Jurisdiction code
+* parameter[state_auxiliary_id].name = "state_auxiliary_id"
+* parameter[state_auxiliary_id].value[x] only string   // restricted to Jurisdiction code
 
 
 Profile: DeathRecordSubmissionMessage
