@@ -146,5 +146,5 @@ Id: vrdr-EducationLevel
 Title: "Education Level VS "
 Description: "EducationLevel"
 * include codes from system $HL7_EducationLevelCS
+* exclude $HL7_EducationLevelCS#PB
 * $v3-NullFlavor#UNK "unknown"
-* $v2-0360#MA "Master of Arts"
