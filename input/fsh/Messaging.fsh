@@ -41,8 +41,9 @@ Title:  "Death Message Parameters"
     cert_no 1..1 and
     death_year 1..1 and
     state_auxiliary_id 0..1 MS
-* parameter[jurisdiction_id].name from VRDRJurisdictionVS (required)
+* parameter[jurisdiction_id].name = "jurisdiction_id"
 * parameter[jurisdiction_id].value[x] only string   // restricted to Jurisdiction code
+* parameter[jurisdiction_id].value[x] from VRDRJurisdictionVS (required)
 * parameter[cert_no].name = "cert_no"
 * parameter[cert_no].value[x] only integer
 * parameter[death_year].name = "death_year"
