@@ -44,11 +44,11 @@ Title:  "Death Message Parameters"
 * parameter[jurisdiction_id].name from VRDRJurisdictionVS (required)
 * parameter[jurisdiction_id].value[x] only string   // restricted to Jurisdiction code
 * parameter[cert_no].name = "cert_no"
-* parameter[cert_no].value[x] only string   // restricted to Jurisdiction code
+* parameter[cert_no].value[x] only integer
 * parameter[death_year].name = "death_year"
-* parameter[death_year].value[x] only string   // restricted to Jurisdiction code
+* parameter[death_year].value[x] only integer
 * parameter[state_auxiliary_id].name = "state_auxiliary_id"
-* parameter[state_auxiliary_id].value[x] only string   // restricted to Jurisdiction code
+* parameter[state_auxiliary_id].value[x] only string
 
 
 Profile: DeathRecordSubmissionMessage
