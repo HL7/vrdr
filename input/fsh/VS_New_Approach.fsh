@@ -147,3 +147,4 @@ Title: "Education Level VS "
 Description: "EducationLevel"
 * include codes from system $HL7_EducationLevelCS
 * $v3-NullFlavor#UNK "unknown"
+* $v2-0360#MA "Master of Arts"

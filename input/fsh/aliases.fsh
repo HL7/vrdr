@@ -40,3 +40,4 @@ Alias: $ViewValueSet.action_16 = http://phinvads.cdc.gov/vads/ViewValueSet.actio
 Alias: $ViewValueSet.action_17 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7380
 Alias: $ViewValueSet.action_18 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8018
 Alias: $PH_PlaceOfOccurrence_ICD_10_WHO = urn:oid:2.16.840.1.114222.4.5.320
+Alias: $v2-0360 = http://terminology.hl7.org/CodeSystem/v2-0360
