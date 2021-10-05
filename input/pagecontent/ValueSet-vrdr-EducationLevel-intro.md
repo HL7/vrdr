@@ -14,4 +14,4 @@
 
 Note that all codes except MA and UNK are drawn from the HL7 Education Level codesystem.
 MA is drawn from degreeLicenseCertificate.
-UNK is drawn from Null Flavor.
+UNK is drawn from Null Flavor.  X
