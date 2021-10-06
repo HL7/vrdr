@@ -4,15 +4,29 @@ RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}
 
+CodeSystem: DeathMessageHeaderURICS
+Id: VRDR-DeathMessageHeaderURI-cs
+Title: "DeathMessageHeader URI Values"
+Description: "DeathMessageHeader URI Values"
+* #http://nchs.cdc.gov/vrdrsubmission "VRDR Submission" "Indicates that the payload is aninitial (or retransmission of an unacknowledged) submission of a VRDR Death Certificate
+Document"
+* #http://nchs.cdc.gov/vrdrsubmissionupdateindicatesthatthepayload "VRDR Update" "Indicates thisis  an  update  to  a  previously  acknowledged  submission  of  a  VRDR  DeathCertificate Document "
+
+ValueSet: DeathMessageHeaderURIVS
+Id: VRDR-DeathMessageHeaderURI-vs
+Title: "DeathMessageHeader URI Values"
+Description: "DeathMessageHeader URI Values"
+* include codes from system DeathMessageHeaderURICS
+
 
 Profile:  DeathMessageHeader
 Parent: MessageHeader
 Id: VRDR-DeathMessageHeader
 Title:  "Death Message Header"
-* eventUri MS
+* eventUri from DeathMessageHeaderURIVS
 * destination MS
 * source MS
-* focus MS
+* focus only Reference(DeathCertificateDocument)
 //•id is unique for every message.  The same value should be re-used for retransmissions ofthe same message.•eventUriidentifies  the  type  of  message,
 //specific  values  for  each  type  of  message  areprovided in the subsections describing that message.•destination.endpointidentifies  the  destination
 //FHIR  messaging  endpoint  and  isfixed tohttp://nchs.cdc.gov/vrdrsubmission(a URI that uniquely identifiesthe NCHS death record submission service) for
