@@ -130,8 +130,9 @@ Title:  "Coding Message Parameters"
 * insert ParameterNameType(injpl, string)
 * insert ParameterNameType(otherspecifiedplace, string)
 * parameter[ethnicity].part.name only string  // these should be IJE Ethnicity Codes
+* parameter[ethnicity].part.name = "DETHNICE"
 * parameter[ethnicity].part.value[x] only CodeableConcept // bind to value set
-* parameter[race].part.name only string  // these should be IJE Ethnicity Codes
+* parameter[race].part.name only string  // these should be IJE Race
 * parameter[race].part.value[x] only CodeableConcept // bind to value set
 * parameter[entityaxiscode].part.name only string  // these should be IJE Ethnicity Codes
 * parameter[recordcauseofdeath].part.value[x] only CodeableConcept // bind to value set
