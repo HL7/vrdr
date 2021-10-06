@@ -75,6 +75,31 @@ Title:  "Death Message Parameters"
 * parameter[state_auxiliary_id].name = "state_auxiliary_id"
 * parameter[state_auxiliary_id].value[x] only string
 
+Profile:  CodingMessageParameters
+Parent: Parameters
+Id: VRDR-CodingMessageParameters
+Title:  "Coding Message Parameters"
+* id MS
+* parameter ^slicing.discriminator.type = #profile
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* parameter contains
+    rec_mo_id 0..1 and
+    rec_dy 0..1 and
+    cs 0..1 and
+    ship 0..1 and
+    sysrej 0..1 and
+    intrej 0..1 and
+    ethnicity 0..1 and
+    race 0..1 and
+    underlyingcauseofdeath 0..1 and
+    recordcauseofdeath 0..1 and
+    entityaxiscode 0..1 and
+    manner 0..1 and
+    injpl 0..1 and
+    otherspecifiedplace 0..1
+
 
 Profile: DeathRecordSubmissionMessage
 Parent: Bundle
@@ -92,5 +117,23 @@ Title: "Death Record Submission Message"
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageHeader)
 * insert BundleEntry(deathRecordParameters, 1, *, Death Message Parameters, Death Record Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, *, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp and entry and entry.resource MS
+
+Profile: CodingMessage
+Parent: Bundle
+Id: VRDR-CodingMessage
+Title: "Coding Message"
+* ^status = #draft
+* type  = #message
+* id MS
+* timestamp MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageHeader)
+* insert BundleEntry(codingParameters, 1, *, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
