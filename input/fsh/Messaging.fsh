@@ -4,20 +4,31 @@ RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}
 
-CodeSystem: DeathMessageHeaderURICS
-Id: VRDR-DeathMessageHeaderURI-cs
-Title: "DeathMessageHeader URI Values"
-Description: "DeathMessageHeader URI Values"
+CodeSystem: MessageHeaderURICS
+Id: VRDR-MessageHeaderURI-cs
+Title: "MessageHeader URI Values"
+Description: "MessageHeader URI Values"
 * #http://nchs.cdc.gov/vrdrsubmission "VRDR Submission" "Indicates that the payload is aninitial (or retransmission of an unacknowledged) submission of a VRDR Death Certificate
 Document"
-* #http://nchs.cdc.gov/vrdrsubmissionupdateindicatesthatthepayload "VRDR Update" "Indicates thisis  an  update  to  a  previously  acknowledged  submission  of  a  VRDR  DeathCertificate Document "
+* #http://nchs.cdc.gov/vrdrsubmissionupdate "VRDR Update" "Indicates thisis  an  update  to  a  previously  acknowledged  submission  of  a  VRDR  DeathCertificate Document "
+* #http://nchs.cdc.gov/vrdrsubmissionvoid   "VRDR Void" "Indicates thisis  void  of  a  VRDR  DeathCertificate Document "
+* #http://nchs.cdc.gov/vrdracknowledgement  "VRDR Acknowledgement" "Indicates thisis  an  acknowledgement "
+* #http://nchs.cdc.gov/vrdrcodingupdate     "VRDR Coding Update" "Indicates thisis  an  coding update "
+* #http://nchs.cdc.gov/vrdrcoding "VRDR Coding" " Initial Coding Response"
 
 ValueSet: DeathMessageHeaderURIVS
 Id: VRDR-DeathMessageHeaderURI-vs
 Title: "DeathMessageHeader URI Values"
 Description: "DeathMessageHeader URI Values"
-* include codes from system DeathMessageHeaderURICS
+* MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmission "VRDR Submission"
+* MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionupdate "VRDR Update"
 
+
+ValueSet: CodingMessageHeaderURIVS
+Title: "CodingMessageHeader URI Values"
+Description: "CodingMessageHeader URI Values"
+* MessageHeaderURICS#http://nchs.cdc.gov/vrdrcoding "VRDR Coding"
+* MessageHeaderURICS#http://nchs.cdc.gov/vrdrcodingupdate     "VRDR Coding Update"
 
 Profile:  DeathMessageHeader
 Parent: MessageHeader
@@ -27,15 +38,14 @@ Title:  "Death Message Header"
 * destination MS
 * source MS
 * focus only Reference(DeathCertificateDocument)
-//•id is unique for every message.  The same value should be re-used for retransmissions ofthe same message.•eventUriidentifies  the  type  of  message,
-//specific  values  for  each  type  of  message  areprovided in the subsections describing that message.•destination.endpointidentifies  the  destination
-//FHIR  messaging  endpoint  and  isfixed tohttp://nchs.cdc.gov/vrdrsubmission(a URI that uniquely identifiesthe NCHS death record submission service) for
-//messages sent to NVSS. Note that this URIdoes not need to be resolvable and is only used for logical identification purposes.•source.endpointidentifies
-//the  source  FHIR  messaging  endpoint  and  is  fixed  tohttp://nchs.cdc.gov/vrdrsubmission(a  URI  that  uniquely  identifies  theNCHS  death  record
-//submission  service)  for  messages  originating  from  NVSS.  Likedestination.endpoint,  this  URI  is  a  logical  identifier  and  does  not  need  to
-//beresolvable.•focusreferences the payload of the message, all messages will include a reference to theRecordentry, some messages include additional references
-//to other entries and these aredefined in the following subsections.
 
+Profile:  CodingMessageHeader
+Parent: MessageHeader
+Id: VRDR-CodingMessageHeader
+Title:  "Coding Message Header"
+* eventUri from CodingMessageHeaderURIVS
+* destination MS
+* source MS
 
 Profile:  DeathMessageParameters
 Parent: Parameters
