@@ -103,39 +103,39 @@ Title:  "Coding Message Parameters"
     rec_dy 0..1 and          //uint
     cs 0..1 and    // codeable
     ship 0..1 and // string
-    sysrej 0..1 and // sysrej -- value set of NotRjected and other things
-    intrej 0..1 and
+    sys_rej 0..1 and // sysrej -- value set of NotRjected and other things
+    int_rej 0..1 and
     ethnicity 0..1 and // part contains name=DETHNICE, codeable
     race 0..* and  // part contains list with name=RACE1E, etc and codeable
-    underlyingcauseofdeath 0..1 and // icd10
-    recordcauseofdeath 0..1 and // part contains list of codeable concepts
-    entityaxiscode 0..* and // multiple parameters, each contains - part contains linenumber, codeable
+    underlying_cause_of_death 0..1 and // icd10
+    record_cause_of_death 0..1 and // part contains list of codeable concepts
+    entity_axis_code 0..* and // multiple parameters, each contains - part contains linenumber, codeable
     manner 0..1 and // string
     injpl 0..1 and   // string
-    otherspecifiedplace 0..1 // string
+    other_specified_place 0..1 // string
 * insert BaseMessageParameterSlices
 * insert ParameterNameType(rec_yr, unsignedInt)
 * insert ParameterNameType(rec_mo, unsignedInt)
 * insert ParameterNameType(rec_dy, unsignedInt)
 * insert ParameterNameType(cs, CodeableConcept)
 * insert ParameterNameType(ship, string)
-* insert ParameterNameType(sysrej, string)
-* insert ParameterNameType(intrej, string)
+* insert ParameterNameType(sys_rej, string)
+* insert ParameterNameType(int_rej, string)
 * insert ParameterName(ethnicity)
 * insert ParameterName(race)
-* insert ParameterNameType(underlyingcauseofdeath, CodeableConcept)
-* insert ParameterName(recordcauseofdeath)
-* insert ParameterName(entityaxiscode)
+* insert ParameterNameType(underlying_cause_of_death, CodeableConcept)
+* insert ParameterName(record_cause_of_death)
+* insert ParameterName(entity_axis_code)
 * insert ParameterNameType(manner, string)
 * insert ParameterNameType(injpl, string)
-* insert ParameterNameType(otherspecifiedplace, string)
+* insert ParameterNameType(other_specified_place, string)
 * parameter[ethnicity].part.name only string  // these should be IJE Ethnicity Codes
 * parameter[ethnicity].part.name = "DETHNICE"
 * parameter[ethnicity].part.value[x] only CodeableConcept // bind to value set
 * parameter[race].part.name only string  // these should be IJE Race
 * parameter[race].part.value[x] only CodeableConcept // bind to value set
-* parameter[entityaxiscode].part.name only string  // these should be IJE Ethnicity Codes
-* parameter[recordcauseofdeath].part.value[x] only CodeableConcept // bind to value set
+* parameter[entity_axis_code].part.name only string  // these should be IJE Ethnicity Codes
+* parameter[record_cause_of_death].part.value[x] only CodeableConcept // bind to value set
 
 
 Profile: DeathRecordSubmissionMessage
