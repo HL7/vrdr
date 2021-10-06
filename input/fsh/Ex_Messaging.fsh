@@ -1,5 +1,5 @@
 Alias: $auser.pdf = https://ftp.cdc.gov/pub/HealthStatistics/NCHS/Software/MICAR/DataEntrySoftware/ACMETRANSAX/Documentation/auser.pdf
-Alias: $icd-10 = http://hl7.org/fhir/sid/icd-10-cm
+
 
 Instance: e1c5eb7a-730f-440f-9b4e-c5d15a1b981c
 InstanceOf: CodingMessageParameters

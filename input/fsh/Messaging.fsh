@@ -4,6 +4,63 @@ RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}
 
+CodeSystem: RaceCodesCS
+Id: VRDR-Race-cs
+Title: "Race Codes Values"
+Description: "Race Code Values"
+// RACE1E..RACE8EorRACE16C..RACE23CorRACEBRG
+* #RACE1E "RACE1E" "RACE1E"
+* #RACE2E "RACE2E" "RACE2E"
+* #RACE3E "RACE3E" "RACE3E"
+* #RACE4E "RACE4E" "RACE4E"
+* #RACE5E "RACE5E" "RACE5E"
+* #RACE6E "RACE6E" "RACE6E"
+* #RACE7E "RACE7E" "RACE7E"
+* #RACE8E "RACE8E" "RACE8E"
+* #RACE16C "RACE16C" "RACE16C"
+* #RACE17C "RACE17C" "RACE17C"
+* #RACE18C "RACE18C" "RACE18C"
+* #RACE19C "RACE19C" "RACE19C"
+* #RACE20C "RACE20C" "RACE20C"
+* #RACE21C "RACE21C" "RACE21C"
+* #RACE22C "RACE22C" "RACE22C"
+* #RACE23C "RACE23C" "RACE23C"
+
+ValueSet: RaceCodesVS
+Id: VRDR-Race-vs
+Title: "Race Codes Values"
+Description: "Race Code Values"
+* include codes from system RaceCodesCS
+
+CodeSystem: EthnicCodesCS
+Id: VRDR-EthnicCodes-cs
+Title: "Ethnic Codes Values"
+Description: "EthnicCodes Values"
+* #DETHNICE "DETHNICE" "DETHNICE"
+* #DETHNIC5C "DETHNIC5C"
+
+ValueSet: EthnicCodesVS
+Id: VRDR-EthnicCodes-vs
+Title: "Ethnic Codes Values"
+Description: "EthnicCodes Values"
+* include codes from system EthnicCodesCS
+
+CodeSystem: SystemRejectCodesCS
+Id: VRDR-SystemRejectCodes-cs
+Title: "System Reject Codes Values"
+Description: "System Reject Codes Values"
+* #ACMEReject "ACME Reject" "ACME Reject"
+* #MICARRejectDdictionaryMatch "MICAR Reject - dictionary match" "MICAR Reject - dictionary match"
+* #MICARRejectRuleApplication "MICAR Reject - Rule Application" "MICAR Reject - Rule Application"
+* #NotRejected "Not Rejected" "Not Rejected"
+* #RecordReviewed "Record Reviewed" "Record Reviewed"
+
+ValueSet: SystemRejectCodesVS
+Id: VRDR-SystemRejectCodes-vs
+Title: "System Reject Codes Values"
+Description: "System Reject Codes Values"
+* include codes from system SystemRejectCodesCS
+
 CodeSystem: MessageHeaderURICS
 Id: VRDR-MessageHeaderURI-cs
 Title: "MessageHeader URI Values"
@@ -104,7 +161,7 @@ Title:  "Coding Message Parameters"
     cs 0..1 and    // codeable
     ship 0..1 and // string
     sys_rej 0..1 and // sysrej -- value set of NotRjected and other things
-    int_rej 0..1 and
+    int_rej 0..1 and  // one character reject code --  1, 2, 3, 4, 5, 9
     ethnicity 0..1 and // part contains name=DETHNICE, codeable
     race 0..* and  // part contains list with name=RACE1E, etc and codeable
     underlying_cause_of_death 0..1 and // icd10
@@ -120,6 +177,7 @@ Title:  "Coding Message Parameters"
 * insert ParameterNameType(cs, CodeableConcept)
 * insert ParameterNameType(ship, string)
 * insert ParameterNameType(sys_rej, string)
+* parameter[sys_rej].value[x] from  SystemRejectCodesVS (required)
 * insert ParameterNameType(int_rej, string)
 * insert ParameterName(ethnicity)
 * insert ParameterName(race)
@@ -130,12 +188,23 @@ Title:  "Coding Message Parameters"
 * insert ParameterNameType(injpl, string)
 * insert ParameterNameType(other_specified_place, string)
 * parameter[ethnicity].part.name only string  // these should be IJE Ethnicity Codes
-* parameter[ethnicity].part.name = "DETHNICE"
+* parameter[ethnicity].part.name from EthnicCodesVS
 * parameter[ethnicity].part.value[x] only CodeableConcept // bind to value set
 * parameter[race].part.name only string  // these should be IJE Race
-* parameter[race].part.value[x] only CodeableConcept // bind to value set
-* parameter[entity_axis_code].part.name only string  // these should be IJE Ethnicity Codes
+* parameter[race].part.name from RaceCodesVS
+* parameter[race].part.value[x] only unsignedInt
 * parameter[record_cause_of_death].part.value[x] only CodeableConcept // bind to value set
+* parameter[record_cause_of_death].part.name = "coding"
+* parameter[record_cause_of_death].part.value[x] only CodeableConcept
+* parameter[record_cause_of_death].part.value[x] from $icd-10
+* parameter[entity_axis_code].part ^slicing.discriminator.type = #profile
+* parameter[entity_axis_code].part ^slicing.discriminator.path = "name"
+* parameter[entity_axis_code].part ^slicing.rules = #open
+* parameter[entity_axis_code].part ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* parameter[entity_axis_code].part contains
+      line 1..1 and
+      coding 1..1
+
 
 
 Profile: DeathRecordSubmissionMessage
