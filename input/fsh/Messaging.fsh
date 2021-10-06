@@ -35,6 +35,7 @@ Parent: MessageHeader
 Id: VRDR-DeathMessageHeader
 Title:  "Death Message Header"
 * eventUri from DeathMessageHeaderURIVS
+* eventUri 1..1
 * destination MS
 * source MS
 * focus only Reference(DeathCertificateDocument)
@@ -44,8 +45,24 @@ Parent: MessageHeader
 Id: VRDR-CodingMessageHeader
 Title:  "Coding Message Header"
 * eventUri from CodingMessageHeaderURIVS
+* eventUri 1..1
 * destination MS
 * source MS
+
+RuleSet: BaseMessageParameterSlices
+* insert ParameterNameType(jurisdiction_id, string)
+* parameter[jurisdiction_id].value[x] from VRDRJurisdictionVS (required)
+* insert ParameterNameType(cert_no, unsignedInt) // parameter[cert_no].name = "cert_no"
+* insert ParameterNameType(death_year, unsignedInt) //* parameter[death_year].name = "death_year"
+* insert ParameterNameType(state_auxiliary_id, string) // * parameter[state_auxiliary_id].name = "state_auxiliary_id"
+
+
+RuleSet: ParameterName(name)
+* parameter[{name}].name = "{name}"
+
+RuleSet: ParameterNameType(name, type)
+* insert ParameterName({name})
+* parameter[{name}].value[x] only {type}
 
 Profile:  DeathMessageParameters
 Parent: Parameters
@@ -65,15 +82,7 @@ Title:  "Death Message Parameters"
     cert_no 1..1 and
     death_year 1..1 and
     state_auxiliary_id 0..1 MS
-* parameter[jurisdiction_id].name = "jurisdiction_id"
-* parameter[jurisdiction_id].value[x] only string   // restricted to Jurisdiction code
-* parameter[jurisdiction_id].value[x] from VRDRJurisdictionVS (required)
-* parameter[cert_no].name = "cert_no"
-* parameter[cert_no].value[x] only unsignedInt
-* parameter[death_year].name = "death_year"
-* parameter[death_year].value[x] only unsignedInt
-* parameter[state_auxiliary_id].name = "state_auxiliary_id"
-* parameter[state_auxiliary_id].value[x] only string
+* insert BaseMessageParameterSlices
 
 Profile:  CodingMessageParameters
 Parent: Parameters
@@ -85,20 +94,43 @@ Title:  "Coding Message Parameters"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 * parameter contains
-    rec_mo_id 0..1 and
-    rec_dy 0..1 and
-    cs 0..1 and
-    ship 0..1 and
-    sysrej 0..1 and
+    jurisdiction_id 1..1 and  // jurisdiction code
+    state_auxiliary_id 0..1 and //uint
+    cert_no 0..1 and          //uint
+    death_year 0..1 and           //uint
+    rec_yr 0..1 and           //uint
+    rec_mo 0..1 and          //uint
+    rec_dy 0..1 and          //uint
+    cs 0..1 and    // codeable
+    ship 0..1 and // string
+    sysrej 0..1 and // sysrej -- value set of NotRjected and other things
     intrej 0..1 and
-    ethnicity 0..1 and
-    race 0..1 and
-    underlyingcauseofdeath 0..1 and
-    recordcauseofdeath 0..1 and
-    entityaxiscode 0..1 and
-    manner 0..1 and
-    injpl 0..1 and
-    otherspecifiedplace 0..1
+    ethnicity 0..1 and // part contains name=DETHNICE, codeable
+    race 0..* and  // part contains list with name=RACE1E, etc and codeable
+    underlyingcauseofdeath 0..1 and // icd10
+    recordcauseofdeath 0..1 and // part contains list of codeable concepts
+    entityaxiscode 0..* and // multiple parameters, each contains - part contains linenumber, codeable
+    manner 0..1 and // string
+    injpl 0..1 and   // string
+    otherspecifiedplace 0..1 // string
+* insert BaseMessageParameterSlices
+* insert ParameterNameType(rec_yr, unsignedInt)
+* insert ParameterNameType(rec_mo, unsignedInt)
+* insert ParameterNameType(rec_dy, unsignedInt)
+* insert ParameterNameType(cs, CodeableConcept)
+* insert ParameterNameType(ship, string)
+* insert ParameterNameType(sysrej, string)
+* insert ParameterNameType(intrej, string)
+* insert ParameterName(ethnicity)
+* insert ParameterName(race)
+* insert ParameterNameType(underlyingcauseofdeath, CodeableConcept)
+* insert ParameterName(recordcauseofdeath)
+* insert ParameterName(entityaxiscode)
+* insert ParameterNameType(manner, string)
+* insert ParameterNameType(injpl, string)
+* insert ParameterNameType(otherspecifiedplace, string)
+
+
 
 
 Profile: DeathRecordSubmissionMessage
