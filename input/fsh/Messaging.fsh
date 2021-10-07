@@ -45,6 +45,27 @@ Title: "Ethnic Codes Values"
 Description: "EthnicCodes Values"
 * include codes from system EthnicCodesCS
 
+CodeSystem: InternalRejectCodesCS
+Id: VRDR-InternalRejectCodes-cs
+Title: "System Reject Codes Values"
+Description: "System Reject Codes Values"
+* #1 "Reject1" "Reject1"
+* #2 "Reject2" "Reject2"
+* #3 "Reject3" "Reject3"
+* #4 "Reject4" "Reject4"
+* #5 "Reject5" "Reject5"
+* #6 "Reject6" "Reject6"
+* #7 "Reject7" "Reject7"
+* #8 "Reject8" "Reject8"
+* #9 "Reject9" "Reject9"
+* #U "No Code" "No Code"
+
+ValueSet: InternalRejectCodesVS
+Id: VRDR-InternalRejectCodes-vs
+Title: "Internal Reject Codes Values"
+Description: "Internal Reject Codes Values"
+* include codes from system InternalRejectCodesCS
+
 CodeSystem: SystemRejectCodesCS
 Id: VRDR-SystemRejectCodes-cs
 Title: "System Reject Codes Values"
@@ -187,6 +208,7 @@ Title:  "Coding Message Parameters"
 * insert ParameterNameType(manner, string)
 * insert ParameterNameType(injpl, string)
 * insert ParameterNameType(other_specified_place, string)
+* parameter[int_rej].value[x] from InternalRejectCodesVS (required)
 * parameter[ethnicity].part.name only string  // these should be IJE Ethnicity Codes
 * parameter[ethnicity].part.name from EthnicCodesVS
 * parameter[ethnicity].part.value[x] only CodeableConcept // bind to value set
