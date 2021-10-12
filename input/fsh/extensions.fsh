@@ -110,3 +110,21 @@ Title: "Disposition Location Reference"
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(DispositionLocation)
+
+Extension: IJECheckBox
+Id: IJE-Check-Box
+Title: "IJE Check Box"
+* url 1..1
+* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Check-Box" (exactly)
+* value[x] 1..1
+* value[x] only boolean
+
+Extension: IJERace
+Id: IJE-Race
+Title: "IJE Race"
+* url 1..1
+* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Race" (exactly)
+* extension contains
+    IJECheckBox named raceWhite 1..1 and
+    IJECheckBox named raceBlackorAfricanAmerican 1..1 and
+    IJECheckBox named raceAmericanIndianOrAlaskaNative 1..1

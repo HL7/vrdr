@@ -59,6 +59,8 @@ Description: "The Death Certificate profile is the body of the death certificate
 * event.detail ^short = "detail"
 * event.detail ^definition = "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373)."
 
+
+
 Instance: 54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30
 InstanceOf: DeathCertificate
 Title: "Death Certificate Example"
