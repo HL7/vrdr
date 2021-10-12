@@ -111,20 +111,35 @@ Title: "Disposition Location Reference"
 * value[x] only Reference
 * value[x] only Reference(DispositionLocation)
 
-Extension: IJECheckBox
-Id: IJE-Check-Box
-Title: "IJE Check Box"
-* url 1..1
-* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Check-Box" (exactly)
-* value[x] 1..1
-* value[x] only boolean
+RuleSet: Racerules(race)
+* extension contains {race} 1..1
+* extension[{race}].value[x] 1..1
+* extension[{race}].value[x] only boolean
+
+RuleSet: Ethnicityrules(ethnicity)
+* extension contains {ethnicity} 1..1
+* extension[{ethnicity}].value[x] 1..1
+* extension[{ethnicity}].value[x] only CodeableConcept
+* extension[{ethnicity}].value[x] from YesNoUnknownVS
 
 Extension: IJERace
 Id: IJE-Race
 Title: "IJE Race"
-* url 1..1
-* url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Race" (exactly)
-* extension contains
-    IJECheckBox named raceWhite 1..1 and
-    IJECheckBox named raceBlackorAfricanAmerican 1..1 and
-    IJECheckBox named raceAmericanIndianOrAlaskaNative 1..1
+* insert Racerules(raceWhite)
+* insert Racerules(raceBlackOrAfricanAmerican)
+* insert Racerules(raceAmericanIndianOrAlaskaNative)
+* insert Racerules(raceAsianIndian)
+* insert Racerules(raceChinese)
+* insert Racerules(raceFilipino)
+* insert Racerules(raceJapanese)
+
+Extension: IJEEthnicity
+Id: IJE-Ethnicity
+Title: "IJE Ethnicity"
+* insert Ethnicityrules(hispanicMexican)
+* insert Ethnicityrules(hispanicPuertoRican)
+* insert Ethnicityrules(hispanicOther)
+* insert Ethnicityrules(hispanicCuban)
+* extension contains hispanicLiteral 1..1
+* extension[hispanicLiteral].value[x] 1..1
+* extension[hispanicLiteral].value[x] only string

@@ -4,14 +4,6 @@ Id: VRDR-Decedent
 Title: "VRDR Decedent"
 * ^meta.versionId = "90"
 * ^meta.lastUpdated = "2021-08-09T06:00:13.203+00:00"
-* ^meta.source = "#uyXAEWQu3pNMx6UB"
-* ^meta.security[0] = $security#user^PNgAbFNH^write
-* ^meta.security[+] = $security#user^PNgAbFNH^read
-* ^meta.security[+] = $security#user^dMG-NXHH^read
-* ^meta.security[+] = $security#everyone^read
-* ^meta.security[+] = $security#user^TKWZUCCU^read
-* ^meta.security[+] = $security#user^dMG-NXHH^write
-* ^meta.security[+] = $security#everyone^write
 * ^version = "1.0"
 * ^experimental = false
 * ^date = "2020-05-09"
@@ -20,7 +12,10 @@ Title: "VRDR Decedent"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "abdulmalik.shakir@hi3solutions.com"
 * ^contact.telecom.use = #work
-* extension contains $patient-birthPlace named patient-birthPlace 0..1
+* extension contains
+             $patient-birthPlace named patient-birthPlace 0..1 and
+             IJERace named ijerace 0..1 MS and
+             IJEEthnicity named ijeethnicity 0..1 MS
 * extension[patient-birthPlace] ^short = "Extension"
 * extension[patient-birthPlace].value[x] only Address
 * extension[patient-birthPlace].value[x].country 0..1
@@ -57,30 +52,37 @@ Usage: #example
 * meta.versionId = "4"
 * meta.lastUpdated = "2020-07-22T19:41:31.297+00:00"
 * meta.source = "#EoJNRyx11BYIT5J6"
-* extension[0].extension[0].url = "ombCategory"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
-* extension[=].extension[+].url = "ombCategory"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1002-5 "American Indian or Alaska Native"
-* extension[=].extension[+].url = "ombCategory"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 "Asian"
-* extension[=].extension[+].url = "detailed"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1586-7 "Shoshone"
-* extension[=].extension[+].url = "detailed"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2036-2 "Filipino"
-* extension[=].extension[+].url = "text"
-* extension[=].extension[=].valueString = "Mixed"
-* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-* extension[+].extension[0].url = "ombCategory"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
-* extension[=].extension[+].url = "detailed"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2184-0 "Dominican"
-* extension[=].extension[+].url = "detailed"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2148-5 "Mexican"
-* extension[=].extension[+].url = "text"
-* extension[=].extension[=].valueString = "Hispanic or Latino"
-* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-* extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
-* extension[=].valueCode = #F
+* extension[us-core-race].extension[0].url = "ombCategory"
+* extension[us-core-race].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
+* extension[us-core-race].extension[+].url = "ombCategory"
+* extension[us-core-race].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1002-5 "American Indian or Alaska Native"
+* extension[us-core-race].extension[+].url = "ombCategory"
+* extension[us-core-race].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 "Asian"
+* extension[us-core-race].extension[+].url = "detailed"
+* extension[us-core-race].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1586-7 "Shoshone"
+* extension[us-core-race].extension[+].url = "detailed"
+* extension[us-core-race].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2036-2 "Filipino"
+* extension[us-core-race].extension[text].valueString = "Mixed"
+* extension[us-core-ethnicity].extension[0].url = "ombCategory"
+* extension[us-core-ethnicity].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
+* extension[us-core-ethnicity].extension[+].url = "detailed"
+* extension[us-core-ethnicity].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2184-0 "Dominican"
+* extension[us-core-ethnicity].extension[+].url = "detailed"
+* extension[us-core-ethnicity].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2148-5 "Mexican"
+* extension[us-core-ethnicity].extension[text].valueString = "Hispanic or Latino"
+* extension[us-core-birthsex].valueCode = #F
+* extension[ijerace].extension[raceWhite].valueBoolean = true
+* extension[ijerace].extension[raceBlackOrAfricanAmerican].valueBoolean = false
+* extension[ijerace].extension[raceAmericanIndianOrAlaskaNative].valueBoolean = false
+* extension[ijerace].extension[raceAsianIndian].valueBoolean = true
+* extension[ijerace].extension[raceChinese].valueBoolean = true
+* extension[ijerace].extension[raceFilipino].valueBoolean = true
+* extension[ijerace].extension[raceJapanese].valueBoolean = true
+* extension[ijeethnicity].extension[hispanicMexican].valueCodeableConcept = #Y
+* extension[ijeethnicity].extension[hispanicPuertoRican].valueCodeableConcept = #N
+* extension[ijeethnicity].extension[hispanicCuban].valueCodeableConcept = #N
+* extension[ijeethnicity].extension[hispanicOther].valueCodeableConcept = #Y
+* extension[ijeethnicity].extension[hispanicLiteral].valueString = "Hispanic Literal"
 * identifier.type = $v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier.value = "123456789"
