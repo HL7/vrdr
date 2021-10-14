@@ -30,6 +30,7 @@ Description: "2 Letter States and Provinces Value Set"
 * ^version = "1.0.0"
 * include codes from valueset USStatesAndTerritoriesVS
 * include codes from valueset CanadaProvincesVS
+* $v3-NullFlavor#UNK
 
 ValueSet: CanadaProvincesVS
 Id: Canada-Provinces-VS
@@ -114,7 +115,7 @@ ValueSet: MaritalStatusVS
 Id: vrdr-MaritalStatus
 Title: "Marital Status VS -- PHVS_MaritalStatus_NCHS"
 Description: "PHVS_MaritalStatus_NCHS"
-* include codes from valueset $maritalStatus
+* include codes from system $maritalStatusCS
 * exclude $maritalStatusCS#I
 * exclude $maritalStatusCS#L
 * exclude $maritalStatusCS#P
