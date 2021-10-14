@@ -4,7 +4,6 @@ Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $maritalStatus = http://hl7.org/fhir/ValueSet/marital-status
-Alias: $maritalStatusCS = http://terminology.hl7.org/2.1.0/CodeSystem-v3-MaritalStatus.html
 Alias: $roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 
@@ -115,11 +114,11 @@ ValueSet: MaritalStatusVS
 Id: vrdr-MaritalStatus
 Title: "Marital Status VS -- PHVS_MaritalStatus_NCHS"
 Description: "PHVS_MaritalStatus_NCHS"
-* include codes from system $maritalStatusCS
-* exclude $maritalStatusCS#I
-* exclude $maritalStatusCS#L
-* exclude $maritalStatusCS#P
-* exclude $maritalStatusCS#T
+* include codes from system $v3-MaritalStatus
+* exclude $v3-MaritalStatus#I
+* exclude $v3-MaritalStatus#L
+* exclude $v3-MaritalStatus#P
+* exclude $v3-MaritalStatus#T
 * exclude $v3-NullFlavor#UNK
 
 ValueSet: RelatedPersonRelationshipTypeVS
