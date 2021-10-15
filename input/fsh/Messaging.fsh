@@ -108,7 +108,7 @@ Description: "CodingMessageHeader URI Values"
 * MessageHeaderURICS#http://nchs.cdc.gov/vrdrcoding "VRDR Coding"
 * MessageHeaderURICS#http://nchs.cdc.gov/vrdrcodingupdate     "VRDR Coding Update"
 
-Profile:  DeathMessageHeader
+Profile:  DeathMessageSubmissionHeader
 Parent: MessageHeader
 Id: VRDR-DeathMessageHeader
 Title:  "Death Message Header"
@@ -117,6 +117,15 @@ Title:  "Death Message Header"
 * destination MS
 * source MS
 * focus only Reference(DeathCertificateDocument)
+
+Profile:  DeathMessageVoidHeader
+Parent: MessageHeader
+Id: VRDR-DeathMessageVoidHeader
+Title:  "Death Message Void Header"
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmission (exactly)
+* eventUri 1..1
+* destination MS
+* source MS
 
 Profile:  CodingMessageHeader
 Parent: MessageHeader
@@ -142,9 +151,9 @@ RuleSet: ParameterNameType(name, type)
 * insert ParameterName({name})
 * parameter[{name}].value[x] only {type}
 
-Profile:  DeathMessageParameters
+Profile:  DeathMessageSubmissionParameters
 Parent: Parameters
-Id: VRDR-DeathMessageParameters
+Id: VRDR-DeathMessageSubmissionParameters
 Title:  "Death Message Parameters"
 * id MS
 // jurisdiction_id
@@ -161,6 +170,36 @@ Title:  "Death Message Parameters"
     death_year 1..1 and
     state_auxiliary_id 0..1 MS
 * insert BaseMessageParameterSlices
+
+Profile: DeathMessageVoidPaprameters
+Parent: DeathMessageSubmissionParameters
+Id: VRDR-DeathMessageVoidParameters
+* parameter contains
+    block_count 1..1
+* insert ParameterNameType(block_count, unsignedInt)
+
+
+CodeSystem: ACMETRANSAXCodingStatusCS
+Id: VRDR-ACMETRANSAXCodingStatus-cs
+Title: "ACMETRANSAX Coding StatusCS"
+Description: "ACMETRANSAX Coding Status from [page 23 ACMETransax Documentation](https://ftp.cdc.gov/pub/HealthStatistics/NCHS/Software/MICAR/DataEntrySoftware/ACMETRANSAX/Documentation/auser.pdf)"
+* #0 "0" "0"
+* #1 "1" "1"
+* #2 "2" "2"
+* #3 "3" "3"
+* #4 "4" "4"
+* #5 "5" "5"
+* #6 "6" "6"
+* #7 "7" "7"
+* #8 "8" "8"
+* #9 "9" "9"
+
+
+ValueSet: ACMETRANSAXCodingStatusVS
+Id: VRDR-ACMETRANSAXCodingStatus-vs
+Title: "ACMETRANSAX Coding StatusVS"
+Description: "ACMETRANSAX Coding Status from [page 23 ACMETransax Documentation](https://ftp.cdc.gov/pub/HealthStatistics/NCHS/Software/MICAR/DataEntrySoftware/ACMETRANSAX/Documentation/auser.pdf)"
+* include codes from system ACMETRANSAXCodingStatusCS
 
 Profile:  CodingMessageParameters
 Parent: Parameters
@@ -196,6 +235,7 @@ Title:  "Coding Message Parameters"
 * insert ParameterNameType(rec_mo, unsignedInt)
 * insert ParameterNameType(rec_dy, unsignedInt)
 * insert ParameterNameType(cs, CodeableConcept)
+* parameter[cs].value[x] from ACMETRANSAXCodingStatusVS (required)
 * insert ParameterNameType(ship, string)
 * insert ParameterNameType(sys_rej, string)
 * parameter[sys_rej].value[x] from  SystemRejectCodesVS (required)
@@ -203,36 +243,48 @@ Title:  "Coding Message Parameters"
 * insert ParameterName(ethnicity)
 * insert ParameterName(race)
 * insert ParameterNameType(underlying_cause_of_death, CodeableConcept)
+* parameter[underlying_cause_of_death].value[x] from  $icd-10 (required)
 * insert ParameterName(record_cause_of_death)
 * insert ParameterName(entity_axis_code)
 * insert ParameterNameType(manner, string)
 * insert ParameterNameType(injpl, string)
 * insert ParameterNameType(other_specified_place, string)
 * parameter[int_rej].value[x] from InternalRejectCodesVS (required)
-* parameter[ethnicity].part.name only string  // these should be IJE Ethnicity Codes
-* parameter[ethnicity].part.name from EthnicCodesVS
+* parameter[ethnicity].part.name only string
+* parameter[ethnicity].part.name from EthnicCodesVS (required)
 * parameter[ethnicity].part.value[x] only CodeableConcept // bind to value set
-* parameter[race].part.name only string  // these should be IJE Race
-* parameter[race].part.name from RaceCodesVS
+* parameter[race].part.name only string
+* parameter[race].part.name from RaceCodesVS (required)
 * parameter[race].part.value[x] only unsignedInt
-* parameter[record_cause_of_death].part.value[x] only CodeableConcept // bind to value set
-* parameter[record_cause_of_death].part.name = "coding"
-* parameter[record_cause_of_death].part.value[x] only CodeableConcept
-* parameter[record_cause_of_death].part.value[x] from $icd-10
+* parameter[record_cause_of_death].part ^slicing.discriminator.type = #profile
+* parameter[record_cause_of_death].part ^slicing.discriminator.path = "name"
+* parameter[record_cause_of_death].part ^slicing.rules = #closed
+* parameter[record_cause_of_death].part ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* parameter[record_cause_of_death].part contains
+      coding 1..*
+* parameter[record_cause_of_death].part[coding].value[x] only CodeableConcept // bind to value set
+* parameter[record_cause_of_death].part[coding].value[x] from $icd-10 (required)
+* parameter[record_cause_of_death].part[coding].name = "coding"
+
 * parameter[entity_axis_code].part ^slicing.discriminator.type = #profile
 * parameter[entity_axis_code].part ^slicing.discriminator.path = "name"
-* parameter[entity_axis_code].part ^slicing.rules = #open
+* parameter[entity_axis_code].part ^slicing.rules = #closed
 * parameter[entity_axis_code].part ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 * parameter[entity_axis_code].part contains
-      line 1..1 and
-      coding 1..1
+      lineNumber 1..1 and
+      coding 1..*
+* parameter[entity_axis_code].part[lineNumber].name = "lineNumber"
+* parameter[entity_axis_code].part[lineNumber].value[x] only string
+* parameter[entity_axis_code].part[coding].name = "coding"
+* parameter[entity_axis_code].part[coding].value[x] only CodeableConcept
+* parameter[entity_axis_code].part[coding].value[x] from $icd-10 (required)
 
 
 
 Profile: DeathRecordSubmissionMessage
 Parent: Bundle
 Id: VRDR-DeathRecordSubmissionMessage
-Title: "Death Record Submission Message"
+Title: "Death Record Submission Message (also update message)"
 * ^status = #draft
 * type  = #message
 * id MS
@@ -242,8 +294,8 @@ Title: "Death Record Submission Message"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
-* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageHeader)
-* insert BundleEntry(deathRecordParameters, 1, *, Death Message Parameters, Death Record Parameters, DeathMessageParameters)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
+* insert BundleEntry(deathRecordParameters, 1, *, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageSubmissionParameters)
 * insert BundleEntry(deathRecordCertificate, 1, *, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
