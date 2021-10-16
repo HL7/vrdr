@@ -114,15 +114,15 @@ Id: VRDR-DeathMessageHeader
 Title:  "Death Message Header"
 * eventUri from DeathMessageHeaderURIVS
 * eventUri 1..1
-* destination MS
-* source MS
+* destination 1..1
+* source 1..1
 * focus only Reference(DeathCertificateDocument)
 
 Profile:  DeathMessageVoidHeader
 Parent: MessageHeader
 Id: VRDR-DeathMessageVoidHeader
 Title:  "Death Message Void Header"
-* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmission (exactly)
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionvoid (exactly)
 * eventUri 1..1
 * destination MS
 * source MS
