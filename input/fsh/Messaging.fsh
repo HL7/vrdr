@@ -171,7 +171,7 @@ Title:  "Death Message Parameters"
     state_auxiliary_id 0..1 MS
 * insert BaseMessageParameterSlices
 
-Profile: DeathMessageVoidPaprameters
+Profile: DeathMessageVoidParameters
 Parent: DeathMessageSubmissionParameters
 Id: VRDR-DeathMessageVoidParameters
 * parameter contains
@@ -295,10 +295,30 @@ Title: "Death Record Submission Message (also update message)"
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
-* insert BundleEntry(deathRecordParameters, 1, *, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageSubmissionParameters)
-* insert BundleEntry(deathRecordCertificate, 1, *, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
+* insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageSubmissionParameters)
+* insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
+
+Profile: DeathRecordVoidMessage
+Parent: Bundle
+Id: VRDR-DeathRecordVoidMessage
+Title: "Death Record Void Message "
+* ^status = #draft
+* type  = #message
+* id MS
+* timestamp MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageVoidHeader)
+* insert BundleEntry(deathRecordParameters, 1, 1, Death Message Void Parameters, Death Record Void Parameters, DeathMessageVoidParameters)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp  MS
+
+
 
 Profile: CodingMessage
 Parent: Bundle
@@ -314,6 +334,6 @@ Title: "Coding Message"
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageHeader)
-* insert BundleEntry(codingParameters, 1, *, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
+* insert BundleEntry(codingParameters, 1, 1, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS

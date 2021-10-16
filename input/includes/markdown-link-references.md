@@ -12,5 +12,6 @@
 [DeathRecordSubmissionHeader]: StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
 [DeathRecordSubmissionParameters]: StructureDefinition-VRDR-DeathMessageSubmissionParameters.html
 [DeathRecordVoidHeader]: StructureDefinition-VRDR-DeathMessageVoidHeader.html
-[DeathRecordVoidParameters]: StructureDefinition-VRDR-DeathMessageSubmissionParameters.html
+[DeathRecordVoidParameters]: StructureDefinition-VRDR-DeathMessageVoidParameters.html
 [DeathRecordSubmissionMessage]: StructureDefinition-VRDR-DeathRecordSubmissionMessage.html
+[DeathRecordVoidMessage]: StructureDefinition-VRDR-DeathRecordVoidMessage.html
