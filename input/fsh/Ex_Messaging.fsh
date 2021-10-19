@@ -74,7 +74,6 @@ Usage: #example
 * parameter[entity_axis_code][=].part[lineNumber].valueString = "6"
 * parameter[entity_axis_code][=].part[coding].name = "coding"
 * parameter[entity_axis_code][=].part[coding].value[x] = $icd-10#A04.7
-
 Instance: MessageParameters1
 InstanceOf: DeathMessageParameters
 Usage: #example

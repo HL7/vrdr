@@ -295,7 +295,10 @@ Title:  "Coding Message Parameters"
 * parameter[entity_axis_code].part[coding].name = "coding"
 * parameter[entity_axis_code].part[coding].value[x] only CodeableConcept
 * parameter[entity_axis_code].part[coding].value[x] from $icd-10 (required)
-
+* parameter[record_cause_of_death].value[x] 0..0
+* parameter[record_cause_of_death].resource 0..0
+* parameter[entity_axis_code].value[x] 0..0
+* parameter[entity_axis_code].resource 0..0
 
 
 Profile: DeathRecordSubmissionMessage
