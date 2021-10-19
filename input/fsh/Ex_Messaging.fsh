@@ -81,12 +81,21 @@ Usage: #example
 * parameter[cert_no].valueUnsignedInt = 123456
 * parameter[death_year].valueUnsignedInt = 2018
 
+Instance: VoidMessageParameters1
+InstanceOf: DeathMessageVoidParameters
+Usage: #example
+* parameter[jurisdiction_id].valueString = "NH"
+* parameter[cert_no].valueUnsignedInt = 123456
+* parameter[death_year].valueUnsignedInt = 2018
+* parameter[state_auxiliary_id].valueString = "abcdef10"
+* parameter[block_count].valueUnsignedInt = 10
+
 Instance: AcknowledgementMessageHeader1
 InstanceOf: AcknowledgementMessageHeader
 Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdracknowledgement"
 * destination.endpoint = "https://sos.nh.gov/vitalrecords"
-* source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* source.endpoint = "http://nchs.cdc.gov/vrdracknowledgement"
 * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * response.code = #ok
 * focus = Reference(MessageParameters1)   // Is this needed?  Same parameters as for VoidMessageHeader...
@@ -99,14 +108,21 @@ Usage: #example
 * source.endpoint = "https://sos.nh.gov/vitalrecords"
 * focus = Reference(MessageParameters1)
 
-Instance: VoidMessageParameters1
-InstanceOf: DeathMessageVoidParameters
+Instance: UpdateMessageHeader1
+InstanceOf: DeathMessageSubmissionHeader
 Usage: #example
-* parameter[jurisdiction_id].valueString = "NH"
-* parameter[cert_no].valueUnsignedInt = 123456
-* parameter[death_year].valueUnsignedInt = 2018
-* parameter[state_auxiliary_id].valueString = "abcdef10"
-* parameter[block_count].valueUnsignedInt = 10
+* eventUri = "http://nchs.cdc.gov/vrdrupdate"
+* destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* source.endpoint = "https://sos.nh.gov/vitalrecords"
+* focus = Reference(7a4613cc-b306-49b2-a428-9f8e67e67a85)
+
+Instance: SubmissionMessageHeader1
+InstanceOf: DeathMessageSubmissionHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdrsubmission"
+* destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* source.endpoint = "https://sos.nh.gov/vitalrecords"
+* focus = Reference(7a4613cc-b306-49b2-a428-9f8e67e67a85)
 
 Instance: CodingMessageHeader1
 InstanceOf: CodingMessageHeader
@@ -181,8 +197,20 @@ Instance: DeathRecordSubmissionMessage1
 InstanceOf: DeathRecordSubmissionMessage
 Usage: #example
 Description: "Example of death record submission mesage"
-* entry[0].resource = ExtractionErrorHeader1
+* entry[0].resource = SubmissionMessageHeader1
 * entry[=].fullUrl = "urn:oid:SubmissionHeader1"
+// Other slices
+* entry[1].resource = MessageParameters1
+* entry[=].fullUrl = "urn:oid:MessageParameters1"
+* entry[+].resource = 7a4613cc-b306-49b2-a428-9f8e67e67a85
+* entry[=].fullUrl = "urn:oid:7a4613cc-b306-49b2-a428-9f8e67e67a85"
+
+Instance: DeathRecordUpdateMessage1
+InstanceOf: DeathRecordSubmissionMessage
+Usage: #example
+Description: "Example of death record submission mesage"
+* entry[0].resource = UpdateMessageHeader1
+* entry[=].fullUrl = "urn:oid:UpdateHeader1"
 // Other slices
 * entry[1].resource = MessageParameters1
 * entry[=].fullUrl = "urn:oid:MessageParameters1"
