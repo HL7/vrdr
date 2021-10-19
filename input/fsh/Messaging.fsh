@@ -150,7 +150,7 @@ Title:  "Acknowledgement Message Header"
 * response.identifier 1..1
 * response.identifier ^short = "The value of the MessageHeader.id for the message that is being acknowledged"
 * response.code = #ok (exactly)
-* focus only Reference(Parameters)
+* focus only Reference(DeathMessageSubmissionParameters)
 
 RuleSet: BaseMessageParameterSlices
 * insert ParameterNameType(jurisdiction_id, string)
@@ -351,5 +351,23 @@ Title: "Coding Message"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageHeader)
 * insert BundleEntry(codingParameters, 1, 1, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp and entry and entry.resource MS
+
+Profile: AcknowledgementMessage
+Parent: Bundle
+Id: VRDR-AcknowledgementMessage
+Title: "Acknowledgement Message"
+* ^status = #draft
+* type  = #message
+* id MS
+* timestamp MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert BundleEntry(messageHeader, 1, 1, Acknowledgement Message Header , Acknowledgement Message Header, AcknowledgementMessageHeader)
+* insert BundleEntry(acknowledgementParameters, 1, 1, Acknowledgement Message Parameters, Acknowledgement Parameters, DeathMessageSubmissionParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
