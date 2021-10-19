@@ -14,7 +14,7 @@
 * [AcknowledgementMessage]
   * [AcknowledgementMessageHeader]
   * [DeathMessageParameters]
-* [ErrorCodingMessage]
-  * [ErrorCodingMessageHeader]
+* [ExtractionErrorMessage]
+  * [ExtractionErrorHeader]
   * [DeathMessageParameters] - optional
   {% include markdown-link-references.md %}

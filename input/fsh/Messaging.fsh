@@ -118,9 +118,9 @@ Title:  "Death Message Header"
 * source 1..1
 * focus only Reference(DeathCertificateDocument)
 
-Profile:  DeathMessageUpdateHeader
+Profile:  DeathRecordUpdateHeader
 Parent: MessageHeader
-Id: VRDR-DeathMessageUpdateHeader
+Id: VRDR-DeathRecordUpdateHeader
 Title:  "Death Message Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrupdate (exactly)
 * eventUri 1..1
@@ -323,7 +323,7 @@ Title:  "Coding Message Parameters"
 Profile: DeathRecordSubmissionMessage
 Parent: Bundle
 Id: VRDR-DeathRecordSubmissionMessage
-Title: "Death Record Submission Message (also update message)"
+Title: "Death Record Submission Message "
 * ^status = #draft
 * type  = #message
 * id MS
@@ -332,7 +332,6 @@ Title: "Death Record Submission Message (also update message)"
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
@@ -342,7 +341,7 @@ Title: "Death Record Submission Message (also update message)"
 Profile: DeathRecordUpdateMessage
 Parent: Bundle
 Id: VRDR-DeathRecordUpdateMessage
-Title: "Death Record Submission Message (also update message)"
+Title: "Death Record Update Message"
 * ^status = #draft
 * type  = #message
 * id MS
@@ -351,8 +350,7 @@ Title: "Death Record Submission Message (also update message)"
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
-* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageUpdateHeader)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathRecordUpdateHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
