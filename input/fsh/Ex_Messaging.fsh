@@ -81,7 +81,7 @@ Usage: #example
 * parameter[cert_no].valueUnsignedInt = 123456
 * parameter[death_year].valueUnsignedInt = 2018
 
-Instance: AcknowledgementHeader
+Instance: AcknowledgementHeader1
 InstanceOf: AcknowledgementMessageHeader
 Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdracknowledgement"
@@ -91,7 +91,7 @@ Usage: #example
 * response.code = #ok
 * focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)   // Is this needed?  Same parameters as for VoidMessageHeader...
 
-Instance: VoidMessageHeader
+Instance: VoidMessageHeader1
 InstanceOf: DeathMessageVoidHeader
 Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdrsubmissionvoid"
@@ -99,7 +99,7 @@ Usage: #example
 * source.endpoint = "https://sos.nh.gov/vitalrecords"
 * focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
 
-Instance: VoidMessageParameters
+Instance: VoidMessageParameters1
 InstanceOf: DeathMessageVoidParameters
 Usage: #example
 * parameter[jurisdiction_id].valueString = "NH"
@@ -138,9 +138,9 @@ Usage: #example
 Instance: ExtractionErrorMessage1
 InstanceOf: ExtractionErrorMessage
 Usage: #example
-Description: "Example of extraction error mesage"
-* entry[0].resource = CodingMessageHeader1
-* entry[=].fullUrl = "http://example.org/fhir/Message/CodingMessage1"
+Description: "Example of extraction error message"
+* entry[0].resource = ExtractionErrorHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/ExtractionErrorHeader1"
 // Other slices
 * entry[1].resource = CodingMessageParameters1
 * entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
@@ -150,11 +150,31 @@ Description: "Example of extraction error mesage"
 Instance: CodingMessage1
 InstanceOf: CodingMessage
 Usage: #example
-Description: "Example of extraction error mesage"
+Description: "Example of coding message"
+* entry[0].resource = CodingMessageHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/CodingHeader1"
+// Other slices
+* entry[1].resource = CodingMessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
+
+Instance: DeathRecordVoidMessage1
+InstanceOf: DeathRecordVoidMessage
+Usage: #example
+Description: "Example of void message"
+* entry[0].resource = VoidMessageHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/VoidMessageHeader1"
+// Other slices
+* entry[1].resource = VoidMessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/VoidMessageParameters1"
+
+Instance: DeathRecordSubmissionMessage1
+InstanceOf: DeathRecordSubmissionMessage
+Usage: #example
+Description: "Example of death record submission mesage"
 * entry[0].resource = ExtractionErrorHeader1
-* entry[=].fullUrl = "http://example.org/fhir/Message/ExtractionErrorHeader1"
+* entry[=].fullUrl = "urn:oid:SubmissionHeader1"
 // Other slices
 * entry[1].resource = MessageParameters1
-* entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
-* entry[2].resource = ce028490-5e55-4673-8a80-a71c97e23fa0
-* entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"
+* entry[=].fullUrl = "urn:oid:MessageParameters1"
+* entry[+].resource = 7a4613cc-b306-49b2-a428-9f8e67e67a85
+* entry[=].fullUrl = "urn:oid:7a4613cc-b306-49b2-a428-9f8e67e67a85"
