@@ -206,7 +206,7 @@ Description: "Example of death record submission mesage"
 * entry[=].fullUrl = "urn:oid:7a4613cc-b306-49b2-a428-9f8e67e67a85"
 
 Instance: DeathRecordUpdateMessage1
-InstanceOf: DeathRecordSubmissionMessage
+InstanceOf: DeathRecordUpdateMessage
 Usage: #example
 Description: "Example of death record submission mesage"
 * entry[0].resource = UpdateMessageHeader1

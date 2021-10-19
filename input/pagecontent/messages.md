@@ -1,16 +1,20 @@
 * Death Messages
   * [DeathRecordSubmissionMessage] -same as update, just different header flags
     * [DeathRecordSubmissionHeader]
-    * [DeathRecordSubmissionParameters]
+    * [DeathMessageParameters]
+  * [DeathRecordUpdateMessage] -same as submission, just different header flags
+    * [DeathRecordUpdateHeader]
+    * [DeathMessageParameters]
   * [DeathRecordVoidMessage]
     * [DeathRecordVoidHeader]
     * [DeathRecordVoidParameters]
-* Coding Messages
-  * [CodingMessage]
+* [CodingMessage]
   * [CodingMessageHeader]
   * [CodingMessageParameters]
-* Acknowledgement Messages
-  * [AcknowledgementMessage]
+* [AcknowledgementMessage]
   * [AcknowledgementMessageHeader]
-  * [AcknowledgementMessageParameters]
+  * [DeathMessageParameters]
+* [ErrorCodingMessage]
+  * [ErrorCodingMessageHeader]
+  * [DeathMessageParameters] - optional
   {% include markdown-link-references.md %}

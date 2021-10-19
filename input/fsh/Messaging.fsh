@@ -110,9 +110,19 @@ Description: "CodingMessageHeader URI Values"
 
 Profile:  DeathMessageSubmissionHeader
 Parent: MessageHeader
-Id: VRDR-DeathMessageHeader
+Id: VRDR-DeathMessageSubmissionHeader
 Title:  "Death Message Header"
-* eventUri from DeathMessageHeaderURIVS
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmission (exactly)
+* eventUri 1..1
+* destination 1..1
+* source 1..1
+* focus only Reference(DeathCertificateDocument)
+
+Profile:  DeathMessageUpdateHeader
+Parent: MessageHeader
+Id: VRDR-DeathMessageUpdateHeader
+Title:  "Death Message Header"
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrupdate (exactly)
 * eventUri 1..1
 * destination 1..1
 * source 1..1
@@ -328,6 +338,26 @@ Title: "Death Record Submission Message (also update message)"
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
+
+Profile: DeathRecordUpdateMessage
+Parent: Bundle
+Id: VRDR-DeathRecordUpdateMessage
+Title: "Death Record Submission Message (also update message)"
+* ^status = #draft
+* type  = #message
+* id MS
+* timestamp MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageUpdateHeader)
+* insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
+* insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp and entry and entry.resource MS
+
 
 Profile: DeathRecordVoidMessage
 Parent: Bundle

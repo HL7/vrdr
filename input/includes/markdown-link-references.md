@@ -14,9 +14,9 @@
 [DeathRecordVoidHeader]: StructureDefinition-VRDR-DeathMessageVoidHeader.html
 [DeathRecordVoidParameters]: StructureDefinition-VRDR-DeathMessageVoidParameters.html
 [DeathRecordSubmissionMessage]: StructureDefinition-VRDR-DeathRecordSubmissionMessage.html
+[DeathRecordUpdateMessage]: StructureDefinition-VRDR-DeathRecordUpdateMessage.html
 [DeathRecordVoidMessage]: StructureDefinition-VRDR-DeathRecordVoidMessage.html
 [AcknowledgementMessage]: StructureDefinition-VRDR-AcknowledgementMessage.html
 [AcknowledgementMessageHeader]: StructureDefinition-VRDR-AcknowledgementMessageHeader.html
-[ErrorCodingMessage]: StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
-[ErrorCodingMessageHeader]:    StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
-[ErrorCodingMessageParameters]: StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
+[ExtractionErrorMessage]: StructureDefinition-VRDR-ExtractionErrorMessage.html
+[ExtractionErrorMessageHeader]:    StructureDefinition-VRDR-ExtractionErrorHeader.html
