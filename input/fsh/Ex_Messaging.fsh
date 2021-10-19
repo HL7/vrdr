@@ -74,3 +74,35 @@ Usage: #example
 * parameter[entity_axis_code][=].part[lineNumber].valueString = "6"
 * parameter[entity_axis_code][=].part[coding].name = "coding"
 * parameter[entity_axis_code][=].part[coding].value[x] = $icd-10#A04.7
+
+Instance: AcknowledgementHeader
+InstanceOf: AcknowledgementMessageHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdracknowledgement"
+* destination.endpoint = "https://sos.nh.gov/vitalrecords"
+* source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
+* response.code = #ok
+* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)   // Is this needed?  Same parameters as for VoidMessageHeader...
+
+Instance: VoidMessageHeader
+InstanceOf: DeathMessageVoidHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdrsubmissionvoid"
+* destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* source.endpoint = "https://sos.nh.gov/vitalrecords"
+* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
+
+Instance: VoidMessageParameters
+InstanceOf: DeathMessageVoidParameters
+Usage: #example
+* parameter[0].name = "jurisdictionid"
+* parameter[=].valueString = "NH"
+* parameter[+].name = "certno"
+* parameter[=].valueUnsignedInt = 123456
+* parameter[+].name = "deathyear"
+* parameter[=].valueUnsignedInt = 2018
+* parameter[+].name = "stateauxiliaryid"
+* parameter[=].valueString = "abcdef10"
+* parameter[+].name = "blockcount"
+* parameter[=].valuePositiveInt = 10

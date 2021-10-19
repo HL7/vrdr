@@ -124,17 +124,33 @@ Id: VRDR-DeathMessageVoidHeader
 Title:  "Death Message Void Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionvoid (exactly)
 * eventUri 1..1
-* destination MS
-* source MS
+* destination 1..1
+* source 1..1
+* focus only Reference(DeathMessageVoidParameters)
 
 Profile:  CodingMessageHeader
 Parent: MessageHeader
 Id: VRDR-CodingMessageHeader
 Title:  "Coding Message Header"
-* eventUri from CodingMessageHeaderURIVS
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionvoid (exactly)
 * eventUri 1..1
-* destination MS
-* source MS
+* destination 1..1
+* source 1..1
+* focus only Reference(CodingMessageParameters)
+
+Profile:  AcknowledgementMessageHeader
+Parent: MessageHeader
+Id: VRDR-AcknowledgementMessageHeader
+Title:  "Acknowledgement Message Header"
+* eventUri =  MessageHeaderURICS#http://nchs.cdc.gov/vrdracknowledgement (exactly)
+* eventUri 1..1
+* destination 1..1
+* source 1..1
+* response 1..1
+* response.identifier 1..1
+* response.identifier ^short = "The value of the MessageHeader.id for the message that is being acknowledged"
+* response.code = #ok (exactly)
+* focus only Reference(Parameters)
 
 RuleSet: BaseMessageParameterSlices
 * insert ParameterNameType(jurisdiction_id, string)
