@@ -81,7 +81,7 @@ Usage: #example
 * parameter[cert_no].valueUnsignedInt = 123456
 * parameter[death_year].valueUnsignedInt = 2018
 
-Instance: AcknowledgementHeader1
+Instance: AcknowledgementMessageHeader1
 InstanceOf: AcknowledgementMessageHeader
 Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdracknowledgement"
@@ -89,7 +89,7 @@ Usage: #example
 * source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
 * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * response.code = #ok
-* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)   // Is this needed?  Same parameters as for VoidMessageHeader...
+* focus = Reference(MessageParameters1)   // Is this needed?  Same parameters as for VoidMessageHeader...
 
 Instance: VoidMessageHeader1
 InstanceOf: DeathMessageVoidHeader
@@ -97,7 +97,7 @@ Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdrsubmissionvoid"
 * destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
 * source.endpoint = "https://sos.nh.gov/vitalrecords"
-* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
+* focus = Reference(MessageParameters1)
 
 Instance: VoidMessageParameters1
 InstanceOf: DeathMessageVoidParameters
@@ -115,7 +115,7 @@ Usage: #example
 * destination.endpoint = "https://sos.nh.gov/vitalrecords"
 * source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
 // * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
-* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
+* focus = Reference(CodingMessageParameters1)
 
 Instance: ExtractionErrorHeader1
 InstanceOf: ExtractionErrorHeader
@@ -142,10 +142,20 @@ Description: "Example of extraction error message"
 * entry[0].resource = ExtractionErrorHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/ExtractionErrorHeader1"
 // Other slices
-* entry[1].resource = CodingMessageParameters1
-* entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
+* entry[1].resource = MessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
 * entry[2].resource = ce028490-5e55-4673-8a80-a71c97e23fa0
 * entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"
+
+Instance: AcknowledgementMessage1
+InstanceOf: AcknowledgementMessage
+Usage: #example
+Description: "Example of acknowledgement message"
+* entry[0].resource = AcknowledgementMessageHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/AcknowledgementMessageHeader1"
+// Other slices
+* entry[1].resource = MessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
 
 Instance: CodingMessage1
 InstanceOf: CodingMessage

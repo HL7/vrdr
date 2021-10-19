@@ -304,6 +304,10 @@ Title:  "Coding Message Parameters"
 * parameter[record_cause_of_death].resource 0..0
 * parameter[entity_axis_code].value[x] 0..0
 * parameter[entity_axis_code].resource 0..0
+* parameter[ethnicity].value[x] 0..0
+* parameter[ethnicity].resource 0..0
+* parameter[race].value[x] 0..0
+* parameter[race].resource 0..0
 
 
 Profile: DeathRecordSubmissionMessage
