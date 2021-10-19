@@ -20,4 +20,4 @@
 [AcknowledgementMessage]: StructureDefinition-VRDR-AcknowledgementMessage.html
 [AcknowledgementMessageHeader]: StructureDefinition-VRDR-AcknowledgementMessageHeader.html
 [ExtractionErrorMessage]: StructureDefinition-VRDR-ExtractionErrorMessage.html
-[ExtractionErrorMessageHeader]:    StructureDefinition-VRDR-ExtractionErrorHeader.html
+[ExtractionErrorHeader]:    StructureDefinition-VRDR-ExtractionErrorHeader.html
