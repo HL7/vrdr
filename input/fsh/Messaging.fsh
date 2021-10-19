@@ -132,7 +132,7 @@ Profile:  CodingMessageHeader
 Parent: MessageHeader
 Id: VRDR-CodingMessageHeader
 Title:  "Coding Message Header"
-* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionvoid (exactly)
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrcoding (exactly)
 * eventUri 1..1
 * destination 1..1
 * source 1..1
@@ -176,6 +176,11 @@ RuleSet: ParameterName(name)
 RuleSet: ParameterNameType(name, type)
 * insert ParameterName({name})
 * parameter[{name}].value[x] only {type}
+* parameter[{name}].value[x] 1..1
+* parameter[{name}].resource 0..0
+* parameter[{name}].part 0..0
+
+
 
 Profile:  DeathMessageParameters
 Parent: Parameters

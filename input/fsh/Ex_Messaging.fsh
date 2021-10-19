@@ -77,11 +77,8 @@ Usage: #example
 Instance: MessageParameters1
 InstanceOf: DeathMessageParameters
 Usage: #example
-* parameter[jurisdiction_id].name = "jurisdiction_id"
 * parameter[jurisdiction_id].valueString = "NH"
-//* parameter[cert_no].name = "cert_no"
 * parameter[cert_no].valueUnsignedInt = 123456
-//* parameter[death_year].name = "death_year"
 * parameter[death_year].valueUnsignedInt = 2018
 
 Instance: AcknowledgementHeader
@@ -105,16 +102,20 @@ Usage: #example
 Instance: VoidMessageParameters
 InstanceOf: DeathMessageVoidParameters
 Usage: #example
-* parameter[0].name = "jurisdictionid"
-* parameter[=].valueString = "NH"
-* parameter[+].name = "certno"
-* parameter[=].valueUnsignedInt = 123456
-* parameter[+].name = "deathyear"
-* parameter[=].valueUnsignedInt = 2018
-* parameter[+].name = "stateauxiliaryid"
-* parameter[=].valueString = "abcdef10"
-* parameter[+].name = "blockcount"
-* parameter[=].valuePositiveInt = 10
+* parameter[jurisdiction_id].valueString = "NH"
+* parameter[cert_no].valueUnsignedInt = 123456
+* parameter[death_year].valueUnsignedInt = 2018
+* parameter[state_auxiliary_id].valueString = "abcdef10"
+* parameter[block_count].valueUnsignedInt = 10
+
+Instance: CodingMessageHeader1
+InstanceOf: CodingMessageHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdrcoding"
+* destination.endpoint = "https://sos.nh.gov/vitalrecords"
+* source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+// * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
+* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
 
 Instance: ExtractionErrorHeader1
 InstanceOf: ExtractionErrorHeader
@@ -136,6 +137,18 @@ Usage: #example
 
 Instance: ExtractionErrorMessage1
 InstanceOf: ExtractionErrorMessage
+Usage: #example
+Description: "Example of extraction error mesage"
+* entry[0].resource = CodingMessageHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/CodingMessage1"
+// Other slices
+* entry[1].resource = CodingMessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
+* entry[2].resource = ce028490-5e55-4673-8a80-a71c97e23fa0
+* entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"
+
+Instance: CodingMessage1
+InstanceOf: CodingMessage
 Usage: #example
 Description: "Example of extraction error mesage"
 * entry[0].resource = ExtractionErrorHeader1
