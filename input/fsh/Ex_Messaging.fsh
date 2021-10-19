@@ -75,6 +75,16 @@ Usage: #example
 * parameter[entity_axis_code][=].part[coding].name = "coding"
 * parameter[entity_axis_code][=].part[coding].value[x] = $icd-10#A04.7
 
+Instance: MessageParameters1
+InstanceOf: DeathMessageParameters
+Usage: #example
+* parameter[jurisdiction_id].name = "jurisdiction_id"
+* parameter[jurisdiction_id].valueString = "NH"
+//* parameter[cert_no].name = "cert_no"
+* parameter[cert_no].valueUnsignedInt = 123456
+//* parameter[death_year].name = "death_year"
+* parameter[death_year].valueUnsignedInt = 2018
+
 Instance: AcknowledgementHeader
 InstanceOf: AcknowledgementMessageHeader
 Usage: #example
@@ -106,3 +116,33 @@ Usage: #example
 * parameter[=].valueString = "abcdef10"
 * parameter[+].name = "blockcount"
 * parameter[=].valuePositiveInt = 10
+
+Instance: ExtractionErrorHeader1
+InstanceOf: ExtractionErrorHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdrextractionerror"
+* destination.endpoint = "https://sos.nh.gov/vitalrecords"
+* source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+* response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
+* response.code = #fatal-error
+* response.details = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
+* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
+
+Instance: ce028490-5e55-4673-8a80-a71c97e23fa0
+InstanceOf: OperationOutcome
+Usage: #example
+* issue.severity = #error
+* issue.code = #structure
+* issue.diagnostics = "Expected 1 or more Cause of Death Condition resources, received 0."
+
+Instance: ExtractionErrorMessage1
+InstanceOf: ExtractionErrorMessage
+Usage: #example
+Description: "Example of extraction error mesage"
+* entry[0].resource = ExtractionErrorHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/ExtractionErrorHeader1"
+// Other slices
+* entry[1].resource = MessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
+* entry[2].resource = ce028490-5e55-4673-8a80-a71c97e23fa0
+* entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"

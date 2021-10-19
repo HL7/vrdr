@@ -228,19 +228,11 @@ Description: "ACMETRANSAX Coding Status from [page 23 ACMETransax Documentation]
 * include codes from system ACMETRANSAXCodingStatusCS
 
 Profile:  CodingMessageParameters
-Parent: Parameters
+Parent: DeathMessageParameters
 Id: VRDR-CodingMessageParameters
 Title:  "Coding Message Parameters"
-* id MS
-* parameter ^slicing.discriminator.type = #profile
-* parameter ^slicing.discriminator.path = "name"
-* parameter ^slicing.rules = #open
-* parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+
 * parameter contains
-    jurisdiction_id 1..1 and  // jurisdiction code
-    state_auxiliary_id 0..1 and //uint
-    cert_no 0..1 and          //uint
-    death_year 0..1 and           //uint
     rec_yr 0..1 and           //uint
     rec_mo 0..1 and          //uint
     rec_dy 0..1 and          //uint
@@ -256,7 +248,6 @@ Title:  "Coding Message Parameters"
     manner 0..1 and // string
     injpl 0..1 and   // string
     other_specified_place 0..1 // string
-* insert BaseMessageParameterSlices
 * insert ParameterNameType(rec_yr, unsignedInt)
 * insert ParameterNameType(rec_mo, unsignedInt)
 * insert ParameterNameType(rec_dy, unsignedInt)
@@ -394,6 +385,6 @@ Title: "Extraction Error Message"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 * insert BundleEntry(messageHeader, 1, 1, Extraction Error Message Header , Extraction Error Message Header, ExtractionErrorHeader)
-* insert BundleEntry(extractionErrorParameters, 1, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
+* insert BundleEntry(extractionErrorParameters, 0, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
