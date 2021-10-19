@@ -109,7 +109,7 @@ Usage: #example
 * focus = Reference(MessageParameters1)
 
 Instance: UpdateMessageHeader1
-InstanceOf: DeathMessageSubmissionHeader
+InstanceOf: DeathMessageUpdateHeader
 Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdrupdate"
 * destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
