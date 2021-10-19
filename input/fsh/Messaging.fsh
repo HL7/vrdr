@@ -116,6 +116,7 @@ Title:  "Death Message Header"
 * eventUri 1..1
 * destination 1..1
 * source 1..1
+* focus 1..1
 * focus only Reference(DeathCertificateDocument)
 
 Profile:  DeathRecordUpdateHeader
@@ -126,6 +127,7 @@ Title:  "Death Message Header"
 * eventUri 1..1
 * destination 1..1
 * source 1..1
+* focus 1..1
 * focus only Reference(DeathCertificateDocument)
 
 Profile:  DeathMessageVoidHeader
@@ -136,6 +138,7 @@ Title:  "Death Message Void Header"
 * eventUri 1..1
 * destination 1..1
 * source 1..1
+* focus 1..1
 * focus only Reference(DeathMessageVoidParameters)
 
 Profile:  CodingMessageHeader
@@ -146,6 +149,7 @@ Title:  "Coding Message Header"
 * eventUri 1..1
 * destination 1..1
 * source 1..1
+* focus 1..1
 * focus only Reference(CodingMessageParameters)
 
 Profile:  AcknowledgementMessageHeader
@@ -160,6 +164,7 @@ Title:  "Acknowledgement Message Header"
 * response.identifier 1..1
 * response.identifier ^short = "The value of the MessageHeader.id for the message that is being acknowledged"
 * response.code = #ok (exactly)
+* focus 1..1
 * focus only Reference(DeathMessageParameters)
 
 Profile:  ExtractionErrorHeader
@@ -170,6 +175,9 @@ Title:  "Extraction Error Header"
 * eventUri 1..1
 * destination 1..1
 * source 1..1
+* response.identifier 1..1
+* response.code = #fatal-error
+* response.details only Reference(OperationOutcome)
 * focus only Reference(DeathMessageParameters)
 
 RuleSet: BaseMessageParameterSlices
