@@ -1,4 +1,4 @@
-* Death Messages
+* Death Messages (EDRS->Jurisdiction)
   * [DeathRecordSubmissionMessage] -same as update, just different header flags
     * [DeathRecordSubmissionHeader]
     * [DeathMessageParameters]
@@ -8,13 +8,17 @@
   * [DeathRecordVoidMessage]
     * [DeathRecordVoidHeader]
     * [DeathRecordVoidParameters]
-* [CodingMessage]
-  * [CodingMessageHeader]
-  * [CodingMessageParameters]
-* [AcknowledgementMessage]
+* Coding Messages (NCHS->Jurisdiction)
+  * [CodingMessage]
+    * [CodingMessageHeader]
+    * [CodingMessageParameters]
+  * [CodingUpdateMessage] - not yet implemented
+    * [CodingUpdateMessageHeader] - not yet implemented
+    * [CodingMessageParameters]
+* [AcknowledgementMessage] (Both directions)
   * [AcknowledgementMessageHeader]
   * [DeathMessageParameters]
-* [ExtractionErrorMessage]
+* [ExtractionErrorMessage] (NCHS->Jurisdiction)
   * [ExtractionErrorHeader]
   * [DeathMessageParameters] - optional
   {% include markdown-link-references.md %}
