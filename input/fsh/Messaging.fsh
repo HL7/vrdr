@@ -150,7 +150,17 @@ Title:  "Acknowledgement Message Header"
 * response.identifier 1..1
 * response.identifier ^short = "The value of the MessageHeader.id for the message that is being acknowledged"
 * response.code = #ok (exactly)
-* focus only Reference(DeathMessageSubmissionParameters)
+* focus only Reference(DeathMessageParameters)
+
+Profile:  ExtractionErrorHeader
+Parent: MessageHeader
+Id: VRDR-ExtractionErrorHeader
+Title:  "Extraction Error Header"
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrextractionerror (exactly)
+* eventUri 1..1
+* destination 1..1
+* source 1..1
+* focus only Reference(DeathMessageParameters)
 
 RuleSet: BaseMessageParameterSlices
 * insert ParameterNameType(jurisdiction_id, string)
@@ -167,9 +177,9 @@ RuleSet: ParameterNameType(name, type)
 * insert ParameterName({name})
 * parameter[{name}].value[x] only {type}
 
-Profile:  DeathMessageSubmissionParameters
+Profile:  DeathMessageParameters
 Parent: Parameters
-Id: VRDR-DeathMessageSubmissionParameters
+Id: VRDR-DeathMessageParameters
 Title:  "Death Message Parameters"
 * id MS
 // jurisdiction_id
@@ -188,7 +198,7 @@ Title:  "Death Message Parameters"
 * insert BaseMessageParameterSlices
 
 Profile: DeathMessageVoidParameters
-Parent: DeathMessageSubmissionParameters
+Parent: DeathMessageParameters
 Id: VRDR-DeathMessageVoidParameters
 * parameter contains
     block_count 1..1
@@ -311,7 +321,7 @@ Title: "Death Record Submission Message (also update message)"
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
-* insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageSubmissionParameters)
+* insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
@@ -366,8 +376,24 @@ Title: "Acknowledgement Message"
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Acknowledgement Message Header , Acknowledgement Message Header, AcknowledgementMessageHeader)
-* insert BundleEntry(acknowledgementParameters, 1, 1, Acknowledgement Message Parameters, Acknowledgement Parameters, DeathMessageSubmissionParameters)
+* insert BundleEntry(acknowledgementParameters, 1, 1, Acknowledgement Message Parameters, Acknowledgement Parameters, DeathMessageParameters)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp and entry and entry.resource MS
+
+Profile: ExtractionErrorMessage
+Parent: Bundle
+Id: VRDR-ExtractionErrorMessage
+Title: "Extraction Error Message"
+* ^status = #draft
+* type  = #message
+* id MS
+* timestamp MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert BundleEntry(messageHeader, 1, 1, Extraction Error Message Header , Extraction Error Message Header, ExtractionErrorHeader)
+* insert BundleEntry(extractionErrorParameters, 1, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS
