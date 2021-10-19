@@ -176,7 +176,9 @@ Title:  "Extraction Error Header"
 * destination 1..1
 * source 1..1
 * response.identifier 1..1
+* response.identifier ^short = "The value of the MessageHeader.id for the message with errors"
 * response.code = #fatal-error
+* response.details 1..1
 * response.details only Reference(OperationOutcome)
 * focus only Reference(DeathMessageParameters)
 
