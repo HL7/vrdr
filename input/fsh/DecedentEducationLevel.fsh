@@ -35,6 +35,17 @@ Title: "VRDR Decedent Education Level"
 * value[x] from DecedentEducationLevelVS (required)
 * value[x] ^short = "value[x]"
 * value[x] ^binding.description = "DecedentEducationLevel"
+* extension contains EditFlag named educationleveleditflag 0..1 MS
+* extension[educationleveleditflag].value[x] 1..1
+* extension[educationleveleditflag].value[x] from YesNoUnknownVS
+
+Extension: Editflag
+Id: EditFlag
+Title: "editflag"
+Description: "editflag"
+* value[x] 1..1
+* value[x] only CodeableConcept
+
 
 Instance: 9676ae27-2a89-4295-913c-0d6847300a3a
 InstanceOf: DecedentEducationLevel

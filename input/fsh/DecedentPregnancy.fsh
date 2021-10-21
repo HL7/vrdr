@@ -33,6 +33,9 @@ Title: "VRDR Decedent Pregnancy"
 * value[x] from $ViewValueSet.action_7 (required)
 * value[x] ^short = "value[x]"
 * value[x] ^binding.description = "PHVS_PregnancyStatus_NCHS"
+* extension contains EditFlag named pregnancyeditflag 0..1 MS
+* extension[pregnancyeditflag].value[x] 1..1
+* extension[pregnancyeditflag].value[x] from YesNoVS
 
 Instance: 092e7b13-224d-46a6-ac31-0d98d4c84126
 InstanceOf: DecedentPregnancy
