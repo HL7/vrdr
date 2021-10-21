@@ -5,9 +5,10 @@ Connectathon September 2021 Version of VRDR IG
 
 This branch is the version of the VRDR IG used at the September 2021 Connectathon.
 It is supported by the following software tools:
-|VRDR IG|FHIR |Release|VRDR|VRDR.Messaging| Release|Canary | Release | JavaLib |
-|:---:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|[Sept2021 Connectathon](https://build.fhir.org/ig/HL7/vrdr/branches/Sep_2021_Connectathon/)|	R4	| v3.2.1| [nuget](https://www.nuget.org/packages/VRDR/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1) |	[nuget](https://www.nuget.org/packages/VRDR.Messaging/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1)| v3.1.0|[github .exe](https://github.com/nightingaleproject/canary/releases/download/v3.1.0/canary-3.1.0-windows-x64.zip) [dockerhub](https://hub.docker.com/layers/mitre/canary/v3.1.0/images/sha256-44bee0f166efb939c94990d9e458147e0328996d42825e1874aa31fb0721852b?context=explore)|v1.2.3 |[github](https://github.com/MortalityReporting/VRDR_javalib/releases/tag/v.1.2.3-R4-STU1.2) |
+
+|Release|VRDR|VRDR.Messaging| Release|Canary | Release | JavaLib |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| v3.2.1| [nuget](https://www.nuget.org/packages/VRDR/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1) |	[nuget](https://www.nuget.org/packages/VRDR.Messaging/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1)| v3.1.0|[github .exe](https://github.com/nightingaleproject/canary/releases/download/v3.1.0/canary-3.1.0-windows-x64.zip) [dockerhub](https://hub.docker.com/layers/mitre/canary/v3.1.0/images/sha256-44bee0f166efb939c94990d9e458147e0328996d42825e1874aa31fb0721852b?context=explore)|v1.2.3 |[github](https://github.com/MortalityReporting/VRDR_javalib/releases/tag/v.1.2.3-R4-STU1.2) |
 
 </div>
 </div>
