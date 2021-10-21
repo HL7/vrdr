@@ -1,7 +1,5 @@
-<div class="panel panel-gitlab-purple">
-Connectathon September 2021 Version of VRDR IG
-{: .panel-heading}
-<div class="panel-body">
+
+### Connectathon September 2021 Version of VRDR IG
 
 This branch is the version of the VRDR IG used at the September 2021 Connectathon.
 It is supported by the following software tools:
@@ -10,8 +8,6 @@ It is supported by the following software tools:
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | v3.2.1| [nuget](https://www.nuget.org/packages/VRDR/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1) |	[nuget](https://www.nuget.org/packages/VRDR.Messaging/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1)| v3.1.0|[github .exe](https://github.com/nightingaleproject/canary/releases/download/v3.1.0/canary-3.1.0-windows-x64.zip) [dockerhub](https://hub.docker.com/layers/mitre/canary/v3.1.0/images/sha256-44bee0f166efb939c94990d9e458147e0328996d42825e1874aa31fb0721852b?context=explore)|v1.2.3 |[github](https://github.com/MortalityReporting/VRDR_javalib/releases/tag/v.1.2.3-R4-STU1.2) |
 
-</div>
-</div>
 ### Overview
 
 The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).
