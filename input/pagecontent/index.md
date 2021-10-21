@@ -1,3 +1,16 @@
+<div class="panel panel-gitlab-purple">
+Connectathon September 2021 Version of VRDR IG
+{: .panel-heading}
+<div class="panel-body">
+
+This branch is the version of the VRDR IG used at the September 2021 Connectathon.
+It is supported by the following software tools:
+|VRDR IG|FHIR |Release|VRDR|VRDR.Messaging| Release|Canary | Release | JavaLib |
+|:---:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|[Sept2021 Connectathon](https://build.fhir.org/ig/HL7/vrdr/branches/Sep_2021_Connectathon/)|	R4	| v3.2.1| [nuget](https://www.nuget.org/packages/VRDR/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1) |	[nuget](https://www.nuget.org/packages/VRDR.Messaging/3.2.1) [github](https://github.com/nightingaleproject/vrdr-dotnet/releases/tag/v3.2.1)| v3.1.0|[github .exe](https://github.com/nightingaleproject/canary/releases/download/v3.1.0/canary-3.1.0-windows-x64.zip) [dockerhub](https://hub.docker.com/layers/mitre/canary/v3.1.0/images/sha256-44bee0f166efb939c94990d9e458147e0328996d42825e1874aa31fb0721852b?context=explore)|v1.2.3 |[github](https://github.com/MortalityReporting/VRDR_javalib/releases/tag/v.1.2.3-R4-STU1.2) |
+
+</div>
+</div>
 ### Overview
 
 The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).
@@ -8,7 +21,7 @@ The VRDR FHIR IG will provide guidance for the use of standard FHIR resources as
 
 The VRDR FHIR IG will lay a foundation for expansion of automated standards-driven information exchange to include tributary flows of information from entities such as physicians, medical examiners, coroners, funeral directors, and family members to public health agencies and between public health agencies and secondary users of detailed mortality data and aggregate statistics.
 
-This FHIR implementation guide is the primary work product of [project #1475](https://bit.ly/34DRIoA) "Vital Records Mortality and Morbidity Reporting FHIR IG" sponsored by the Health Level Seven (HL7) Public Health Work Group (PHWG). 
+This FHIR implementation guide is the primary work product of [project #1475](https://bit.ly/34DRIoA) "Vital Records Mortality and Morbidity Reporting FHIR IG" sponsored by the Health Level Seven (HL7) Public Health Work Group (PHWG).
 
 The scope of the project is to produce and ballot a Standard for Trail Use (STU) Fast Healthcare Interoperability Resources (FHIR) implementation guide (IG) for use in reporting of death events to the U.S. National Center for Health Statistics (NCHS) by State and Local Public Health Agencies (PHA). The VRDR FHIR IG is based upon FHIR R4. The VRDR FHIR IG was successfully balloted as a standard for trial use (STU) in May 2019.
 
@@ -40,5 +53,3 @@ This is a U.S. Realm Specification. This guide and related materials are based o
 </tr>
 </tbody>
 </table>
-
-
