@@ -200,7 +200,7 @@ Title:  "Death Message Parameters"
 // cert_no
 // death_year
 // state_auxiliary_id
-* parameter ^slicing.discriminator.type = #profile
+* parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
