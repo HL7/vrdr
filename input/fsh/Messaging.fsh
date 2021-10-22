@@ -294,7 +294,7 @@ Title:  "Coding Message Parameters"
 * parameter[record_cause_of_death].part contains
       coding 1..*
 * parameter[record_cause_of_death].part[coding].value[x] only CodeableConcept // bind to value set
-* parameter[record_cause_of_death].part[coding].value[x] from $icd-10 (required)
+* parameter[record_cause_of_death].part[coding].valueCodeableConcept.coding.system = $icd-10
 * parameter[record_cause_of_death].part[coding].name = "coding"
 
 * parameter[entity_axis_code].part ^slicing.discriminator.type = #profile
@@ -308,7 +308,7 @@ Title:  "Coding Message Parameters"
 * parameter[entity_axis_code].part[lineNumber].value[x] only string
 * parameter[entity_axis_code].part[coding].name = "coding"
 * parameter[entity_axis_code].part[coding].value[x] only CodeableConcept
-* parameter[entity_axis_code].part[coding].value[x] from $icd-10 (required)
+* parameter[entity_axis_code].part[coding].valueCodeableConcept.coding.system = $icd-10
 * parameter[record_cause_of_death].value[x] 0..0
 * parameter[record_cause_of_death].resource 0..0
 * parameter[entity_axis_code].value[x] 0..0
