@@ -3,16 +3,8 @@ Parent: USCoreCondition
 Id: VRDR-Cause-Of-Death-Condition
 Title: "VRDR Cause Of Death Condition"
 Description: "The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource."
-* ^meta.versionId = "14"
+* obeys CauseOfDeathStringLength
 * ^meta.lastUpdated = "2020-07-02T04:43:46.543+00:00"
-* ^meta.source = "#NwabvMXcrlCFwY9G"
-* ^meta.security[0] = $security#user^dMG-NXHH^write
-* ^meta.security[+] = $security#everyone^read
-* ^meta.security[+] = $security#everyone^write
-* ^meta.security[+] = $security#user^PNgAbFNH^write
-* ^meta.security[+] = $security#user^dMG-NXHH^read
-* ^meta.security[+] = $security#user^TKWZUCCU^read
-* ^meta.security[+] = $security#user^PNgAbFNH^read
 * ^meta.tag = $v3-ObservationValue#SUBSETTED "Resource encoded in summary mode"
 * ^status = #draft
 * ^version = "1.0"
@@ -39,6 +31,7 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * code.coding.code from $ViewValueSet.action_3 (required)
 * code.coding.code ^binding.description = "PHVS_CauseOfDeath_ICD-10_CDC"
 * code.text 0..1
+* code.text ^short = "Limited to 120 characters"
 * subject 1..1
 * subject only Reference(Decedent)
 * subject ^short = "subject"
@@ -51,6 +44,11 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 * asserter 1..1
 * asserter only Reference(VRDR_Certifier)
 * asserter ^short = "asserter"
+
+Invariant: CauseOfDeathStringLength
+Description:  "Cause of Death String Limited to 120 characters"
+Expression: "code.text.length() < 120"
+Severity: #error
 
 Instance: f0cbc63d-ac4e-469b-8761-70b6ea8bf666
 InstanceOf: CauseOfDeathCondition
