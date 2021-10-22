@@ -12,8 +12,8 @@
   * [CodingMessage]
     * [CodingMessageHeader]
     * [CodingMessageParameters]
-  * [CodingUpdateMessage] - not yet implemented
-    * [CodingUpdateMessageHeader] - not yet implemented
+  * [CodingUpdateMessage] -- same as submission, just different header flags
+    * [CodingMessageUpdateHeader]
     * [CodingMessageParameters]
 * [AcknowledgementMessage] (Both directions)
   * [AcknowledgementMessageHeader]
