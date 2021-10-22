@@ -4,6 +4,12 @@ RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}
 
+Profile: DeathMessageOutcome
+Parent: OperationOutcome
+Id: VRDR-DeathMessageOutcome
+Title:  "Outcome Profile"
+Description: "Outcome profile to support profile-based slicing of bundles"
+
 CodeSystem: RaceCodesCS
 Id: VRDR-Race-cs
 Title: "Race Codes Values"
