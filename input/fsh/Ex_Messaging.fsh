@@ -151,7 +151,7 @@ Usage: #example
 * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * response.code = #fatal-error
 * response.details = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
-* focus = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
+* focus = Reference(MessageParameters1)
 
 Instance: DeathMessageOutcome1
 InstanceOf: DeathMessageOutcome
@@ -171,7 +171,7 @@ Description: "Example of extraction error message"
 * entry[1].resource = MessageParameters1
 * entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
 * entry[2].resource = DeathMessageOutcome1
-* entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"
+* entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/DeathMessageOutcome1"
 
 Instance: AcknowledgementMessage1
 InstanceOf: AcknowledgementMessage

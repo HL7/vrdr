@@ -174,7 +174,7 @@ Title:  "Extraction Error Header"
 * response.identifier ^short = "The value of the MessageHeader.id for the message with errors"
 * response.code = #fatal-error
 * response.details 1..1
-* response.details only Reference(OperationOutcome)
+* response.details only Reference(DeathMessageOutcome)
 * focus only Reference(DeathMessageParameters)
 
 RuleSet: BaseMessageParameterSlices
@@ -293,7 +293,7 @@ Title:  "Coding Message Parameters"
 * parameter[race].part.name only string
 * parameter[race].part.name from RaceCodesVS (required)
 * parameter[race].part.value[x] only unsignedInt
-* parameter[record_cause_of_death].part ^slicing.discriminator.type = #profile
+* parameter[record_cause_of_death].part ^slicing.discriminator.type = #value
 * parameter[record_cause_of_death].part ^slicing.discriminator.path = "name"
 * parameter[record_cause_of_death].part ^slicing.rules = #closed
 * parameter[record_cause_of_death].part ^slicing.description = "Slicing based on the profile conformance of the sliced element"
@@ -303,7 +303,7 @@ Title:  "Coding Message Parameters"
 * parameter[record_cause_of_death].part[coding].valueCodeableConcept.coding.system = $icd-10
 * parameter[record_cause_of_death].part[coding].name = "coding"
 
-* parameter[entity_axis_code].part ^slicing.discriminator.type = #profile
+* parameter[entity_axis_code].part ^slicing.discriminator.type = #value
 * parameter[entity_axis_code].part ^slicing.discriminator.path = "name"
 * parameter[entity_axis_code].part ^slicing.rules = #closed
 * parameter[entity_axis_code].part ^slicing.description = "Slicing based on the profile conformance of the sliced element"
