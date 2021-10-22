@@ -140,6 +140,14 @@ Title:  "Coding Message Header"
 * insert CommonHeaderStuff
 * focus only Reference(CodingMessageParameters)
 
+Profile:  CodingMessageUpdateHeader
+Parent: MessageHeader
+Id: VRDR-CodingMessageUpdateHeader
+Title:  "Coding Message Update Header"
+* eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrcodingupdate (exactly)
+* insert CommonHeaderStuff
+* focus only Reference(CodingMessageParameters)
+
 Profile:  AcknowledgementMessageHeader
 Parent: MessageHeader
 Id: VRDR-AcknowledgementMessageHeader
@@ -319,8 +327,7 @@ Title: "Death Record Submission Message "
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+
 
 Profile: DeathRecordUpdateMessage
 Parent: Bundle
@@ -330,8 +337,6 @@ Title: "Death Record Update Message"
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathRecordUpdateHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
 
 
 Profile: DeathRecordVoidMessage
@@ -342,10 +347,6 @@ Title: "Death Record Void Message "
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageVoidHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Void Parameters, Death Record Void Parameters, DeathMessageVoidParameters)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp  MS
-
-
 
 Profile: CodingMessage
 Parent: Bundle
@@ -355,8 +356,17 @@ Title: "Coding Message"
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageHeader)
 * insert BundleEntry(codingParameters, 1, 1, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+
+
+Profile: CodingUpdateMessage
+Parent: Bundle
+Id: VRDR-CodingUpdateMessage
+Title: "Coding Update Message"
+* insert CommonBundleStuff
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageUpdateHeader)
+* insert BundleEntry(codingParameters, 1, 1, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
+
 
 Profile: AcknowledgementMessage
 Parent: Bundle
@@ -365,8 +375,7 @@ Title: "Acknowledgement Message"
 * insert CommonBundleStuff
 * insert BundleEntry(messageHeader, 1, 1, Acknowledgement Message Header , Acknowledgement Message Header, AcknowledgementMessageHeader)
 * insert BundleEntry(acknowledgementParameters, 1, 1, Acknowledgement Message Parameters, Acknowledgement Parameters, DeathMessageParameters)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+
 
 Profile: ExtractionErrorMessage
 Parent: Bundle
@@ -376,8 +385,7 @@ Title: "Extraction Error Message"
 * insert BundleEntry(messageHeader, 1, 1, Extraction Error Message Header , Extraction Error Message Header, ExtractionErrorHeader)
 * insert BundleEntry(extractionErrorParameters, 0, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
 * insert BundleEntry(extractionErrorOutcome, 1, 1, Extraction Error Operation Outcome, Extraction Error Operation Outcome, OperationOutcome)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+
 
 RuleSet: CommonBundleStuff
 * ^status = #draft

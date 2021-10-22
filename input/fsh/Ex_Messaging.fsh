@@ -133,6 +133,15 @@ Usage: #example
 // * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * focus = Reference(CodingMessageParameters1)
 
+Instance: CodingMessageUpdateHeader1
+InstanceOf: CodingMessageUpdateHeader
+Usage: #example
+* eventUri = "http://nchs.cdc.gov/vrdrcodingupdate"
+* destination.endpoint = "https://sos.nh.gov/vitalrecords"
+* source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
+// * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
+* focus = Reference(CodingMessageParameters1)
+
 Instance: ExtractionErrorHeader1
 InstanceOf: ExtractionErrorHeader
 Usage: #example
@@ -185,6 +194,18 @@ Description: "Example of coding message"
 // Other slices
 * entry[1].resource = CodingMessageParameters1
 * entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
+
+Instance: CodingUpdateMessage1
+InstanceOf: CodingUpdateMessage
+Usage: #example
+Description: "Example of coding update message"
+* timestamp = "2021-05-20T00:00:00Z"
+* entry[0].resource = CodingMessageHeader1
+* entry[=].fullUrl = "http://example.org/fhir/Message/CodingUpdateHeader1"
+// Other slices
+* entry[1].resource = CodingMessageParameters1
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/CodingMessageParameters1"
+
 
 Instance: DeathRecordVoidMessage1
 InstanceOf: DeathRecordVoidMessage

@@ -8,6 +8,8 @@
 <!-- VRDR Messaging Profiles and Extensions -->
 [CodingMessage]: StructureDefinition-VRDR-CodingMessage.html
 [CodingMessageHeader]: StructureDefinition-VRDR-CodingMessageHeader.html
+[CodingUpdateMessage]: StructureDefinition-VRDR-CodingUpdateMessage.html
+[CodingMessageUpdateHeader]: StructureDefinition-VRDR-CodingMessageUpdateHeader.html
 [CodingMessageParameters]: StructureDefinition-VRDR-CodingMessageParameters.html
 [DeathRecordSubmissionHeader]: StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
 [DeathMessageParameters]: StructureDefinition-VRDR-DeathMessageParameters.html
