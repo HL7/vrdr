@@ -47,7 +47,7 @@ Description: "The Cause of Death Condition profile reflects one of the eventuall
 
 Invariant: CauseOfDeathStringLength
 Description:  "Cause of Death String Limited to 120 characters"
-Expression: "code.text.length() < 120"
+Expression: "code.text.exists() implies code.text.length() < 120"
 Severity: #error
 
 Instance: f0cbc63d-ac4e-469b-8761-70b6ea8bf666

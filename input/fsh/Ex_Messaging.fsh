@@ -151,10 +151,10 @@ Usage: #example
 * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * response.code = #fatal-error
 * response.details = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
-* focus = Reference(Parameters/e1c5eb7a-730f-440f-9b4e-c5d15a1b981c)
+* focus = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
 
-Instance: ce028490-5e55-4673-8a80-a71c97e23fa0
-InstanceOf: OperationOutcome
+Instance: DeathMessageOutcome1
+InstanceOf: DeathMessageOutcome
 Usage: #example
 * issue.severity = #error
 * issue.code = #structure
@@ -170,7 +170,7 @@ Description: "Example of extraction error message"
 // Other slices
 * entry[1].resource = MessageParameters1
 * entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
-* entry[2].resource = ce028490-5e55-4673-8a80-a71c97e23fa0
+* entry[2].resource = DeathMessageOutcome1
 * entry[=].fullUrl = "http://example.org/fhir/OperationOutcome/ce028490-5e55-4673-8a80-a71c97e23fa0"
 
 Instance: AcknowledgementMessage1
@@ -227,9 +227,9 @@ Description: "Example of death record submission mesage"
 * entry[=].fullUrl = "urn:oid:SubmissionHeader1"
 // Other slices
 * entry[1].resource = MessageParameters1
-* entry[=].fullUrl = "urn:oid:MessageParameters1"
+* entry[=].fullUrl = "http://example.org/fhir/Parameters/MessageParameters1"
 * entry[+].resource = 7a4613cc-b306-49b2-a428-9f8e67e67a85
-* entry[=].fullUrl = "urn:oid:7a4613cc-b306-49b2-a428-9f8e67e67a85"
+* entry[=].fullUrl = "http://example.org/fhir/Bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85"
 
 Instance: DeathRecordUpdateMessage1
 InstanceOf: DeathRecordUpdateMessage
