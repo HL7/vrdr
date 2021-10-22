@@ -274,7 +274,7 @@ Title:  "Coding Message Parameters"
 * insert ParameterName(ethnicity)
 * insert ParameterName(race)
 * insert ParameterNameType(underlying_cause_of_death, CodeableConcept)
-* parameter[underlying_cause_of_death].value[x] from  $icd-10 (required)
+* parameter[underlying_cause_of_death].valueCodeableConcept.coding.system = $icd-10
 * insert ParameterName(record_cause_of_death)
 * insert ParameterName(entity_axis_code)
 * insert ParameterNameType(manner, string)
