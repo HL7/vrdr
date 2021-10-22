@@ -106,7 +106,7 @@ Usage: #example
 * eventUri = "http://nchs.cdc.gov/vrdrsubmissionvoid"
 * destination.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
 * source.endpoint = "https://sos.nh.gov/vitalrecords"
-* focus = Reference(MessageParameters1)
+* focus = Reference(VoidMessageParameters1)
 
 Instance: UpdateMessageHeader1
 InstanceOf: DeathRecordUpdateHeader
@@ -150,7 +150,7 @@ Usage: #example
 * source.endpoint = "http://nchs.cdc.gov/vrdrsubmission"
 * response.identifier = "54a07cef-4bff-4bb0-8957-9c8fbf7390ed"
 * response.code = #fatal-error
-* response.details = Reference(ce028490-5e55-4673-8a80-a71c97e23fa0)
+* response.details = Reference(DeathMessageOutcome1)
 * focus = Reference(MessageParameters1)
 
 Instance: DeathMessageOutcome1
@@ -200,7 +200,7 @@ InstanceOf: CodingUpdateMessage
 Usage: #example
 Description: "Example of coding update message"
 * timestamp = "2021-05-20T00:00:00Z"
-* entry[0].resource = CodingMessageHeader1
+* entry[0].resource = CodingMessageUpdateHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/CodingUpdateHeader1"
 // Other slices
 * entry[1].resource = CodingMessageParameters1
