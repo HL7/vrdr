@@ -155,6 +155,7 @@ Instance: ExtractionErrorMessage1
 InstanceOf: ExtractionErrorMessage
 Usage: #example
 Description: "Example of extraction error message"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = ExtractionErrorHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/ExtractionErrorHeader1"
 // Other slices
@@ -167,6 +168,7 @@ Instance: AcknowledgementMessage1
 InstanceOf: AcknowledgementMessage
 Usage: #example
 Description: "Example of acknowledgement message"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = AcknowledgementMessageHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/AcknowledgementMessageHeader1"
 // Other slices
@@ -177,6 +179,7 @@ Instance: CodingMessage1
 InstanceOf: CodingMessage
 Usage: #example
 Description: "Example of coding message"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = CodingMessageHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/CodingHeader1"
 // Other slices
@@ -187,6 +190,7 @@ Instance: DeathRecordVoidMessage1
 InstanceOf: DeathRecordVoidMessage
 Usage: #example
 Description: "Example of void message"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = VoidMessageHeader1
 * entry[=].fullUrl = "http://example.org/fhir/Message/VoidMessageHeader1"
 // Other slices
@@ -197,6 +201,7 @@ Instance: DeathRecordSubmissionMessage1
 InstanceOf: DeathRecordSubmissionMessage
 Usage: #example
 Description: "Example of death record submission mesage"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = SubmissionMessageHeader1
 * entry[=].fullUrl = "urn:oid:SubmissionHeader1"
 // Other slices
@@ -209,6 +214,7 @@ Instance: DeathRecordUpdateMessage1
 InstanceOf: DeathRecordUpdateMessage
 Usage: #example
 Description: "Example of death record submission mesage"
+* timestamp = "2021-05-20T00:00:00Z"
 * entry[0].resource = UpdateMessageHeader1
 * entry[=].fullUrl = "urn:oid:UpdateHeader1"
 // Other slices

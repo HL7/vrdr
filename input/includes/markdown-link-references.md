@@ -10,7 +10,7 @@
 [CodingMessageHeader]: StructureDefinition-VRDR-CodingMessageHeader.html
 [CodingMessageParameters]: StructureDefinition-VRDR-CodingMessageParameters.html
 [DeathRecordSubmissionHeader]: StructureDefinition-VRDR-DeathMessageSubmissionHeader.html
-[DeathMessageParameters]: StructureDefinition-VRDR-DeathMessageSubmissionParameters.html
+[DeathMessageParameters]: StructureDefinition-VRDR-DeathMessageParameters.html
 [DeathRecordVoidHeader]: StructureDefinition-VRDR-DeathMessageVoidHeader.html
 [DeathRecordUpdateHeader]: StructureDefinition-VRDR-DeathRecordUpdateHeader.html
 [DeathRecordVoidParameters]: StructureDefinition-VRDR-DeathMessageVoidParameters.html

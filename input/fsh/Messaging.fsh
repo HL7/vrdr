@@ -113,10 +113,7 @@ Parent: MessageHeader
 Id: VRDR-DeathMessageSubmissionHeader
 Title:  "Death Message Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmission (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* focus 1..1
+* insert CommonHeaderStuff
 * focus only Reference(DeathCertificateDocument)
 
 Profile:  DeathRecordUpdateHeader
@@ -124,10 +121,7 @@ Parent: MessageHeader
 Id: VRDR-DeathRecordUpdateHeader
 Title:  "Death Message Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrupdate (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* focus 1..1
+* insert CommonHeaderStuff
 * focus only Reference(DeathCertificateDocument)
 
 Profile:  DeathMessageVoidHeader
@@ -135,10 +129,7 @@ Parent: MessageHeader
 Id: VRDR-DeathMessageVoidHeader
 Title:  "Death Message Void Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrsubmissionvoid (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* focus 1..1
+* insert CommonHeaderStuff
 * focus only Reference(DeathMessageVoidParameters)
 
 Profile:  CodingMessageHeader
@@ -146,10 +137,7 @@ Parent: MessageHeader
 Id: VRDR-CodingMessageHeader
 Title:  "Coding Message Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrcoding (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* focus 1..1
+* insert CommonHeaderStuff
 * focus only Reference(CodingMessageParameters)
 
 Profile:  AcknowledgementMessageHeader
@@ -157,14 +145,10 @@ Parent: MessageHeader
 Id: VRDR-AcknowledgementMessageHeader
 Title:  "Acknowledgement Message Header"
 * eventUri =  MessageHeaderURICS#http://nchs.cdc.gov/vrdracknowledgement (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* response 1..1
+* insert CommonHeaderStuff
 * response.identifier 1..1
 * response.identifier ^short = "The value of the MessageHeader.id for the message that is being acknowledged"
 * response.code = #ok (exactly)
-* focus 1..1
 * focus only Reference(DeathMessageParameters)
 
 Profile:  ExtractionErrorHeader
@@ -172,10 +156,7 @@ Parent: MessageHeader
 Id: VRDR-ExtractionErrorHeader
 Title:  "Extraction Error Header"
 * eventUri = MessageHeaderURICS#http://nchs.cdc.gov/vrdrextractionerror (exactly)
-* eventUri 1..1
-* destination 1..1
-* source 1..1
-* response.identifier 1..1
+* insert CommonHeaderStuff
 * response.identifier ^short = "The value of the MessageHeader.id for the message with errors"
 * response.code = #fatal-error
 * response.details 1..1
@@ -334,14 +315,7 @@ Profile: DeathRecordSubmissionMessage
 Parent: Bundle
 Id: VRDR-DeathRecordSubmissionMessage
 Title: "Death Record Submission Message "
-* ^status = #draft
-* type  = #message
-* id MS
-* timestamp MS
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert CommonBundleStuff
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageSubmissionHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
@@ -352,14 +326,7 @@ Profile: DeathRecordUpdateMessage
 Parent: Bundle
 Id: VRDR-DeathRecordUpdateMessage
 Title: "Death Record Update Message"
-* ^status = #draft
-* type  = #message
-* id MS
-* timestamp MS
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert CommonBundleStuff
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathRecordUpdateHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Submission Parameters, Death Record Submission Parameters, DeathMessageParameters)
 * insert BundleEntry(deathRecordCertificate, 1, 1, Death Record Certificate Document, Death Record Certificate Document, DeathCertificateDocument)
@@ -371,14 +338,7 @@ Profile: DeathRecordVoidMessage
 Parent: Bundle
 Id: VRDR-DeathRecordVoidMessage
 Title: "Death Record Void Message "
-* ^status = #draft
-* type  = #message
-* id MS
-* timestamp MS
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert CommonBundleStuff
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, DeathMessageVoidHeader)
 * insert BundleEntry(deathRecordParameters, 1, 1, Death Message Void Parameters, Death Record Void Parameters, DeathMessageVoidParameters)
@@ -391,14 +351,7 @@ Profile: CodingMessage
 Parent: Bundle
 Id: VRDR-CodingMessage
 Title: "Coding Message"
-* ^status = #draft
-* type  = #message
-* id MS
-* timestamp MS
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert CommonBundleStuff
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(messageHeader, 1, 1, Message Header , Message Header, CodingMessageHeader)
 * insert BundleEntry(codingParameters, 1, 1, Coding Message Parameters, Coding Parameters, CodingMessageParameters)
@@ -409,14 +362,7 @@ Profile: AcknowledgementMessage
 Parent: Bundle
 Id: VRDR-AcknowledgementMessage
 Title: "Acknowledgement Message"
-* ^status = #draft
-* type  = #message
-* id MS
-* timestamp MS
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+* insert CommonBundleStuff
 * insert BundleEntry(messageHeader, 1, 1, Acknowledgement Message Header , Acknowledgement Message Header, AcknowledgementMessageHeader)
 * insert BundleEntry(acknowledgementParameters, 1, 1, Acknowledgement Message Parameters, Acknowledgement Parameters, DeathMessageParameters)
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
@@ -426,15 +372,26 @@ Profile: ExtractionErrorMessage
 Parent: Bundle
 Id: VRDR-ExtractionErrorMessage
 Title: "Extraction Error Message"
+* insert CommonBundleStuff
+* insert BundleEntry(messageHeader, 1, 1, Extraction Error Message Header , Extraction Error Message Header, ExtractionErrorHeader)
+* insert BundleEntry(extractionErrorParameters, 0, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
+* insert BundleEntry(extractionErrorOutcome, 1, 1, Extraction Error Operation Outcome, Extraction Error Operation Outcome, OperationOutcome)
+// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
+* timestamp and entry and entry.resource MS
+
+RuleSet: CommonBundleStuff
 * ^status = #draft
 * type  = #message
-* id MS
-* timestamp MS
+* id 1..1
+* timestamp 1..1
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-* insert BundleEntry(messageHeader, 1, 1, Extraction Error Message Header , Extraction Error Message Header, ExtractionErrorHeader)
-* insert BundleEntry(extractionErrorParameters, 0, 1, Extraction Error Message Parameters, Extraction Error Parameters, DeathMessageParameters)
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+
+RuleSet: CommonHeaderStuff
+* eventUri 1..1
+* destination 1..1
+* source 1..1
+* focus 1..1
+* id 1..1
