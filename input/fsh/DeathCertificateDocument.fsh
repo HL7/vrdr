@@ -40,18 +40,17 @@ Description: "An instance example of the VRDR-Death-Certificate-Document resourc
 Usage: #example
 * meta.versionId = "39"
 * meta.lastUpdated = "2020-08-12T18:59:34.898+00:00"
-* meta.source = "#OlEHlfWnqGy5aapi"
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "7a4613cc-b306-49b2-a428-9f8e67e67a85"
 * type = #document
 * timestamp = "2017-12-11T14:30:00+01:00"
-* entry[0].fullUrl = "urn:uuid:54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30"
+* entry[0].fullUrl = "Composition/54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30"
 * entry[=].resource = Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-1
-* entry[+].fullUrl = "urn:uuid:Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+* entry[+].fullUrl = "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
 * entry[=].resource = Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-2
-* entry[+].fullUrl = "Practitioner/urn:cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
+* entry[+].fullUrl = "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
 * entry[=].resource = Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-3
-* entry[+].fullUrl = "urn:uuid:Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"
+* entry[+].fullUrl = "Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"
 * entry[=].resource = Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-4
 
 Instance: Inline-Instance-for-7a4613cc-b306-49b2-a428-9f8e67e67a85-1
