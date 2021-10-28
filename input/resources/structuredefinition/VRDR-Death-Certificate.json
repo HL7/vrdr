@@ -1,208 +1,348 @@
 {
-	"resourceType": "StructureDefinition",
-	"id": "VRDR-Death-Certificate",
-	"meta": {
-		"versionId": "13",
-		"lastUpdated": "2020-08-07T15:46:37.056+00:00",
-		"source": "#xWgWALJHC1oSZGq3"
-	},
-	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
-	"version": "1.0",
-	"name": "DeathCertificate",
-	"title": "VRDR Death Certificate",
-	"status": "draft",
-	"experimental": false,
-	"date": "2020-05-09",
-	"publisher": "Health Level Seven",
-	"contact": [
-		{
-			"name": "AbdulMalik Shakir",
-			"telecom": [
-				{
-					"system": "phone",
-					"value": "6266444491",
-					"use": "work"
-				},
-				{
-					"system": "email",
-					"value": "abdulmalik.shakir@hi3solutions.com",
-					"use": "work"
-				}
-			]
-		}
-	],
-	"description": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource.",
-	"fhirVersion": "4.0.1",
-	"kind": "resource",
-	"abstract": false,
-	"type": "Composition",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
-	"derivation": "constraint",
-	"differential": {
-		"element": [
-			{
-				"id": "Composition",
-				"path": "Composition"
-			},
-			{
-				"id": "Composition.status",
-				"path": "Composition.status",
-				"short": "status",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "code"
-					}
-				],
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/ValueSet/composition-status"
-				}
-			},
-			{
-				"id": "Composition.type",
-				"path": "Composition.type",
-				"short": "type",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "CodeableConcept"
-					}
-				],
-				"fixedCodeableConcept": {
-					"coding": [
-						{
-							"system": "http://loinc.org",
-							"code": "64297-5",
-							"display": "Death certificate"
-						}
-					]
-				}
-			},
-			{
-				"id": "Composition.subject",
-				"path": "Composition.subject",
-				"short": "subject",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
-						]
-					}
-				]
-			},
-			{
-				"id": "Composition.date",
-				"path": "Composition.date",
-				"short": "date",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Composition.attester",
-				"path": "Composition.attester",
-				"short": "attester",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "BackboneElement"
-					}
-				]
-			},
-			{
-				"id": "Composition.attester.mode",
-				"path": "Composition.attester.mode",
-				"short": "mode",
-				"definition": "This attester SHALL contain exactly one [1..1] mode=\"\"legal\"\"(CONF:4393-367).",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "code"
-					}
-				],
-				"fixedCode": "legal"
-			},
-			{
-				"id": "Composition.attester.time",
-				"path": "Composition.attester.time",
-				"short": "time",
-				"definition": "This attester SHALL contain exactly one [1..1] time (CONF:4393-369).",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Composition.attester.party",
-				"path": "Composition.attester.party",
-				"short": "party",
-				"definition": "This attester SHALL contain exactly one [1..1] party=\"VRDR Certifier\"(CONF:4393-368).",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
-						]
-					}
-				]
-			},
-			{
-				"id": "Composition.event",
-				"path": "Composition.event",
-				"short": "event",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "BackboneElement"
-					}
-				]
-			},
-			{
-				"id": "Composition.event.code",
-				"path": "Composition.event.code",
-				"short": "code",
-				"definition": "This event SHALL contain exactly one [1..1] code=\"\"103693007\"\"(CONF:4393-372).",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "CodeableConcept"
-					}
-				],
-				"fixedCodeableConcept": {
-					"coding": [
-						{
-							"system": "http://snomed.info/sct",
-							"code": "103693007",
-							"display": "Diagnostic procedure (procedure)"
-						}
-					]
-				}
-			},
-			{
-				"id": "Composition.event.detail",
-				"path": "Composition.event.detail",
-				"short": "detail",
-				"definition": "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373).",
-				"min": 1,
-				"max": "1",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"
-						]
-					}
-				]
-			}
-		]
-	}
+    "StructureDefinition": {
+        "xmlns": "http://hl7.org/fhir",
+        "id": {"value": "VRDR-Death-Certificate"},
+        "meta": {
+            "versionId": {"value": 18},
+            "lastUpdated": {"value": "2021-10-21T00:02:36.738+00:00"},
+            "source": {"value": "#920lQFzoKLOzR5nx"},
+            "security": [
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "everyone^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^dMG-NXHH^write"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^PNgAbFNH^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "everyone^read"}
+                },
+                {
+                    "system": {"value": "https://trifolia-fhir.lantanagroup.com/security"},
+                    "code": {"value": "user^TKWZUCCU^read"}
+                }
+            ],
+            "tag": {
+                "system": {"value": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"},
+                "code": {"value": "SUBSETTED"},
+                "display": {"value": "Resource encoded in summary mode"}
+            }
+        },
+        "url": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"},
+        "version": {"value": 1},
+        "name": {"value": "DeathCertificate"},
+        "title": {"value": "VRDR Death Certificate"},
+        "status": {"value": "draft"},
+        "experimental": {"value": false},
+        "date": {"value": "2020-05-09"},
+        "publisher": {"value": "Health Level Seven"},
+        "contact": {
+            "name": {"value": "AbdulMalik Shakir"},
+            "telecom": [
+                {
+                    "system": {"value": "phone"},
+                    "value": {"value": 6266444491},
+                    "use": {"value": "work"}
+                },
+                {
+                    "system": {"value": "email"},
+                    "value": {"value": "abdulmalik.shakir@hi3solutions.com"},
+                    "use": {"value": "work"}
+                }
+            ]
+        },
+        "description": {"value": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource."},
+        "fhirVersion": {"value": "4.0.1"},
+        "kind": {"value": "resource"},
+        "abstract": {"value": false},
+        "type": {"value": "Composition"},
+        "baseDefinition": {"value": "http://hl7.org/fhir/StructureDefinition/Composition"},
+        "derivation": {"value": "constraint"},
+        "differential": {
+            "element": [
+                {
+                    "id": "Composition",
+                    "path": {"value": "Composition"}
+                },
+                {
+                    "id": "Composition.status",
+                    "path": {"value": "Composition.status"},
+                    "short": {"value": "status"},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "code"}
+                    },
+                    "binding": {
+                        "strength": {"value": "required"},
+                        "valueSet": {"value": "http://hl7.org/fhir/ValueSet/composition-status"}
+                    }
+                },
+                {
+                    "id": "Composition.type",
+                    "path": {"value": "Composition.type"},
+                    "short": {"value": "type"},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "CodeableConcept"}
+                    },
+                    "fixedCodeableConcept": {
+                        "coding": {
+                            "system": {"value": "http://loinc.org"},
+                            "code": {"value": "64297-5"},
+                            "display": {"value": "Death certificate"}
+                        }
+                    }
+                },
+                {
+                    "id": "Composition.subject",
+                    "path": {"value": "Composition.subject"},
+                    "short": {"value": "subject"},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"}
+                    }
+                },
+                {
+                    "id": "Composition.date",
+                    "path": {"value": "Composition.date"},
+                    "short": {"value": "date"},
+                    "min": {"value": 1},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.attester",
+                    "path": {"value": "Composition.attester"},
+                    "short": {"value": "attester"},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "BackboneElement"}
+                    }
+                },
+                {
+                    "id": "Composition.attester.mode",
+                    "path": {"value": "Composition.attester.mode"},
+                    "short": {"value": "mode"},
+                    "definition": {"value": "This attester SHALL contain exactly one [1..1] mode=\"\"legal\"\"(CONF:4393-367)."},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "code"}
+                    },
+                    "fixedCode": {"value": "legal"}
+                },
+                {
+                    "id": "Composition.attester.time",
+                    "path": {"value": "Composition.attester.time"},
+                    "short": {"value": "time"},
+                    "definition": {"value": "This attester SHALL contain exactly one [1..1] time (CONF:4393-369)."},
+                    "min": {"value": 1},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.attester.party",
+                    "path": {"value": "Composition.attester.party"},
+                    "short": {"value": "party"},
+                    "definition": {"value": "This attester SHALL contain exactly one [1..1] party=\"VRDR Certifier\"(CONF:4393-368)."},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"}
+                    }
+                },
+                {
+                    "id": "Composition.event",
+                    "path": {"value": "Composition.event"},
+                    "short": {"value": "event"},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "BackboneElement"}
+                    }
+                },
+                {
+                    "id": "Composition.section",
+                    "path": {"value": "Composition.section"},
+                    "slicing": {
+                        "rules": {"value": "open"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics",
+                    "path": {"value": "Composition.section"},
+                    "sliceName": {"value": "DecedentDemographics"},
+                    "label": {"value": "Decedent Demographics"},
+                    "short": {"value": "DecedentDemographics"},
+                    "definition": {"value": "This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry",
+                    "path": {"value": "Composition.section.entry"},
+                    "slicing": {
+                        "rules": {"value": "open"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:Decedent",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "Decedent"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:Father",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "Father"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:Mother",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "Mother"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:Spouse",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "Spouse"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:Age",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "Age"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:BirthRecordID",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "BirthRecordID"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:EducationLevel",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "EducationLevel"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:MilitaryService",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "MilitaryService"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DecedentDemographics.entry:slice8545",
+                    "path": {"value": "Composition.section.entry"},
+                    "sliceName": {"value": "slice8545"},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"}
+                    }
+                },
+                {
+                    "id": "Composition.section:DeathInvestigation",
+                    "path": {"value": "Composition.section"},
+                    "sliceName": {"value": "DeathInvestigation"},
+                    "definition": {"value": "This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."},
+                    "min": {"value": 0},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.section:DeathCertification",
+                    "path": {"value": "Composition.section"},
+                    "sliceName": {"value": "DeathCertification"},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.section:DecedentDisposition",
+                    "path": {"value": "Composition.section"},
+                    "sliceName": {"value": "DecedentDisposition"},
+                    "max": {"value": 1}
+                },
+                {
+                    "id": "Composition.event.code",
+                    "path": {"value": "Composition.event.code"},
+                    "short": {"value": "code"},
+                    "definition": {"value": "This event SHALL contain exactly one [1..1] code=\"\"103693007\"\"(CONF:4393-372)."},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "CodeableConcept"}
+                    },
+                    "fixedCodeableConcept": {
+                        "coding": {
+                            "system": {"value": "http://snomed.info/sct"},
+                            "code": {"value": 103693007},
+                            "display": {"value": "Diagnostic procedure (procedure)"}
+                        }
+                    }
+                },
+                {
+                    "id": "Composition.event.detail",
+                    "path": {"value": "Composition.event.detail"},
+                    "short": {"value": "detail"},
+                    "definition": {"value": "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373)."},
+                    "min": {"value": 1},
+                    "max": {"value": 1},
+                    "type": {
+                        "code": {"value": "Reference"},
+                        "targetProfile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"}
+                    }
+                }
+            ]
+        }
+    }
 }
