@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate-Document"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2020-08-18T06:29:51.027+00:00"/>
-        <source value="#TRof2eLh1VCPPrNl"/>
+        <versionId value="23"/>
+        <lastUpdated value="2021-11-04T04:39:48.750+00:00"/>
+        <source value="#o71QGb0O1TPpc1M0"/>
         <security>
             <system value="https://trifolia-fhir.lantanagroup.com/security"/>
             <code value="everyone^write"/>
@@ -97,7 +97,7 @@
             </slicing>
             <short value="entry"/>
             <min value="1"/>
-            <max value="*"/>
+            <max value="3"/>
             <type>
                 <code value="BackboneElement"/>
             </type>
@@ -122,6 +122,15 @@
             <sliceName value="DeathCertificateReference"/>
             <max value="1"/>
         </element>
+        <element id="Bundle.entry:DeathCertificateReference.resource">
+            <path value="Bundle.entry.resource"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Resource"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"/>
+            </type>
+        </element>
         <element id="Bundle.entry:InterestedParty">
             <path value="Bundle.entry"/>
             <sliceName value="InterestedParty"/>
@@ -133,17 +142,6 @@
             <type>
                 <code value="Resource"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"/>
-            </type>
-        </element>
-        <element id="Bundle.entry.resource">
-            <path value="Bundle.entry.resource"/>
-            <short value="resource"/>
-            <definition value="This entry SHALL contain exactly one [1..1] resource=&quot;VRDR Death Certificate&quot; (CONF:4393-360)."/>
-            <min value="1"/>
-            <max value="1"/>
-            <type>
-                <code value="Resource"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"/>
             </type>
         </element>
     </differential>

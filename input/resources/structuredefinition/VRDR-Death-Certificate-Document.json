@@ -1,9 +1,9 @@
 {
 	"id": "VRDR-Death-Certificate-Document",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2020-08-18T06:29:51.027+00:00",
-		"source": "#TRof2eLh1VCPPrNl",
+		"versionId": "23",
+		"lastUpdated": "2021-11-04T04:39:48.750+00:00",
+		"source": "#o71QGb0O1TPpc1M0",
 		"security": [
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
@@ -106,28 +106,29 @@
 			{
 				"id": "Bundle.entry",
 				"path": "Bundle.entry",
+				"slicing": {
+					"rules": "open"
+				},
 				"short": "entry",
 				"min": 1,
-				"max": "*",
+				"max": "3",
 				"type": [
 					{
 						"code": "BackboneElement"
 					}
-				],
-				"slicing": {
-					"rules": "open"
-				}
+				]
 			},
 			{
-				"sliceName": "DeathCertificate",
 				"id": "Bundle.entry:DeathCertificate",
 				"path": "Bundle.entry",
-				"max": "1",
-				"min": 1
+				"sliceName": "DeathCertificate",
+				"min": 1,
+				"max": "1"
 			},
 			{
 				"id": "Bundle.entry:DeathCertificate.resource",
 				"path": "Bundle.entry.resource",
+				"min": 1,
 				"max": "1",
 				"type": [
 					{
@@ -136,46 +137,43 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"
 						]
 					}
-				],
-				"min": 1
+				]
 			},
 			{
-				"sliceName": "DeathCertificateReference",
 				"id": "Bundle.entry:DeathCertificateReference",
 				"path": "Bundle.entry",
+				"sliceName": "DeathCertificateReference",
 				"max": "1"
 			},
 			{
-				"sliceName": "InterestedParty",
-				"id": "Bundle.entry:InterestedParty",
-				"path": "Bundle.entry"
-			},
-			{
-				"id": "Bundle.entry:InterestedParty.resource",
+				"id": "Bundle.entry:DeathCertificateReference.resource",
 				"path": "Bundle.entry.resource",
-				"max": "1",
-				"type": [
-					{
-						"code": "Resource",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"
-						]
-					}
-				],
-				"min": 1
-			},
-			{
-				"id": "Bundle.entry.resource",
-				"path": "Bundle.entry.resource",
-				"short": "resource",
-				"definition": "This entry SHALL contain exactly one [1..1] resource=\"VRDR Death Certificate\" (CONF:4393-360).",
-				"min": 1,
 				"max": "1",
 				"type": [
 					{
 						"code": "Resource",
 						"targetProfile": [
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"
+						]
+					}
+				],
+				"min": 1
+			},
+			{
+				"id": "Bundle.entry:InterestedParty",
+				"path": "Bundle.entry",
+				"sliceName": "InterestedParty"
+			},
+			{
+				"id": "Bundle.entry:InterestedParty.resource",
+				"path": "Bundle.entry.resource",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Resource",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"
 						]
 					}
 				]
