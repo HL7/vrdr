@@ -3,9 +3,42 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2020-08-07T15:46:37.056+00:00"/>
-        <source value="#xWgWALJHC1oSZGq3"/>
+        <versionId value="21"/>
+        <lastUpdated value="2021-10-28T04:41:44.282+00:00"/>
+        <source value="#hmKGbaOToGkgavE6"/>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^TKWZUCCU^read"/>
+        </security>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"/>
     <version value="1.0"/>
@@ -129,6 +162,319 @@
             <max value="1"/>
             <type>
                 <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="Composition.section">
+            <path value="Composition.section"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DecedentDemographics">
+            <path value="Composition.section"/>
+            <sliceName value="DecedentDemographics"/>
+            <label value="Decedent Demographics"/>
+            <short value="DecedentDemographics"/>
+            <definition value="This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."/>
+            <max value="1"/>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Decedent">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Decedent"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Father">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Father"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Mother">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Mother"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Spouse">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Spouse"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Age">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Age"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:BirthRecordID">
+            <path value="Composition.section.entry"/>
+            <sliceName value="BirthRecordID"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:EducationLevel">
+            <path value="Composition.section.entry"/>
+            <sliceName value="EducationLevel"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:MilitaryService">
+            <path value="Composition.section.entry"/>
+            <sliceName value="MilitaryService"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:UsualWork">
+            <path value="Composition.section.entry"/>
+            <sliceName value="UsualWork"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation">
+            <path value="Composition.section"/>
+            <sliceName value="DeathInvestigation"/>
+            <definition value="This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:ExaminerContacted">
+            <path value="Composition.section.entry"/>
+            <sliceName value="ExaminerContacted"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:Pregnancy">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Pregnancy"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:TobaccoUse">
+            <path value="Composition.section.entry"/>
+            <sliceName value="TobaccoUse"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:InjuryLocation">
+            <path value="Composition.section.entry"/>
+            <sliceName value="InjuryLocation"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:Autopsy">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Autopsy"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:DeathLocation">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DeathLocation"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:DeathPronouncementPerformer">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DeathPronouncementPerformer"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:InjuryIncident">
+            <path value="Composition.section.entry"/>
+            <sliceName value="InjuryIncident"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:DeathDate">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DeathDate"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathInvestigation.entry:TransportationRole">
+            <path value="Composition.section.entry"/>
+            <sliceName value="TransportationRole"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathCertification">
+            <path value="Composition.section"/>
+            <sliceName value="DeathCertification"/>
+            <max value="1"/>
+        </element>
+        <element id="Composition.section:DeathCertification.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DeathCertification.entry:MannerOfDeath">
+            <path value="Composition.section.entry"/>
+            <sliceName value="MannerOfDeath"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathCertification.entry:CauseOfDeathCondition">
+            <path value="Composition.section.entry"/>
+            <sliceName value="CauseOfDeathCondition"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathCertification.entry:Certifier">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Certifier"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathCertification.entry:ConditionContributingToDeath">
+            <path value="Composition.section.entry"/>
+            <sliceName value="ConditionContributingToDeath"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
+            </type>
+        </element>
+        <element id="Composition.section:DeathCertification.entry:DeathCertification">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DeathCertification"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDisposition">
+            <path value="Composition.section"/>
+            <sliceName value="DecedentDisposition"/>
+            <max value="1"/>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry:DispositionLocation">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DispositionLocation"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry:FuneralHome">
+            <path value="Composition.section.entry"/>
+            <sliceName value="FuneralHome"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry:Mortician">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Mortician"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry:DispositionMethod">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DispositionMethod"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"/>
+            </type>
+        </element>
+        <element id="Composition.section:DecedentDisposition.entry:FuneralServiceLicensee">
+            <path value="Composition.section.entry"/>
+            <sliceName value="FuneralServiceLicensee"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee"/>
             </type>
         </element>
         <element id="Composition.event.code">
