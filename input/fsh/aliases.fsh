@@ -18,7 +18,8 @@ Alias: $v3-ObservationValue = http://terminology.hl7.org/CodeSystem/v3-Observati
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $VRDR_Mortician = http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_Mortician
 Alias: $VRDR_FuneralHome = http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR_FuneralHome
-Alias: $ViewValueSet.action_1 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
+//Alias: $ViewValueSet.action_1 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
+Alias: $ViewValueSet.action_1 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7964
 Alias: $PHVS_DecedentEducationLevel_NCHS = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7385
 Alias: $PH_PHINVS_CDC = urn:oid:2.16.840.1.114222.4.5.274
 Alias: $HL7_EducationLevelCS = 	http://terminology.hl7.org/CodeSystem/v3-EducationLevel
@@ -32,12 +33,15 @@ Alias: $ViewValueSet.action_8 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1
 Alias: $v3-ServiceDeliveryLocationRoleType = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
 Alias: $ViewValueSet.action_9 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7374
 Alias: $ViewValueSet.action_10 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.6002
-Alias: $ViewValueSet.action_11 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#
+// Alias: $ViewValueSet.action_11 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=409AF67D-DA64-DE11-9B52-0015173D1785#
+Alias: $ViewValueSet.action_11 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3236
 Alias: $ViewValueSet.action_12 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.6004
 Alias: $ViewValueSet.action_13 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7216
-Alias: $ViewValueSet.action_14 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7
+// Alias: $ViewValueSet.action_14 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7
+Alias: $ViewValueSet.action_14 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8031
 Alias: $ViewValueSet.action_15 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1038
-Alias: $ViewValueSet.action_16 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C
+// Alias: $ViewValueSet.action_16 = http://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C
+Alias: $ViewValueSet.action_16 = http://phinvads.cdc.govfhir/ValueSet/2.16.840.1.114222.4.11.8032
 Alias: $ViewValueSet.action_17 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7380
 Alias: $ViewValueSet.action_18 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8018
 Alias: $PH_PlaceOfOccurrence_ICD_10_WHO = urn:oid:2.16.840.1.114222.4.5.320
