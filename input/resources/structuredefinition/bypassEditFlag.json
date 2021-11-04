@@ -1,0 +1,73 @@
+{
+	"id": "bypassEditFlag",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-11-04T05:40:38.989+00:00",
+		"source": "#kvsYPWw96cQ6HAfG",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^TKWZUCCU^read"
+			}
+		]
+	},
+	"resourceType": "StructureDefinition",
+	"status": "active",
+	"kind": "resource",
+	"derivation": "constraint",
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag",
+	"name": "BypassEditFlag",
+	"abstract": false,
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension"
+			},
+			{
+				"id": "Extension.value[x]",
+				"path": "Extension.value[x]",
+				"type": [
+					{
+						"code": "Coding"
+					}
+				],
+				"min": 1
+			},
+			{
+				"id": "Extension.value[x].system",
+				"path": "Extension.value[x].system",
+				"max": "1",
+				"min": 1
+			},
+			{
+				"id": "Extension.value[x].code",
+				"path": "Extension.value[x].code",
+				"min": 1
+			}
+		]
+	},
+	"title": "Bypass Edit Flag"
+}
