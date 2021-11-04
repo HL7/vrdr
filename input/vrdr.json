@@ -1,952 +1,1887 @@
 {
-    "ImplementationGuide": {
-        "xmlns": "http://hl7.org/fhir",
-        "id": {"value": "vrdr"},
-        "meta": {
-            "versionId": {"value": 364},
-            "lastUpdated": {"value": "2021-08-09T05:58:43.178+00:00"},
-            "source": {"value": "#puvxClJ3qZCcLkNV"}
-        },
-        "url": {"value": "http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"},
-        "version": {"value": "1.2.0"},
-        "name": {"value": "VRDR"},
-        "title": {"value": "Vital Records Death Reporting FHIR Implementation Guide"},
-        "status": {"value": "draft"},
-        "experimental": {"value": false},
-        "publisher": {"value": "Health Level Seven International"},
-        "contact": [
-            {
-                "name": {"value": "HL7 International - Public Health"},
-                "telecom": {
-                    "system": {"value": "url"},
-                    "value": {"value": "http://www.hl7.org/Special/committees/pher"}
-                }
-            },
-            {
-                "name": {"value": "Cynthia Bush, Health Scientist (Informatics), CDC/National Center for Health Statistics"},
-                "telecom": {
-                    "system": {"value": "email"},
-                    "value": {"value": "pdz1@cdc.gov"}
-                }
-            },
-            {
-                "name": {"value": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions"},
-                "telecom": {
-                    "system": {"value": "email"},
-                    "value": {"value": "abdulmalik.shakir@hi3solutions.com"}
-                }
-            }
-        ],
-        "description": {"value": "The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).\n\nBidirectional exchange of mortality data between PHA Vital Records offices and NCHS is essential to effective public health surveillance and emergency response efforts. Automation of the reporting process adds efficiencies that dramatically improves the efficacy of event response, data analysis, and evidence-based measurable prevention of the causes of death.\n\nThe VRDR FHIR IG will provide guidance for the use of standard FHIR resources as a conduit for data required by vital records death reporting. The use of FHIR as a platform for automation of vital records death reporting is expected to improve existing automation by enabling wide-scale adoption and leveraging the potential of electronic health records and clinical decision support systems.\n\nThe VRDR FHIR IG will lay a foundation for expansion of automated standards-driven information exchange to include tributary flows of information from entities such as physicians, medical examiners, coroners, funeral directors, and family members to public health agencies and between public health agencies and secondary users of detailed mortality data and aggregate statistics.\n\nThis FHIR implementation guide is the primary work product of [project #1475](https://bit.ly/34DRIoA) \"Vital Records Mortality and Morbidity Reporting FHIR IG\" sponsored by the Health Level Seven (HL7) Public Health Work Group (PHWG). \n\nThe scope of the project is to produce and ballot a Standard for Trail Use (STU) Fast Healthcare Interoperability Resources (FHIR) implementation guide (IG) for use in reporting of death events to the U.S. National Center for Health Statistics (NCHS) by State and Local Public Health Agencies (PHA). The VRDR FHIR IG is based upon FHIR R4. The VRDR FHIR IG was successfully balloted as a standard for trial use (STU) in May 2019.\n\nThis is a U.S. Realm Specification. This guide and related materials are based on reporting specifications in U.S. jurisdictions. The data content of this IG are based upon the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf)."},
-        "jurisdiction": {
-            "coding": {
-                "system": {"value": "urn:iso:std:iso:3166"},
-                "code": {"value": "US"},
-                "display": {"value": "United States of America"}
-            },
-            "text": {"value": "US Realm"}
-        },
-        "packageId": {"value": "hl7.fhir.us.vrdr"},
-        "fhirVersion": {"value": "4.0.1"},
-        "dependsOn": [
-            {
-                "uri": {"value": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"},
-                "packageId": {"value": "hl7.fhir.us.core"},
-                "version": {"value": "3.1.0"}
-            },
-            {
-                "uri": {"value": "http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"},
-                "packageId": {"value": "hl7.fhir.us.odh"},
-                "version": {"value": "1.0.0"}
-            }
-        ],
-        "definition": {
-            "grouping": [
-                {
-                    "id": "default",
-                    "name": {"value": "default"}
-                },
-                {
-                    "id": "DecedentDemographics",
-                    "name": {"value": "A. Decedent Demographics"},
-                    "description": {"value": "Decedent Demographics is a profile group comprised of profiles containing decedent demographic data. Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."}
-                },
-                {
-                    "id": "DeathInvestigation",
-                    "name": {"value": "B. Death Investigation"},
-                    "description": {"value": "Death Investigation is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."}
-                },
-                {
-                    "id": "DeathCertification",
-                    "name": {"value": "C. Death Certification"},
-                    "description": {"value": "Death Certification is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner)."}
-                },
-                {
-                    "id": "DecedentDisposition",
-                    "name": {"value": "D. Decedent Disposition"},
-                    "description": {"value": "Decedent Disposition is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."}
-                },
-                {
-                    "id": "Extensions",
-                    "name": {"value": "Extensions"},
-                    "description": {"value": "Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."}
-                },
-                {
-                    "id": "VRDR-Instance-Examples",
-                    "name": {"value": "Instance Examples"},
-                    "description": {"value": "A collection of VRDR FHIR IG resource profile instance examples."}
-                },
-                {
-                    "id": "Images",
-                    "name": {"value": "Images"}
-                }
-            ],
-            "resource": [
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Age"},
-                        "display": {"value": "Decedent's Age"}
-                    },
-                    "name": {"value": "Decedent's age"},
-                    "description": {"value": "The Decedent Age resource represents the decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. The VRDR Decedent Age profile builds upon the FHIR R4 Observation Resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Education-Level"},
-                        "display": {"value": "Decedent's Education Level"}
-                    },
-                    "name": {"value": "Decedent's Education Level"},
-                    "description": {"value": "The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Examiner-Contacted"},
-                        "display": {"value": "Examiner Contacted"}
-                    },
-                    "name": {"value": "Examiner Contacted"},
-                    "description": {"value": "The Examiner Contacted resource represents an indication as to whether a medical examiner (or coroner) was contacted to conduct an investigation and certify the causes of death. The VRDR Examiner Contacted profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Disposition-Location"},
-                        "display": {"value": "Disposition Location"}
-                    },
-                    "name": {"value": "Disposition Location"},
-                    "description": {"value": "The Disposition Location resource represents the place/location where the decedent's remains were disposed of. The VRDR Disposition Location profile builds upon the FHIR R4 Location resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDisposition"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Mother"},
-                        "display": {"value": "Decedent's Mother"}
-                    },
-                    "name": {"value": "Decedent's Mother"},
-                    "description": {"value": "The Decedent's Mother resource represents the maternal parent of the decedent. The VRDR Decedent Mother profile builds upon the FHIR R4 Related Person resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Pregnancy"},
-                        "display": {"value": "Decedent Pregnancy"}
-                    },
-                    "name": {"value": "Decedent Pregnancy"},
-                    "description": {"value": "The Decedent Pregnancy resource provides an indication of the pregnancy status of the decedent. The VRDR Decedent Pregnancy profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Spouse"},
-                        "display": {"value": "Decedent Spouse"}
-                    },
-                    "name": {"value": "Decedent Spouse"},
-                    "description": {"value": "The Decedent Spouse resource represents the surviving spouse of the decedent. The VRDR Decedent Spouse profile builds upon the FHIR R4 Related Person resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Transportation-Role"},
-                        "display": {"value": "Decedent Transportation Role"}
-                    },
-                    "name": {"value": "Decedent Transportation Role"},
-                    "description": {"value": "The Decedent Transportation Role resource is used to specify the role of the decedent (e.g. driver, passenger, pedestrian, other) in a transportation-related injury. The VRDR Decedent Transportation Role profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Funeral-Home"},
-                        "display": {"value": "Funeral Home"}
-                    },
-                    "name": {"value": "Funeral Home"},
-                    "description": {"value": "The Funeral Home resource represents the business entity conducting ceremony connected with the final disposition of the decedent's remains, such as a burial or cremation, with the attendant observances. The VRDR Funeral Home profile builds upon the FHIR R4 Organization resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDisposition"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Interested-Party"},
-                        "display": {"value": "Interested Party"}
-                    },
-                    "name": {"value": "Interested Party"},
-                    "description": {"value": "The Interested Party resource represents a business entity that assigns one or more identifiers to a death certificate document. Assigning authorities for death certificate identifiers include coroners and medical examiners, local and state public health agencies, and the national center for health statistics. The VRDR Interested Party profile builds upon the FHIR R4 Organization resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Manner-of-Death"},
-                        "display": {"value": "Manner of Death"}
-                    },
-                    "name": {"value": "Manner of Death"},
-                    "description": {"value": "The Manner of Death resource represents the conclusion arrived at upon completion of death investigation regarding the manner of death (eg., natural, homicide, suicide, accident, ...). The VRDR Manner of Death profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Mortician"},
-                        "display": {"value": "Mortician"}
-                    },
-                    "name": {"value": "Mortician"},
-                    "description": {"value": "The Mortician resource represents the professional practitioner preceding over the funeral services involved in the disposition of the decedent's remains. The VRDR Mortician profile builds upon the FHIR R4 Practitioner resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDisposition"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"},
-                        "display": {"value": "Tobacco Use Contributed To Death"}
-                    },
-                    "name": {"value": "Tobacco Use Contributed To Death"},
-                    "description": {"value": "The Tobacco Use Contributed To Death resource represents the conclusion arrived at during death investigation regarding the extent to which tobacco use contributed to the death of the decedent. The VRDR Tobacco Use Contributed To Death profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Injury-Location"},
-                        "display": {"value": "Injury Location"}
-                    },
-                    "name": {"value": "Injury Location"},
-                    "description": {"value": "The Injury Location resource represents the general place (such as restaurant, vacant lot, or home) where a decedent's death-related injury occurred. The VRDR Injury Location profile builds upon the FHIR R4 Location resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Autopsy-Performed-Indicator"},
-                        "display": {"value": "Autopsy Performed Indicator"}
-                    },
-                    "name": {"value": "Autopsy Performed Indicator"},
-                    "description": {"value": "The Autopsy Performed Indicator profile provides an indication as to whether an autopsy was performed and if so, indicates whether the results of the autopsy are available. The Autopsy Performed Indicator profile builds upon the FHIR Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Cause-Of-Death-Condition"},
-                        "display": {"value": "Cause Of Death Condition"}
-                    },
-                    "name": {"value": "Cause Of Death Condition"},
-                    "description": {"value": "The Cause Of Death Condition resource represents a clinically relevant condition --disease, injury, or complication-- in the causal pathway of events that directly caused the death. The VRDR Cause of Death Condition profile builds upon the FHIR R4 Condition resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Certifier"},
-                        "display": {"value": "Certifier"}
-                    },
-                    "name": {"value": "Certifier"},
-                    "description": {"value": "The Certifier resource represents the practitioner (coroner, medical examiner, or physician) who certifies death, the manner of death, and the causes of death. The VRDR Cerfifier profile builds upon the FHIR R4 Practitioner resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Condition-Contributing-To-Death"},
-                        "display": {"value": "Condition Contributing To Death"}
-                    },
-                    "name": {"value": "Condition Contributing To Death"},
-                    "description": {"value": "The Condition Contributing To Death resource represents a significant condition contributing to death but not resulting in the underlying cause. The VRDR Condition Contributing To Death profile builds upon the FHIR R4 Condition resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Certificate"},
-                        "display": {"value": "Death Certificate"}
-                    },
-                    "name": {"value": "Death Certificate"},
-                    "description": {"value": "The Death Certificate resource represents the body of the death certificate document that lays in order to the bundle of resources comprising the death certificate document. The VRDR Death Certificate profile builds upon the FHIR R4 Composition resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Certificate-Document"},
-                        "display": {"value": "Death Certificate Document"}
-                    },
-                    "name": {"value": "Death Certificate Document"},
-                    "description": {"value": "The Death Certificate Document resource is the bundle of resources that comprise the death certificate. The VRDR Death Certificate Document profile builds upon the FHIR R4 Bundle resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Certification"},
-                        "display": {"value": "Death Certification"}
-                    },
-                    "name": {"value": "Death Certification"},
-                    "description": {"value": "The Death Certification resource represents the act of certifying death. The VRDR Death Certification profile builds upon the FHIR R4 Procedure resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Location"},
-                        "display": {"value": "Death Location"}
-                    },
-                    "name": {"value": "Death Location"},
-                    "description": {"value": "The Death Location resource represents the decedent's place of death. The VRDR Death Location profile builds upon the FHIR R4 Location resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Pronouncement-Performer"},
-                        "display": {"value": "Death Pronouncement Performer"}
-                    },
-                    "name": {"value": "Death Pronouncement Performer"},
-                    "description": {"value": "The Death Pronouncement Performer resource represents the health practitioner that declared the decedent dead. The VRDR Death Pronouncement Performer profile builds upon the FHIR R4 Practitioner resouce."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/Within-City-Limits-Indicator"},
-                        "display": {"value": "Within City Limits Indicator"}
-                    },
-                    "name": {"value": "Within City Limits Indicator"},
-                    "description": {"value": "The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "Extensions"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-InjuryIncident"},
-                        "display": {"value": "Injury Incident"}
-                    },
-                    "name": {"value": "Injury Incident"},
-                    "description": {"value": "The Injury Incident resource represents observations (time, location, and work or transportation-related), discovered regarding an injury event during a death investigation. The VRDR Injury Incident profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-BirthRecordIdentifier"},
-                        "display": {"value": "Birth Record Identifier"}
-                    },
-                    "name": {"value": "Birth Record Identifier"},
-                    "description": {"value": "The Birth Record Identifier resource is a reference to a birth record used as a linkage. The VRDR Birth Record Identifier profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Cause-of-Death-Pathway"},
-                        "display": {"value": "Cause of Death Pathway"}
-                    },
-                    "name": {"value": "Cause of Death Pathway"},
-                    "description": {"value": "The Cause of Death Pathway resource documents the ordered chain conditions in the causal pathway chain of events with a causal relationship to the decedent's death. The VRDR Cause of Death Pathway profile builds upon the FHIR R4 List resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Certificate-Reference"},
-                        "display": {"value": "Death Certificate Reference"}
-                    },
-                    "name": {"value": "Death Certificate Reference"},
-                    "description": {"value": "The Death Certificate Reference resource enables interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathCertification"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Disposition-Method"},
-                        "display": {"value": "Decedent Disposition Method"}
-                    },
-                    "name": {"value": "Decedent Disposition Method"},
-                    "description": {"value": "The Decedent Disposition Method resource specifies the means by which the decedent's remains were disposed of.  The VRDR Decedent Disposition Method profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDisposition"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Death-Date"},
-                        "display": {"value": "Death Date"}
-                    },
-                    "name": {"value": "Death Date"},
-                    "description": {"value": "The Death Date resource is used to convey the actual or presumed date of death for the decedent. If the date of death unable to be determined then the date the decedent's remains were discovered serves as a surrogate for the death date. The VRDR Death Date resource profile builds upon the FHIR R4 Observation resource. The date the decedent was pronounced dead is included as a component of the death date observation."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DeathInvestigation"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Usual-Work"},
-                        "display": {"value": "VRDR_DecedentUsualWork"}
-                    },
-                    "name": {"value": "Decedent's Usual Work"},
-                    "description": {"value": "The Decedent Usual Work resource is used to convey the usual work industry and occupation of the decedent. The base profile is lifted directly out of the Occupational Data for Health (ODH), Release 1.0 FHIR Implementation Guide (http://hl7.org/fhir/us/odh/)."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Military-Service"},
-                        "display": {"value": "Decedent Military Service"}
-                    },
-                    "name": {"value": "Decedent Military Service"},
-                    "description": {"value": "The Decedent Military Service resource is used to convey whether the decedent was ever in the US armed forces. The VRDR Decedent Military Service profile builds upon the FHIR R4 Observation resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent-Father"},
-                        "display": {"value": "Decedent Father"}
-                    },
-                    "name": {"value": "Decedent Father"},
-                    "description": {"value": "The Decedent's Father resource represents the paternal parent of the decedent. The VRDR Decedent Father profile builds upon the FHIR R4 Related Person resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Funeral-Service-Licensee"},
-                        "display": {"value": "FuneralServiceLicensee"}
-                    },
-                    "name": {"value": "Funeral Service Licensee"},
-                    "description": {"value": "The Funeral Service Licensee resource represents the professional practitioner affiliated with the funeral home that has met the requirements to be a funeral director and/or an embalmer. The VRDR Funeral Service Licensee profile builds upon the FHIR R4 PractitionerRole resource."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDisposition"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Decedent"},
-                        "display": {"value": "VRDR Decedent"}
-                    },
-                    "name": {"value": "Decedent"},
-                    "description": {"value": "The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "DecedentDemographics"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/Observation-Location"},
-                        "display": {"value": "Observation Location"}
-                    },
-                    "name": {"value": "Observation Location"},
-                    "description": {"value": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "Extensions"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88"},
-                        "display": {"value": "AutopsyPerformedIndicatorInstanceExample"}
-                    },
-                    "name": {"value": "Autopsy Performed Indicator Instance Example"},
-                    "description": {"value": "Instance example of the Autopsy Performed Indicator resource profile. This example indicates that an autopsy was performed and that the results of the autopsy are available."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"},
-                        "display": {"value": "VRDRDecedentInstanceExample"}
-                    },
-                    "name": {"value": "Decedent Instance Example"},
-                    "description": {"value": "An instance example of the VRDR Decedent resource profile. Mr. Example Last, a White, Native Hawaiian, Hispanic male born 1940-02-19 and residing in Middlesex, MA."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7"},
-                        "display": {"value": "Birth-Record-Identifier-Example"}
-                    },
-                    "name": {"value": "Birth Record Identifier Example"},
-                    "description": {"value": "An instance example of the Birth Record Identifier resource profile.  In this example Birth Record identifier 4242123 denotes Massachusetts and 1940 as the birthplace and birth year of the decedent."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"},
-                        "display": {"value": "CertifierInstanceExample"}
-                    },
-                    "name": {"value": "Certifier Instance Example"},
-                    "description": {"value": "An instance example of a Certifier resource profile. This example is a certifying physician."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"},
-                        "display": {"value": "DeathCertificationInstanceExample"}
-                    },
-                    "name": {"value": "Death Certification Instance Example"},
-                    "description": {"value": "An instance example of a Death Certification resource profile. This example Death Certification procedure performed by a physician on 2019-01-29."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Organization/1a110397-936f-4be4-ab10-2caed226569d"},
-                        "display": {"value": "InterestedPartyInstanceExample"}
-                    },
-                    "name": {"value": "Interested Party Instance Example"},
-                    "description": {"value": "An instance example of the Interested Party resource profile. In the example, Example Hospital from MA is an active Healthcare Provider interested party."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Condition/56b8ce2e-64f8-450b-8885-0699a53fc781"},
-                        "display": {"value": "ConditionContributingToDeathExample"}
-                    },
-                    "name": {"value": "Condition Contributing To Death Example"},
-                    "description": {"value": "An instance example of the VRDR-Condition-Contributing-To-Death resource profile. In this example, the condition is noted as text only. This is typical of a death record outbound from a jurisdictional EDRS to the NCHS."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b"},
-                        "display": {"value": "DecedentAgeExample"}
-                    },
-                    "name": {"value": "Decedent Age Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Age resource profile. In this example, the decedent is identified as 79 years in age."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/b531cbf7-6290-424c-8155-0549c3fb3243"},
-                        "display": {"value": "DeathDateExample"}
-                    },
-                    "name": {"value": "Death Date Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Date resource profile. In this example, the date and time of death is 2018-02-20T16:48:06-05:00. The Date and time pronounced dead is also  2018-02-20T16:48:06-05:00."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a"},
-                        "display": {"value": "InjuryLocationExample"}
-                    },
-                    "name": {"value": "Injury Location Example"},
-                    "description": {"value": "An instance example of the VRDR-Injury-Location resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99"},
-                        "display": {"value": "TobaccoUseContributedToDeathExample"}
-                    },
-                    "name": {"value": "Tobacco Use Contributed To Death Example"},
-                    "description": {"value": "An instance example of the VRDR-Tobacco-Use-Contributed-To-Death resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/4aed1450-ab2d-4cb9-858f-227b127323a6"},
-                        "display": {"value": "ExaminerContactedExample"}
-                    },
-                    "name": {"value": "Examiner Contacted Example"},
-                    "description": {"value": "An instance example of the VRDR-Examiner-Contacted resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/092e7b13-224d-46a6-ac31-0d98d4c84126"},
-                        "display": {"value": "DecedentPregnancyExample"}
-                    },
-                    "name": {"value": "Decedent Pregnancy Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Pregnancy resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/d80681ff-9f1d-4915-87b5-eda54534096a"},
-                        "display": {"value": "DecedentDispositionMethodExample"}
-                    },
-                    "name": {"value": "Decedent Disposition Method Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Disposition-Method resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2"},
-                        "display": {"value": "MorticianExample"}
-                    },
-                    "name": {"value": "Mortician Example"},
-                    "description": {"value": "An instance example of the VRDR-Mortician resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/636dafac-0d92-4649-b838-004bcf714f5aj"},
-                        "display": {"value": "DecedentMilitaryServiceExample"}
-                    },
-                    "name": {"value": "Decedent Military Service Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Military-Service"},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/9676ae27-2a89-4295-913c-0d6847300a3a"},
-                        "display": {"value": "DecedentEducationLevelExample"}
-                    },
-                    "name": {"value": "Decedent Education Level Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Education-Level resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9"},
-                        "display": {"value": "DecedentMotherExample"}
-                    },
-                    "name": {"value": "Decedent Mother Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Mother resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f"},
-                        "display": {"value": "DecedentSpouseExample"}
-                    },
-                    "name": {"value": "Decedent Spouse Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Spouse example."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "RelatedPerson/976c548f-9460-42f2-b41e-390b3bee91c8"},
-                        "display": {"value": "DecedentFatherExample"}
-                    },
-                    "name": {"value": "Decedent Father Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Father resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813"},
-                        "display": {"value": "MannerOfDeathExample"}
-                    },
-                    "name": {"value": "Manner of Death Example"},
-                    "description": {"value": "An instance example of the VRDR-Manner-of-Death resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666"},
-                        "display": {"value": "CauseOfDeathConditionExample"}
-                    },
-                    "name": {"value": "Cause Of Death Condition Example"},
-                    "description": {"value": "An instance example of the VRDR-Cause-Of-Death-Condition resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "List/60401545-f1e1-4a80-867f-02384ffed857"},
-                        "display": {"value": "CauseOfDeathPathwayExample"}
-                    },
-                    "name": {"value": "Cause of Death Pathway Example"},
-                    "description": {"value": "An instance example of the VRDR-Cause-of-Death-Pathway resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Organization/6f47da13-0c25-483b-8729-7b96716b17fc"},
-                        "display": {"value": "FuneralHomeExample"}
-                    },
-                    "name": {"value": "Funeral Home Example"},
-                    "description": {"value": "An instance example of the VRDR-Funeral-Home resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "PractitionerRole/4b96759f-8395-4093-8417-e1ca3cd26f0a"},
-                        "display": {"value": "FuneralServiceLicenseeExample"}
-                    },
-                    "name": {"value": "Funeral Service Licensee Example"},
-                    "description": {"value": "An instance example of the VRDR-Funeral-Service-Licensee resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Composition/54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30"},
-                        "display": {"value": "DeathCertificateExample"}
-                    },
-                    "name": {"value": "Death Certificate Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Certificate resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Location/bbe38248-9a8d-414f-996e-58d5fc9eb800"},
-                        "display": {"value": "DispositionLocationExample"}
-                    },
-                    "name": {"value": "Disposition Location Example"},
-                    "description": {"value": "Instance example of the VRDR-Disposition-Location resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/4424113f-69c4-40fe-b88f-d7b03304dfe4"},
-                        "display": {"value": "DecedentTransportationRoleExample"}
-                    },
-                    "name": {"value": "Decedent Transportation Role Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Transportation-Role resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a"},
-                        "display": {"value": "InjuryIncidentExample"}
-                    },
-                    "name": {"value": "Injury Incident Example"},
-                    "description": {"value": "An instance example of the VRDR-InjuryIncident resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Observation/48b230c3-c5b5-4844-83bf-ede59170676e"},
-                        "display": {"value": "DecedentUsualWorkExample"}
-                    },
-                    "name": {"value": "Decedent Usual Work Example"},
-                    "description": {"value": "An instance example of the VRDR-Decedent-Usual-Work resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d"},
-                        "display": {"value": "DeathPronouncementPerformerExample"}
-                    },
-                    "name": {"value": "Death Pronouncement Performer Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Pronouncement-Performer resource profile"},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85"},
-                        "display": {"value": "VRDR-Death-Certificate-Document-Example"}
-                    },
-                    "name": {"value": "Death Certificate Document Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Certificate-Document resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05"},
-                        "display": {"value": "VRDR-Death-Certificate-Reference-Example"}
-                    },
-                    "name": {"value": "Death Certificate Reference Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Certificate-Reference resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/Location-Jurisdiction-Id"},
-                        "display": {"value": "LocationJurisdictionId"}
-                    },
-                    "name": {"value": "LocationJurisdictionId"},
-                    "description": {"value": "An extension intended for use in an FHIR Location resource to identify the national case reporting jurisdiction under which the location falls. The jurisdiction identifier can be express as a string or as a code value from the [PHVS_USVitalRecordsJurisdictions_NCHS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#) value set."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "Extensions"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "Location/b7de6056-817f-4d73-9830-ce566accd044"},
-                        "display": {"value": "VRDR-Death-Location-Example"}
-                    },
-                    "name": {"value": "Death Location Example"},
-                    "description": {"value": "An instance example of the VRDR-Death-Location resource profile."},
-                    "exampleBoolean": {"value": false},
-                    "exampleCanonical": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"},
-                    "groupingId": {"value": "VRDR-Instance-Examples"}
-                },
-                {
-                    "reference": {
-                        "reference": {"value": "StructureDefinition/VRDR-Partial-date-part-absent-reason"},
-                        "display": {"value": "VRDR - Partial date part absent reason"}
-                    },
-                    "name": {"value": "VRDR - Partial date part absent reason"},
-                    "description": {"value": "Provides values of a partial date along with the reason one or more expected date part is missing."},
-                    "exampleBoolean": {"value": false},
-                    "groupingId": {"value": "Extensions"}
-                }
-            ],
-            "page": {
-                "nameUrl": {"value": "index.html"},
-                "title": {"value": "Home Page"},
-                "generation": {"value": "markdown"},
-                "page": [
-                    {
-                        "nameUrl": {"value": "project_team.html"},
-                        "title": {"value": "Project Team"},
-                        "generation": {"value": "markdown"}
-                    },
-                    {
-                        "nameUrl": {"value": "acknowledgements.html"},
-                        "title": {"value": "Acknowledgements"},
-                        "generation": {"value": "markdown"}
-                    },
-                    {
-                        "nameUrl": {"value": "background.html"},
-                        "title": {"value": "Background"},
-                        "generation": {"value": "markdown"},
-                        "page": [
-                            {
-                                "nameUrl": {"value": "death_reporting_dataflow.html"},
-                                "title": {"value": "Death Reporting Dataflow"},
-                                "generation": {"value": "markdown"}
-                            },
-                            {
-                                "nameUrl": {"value": "scope_of_the_vrdr_fhir_ig.html"},
-                                "title": {"value": "Scope of the VRDR FHIR IG"},
-                                "generation": {"value": "markdown"}
-                            }
-                        ]
-                    },
-                    {
-                        "nameUrl": {"value": "profiles.html"},
-                        "title": {"value": "Profiles"},
-                        "generation": {"value": "markdown"},
-                        "page": [
-                            {
-                                "nameUrl": {"value": "vrdr_fhir_ig_uml_data_model.html"},
-                                "title": {"value": "VRDR FHIR IG UML Data Model"},
-                                "generation": {"value": "markdown"}
-                            },
-                            {
-                                "nameUrl": {"value": "decedent_demographics_resource_profiles.html"},
-                                "title": {"value": "Decedent Demographics Resource Profiles"},
-                                "generation": {"value": "markdown"}
-                            },
-                            {
-                                "nameUrl": {"value": "death_investigation_resource_profiles.html"},
-                                "title": {"value": "Death Investigation Resource Profiles"},
-                                "generation": {"value": "markdown"}
-                            },
-                            {
-                                "nameUrl": {"value": "death_certification_resource_profiles.html"},
-                                "title": {"value": "Death Certification Resource Profiles"},
-                                "generation": {"value": "markdown"}
-                            },
-                            {
-                                "nameUrl": {"value": "decedent_disposition_resource_profiles.html"},
-                                "title": {"value": "Decedent Disposition Resource Profiles"},
-                                "generation": {"value": "markdown"}
-                            }
-                        ]
-                    },
-                    {
-                        "nameUrl": {"value": "terminology_bindings.html"},
-                        "title": {"value": "Terminology Bindings"},
-                        "generation": {"value": "markdown"}
-                    },
-                    {
-                        "nameUrl": {"value": "downloads.html"},
-                        "title": {"value": "Downloads"},
-                        "generation": {"value": "markdown"}
-                    }
-                ]
-            },
-            "parameter": [
-                {
-                    "code": {"value": "releaselabel"},
-                    "value": {"value": "STU 2 Ballot"}
-                },
-                {
-                    "code": {"value": "copyrightyear"},
-                    "value": {"value": "2021+"}
-                },
-                {
-                    "code": {"value": "path-expansion-params"},
-                    "value": {"value": "terminology-settings.json"}
-                }
-            ]
-        }
-    }
+	"id": "vrdr",
+	"meta": {
+		"versionId": "377",
+		"lastUpdated": "2021-11-04T06:07:59.952+00:00",
+		"source": "#EluzDEv9REsZuGdv",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^TKWZUCCU^read"
+			}
+		]
+	},
+	"resourceType": "ImplementationGuide",
+	"contained": [
+		{
+			"id": "package-list",
+			"resourceType": "DocumentReference",
+			"status": "current",
+			"type": {
+				"coding": [
+					{
+						"code": "package-list"
+					}
+				]
+			},
+			"content": [
+				{
+					"attachment": {
+						"contentType": "application/json",
+						"data": "ewoJImxpc3QiOiBbCgkJewoJCQkidmVyc2lvbiI6ICJjdXJyZW50IiwKCQkJInBhdGgiOiAiaHR0cDovL2J1aWxkLmZoaXIub3JnL2lnL0hMNy9iZiIsCgkJCSJkZXNjIjogIiIsCgkJCSJmaGlydmVyc2lvbiI6ICI0LjAuMSIsCgkJCSJzdGF0dXMiOiAidHJpYWwtdXNlIiwKCQkJImN1cnJlbnQiOiB0cnVlCgkJfQoJXSwKCSJwYWNrYWdlLWlkIjogImhsNy5maGlyLnVzLnZyZHIiLAoJInRpdGxlIjogIlZpdGFsIFJlY29yZHMgTW9ydGFsaXR5IGFuZCBNb3JiaWRpdHkgUmVwb3J0aW5nIiwKCSJjYW5vbmljYWwiOiAiaHR0cDovL2hsNy5vcmcvZmhpci91cy92cmRyIgp9"
+					}
+				}
+			]
+		},
+		{
+			"id": "JldWFGQJ",
+			"resourceType": "DocumentReference",
+			"type": {
+				"coding": [
+					{
+						"code": "ignore-warnings"
+					}
+				]
+			},
+			"content": [
+				{
+					"attachment": {
+						"contentType": "text/plain",
+						"data": "PT0gU3VwcHJlc3NlZCBNZXNzYWdlcyA9PQoKIyBQSElOVkFEUyBpcyBhbiBleHRlcm5hbGx5IG1hbmFnZWQgdGVybWlub2xvZ3kgc2VydmVyIG5vdCBhY2Nlc3NpYmxlIGJ5IHRoZSBGSElSIHB1YmxpY2F0aW9uIHRvb2wuCgpWYWx1ZVNldCBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjcyMTYgbm90IGZvdW5kIGJ5IHZhbGlkYXRvcgpWYWx1ZVNldCBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDMgbm90IGZvdW5kIGJ5IHZhbGlkYXRvcgpWYWx1ZVNldCBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjc0ODYgbm90IGZvdW5kIGJ5IHZhbGlkYXRvcgpWYWx1ZVNldCBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjg4OCBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNjAwNSBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNjAwNCBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzM4NSBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNjAwMiBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzM3OSBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuMTAzOCBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzQ4NiBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzM4MCBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNjAwMSBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzM3NCBub3QgZm91bmQgYnkgdmFsaWRhdG9yClZhbHVlU2V0IGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/aWQ9QzJGMjIyMEItMjcwRi00QkRGLTlGOEMtRDVDQjM2OUY3MjEyIG5vdCBmb3VuZCBieSB2YWxpZGF0b3IKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP2lkPUMyRjIyMjBCLTI3MEYtNEJERi05RjhDLUQ1Q0IzNjlGNzIxMiBvbiBlbGVtZW50IFBhdGllbnQuYWRkcmVzcy5kaXN0cmljdCBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP2lkPUMyRjIyMjBCLTI3MEYtNEJERi05RjhDLUQ1Q0IzNjlGNzIxMiBvbiBlbGVtZW50IExvY2F0aW9uLmFkZHJlc3MuZGlzdHJpY3QgY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9pZD05N0QzNEJCQy02MTdGLUREMTEtQjM4RC0wMDE4OEIzOTg1MjAgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVmFsdWVTZXQgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9pZD05N0QzNEJCQy02MTdGLUREMTEtQjM4RC0wMDE4OEIzOTg1MjAgbm90IGZvdW5kIGJ5IHZhbGlkYXRvcgoKClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS43NDg2IG9uIGVsZW1lbnQgRXh0ZW5zaW9uLnZhbHVlW3hdIGNvdWxkIG5vdCBiZSByZXNvbHZlZApCaW5kaW5nIGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuMTAzOCBjb3VsZCBub3QgYmUgbG9jYXRlZApDb2RlIFN5c3RlbSBVUkkgJ2h0dHBzOi8vdHJpZm9saWEtZmhpci5sYW50YW5hZ3JvdXAuY29tL3NlY3VyaXR5JyBpcyB1bmtub3duIHNvIHRoZSBjb2RlIGNhbm5vdCBiZSB2YWxpZGF0ZWQKQ29kZSBTeXN0ZW0gVVJJICdodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjczODUnIGlzIHVua25vd24gc28gdGhlIGNvZGUgY2Fubm90IGJlIHZhbGlkYXRlZApUaGUgdmFsdWVTZXQgcmVmZXJlbmNlIGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/aWQ9MjgyRDRERDgtMzlFQS00QzVCLUI4QTktQjJDM0U1ODc4QTE1IyBvbiBlbGVtZW50IEV4dGVuc2lvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjc0ODYgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjc0ODYgb24gZWxlbWVudCBPYnNlcnZhdGlvbi5jb21wb25lbnQudmFsdWVbeF0gY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS4zNTkzIG9uIGVsZW1lbnQgQ29uZGl0aW9uLmNvZGUuY29kaW5nLmNvZGUgY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS42MDAxIG9uIGVsZW1lbnQgUHJhY3RpdGlvbmVyLnF1YWxpZmljYXRpb24uY29kZSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDEgb24gZWxlbWVudCBQcm9jZWR1cmUucGVyZm9ybWVyLmZ1bmN0aW9uIGNvdWxkIG5vdCBiZSByZXNvbHZlZApUaGUgdmFsdWVTZXQgcmVmZXJlbmNlIGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzIxNiBvbiBlbGVtZW50IExvY2F0aW9uLnR5cGUgY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS4xMDM4IG9uIGVsZW1lbnQgUGF0aWVudC5nZW5kZXIgY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS43MzgwIG9uIGVsZW1lbnQgUGF0aWVudC5tYXJpdGFsU3RhdHVzIGNvdWxkIG5vdCBiZSByZXNvbHZlZApUaGUgdmFsdWVTZXQgcmVmZXJlbmNlIGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuODAxOCBvbiBlbGVtZW50IFBhdGllbnQuY29udGFjdC5yZWxhdGlvbnNoaXAgY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS43Mzc5IG9uIGVsZW1lbnQgT2JzZXJ2YXRpb24udmFsdWVbeF0gY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS43Mzg1IG9uIGVsZW1lbnQgT2JzZXJ2YXRpb24udmFsdWVbeF0gY291bGQgbm90IGJlIHJlc29sdmVkClRoZSB2YWx1ZVNldCByZWZlcmVuY2UgaHR0cHM6Ly9waGludmFkcy5jZGMuZ292L3ZhZHMvVmlld1ZhbHVlU2V0LmFjdGlvbj9vaWQ9Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS44ODggb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDMgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDUgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjcxODYgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZUNvZGVhYmxlQ29uY2VwdCBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjg4OCBvbiBlbGVtZW50IE9ic2VydmF0aW9uLnZhbHVlW3hdIGNvdWxkIG5vdCBiZSByZXNvbHZlZApUaGUgdmFsdWVTZXQgcmVmZXJlbmNlIGh0dHBzOi8vcGhpbnZhZHMuY2RjLmdvdi92YWRzL1ZpZXdWYWx1ZVNldC5hY3Rpb24/b2lkPTIuMTYuODQwLjEuMTE0MjIyLjQuMTEuNzM3NCBvbiBlbGVtZW50IE9ic2VydmF0aW9uLmNvbXBvbmVudC52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjg4OCBvbiBlbGVtZW50IE9ic2VydmF0aW9uLmNvbXBvbmVudC52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDIgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjYwMDQgb24gZWxlbWVudCBPYnNlcnZhdGlvbi52YWx1ZVt4XSBjb3VsZCBub3QgYmUgcmVzb2x2ZWQKVGhlIHZhbHVlU2V0IHJlZmVyZW5jZSBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjcxODcgb24gZWxlbWVudCBPYnNlcnZhdGlvbi5jb21wb25lbnQudmFsdWVDb2RlYWJsZUNvbmNlcHQgY291bGQgbm90IGJlIHJlc29sdmVkCgoKIyBUaGUgVVMgQ29yZSBkb2VzIG5vdCBoYXZlIGFuIE9ic2VydmF0aW9uIHByb2ZpbGUgdGhhdCBpcyBhcHBsaWNhYmxlIHRvIHRoZSBuZWVkcyBvZiB2aXRhbCByZWNvcmRzIGRlYXRoIHJlcG9ydGluZwoKVVMgRkhJUiBVc2FnZSBydWxlcyByZXF1aXJlIHRoYXQgYWxsIHByb2ZpbGVzIG9uIE9ic2VydmF0aW9uIGRlcml2ZSBmcm9tIG9uZSBvZiB0aGUgYmFzZSBVUyBwcm9maWxlcwoKIyBVc2Ugb2YgdGhlIFVTIENvcmUgZG9jdW1lbnQgcmVmZXJlbmNlIGFuZCBjb25kaXRpb24gcmVzb3VyY2UgcHJvZmlsZXMgYnkgVlJEUiBoYXMgYmVlbiByZXZpZXdlZCBieSB0aGUgVVNSU0MgYW5kIGNoYW5nZXMgdG8gdGhlIFVTIENvcmUgcHJvZmlsZXMgYXJlIGJlaW5nIGNvbnNpZGVyZWQsICBhIEpJUkEgdGlja2V0IGhhcyBiZWVuIGNyZWF0ZWQgKEZISVItMjc5MDQpLgoKVVMgRkhJUiBVc2FnZSBydWxlcyByZXF1aXJlIHRoYXQgYWxsIHByb2ZpbGVzIG9uIERvY3VtZW50UmVmZXJlbmNlIGRlcml2ZSBmcm9tIHRoZSBjb3JlIFVTIHByb2ZpbGUKCiMgQ29kZSB2YWx1ZSBmb3IgY29uZGl0aW9uLmNvZGUgaXMgYSBjb2RlYWJsZSBjb25jZXB0IHJlcHJlc2VudGVkIGFzIHRleHQgb25seSB3aGVuIG91dGJvdW5kIGZyb20gU3RhdGUgRURSUyB0byBOQ0hTLiAKCk5vIGNvZGUgcHJvdmlkZWQsIGFuZCBhIGNvZGUgc2hvdWxkIGJlIHByb3ZpZGVkIGZyb20gdGhlIHZhbHVlIHNldCBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NvcmUvVmFsdWVTZXQvdXMtY29yZS1jb25kaXRpb24tY29kZSAoaHR0cDovL2hsNy5vcmcvZmhpci91cy9jb3JlL1ZhbHVlU2V0L3VzLWNvcmUtY29uZGl0aW9uLWNvZGUpCgpUaGUgSW1wbGVtZW50YXRpb24gR3VpZGUgY29udGFpbnMgbm8gZXhhbXBsZXMgZm9yIHRoaXMgcHJvZmlsZQ==",
+						"title": "ignoreWarnings.txt"
+					}
+				}
+			]
+		}
+	],
+	"extension": [
+		{
+			"extension": [
+				{
+					"url": "https://trifolia-on-fhir.lantanagroup.com/StructureDefinition/extension-ig-dependency-version",
+					"valueString": "2.0.0"
+				},
+				{
+					"url": "https://trifolia-on-fhir.lantanagroup.com/StructureDefinition/extension-ig-dependency-name",
+					"valueString": "uscore"
+				},
+				{
+					"url": "https://trifolia-on-fhir.lantanagroup.com/StructureDefinition/extension-ig-dependency-location",
+					"valueUri": "http://hl7.org/fhir/us/core"
+				}
+			],
+			"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-dependency"
+		},
+		{
+			"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-package-id",
+			"valueString": "hl7.fhir.us.vrdr"
+		},
+		{
+			"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-package-list",
+			"valueReference": {
+				"reference": "#package-list"
+			}
+		},
+		{
+			"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-ignore-warnings",
+			"valueReference": {
+				"reference": "#JldWFGQJ"
+			}
+		}
+	],
+	"status": "draft",
+	"fhirVersion": [
+		"4.0.1"
+	],
+	"url": "http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr",
+	"version": "1.1.0",
+	"name": "VRDR",
+	"title": "Vital Records Death Reporting FHIR Implementation Guide",
+	"experimental": false,
+	"publisher": "Health Level Seven International",
+	"contact": [
+		{
+			"name": "HL7 International - Public Health",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://www.hl7.org/Special/committees/pher"
+				}
+			]
+		},
+		{
+			"name": "Cynthia Bush, Health Scientist (Informatics), CDC/National Center for Health Statistics",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "pdz1@cdc.gov"
+				}
+			]
+		},
+		{
+			"name": "AbdulMalik Shakir, FHL7, President and Chief Informatics Scientist Hi3 Solutions",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com"
+				}
+			]
+		}
+	],
+	"description": "The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between State-run Public Health Agencies (PHA) Vital Records offices and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).\n\nBidirectional exchange of mortality data between PHA Vital Records offices and NCHS is essential to effective public health surveillance and emergency response efforts. Automation of the reporting process adds efficiencies that dramatically improves the efficacy of event response, data analysis, and evidence-based measurable prevention of the causes of death.\n\nThe VRDR FHIR IG will provide guidance for the use of standard FHIR resources as a conduit for data required by vital records death reporting. The use of FHIR as a platform for automation of vital records death reporting is expected to improve existing automation by enabling wide-scale adoption and leveraging the potential of electronic health records and clinical decision support systems.\n\nThe VRDR FHIR IG will lay a foundation for expansion of automated standards-driven information exchange to include tributary flows of information from entities such as physicians, medical examiners, coroners, funeral directors, and family members to public health agencies and between public health agencies and secondary users of detailed mortality data and aggregate statistics.\n\nThis FHIR implementation guide is the primary work product of [project #1475](https://bit.ly/34DRIoA) \"Vital Records Mortality and Morbidity Reporting FHIR IG\" sponsored by the Health Level Seven (HL7) Public Health Work Group (PHWG). \n\nThe scope of the project is to produce and ballot a Standard for Trail Use (STU) Fast Healthcare Interoperability Resources (FHIR) implementation guide (IG) for use in reporting of death events to the U.S. National Center for Health Statistics (NCHS) by State and Local Public Health Agencies (PHA). The VRDR FHIR IG is based upon FHIR R4. The VRDR FHIR IG was successfully balloted as a standard for trial use (STU) in May 2019.\n\nThis is a U.S. Realm Specification. This guide and related materials are based on reporting specifications in U.S. jurisdictions. The data content of this IG are based upon the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf).",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US",
+					"display": "United States of America"
+				}
+			],
+			"text": "US Realm"
+		}
+	],
+	"packageId": "hl7.fhir.us.vrdr",
+	"dependsOn": [
+		{
+			"extension": [
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/r4/StructureDefinition/extension-ig-depends-on-location",
+					"valueString": "http://hl7.org/fhir/us/core"
+				},
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/r4/StructureDefinition/extension-ig-depends-on-name",
+					"valueString": "USCoreR4"
+				}
+			],
+			"uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+			"packageId": "hl7.fhir.us.core",
+			"version": "3.1.0"
+		},
+		{
+			"extension": [
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/r4/StructureDefinition/extension-ig-depends-on-location",
+					"valueString": "http://hl7.org/fhir/us/odh"
+				},
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/r4/StructureDefinition/extension-ig-depends-on-name",
+					"valueString": "Occupational Data for Health"
+				}
+			],
+			"uri": "http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh",
+			"packageId": "hl7.fhir.us.odh",
+			"version": "1.0.0"
+		}
+	],
+	"definition": {
+		"grouping": [
+			{
+				"id": "default",
+				"name": "default"
+			},
+			{
+				"id": "DecedentDemographics",
+				"name": "A. Decedent Demographics",
+				"description": "Decedent Demographics is a profile group comprised of profiles containing decedent demographic data. Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."
+			},
+			{
+				"id": "DeathInvestigation",
+				"name": "B. Death Investigation",
+				"description": "Death Investigation is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."
+			},
+			{
+				"id": "DeathCertification",
+				"name": "C. Death Certification",
+				"description": "Death Certification is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner)."
+			},
+			{
+				"id": "DecedentDisposition",
+				"name": "D. Decedent Disposition",
+				"description": "Decedent Disposition is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."
+			},
+			{
+				"id": "Extensions",
+				"name": "Extensions",
+				"description": "Resources used to extend base FHIR resources to meet unique requirements of Vital Records Death Reporting."
+			},
+			{
+				"id": "VRDR-Instance-Examples",
+				"name": "Instance Examples",
+				"description": "A collection of VRDR FHIR IG resource profile instance examples."
+			},
+			{
+				"id": "Images",
+				"name": "Images"
+			}
+		],
+		"resource": [
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Age.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Age",
+					"display": "Decedent's Age"
+				},
+				"name": "Decedent's age",
+				"description": "The Decedent Age resource represents the decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. The VRDR Decedent Age profile builds upon the FHIR R4 Observation Resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Education-Level.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Education-Level",
+					"display": "Decedent's Education Level"
+				},
+				"name": "Decedent's Education Level",
+				"description": "The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Examiner-Contacted.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Examiner-Contacted",
+					"display": "Examiner Contacted"
+				},
+				"name": "Examiner Contacted",
+				"description": "The Examiner Contacted resource represents an indication as to whether a medical examiner (or coroner) was contacted to conduct an investigation and certify the causes of death. The VRDR Examiner Contacted profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Disposition-Location.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Disposition-Location",
+					"display": "Disposition Location"
+				},
+				"name": "Disposition Location",
+				"description": "The Disposition Location resource represents the place/location where the decedent's remains were disposed of. The VRDR Disposition Location profile builds upon the FHIR R4 Location resource.",
+				"groupingId": "DecedentDisposition"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Mother.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Mother",
+					"display": "Decedent's Mother"
+				},
+				"name": "Decedent's Mother",
+				"description": "The Decedent's Mother resource represents the maternal parent of the decedent. The VRDR Decedent Mother profile builds upon the FHIR R4 Related Person resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Pregnancy.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Pregnancy",
+					"display": "Decedent Pregnancy"
+				},
+				"name": "Decedent Pregnancy",
+				"description": "The Decedent Pregnancy resource provides an indication of the pregnancy status of the decedent. The VRDR Decedent Pregnancy profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Spouse.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Spouse",
+					"display": "Decedent Spouse"
+				},
+				"name": "Decedent Spouse",
+				"description": "The Decedent Spouse resource represents the surviving spouse of the decedent. The VRDR Decedent Spouse profile builds upon the FHIR R4 Related Person resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Transportation-Role.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Transportation-Role",
+					"display": "Decedent Transportation Role"
+				},
+				"name": "Decedent Transportation Role",
+				"description": "The Decedent Transportation Role resource is used to specify the role of the decedent (e.g. driver, passenger, pedestrian, other) in a transportation-related injury. The VRDR Decedent Transportation Role profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Funeral-Home.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Funeral-Home",
+					"display": "Funeral Home"
+				},
+				"name": "Funeral Home",
+				"description": "The Funeral Home resource represents the business entity conducting ceremony connected with the final disposition of the decedent's remains, such as a burial or cremation, with the attendant observances. The VRDR Funeral Home profile builds upon the FHIR R4 Organization resource.",
+				"groupingId": "DecedentDisposition"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Interested-Party.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Interested-Party",
+					"display": "Interested Party"
+				},
+				"name": "Interested Party",
+				"description": "The Interested Party resource represents a business entity that assigns one or more identifiers to a death certificate document. Assigning authorities for death certificate identifiers include coroners and medical examiners, local and state public health agencies, and the national center for health statistics. The VRDR Interested Party profile builds upon the FHIR R4 Organization resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Manner-of-Death.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Manner-of-Death",
+					"display": "Manner of Death"
+				},
+				"name": "Manner of Death",
+				"description": "The Manner of Death resource represents the conclusion arrived at upon completion of death investigation regarding the manner of death (eg., natural, homicide, suicide, accident, ...). The VRDR Manner of Death profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Mortician.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Mortician",
+					"display": "Mortician"
+				},
+				"name": "Mortician",
+				"description": "The Mortician resource represents the professional practitioner preceding over the funeral services involved in the disposition of the decedent's remains. The VRDR Mortician profile builds upon the FHIR R4 Practitioner resource.",
+				"groupingId": "DecedentDisposition"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Tobacco-Use-Contributed-To-Death.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death",
+					"display": "Tobacco Use Contributed To Death"
+				},
+				"name": "Tobacco Use Contributed To Death",
+				"description": "The Tobacco Use Contributed To Death resource represents the conclusion arrived at during death investigation regarding the extent to which tobacco use contributed to the death of the decedent. The VRDR Tobacco Use Contributed To Death profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Injury-Location.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Injury-Location",
+					"display": "Injury Location"
+				},
+				"name": "Injury Location",
+				"description": "The Injury Location resource represents the general place (such as restaurant, vacant lot, or home) where a decedent's death-related injury occurred. The VRDR Injury Location profile builds upon the FHIR R4 Location resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Autopsy-Performed-Indicator.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Autopsy-Performed-Indicator",
+					"display": "Autopsy Performed Indicator"
+				},
+				"name": "Autopsy Performed Indicator",
+				"description": "The Autopsy Performed Indicator profile provides an indication as to whether an autopsy was performed and if so, indicates whether the results of the autopsy are available. The Autopsy Performed Indicator profile builds upon the FHIR Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Cause-Of-Death-Condition.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Cause-Of-Death-Condition",
+					"display": "Cause Of Death Condition"
+				},
+				"name": "Cause Of Death Condition",
+				"description": "The Cause Of Death Condition resource represents a clinically relevant condition --disease, injury, or complication-- in the causal pathway of events that directly caused the death. The VRDR Cause of Death Condition profile builds upon the FHIR R4 Condition resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Certifier.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Certifier",
+					"display": "Certifier"
+				},
+				"name": "Certifier",
+				"description": "The Certifier resource represents the practitioner (coroner, medical examiner, or physician) who certifies death, the manner of death, and the causes of death. The VRDR Cerfifier profile builds upon the FHIR R4 Practitioner resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Condition-Contributing-To-Death.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Condition-Contributing-To-Death",
+					"display": "Condition Contributing To Death"
+				},
+				"name": "Condition Contributing To Death",
+				"description": "The Condition Contributing To Death resource represents a significant condition contributing to death but not resulting in the underlying cause. The VRDR Condition Contributing To Death profile builds upon the FHIR R4 Condition resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Certificate.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Certificate",
+					"display": "Death Certificate"
+				},
+				"name": "VRDR Death Certificate",
+				"description": "The Death Certificate resource represents the body of the death certificate document that lays in order to the bundle of resources comprising the death certificate document. The VRDR Death Certificate profile builds upon the FHIR R4 Composition resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Certificate-Document.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Certificate-Document",
+					"display": "Death Certificate Document"
+				},
+				"name": "VRDR Death Certificate Document",
+				"description": "The Death Certificate Document resource is the bundle of resources that comprise the death certificate. The VRDR Death Certificate Document profile builds upon the FHIR R4 Bundle resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Certification.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Certification",
+					"display": "Death Certification"
+				},
+				"name": "Death Certification",
+				"description": "The Death Certification resource represents the act of certifying death. The VRDR Death Certification profile builds upon the FHIR R4 Procedure resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Location.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Location",
+					"display": "Death Location"
+				},
+				"name": "Death Location",
+				"description": "The Death Location resource represents the decedent's place of death. The VRDR Death Location profile builds upon the FHIR R4 Location resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Pronouncement-Performer.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Pronouncement-Performer",
+					"display": "Death Pronouncement Performer"
+				},
+				"name": "Death Pronouncement Performer",
+				"description": "The Death Pronouncement Performer resource represents the health practitioner that declared the decedent dead. The VRDR Death Pronouncement Performer profile builds upon the FHIR R4 Practitioner resouce.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/Within-City-Limits-Indicator.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/Within-City-Limits-Indicator",
+					"display": "Within City Limits Indicator"
+				},
+				"name": "Within City Limits Indicator",
+				"description": "The Within City Limits Indicator resource is an extension to the FHIR Address Datatype. It is used to indicate if the decedent's residential address is a location within the limits of the address city.",
+				"groupingId": "Extensions"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-InjuryIncident.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-InjuryIncident",
+					"display": "Injury Incident"
+				},
+				"name": "Injury Incident",
+				"description": "The Injury Incident resource represents observations (time, location, and work or transportation-related), discovered regarding an injury event during a death investigation. The VRDR Injury Incident profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-BirthRecordIdentifier.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-BirthRecordIdentifier",
+					"display": "Birth Record Identifier"
+				},
+				"name": "Birth Record Identifier",
+				"description": "The Birth Record Identifier resource is a reference to a birth record used as a linkage. The VRDR Birth Record Identifier profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Cause-of-Death-Pathway.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Cause-of-Death-Pathway",
+					"display": "Cause of Death Pathway"
+				},
+				"name": "Cause of Death Pathway",
+				"description": "The Cause of Death Pathway resource documents the ordered chain conditions in the causal pathway chain of events with a causal relationship to the decedent's death. The VRDR Cause of Death Pathway profile builds upon the FHIR R4 List resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Certificate-Reference.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Certificate-Reference",
+					"display": "Death Certificate Reference"
+				},
+				"name": "Death Certificate Reference",
+				"description": "The Death Certificate Reference resource enables interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource.",
+				"groupingId": "DeathCertification"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Disposition-Method.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Disposition-Method",
+					"display": "Decedent Disposition Method"
+				},
+				"name": "Decedent Disposition Method",
+				"description": "The Decedent Disposition Method resource specifies the means by which the decedent's remains were disposed of.  The VRDR Decedent Disposition Method profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DecedentDisposition"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/VRDRFHIRIGScope.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/Scope",
+					"display": "Scope"
+				},
+				"name": "VRDR FHIR Scope",
+				"description": "A graphical depiction of the scope of VRDR FHIR IG.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/Sequences.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/Sequences",
+					"display": "Sequences"
+				},
+				"name": "InformationExchanges",
+				"description": "A diagram of the supported and unsupported sequence of interactions defining the scope of the IG.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/ProfileStructuralDefinitions.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/ProfileStructuralDefinitions",
+					"display": "ProfileStructuralDefinitions"
+				},
+				"name": "Profile Structural Definitions",
+				"description": "A graphic representation using UML of the complete set of VRDR resource profiles.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/image002.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/image002",
+					"display": "image002"
+				},
+				"name": "Death Reporting Data Flow",
+				"description": "A graphical depiction of the flow of death event information from event detection, investigation, and certification.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/ProfileInventory.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/ProfileInventory",
+					"display": "ProfileInventory"
+				},
+				"name": "Profile Inventory",
+				"description": "A tabular presentation of the collection of profiles grouped by workflow phase and indicating the base resource for each profile.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/TerminologyBindings.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/TerminologyBindings",
+					"display": "TerminologyBindings"
+				},
+				"name": "Terminology Bindings",
+				"description": "A table of the coded elements and their bindings to code systems, code values, and value sets.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/DecedentsubdomaintoDCF.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/DecedentsubdomaintoDCF",
+					"display": "DecedentsubdomaintoDCF"
+				},
+				"name": "Decedent Subdomain to DCF",
+				"description": "A tabular representation of the mapping of death data collection form elements to resource profile elements. ",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/DeathInvestigationSubdomaintoDCF.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/DeathInvestigationSubdomaintoDCF",
+					"display": "DeathInvestigationSubdomaintoDCF"
+				},
+				"name": "Death Investigation Subdomain to DCF",
+				"description": "A tabular representation of the mapping of death investigation items from the death event data collection form to resource profile elements.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/DeathCertificationsubdomaintoDCF.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/DeathCertificationsubdomaintoDCF",
+					"display": "DeathCertificationsubdomaintoDCF"
+				},
+				"name": "Death Certification Subdomain to DCF",
+				"description": "A tabular representation of the mapping of death certification data items on the death certification data collection form to resource profile elements.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/DecedentDispositionsubdomaintoDCF.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/DecedentDispositionsubdomaintoDCF",
+					"display": "DecedentDispositionsubdomaintoDCF"
+				},
+				"name": "Decedent Disposition Subdomain to DCF",
+				"description": "A tabular representation of the mapping of decedent disposition data items from the death certificate data collection form to resource profile elements.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/ADecedent.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/ADecedent",
+					"display": "ADecedent"
+				},
+				"name": "Decedent Demographic UML",
+				"description": "A graphical representation, in UML, depicting profile resources related to decedent demographic data and their relationships to each other.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/BDeathInvestigation.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/BDeathInvestigation",
+					"display": "BDeathInvestigation"
+				},
+				"name": "Death Investigation UML class diagram",
+				"description": "A graphical representation, in UML, depicting the death investigation related resource profiles and their relationships to each other.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/CDeathCertification.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/CDeathCertification",
+					"display": "CDeathCertification"
+				},
+				"name": "Death Certification UML class diagram",
+				"description": "A graphical representation, using UML, depicting the resource profiles pertaining to death certification.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "media/DDecedentDisposition.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Media/DDecedentDisposition",
+					"display": "DDecedentDisposition"
+				},
+				"name": "Decedent Disposition UML class diagram",
+				"description": "A graphical representation, in UML, depicting the resource profiles pertaining to the disposition of the decedent's remains.",
+				"groupingId": "Images"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Death-Date.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Death-Date",
+					"display": "Death Date"
+				},
+				"name": "Death Date",
+				"description": "The Death Date resource is used to convey the actual or presumed date of death for the decedent. If the date of death unable to be determined then the date the decedent's remains were discovered serves as a surrogate for the death date. The VRDR Death Date resource profile builds upon the FHIR R4 Observation resource. The date the decedent was pronounced dead is included as a component of the death date observation.",
+				"groupingId": "DeathInvestigation"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Usual-Work.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Usual-Work",
+					"display": "VRDR_DecedentUsualWork"
+				},
+				"name": "Decedent's Usual Work",
+				"description": "The Decedent Usual Work resource is used to convey the usual work industry and occupation of the decedent. The base profile is lifted directly out of the Occupational Data for Health (ODH), Release 1.0 FHIR Implementation Guide (http://hl7.org/fhir/us/odh/).",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Military-Service.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Military-Service",
+					"display": "Decedent Military Service"
+				},
+				"name": "Decedent Military Service",
+				"description": "The Decedent Military Service resource is used to convey whether the decedent was ever in the US armed forces. The VRDR Decedent Military Service profile builds upon the FHIR R4 Observation resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent-Father.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent-Father",
+					"display": "Decedent Father"
+				},
+				"name": "Decedent Father",
+				"description": "The Decedent's Father resource represents the paternal parent of the decedent. The VRDR Decedent Father profile builds upon the FHIR R4 Related Person resource.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Funeral-Service-Licensee.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Funeral-Service-Licensee",
+					"display": "FuneralServiceLicensee"
+				},
+				"name": "Funeral Service Licensee",
+				"description": "The Funeral Service Licensee resource represents the professional practitioner affiliated with the funeral home that has met the requirements to be a funeral director and/or an embalmer. The VRDR Funeral Service Licensee profile builds upon the FHIR R4 PractitionerRole resource.",
+				"groupingId": "DecedentDisposition"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/VRDR-Decedent.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Decedent",
+					"display": "VRDR Decedent"
+				},
+				"name": "Decedent",
+				"description": "The decedent resource represents the deceased person that is the subject of the vital record death report. The VRDR Decedent profile builds upon the US-Core Patient profile.",
+				"groupingId": "DecedentDemographics"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/Observation-Location.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/Observation-Location",
+					"display": "Observation Location"
+				},
+				"name": "Observation Location",
+				"description": "Observation Location is an extension of the FHIR Observation resource. It is the location of the observed phenomenon or entity that is the subject of the observation. Use to enable the specification of locations such as the location of injury, the location of death, and the location of disposition.",
+				"groupingId": "Extensions"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/0db13e0d-fea6-4ef1-8285-62d761f61d88.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88",
+					"display": "AutopsyPerformedIndicatorInstanceExample"
+				},
+				"name": "Autopsy Performed Indicator Instance Example",
+				"description": "Instance example of the Autopsy Performed Indicator resource profile. This example indicates that an autopsy was performed and that the results of the autopsy are available.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "patient/51b806c8-566f-463e-8783-9fbf6be8161d.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d",
+					"display": "VRDRDecedentInstanceExample"
+				},
+				"name": "Decedent Instance Example",
+				"description": "An instance example of the VRDR Decedent resource profile. Mr. Example Last, a White, Native Hawaiian, Hispanic male born 1940-02-19 and residing in Middlesex, MA.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7",
+					"display": "Birth-Record-Identifier-Example"
+				},
+				"name": "Birth Record Identifier Example",
+				"description": "An instance example of the Birth Record Identifier resource profile.  In this example Birth Record identifier 4242123 denotes Massachusetts and 1940 as the birthplace and birth year of the decedent.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d",
+					"display": "CertifierInstanceExample"
+				},
+				"name": "Certifier Instance Example",
+				"description": "An instance example of a Certifier resource profile. This example is a certifying physician.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73",
+					"display": "DeathCertificationInstanceExample"
+				},
+				"name": "Death Certification Instance Example",
+				"description": "An instance example of a Death Certification resource profile. This example Death Certification procedure performed by a physician on 2019-01-29.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "organization/1a110397-936f-4be4-ab10-2caed226569d.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Organization/1a110397-936f-4be4-ab10-2caed226569d",
+					"display": "InterestedPartyInstanceExample"
+				},
+				"name": "Interested Party Instance Example",
+				"description": "An instance example of the Interested Party resource profile. In the example, Example Hospital from MA is an active Healthcare Provider interested party.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Interested-Party",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "condition/56b8ce2e-64f8-450b-8885-0699a53fc781.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Condition/56b8ce2e-64f8-450b-8885-0699a53fc781",
+					"display": "ConditionContributingToDeathExample"
+				},
+				"name": "Condition Contributing To Death Example",
+				"description": "An instance example of the VRDR-Condition-Contributing-To-Death resource profile. In this example, the condition is noted as text only. This is typical of a death record outbound from a jurisdictional EDRS to the NCHS.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b",
+					"display": "DecedentAgeExample"
+				},
+				"name": "Decedent Age Example",
+				"description": "An instance example of the VRDR-Decedent-Age resource profile. In this example, the decedent is identified as 79 years in age.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/b531cbf7-6290-424c-8155-0549c3fb3243.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/b531cbf7-6290-424c-8155-0549c3fb3243",
+					"display": "DeathDateExample"
+				},
+				"name": "Death Date Example",
+				"description": "An instance example of the VRDR-Death-Date resource profile. In this example, the date and time of death is 2018-02-20T16:48:06-05:00. The Date and time pronounced dead is also  2018-02-20T16:48:06-05:00.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a",
+					"display": "InjuryLocationExample"
+				},
+				"name": "Injury Location Example",
+				"description": "An instance example of the VRDR-Injury-Location resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99",
+					"display": "TobaccoUseContributedToDeathExample"
+				},
+				"name": "Tobacco Use Contributed To Death Example",
+				"description": "An instance example of the VRDR-Tobacco-Use-Contributed-To-Death resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/4aed1450-ab2d-4cb9-858f-227b127323a6.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/4aed1450-ab2d-4cb9-858f-227b127323a6",
+					"display": "ExaminerContactedExample"
+				},
+				"name": "Examiner Contacted Example",
+				"description": "An instance example of the VRDR-Examiner-Contacted resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/092e7b13-224d-46a6-ac31-0d98d4c84126.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/092e7b13-224d-46a6-ac31-0d98d4c84126",
+					"display": "DecedentPregnancyExample"
+				},
+				"name": "Decedent Pregnancy Example",
+				"description": "An instance example of the VRDR-Decedent-Pregnancy resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/d80681ff-9f1d-4915-87b5-eda54534096a.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/d80681ff-9f1d-4915-87b5-eda54534096a",
+					"display": "DecedentDispositionMethodExample"
+				},
+				"name": "Decedent Disposition Method Example",
+				"description": "An instance example of the VRDR-Decedent-Disposition-Method resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2",
+					"display": "MorticianExample"
+				},
+				"name": "Mortician Example",
+				"description": "An instance example of the VRDR-Mortician resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/636dafac-0d92-4649-b838-004bcf714f5aj.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/636dafac-0d92-4649-b838-004bcf714f5aj",
+					"display": "DecedentMilitaryServiceExample"
+				},
+				"name": "Decedent Military Service Example",
+				"description": "An instance example of the VRDR-Decedent-Military-Service",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/9676ae27-2a89-4295-913c-0d6847300a3a.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/9676ae27-2a89-4295-913c-0d6847300a3a",
+					"display": "DecedentEducationLevelExample"
+				},
+				"name": "Decedent Education Level Example",
+				"description": "An instance example of the VRDR-Decedent-Education-Level resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "relatedperson/89ababc6-8c2a-4e76-9f53-8677822f54a9.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9",
+					"display": "DecedentMotherExample"
+				},
+				"name": "Decedent Mother Example",
+				"description": "An instance example of the VRDR-Decedent-Mother resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "relatedperson/962fded4-b90a-44f7-950e-3832011ad65f.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f",
+					"display": "DecedentSpouseExample"
+				},
+				"name": "Decedent Spouse Example",
+				"description": "An instance example of the VRDR-Decedent-Spouse example.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "relatedperson/976c548f-9460-42f2-b41e-390b3bee91c8.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "RelatedPerson/976c548f-9460-42f2-b41e-390b3bee91c8",
+					"display": "DecedentFatherExample"
+				},
+				"name": "Decedent Father Example",
+				"description": "An instance example of the VRDR-Decedent-Father resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813",
+					"display": "MannerOfDeathExample"
+				},
+				"name": "Manner of Death Example",
+				"description": "An instance example of the VRDR-Manner-of-Death resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666",
+					"display": "CauseOfDeathConditionExample"
+				},
+				"name": "Cause Of Death Condition Example",
+				"description": "An instance example of the VRDR-Cause-Of-Death-Condition resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "list/60401545-f1e1-4a80-867f-02384ffed857.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "List/60401545-f1e1-4a80-867f-02384ffed857",
+					"display": "CauseOfDeathPathwayExample"
+				},
+				"name": "Cause of Death Pathway Example",
+				"description": "An instance example of the VRDR-Cause-of-Death-Pathway resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "organization/6f47da13-0c25-483b-8729-7b96716b17fc.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Organization/6f47da13-0c25-483b-8729-7b96716b17fc",
+					"display": "FuneralHomeExample"
+				},
+				"name": "Funeral Home Example",
+				"description": "An instance example of the VRDR-Funeral-Home resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "practitionerrole/4b96759f-8395-4093-8417-e1ca3cd26f0a.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "PractitionerRole/4b96759f-8395-4093-8417-e1ca3cd26f0a",
+					"display": "FuneralServiceLicenseeExample"
+				},
+				"name": "Funeral Service Licensee Example",
+				"description": "An instance example of the VRDR-Funeral-Service-Licensee resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "composition/54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Composition/54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30",
+					"display": "DeathCertificateExample"
+				},
+				"name": "Death Certificate Example",
+				"description": "An instance example of the VRDR-Death-Certificate resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "location/bbe38248-9a8d-414f-996e-58d5fc9eb800.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Location/bbe38248-9a8d-414f-996e-58d5fc9eb800",
+					"display": "DispositionLocationExample"
+				},
+				"name": "Disposition Location Example",
+				"description": "Instance example of the VRDR-Disposition-Location resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/4424113f-69c4-40fe-b88f-d7b03304dfe4.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/4424113f-69c4-40fe-b88f-d7b03304dfe4",
+					"display": "DecedentTransportationRoleExample"
+				},
+				"name": "Decedent Transportation Role Example",
+				"description": "An instance example of the VRDR-Decedent-Transportation-Role resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/37c086a1-05bd-479c-92b4-1234d38bfe5a.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a",
+					"display": "InjuryIncidentExample"
+				},
+				"name": "Injury Incident Example",
+				"description": "An instance example of the VRDR-InjuryIncident resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "observation/48b230c3-c5b5-4844-83bf-ede59170676e.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/48b230c3-c5b5-4844-83bf-ede59170676e",
+					"display": "DecedentUsualWorkExample"
+				},
+				"name": "Decedent Usual Work Example",
+				"description": "An instance example of the VRDR-Decedent-Usual-Work resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "practitioner/9102c234-53ca-4066-8452-42f3ba751c7d.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Practitioner/9102c234-53ca-4066-8452-42f3ba751c7d",
+					"display": "DeathPronouncementPerformerExample"
+				},
+				"name": "Death Pronouncement Performer Example",
+				"description": "An instance example of the VRDR-Death-Pronouncement-Performer resource profile",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Bundle/7a4613cc-b306-49b2-a428-9f8e67e67a85",
+					"display": "VRDR-Death-Certificate-Document-Example"
+				},
+				"name": "Death Certificate Document Example",
+				"description": "An instance example of the VRDR-Death-Certificate-Document resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Document",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "documentreference/bafe16b9-8b50-47e1-829a-a7dbafb45e05.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "DocumentReference/bafe16b9-8b50-47e1-829a-a7dbafb45e05",
+					"display": "VRDR-Death-Certificate-Reference-Example"
+				},
+				"name": "Death Certificate Reference Example",
+				"description": "An instance example of the VRDR-Death-Certificate-Reference resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate-Reference",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "structuredefinition/Location-Jurisdiction-Id.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/Location-Jurisdiction-Id",
+					"display": "LocationJurisdictionId"
+				},
+				"name": "LocationJurisdictionId",
+				"description": "An extension intended for use in an FHIR Location resource to identify the national case reporting jurisdiction under which the location falls. The jurisdiction identifier can be express as a string or as a code value from the [PHVS_USVitalRecordsJurisdictions_NCHS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#) value set.",
+				"groupingId": "Extensions"
+			},
+			{
+				"extension": [
+					{
+						"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-resource-file-path",
+						"valueString": "location/b7de6056-817f-4d73-9830-ce566accd044.xml"
+					}
+				],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Location/b7de6056-817f-4d73-9830-ce566accd044",
+					"display": "VRDR-Death-Location-Example"
+				},
+				"name": "Death Location Example",
+				"description": "An instance example of the VRDR-Death-Location resource profile.",
+				"exampleCanonical": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
+				"groupingId": "VRDR-Instance-Examples"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/VRDR-Partial-date-part-absent-reason",
+					"display": "Extension - Partial Date Part Absent Reason"
+				},
+				"name": "Extension - Partial Date Part Absent Reason",
+				"groupingId": "Extensions"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/bypassEditFlag",
+					"display": "BypassEditFlag"
+				},
+				"name": "Bypass Edit Flag",
+				"groupingId": "Extensions"
+			}
+		],
+		"page": {
+			"extension": [
+				{
+					"url": "https://trifolia-on-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-auto-generate-toc",
+					"valueBoolean": true
+				},
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+					"valueUri": "index.md"
+				},
+				{
+					"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-reuse-description",
+					"valueBoolean": true
+				}
+			],
+			"nameUrl": "index.html",
+			"title": "Home Page",
+			"generation": "markdown",
+			"page": [
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "project_team.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "**Project Facilitators:**\n\n- [Hetty Khan](https://www.linkedin.com/in/hetty-khan-a537a445/), Health Scientist (Informatics), CDC/National Center for Health Statistics\n\n- [Alaina Gregory](https://www.linkedin.com/in/alaina-elliott-aa9923/), IT Specialist, CDC/National Center for Health Statistics\n\n- Veronique Benie, Computer Scientist, CDC/National Center for Health Statistics\n\n- [Kate Brett](https://www.linkedin.com/in/kate-brett-40403030/), Director of Research Science, CDC/National Center for Health Statistics\n\n- [Cynthia Bush](https://www.linkedin.com/in/cynthia-cindy-bush-584bb0158/), Health Scientist (Informatics), CDC/National Center for Health Statistics\n\n- [Prachi Mehta](https://www.linkedin.com/in/prachim1/), Health Scientist (Informatics), CDC/National Center for Health Statistics\n\n**Business Requirements Analysts/Modeling facilitators:**\n\n- [AbdulMalik Shakir](https://www.linkedin.com/in/ashakir/), President and Chief Informatic Scientist, Hi3 Solutions\n\n- [Salimah Shakir](https://www.linkedin.com/in/salimah-shakir-16469413/), Business Systems Analyst, Hi3 Solutions\n\n**Specification Developers:**\n* [AbdulMalik Shakir Sr.](https://www.linkedin.com/in/ashakir/), Hi3 Solutions\n* [AbdulMalik Shakir Jr.](https://www.linkedin.com/in/abdul-shakir-a3078437/), Hi3 Solutions\n* [Salimah Shakir](https://www.linkedin.com/in/salimah-shakir-16469413/), Hi3 Solutions\n* [Adam Holmes](https://www.linkedin.com/in/adam-holmes-40577315a/), MITRE\n\n**Development Team:**\n\n- [Mitre](https://www.mitre.org/), a not-for-profit organization working in the public interest across federal, state and local governments, as well as industry and academia.\n\n- [Georgia Institute of Technology](https://www.gatech.edu/), a leading research university committed to improving the human condition through advanced science and technology\n\n- [Hi3 Solutions Corporation](https://www.facebook.com/hi3solutions/), a leading HIT vendor providing software solutions and professional services that promote evidence-based best practices in health.\n"
+						}
+					],
+					"nameUrl": "project_team.html",
+					"title": "Project Team",
+					"generation": "markdown"
+				},
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "acknowledgements.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "* The content of this implementation guide draws heavily upon [Standard Death Record Implementation Guide](https://nightingaleproject.github.io/fhir-death-record/guide/index.html) developed by [MITRE](https://www.mitre.org/). \n* This guide was developed using tooling and professional guidance provided by [Lantana Consulting Group](https://www.lantanagroup.com/), the makers of [Trifolia-on-FHIR](https://trifolia-fhir-dev.lantanagroup.com/)\n* The VRDR FHIR IG is a work product of the [HL7 Public Health Workgroup](http://www.hl7.org/Special/committees/pher/overview.cfm). The HL7 Project Insight reference number for this project is [1475](http://www.hl7.org/Special/committees/pher/projects.cfm?action=edit&ProjectNumber=1475).\n* Informatics consultation for planning and testing of VRDR FHIR profiles and IHE harmonization provided by eHealthsign, LLC.\n* Health Level Seven, HL7, CDA, CCD, FHIR and the [FLAME DESIGN]  are registered trademarks of Health Level Seven International, registered in the US Trademark Office.\n* This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\n\nThe VRDR project team would like to express a special thanks to the following testing partners in their contribution to the VRDR:\n\n**Centers for Disease Control and Prevention:**\n- Division of Cancer Prevention and Control\n\n**Jurisdictional Vital Records Community:**\n- California Department of Public Health\n- Delaware Department of Health and Social Services\n- District of Columbia Health\n- Georgia Department of Public Health\n- Michigan Department of Health & Human Services\n- National Association for Public Health Statistics and Information Systems\n- New Hampshire Department of Health and Human Services\n- New York State Department of Health\n- Utah Department of Health\n\n**Vendor community:**\n- Altarum\n- Axiell\n- CNSI\n- Genesis\n- Outcome Healthcare\n- Ruvos\n- VitalChek\n"
+						}
+					],
+					"nameUrl": "acknowledgements.html",
+					"title": "Acknowledgements",
+					"generation": "markdown"
+				},
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "background.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "CDCs National Center for Health Statistics is working closely with Federal, State, and local partners to take a fresh look at how mortality data are gathered, stored, and exchanged across the United States. They are focused on adopting best practices for information exchange that lessen the burden on data providers (e.g., vital records offices, medical examiner and coroner offices, toxicology labs) while providing a seamlessly automated data feed to public health and public safety data requestors. \n\nTo help make the mortality data ecosystem more connected, adaptable, and robust, they have chosen to leverage modern technologies and approaches, such as RESTful based APIs and HL7s Fast Healthcare Interoperability Resources (FHIR) standard.\n\nThis implementation guide is an initial step to help define a common set of protocols and practices that developers can rely on to enhance their existing products and build solutions to help make mortality data flow more seamlessly.\n\n# **Change History **\n\n**August 2021 STU2 pre-ballot changes**\n\n* Added patient-birthPlace extension to resource profile Decedent\n* Modified the terminology binding for the contact.relationship element in the resource profile Decedent to match the HL7v2.6 specification\n* Modified resource profile Cause Of Death Condition to use USCoreCondition as its base profile and include the element condition.category \n* Modified Cause Of Death Condition Example to include the element condition.category \n* Modified resource profile Condition Contributing To Death to use USCoreCondition as its base profile and include the element condition.category \n* Modified Condition Contributing To Death Example to include the element condition.category\n* Added a section on recent change history to the background page.\n*\tAdded Extension - Date Part Absent Reason from the vital records common library IG\n* Added Extension - Date Part Absent Reason to VRDR Decedent.birthdate\n* Added Extension - Date Part Absent Reason to VRDR Death Date.valueDateTime\n* Corrected the display name for LOINC code ‘81956-5’ - Date and time of death\n* Modified the cardinality of Resource Profile: Cause of Death Pathway entry from (0..*) to (1..*)\n* Added Observation.dataAbsentReason to Resource Profile: Decedent's age\n* Added Observation.dataAbsentReason to Resource Profile: Birth Record Identifier\n* Added constraint on VRDR Decedent.address.city to require it be a five-digit numeric value greater than zero and less than 100000.\n* Modified value set bindings for\tVRDR Decedent\t.address.district - PHVS_DivisionVitalStatistics__County\n* Modified value set bindings for\tVRDR Decedent[Residence].address.country - PHVS_DecedentResident_County\n* Modified value set bindings for\tVRDR Decedent[Birthplace].address.country - PHVS_DecedentBirthplace_County\n* Modified value set bindings for\tVRDR Death Location.address.district - PHVS_DivisionVitalStatistics__County\n* Modified value set bindings for\tVRDR Decedent Military Service\t.valueCodeableConcept - PHVS_YesNoUnknown_CDC\n* Modified value set bindings for\tVRDR Examiner Contacted.valueCodeableConcept - PHVS_YesNoUnknown_CDC*\n*\tAdded position.longitude and position.latitude to Resource Profile: Death Location\n*\tAdded position.longitude and position.latitude to Resource Profile: Injury Location\n*\tChanged URL for Extension: LocationJurisdictionId to http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id\n* Changed cardinality on Location-Jurisdiction-Id in Resource Profile: Death Location to 1..1\n*\tConstrained Extension: Observation Location.value[x] to Reference(Location)\n*\tUpdated instance examples of modified resource profiles to reflect changes\n* Added requirement for use of meta.profile to identify the profile version to which the resource instance complies. \n*\tAdded a dependency to the vital records common library IG\n* Changed the name of the guide from Vital Records Mortality and Morbidity Reporting FHIR Implementation Guide to Vital Records Death Reporting FHIR Implementation Guide\n*\tChanged author from Hetty Khan to Cynthia Bush\n* Changed release label from STU 1 to STU 2 and version from 1.0.0 to 1.1.0\n\n\n"
+						}
+					],
+					"nameUrl": "background.html",
+					"title": "Background",
+					"generation": "markdown",
+					"page": [
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "death_reporting_dataflow.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "The following diagram depicts the major flow of vital records of death information. Information about the decedent is captured from a variety of sources, including but not limited to electronic health record systems. Death investigation activities yield additional information concerning the manner of death, factors contributing to the cause of death, and the causal pathway of the cause of death conditions. \n\n<table><tr><td><img src=\"image002.png\" style=\"width:100%;\"/></td></tr></table>\n\nMedicolegal Death Investigators file death certifications with state death registrars where that data are combined with information concerning the disposition of the descendants remains. State registrars report death incidents occurring in their jurisdiction to the CDCs National Center for Health Statistics (NCHS).\n\n"
+								}
+							],
+							"nameUrl": "death_reporting_dataflow.html",
+							"title": "Death Reporting Dataflow",
+							"generation": "markdown"
+						},
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "scope_of_the_vrdr_fhir_ig.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "The scope of this VRDR FHIR IG is the reporting of incidents of death by State Registrars to the NCHS. The data content of this dataflow contains an aggregation of data collected in preceding dataflows and used in additional dataflows related to the secondary use of death information such as clinical research, law enforcement, and health policy determination. \n\n<center>\n<table><tr><td><img src=\"Scope.png\" style=\"width:100%;\"/></td></tr></table>\n</center>\n\nWhile the scope of this IG is limited to death reporting by State Registrars to the NCHS, the FHIR Resource Profiles have been designed with the intent of being reusable in related preceding and antecedent dataflows.\n\nThe actors supported in this implementation guide include:\n\n* Regional Electronic Death Registration System (EDRS)\n* The National Vital Statistics System (NVSS)\n* Secondary Users of Death Information (Secondary Users)\n\n<table><tr><td><img src=\"Sequences.png\" style=\"width:100%;\"/></td></tr></table>\n\nThe sequence of exchanges supported in this implementation guide include:\n\n*** (5) Draft death certificate document from regional EDRS to the NVSS.**\n\nIn this exchange the regional EDRS sends a draft of the death certificate document with text values for causes of death and decedent race/ethnicity to the NVSS to be encoded.\n\n*** (6) Standardized cause of death and decedent race/ethnicity coding from the NVSS to regional EDRS.**\n\nIn this exchange the NVSS returns the draft death certificate document with coded values for causes of death and decedent race/ethnicity to the regional EDRS.\n\n*** (7) Final death certificate document from regional EDRS to the NVSS.**\n\nIn this exchange the regional EDRS send the final death certificate to the NVSS. This exchange also supports the sending of a revised, amended, or replacement death certificate.\n\n*** (8) Death certificate document from the NVSS to death information secondary users.**\n\nIn this exchange the NVSS sends a copy of the death certificate document it received from the regional EDRS to secondary users of death information.\n\n*** (9) Death certificate document from regional EDRS to death information secondary users.**\n\nIn this exchange the regional EDRS send a copy of the final death certificate document to secondary users of death information."
+								}
+							],
+							"nameUrl": "scope_of_the_vrdr_fhir_ig.html",
+							"title": "Scope of the VRDR FHIR IG",
+							"generation": "markdown"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "profiles.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "The VRDR FHIR IG makes use of 33 FHIR Resource Profiles. The content profiles are grouped into 4 profile groups. Each profile group represents an aspect of the data collected on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf).\n\nA. ***Decedent Demographics:*** is a profile group comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.\n\nB. ***Death Investigation:*** is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved.\n\nC. ***Death Certification:*** is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).\n\nD. ***Decedent Disposition:*** is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director.\n\n<table><tr><td><img src=\"ProfileInventory.jpg\" style=\"width:100%;\"/></td></tr></table>"
+						}
+					],
+					"nameUrl": "profiles.html",
+					"title": "Profiles",
+					"generation": "markdown",
+					"page": [
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "vrdr_fhir_ig_uml_data_model.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "The [VRDR FHIR IG UML Data Model](http://www.hl7.org/documentcenter/public/wg/pher/Profile%20Structural%20Definitions.png) is a graphical representation of the VRDR FHIR IG resource profile structural definitions. The diagram uses the Unified Modeling Language (UML) notation wherein each class represents a resource profile, attributes represent constrained resource elements, and relationships represent directed references from one profile to another. The color scheme used for classes are based upon the partitioning of the IG into four profile groups.\n\n<center>\n\t<table><tr><td><img src=\"Profile Structural Definitions.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>"
+								}
+							],
+							"nameUrl": "vrdr_fhir_ig_uml_data_model.html",
+							"title": "VRDR FHIR IG UML Data Model",
+							"generation": "markdown"
+						},
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "decedent_demographics_resource_profiles.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "A. ***Decedent Demographics:*** is a profile group comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.\n\n<center>\n<table><tr><td><img src=\"A. Decedent.png\" style=\"width:100%;\"/></td></tr></table>\n</center>\n\nThe following tables indicates tracibility between decedent demographic resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.\n\n<center>\n<table><tr><td><img src=\"Decedent subdomain to DCF.png\" style=\"width:100%;\"/></td></tr></table>\n</center>"
+								}
+							],
+							"nameUrl": "decedent_demographics_resource_profiles.html",
+							"title": "Decedent Demographics Resource Profiles",
+							"generation": "markdown"
+						},
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "death_investigation_resource_profiles.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "B. ***Death Investigation:*** is a profile group comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopy was performed, an injury incident occurred, or a transportation event was involved.\n\n<center>\n\t<table><tr><td><img src=\"B. Death Investigation.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\nThe following tables indicates tracibility between death investigation resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.\n\n<center>\n\t<table><tr><td><img src=\"Death Investigation Subdomain to DCF.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\t"
+								}
+							],
+							"nameUrl": "death_investigation_resource_profiles.html",
+							"title": "Death Investigation Resource Profiles",
+							"generation": "markdown"
+						},
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "death_certification_resource_profiles.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "C. ***Death Certification:*** is a profile group comprised of profiles containing data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).\n\n<center>\n\t<table><tr><td><img src=\"C. Death Certification.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\t\nThe following tables indicates tracibility between death certification resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.\n\n<center>\n\t<table><tr><td><img src=\"Death Certification subdomain to DCF.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\t"
+								}
+							],
+							"nameUrl": "death_certification_resource_profiles.html",
+							"title": "Death Certification Resource Profiles",
+							"generation": "markdown"
+						},
+						{
+							"extension": [
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+									"valueUri": "decedent_disposition_resource_profiles.md"
+								},
+								{
+									"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+									"valueMarkdown": "D. ***Decedent Disposition:*** is a profile group comprised of profiles containing data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director.\n\n<center>\n\t<table><tr><td><img src=\"D. Decedent Disposition.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\t\nThe following tables indicates tracibility between decedent disposition resource profile elements and data items on the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf) data collection form.\n\n<center>\n\t<table><tr><td><img src=\"Decedent Disposition subdomain to DCF.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>\n\t"
+								}
+							],
+							"nameUrl": "decedent_disposition_resource_profiles.html",
+							"title": "Decedent Disposition Resource Profiles",
+							"generation": "markdown"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "terminology_bindings.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "Terminology binding is part of process of preparing a resource profile specification. If the resource element is a codeable element the resource profile specifies the code system, code system term, or value set from which the allowable concepts for the resource element are drawn. The terminology binding can be to an entire code system - **Code System Binding (CS)**, a single code system term - **Fixed Value Binding (CST)**, or to a collection of code system terms - **Value Set Binding (VS)**.\n\nThe following table contains the teminology bindings for FHIR resource profile elements directly related to coded data items in the [U.S. Standard Certificate of Death](https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf). A complete set of terminology bindings is included for each resource profile on their respective structure definition page. \n\n<center>\n\t<table><tr><td><img src=\"TerminologyBindings.png\" style=\"width:100%;\"/></td></tr></table>\n\t</center>"
+						}
+					],
+					"nameUrl": "terminology_bindings.html",
+					"title": "Terminology Bindings",
+					"generation": "markdown"
+				},
+				{
+					"extension": [
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-nav-menu",
+							"valueString": "Downloads"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-filename",
+							"valueUri": "downloads.md"
+						},
+						{
+							"url": "https://trifolia-fhir.lantanagroup.com/StructureDefinition/extension-ig-page-content",
+							"valueMarkdown": "**Full Implementation Guide**\\n\\nThe entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).\\n\\nIn addition there are format specific definitions files.\\n\\n* [XML](definitions.xml.zip)\\n* [JSON](definitions.json.zip)\\n* [TTL](definitions.ttl.zip)\\n\\n**Examples:** all the examples that are used in this Implementation Guide available for download:\\n\\n* [XML](examples.xml.zip)\\n* [JSON](examples.json.zip)\\n* [TTl](examples.ttl.zip)"
+						}
+					],
+					"nameUrl": "downloads.html",
+					"title": "Downloads",
+					"generation": "markdown"
+				}
+			]
+		},
+		"parameter": [
+			{
+				"code": "releaselabel",
+				"value": "STU 2"
+			},
+			{
+				"code": "copyrightyear",
+				"value": "2021+"
+			}
+		]
+	}
 }
