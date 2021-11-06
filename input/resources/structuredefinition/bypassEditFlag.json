@@ -1,21 +1,21 @@
 {
-	"id": "bypassEditFlag",
+	"id": "VRDR-Decedent-Age",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2021-11-04T05:40:38.989+00:00",
-		"source": "#kvsYPWw96cQ6HAfG",
+		"versionId": "16",
+		"lastUpdated": "2021-11-04T06:35:12.882+00:00",
+		"source": "#cqInOXyPKKsKovcA",
 		"security": [
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^write"
+				"code": "everyone^write"
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
 				"code": "user^dMG-NXHH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
@@ -27,48 +27,157 @@
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
 				"code": "user^TKWZUCCU^read"
+			}
+		],
+		"tag": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+				"code": "SUBSETTED",
+				"display": "Resource encoded in summary mode"
 			}
 		]
 	},
 	"resourceType": "StructureDefinition",
-	"status": "active",
+	"status": "draft",
 	"kind": "resource",
 	"derivation": "constraint",
-	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag",
-	"name": "BypassEditFlag",
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age",
+	"version": "1.0",
+	"name": "DecedentAge",
+	"title": "VRDR Decedent Age",
+	"experimental": false,
+	"date": "2020-05-10",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years.",
+	"fhirVersion": "4.0.1",
 	"abstract": false,
-	"type": "Extension",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
 	"differential": {
 		"element": [
 			{
-				"id": "Extension",
-				"path": "Extension"
+				"id": "Observation",
+				"path": "Observation"
 			},
 			{
-				"id": "Extension.value[x]",
-				"path": "Extension.value[x]",
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"short": "status",
+				"min": 1,
+				"max": "1",
 				"type": [
 					{
-						"code": "Coding"
+						"code": "code"
 					}
 				],
-				"min": 1
+				"fixedCode": "final"
 			},
 			{
-				"id": "Extension.value[x].system",
-				"path": "Extension.value[x].system",
-				"max": "1",
-				"min": 1
-			},
-			{
-				"id": "Extension.value[x].code",
-				"path": "Extension.value[x].code",
+				"id": "Observation.code",
+				"path": "Observation.code",
+				"short": "code",
 				"min": 1,
-				"max": "1"
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "30525-0",
+							"display": "Age"
+						}
+					]
+				}
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"short": "subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.effective[x]",
+				"path": "Observation.effective[x]",
+				"short": "The decedent's date of death",
+				"definition": "The effective date of this observation shall be equal to the decedent's date of death.",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "dateTime"
+					}
+				]
+			},
+			{
+				"id": "Observation.value[x]",
+				"path": "Observation.value[x]",
+				"short": "The decedent's chronological age at the time of death",
+				"definition": "The decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years.",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "Quantity"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.value[x].extension",
+				"path": "Observation.value[x].extension",
+				"max": "1",
+				"type": [
+					{
+						"code": "Extension",
+						"targetProfile": [],
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"
+						]
+					}
+				]
+			},
+			{
+				"id": "Observation.dataAbsentReason",
+				"path": "Observation.dataAbsentReason",
+				"min": 0,
+				"max": "1",
+				"mustSupport": true
 			}
 		]
-	},
-	"title": "Bypass Edit Flag"
+	}
 }
