@@ -1,25 +1,17 @@
 {
 	"id": "VRDR-Death-Certificate",
 	"meta": {
-		"versionId": "46",
-		"lastUpdated": "2021-11-04T04:13:33.468+00:00",
-		"source": "#eN0J1xpYHQXvokBS",
+		"versionId": "51",
+		"lastUpdated": "2021-11-04T05:01:35.122+00:00",
+		"source": "#Q5D13PbBwLq66vgB",
 		"security": [
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^write"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^PNgAbFNH^write"
-			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
 				"code": "user^dMG-NXHH^read"
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^write"
+				"code": "everyone^write"
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
@@ -27,11 +19,19 @@
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
+				"code": "user^PNgAbFNH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
 			},
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
 				"code": "user^TKWZUCCU^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
 			}
 		],
 		"tag": [
@@ -206,7 +206,13 @@
 				"id": "Composition.section",
 				"path": "Composition.section",
 				"slicing": {
-					"rules": "open"
+					"rules": "open",
+					"discriminator": [
+						{
+							"type": "value",
+							"path": ""
+						}
+					]
 				}
 			},
 			{
@@ -216,7 +222,8 @@
 				"label": "Decedent Demographics",
 				"short": "DecedentDemographics",
 				"definition": "This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.",
-				"max": "1"
+				"max": "1",
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry",
@@ -225,7 +232,7 @@
 					"rules": "open"
 				},
 				"min": 1,
-				"max": "8"
+				"max": "*"
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:Father",
@@ -239,7 +246,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:Mother",
@@ -253,7 +261,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:Spouse",
@@ -267,7 +276,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:Age",
@@ -281,7 +291,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:BirthRecordID",
@@ -295,7 +306,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:EducationLevel",
@@ -309,7 +321,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:MilitaryService",
@@ -323,7 +336,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry:UsualWork",
@@ -337,7 +351,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation",
@@ -345,7 +360,8 @@
 				"sliceName": "DeathInvestigation",
 				"definition": "This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved.",
 				"min": 0,
-				"max": "1"
+				"max": "1",
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry",
@@ -354,7 +370,7 @@
 					"rules": "open"
 				},
 				"min": 1,
-				"max": "10"
+				"max": "*"
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:ExaminerContacted",
@@ -368,7 +384,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:Pregnancy",
@@ -382,7 +399,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:TobaccoUse",
@@ -396,7 +414,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:InjuryLocation",
@@ -410,7 +429,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:Autopsy",
@@ -424,7 +444,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:DeathLocation",
@@ -438,7 +459,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:DeathPronouncementPerformer",
@@ -451,7 +473,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:InjuryIncident",
@@ -465,7 +488,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:DeathDate",
@@ -479,7 +503,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry:TransportationRole",
@@ -493,13 +518,15 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathCertification",
 				"path": "Composition.section",
 				"sliceName": "DeathCertification",
-				"max": "1"
+				"max": "1",
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry",
@@ -508,7 +535,7 @@
 					"rules": "open"
 				},
 				"min": 1,
-				"max": "6"
+				"max": "*"
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry:MannerOfDeath",
@@ -522,7 +549,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry:CauseOfDeathCondition",
@@ -536,7 +564,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry:ConditionContributingToDeath",
@@ -549,37 +578,38 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
-				"sliceName": "CauseOfDeathPathway",
 				"id": "Composition.section:DeathCertification.entry:CauseOfDeathPathway",
 				"path": "Composition.section.entry",
+				"sliceName": "CauseOfDeathPathway",
 				"max": "1",
 				"type": [
 					{
 						"code": "Reference",
-						"profile": [
-							""
-						],
 						"targetProfile": [
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition",
 				"path": "Composition.section",
 				"sliceName": "DecedentDisposition",
-				"max": "1"
+				"max": "1",
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry",
 				"path": "Composition.section.entry",
 				"slicing": {
 					"rules": "open"
-				}
+				},
+				"max": "*"
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry:DispositionLocation",
@@ -592,7 +622,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry:FuneralHome",
@@ -606,7 +637,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry:Mortician",
@@ -620,7 +652,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry:DispositionMethod",
@@ -634,7 +667,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry:FuneralServiceLicensee",
@@ -648,7 +682,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.event.code",
