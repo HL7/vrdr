@@ -1,9 +1,9 @@
 {
 	"id": "VRDR-Death-Certificate",
 	"meta": {
-		"versionId": "51",
-		"lastUpdated": "2021-11-04T05:01:35.122+00:00",
-		"source": "#Q5D13PbBwLq66vgB",
+		"versionId": "72",
+		"lastUpdated": "2021-11-10T05:04:12.748+00:00",
+		"source": "#ZajYC8xjckig7vS6",
 		"security": [
 			{
 				"system": "https://trifolia-fhir.lantanagroup.com/security",
@@ -206,13 +206,13 @@
 				"id": "Composition.section",
 				"path": "Composition.section",
 				"slicing": {
-					"rules": "open",
 					"discriminator": [
 						{
-							"type": "value",
-							"path": ""
+							"type": "pattern",
+							"path": "code"
 						}
-					]
+					],
+					"rules": "open"
 				}
 			},
 			{
@@ -228,14 +228,27 @@
 			{
 				"id": "Composition.section:DecedentDemographics.code",
 				"path": "Composition.section.code",
+				"min": 1,
 				"max": "1",
-				"mustSupport": true,
-				"min": 1
+				"mustSupport": true
+			},
+			{
+				"id": "Composition.section:DecedentDemographics.code.text",
+				"path": "Composition.section.code.text",
+				"min": 1,
+				"max": "1",
+				"patternString": "DecedentDemographics"
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry",
 				"path": "Composition.section.entry",
 				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "$this.resolve()"
+						}
+					],
 					"rules": "open"
 				},
 				"min": 1,
@@ -377,9 +390,22 @@
 				"max": "1"
 			},
 			{
+				"id": "Composition.section:DeathInvestigation.code.text",
+				"path": "Composition.section.code.text",
+				"min": 1,
+				"max": "1",
+				"patternString": "DeathInvestigation"
+			},
+			{
 				"id": "Composition.section:DeathInvestigation.entry",
 				"path": "Composition.section.entry",
 				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "$this.resolve()"
+						}
+					],
 					"rules": "open"
 				},
 				"min": 1,
@@ -544,13 +570,26 @@
 			{
 				"id": "Composition.section:DeathCertification.code",
 				"path": "Composition.section.code",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:DeathCertification.code.text",
+				"path": "Composition.section.code.text",
+				"min": 1,
 				"max": "1",
-				"min": 1
+				"patternString": "DeathCertification"
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry",
 				"path": "Composition.section.entry",
 				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "$this.resolve()"
+						}
+					],
 					"rules": "open"
 				},
 				"min": 1,
@@ -625,13 +664,26 @@
 			{
 				"id": "Composition.section:DecedentDisposition.code",
 				"path": "Composition.section.code",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:DecedentDisposition.code.text",
+				"path": "Composition.section.code.text",
+				"min": 1,
 				"max": "1",
-				"min": 1
+				"patternString": "DecedentDisposition"
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry",
 				"path": "Composition.section.entry",
 				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "$this.resolve()"
+						}
+					],
 					"rules": "open"
 				},
 				"max": "*"

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate"/>
     <meta>
-        <versionId value="51"/>
-        <lastUpdated value="2021-11-04T05:01:35.122+00:00"/>
-        <source value="#Q5D13PbBwLq66vgB"/>
+        <versionId value="72"/>
+        <lastUpdated value="2021-11-10T05:04:12.748+00:00"/>
+        <source value="#ZajYC8xjckig7vS6"/>
         <security>
             <system value="https://trifolia-fhir.lantanagroup.com/security"/>
             <code value="user^dMG-NXHH^read"/>
@@ -168,7 +168,8 @@
             <path value="Composition.section"/>
             <slicing>
                 <discriminator>
-                    <type value="value"/>
+                    <type value="pattern"/>
+                    <path value="code"/>
                 </discriminator>
                 <rules value="open"/>
             </slicing>
@@ -188,9 +189,19 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
+        <element id="Composition.section:DecedentDemographics.code.text">
+            <path value="Composition.section.code.text"/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="DecedentDemographics"/>
+        </element>
         <element id="Composition.section:DecedentDemographics.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resolve()"/>
+                </discriminator>
                 <rules value="open"/>
             </slicing>
             <min value="1"/>
@@ -289,9 +300,19 @@
             <min value="1"/>
             <max value="1"/>
         </element>
+        <element id="Composition.section:DeathInvestigation.code.text">
+            <path value="Composition.section.code.text"/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="DeathInvestigation"/>
+        </element>
         <element id="Composition.section:DeathInvestigation.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resolve()"/>
+                </discriminator>
                 <rules value="open"/>
             </slicing>
             <min value="1"/>
@@ -407,9 +428,19 @@
             <min value="1"/>
             <max value="1"/>
         </element>
+        <element id="Composition.section:DeathCertification.code.text">
+            <path value="Composition.section.code.text"/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="DeathCertification"/>
+        </element>
         <element id="Composition.section:DeathCertification.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resolve()"/>
+                </discriminator>
                 <rules value="open"/>
             </slicing>
             <min value="1"/>
@@ -465,9 +496,19 @@
             <min value="1"/>
             <max value="1"/>
         </element>
+        <element id="Composition.section:DecedentDisposition.code.text">
+            <path value="Composition.section.code.text"/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternString value="DecedentDisposition"/>
+        </element>
         <element id="Composition.section:DecedentDisposition.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resolve()"/>
+                </discriminator>
                 <rules value="open"/>
             </slicing>
             <max value="*"/>
