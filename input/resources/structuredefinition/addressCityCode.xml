@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="addressCityCode"/>
+    <meta>
+        <versionId value="9"/>
+        <lastUpdated value="2021-11-18T05:32:03.626+00:00"/>
+        <source value="#Fv50abwrYk3RQCXu"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode"/>
+    <version value="1.0"/>
+    <name value="AddressCityCode"/>
+    <title value="Address City Code"/>
+    <status value="active"/>
+    <description value="The address city code extension is used to enable the city portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Address.city"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <fixedUri value="http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="positiveInt"/>
+            </type>
+            <constraint>
+                <key value="sWBIOAHk"/>
+                <requirements value="The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."/>
+                <severity value="error"/>
+                <human value="The city code is a five digit positive integer value between 00000 and 99999 with leading zeroes included. The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."/>
+            </constraint>
+        </element>
+    </differential>
+</StructureDefinition>

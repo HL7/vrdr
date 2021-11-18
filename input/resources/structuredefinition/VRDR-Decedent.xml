@@ -3,37 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent"/>
     <meta>
-        <versionId value="90"/>
-        <lastUpdated value="2021-08-09T06:00:13.203+00:00"/>
-        <source value="#uyXAEWQu3pNMx6UB"/>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^TKWZUCCU^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-        </security>
+        <versionId value="98"/>
+        <lastUpdated value="2021-11-18T05:45:03.316+00:00"/>
+        <source value="#xM4MeRaID1sT6m5m"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -109,7 +81,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_Sex_MFU"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1038"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"/>
             </binding>
         </element>
         <element id="Patient.birthDate">
@@ -144,6 +116,31 @@
                 <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator"/>
             </type>
         </element>
+        <element id="Patient.address.city">
+            <path value="Patient.address.city"/>
+            <comment value="The city portion of the decedent's resident address shall be expressed as a five-digit numeric value greater than zero and less than 100,000."/>
+        </element>
+        <element id="Patient.address.city.extension">
+            <path value="Patient.address.city.extension"/>
+            <label value="NCHS IMP8 address city code"/>
+            <short value="address city code"/>
+            <definition value="The address city code extension is used to enable the city portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address.district">
+            <path value="Patient.address.district"/>
+            <binding>
+                <strength value="required"/>
+                <description value="PHVS_DivisionVitalStatistics__County"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212"/>
+            </binding>
+        </element>
         <element id="Patient.address.country">
             <path value="Patient.address.country"/>
             <min value="0"/>
@@ -164,7 +161,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_MaritalStatus_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7380"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"/>
             </binding>
         </element>
         <element id="Patient.contact.relationship">
@@ -177,7 +174,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_RelatedPersonRelationshipType_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8018"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"/>
             </binding>
         </element>
     </differential>
