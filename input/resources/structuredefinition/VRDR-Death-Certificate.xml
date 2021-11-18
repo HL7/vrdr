@@ -3,42 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate"/>
     <meta>
-        <versionId value="72"/>
-        <lastUpdated value="2021-11-10T05:04:12.748+00:00"/>
-        <source value="#ZajYC8xjckig7vS6"/>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^TKWZUCCU^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-        </security>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="Resource encoded in summary mode"/>
-        </tag>
+        <versionId value="80"/>
+        <lastUpdated value="2021-11-18T04:11:34.025+00:00"/>
+        <source value="#iIhUUwQLJwCerinv"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"/>
     <version value="1.0"/>
@@ -189,11 +156,16 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Composition.section:DecedentDemographics.code.text">
-            <path value="Composition.section.code.text"/>
+        <element id="Composition.section:DecedentDemographics.code.coding">
+            <path value="Composition.section.code.coding"/>
             <min value="1"/>
             <max value="1"/>
-            <patternString value="DecedentDemographics"/>
+            <patternCoding>
+                <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem"/>
+                <code value="Demographics"/>
+                <display value="Decedent Demographics"/>
+            </patternCoding>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DecedentDemographics.entry">
             <path value="Composition.section.entry"/>
@@ -299,12 +271,18 @@
             <path value="Composition.section.code"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
-        <element id="Composition.section:DeathInvestigation.code.text">
-            <path value="Composition.section.code.text"/>
+        <element id="Composition.section:DeathInvestigation.code.coding">
+            <path value="Composition.section.code.coding"/>
             <min value="1"/>
             <max value="1"/>
-            <patternString value="DeathInvestigation"/>
+            <patternCoding>
+                <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem"/>
+                <code value="Investigation"/>
+                <display value="Death Investigation"/>
+            </patternCoding>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DeathInvestigation.entry">
             <path value="Composition.section.entry"/>
@@ -427,12 +405,18 @@
             <path value="Composition.section.code"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
-        <element id="Composition.section:DeathCertification.code.text">
-            <path value="Composition.section.code.text"/>
+        <element id="Composition.section:DeathCertification.code.coding">
+            <path value="Composition.section.code.coding"/>
             <min value="1"/>
             <max value="1"/>
-            <patternString value="DeathCertification"/>
+            <patternCoding>
+                <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem"/>
+                <code value="Certification"/>
+                <display value="Death Certification"/>
+            </patternCoding>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DeathCertification.entry">
             <path value="Composition.section.entry"/>
@@ -495,12 +479,18 @@
             <path value="Composition.section.code"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
-        <element id="Composition.section:DecedentDisposition.code.text">
-            <path value="Composition.section.code.text"/>
+        <element id="Composition.section:DecedentDisposition.code.coding">
+            <path value="Composition.section.code.coding"/>
             <min value="1"/>
             <max value="1"/>
-            <patternString value="DecedentDisposition"/>
+            <patternCoding>
+                <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem"/>
+                <code value="Disposition"/>
+                <display value="Decedent Disposition"/>
+            </patternCoding>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DecedentDisposition.entry">
             <path value="Composition.section.entry"/>
