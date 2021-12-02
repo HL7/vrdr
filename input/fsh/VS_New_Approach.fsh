@@ -5,7 +5,7 @@ Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $maritalStatus = http://hl7.org/fhir/ValueSet/marital-status
 Alias: $roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-
+Alias: $degreeLicenseCertificateV2 = http://terminology.hl7.org/CodeSystem/v2-0360
 
 ValueSet: USStatesAndTerritoriesVS
 Id: USStates-Territories-VS
@@ -147,4 +147,20 @@ Title: "Education Level VS "
 Description: "EducationLevel"
 * include codes from system $HL7_EducationLevelCS
 * exclude $HL7_EducationLevelCS#PB
+* $v3-NullFlavor#UNK "unknown"
+
+ValueSet: DecedentEducationLevelAltVS
+Id: vrdr-EducationLevel-alt
+Title: "Education Level VS "
+Description: "EducationLevel"
+* include codes from system $HL7_EducationLevelCS
+* exclude $HL7_EducationLevelCS#PB
+* $HL7_EducationLevelCS#ELEM
+* $HL7_EducationLevelCS#SEC
+* $HL7_EducationLevelCS#HS
+* $HL7_EducationLevelCS#SCOL
+* $degreeLicenseCertificateV2#AA
+* $degreeLicenseCertificateV2#BA
+* $degreeLicenseCertificateV2#MA
+* $degreeLicenseCertificateV2#PHD
 * $v3-NullFlavor#UNK "unknown"
