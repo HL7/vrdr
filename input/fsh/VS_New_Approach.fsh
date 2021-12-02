@@ -162,5 +162,5 @@ Description: "EducationLevel - Alternative"
 * $degreeLicenseCertificateV2#AA
 * $degreeLicenseCertificateV2#BA
 * $degreeLicenseCertificateV2#MA
-* $degreeLicenseCertificateV2#PHD
+* $HL7_EducationLevelCS#POSTG
 * $v3-NullFlavor#UNK "unknown"
