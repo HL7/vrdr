@@ -66,10 +66,12 @@ Description: "The Death Certificate profile is the body of the death certificate
 * section ^slicing.discriminator.path = "title"
 * section ^slicing.rules = #open
 * section ^slicing.description = "Slicing based on the value of the sliced element"
-* section contains disposition 1..1
+* section contains disposition 0..1
 * section[disposition].title = "disposition"
-* section contains decedent 1..1
+* section contains decedent 0..1
 * section[decedent].title = "decedent"
+* section contains funeralhomedirector 0..1
+* section[funeralhomedirector].title = "funeralhomedirector"
 * section[disposition].entry ^slicing.discriminator.type = #profile
 * section[disposition].entry ^slicing.discriminator.path = "resource"
 * section[disposition].entry ^slicing.rules = #open
