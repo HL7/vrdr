@@ -62,32 +62,31 @@ Description: "The Death Certificate profile is the body of the death certificate
 * event.detail ^short = "detail"
 * event.detail ^definition = "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373)."
 * section.title 1..1
-* section ^slicing.discriminator.type = #value
-* section ^slicing.discriminator.path = "title"
-* section ^slicing.rules = #open
-* section ^slicing.description = "Slicing based on the value of the sliced element"
-* section contains disposition 0..1
-* section[disposition].title = "disposition"
-* section contains decedent 0..1
-* section[decedent].title = "decedent"
-* section contains funeralhomedirector 0..1
-* section[funeralhomedirector].title = "funeralhomedirector"
-* section[disposition].entry ^slicing.discriminator.type = #profile
-* section[disposition].entry ^slicing.discriminator.path = "resource"
-* section[disposition].entry ^slicing.rules = #open
-* section[disposition].entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-* section[decedent].entry ^slicing.discriminator.type = #profile
-* section[decedent].entry ^slicing.discriminator.path = "resource"
-* section[decedent].entry ^slicing.rules = #open
-* section[decedent].entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-* section[decedent].entry contains decedent 1..1 MS
-* section[disposition].entry contains funeralhomedirector 1..1 MS
-* section[decedent].entry[decedent] ^short = "short"
-* section[decedent].entry[decedent] ^definition = "def"
-* section[decedent].entry[decedent] only Reference(Decedent)
-* section[funeralhomedirector].entry[funeralhomedirector] ^short = "short"
-* section[funeralhomedirector].entry[funeralhomedirector] ^definition = "def"
-* section[funeralhomedirector].entry[funeralhomedirector] only Reference(FuneralHomeDirector)
+// * section ^slicing.discriminator.type = #value
+// * section ^slicing.discriminator.path = "title"
+// * section ^slicing.rules = #open
+// * section ^slicing.description = "Slicing based on the value of the sliced element"
+// * section contains disposition 0..1
+// * section[disposition].title = "disposition"
+// * section contains decedent 0..1
+// * section[decedent].title = "decedent"
+// * section contains funeralhomedirector 0..1
+// * section[disposition].entry ^slicing.discriminator.type = #profile
+// * section[disposition].entry ^slicing.discriminator.path = "resource"
+// * section[disposition].entry ^slicing.rules = #open
+// * section[disposition].entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * section[decedent].entry ^slicing.discriminator.type = #profile
+// * section[decedent].entry ^slicing.discriminator.path = "resource"
+// * section[decedent].entry ^slicing.rules = #open
+// * section[decedent].entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+// * section[decedent].entry contains decedent 1..1 MS
+// * section[disposition].entry contains funeralhomedirector 1..1 MS
+// * section[disposition].entry[decedent] ^short = "short"
+// * section[disposition].entry[decedent] ^definition = "def"
+// * section[disposition].entry[decedent] only Reference(Decedent)
+// * section[disposition].entry[funeralhomedirector] ^short = "short"
+// * section[disposition].entry[funeralhomedirector] ^definition = "def"
+// * section[disposition].entry[funeralhomedirector] only Reference(FuneralHomeDirector)
 //* insert SectionEntry(decedent, decedent, 1, 1, Decedent, Decedent, Decedent)
 //* insert SectionEntry(disposition, FuneralHomeDirector, 0, 1, FuneralHomeDirector, FuneralHomeDirector, FuneralHomeDirector)
 
