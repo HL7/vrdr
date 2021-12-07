@@ -145,15 +145,21 @@ ValueSet: DecedentEducationLevelVS
 Id: vrdr-EducationLevel
 Title: "Education Level VS "
 Description: "EducationLevel"
-* include codes from system $HL7_EducationLevelCS
-* exclude $HL7_EducationLevelCS#PB
+* $HL7_EducationLevelCS#ELEM
+* $HL7_EducationLevelCS#SEC
+* $HL7_EducationLevelCS#HS
+* $HL7_EducationLevelCS#SCOL
+* $degreeLicenseCertificateV2#AA
+* $degreeLicenseCertificateV2#BA
+* $degreeLicenseCertificateV2#MA
+* $HL7_EducationLevelCS#POSTG
 * $v3-NullFlavor#UNK "unknown"
 
 ValueSet: DecedentEducationLevelAltVS
 Id: vrdr-EducationLevel-alt
 Title: "Education Level VS - Alternative "
 Description: "EducationLevel - Alternative"
-* $HL7_EducationLevelCS#ELEM
+* $HL7_EducationLevelCS#ELEM "Elementary School"
 * $HL7_EducationLevelCS#SEC
 * $HL7_EducationLevelCS#HS
 * $HL7_EducationLevelCS#SCOL
