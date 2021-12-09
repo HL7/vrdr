@@ -65,7 +65,7 @@ valuesets.each do |vsfile, fieldname|
             for concept in group["concept"]
                 puts "," if first == false
                 first = false
-                print "                { \"#{concept["code"]}\", \"#{concept["display"]}\", #{system} }"
+                print "                    { \"#{concept["code"]}\", \"#{concept["display"]}\", #{system} }"
             end
         }
         puts "\n            };"
