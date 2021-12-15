@@ -4,6 +4,7 @@
     <id value="VRDR-Decedent"/>
     <meta>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <versionId value="98"/>
         <lastUpdated value="2021-11-18T05:45:03.316+00:00"/>
         <source value="#xM4MeRaID1sT6m5m"/>
@@ -11,6 +12,11 @@
         <versionId value="97"/>
         <lastUpdated value="2021-11-10T03:08:51.070+00:00"/>
         <source value="#nqcZgr6cBkwKc1iM"/>
+=======
+        <versionId value="96"/>
+        <lastUpdated value="2021-11-08T20:32:15.443+00:00"/>
+        <source value="#guZEs5UgZMK0iVf1"/>
+>>>>>>> FHIR-34273-IJE-Race-and-Ethnicity
         <security>
             <system value="https://trifolia-fhir.lantanagroup.com/security"/>
             <code value="everyone^read"/>
@@ -44,7 +50,10 @@
             <code value="SUBSETTED"/>
             <display value="Resource encoded in summary mode"/>
         </tag>
+<<<<<<< HEAD
 >>>>>>> FHIR-33425-NumericRepresentationOfCity
+=======
+>>>>>>> FHIR-34273-IJE-Race-and-Ethnicity
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -98,6 +107,94 @@
                 <description value="PHVS_DecedentBirthplace_Country"/>
                 <valueSet value="https://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8031"/>
             </binding>
+        </element>
+        <element id="Patient.extension:ijerace">
+            <path value="Patient.extension"/>
+            <sliceName value="ijerace"/>
+            <short value="Optional Extensions Element"/>
+            <definition value="Optional Extension Element - found in all resources."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="DomainResource.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Race"/>
+            </type>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <constraint>
+                <key value="ext-1"/>
+                <severity value="error"/>
+                <human value="Must have either extensions or value[x], not both"/>
+                <expression value="extension.exists() != value.exists()"/>
+                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+            </constraint>
+            <mustSupport value="true"/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map value="N/A"/>
+            </mapping>
+        </element>
+        <element id="Patient.extension:ijeethnicity">
+            <path value="Patient.extension"/>
+            <sliceName value="ijeethnicity"/>
+            <short value="Optional Extensions Element"/>
+            <definition value="Optional Extension Element - found in all resources."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="DomainResource.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Ethnicity"/>
+            </type>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <constraint>
+                <key value="ext-1"/>
+                <severity value="error"/>
+                <human value="Must have either extensions or value[x], not both"/>
+                <expression value="extension.exists() != value.exists()"/>
+                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+            </constraint>
+            <mustSupport value="true"/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map value="N/A"/>
+            </mapping>
         </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
