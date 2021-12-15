@@ -3,9 +3,48 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Death-Certificate"/>
     <meta>
+<<<<<<< HEAD
         <versionId value="80"/>
         <lastUpdated value="2021-11-18T04:11:34.025+00:00"/>
         <source value="#iIhUUwQLJwCerinv"/>
+=======
+        <versionId value="21"/>
+        <lastUpdated value="2021-10-28T04:41:44.282+00:00"/>
+        <source value="#hmKGbaOToGkgavE6"/>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^TKWZUCCU^read"/>
+        </security>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"/>
     <version value="1.0"/>
@@ -134,10 +173,13 @@
         <element id="Composition.section">
             <path value="Composition.section"/>
             <slicing>
+<<<<<<< HEAD
                 <discriminator>
                     <type value="pattern"/>
                     <path value="code"/>
                 </discriminator>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
                 <rules value="open"/>
             </slicing>
         </element>
@@ -148,6 +190,7 @@
             <short value="DecedentDemographics"/>
             <definition value="This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."/>
             <max value="1"/>
+<<<<<<< HEAD
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DecedentDemographics.code">
@@ -166,10 +209,13 @@
                 <display value="Decedent Demographics"/>
             </patternCoding>
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+<<<<<<< HEAD
                 <discriminator>
                     <type value="profile"/>
                     <path value="$this.resolve()"/>
@@ -178,6 +224,19 @@
             </slicing>
             <min value="1"/>
             <max value="*"/>
+=======
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:DecedentDemographics.entry:Decedent">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Decedent"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
+            </type>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:Father">
             <path value="Composition.section.entry"/>
@@ -187,7 +246,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Father"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:Mother">
             <path value="Composition.section.entry"/>
@@ -197,7 +259,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Mother"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:Spouse">
             <path value="Composition.section.entry"/>
@@ -207,7 +272,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Spouse"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:Age">
             <path value="Composition.section.entry"/>
@@ -217,7 +285,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:BirthRecordID">
             <path value="Composition.section.entry"/>
@@ -227,7 +298,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-BirthRecordIdentifier"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:EducationLevel">
             <path value="Composition.section.entry"/>
@@ -237,7 +311,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:MilitaryService">
             <path value="Composition.section.entry"/>
@@ -247,7 +324,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Military-Service"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDemographics.entry:UsualWork">
             <path value="Composition.section.entry"/>
@@ -257,7 +337,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Usual-Work"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation">
             <path value="Composition.section"/>
@@ -265,6 +348,7 @@
             <definition value="This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."/>
             <min value="0"/>
             <max value="1"/>
+<<<<<<< HEAD
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DeathInvestigation.code">
@@ -283,10 +367,13 @@
                 <display value="Death Investigation"/>
             </patternCoding>
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+<<<<<<< HEAD
                 <discriminator>
                     <type value="profile"/>
                     <path value="$this.resolve()"/>
@@ -295,6 +382,10 @@
             </slicing>
             <min value="1"/>
             <max value="*"/>
+=======
+                <rules value="open"/>
+            </slicing>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:ExaminerContacted">
             <path value="Composition.section.entry"/>
@@ -304,7 +395,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Examiner-Contacted"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:Pregnancy">
             <path value="Composition.section.entry"/>
@@ -314,7 +408,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:TobaccoUse">
             <path value="Composition.section.entry"/>
@@ -324,7 +421,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Tobacco-Use-Contributed-To-Death"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:InjuryLocation">
             <path value="Composition.section.entry"/>
@@ -334,7 +434,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Injury-Location"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:Autopsy">
             <path value="Composition.section.entry"/>
@@ -344,7 +447,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Autopsy-Performed-Indicator"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:DeathLocation">
             <path value="Composition.section.entry"/>
@@ -354,7 +460,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:DeathPronouncementPerformer">
             <path value="Composition.section.entry"/>
@@ -363,7 +472,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Pronouncement-Performer"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:InjuryIncident">
             <path value="Composition.section.entry"/>
@@ -373,7 +485,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:DeathDate">
             <path value="Composition.section.entry"/>
@@ -383,7 +498,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Date"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathInvestigation.entry:TransportationRole">
             <path value="Composition.section.entry"/>
@@ -393,12 +511,16 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Transportation-Role"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathCertification">
             <path value="Composition.section"/>
             <sliceName value="DeathCertification"/>
             <max value="1"/>
+<<<<<<< HEAD
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DeathCertification.code">
@@ -417,10 +539,13 @@
                 <display value="Death Certification"/>
             </patternCoding>
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathCertification.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+<<<<<<< HEAD
                 <discriminator>
                     <type value="profile"/>
                     <path value="$this.resolve()"/>
@@ -429,6 +554,10 @@
             </slicing>
             <min value="1"/>
             <max value="*"/>
+=======
+                <rules value="open"/>
+            </slicing>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathCertification.entry:MannerOfDeath">
             <path value="Composition.section.entry"/>
@@ -438,7 +567,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Manner-of-Death"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathCertification.entry:CauseOfDeathCondition">
             <path value="Composition.section.entry"/>
@@ -448,7 +580,19 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+        </element>
+        <element id="Composition.section:DeathCertification.entry:Certifier">
+            <path value="Composition.section.entry"/>
+            <sliceName value="Certifier"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"/>
+            </type>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DeathCertification.entry:ConditionContributingToDeath">
             <path value="Composition.section.entry"/>
@@ -457,6 +601,7 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DeathCertification.entry:CauseOfDeathPathway">
@@ -468,11 +613,23 @@
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-of-Death-Pathway"/>
             </type>
             <mustSupport value="true"/>
+=======
+        </element>
+        <element id="Composition.section:DeathCertification.entry:DeathCertification">
+            <path value="Composition.section.entry"/>
+            <sliceName value="DeathCertification"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certification"/>
+            </type>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition">
             <path value="Composition.section"/>
             <sliceName value="DecedentDisposition"/>
             <max value="1"/>
+<<<<<<< HEAD
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section:DecedentDisposition.code">
@@ -491,10 +648,13 @@
                 <display value="Decedent Disposition"/>
             </patternCoding>
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry">
             <path value="Composition.section.entry"/>
             <slicing>
+<<<<<<< HEAD
                 <discriminator>
                     <type value="profile"/>
                     <path value="$this.resolve()"/>
@@ -502,6 +662,10 @@
                 <rules value="open"/>
             </slicing>
             <max value="*"/>
+=======
+                <rules value="open"/>
+            </slicing>
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry:DispositionLocation">
             <path value="Composition.section.entry"/>
@@ -510,7 +674,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Disposition-Location"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry:FuneralHome">
             <path value="Composition.section.entry"/>
@@ -520,7 +687,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Home"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry:Mortician">
             <path value="Composition.section.entry"/>
@@ -530,7 +700,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Mortician"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry:DispositionMethod">
             <path value="Composition.section.entry"/>
@@ -540,7 +713,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Disposition-Method"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.section:DecedentDisposition.entry:FuneralServiceLicensee">
             <path value="Composition.section.entry"/>
@@ -550,7 +726,10 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Funeral-Service-Licensee"/>
             </type>
+<<<<<<< HEAD
             <mustSupport value="true"/>
+=======
+>>>>>>> FHIR-33345-Update-PHINVADS-bindings
         </element>
         <element id="Composition.event.code">
             <path value="Composition.event.code"/>
