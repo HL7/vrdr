@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Education-Level"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2020-07-12T05:13:10.239+00:00"/>
-        <source value="#kwSRexAJ0iXFfL5f"/>
+        <versionId value="12"/>
+        <lastUpdated value="2021-11-22T04:35:10.077+00:00"/>
+        <source value="#USbJsWSXlqqrDsMl"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level"/>
     <version value="1.0"/>
@@ -89,7 +89,19 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_DecedentEducationLevel_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7385"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/education-level"/>
+            </binding>
+        </element>
+        <element id="Observation.value[x].extension">
+            <path value="Observation.value[x].extension"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-01234"/>
             </binding>
         </element>
     </differential>

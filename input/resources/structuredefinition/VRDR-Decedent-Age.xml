@@ -3,42 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Age"/>
     <meta>
-        <versionId value="15"/>
-        <lastUpdated value="2021-09-08T00:56:47.168+00:00"/>
-        <source value="#ed42KuqEawUJ8lQH"/>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^TKWZUCCU^read"/>
-        </security>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="Resource encoded in summary mode"/>
-        </tag>
+        <versionId value="18"/>
+        <lastUpdated value="2021-11-18T07:37:42.034+00:00"/>
+        <source value="#hwYJ4zImKDMq7taD"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Age"/>
     <version value="1.0"/>
@@ -134,8 +101,13 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <targetProfile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"/>
             </type>
+            <binding>
+                <strength value="required"/>
+                <description value="edit Bypass 01"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-01"/>
+            </binding>
         </element>
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>

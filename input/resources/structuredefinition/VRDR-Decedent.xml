@@ -3,57 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent"/>
     <meta>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <versionId value="98"/>
-        <lastUpdated value="2021-11-18T05:45:03.316+00:00"/>
-        <source value="#xM4MeRaID1sT6m5m"/>
-=======
-        <versionId value="97"/>
-        <lastUpdated value="2021-11-10T03:08:51.070+00:00"/>
-        <source value="#nqcZgr6cBkwKc1iM"/>
-=======
-        <versionId value="96"/>
-        <lastUpdated value="2021-11-08T20:32:15.443+00:00"/>
-        <source value="#guZEs5UgZMK0iVf1"/>
->>>>>>> FHIR-34273-IJE-Race-and-Ethnicity
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^dMG-NXHH^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^TKWZUCCU^read"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="user^PNgAbFNH^read"/>
-        </security>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="Resource encoded in summary mode"/>
-        </tag>
-<<<<<<< HEAD
->>>>>>> FHIR-33425-NumericRepresentationOfCity
-=======
->>>>>>> FHIR-34273-IJE-Race-and-Ethnicity
+        <versionId value="115"/>
+        <lastUpdated value="2021-12-15T21:03:06.708+00:00"/>
+        <source value="#KhjF3Ul8B1uYrTDv"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -81,6 +33,38 @@
         <element id="Patient">
             <path value="Patient"/>
         </element>
+        <element id="Patient.extension:NVSS-Race">
+            <path value="Patient.extension"/>
+            <sliceName value="NVSS-Race"/>
+            <short value="Extension"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Race"/>
+            </type>
+        </element>
+        <element id="Patient.extension:race/uscore-race">
+            <path value="Patient.extension"/>
+            <sliceName value="race/uscore-race"/>
+            <max value="1"/>
+        </element>
+        <element id="Patient.extension:ethnicity/uscore-ethnicity">
+            <path value="Patient.extension"/>
+            <sliceName value="ethnicity/uscore-ethnicity"/>
+            <max value="1"/>
+        </element>
+        <element id="Patient.extension:NVSS-Ethnicity">
+            <path value="Patient.extension"/>
+            <sliceName value="NVSS-Ethnicity"/>
+            <short value="Extension"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Ethnicity"/>
+            </type>
+        </element>
         <element id="Patient.extension:patient-birthPlace">
             <path value="Patient.extension"/>
             <sliceName value="patient-birthPlace"/>
@@ -105,96 +89,8 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_DecedentBirthplace_Country"/>
-                <valueSet value="https://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8031"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7"/>
             </binding>
-        </element>
-        <element id="Patient.extension:ijerace">
-            <path value="Patient.extension"/>
-            <sliceName value="ijerace"/>
-            <short value="Optional Extensions Element"/>
-            <definition value="Optional Extension Element - found in all resources."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="DomainResource.extension"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Race"/>
-            </type>
-            <constraint>
-                <key value="ele-1"/>
-                <severity value="error"/>
-                <human value="All FHIR elements must have a @value or children"/>
-                <expression value="hasValue() or (children().count() &gt; id.count())"/>
-                <xpath value="@value|f:*|h:div"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-            </constraint>
-            <constraint>
-                <key value="ext-1"/>
-                <severity value="error"/>
-                <human value="Must have either extensions or value[x], not both"/>
-                <expression value="extension.exists() != value.exists()"/>
-                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-            </constraint>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-            <isSummary value="false"/>
-            <mapping>
-                <identity value="rim"/>
-                <map value="n/a"/>
-            </mapping>
-            <mapping>
-                <identity value="rim"/>
-                <map value="N/A"/>
-            </mapping>
-        </element>
-        <element id="Patient.extension:ijeethnicity">
-            <path value="Patient.extension"/>
-            <sliceName value="ijeethnicity"/>
-            <short value="Optional Extensions Element"/>
-            <definition value="Optional Extension Element - found in all resources."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="DomainResource.extension"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/IJE-Ethnicity"/>
-            </type>
-            <constraint>
-                <key value="ele-1"/>
-                <severity value="error"/>
-                <human value="All FHIR elements must have a @value or children"/>
-                <expression value="hasValue() or (children().count() &gt; id.count())"/>
-                <xpath value="@value|f:*|h:div"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-            </constraint>
-            <constraint>
-                <key value="ext-1"/>
-                <severity value="error"/>
-                <human value="Must have either extensions or value[x], not both"/>
-                <expression value="extension.exists() != value.exists()"/>
-                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-            </constraint>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-            <isSummary value="false"/>
-            <mapping>
-                <identity value="rim"/>
-                <map value="n/a"/>
-            </mapping>
-            <mapping>
-                <identity value="rim"/>
-                <map value="N/A"/>
-            </mapping>
         </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
@@ -217,7 +113,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_Sex_MFU"/>
-                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.1038"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/administrative-gender"/>
             </binding>
         </element>
         <element id="Patient.birthDate">
@@ -258,12 +154,9 @@
         </element>
         <element id="Patient.address.city.extension">
             <path value="Patient.address.city.extension"/>
-<<<<<<< HEAD
             <label value="NCHS IMP8 address city code"/>
             <short value="address city code"/>
             <definition value="The address city code extension is used to enable the city portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."/>
-=======
->>>>>>> FHIR-33425-NumericRepresentationOfCity
             <min value="0"/>
             <max value="1"/>
             <type>
@@ -287,7 +180,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_DecedentResident_Country"/>
-                <valueSet value="https://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8032"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C"/>
             </binding>
         </element>
         <element id="Patient.maritalStatus">
@@ -300,7 +193,20 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_MaritalStatus_NCHS"/>
-                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7380"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/marital-status"/>
+            </binding>
+        </element>
+        <element id="Patient.maritalStatus.extension">
+            <path value="Patient.maritalStatus.extension"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="edit-Bypass-0124"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-0124"/>
             </binding>
         </element>
         <element id="Patient.contact.relationship">

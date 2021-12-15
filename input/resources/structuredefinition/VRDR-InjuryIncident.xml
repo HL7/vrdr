@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-InjuryIncident"/>
     <meta>
-        <versionId value="23"/>
-        <lastUpdated value="2020-08-17T16:17:34.702+00:00"/>
-        <source value="#MuquB0uvBh8BkWDP"/>
+        <versionId value="28"/>
+        <lastUpdated value="2021-12-07T03:00:49.713+00:00"/>
+        <source value="#0tOROhooN72upbzj"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-InjuryIncident"/>
     <name value="InjuryIncident"/>
@@ -110,8 +110,8 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <min value="3"/>
-            <max value="3"/>
+            <min value="2"/>
+            <max value="2"/>
         </element>
         <element id="Observation.component:placeOfInjury">
             <path value="Observation.component"/>
@@ -141,7 +141,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_PlaceOfInjury_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7374"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7374"/>
             </binding>
         </element>
         <element id="Observation.component:workInjuryIndicator">
@@ -172,39 +172,8 @@
             </type>
             <binding>
                 <strength value="required"/>
-                <description value="PHVS_YesNoNotApplicable_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7486"/>
-            </binding>
-        </element>
-        <element id="Observation.component:transportationEventIndicator">
-            <path value="Observation.component"/>
-            <sliceName value="transportationEventIndicator"/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element id="Observation.component:transportationEventIndicator.code">
-            <path value="Observation.component.code"/>
-            <min value="1"/>
-            <max value="1"/>
-            <fixedCodeableConcept>
-                <coding>
-                    <system value="http://loinc.org"/>
-                    <code value="69448-9"/>
-                    <display value="Injury leading to death associated with transportation event"/>
-                </coding>
-            </fixedCodeableConcept>
-        </element>
-        <element id="Observation.component:transportationEventIndicator.value[x]">
-            <path value="Observation.component.value[x]"/>
-            <min value="1"/>
-            <max value="1"/>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <binding>
-                <strength value="required"/>
-                <description value="PHVS_YesNoUnknown_CDC"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.888"/>
+                <description value="Yes No Unknown NotApplicable"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/Yes-No-Unknown-NotApplicable"/>
             </binding>
         </element>
     </differential>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent-Pregnancy"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2020-07-11T22:49:04.426+00:00"/>
-        <source value="#Xu6BTOfmEZYcJVsr"/>
+        <versionId value="14"/>
+        <lastUpdated value="2021-11-18T07:46:00.612+00:00"/>
+        <source value="#klAKRNpdLtcV4BaX"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy"/>
     <version value="1.0"/>
@@ -85,7 +85,20 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_PregnancyStatus_NCHS"/>
-                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.6003"/>
+                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003"/>
+            </binding>
+        </element>
+        <element id="Observation.value[x].extension">
+            <path value="Observation.value[x].extension"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="editBypass012"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-012"/>
             </binding>
         </element>
     </differential>

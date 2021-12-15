@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir">
+<Patient
+    xmlns="http://hl7.org/fhir">
     <id value="51b806c8-566f-463e-8783-9fbf6be8161d"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2020-07-22T19:41:31.297+00:00"/>
-        <source value="#EoJNRyx11BYIT5J6"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-08-18T12:13:30.341+00:00"/>
+        <source value="#EA5PrKCCVEwaBe1B"/>
         <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     </meta>
     <text>
         <status value="generated"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <div class="hapiHeaderText">Example Something Middle <b>LAST </b> Jr. </div>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div class="hapiHeaderText">Example Something Middle 
+                
+                <b>LAST </b> Jr. 
+            
+            </div>
             <table class="hapiPropertyTable">
                 <tbody>
                     <tr>
@@ -32,7 +38,7 @@
                     <tr>
                         <td>Date of birth</td>
                         <td>
-                            <span>24 February Year Unknown</span>
+                            <span>24 February Unknown Year</span>
                         </td>
                     </tr>
                 </tbody>
@@ -108,6 +114,16 @@
     <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
         <valueCode value="F"/>
     </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+        <valueAddress>
+            <line value="101 Example Birth Street"/>
+            <city value="12345"/>
+            <district value="13121"/>
+            <state value="UNK"/>
+            <postalCode value="01730"/>
+            <country value="US"/>
+        </valueAddress>
+    </extension>
     <identifier>
         <type>
             <coding>
@@ -136,13 +152,12 @@
     </name>
     <gender value="male"/>
     <birthDate>
-        <extension
-            url="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason">
+        <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Partial-date-part-absent-reason">
             <extension url="year-absent-reason">
                 <valueCode value="asked-unknown"/>
             </extension>
             <extension url="date-month">
-                <valueInteger value="02"/>
+                <valueInteger value="2"/>
             </extension>
             <extension url="date-day">
                 <valueInteger value="24"/>
@@ -150,21 +165,20 @@
         </extension>
     </birthDate>
     <address>
-        <extension
-            url="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator">
+        <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/Within-City-Limits-Indicator">
             <valueCoding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0136"/>
                 <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </extension>
-        <line value="101 Example Street"/>
+        <line value="101 Example Residence Street"/>
         <line value="Line 2"/>
-        <city value="Bedford"/>
-        <district value="Middlesex"/>
+        <city value="54321"/>
+        <district value="OTH"/>
         <state value="MA"/>
         <postalCode value="01730"/>
-        <country value="United States"/>
+        <country value="US"/>
     </address>
     <maritalStatus>
         <coding>
