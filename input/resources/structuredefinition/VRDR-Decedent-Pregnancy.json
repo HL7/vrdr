@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Decedent-Pregnancy",
 	"meta": {
-		"versionId": "13",
-		"lastUpdated": "2020-07-11T22:49:04.426+00:00",
-		"source": "#Xu6BTOfmEZYcJVsr"
+		"versionId": "14",
+		"lastUpdated": "2021-11-18T07:46:00.612+00:00",
+		"source": "#klAKRNpdLtcV4BaX"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Pregnancy",
 	"version": "1.0",
@@ -106,7 +106,25 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_PregnancyStatus_NCHS",
-					"valueSet": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.6003"
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003"
+				}
+			},
+			{
+				"id": "Observation.value[x].extension",
+				"path": "Observation.value[x].extension",
+				"max": "1",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"
+						]
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"description": "editBypass012",
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-012"
 				}
 			}
 		]

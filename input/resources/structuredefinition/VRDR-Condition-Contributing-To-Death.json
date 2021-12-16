@@ -1,124 +1,117 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "VRDR-Condition-Contributing-To-Death",
-    "meta": {
-        "versionId": "12",
-        "lastUpdated": "2020-07-11T03:07:27.108+00:00",
-        "source": "#XvtBGofn6sv4I5A4"
-    },
-    "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death",
-    "version": "1.0",
-    "name": "ConditionContributingToDeath",
-    "title": "VRDR Condition Contributing To Death",
-    "status": "draft",
-    "experimental": false,
-    "date": "2020-05-08",
-    "publisher": "Health Level Seven",
-    "contact": [
-        {
-            "name": "AbdulMalik Shakir",
-            "telecom": [
-                {
-                    "system": "phone",
-                    "value": "6266444491",
-                    "use": "work"
-                },
-                {
-                    "system": "email",
-                    "value": "abdulmalik.shakir@hi3solutions.com",
-                    "use": "work"
-                }
-            ]
-        }
-    ],
-    "description": "The Condition Contributing to Death profile is used to identify factors contributing to the cause of death as asserted by the death certifier. The Condition Contributing To Death profile builds upon the FHIR condition resource.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Condition",
-    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Condition",
-                "path": "Condition"
-            },
-            {
-                "id": "Condition.id",
-                "path": "Condition.id",
-                "short": "id",
-                "min": 0,
-                "max": "1"
-            },
-            {
-                "id": "Condition.category",
-                "path": "Condition.category",
-                "min": 1,
-                "max": "1",
-                "fixedCodeableConcept": {
-                    "coding": [
-                        {
-                            "code": "16100001",
-                            "display": "Death diagnosis",
-                            "system": "http://snomed.info/sct"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "Condition.code",
-                "path": "Condition.code",
-                "short": "code",
-                "comment": "The ConditionContributintgToDeath.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {"code": "CodeableConcept"}
-                ]
-            },
-            {
-                "id": "Condition.code.coding",
-                "path": "Condition.code.coding",
-                "min": 0,
-                "max": "*"
-            },
-            {
-                "id": "Condition.code.coding.code",
-                "path": "Condition.code.coding.code",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {"code": "code"}
-                ],
-                "binding": {
-                    "strength": "required",
-                    "description": "PHVS_CauseOfDeath_ICD-10_CDC",
-                    "valueSet": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3593"
-                }
-            },
-            {
-                "id": "Condition.subject",
-                "path": "Condition.subject",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": ["http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"]
-                    }
-                ]
-            },
-            {
-                "id": "Condition.asserter",
-                "path": "Condition.asserter",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": ["http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"]
-                    }
-                ]
-            }
-        ]
-    }
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Condition-Contributing-To-Death",
+	"meta": {
+		"versionId": "17",
+		"lastUpdated": "2021-12-07T04:46:21.188+00:00",
+		"source": "#dyH0XzRDF0bcHtkG"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Condition-Contributing-To-Death",
+	"version": "1.0",
+	"name": "ConditionContributingToDeath",
+	"title": "VRDR Condition Contributing To Death",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-08",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The Condition Contributing to Death profile is used to identify factors contributing to the cause of death as asserted by the death certifier. The Condition Contributing To Death profile builds upon the FHIR condition resource.",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Condition",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Condition",
+				"path": "Condition"
+			},
+			{
+				"id": "Condition.id",
+				"path": "Condition.id",
+				"short": "id",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Condition.category",
+				"path": "Condition.category",
+				"min": 1,
+				"max": "1",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "16100001",
+							"display": "Death diagnosis"
+						}
+					]
+				}
+			},
+			{
+				"id": "Condition.code",
+				"path": "Condition.code",
+				"short": "code",
+				"comment": "The ConditionContributintgToDeath.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component.",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Condition.code.text",
+				"path": "Condition.code.text",
+				"min": 1,
+				"max": "1",
+				"maxLength": 240
+			},
+			{
+				"id": "Condition.subject",
+				"path": "Condition.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Condition.asserter",
+				"path": "Condition.asserter",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+						]
+					}
+				]
+			}
+		]
+	}
 }

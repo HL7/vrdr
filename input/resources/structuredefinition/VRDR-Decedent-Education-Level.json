@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Decedent-Education-Level",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2020-07-12T05:13:10.239+00:00",
-		"source": "#kwSRexAJ0iXFfL5f"
+		"versionId": "12",
+		"lastUpdated": "2021-11-22T04:35:10.077+00:00",
+		"source": "#USbJsWSXlqqrDsMl"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent-Education-Level",
 	"version": "1.0",
@@ -112,7 +112,24 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_DecedentEducationLevel_NCHS",
-					"valueSet": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7385"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/education-level"
+				}
+			},
+			{
+				"id": "Observation.value[x].extension",
+				"path": "Observation.value[x].extension",
+				"max": "1",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/bypassEditFlag"
+						]
+					}
+				],
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-01234"
 				}
 			}
 		]

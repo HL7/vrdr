@@ -1,111 +1,126 @@
 {
-    "StructureDefinition": {
-        "xmlns": "http://hl7.org/fhir",
-        "id": {"value": "VRDR-Death-Location"},
-        "meta": {
-            "versionId": {"value": 25},
-            "lastUpdated": {"value": "2021-08-09T06:03:11.654+00:00"},
-            "source": {"value": "#LknNyIzX0yovEqKS"}
-        },
-        "url": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location"},
-        "version": {"value": 1},
-        "name": {"value": "DeathLocation"},
-        "title": {"value": "VRDR Death Location"},
-        "status": {"value": "draft"},
-        "experimental": {"value": false},
-        "date": {"value": "2020-05-09"},
-        "publisher": {"value": "Health Level Seven"},
-        "contact": {
-            "name": {"value": "AbdulMalik Shakir"},
-            "telecom": [
-                {
-                    "system": {"value": "phone"},
-                    "value": {"value": 6266444491},
-                    "use": {"value": "work"}
-                },
-                {
-                    "system": {"value": "email"},
-                    "value": {"value": "abdulmalik.shakir@hi3solutions.com"},
-                    "use": {"value": "work"}
-                }
-            ]
-        },
-        "fhirVersion": {"value": "4.0.1"},
-        "kind": {"value": "resource"},
-        "abstract": {"value": false},
-        "type": {"value": "Location"},
-        "baseDefinition": {"value": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"},
-        "derivation": {"value": "constraint"},
-        "differential": {
-            "element": [
-                {
-                    "id": "Location",
-                    "path": {"value": "Location"}
-                },
-                {
-                    "id": "Location.extension",
-                    "path": {"value": "Location.extension"},
-                    "slicing": {
-                        "discriminator": {
-                            "type": {"value": "value"},
-                            "path": {"value": "url"}
-                        },
-                        "rules": {"value": "open"}
-                    },
-                    "min": {"value": 0},
-                    "max": {"value": "*"}
-                },
-                {
-                    "id": "Location.extension:nationalReportingJurisdictionId",
-                    "path": {"value": "Location.extension"},
-                    "sliceName": {"value": "nationalReportingJurisdictionId"},
-                    "min": {"value": 1},
-                    "max": {"value": 1},
-                    "type": {
-                        "code": {"value": "Extension"},
-                        "profile": {"value": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"}
-                    }
-                },
-                {
-                    "id": "Location.name",
-                    "path": {"value": "Location.name"},
-                    "short": {"value": "name"},
-                    "min": {"value": 1},
-                    "max": {"value": 1}
-                },
-                {
-                    "id": "Location.description",
-                    "path": {"value": "Location.description"},
-                    "short": {"value": "description"},
-                    "min": {"value": 1},
-                    "max": {"value": 1}
-                },
-                {
-                    "id": "Location.type",
-                    "path": {"value": "Location.type"},
-                    "short": {"value": "type"},
-                    "min": {"value": 1},
-                    "max": {"value": 1},
-                    "binding": {
-                        "strength": {"value": "required"},
-                        "description": {"value": "PHVS_PlaceOfDeath_NCHS"},
-                        "valueSet": {"value": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7216"}
-                    }
-                },
-                {
-                    "id": "Location.address",
-                    "path": {"value": "Location.address"},
-                    "short": {"value": "address"},
-                    "min": {"value": 1},
-                    "max": {"value": 1}
-                },
-                {
-                    "id": "Location.position",
-                    "path": {"value": "Location.position"},
-                    "min": {"value": 0},
-                    "max": {"value": 1}
-                }
-            ]
-        }
-    }
+	"resourceType": "StructureDefinition",
+	"id": "VRDR-Death-Location",
+	"meta": {
+		"versionId": "28",
+		"lastUpdated": "2021-11-28T22:31:43.267+00:00",
+		"source": "#G51uINsQbVjGSD0e"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Location",
+	"version": "1.0",
+	"name": "DeathLocation",
+	"title": "VRDR Death Location",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-09",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "AbdulMalik Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "6266444491",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "abdulmalik.shakir@hi3solutions.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Location",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Location",
+				"path": "Location"
+			},
+			{
+				"id": "Location.extension",
+				"path": "Location.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "Location.extension:nationalReportingJurisdictionId",
+				"path": "Location.extension",
+				"sliceName": "nationalReportingJurisdictionId",
+				"min": 0,
+				"max": "1",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"
+						]
+					}
+				]
+			},
+			{
+				"id": "Location.name",
+				"path": "Location.name",
+				"short": "name",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.description",
+				"path": "Location.description",
+				"short": "description",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.type",
+				"path": "Location.type",
+				"short": "type",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "required",
+					"description": "Place of Death",
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/place-of-death"
+				}
+			},
+			{
+				"id": "Location.address",
+				"path": "Location.address",
+				"short": "address",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Location.address.district",
+				"path": "Location.address.district",
+				"binding": {
+					"strength": "required",
+					"description": "PHVS_DivisionVitalStatistics__County",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212"
+				}
+			},
+			{
+				"id": "Location.position",
+				"path": "Location.position",
+				"min": 0,
+				"max": "1"
+			}
+		]
+	}
 }

@@ -1,52 +1,19 @@
 {
+	"resourceType": "StructureDefinition",
 	"id": "addressCityCode",
 	"meta": {
-<<<<<<< HEAD
-		"versionId": "6",
-		"lastUpdated": "2021-11-10T03:09:04.924+00:00",
-		"source": "#kHgCsIkMMzS9FJKS",
-=======
-		"versionId": "5",
-		"lastUpdated": "2021-11-06T22:50:12.367+00:00",
-		"source": "#2xIGE2XK0H3jb0hV",
->>>>>>> FHIR-33729-ByPassEditFlag
-		"security": [
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^TKWZUCCU^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^write"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^PNgAbFNH^write"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^PNgAbFNH^read"
-			}
-		]
+		"versionId": "10",
+		"lastUpdated": "2021-11-22T06:47:34.689+00:00",
+		"source": "#n7Mbu2fQYW4dcGJC"
 	},
-	"resourceType": "StructureDefinition",
-	"status": "active",
-<<<<<<< HEAD
-	"kind": "complex-type",
-	"derivation": "constraint",
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode",
 	"version": "1.0",
 	"name": "AddressCityCode",
 	"title": "Address City Code",
+	"status": "active",
+	"description": "The address city code extension is used to enable the city portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf).",
 	"fhirVersion": "4.0.1",
+	"kind": "complex-type",
 	"abstract": false,
 	"context": [
 		{
@@ -54,16 +21,9 @@
 			"expression": "Address.city"
 		}
 	],
-=======
-	"kind": "resource",
-	"derivation": "constraint",
-	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode",
-	"name": "AddressCityCode",
-	"title": "Address City Code",
-	"abstract": false,
->>>>>>> FHIR-33729-ByPassEditFlag
 	"type": "Extension",
 	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
@@ -73,11 +33,6 @@
 			{
 				"id": "Extension.url",
 				"path": "Extension.url",
-<<<<<<< HEAD
-=======
-				"min": 1,
-				"max": "1",
->>>>>>> FHIR-33729-ByPassEditFlag
 				"fixedUri": "http://hl7.org/fhir/us/vrdr/StructureDefinition/addressCityCode"
 			},
 			{
@@ -88,6 +43,14 @@
 				"type": [
 					{
 						"code": "positiveInt"
+					}
+				],
+				"constraint": [
+					{
+						"key": "digitalCityCode",
+						"requirements": "The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf).",
+						"severity": "error",
+						"human": "The city code is a five digit positive integer value between 00000 and 99999 with leading zeroes included. The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
 					}
 				]
 			}
