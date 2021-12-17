@@ -41,3 +41,12 @@ Title:  "Parameters for 2022 Submission"
 * insert ParameterNameLength(PLACE8_2,8)
 * insert ParameterNameLength(PLACE8_3,8)
 * insert ParameterNameLength(PLACE20,20)
+
+
+Instance: Parameters2022-example
+InstanceOf: Parameters2022
+Title: "Parameters 2022 Example"
+Description: "An instance example of the 2022 Parameters resource profile."
+Usage: #example
+* parameter[PLACE1_1].valueString = "Q"
+* parameter[PLACE20].valueString = "20 character string"
