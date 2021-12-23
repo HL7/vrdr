@@ -263,3 +263,13 @@ Description: "PHVS_TransportationRelationships_NCHS"
 * $sct#257500003 "Passenger"
 * $sct#257518000 "Pedestrian"
 * $v3-NullFlavor#OTH "Other"
+
+
+ValueSet: PHVS_CertifierTypes_NCHS
+Id: PHVS_CertifierTypes_NCHS
+Title: "PHVS_CertifierTypes_NCHS"
+Description: "PHVS_CertifierTypes_NCHS"
+* $sct#455381000124109 "Medical Examiner/Coroner"
+* $sct#434641000124105 "Physician certified and pronounced death certificate"
+* $sct#434651000124107 "Physician certified death certificate"
+* $v3-NullFlavor#OTH "Other"
