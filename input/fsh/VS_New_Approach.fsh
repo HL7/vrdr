@@ -157,7 +157,7 @@ Description: "EducationLevel"
 
 ValueSet: DecedentEducationLevelAltVS
 Id: vrdr-EducationLevel-alt
-Title: "Education Level VS - Alternative "
+Title: "Education Level VS - Alternative  "
 Description: "EducationLevel - Alternative"
 * $HL7_EducationLevelCS#ELEM "Elementary School"
 * $HL7_EducationLevelCS#SEC
