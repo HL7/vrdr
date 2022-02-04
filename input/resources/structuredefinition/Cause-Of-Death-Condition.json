@@ -1,0 +1,122 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "Cause-Of-Death-Condition",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2022-01-31T15:13:02.663+00:00",
+		"source": "#FReu6n9mc9iewQhd"
+	},
+	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/Cause-Of-Death-Condition",
+	"version": "1.0",
+	"name": "CauseOfDeathCondition",
+	"title": "Cause Of Death Condition",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-05-08",
+	"publisher": "Health Level Seven",
+	"contact": [
+		{
+			"name": "Salimah Shakir",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "8184306686",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "salimah@shakirconsulting.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource.",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Condition",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Condition",
+				"path": "Condition"
+			},
+			{
+				"id": "Condition.id",
+				"path": "Condition.id",
+				"short": "id",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "Condition.code",
+				"path": "Condition.code",
+				"label": "CauseOfDeathCondition.code",
+				"short": "code",
+				"comment": "The CauseOfDeathCondition.code element has a CodeableConcept datatype. The CodeableConcept datatype has two components - coding and text. When seeking code value assignment from the NCHS the coding component is omitted. The text component conveys the pre-coded natual language text value. Upon return from the NCHS, the coding component conveys the NCHS assigned code value based upon the original text returned in the text component.",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Condition.code.text",
+				"path": "Condition.code.text",
+				"min": 1,
+				"max": "1",
+				"maxLength": 120
+			},
+			{
+				"id": "Condition.subject",
+				"path": "Condition.subject",
+				"short": "subject",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"
+						]
+					}
+				]
+			},
+			{
+				"id": "Condition.onset[x]",
+				"path": "Condition.onset[x]",
+				"short": "onset[x]",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Age"
+					},
+					{
+						"code": "string"
+					}
+				]
+			},
+			{
+				"id": "Condition.asserter",
+				"path": "Condition.asserter",
+				"short": "asserter",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Certifier"
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -2,12 +2,16 @@
 	"resourceType": "Composition",
 	"id": "54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-07-22T20:25:55.816+00:00",
-		"source": "#9AKuC1eEH9yOkDrI",
+		"versionId": "3",
+		"lastUpdated": "2022-01-24T05:10:34.415+00:00",
+		"source": "#Kqw0Ox8unRUHUJfw",
 		"profile": [
 			"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate"
 		]
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource &quot;54fd9b4c-7633-4e34-bf6b-6fbe9d48fd30&quot; Version &quot;2&quot;\n          Updated &quot;2020-07-22T20:25:55.816Z&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #9AKuC1eEH9yOkDrI!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-VRDR-Death-Certificate.html\">VRDR Death Certificate</a></p></div><p><b>identifier</b>: id: 1</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2019-02-01T16:47:04-05:00</p><p><b>author</b>: <a href=\"Practitioner-cb1219bc-785f-431c-9f56-b8fbbe78bc4d.html\">Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d</a> &quot; LAST&quot;</p><p><b>title</b>: VRDR Death Certificate</p><h3>Attesters</h3><table class=\"grid\"><tr><td>-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td>*</td><td>legal</td><td>2019-01-29T16:48:06-05:00</td><td><a href=\"Practitioner-cb1219bc-785f-431c-9f56-b8fbbe78bc4d.html\">Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d</a> &quot; LAST&quot;</td></tr></table><h3>Events</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>Diagnostic procedure (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#103693007)</span></td><td><a href=\"Procedure-219ef5e3-ed0c-4dab-88eb-b114daaebd73.html\">Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73</a></td></tr></table></div>"
 	},
 	"identifier": {
 		"value": "1"
@@ -63,90 +67,150 @@
 	],
 	"section": [
 		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
+						"code": "Demographics",
+						"display": "Decedent Demographics"
+					}
+				]
+			},
 			"entry": [
 				{
-					"reference": "Patient/51b806c8-566f-463e-8783-9fbf6be8161d"
+					"reference": "RelatedPerson/976c548f-9460-42f2-b41e-390b3bee91c8",
+					"display": "RelatedPerson - DecedentFather"
 				},
 				{
-					"reference": "Practitioner/cb1219bc-785f-431c-9f56-b8fbbe78bc4d"
+					"reference": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9",
+					"display": "RelatedPerson - DecedentMother"
 				},
 				{
-					"reference": "Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2"
+					"reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f",
+					"display": "RelatedPerson - DecedentSpouse"
 				},
 				{
-					"reference": "Procedure/219ef5e3-ed0c-4dab-88eb-b114daaebd73"
+					"reference": "Observation/9676ae27-2a89-4295-913c-0d6847300a3a",
+					"display": "Observation - DecedentEducationLevel"
 				},
 				{
-					"reference": "Organization/1a110397-936f-4be4-ab10-2caed226569d"
+					"reference": "Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7",
+					"display": "Observation - BirthRecordIdentifier"
 				},
 				{
-					"reference": "Organization/6f47da13-0c25-483b-8729-7b96716b17fc"
+					"reference": "Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b",
+					"display": "Observation - DecedentAge"
+				}
+			]
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
+						"code": "Investigation",
+						"display": "Death Investigation"
+					}
+				]
+			},
+			"entry": [
+				{
+					"reference": "Observation/4aed1450-ab2d-4cb9-858f-227b127323a6",
+					"display": "Observation - ExaminerContacted"
 				},
 				{
-					"reference": "PractitionerRole/4b96759f-8395-4093-8417-e1ca3cd26f0a"
+					"reference": "Observation/092e7b13-224d-46a6-ac31-0d98d4c84126",
+					"display": "Observation - DecedentPregnancy"
 				},
 				{
-					"reference": "List/60401545-f1e1-4a80-867f-02384ffed857"
+					"reference": "Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99",
+					"display": "Observation - TobaccoUseContributedToDeath"
 				},
 				{
-					"reference": "Location/bbe38248-9a8d-414f-996e-58d5fc9eb800"
+					"reference": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a",
+					"display": "Location - InjuryLocation"
 				},
 				{
-					"reference": "Observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813"
+					"reference": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88",
+					"display": "Observation - AutopsyPerformedIndicator"
 				},
 				{
-					"reference": "Condition/56b8ce2e-64f8-450b-8885-0699a53fc781"
+					"reference": "Location/b7de6056-817f-4d73-9830-ce566accd044",
+					"display": "Observation - DeathLocation"
 				},
 				{
-					"reference": "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666"
+					"reference": "Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a",
+					"display": "Observation - InjuryIncident"
 				},
 				{
-					"reference": "RelatedPerson/976c548f-9460-42f2-b41e-390b3bee91c8"
+					"reference": "Observation/b531cbf7-6290-424c-8155-0549c3fb3243",
+					"display": "Observation - DeathDate"
 				},
 				{
-					"reference": "RelatedPerson/89ababc6-8c2a-4e76-9f53-8677822f54a9"
+					"reference": "Observation/4424113f-69c4-40fe-b88f-d7b03304dfe4",
+					"display": "Observation - DecedentTransportationRole"
+				}
+			]
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
+						"code": "Certification",
+						"display": "Death Certification"
+					}
+				]
+			},
+			"entry": [
+				{
+					"reference": "Observation/d7c2e459-c7ca-415c-a38c-f78a0f0c5813",
+					"display": "Observation - MannerOfDeath"
 				},
 				{
-					"reference": "RelatedPerson/962fded4-b90a-44f7-950e-3832011ad65f"
+					"reference": "Condition/f0cbc63d-ac4e-469b-8761-70b6ea8bf666",
+					"display": "Condition - CauseOfDeathCondition"
 				},
 				{
-					"reference": "Observation/9676ae27-2a89-4295-913c-0d6847300a3a"
+					"reference": "Condition/56b8ce2e-64f8-450b-8885-0699a53fc781",
+					"display": "Condition - ConditionContributingToDeath"
 				},
 				{
-					"reference": "Observation/6606dd3a-49ba-47a9-a6e7-e7e4ebeddac7"
+					"reference": "List/60401545-f1e1-4a80-867f-02384ffed857",
+					"display": "List - CauseOfDeathPathway"
+				}
+			]
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
+						"code": "Disposition",
+						"display": "Decedent Disposition"
+					}
+				]
+			},
+			"entry": [
+				{
+					"reference": "Location/bbe38248-9a8d-414f-996e-58d5fc9eb800",
+					"display": "Location - DispositionLocation"
 				},
 				{
-					"reference": "Observation/d80681ff-9f1d-4915-87b5-eda54534096a"
+					"reference": "Organization/6f47da13-0c25-483b-8729-7b96716b17fc",
+					"display": "Organization - FuneralHome"
 				},
 				{
-					"reference": "Observation/0db13e0d-fea6-4ef1-8285-62d761f61d88"
+					"reference": "Practitioner/80db6f45-8a6d-4583-8a03-55a6663523c2",
+					"display": "Practitioner - Mortician"
 				},
 				{
-					"reference": "Observation/df5a2807-e0b2-4971-9820-efdbbbfcef7b"
+					"reference": "Observation/d80681ff-9f1d-4915-87b5-eda54534096a",
+					"display": "Observation - DecedentDispositionMethod"
 				},
 				{
-					"reference": "Observation/092e7b13-224d-46a6-ac31-0d98d4c84126"
-				},
-				{
-					"reference": "Observation/4424113f-69c4-40fe-b88f-d7b03304dfe4"
-				},
-				{
-					"reference": "Observation/4aed1450-ab2d-4cb9-858f-227b127323a6"
-				},
-				{
-					"reference": "Observation/4d0ce010-16f1-44f4-bbf8-3a2030e9de99"
-				},
-				{
-					"reference": "Location/4b863da8-1bb5-4b17-9be2-4ea39b5d3a2a"
-				},
-				{
-					"reference": "Observation/37c086a1-05bd-479c-92b4-1234d38bfe5a"
-				},
-				{
-					"reference": "Location/b7de6056-817f-4d73-9830-ce566accd044"
-				},
-				{
-					"reference": "Observation/b531cbf7-6290-424c-8155-0549c3fb3243"
+					"reference": "PractitionerRole/4b96759f-8395-4093-8417-e1ca3cd26f0a",
+					"display": "Observation - FuneralServiceLicensee"
 				}
 			]
 		}
