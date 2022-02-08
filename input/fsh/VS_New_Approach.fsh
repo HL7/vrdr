@@ -124,7 +124,7 @@ Description: "PHVS_MaritalStatus_NCHS"
 
 ValueSet: RelatedPersonRelationshipTypeVS
 Id: vrdr-RelatedPersonRelationshipType
-Title: "RelatedPerson Relationship type VS -- RelatedPersonRelationshipType"
+Title: "RelatedPerson Relationship type VS -- PHVS_RelatedPersonRelationshipType_NCHS"
 Description: "PHVS_RelatedPersonRelationshipType_NCHS"
 * $roleCode#CHLDADOPT "adopted child"
 * $roleCode#DAUADOPT "adopted daughter"
