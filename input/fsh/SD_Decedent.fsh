@@ -2,6 +2,7 @@ Profile: Decedent
 Parent: USCorePatientProfile
 Id: vrdr-decedent
 Title: "Decedent"
+Description: "Decedent (USCorePatient)"
 * insert boilerplate
 * extension contains
     NVSSRace named NVSS-Race 0..1 MS and

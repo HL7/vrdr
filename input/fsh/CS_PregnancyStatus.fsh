@@ -1,6 +1,7 @@
 CodeSystem: PregnancyStatusCS
 Id: vrdr-pregnancy-status-cs
-Title: "PHVS_PregnancyStatus_NCHS codes from PH_PHINVS_CDC"
+Title: "Pregnancy Status Codes"
+Description: "PHVS_PregnancyStatus_NCHS codes from PH_PHINVS_CDC"
 * insert boilerplate
 * #PHC1260 "Not pregnant within past year"
 * #PHC1261 "Pregnant at time of death"

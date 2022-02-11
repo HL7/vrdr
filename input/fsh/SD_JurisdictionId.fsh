@@ -2,6 +2,7 @@
 Extension: LocationJurisdictionId
 Id: Location-Jurisdiction-Id
 Title: "Location Jurisdiction Id"
+Description: "Location Jurisdiction Id (Extension)"
 * insert boilerplate
 * ^context.type = #extension
 * ^context.expression = "Location"

@@ -5,6 +5,7 @@
 Extension: InjuryLocationReference
 Id: vrdr-injury-location-reference
 Title: "Injury Location Reference"
+Description: "Injury Location Reference (Extension)"
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(InjuryLocation)
@@ -13,6 +14,7 @@ Title: "Injury Location Reference"
 Extension: DeathLocationReference
 Id: vrdr-death-location-reference
 Title: "Death Location Reference"
+Description: "Death Location Reference (Extension)"
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(DeathLocation)
@@ -20,6 +22,7 @@ Title: "Death Location Reference"
 Extension: DispositionLocationReference
 Id: vrdr-disposition-location-reference
 Title: "Disposition Location Reference"
+Description: "Disposition Location Reference (Extension)"
 * value[x] 1..1
 * value[x] only Reference
 * value[x] only Reference(DispositionLocation)

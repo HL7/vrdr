@@ -2,7 +2,7 @@ Profile: ConditionContributingToDeath
 Parent: USCoreCondition
 Id: vrdr-condition-contributing-to-death
 Title: "Condition Contributing To Death"
-Description: "The Condition Contributing to Death profile is used to identify factors contributing to the cause of death as asserted by the death certifier. The Condition Contributing To Death profile builds upon the FHIR condition resource."
+Description: "Identifies factors contributing to the cause of death as asserted by the death certifier (USCoreCondition)"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"

@@ -2,6 +2,7 @@ Profile: DeathCertification
 Parent: USCoreProcedureProfile
 Id: vrder-death-certification
 Title: "Death Certification Procedure"
+Description: "The prodedure where the certification of death was performed by the certifier (USCoreProcedure)."
 * insert boilerplate
 * identifier 1..*
 * status 1..1

@@ -2,6 +2,7 @@ Profile: DecedentTransportationRole
 Parent: Observation
 Id: vrdr-decedent-transportation-role
 Title: "Decedent Transportation Role"
+Description: "Decedent Transportation Role (Observation)"
 * insert boilerplate
 * status 1..1
 * status only code

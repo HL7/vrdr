@@ -2,6 +2,7 @@ Profile: BirthRecordIdentifier
 Parent: Observation
 Id: vrdr-birth-record-identifier
 Title: "Birth Record Identifier"
+Description: "Birth Record Identifier (Observation)"
 * insert boilerplate
 * status 1..1
 * status = #final (exactly)

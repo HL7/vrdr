@@ -2,6 +2,7 @@ Profile: DispositionLocation
 Parent: USCoreLocation
 Id: vrdr-disposition-location
 Title: "Disposition Location"
+Description: "Disposition Location (USCoreLocation)"
 * insert boilerplate
 * name 1..1
 * name ^short = "name"

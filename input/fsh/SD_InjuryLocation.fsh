@@ -2,6 +2,7 @@ Profile: InjuryLocation
 Parent: USCoreLocation
 Id: vrdr-injury-location
 Title: "Injury Location"
+Description: "Injury Location (USCoreLocation)"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"

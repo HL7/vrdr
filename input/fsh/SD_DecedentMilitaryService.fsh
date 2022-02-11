@@ -2,6 +2,7 @@ Profile: DecedentMilitaryService
 Parent: Observation
 Id: vrdr-decedent-military-service
 Title: "Decedent Military Service"
+Description: "Decedent Military Service (Observation)"
 * insert boilerplate
 * status 1..1
 * status only code

@@ -2,6 +2,7 @@ Profile: DeathDate
 Parent: Observation
 Id: vrdr-death-date
 Title: "Death Date"
+Description: "Date of death (Observation).  The PartialDatePartAbsent extension supports partial dates."
 * insert boilerplate
 * extension contains
     DeathLocationReference named deathLocationReference 0..1

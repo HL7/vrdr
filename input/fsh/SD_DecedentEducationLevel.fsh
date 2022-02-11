@@ -2,6 +2,7 @@ Profile: DecedentEducationLevel
 Parent: Observation
 Id: vrdr-decedent-education-level
 Title: "Decedent Education Level"
+Description: "Decedent Education Level (Observation)"
 * insert boilerplate
 * ^context.type = #element
 * ^context.expression = "Observation"

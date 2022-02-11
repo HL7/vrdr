@@ -2,6 +2,7 @@ Profile: InjuryIncident
 Parent: Observation
 Id: vrdr-injury-incident
 Title: "Injury Incident"
+Description: "Injury Incident (Observation)"
 * insert boilerplate
 * extension contains
     InjuryLocationReference named injuryLocationReference 0..1

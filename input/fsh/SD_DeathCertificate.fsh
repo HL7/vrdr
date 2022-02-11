@@ -2,7 +2,7 @@ Profile: DeathCertificate
 Parent: Composition
 Id: vrdr-death-certificate
 Title: "Death Certificate"
-Description: "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource."
+Description: "The body of the death certificate document (Composition)."
 * insert boilerplate
 * status 1..1
 * status only code
@@ -23,27 +23,17 @@ Description: "The Death Certificate profile is the body of the death certificate
 * attester.mode 1..1
 * attester.mode only code
 * attester.mode = #legal (exactly)
-* attester.mode ^short = "mode"
-* attester.mode ^definition = "This attester SHALL contain exactly one [1..1] mode=\"\"legal\"\"(CONF:4393-367)."
 * attester.time 1..1
-* attester.time ^short = "time"
-* attester.time ^definition = "This attester SHALL contain exactly one [1..1] time (CONF:4393-369)."
 * attester.party 1..1
 * attester.party only Reference(Certifier)
-* attester.party ^short = "party"
-* attester.party ^definition = "This attester SHALL contain exactly one [1..1] party=\"VRDR Certifier\"(CONF:4393-368)."
 * event 1..1
 * event only BackboneElement
 * event ^short = "event"
 * event.code 1..1
 * event.code only CodeableConcept
 * event.code = $sct#103693007 "Diagnostic procedure (procedure)" (exactly)
-* event.code ^short = "code"
-* event.code ^definition = "This event SHALL contain exactly one [1..1] code=\"\"103693007\"\"(CONF:4393-372)."
 * event.detail 1..1
 * event.detail only Reference(DeathCertification)
-* event.detail ^short = "detail"
-* event.detail ^definition = "This event SHALL contain exactly one [1..1] detail=\"VRDR Death Certification\" (CONF:4393-373)."
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code.coding"
 * section ^slicing.rules = #open
@@ -89,7 +79,7 @@ Description: "The Death Certificate profile is the body of the death certificate
 * section[DeathInvestigation].entry ^slicing.rules = #open
 * section[DeathInvestigation].entry contains
     ExaminerContacted 0..1 MS and
-    Pregnancy 0..1 MS and
+    PregnancyStatus 0..1 MS and
     TobaccoUse 0..1 MS and
     InjuryLocation 0..1 MS and
     Autopsy 0..1 MS and
@@ -99,7 +89,7 @@ Description: "The Death Certificate profile is the body of the death certificate
     DeathDate 0..1 MS and
     TransportationRole 0..1 MS
 * section[DeathInvestigation].entry[ExaminerContacted] only Reference(ExaminerContacted)
-* section[DeathInvestigation].entry[Pregnancy] only Reference(DecedentPregnancy)
+* section[DeathInvestigation].entry[PregnancyStatus] only Reference(DecedentPregnancyStatus)
 * section[DeathInvestigation].entry[TobaccoUse] only Reference(TobaccoUseContributedToDeath)
 * section[DeathInvestigation].entry[InjuryLocation] only Reference(InjuryLocation)
 * section[DeathInvestigation].entry[Autopsy] only Reference(AutopsyPerformedIndicator)

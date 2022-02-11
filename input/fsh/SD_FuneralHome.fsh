@@ -2,6 +2,7 @@ Profile: FuneralHome
 Parent: USCoreOrganizationProfile
 Id: vrdr-funeral-home
 Title: "Funeral Home"
+Description: "Funeral Home (USCoreOrganization)"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"

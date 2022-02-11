@@ -1,7 +1,7 @@
 Profile: TobaccoUseContributedToDeath
 Parent: Observation
 Id: vrdr-tobacco-use-contributed-to-death
-Title: "VRDR Tobacco Use Contributed To Death"
+Title: "Tobacco Use Contributed To Death"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"
@@ -19,4 +19,3 @@ Title: "VRDR Tobacco Use Contributed To Death"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from ContributoryTobaccoUseVS (required)
-* value[x] ^binding.description = "PHVS_ContributoryTobaccoUse_NCHS"

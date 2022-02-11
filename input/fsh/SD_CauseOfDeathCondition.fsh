@@ -2,7 +2,7 @@ Profile: CauseOfDeathCondition
 Parent: USCoreCondition
 Id: Cause-Of-Death-Condition
 Title: "Cause Of Death Condition"
-Description: "The Cause of Death Condition profile reflects one of the eventually ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. It is sent to NCHS for encoding and returned as a coded cause of death prior to submission of the completed death report. The Cause Of Death Condition profile builds upon the FHIR Condition resource."
+Description: "Cause of death (USCoreCondition) prior to submission of the completed death report."
 * insert boilerplate
 * id 0..1
 * id ^short = "id"

@@ -2,6 +2,7 @@ Profile: DeathLocation
 Parent: USCoreLocation
 Id: vrdr-death-location
 Title: "Death Location"
+Description: "Death Location (USCoreLocation)"
 * insert boilerplate
 * extension contains
     LocationJurisdictionId named nationalReportingJurisdictionId 1..1

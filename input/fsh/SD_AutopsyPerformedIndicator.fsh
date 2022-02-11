@@ -2,6 +2,7 @@ Profile: AutopsyPerformedIndicator
 Parent: Observation
 Id: vrdr-autopsy-performed-indicator
 Title: "Autopsy Performed Indicator"
+Description: "Autopsy Performed Indicator (Observation)"
 * insert boilerplate
 * status 1..1
 * status only code

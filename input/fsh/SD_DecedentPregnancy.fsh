@@ -1,7 +1,8 @@
-Profile: DecedentPregnancy
+Profile: DecedentPregnancyStatus
 Parent: Observation
-Id: vrdr-decedent-pregnancy
-Title: "Decedent Pregnancy"
+Id: vrdr-decedent-pregnancy-status
+Title: "Decedent Pregnancy Status"
+Description: "Decedent Pregnancy Status (Observation)"
 * insert boilerplate
 * status 1..1
 * status only code
