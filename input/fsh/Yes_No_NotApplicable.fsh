@@ -1,7 +1,7 @@
-ValueSet: Yes_No_NotApplicable
-Id: Yes-No-NotApplicable
+ValueSet: YesNoNotApplicableVS
+Id: vrdr-yes-no-not-applicable-vs
 Title: "Yes No NotApplicable"
-Description: """A set of codes used to express an affirmative response (Yes), negative response (No), or indicate that a response is not applicable (NA) with regard to the question posed. 
+Description: """A set of codes used to express an affirmative response (Yes), negative response (No), or indicate that a response is not applicable (NA) with regard to the question posed.
 
 **Inter-jurisdictional Exchange (IJE) concept mapping**
 

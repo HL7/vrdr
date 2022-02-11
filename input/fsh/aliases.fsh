@@ -17,8 +17,6 @@ Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 Alias: $Cause-Of-Death-Condition = http://hl7.org/fhir/us/vrdr/StructureDefinition/Cause-Of-Death-Condition
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $ViewValueSet.action = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
-Alias: $Yes-No-Unknown = http://hl7.org/fhir/us/vrdr/ValueSet/Yes-No-Unknown
-Alias: $Yes-No-Unknown-NotApplicable = http://hl7.org/fhir/us/vrdr/ValueSet/Yes-No-Unknown-NotApplicable
 Alias: $ViewValueSet.action_1 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6001
 Alias: $place-of-death = http://hl7.org/fhir/us/vrdr/ValueSet/place-of-death
 Alias: $ViewValueSet.action_2 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212
@@ -47,3 +45,5 @@ Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
 Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+Alias: $Yes-No-Unknown = YesNoUnknownVS
+Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS

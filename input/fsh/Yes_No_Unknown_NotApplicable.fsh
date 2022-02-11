@@ -1,5 +1,5 @@
-ValueSet: Yes_No_Unknown_NotApplicable
-Id: Yes-No-Unknown-NotApplicable
+ValueSet: YesNoUnknownNotApplicableVS
+Id: vrdr-yes-no-unknown-not-applicable-vs
 Title: "Yes No Unknown NotApplicable"
 Description: """A set of codes used to express an affirmative response (Yes), negative response (No), or indicate that a response is not applicable (NA) or unknown (UNK) with regard to the question posed.
 
