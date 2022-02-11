@@ -1,7 +1,7 @@
 Profile: InterestedParty
 Parent: USCoreOrganizationProfile
-Id: VRDR-Interested-Party
-Title: "VRDR Interested Party"
+Id: vrdr-interested-party
+Title: "Interested Party"
 * ^meta.versionId = "9"
 * ^meta.lastUpdated = "2020-07-12T20:50:19.198+00:00"
 * ^meta.source = "#eGOxlRQeMmKTfK2R"

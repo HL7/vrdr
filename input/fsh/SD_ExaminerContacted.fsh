@@ -1,7 +1,7 @@
 Profile: ExaminerContacted
 Parent: Observation
-Id: VRDR-Examiner-Contacted
-Title: "VRDR Examiner Contacted"
+Id: vrdr-examiner-contacted
+Title: "Examiner Contacted"
 * ^meta.versionId = "10"
 * ^meta.lastUpdated = "2021-11-22T06:27:25.440+00:00"
 * ^meta.source = "#qBr7V9wrXJYgis8u"

@@ -1,7 +1,7 @@
 Profile: DeathCertificateDocument
 Parent: Bundle
-Id: VRDR-Death-Certificate-Document
-Title: "VRDR Death Certificate Document"
+Id: vrdr-death-certificate-document
+Title: "Death Certificate Document"
 Description: "The Death Certificate Document profile is a bundle of resources comprising the death certificate composition. The Death Certificate Document builds upon the FHIR Document resource."
 * insert boilerplate
 * identifier 1..1

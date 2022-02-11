@@ -1,4 +1,3 @@
-Alias: $ViewValueSet.action = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#
 
 Extension: LocationJurisdictionId
 Id: Location-Jurisdiction-Id

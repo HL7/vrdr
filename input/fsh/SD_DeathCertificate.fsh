@@ -1,7 +1,7 @@
 Profile: DeathCertificate
 Parent: Composition
-Id: VRDR-Death-Certificate
-Title: "VRDR Death Certificate"
+Id: vrdr-death-certificate
+Title: "Death Certificate"
 Description: "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource."
 * insert boilerplate
 * status 1..1

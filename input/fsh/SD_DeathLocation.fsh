@@ -3,7 +3,8 @@ Parent: USCoreLocation
 Id: vrdr-death-location
 Title: "Death Location"
 * insert boilerplate
-* extension contains LocationJurisdictionId named nationalReportingJurisdictionId 1..1
+* extension contains
+    LocationJurisdictionId named nationalReportingJurisdictionId 1..1
 * name 1..1
 * name ^short = "name"
 * description 1..1

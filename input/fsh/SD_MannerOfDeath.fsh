@@ -1,7 +1,7 @@
 Profile: MannerOfDeath
 Parent: Observation
-Id: VRDR-Manner-of-Death
-Title: "VRDR Manner of Death"
+Id: vrdr-manner-of-death
+Title: "Manner of Death"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"

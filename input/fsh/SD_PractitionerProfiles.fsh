@@ -6,7 +6,7 @@ Title: "Funeral Service Licensee"
 
 Profile: Mortician
 Parent: USCorePractitionerProfile
-Id: VRDR-Mortician
+Id: vrdr-mortician
 Title: "Mortician"
 * insert boilerplate
 
@@ -46,7 +46,7 @@ Title: "Funeral Home Director"
 
 Profile: DeathPronouncementPerformer
 Parent: USCorePractitionerProfile
-Id: VRDR-Death-Pronouncement-Performer
+Id: vrdr-death-pronouncement-performer
 Title: "VRDR Death Pronouncement Performer"
 * insert boilerplate
 * identifier 1..1

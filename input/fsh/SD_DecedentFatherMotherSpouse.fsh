@@ -16,7 +16,7 @@ Title: "Decedent Father"
 
 Profile: DecedentMother
 Parent: RelatedPerson
-Id: VRDR-Decedent-Mother
+Id: vrdr-decedent-mother
 Title: "Decedent Mother"
 * insert boilerplate
 * patient 1..1
@@ -30,7 +30,7 @@ Title: "Decedent Mother"
 Profile: DecedentSpouse
 Parent: RelatedPerson
 Id: vrdr-decedent-spouse
-Title: "VRDR Decedent Spouse"
+Title: "Decedent Spouse"
 * insert boilerplate
 * patient 1..1
 * patient only Reference(Decedent)

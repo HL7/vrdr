@@ -84,8 +84,8 @@
 
 
 Extension: PartialDatePartAbsentReason
-Id: VRDR-Partial-date-part-absent-reason
-Title: "Extension - Partial Date Part Absent Reason"
+Id: vrdr-partial-date-part-absent-reason
+Title: "Partial Date Part Absent Reason Extension"
 Description: "Provides values of a partial date along with the reason one or more expected date part is missing."
 * insert boilerplate
 * ^context[0].type = #element

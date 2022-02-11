@@ -1,7 +1,7 @@
 Profile: DecedentAge
 Parent: Observation
-Id: VRDR-Decedent-Age
-Title: "VRDR Decedent Age"
+Id: vrdr-decedent-age
+Title: "Decedent Age"
 Description: "The decedent's chronological age at the time of death. When present, the effective date of this observation shall be equal to the decedent's date of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."
 * insert boilerplate
 * status 1..1

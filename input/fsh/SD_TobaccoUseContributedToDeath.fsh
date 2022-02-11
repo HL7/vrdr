@@ -1,6 +1,6 @@
 Profile: TobaccoUseContributedToDeath
 Parent: Observation
-Id: VRDR-Tobacco-Use-Contributed-To-Death
+Id: vrdr-tobacco-use-contributed-to-death
 Title: "VRDR Tobacco Use Contributed To Death"
 * insert boilerplate
 * id 0..1

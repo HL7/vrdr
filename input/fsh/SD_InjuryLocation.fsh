@@ -1,7 +1,7 @@
 Profile: InjuryLocation
 Parent: USCoreLocation
-Id: VRDR-Injury-Location
-Title: "VRDR Injury Location"
+Id: vrdr-injury-location
+Title: "Injury Location"
 * insert boilerplate
 * id 0..1
 * id ^short = "id"
