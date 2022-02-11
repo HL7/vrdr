@@ -1,4 +1,4 @@
-CodeSystem: MissingValueReason_CS
+CodeSystem: MissingValueReasonCS
 Id: vrdr-missing-value-reason-cs
 Title: "Missing Value Reason Codesystem"
 Description: "Missing Value Reason Codesystem"

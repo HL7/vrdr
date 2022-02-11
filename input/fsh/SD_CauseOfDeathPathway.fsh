@@ -19,4 +19,4 @@ Description: """VRDR Cause of Death Pathway is an ordered list of cause of death
 * orderedBy = $list-order#priority "Sorted by Priority" (exactly)
 * entry 1..5
 * entry.item 1..1
-* entry.item only Reference(Cause-Of-Death-Condition)
+* entry.item only Reference(CauseOfDeathCondition)

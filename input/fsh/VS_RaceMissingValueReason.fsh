@@ -12,6 +12,6 @@ Description: """A set of code values used to indicate the reason decedent race d
 |C|Not obtainable|C|Not obtainable|"""
 * ^name = "Race Missing Value Reason"
 * insert boilerplate
-* $vrdrMissingValueReason#R "Refused"
-* $vrdrMissingValueReason#S "Sought, but unknown"
-* $vrdrMissingValueReason#C "Not obtainable"
+* MissingValueReasonCS#R "Refused"
+* MissingValueReasonCS#S "Sought, but unknown"
+* MissingValueReasonCS#C "Not obtainable"

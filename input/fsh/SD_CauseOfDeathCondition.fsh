@@ -1,6 +1,6 @@
 Profile: CauseOfDeathCondition
 Parent: USCoreCondition
-Id: Cause-Of-Death-Condition
+Id: vrdr-cause-of-death-condition
 Title: "Cause Of Death Condition"
 Description: "Cause of death (USCoreCondition) prior to submission of the completed death report."
 * insert boilerplate

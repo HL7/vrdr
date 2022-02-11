@@ -111,7 +111,7 @@ Description: "The body of the death certificate document (Composition)."
     ConditionContributingToDeath 0..* MS and
     CauseOfDeathPathway 0..1 MS
 * section[DeathCertification].entry[MannerOfDeath] only Reference(MannerOfDeath)
-* section[DeathCertification].entry[CauseOfDeathCondition] only Reference(Cause-Of-Death-Condition)
+* section[DeathCertification].entry[CauseOfDeathCondition] only Reference(CauseOfDeathCondition)
 * section[DeathCertification].entry[ConditionContributingToDeath] only Reference(ConditionContributingToDeath)
 * section[DeathCertification].entry[CauseOfDeathPathway] only Reference(CauseOfDeathPathway)
 * section[DecedentDisposition].code 1..1 MS
