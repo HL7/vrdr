@@ -2,7 +2,7 @@ RuleSet: boilerplate
 // * ^status = #draft
 // * ^experimental = false
 // * ^date = "2022-02-08"
-// * ^publisher = "Health Level Seven International"
+* ^publisher = "Health Level Seven International"
 // * ^contact[0].name = "HL7 International - Public Health"
 // * ^contact[=].telecom.system = #url
 // * ^contact[=].telecom.value = "http://www.hl7.org/Special/committees/pher"
