@@ -86,7 +86,7 @@
 Extension: PartialDatePartAbsentReason
 Id: vrdr-partial-date-part-absent-reason
 Title: "Partial Date Part Absent Reason Extension"
-Description: "Provides values of a partial date along with the reason one or more expected date part is missing."
+Description: "Provides values of a partial date along with the reason one or more expected date part is missing.(Extension)"
 * insert boilerplate
 * ^context[0].type = #element
 * ^context[=].expression = "date"
@@ -112,14 +112,14 @@ Description: "Provides values of a partial date along with the reason one or mor
 Extension: DateYear
 Id: Date-Year
 Title: "Date Year"
-Description: "The year portion (YYYY) of the partial date."
+Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer
 
 Extension: DateMonth
 Id: Date-Month
 Title: "Date Month"
-Description: "The month portion (MM) of the partial date."
+Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer
 * value[x] ^minValueInteger = 1
@@ -128,7 +128,7 @@ Description: "The month portion (MM) of the partial date."
 Extension: DateDay
 Id: Date-Day
 Title: "Date Day"
-Description: "The ydayear portion (DD) of the partial date."
+Description: "The day portion (DD) of the partial date. (Extension)"
 
 * value[x] 1..1
 * value[x] only integer
@@ -139,8 +139,7 @@ Description: "The ydayear portion (DD) of the partial date."
 Extension: DateAbsentReason
 Id: Date-Absent-Reason
 Title: "Date Absent Reason"
-Description: "Date Component Absent Reason"
+Description: "Date Component Absent Reason (Extension)"
 * value[x] 1..1
 * value[x] only code
-* value[x] from http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1 (required)
-* value[x] ^label = "Used to specify why the month portion of a partial date is missing."
+* value[x] from $dataabsentreason401 (required)
