@@ -1,6 +1,7 @@
 ValueSet: PregnancyStatusVS
 Id: vrdr-pregnancy-status-vs
-Title: "PHVS_PregnancyStatus_NCHS"
+Title: "Pregnancy Status"
+Description: "Pregnancy Status based on PHVS_PregnancyStatus_NCHS"
 * insert boilerplate
 * PregnancyStatusCS#PHC1260 "Not pregnant within past year"
 * PregnancyStatusCS#PHC1261 "Pregnant at time of death"

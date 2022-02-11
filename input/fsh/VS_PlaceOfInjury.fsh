@@ -1,6 +1,7 @@
 ValueSet: PlaceOfInjuryVS
 Id: vrdr-place-of-injury-vs
-Title: "PHVS_PlaceOfInjury_NCHS"
+Title: "Place of Injury"
+Description: "Place of Injury (ICD WHO)"
 * $icd10PlaceOfOccurence#0 "Home"
 * $icd10PlaceOfOccurence#1 "Residential Institution"
 * $icd10PlaceOfOccurence#2 "School, Other Institutions, Public Administrative Area"
