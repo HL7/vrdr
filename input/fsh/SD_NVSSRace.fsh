@@ -1,6 +1,7 @@
 Extension: NVSSRace
 Id: NVSS-Race
 Title: "NVSS Race"
+Description: "NVSS Race (Extension)"
 * insert boilerplate
 * insert Extension(White, 0, 1, White, White, boolean)
 * insert Extension(BlackOrAfricanAmerican, 0, 1, Black Or African American, Black Or African American, boolean)

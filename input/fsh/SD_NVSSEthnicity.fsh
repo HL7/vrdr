@@ -1,6 +1,7 @@
 Extension: NVSSEthnicity
 Id: NVSS-Ethnicity
 Title: "NVSS Ethnicity"
+Description: "NVSS Ethnicity (Extension)"
 * insert boilerplate
 * insert CodingExtension(HispanicMexican, 0, 1, Hispanic Mexican, Hispanic Mexican, $vrdrYesNoUnknown)
 * insert CodingExtension(HispanicPuertoRican, 0, 1, Hispanic Puerto Rican, Hispanic Puerto Rican, $vrdrYesNoUnknown)

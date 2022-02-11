@@ -2,18 +2,21 @@ Profile: FuneralServiceLicensee
 Parent: USCorePractitionerRoleProfile
 Id: vrdr-funeral-service-licensee
 Title: "Funeral Service Licensee"
+Description: "Funeral Service Licensee (USCorePractitionerRole)"
 * insert boilerplate
 
 Profile: Mortician
 Parent: USCorePractitionerProfile
 Id: vrdr-mortician
 Title: "Mortician"
+Description: "Mortician (USCorePractitioner)"
 * insert boilerplate
 
 Profile: Certifier
 Parent: USCorePractitionerProfile
 Id: vrdr-certifier
 Title: "Certifier"
+Description: "Certifier (USCorePractitioner)"
 * insert boilerplate
 * ^context.type = #element
 * ^context.expression = "Practitioner"
@@ -30,9 +33,10 @@ Title: "Certifier"
 * qualification.code ^binding.description = "Identifier Type Codes"
 
 Profile: FuneralHomeDirector
-Parent: PractitionerRole
+Parent: USCorePractitionerRoleProfile
 Id: vrdr-funeral-home-director
 Title: "Funeral Home Director"
+Description: "Funeral Home Director (USCorePractitionerRole)"
 * insert boilerplate
 * practitioner 1..1
 * practitioner only Reference(Mortician)
@@ -47,7 +51,8 @@ Title: "Funeral Home Director"
 Profile: DeathPronouncementPerformer
 Parent: USCorePractitionerProfile
 Id: vrdr-death-pronouncement-performer
-Title: "VRDR Death Pronouncement Performer"
+Title: "Death Pronouncement Performer"
+Description: "Death Pronouncement Performer (USCorePractitioner)"
 * insert boilerplate
 * identifier 1..1
 * name 1..1

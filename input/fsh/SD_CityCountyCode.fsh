@@ -1,7 +1,7 @@
 Extension: CityCode
 Id: CityCode
 Title: "Address City Code"
-Description: "The address city code extension is used to enable the city portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
+Description: "Numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf). (Extension)"
 * insert boilerplate
 * ^context.type = #element
 * ^context.expression = "Address.city"
@@ -14,7 +14,7 @@ Description: "The address city code extension is used to enable the city portion
 Extension: DistrictCode
 Id: DistrictCode
 Title: "District Code"
-Description: "District code extension is used to enable the district portion of address to be expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
+Description: "District expressed as a numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf). (Extension)"
 * insert boilerplate
 * ^context.type = #element
 * ^context.expression = "Address.district"

@@ -1,6 +1,7 @@
 CodeSystem: BypassEditFlagCS
 Id: vrdr-bypass-edit-flag-cs
 Title: "Bypass Edit Flag Code System"
+Description: "Bypass Edit Flag Code System"
 * insert boilerplate
 * ^caseSensitive = false
 * ^compositional = true

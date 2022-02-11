@@ -2,7 +2,7 @@ Profile: DeathCertificateReference
 Parent: DocumentReference
 Id: vrdr-death-certificate-reference
 Title: "Death Certificate Reference"
-Description: "The Death Certificate Reference profile is used to enable interested parties to assign local identifiers to the death certificate document. The Death Certificate Reference profile builds upon the FHIR Document Reference resource."
+Description: "Enables interested parties to assign local identifiers to the death certificate document (DocumentReference). "
 * insert boilerplate
 * identifier 1..1
 * status 1..1

@@ -1,7 +1,7 @@
 Extension: WithinCityLimitsIndicator
 Id: vrdr-within-city-limits-indicator
 Title: "Within City Limits Indicator"
-Description: "Used to indicate whether or not an address is within city limits. The content of the component shall be a value from the value set Yes No Unknown.  "
+Description: "Within City Limits Indicator (Extension)"
 * insert boilerplate
 * ^purpose = "Inclusion within city limits is used in determining juridictional responsiblity."
 * ^context.type = #element
