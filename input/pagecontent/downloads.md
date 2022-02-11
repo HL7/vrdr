@@ -1,1 +1,7 @@
-**Full Implementation Guide**\n\nThe entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).\n\nIn addition there are format specific definitions files.\n\n* [XML](definitions.xml.zip)\n* [JSON](definitions.json.zip)\n* [TTL](definitions.ttl.zip)\n\n**Examples:** all the examples that are used in this Implementation Guide available for download:\n\n* [XML](examples.xml.zip)\n* [JSON](examples.json.zip)\n* [TTl](examples.ttl.zip)
+* [Full Specification (zip)](full-ig.zip)
+* [Package (tgz)](package.tgz)
+* [JSON Definitions (zip)](definitions.json.zip)
+* [JSON Examples (zip)](examples.json.zip)
+* [XML Definitions (zip)](definitions.xml.zip)
+* [XML Examples (zip)](examples.ttl.zip)
+* [Turtle Definitions](definitions.ttl.zip)
