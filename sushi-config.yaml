@@ -15,16 +15,155 @@ dependencies:
     id: phinvads
     uri: http://fhir.org/packages/us.cdc.phinvads
     version: 0.7.0
+
 pages:
   index.md:
     title: Home
+  background.md:
+    title: Background
+  scope_of_the_vrdr_fhir_ig.md:
+    title: Scope of the VRDR IG
+  terminology.md:
+    title: Terminology
+  vrdr_fhir_ig_uml_data_model.md:
+    title: UML Model
+  project_team.md:
+    title: Project Team
+  profiles.md:
+    title: Profiles
+  artifacts.html:
+    title: Artifacts Summary
   downloads.md:
-    title: Downloads
+    title: Download Specification
+  change_log.md:
+    title: Change Log
+  appendix.md:
+    title: Appendices
+
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
-  Downloads: downloads.html
-copyrightYear: 2021+
+  Home:
+    Home: index.html
+    Credits: project_team.html
+    Background: background.html
+    UML Model: vrdr_fhir_ig_uml_data_model.html
+
+  Artifacts:
+    All FHIR Artifacts: artifacts.html
+    Profiles: profiles.html
+    Other Downloads: downloads.html
+  History:
+    Change Log: change_log.html
+groups:
+  DecedentDemographics:
+    name: A. Decedent Demographics
+    description: Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.
+    resources:
+    - StructureDefinition/vrdr-examiner-contacted
+    - StructureDefinition/vrdr-funeral-home-director
+    - StructureDefinition/vrdr-funeral-home
+    - StructureDefinition/vrdr-funeral-service-licensee
+    - StructureDefinition/vrdr-injury-incident
+    - StructureDefinition/vrdr-injury-location
+    - StructureDefinition/vrdr-interested-party
+    - StructureDefinition/vrdr-manner-of-death
+    - StructureDefinition/vrdr-mortician
+  DeathInvestigation:
+    name: B. Death Investigation
+    description: Data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved.
+    resources:
+    - StructureDefinition/vrdr-decedent-age
+    - StructureDefinition/vrdr-decedent-disposition-method
+    - StructureDefinition/vrdr-decedent-education-level
+    - StructureDefinition/vrdr-decedent-father
+    - StructureDefinition/vrdr-decedent-military-service
+    - StructureDefinition/vrdr-decedent-mother
+    - StructureDefinition/vrdr-decedent-pregnancy-status
+    - StructureDefinition/vrdr-decedent-spouse
+  DeathCertification:
+    name: C. Death Certification
+    description: Data related to the primary concern of the VRDR IG, Death Certification. In this group the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).
+    resources:
+    - StructureDefinition/vrdr-decedent-transportation-role
+    - StructureDefinition/vrdr-decedent-usual-work
+    - StructureDefinition/vrdr-decedent
+    - StructureDefinition/vrdr-disposition-location
+    - StructureDefinition/vrdr-tobacco-use-contributed-to-death
+    - StructureDefinition/vrder-death-certification
+    - StructureDefinition/vrdr-autopsy-performed-indicator
+    - StructureDefinition/vrdr-birth-record-identifier
+    - StructureDefinition/vrdr-cause-of-death-pathway
+  DecedentDisposition:
+    name: D. Decedent Disposition
+    description: Data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director."
+    resources:
+    - StructureDefinition/vrdr-census-tract
+    - StructureDefinition/vrdr-certifier
+    - StructureDefinition/vrdr-condition-contributing-to-death
+    - StructureDefinition/vrdr-death-certificate-document
+    - StructureDefinition/vrdr-death-certificate-reference
+    - StructureDefinition/vrdr-death-certificate
+    - StructureDefinition/vrdr-death-date
+    - StructureDefinition/vrdr-death-location-reference
+    - StructureDefinition/vrdr-death-location
+    - StructureDefinition/vrdr-death-pronouncement-performer
+  Extensions:
+    name: Extensions
+    description: Extensions.
+    resources:
+    - StructureDefinition/vrdr-within-city-limits-indicator
+    - StructureDefinition/vrdr-observation-location
+    - StructureDefinition/vrdr-injury-location-reference
+    - StructureDefinition/vrdr-disposition-location-reference
+    - StructureDefinition/BypassEditFlag
+    - StructureDefinition/Cause-Of-Death-Condition
+    - StructureDefinition/CityCode
+    - StructureDefinition/Date-Absent-Reason
+    - StructureDefinition/Date-Day
+    - StructureDefinition/Date-Month
+    - StructureDefinition/Date-Year
+    - StructureDefinition/DistrictCode
+    - StructureDefinition/Location-Jurisdiction-Id
+    - StructureDefinition/NVSS-Ethnicity
+    - StructureDefinition/NVSS-Race
+    - StructureDefinition/vrdr-partial-date-part-absent-reason
+  CodeSystems:
+    name: CodeSystems
+    description: Code Systems.
+    resources:
+    - CodeSystem/vrdr-bypass-edit-flag-cs
+    - CodeSystem/vrdr-document-section-cs
+    - CodeSystem/vrdr-jurisdictions-cs
+    - CodeSystem/vrdr-missing-value-reason-cs
+    - CodeSystem/vrdr-pregnancy-status-cs
+  ValueSets:
+    name: ValueSets
+    description: ValueSets.
+    resources:
+    - ValueSet/Canada-Provinces-VS
+    - ValueSet/Edit-Bypass-01
+    - ValueSet/Edit-Bypass-012
+    - ValueSet/Edit-Bypass-01234
+    - ValueSet/Edit-Bypass-0124
+    - ValueSet/States-TerritoriesProvinces-VS
+    - ValueSet/USStates-Territories-VS
+    - ValueSet/Yes-No-NotApplicable
+    - ValueSet/Yes-No-Unknown-NotApplicable
+    - ValueSet/Yes-No-Unknown
+    - ValueSet/vrdr-RelatedPersonRelationshipType
+    - ValueSet/vrdr-administrative-gender-vs
+    - ValueSet/vrdr-certifier-types-vs
+    - ValueSet/vrdr-contributory-tobacco-use-vs
+    - ValueSet/vrdr-education-level
+    - ValueSet/vrdr-jurisdiction-vs
+    - ValueSet/vrdr-manner-of-death
+    - ValueSet/vrdr-marital-status-vs
+    - ValueSet/vrdr-method-of-disposition-vs
+    - ValueSet/vrdr-place-of-death-vs
+    - ValueSet/vrdr-place-of-injury-vs
+    - ValueSet/vrdr-pregnancy-status-vs
+    - ValueSet/vrdr-race-nissing-value-reason-vs
+    - ValueSet/vrdr-transportation-incident-role-vs
+copyrightYear: 2022+
 publisher:
   name: HL7 Public Health Working Group
   url: http://www.hl7.org/Special/committees/pher/index.cfm
@@ -32,7 +171,7 @@ publisher:
 parameters:
   show-inherited-invariants: false
   jira-code: vrdr
-  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-expansion-params: '../../exp-params'  #path is relative to [base]/fsh-generated/resources
 
 jurisdiction: urn:iso:std:iso:3166#US
 license: CC0-1.0
