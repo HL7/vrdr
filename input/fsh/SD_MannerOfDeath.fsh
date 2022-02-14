@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-manner-of-death
 Title: "Manner of Death"
 Description: "Manner of Death (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(MannerOfDeath)
 * id 0..1
 * status 1..1
 * status only code

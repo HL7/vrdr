@@ -3,7 +3,7 @@ Parent: Composition
 Id: vrdr-death-certificate
 Title: "Death Certificate"
 Description: "The body of the death certificate document (Composition)."
-* insert boilerplate
+* insert RequireMetaProfile(DeathCertificate)
 * status 1..1
 * status only code
 * status from CompositionStatus (required)

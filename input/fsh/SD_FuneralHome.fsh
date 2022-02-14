@@ -3,7 +3,7 @@ Parent: USCoreOrganizationProfile
 Id: vrdr-funeral-home
 Title: "Funeral Home"
 Description: "Funeral Home (USCoreOrganization)"
-* insert boilerplate
+* insert RequireMetaProfile(FuneralHome)
 * id 0..1
 * id ^short = "id"
 * identifier 0..*

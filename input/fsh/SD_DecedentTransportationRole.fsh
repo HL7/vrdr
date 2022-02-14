@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-decedent-transportation-role
 Title: "Decedent Transportation Role"
 Description: "Decedent Transportation Role (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentTransportationRole)
 * status 1..1
 * status only code
 * status = #final (exactly)

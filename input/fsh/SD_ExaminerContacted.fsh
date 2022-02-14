@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-examiner-contacted
 Title: "Examiner Contacted"
 Description: "Examiner Contacted (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(ExaminerContacted)
 * status 1..1
 * status only code
 * status = #final (exactly)

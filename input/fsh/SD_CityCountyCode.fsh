@@ -10,6 +10,8 @@ Description: "Numeric value in accordance with the NCHS Instruction Manual Part 
 * value[x] obeys digitalCityCode
 * value[x] ^maxLength = 5
 * value[x] ^constraint[1].requirements = "The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
+//* value[x] only string
+//* valueString from $PHVSCityPlacesNCHS (required)
 
 Extension: DistrictCode
 Id: DistrictCode
@@ -23,6 +25,8 @@ Description: "District expressed as a numeric value in accordance with the NCHS 
 * value[x] obeys digitalCityCode
 * value[x] ^maxLength = 5
 * value[x] ^constraint[1].requirements = "The allowable values for district code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
+//* value[x] only string
+//* valueString from $PHVSDivisionVitalStatisticsCounty (required)
 
 
 

@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-decedent-pregnancy-status
 Title: "Decedent Pregnancy Status"
 Description: "Decedent Pregnancy Status (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentPregnancyStatus)
 * status 1..1
 * status only code
 * status = #final (exactly)

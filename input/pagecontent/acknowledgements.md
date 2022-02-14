@@ -1,5 +1,6 @@
-* The content of this implementation guide draws heavily upon [Standard Death Record Implementation Guide](https://nightingaleproject.github.io/fhir-death-record/guide/index.html) developed by [MITRE](https://www.mitre.org/). 
+* The content of this implementation guide draws heavily upon [Standard Death Record Implementation Guide](https://nightingaleproject.github.io/fhir-death-record/guide/index.html) developed by [MITRE](https://www.mitre.org/).
 * This guide was developed using tooling and professional guidance provided by [Lantana Consulting Group](https://www.lantanagroup.com/), the makers of [Trifolia-on-FHIR](https://trifolia-fhir-dev.lantanagroup.com/)
+* This was developed using [FHIR Shorthand syntax](http://hl7.org/fhir/uv/shorthand/) and the [SUSHI tookit](https://fshschool.org/docs/sushi/), a free, open source toolchain from the [MITRE Corporation](https://mitre.org). Generous guidance on FHIR Shorthand and SUSHI was provided by Chris Moesel.
 * The VRDR FHIR IG is a work product of the [HL7 Public Health Workgroup](http://www.hl7.org/Special/committees/pher/overview.cfm). The HL7 Project Insight reference number for this project is [1475](http://www.hl7.org/Special/committees/pher/projects.cfm?action=edit&ProjectNumber=1475).
 * Informatics consultation for planning and testing of VRDR FHIR profiles and IHE harmonization provided by eHealthsign, LLC.
 * Health Level Seven, HL7, CDA, CCD, FHIR and the [FLAME DESIGN]  are registered trademarks of Health Level Seven International, registered in the US Trademark Office.

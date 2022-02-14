@@ -17,7 +17,7 @@ Parent: USCorePractitionerProfile
 Id: vrdr-certifier
 Title: "Certifier"
 Description: "Certifier (USCorePractitioner)"
-* insert boilerplate
+* insert RequireMetaProfile(Certifier)
 * ^context.type = #element
 * ^context.expression = "Practitioner"
 * id 0..1
@@ -29,15 +29,14 @@ Description: "Certifier (USCorePractitioner)"
 * qualification.identifier 1..1
 * qualification.identifier ^short = "identifier"
 * qualification.code 1..1
-* qualification.code from $ViewValueSet.action_1 (required)
-* qualification.code ^binding.description = "Identifier Type Codes"
+* qualification.code from CertifierTypesVS (required)
 
 Profile: FuneralHomeDirector
 Parent: USCorePractitionerRoleProfile
 Id: vrdr-funeral-home-director
 Title: "Funeral Home Director"
 Description: "Funeral Home Director (USCorePractitionerRole)"
-* insert boilerplate
+* insert RequireMetaProfile(FuneralHomeDirector)
 * practitioner 1..1
 * practitioner only Reference(Mortician)
 * practitioner ^short = "practitioner"
@@ -53,7 +52,7 @@ Parent: USCorePractitionerProfile
 Id: vrdr-death-pronouncement-performer
 Title: "Death Pronouncement Performer"
 Description: "Death Pronouncement Performer (USCorePractitioner)"
-* insert boilerplate
+* insert RequireMetaProfile(DeathPronouncementPerformer)
 * identifier 1..1
 * name 1..1
 * name ^short = "name"

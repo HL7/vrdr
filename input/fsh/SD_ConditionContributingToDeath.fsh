@@ -3,7 +3,7 @@ Parent: USCoreCondition
 Id: vrdr-condition-contributing-to-death
 Title: "Condition Contributing To Death"
 Description: "Identifies factors contributing to the cause of death as asserted by the death certifier (USCoreCondition)"
-* insert boilerplate
+* insert RequireMetaProfile(ConditionContributingToDeath)
 * id 0..1
 * id ^short = "id"
 * category 1..1

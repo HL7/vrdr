@@ -3,7 +3,7 @@ Parent: USCoreLocation
 Id: vrdr-disposition-location
 Title: "Disposition Location"
 Description: "Disposition Location (USCoreLocation)"
-* insert boilerplate
+* insert RequireMetaProfile(DispositionLocation)
 * name 1..1
 * name ^short = "name"
 * description 0..1

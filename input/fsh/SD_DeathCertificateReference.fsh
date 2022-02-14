@@ -3,7 +3,7 @@ Parent: DocumentReference
 Id: vrdr-death-certificate-reference
 Title: "Death Certificate Reference"
 Description: "Enables interested parties to assign local identifiers to the death certificate document (DocumentReference). "
-* insert boilerplate
+* insert RequireMetaProfile(DeathCertificateReference)
 * identifier 1..1
 * status 1..1
 * status only code

@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-decedent-education-level
 Title: "Decedent Education Level"
 Description: "Decedent Education Level (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentEducationLevel)
 * ^context.type = #element
 * ^context.expression = "Observation"
 * status 1..1

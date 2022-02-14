@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-decedent-disposition-method
 Title: "Decedent Disposition Method"
 Description: "Decedent Disposition Method (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentDispositionMethod)
 * extension contains
     DispositionLocationReference named dispositionLocationReference 0..1
 * status 1..1

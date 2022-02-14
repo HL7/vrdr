@@ -3,7 +3,7 @@ Parent: RelatedPerson
 Id: vrdr-decedent-father
 Title: "Decedent Father"
 Description: "Decedent Father (RelatedPerson)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentFather)
 * patient 1..1
 * patient only Reference(Decedent)
 * patient ^short = "patient"
@@ -20,7 +20,7 @@ Parent: RelatedPerson
 Id: vrdr-decedent-mother
 Title: "Decedent Mother"
 Description: "Decedent Mother (RelatedPerson)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentMother)
 * patient 1..1
 * patient only Reference(Decedent)
 * relationship 1..1
@@ -34,7 +34,7 @@ Parent: RelatedPerson
 Id: vrdr-decedent-spouse
 Title: "Decedent Spouse"
 Description: "Decedent Spouse (RelatedPerson)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentSpouse)
 * patient 1..1
 * patient only Reference(Decedent)
 * patient ^short = "patient"

@@ -3,7 +3,7 @@ Parent: USCoreOrganizationProfile
 Id: vrdr-interested-party
 Title: "Interested Party"
 Description: "Interested Party (USCoreOrganization)"
-* insert boilerplate
+* insert RequireMetaProfile(InterestedParty)
 * id 0..1
 * id ^short = "id"
 * identifier 1..1

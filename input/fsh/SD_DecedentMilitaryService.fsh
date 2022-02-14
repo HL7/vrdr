@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-decedent-military-service
 Title: "Decedent Military Service"
 Description: "Decedent Military Service (Observation)"
-* insert boilerplate
+* insert RequireMetaProfile(DecedentMilitaryService)
 * status 1..1
 * status only code
 * status = #final (exactly)
