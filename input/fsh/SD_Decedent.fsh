@@ -13,7 +13,7 @@ Description: "Decedent (USCorePatient)"
 * extension[patient-birthPlace] ^short = "Extension"
 * extension[patient-birthPlace].value[x] only Address
 * extension[patient-birthPlace].value[x].country 0..1
-* extension[patient-birthPlace].value[x].country from $PHVSDecedentBirthplaceCountry (required)
+* extension[patient-birthPlace].value[x].country from BirthplaceCountryVS (required)
 * extension[patient-birthPlace].value[x].country ^binding.description = "PHVS_DecedentBirthplace_Country"
 * identifier 1..* MS
 * name 1..* MS
@@ -40,7 +40,7 @@ Description: "Decedent (USCorePatient)"
 * address.district.extension[districtCode] ^short = "County code"
 * address.district.extension[districtCode] ^definition = "Numeric code from PHVS_DivisionVitalStatistics__County (FIPS-6-4 County Codes) value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
 * address.country 0..1
-* address.country from $PHVSDecedentResidentCountry (required)
+* address.country from ResidenceCountryVS (extensible)
 * address.country ^binding.description = "PHVS_DecedentResident_Country"
 * maritalStatus 0..1
 * maritalStatus only CodeableConcept
