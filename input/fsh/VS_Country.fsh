@@ -271,7 +271,6 @@ ValueSet: BirthplaceCountryVS
 Id: vrdr-birthplace-country-vs
 Title: "Birthplace Country Value Set"
 Description: "2 Letter Birthplace Country Codes from GEC and ISO 3166-1"
-
 * $PH_Country_GEC#AF "AFGHANISTAN"
 * $PH_Country_GEC#AX "AKROTIRI"
 * $PH_Country_GEC#AL "ALBANIA"

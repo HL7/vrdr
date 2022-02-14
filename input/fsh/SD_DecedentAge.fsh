@@ -27,4 +27,5 @@ Description: "The decedent's chronological age at the time of death (Observation
     BypassEditFlag named bypassEditFlag 0..1
 * value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-01 (required)
 * value[x].extension ^binding.description = "Edit Bypass 01"
+* value[x].extension[bypassEditFlag].value[x] only CodeableConcept
 * dataAbsentReason 0..1 MS
