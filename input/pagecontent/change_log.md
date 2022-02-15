@@ -16,6 +16,7 @@
 * [FHIR-33211](https://jira.hl7.org/browse/FHIR-33211) :  Update examples to avoid PHINVADs codes except where necessary
 * [FHIR-33344](https://jira.hl7.org/browse/FHIR-33344) :  Dependency on latest USCore (4.0.0)
 * [FHIR-33345](https://jira.hl7.org/browse/FHIR-33345) :  Fix links to PHINVADS VS
+* [FHIR-33742](https://jira.hl7.org/browse/FHIR-33742) :  Add extension for RACE1-23 flags/literals
 * [FHIR-33403](https://jira.hl7.org/browse/FHIR-33403) :  Fix language in overview (state PHA->JVRO)
 * [FHIR-33404](https://jira.hl7.org/browse/FHIR-33404) :  Fix language in overview (PHA->JVRO)
 * [FHIR-33405](https://jira.hl7.org/browse/FHIR-33405) :  Update Contributor list
@@ -29,7 +30,29 @@
 * [FHIR-33691](https://jira.hl7.org/browse/FHIR-33491) :  Restrict Decedent.gender to 3 values allowed by IJE
 * [FHIR-33496](https://jira.hl7.org/browse/FHIR-33496) :  City code as a supplement to city name.
 * [FHIR-33497](https://jira.hl7.org/browse/FHIR-33497) :  City code as a supplement to city name.  City name not a controlled vocabulary.
-* [FHIR-33729](https://jira.hl7.org/browse/FHIR-33729) :    SEX_BYPASS, AGE_BYPASS, MARITAL_BYPASS (+ EDUCATION_LEVEL and PREG)
+* [FHIR-33729](https://jira.hl7.org/browse/FHIR-33729) :    AGE_BYPASS, MARITAL_BYPASS (+ EDUCATION_LEVEL and PREG).  SEX Bypass intentially not implemented.
+* [FHIR-33731](https://jira.hl7.org/browse/FHIR-33731) :    Bypass codes handled.
+* [FHIR-33732](https://jira.hl7.org/browse/FHIR-33732) :    Extensions for city/county codes in addresses.
+* [FHIR-33742](https://jira.hl7.org/browse/FHIR-33742) :    Extensions for Race literals/flags
+* [FHIR-33818](https://jira.hl7.org/browse/FHIR-33818) :    Support IJE requirements as well as NCHS (principle accepted, work in progress)
+* [FHIR-33918](https://jira.hl7.org/browse/FHIR-33918) :    Update ODH IG dependency to 1.0.1 (latest published)
+* [FHIR-34062](https://jira.hl7.org/browse/FHIR-34062) :    Use local instead of PHINVADs VS for Education Level HL7 education codes
+* [FHIR-34161](https://jira.hl7.org/browse/FHIR-34161) :    Fix Phinvads links
+* [FHIR-34163](https://jira.hl7.org/browse/FHIR-34163) :    Remove meta.security and meta.source junk from all artifacts.
+* [FHIR-34248](https://jira.hl7.org/browse/FHIR-34248) :    Cause of Death Condition same as 35250
+* [FHIR-34249](https://jira.hl7.org/browse/FHIR-34249) :    Cause of Death Condition updated in unspecified way.
+* [FHIR-34250](https://jira.hl7.org/browse/FHIR-34250) :    Cause of Death Condition 120 characters.
+* [FHIR-34251](https://jira.hl7.org/browse/FHIR-34251) :    COndition Contributing to Death 240 characters.
+* [FHIR-34268](https://jira.hl7.org/browse/FHIR-34268) :    DeathCertificate Human Readable Section Names/cardinalities
+* [FHIR-34270](https://jira.hl7.org/browse/FHIR-34270) :    DeathCertificate Human Readable Section Names
+* [FHIR-34273](https://jira.hl7.org/browse/FHIR-34273) :    IJE-specific extensions for race/ethnicity (duplicate)
+* [FHIR-34320](https://jira.hl7.org/browse/FHIR-34320) :    LImit causes of death to 5
+* [FHIR-34424](https://jira.hl7.org/browse/FHIR-34424) :    LImit causes of death to 5 (same as 34320)
+* [FHIR-34492](https://jira.hl7.org/browse/FHIR-34492) : Delete unnecessary slicing
+* [FHIR-34562](https://jira.hl7.org/browse/FHIR-34562) : 2022 IJE updates - parameters addition.  Needs documentation
+* [FHIR-35992](https://jira.hl7.org/browse/FHIR-35992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealth with later)
+* [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
+* [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
 
 
 
@@ -63,15 +86,29 @@
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :  Inappropriate proposed resolution.  INFORMRELATE is currently a text string, not a coded value.
 * [FHIR-33715](https://jira.hl7.org/browse/FHIR-33715) :  SUpport for MFILED field (paper, electronic, mixed).  Where should this be added?
 * [FHIR-33717](https://jira.hl7.org/browse/FHIR-33717) :  Document how to specify 'other' for place of death
-* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Adding observation for Spouse living status
+* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Adding observation for Spouse living status (SPOUSELV)
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  Need more information.
 * [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  Need more information.
 * [FHIR-33724](https://jira.hl7.org/browse/FHIR-33724) :  Support SSAVerify.  Need more information.
 * [FHIR-33725](https://jira.hl7.org/browse/FHIR-33725) :  Support SSADATEVER.  Need more information.
 * [FHIR-33726](https://jira.hl7.org/browse/FHIR-33726) :  Support SSADATTRANS.  Need more information.
 * [FHIR-33727](https://jira.hl7.org/browse/FHIR-33727) :  Support REPLACE.  Duplicate of 33700
-
-
+* [FHIR-33734](https://jira.hl7.org/browse/FHIR-33734) :    Something about redoing addresses.  Don't understand.
+* [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739) :    Partial date should include partial time.
+* [FHIR-33741](https://jira.hl7.org/browse/FHIR-33741) :  Inappropriate proposed resolution.  INFORMRELATE is currently a text string, not a coded value. Same as 33701
+* [FHIR-33743](https://jira.hl7.org/browse/FHIR-33743)    : I DISAGREE WITH RESOLUTION.  STATUS QUO IS CORRECT. Inconsistent State value options - BPLACE_ST, BSTATE, STATEC
+* [FHIR-34149](https://jira.hl7.org/browse/FHIR-34149)    : Make all bindings "required" to encourage compliance.
+* [FHIR-34269](https://jira.hl7.org/browse/FHIR-34269) :    Death Certificate Example
+* [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    TransportationRole VS and Map update -- disagree with resolution
+* [FHIR-34337](https://jira.hl7.org/browse/FHIR-34337) :    Conformance Section Needed (duplicate)
+* [FHIR-34338](https://jira.hl7.org/browse/FHIR-34338) :    Conformance Section Needed (not clear how it differs from 34337) (duplicate)
+* [FHIR-34432](https://jira.hl7.org/browse/FHIR-34432) :    Usage tables for mapping values in IJE to FHIR
+* [FHIR-34276](https://jira.hl7.org/browse/FHIR-34276) :    Conformance Section Needed (duplicate)
+* [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561)    : Make DeathCertificate.timestamp MS or add data type (adult/fetal)????
+* [FHIR-34609](https://jira.hl7.org/browse/FHIR-34609) :    Add COncept Maps for IJE->FHIR code mapping
+* [FHIR-35595](https://jira.hl7.org/browse/FHIR-35595)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
+* [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
+* [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
 
 
 

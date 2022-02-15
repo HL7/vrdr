@@ -16,8 +16,7 @@ Description: "Autopsy Performed Indicator (Observation)"
 * subject only Reference(Decedent)
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $Yes-No-Unknown (required)
-* value[x] ^binding.description = "Yes No Unknown"
+* value[x] from YesNoUnknownVS (required)
 * component 0..1
 * component ^comment = "Autopsy Results Available"
 * component.code 1..1
@@ -25,4 +24,4 @@ Description: "Autopsy Performed Indicator (Observation)"
 * component.code = $loinc#69436-4 "Autopsy results available" (exactly)
 * component.value[x] 1..1
 * component.value[x] only CodeableConcept
-* component.value[x] from $Yes-No-Unknown-NotApplicable (required)
+* component.value[x] from YesNoUnknownNotApplicableVS (required)
