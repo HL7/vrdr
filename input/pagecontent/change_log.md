@@ -106,21 +106,18 @@
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
 * [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Discussion Points
-* discussion points here
+* [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
+* [FHIR-33405](https://jira.hl7.org/browse/FHIR-33405) :    credits
+* [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long
+* [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692) :    Decedent Gender
+* [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :    SSADTHCODE
+* [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE
+* [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value
+* [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
+* [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    Transportation Role
+* [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
+
+
 
 {% include markdown-link-references.md %}
