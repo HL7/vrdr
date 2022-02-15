@@ -16,6 +16,7 @@
 * [FHIR-33211](https://jira.hl7.org/browse/FHIR-33211) :  Update examples to avoid PHINVADs codes except where necessary
 * [FHIR-33344](https://jira.hl7.org/browse/FHIR-33344) :  Dependency on latest USCore (4.0.0)
 * [FHIR-33345](https://jira.hl7.org/browse/FHIR-33345) :  Fix links to PHINVADS VS
+* [FHIR-33714](https://jira.hl7.org/browse/FHIR-33714) :  LImited gender values according to IJE
 * [FHIR-33742](https://jira.hl7.org/browse/FHIR-33742) :  Add extension for RACE1-23 flags/literals
 * [FHIR-33403](https://jira.hl7.org/browse/FHIR-33403) :  Fix language in overview (state PHA->JVRO)
 * [FHIR-33404](https://jira.hl7.org/browse/FHIR-33404) :  Fix language in overview (PHA->JVRO)
@@ -85,7 +86,7 @@
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :  REPLACE FIELD. Out of scope.  PERHAPS an issue for the messaging IG.
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :  Inappropriate proposed resolution.  INFORMRELATE is currently a text string, not a coded value.
 * [FHIR-33715](https://jira.hl7.org/browse/FHIR-33715) :  SUpport for MFILED field (paper, electronic, mixed).  Where should this be added?
-* [FHIR-33717](https://jira.hl7.org/browse/FHIR-33717) :  Document how to specify 'other' for place of death
+* [FHIR-33717](https://jira.hl7.org/browse/FHIR-33717) :  Document how to specify 'other' for place of death.  Added usage.md Need to document wherever this is expected.
 * [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Adding observation for Spouse living status (SPOUSELV)
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  Need more information.
 * [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  Need more information.
