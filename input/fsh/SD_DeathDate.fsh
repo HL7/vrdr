@@ -16,6 +16,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * effective[x] only dateTime
 * performer 0..1
 * performer only Reference(DeathPronouncementPerformer)
+// Should be an invariant so that either value[x] or the partial date absent extension are provided.
 * value[x] 0..1
 * value[x] only dateTime
 * value[x].extension contains
