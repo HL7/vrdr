@@ -117,6 +117,7 @@
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    Transportation Role
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
+* <not ticketed> :  Whether/How/where to represent AUXNO and AUXNO in the VRDR IG.
 
 
 
