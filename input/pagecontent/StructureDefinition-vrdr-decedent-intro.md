@@ -16,7 +16,7 @@ The Decedent profile contains basic information about the decedent, including da
 | Informant Relationship   | contact.type   | [RelationshipType](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-vrdr-RelatedPersonRelationshipType.html)  | INFORMRELATE  |
 | Informant    | contact  |   | <none>  |
 | Marital Status   | maritalStatus  | [MaritalStatusVS](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-vrdr-marital-status-vs.html) | MARITAL   |
-| Marital Status (Bypass Edit Flag)  | maritalStatus.extension.BypassEditFlag  | [BypassFlags0124](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-Edit-Bypass-0124.html) | BYPASS   |
+| Marital Status (Bypass Edit Flag)  | maritalStatus.extension.BypassEditFlag  | [BypassFlags0124](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-Edit-Bypass-0124.html) | MARITAL_BYPASS   |
 | Residence - coded County  | address.district.extension.districtCode  | integer | COUNTYC  |
 | Residence - coded City  | address.district.extension.cityCode  | integer | CITYC  |
 | Residence - Within City Limits  | address.district.extension.withinCityLimits  | [YesNoUnknown](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-vrdr-yes-no-unknown-vs.html) | LIMITS  |
