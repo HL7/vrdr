@@ -3,7 +3,7 @@
 The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
 
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s) **  |
+| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Legal Name  | humanName        | String | GNAME, MNAME, LNAME, SUFF |
 | Birth Place   | extension.place-of-birth  | various | BPLACE_CNT, BPLACE_ST  |
@@ -17,8 +17,8 @@ The Decedent profile contains basic information about the decedent, including da
 | Informant    | contact  |   | <none>  |
 | Marital Status   | maritalStatus  | [MaritalStatusVS](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-vrdr-marital-status-vs.html) | MARITAL   |
 | Marital Status (Bypass Edit Flag)  | maritalStatus.extension.BypassEditFlag  | [BypassFlags0124](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-Edit-Bypass-0124.html) | BYPASS   |
-| Residence - coded County  | address.district.extension.districtCode  | integer | CountyC  |
-| Residence - coded City  | address.district.extension.cityCode  | integer | CityC  |
+| Residence - coded County  | address.district.extension.districtCode  | integer | COUNTYC  |
+| Residence - coded City  | address.district.extension.cityCode  | integer | CITYC  |
 | Residence - Within City Limits  | address.district.extension.withinCityLimits  | [YesNoUnknown](http://build.fhir.org/ig/saulakravitz/vrdr/branches/FSHVersion2/ValueSet-vrdr-yes-no-unknown-vs.html) | LIMITS  |
 | Social Security Number    | identifier.value  | String  | SSN  |
 {: .grid }
