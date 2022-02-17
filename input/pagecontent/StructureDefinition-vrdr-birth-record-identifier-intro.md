@@ -14,5 +14,4 @@ It is relevant only in the case where the birth took place in a recognized juris
 
 ### Conformance
 
-
 {% include markdown-link-references.md %}
