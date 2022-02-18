@@ -11,15 +11,11 @@ Description: "The body of the death certificate document (Composition)."
 * type 1..1
 * type only CodeableConcept
 * type = $loinc#64297-5 "Death certificate" (exactly)
-* type ^short = "type"
 * subject 1..1
 * subject only Reference(Decedent)
-* subject ^short = "subject"
 * date 1..1
-* date ^short = "date"
 * attester 1..1
 * attester only BackboneElement
-* attester ^short = "attester"
 * attester.mode 1..1
 * attester.mode only code
 * attester.mode = #legal (exactly)
@@ -28,30 +24,27 @@ Description: "The body of the death certificate document (Composition)."
 * attester.party only Reference(Certifier)
 * event 1..1
 * event only BackboneElement
-* event ^short = "event"
 * event.code 1..1
 * event.code only CodeableConcept
 * event.code = $sct#103693007 "Diagnostic procedure (procedure)" (exactly)
 * event.detail 1..1
 * event.detail only Reference(DeathCertification)
 * section ^slicing.discriminator.type = #pattern
-* section ^slicing.discriminator.path = "code.coding"
+* section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
+* section.code 1..1 MS
+* section.entry ^slicing.discriminator.type = #profile
+* section.entry ^slicing.discriminator.path = "$this.resolve()"
+* section.entry ^slicing.rules = #open
 * section contains
     DecedentDemographics 0..1 MS and
     DeathInvestigation 0..1 MS and
     DeathCertification 0..1 MS and
     DecedentDisposition 0..1 MS
 * section[DecedentDemographics] ^label = "Decedent Demographics"
-* section[DecedentDemographics] ^short = "DecedentDemographics"
+* section[DecedentDemographics] ^short = "Decedent Demographics"
 * section[DecedentDemographics] ^definition = "This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."
-* section[DecedentDemographics].code 1..1 MS
-* section[DecedentDemographics].code.coding 1..1 MS
-* section[DecedentDemographics].code.coding = DocumentSectionCS#Demographics "Decedent Demographics"
-* section[DecedentDemographics].entry 1..*
-* section[DecedentDemographics].entry ^slicing.discriminator.type = #profile
-* section[DecedentDemographics].entry ^slicing.discriminator.path = "$this.resolve()"
-* section[DecedentDemographics].entry ^slicing.rules = #open
+* section[DecedentDemographics].code  = DocumentSectionCS#Demographics "Decedent Demographics"
 * section[DecedentDemographics].entry contains
     Father 0..1 MS and
     Mother 0..1 MS and
@@ -70,13 +63,10 @@ Description: "The body of the death certificate document (Composition)."
 * section[DecedentDemographics].entry[MilitaryService] only Reference(DecedentMilitaryService)
 * section[DecedentDemographics].entry[UsualWork] only Reference(DecedentUsualWork)
 * section[DeathInvestigation] ^definition = "This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."
-* section[DeathInvestigation].code 1..1 MS
-* section[DeathInvestigation].code.coding 1..1 MS
-* section[DeathInvestigation].code.coding = DocumentSectionCS#Investigation "Death Investigation"
-* section[DeathInvestigation].entry 1..*
-* section[DeathInvestigation].entry ^slicing.discriminator.type = #profile
-* section[DeathInvestigation].entry ^slicing.discriminator.path = "$this.resolve()"
-* section[DeathInvestigation].entry ^slicing.rules = #open
+* section[DeathInvestigation].code = DocumentSectionCS#Investigation "Death Investigation"
+// * section[DeathInvestigation].entry ^slicing.discriminator.type = #profile
+// * section[DeathInvestigation].entry ^slicing.discriminator.path = "$this.resolve()"
+// * section[DeathInvestigation].entry ^slicing.rules = #open
 * section[DeathInvestigation].entry contains
     ExaminerContacted 0..1 MS and
     PregnancyStatus 0..1 MS and
@@ -98,13 +88,11 @@ Description: "The body of the death certificate document (Composition)."
 * section[DeathInvestigation].entry[InjuryIncident] only Reference(InjuryIncident)
 * section[DeathInvestigation].entry[DeathDate] only Reference(DeathDate)
 * section[DeathInvestigation].entry[TransportationRole] only Reference(DecedentTransportationRole)
-* section[DeathCertification].code 1..1 MS
-* section[DeathCertification].code.coding 1..1 MS
-* section[DeathCertification].code.coding = DocumentSectionCS#Certification "Death Certification"
+* section[DeathCertification].code = DocumentSectionCS#Certification "Death Certification"
 * section[DeathCertification].entry 1..*
-* section[DeathCertification].entry ^slicing.discriminator.type = #profile
-* section[DeathCertification].entry ^slicing.discriminator.path = "$this.resolve()"
-* section[DeathCertification].entry ^slicing.rules = #open
+// * section[DeathCertification].entry ^slicing.discriminator.type = #profile
+// * section[DeathCertification].entry ^slicing.discriminator.path = "$this.resolve()"
+// * section[DeathCertification].entry ^slicing.rules = #open
 * section[DeathCertification].entry contains
     MannerOfDeath 0..1 MS and
     CauseOfDeathCondition 0..1 MS and
@@ -114,13 +102,10 @@ Description: "The body of the death certificate document (Composition)."
 * section[DeathCertification].entry[CauseOfDeathCondition] only Reference(CauseOfDeathCondition)
 * section[DeathCertification].entry[ConditionContributingToDeath] only Reference(ConditionContributingToDeath)
 * section[DeathCertification].entry[CauseOfDeathPathway] only Reference(CauseOfDeathPathway)
-* section[DecedentDisposition].code 1..1 MS
-* section[DecedentDisposition].code.coding 1..1 MS
-* section[DecedentDisposition].code.coding = DocumentSectionCS#Disposition "Decedent Disposition"
-* section[DecedentDisposition].entry ..*
-* section[DecedentDisposition].entry ^slicing.discriminator.type = #profile
-* section[DecedentDisposition].entry ^slicing.discriminator.path = "$this.resolve()"
-* section[DecedentDisposition].entry ^slicing.rules = #open
+* section[DecedentDisposition].code = DocumentSectionCS#Disposition "Decedent Disposition"
+// * section[DecedentDisposition].entry ^slicing.discriminator.type = #profile
+// * section[DecedentDisposition].entry ^slicing.discriminator.path = "$this.resolve()"
+// * section[DecedentDisposition].entry ^slicing.rules = #open
 * section[DecedentDisposition].entry contains
     DispositionLocation 0..* MS and
     FuneralHome 0..1 MS and
