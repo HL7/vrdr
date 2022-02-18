@@ -109,7 +109,7 @@
 * [FHIR-35992](https://jira.hl7.org/browse/FHIR-35992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealth with later)
 * [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
-
+* <not ticketed> :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 ### No Action Required
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  *Will Not Be Supported.  Comms from JeffG 2/17*
 * [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  *Will Not Be Supported.  Comms from JeffG 2/17*
@@ -122,8 +122,5 @@
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long --> subject to review of requirements
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
-* <not ticketed> :  Whether/How/where to represent AUXNO and AUXNO in the VRDR IG.
-
-
 
 {% include markdown-link-references.md %}
