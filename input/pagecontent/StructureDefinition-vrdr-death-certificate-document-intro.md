@@ -1,14 +1,13 @@
 ### Usage
 
-The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record.
-It is relevant only in the case where the birth took place in a recognized jurisdiction.
+The Death Certificate is a Bundle document that contains the Death Certificate Bundle.
+In addition it includes the following content:
 
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Birth Certificate Number   | value        | String | BCNO |
-| Birth Jurisdiction   | component[birthJurisdiction].value  | [JurisdictionVS] | BSTATE  |
-| Birth Year  | component[birthYear].value  | dateTime (YYYY component) | IDOB_YR  |
+| Death Certificate Number   | identifer.value   | String | FILENO |
+| Auxiliary State Identifier | identifier.extension[auxiliaryStateIdentifier].value  | String | AUXNO  |
 {: .grid }
 
 
