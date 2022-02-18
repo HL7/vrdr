@@ -84,6 +84,7 @@
 * [FHIR-33496](https://jira.hl7.org/browse/FHIR-33496) :  City code as a supplement to city name.
 * [FHIR-33497](https://jira.hl7.org/browse/FHIR-33497) :  City code as a supplement to city name.  City name not a controlled vocabulary.
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE ==> will update messaging to support original, update, update-but-not-for-nchs
+* [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value ==> contact.type.text
 * [FHIR-33729](https://jira.hl7.org/browse/FHIR-33729) :    AGE_BYPASS, MARITAL_BYPASS (+ EDUCATION_LEVEL and PREG).  SEX Bypass intentially not implemented.
 * [FHIR-33731](https://jira.hl7.org/browse/FHIR-33731) :    Bypass codes handled.
 * [FHIR-33732](https://jira.hl7.org/browse/FHIR-33732) :    Extensions for city/county codes in addresses.
@@ -119,8 +120,6 @@
 ### Discussion Points
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long --> subject to review of requirements
-
-* [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
 * <not ticketed> :  Whether/How/where to represent AUXNO and AUXNO in the VRDR IG.
