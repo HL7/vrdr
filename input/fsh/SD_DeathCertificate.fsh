@@ -59,7 +59,8 @@ Description: "The body of the death certificate document (Composition)."
     BirthRecordID 0..1 MS and
     EducationLevel 0..1 MS and
     MilitaryService 0..1 MS and
-    UsualWork 0..1 MS
+    UsualWork 0..1 MS and
+    Parameters2022 0..1 MS
 * section[DecedentDemographics].entry[Father] only Reference(DecedentFather)
 * section[DecedentDemographics].entry[Mother] only Reference(DecedentMother)
 * section[DecedentDemographics].entry[Spouse] only Reference(DecedentSpouse)
@@ -68,6 +69,7 @@ Description: "The body of the death certificate document (Composition)."
 * section[DecedentDemographics].entry[EducationLevel] only Reference(DecedentEducationLevel)
 * section[DecedentDemographics].entry[MilitaryService] only Reference(DecedentMilitaryService)
 * section[DecedentDemographics].entry[UsualWork] only Reference(DecedentUsualWork)
+* section[DecedentDemographics].entry[Parameters2022] only Reference(Parameters2022)
 * section[DeathInvestigation] ^definition = "This section of the Death Certificate Document is comprised of profiles containing data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not a autopsy was performed, an injury incident occurred, or a transportation event was involved."
 * section[DeathInvestigation].code = DocumentSectionCS#Investigation "Death Investigation"
 // * section[DeathInvestigation].entry ^slicing.discriminator.type = #profile
