@@ -11,6 +11,4 @@ In addition it includes the following content:
 {: .grid }
 
 
-### Conformance
-
 {% include markdown-link-references.md %}

@@ -7,8 +7,6 @@ Description: "Autopsy Performed Indicator (Observation)"
 * status 1..1
 * status only code
 * status = #final (exactly)
-* status ^short = "status"
-* status ^definition = "SHALL contain exactly one [1..1] status=\"\"final\"\" (CONF:4393-412)."
 * code 1..1
 * code only CodeableConcept
 * code = $loinc#85699-7 "Autopsy was performed" (exactly)
