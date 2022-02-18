@@ -8,13 +8,7 @@ Description: "Decedent (USCorePatient)"
     NVSSRace named NVSS-Race 0..1 MS and
     NVSSEthnicity named NVSS-Ethnicity 0..1 MS and
     $patient-birthPlace named patient-birthPlace 0..1
-* extension[NVSS-Race] ^short = "Extension"
-* extension[NVSS-Ethnicity] ^short = "Extension"
-* extension[patient-birthPlace] ^short = "Extension"
-* extension[patient-birthPlace].value[x] only Address
-* extension[patient-birthPlace].value[x].country 0..1
 * extension[patient-birthPlace].value[x].country from BirthplaceCountryVS (required)
-* extension[patient-birthPlace].value[x].country ^binding.description = "PHVS_DecedentBirthplace_Country"
 * identifier 1..* MS
 * name 1..* MS
 * gender 1..1
@@ -55,4 +49,5 @@ Description: "Decedent (USCorePatient)"
 * contact.relationship 0..1
 * contact.relationship ^short = "Informant Relationship (INFORMRELATE)"
 * contact.relationship only CodeableConcept
-* contact.relationship from RelatedPersonRelationshipTypeVS (required)
+// * contact.relationship from RelatedPersonRelationshipTypeVS (required)
+* contact.relationship.text ^short = "Informant Relationship (INFORMRELATE) - first 30 characters will be used"

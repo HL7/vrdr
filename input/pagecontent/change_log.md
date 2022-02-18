@@ -40,7 +40,6 @@
 * [FHIR-33743](https://jira.hl7.org/browse/FHIR-33743)    : I DISAGREE WITH RESOLUTION.  STATUS QUO IS CORRECT. Inconsistent State value options - BPLACE_ST, BSTATE, STATEC
 * [FHIR-34149](https://jira.hl7.org/browse/FHIR-34149)    : Make all bindings "required" to encourage compliance.
 * [FHIR-34269](https://jira.hl7.org/browse/FHIR-34269) :    Death Certificate Example
-* [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    TransportationRole VS and Map update -- disagree with resolution
 * [FHIR-34337](https://jira.hl7.org/browse/FHIR-34337) :    Conformance Section Needed (duplicate)
 * [FHIR-34338](https://jira.hl7.org/browse/FHIR-34338) :    Conformance Section Needed (not clear how it differs from 34337) (duplicate)
 * [FHIR-34432](https://jira.hl7.org/browse/FHIR-34432) :    Usage tables for mapping values in IJE to FHIR
@@ -84,6 +83,7 @@
 * [FHIR-33691](https://jira.hl7.org/browse/FHIR-33491) :  Restrict Decedent.gender to 3 values allowed by IJE
 * [FHIR-33496](https://jira.hl7.org/browse/FHIR-33496) :  City code as a supplement to city name.
 * [FHIR-33497](https://jira.hl7.org/browse/FHIR-33497) :  City code as a supplement to city name.  City name not a controlled vocabulary.
+* [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE ==> will update messaging to support original, update, update-but-not-for-nchs
 * [FHIR-33729](https://jira.hl7.org/browse/FHIR-33729) :    AGE_BYPASS, MARITAL_BYPASS (+ EDUCATION_LEVEL and PREG).  SEX Bypass intentially not implemented.
 * [FHIR-33731](https://jira.hl7.org/browse/FHIR-33731) :    Bypass codes handled.
 * [FHIR-33732](https://jira.hl7.org/browse/FHIR-33732) :    Extensions for city/county codes in addresses.
@@ -101,6 +101,7 @@
 * [FHIR-34270](https://jira.hl7.org/browse/FHIR-34270) :    DeathCertificate Human Readable Section Names
 * [FHIR-34273](https://jira.hl7.org/browse/FHIR-34273) :    IJE-specific extensions for race/ethnicity (duplicate)
 * [FHIR-34320](https://jira.hl7.org/browse/FHIR-34320) :    LImit causes of death to 5
+* [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    TransportationRole VS and Map update
 * [FHIR-34424](https://jira.hl7.org/browse/FHIR-34424) :    LImit causes of death to 5 (same as 34320)
 * [FHIR-34492](https://jira.hl7.org/browse/FHIR-34492) : Delete unnecessary slicing
 * [FHIR-34562](https://jira.hl7.org/browse/FHIR-34562) : 2022 IJE updates - parameters addition.  Needs documentation
@@ -117,13 +118,10 @@
 
 ### Discussion Points
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
-* [FHIR-33405](https://jira.hl7.org/browse/FHIR-33405) :    credits
-* [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long
-* [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :    SSADTHCODE
-* [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE ==> will update messaging to support original, update, update-but-not-for-nchs
+* [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long --> subject to review of requirements
+
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
-* [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    Transportation Role
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
 * <not ticketed> :  Whether/How/where to represent AUXNO and AUXNO in the VRDR IG.
 
