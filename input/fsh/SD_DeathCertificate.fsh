@@ -1,3 +1,8 @@
+RuleSet: CompositionSectionEntrySlicing(section)
+* section[{section}].entry ^slicing.discriminator.type = #profile
+* section[{section}].entry ^slicing.discriminator.path = "$this.resolve()"
+* section[{section}].entry ^slicing.rules = #open
+
 Profile: DeathCertificate
 Parent: Composition
 Id: vrdr-death-certificate
@@ -33,14 +38,15 @@ Description: "The body of the death certificate document (Composition)."
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 * section.code 1..1 MS
-* section.entry ^slicing.discriminator.type = #profile
-* section.entry ^slicing.discriminator.path = "$this.resolve()"
-* section.entry ^slicing.rules = #open
 * section contains
     DecedentDemographics 0..1 MS and
     DeathInvestigation 0..1 MS and
     DeathCertification 0..1 MS and
     DecedentDisposition 0..1 MS
+* insert CompositionSectionEntrySlicing(DecedentDemographics)
+* insert CompositionSectionEntrySlicing(DeathInvestigation)
+* insert CompositionSectionEntrySlicing(DeathCertification)
+* insert CompositionSectionEntrySlicing(DecedentDisposition)
 * section[DecedentDemographics] ^label = "Decedent Demographics"
 * section[DecedentDemographics] ^short = "Decedent Demographics"
 * section[DecedentDemographics] ^definition = "This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant."
