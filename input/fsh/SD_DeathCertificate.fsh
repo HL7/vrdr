@@ -12,7 +12,6 @@ Description: "The body of the death certificate document (Composition)."
 * status 1..1
 * status only code
 * status from CompositionStatus (required)
-* status ^short = "status"
 * type 1..1
 * type only CodeableConcept
 * type = $loinc#64297-5 "Death certificate" (exactly)
