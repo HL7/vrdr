@@ -14,7 +14,7 @@ Description: "Cause of death (USCoreCondition) prior to submission of the comple
 * subject 1..1
 * subject only Reference(Decedent)
 * onset[x] 1..1 // INTERVAL
-* onset ^short = "Cause of Death Interval Part 1, Line a,b,c,d"
+* onset[x] ^short = "Cause of Death Interval Part 1, Line a,b,c,d"
 * onset[x] only Age or string
 * asserter 1..1
 * asserter only Reference(Certifier)
