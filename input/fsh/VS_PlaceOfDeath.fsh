@@ -15,8 +15,7 @@ Description: """Code values reflecting the death location of the decedent (e.g.,
 |450381000124100| Death in nursing home or long term care facility|6|Nursing Home/Long Term Care Facility|
 |OTH|Other|7|Other|
 |UNK|Unknown|9|Unknown|"""
-* insert boilerplate
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+* insert SNOMEDCopyright
 * $sct#63238001 "Dead on arrival at hospital"
 * $sct#440081000124100 "Death in home"
 * $sct#440071000124103 "Death in hospice"

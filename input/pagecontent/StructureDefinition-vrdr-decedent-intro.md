@@ -16,7 +16,7 @@ The Decedent profile contains basic information about the decedent, including da
 | Informant Relationship   | contact.type   | [RelationshipTypeVS]  | INFORMRELATE  |
 | Informant    | contact  |   | <none>  |
 | Marital Status   | maritalStatus  | [MaritalStatusVS] | MARITAL   |
-| Marital Status (Bypass Edit Flag)  | maritalStatus.extension.BypassEditFlag  | [BypassFlags0124VS] | MARITAL_BYPASS   |
+| Marital Status (Bypass Edit Flag)  | maritalStatus.extension.BypassEditFlag  | [EditBypass01234VS] | MARITAL_BYPASS   |
 | Residence - coded County  | address.district.extension.districtCode  | integer | COUNTYC  |
 | Residence - coded City  | address.district.extension.cityCode  | integer | CITYC  |
 | Residence - Within City Limits  | address.district.extension.withinCityLimits  | [YesNoUnknownVS] | LIMITS  |

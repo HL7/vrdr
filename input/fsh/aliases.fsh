@@ -21,6 +21,9 @@ Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
 Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+// USCore
+Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+
 // PHINVADS ValueSets --> most should be eliminated
 Alias: $PHVSDivisionVitalStatisticsCounty = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212
 Alias: $PHVSDecedentBirthplaceCountry = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7

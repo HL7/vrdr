@@ -18,8 +18,6 @@ Description: "Decedent Pregnancy Status (Observation)"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from PregnancyStatusVS (required)
-* value[x] ^binding.description = "PHVS_PregnancyStatus_NCHS"
-* value[x].extension ^binding.description = "editBypass012"
 * value[x].extension contains
     BypassEditFlag named bypassEditFlag 0..1
 * value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-012 (required)

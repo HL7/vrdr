@@ -15,7 +15,7 @@ Description: """The set of codes used to indicate the method used to dispose of 
 |OTH|Other|O|Other|
 |UNK|Unknown|U|Unknown|"""
 * insert boilerplate
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+* insert SNOMEDCopyright
 * $sct#449931000124108 "Entombment"
 * $sct#449941000124103 "Removal from state"
 * $sct#449951000124101 "Donation"

@@ -9,8 +9,8 @@ Description: """The gender of a person used for administrative purposes.
 | -------- | -------- | -------- | --------|
 |male|Male|M|Male|
 |female|Female|F|Female|
-|UNK|unknown|U|Unknown|"""
+|unknown|unknown|U|Unknown|"""
 * insert boilerplate
 * $admingender#male "Male"
 * $admingender#female "Female"
-* $v3-NullFlavor#UNK "unknown"
+* $admingender#unknown "unknown"

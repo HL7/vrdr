@@ -16,6 +16,7 @@ ValueSet: StatesTerritoriesAndProvincesVS
 Id: States-TerritoriesProvinces-VS
 Title: "States, Territories and Provinces Value Set"
 Description: "2 Letter States and Provinces Value Set"
+* ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
 * ^version = "1.0.0"
 * include codes from valueset USStatesAndTerritoriesVS
@@ -26,6 +27,7 @@ ValueSet: CanadaProvincesVS
 Id: Canada-Provinces-VS
 Title: "Canadian Provinces Value Set"
 Description: "2 Letter Candadian Provinces Value Set"
+* ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * $provinces#AB	"Alberta"
 * $provinces#BC	"British Columbia"
 * $provinces#MB	"Manitoba"

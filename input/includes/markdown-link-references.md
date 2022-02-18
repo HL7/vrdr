@@ -5,6 +5,10 @@
   }
 </style>
 
+# Misc
+[MITRE]: https://www.mitre.org/
+[Georgia Institute of Technology (GTRI)]: https://www.gatech.edu/
+[Hi3 Solutions Corporation]: https://www.facebook.com/hi3solutions/
 # USCore Resources
 [USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
 
@@ -89,8 +93,8 @@
 [RaceMissingValueReasonVS]: ValueSet-vrdr-race-nissing-value-reason-vs.html
 [TRansportationIncidentRoleVS]: ValueSet-vrdr-transportation-incident-role-vs.html
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
-[YesNoNotUnknownApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
-[YesNoNotUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
+[YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
+[YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
 [Artifacts]: artifacts.html
 [Background]: background.html
 [ChangeLog]: change_log.html

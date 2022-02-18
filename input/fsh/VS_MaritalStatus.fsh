@@ -13,7 +13,7 @@ Description: """The set of codes used to indicate the marital status of the dece
 |S|Never Married|S|Never Married|
 |W|Widowed|W|Widowed|
 |UNK|unknown|U|Not Classifiable|"""
-* insert boilerplate
+* insert SNOMEDCopyright
 * $v3-MaritalStatus#D "Divorced"
 * $v3-MaritalStatus#L "Legally Separated"
 * $v3-MaritalStatus#M "Married"

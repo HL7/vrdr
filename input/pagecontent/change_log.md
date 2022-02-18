@@ -1,5 +1,11 @@
 ### New Issues
-* New Issue
+* Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
+    * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
+    * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
+    * *Proposal*:
+        * Encode SEX in a *new* Observation (SexAtTimeOfDeath) with a valueset of (M,F,unknown).   The closest code in LOINC for this is https://loinc.org/99502-7/ (Recorded Sex or Gender) "Documentation of a specific instance of sex and/or gender information. " which seems to align pretty well with NCHS's needs.
+        * USCorePatient.extension[birthSex] and USCorePatient.gender would not be profiled in decedent.
+
 
 ### Not Yet
 * [FHIR-32879](https://jira.hl7.org/browse/FHIR-32879) :  Make extension urls consistent
@@ -27,11 +33,6 @@
 * [FHIR-33715](https://jira.hl7.org/browse/FHIR-33715) :  SUpport for MFILED field (paper, electronic, mixed).  Where should this be added?
 * [FHIR-33717](https://jira.hl7.org/browse/FHIR-33717) :  Document how to specify 'other' for place of death.  Added usage.md Need to document wherever this is expected.
 * [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Adding observation for Spouse living status (SPOUSELV)
-* [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  Need more information.
-* [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  Need more information.
-* [FHIR-33724](https://jira.hl7.org/browse/FHIR-33724) :  Support SSAVerify.  Need more information.
-* [FHIR-33725](https://jira.hl7.org/browse/FHIR-33725) :  Support SSADATEVER.  Need more information.
-* [FHIR-33726](https://jira.hl7.org/browse/FHIR-33726) :  Support SSADATTRANS.  Need more information.
 * [FHIR-33727](https://jira.hl7.org/browse/FHIR-33727) :  Support REPLACE.  Duplicate of 33700
 * [FHIR-33734](https://jira.hl7.org/browse/FHIR-33734) :    Something about redoing addresses.  Don't understand.
 * [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739) :    Partial date should include partial time.
@@ -107,14 +108,19 @@
 * [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
 
+### No Action Required
+* [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  *Will Not Be Supported.  Comms from JeffG 2/17*
+* [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  *Will Not Be Supported.  Comms from JeffG 2/17*
+* [FHIR-33724](https://jira.hl7.org/browse/FHIR-33724) :  Support SSAVerify.  *Will Not Be Supported.  Comms from JeffG 2/17*
+* [FHIR-33725](https://jira.hl7.org/browse/FHIR-33725) :  Support SSADATEVER.  *Will Not Be Supported.  Comms from JeffG 2/17*
+* [FHIR-33726](https://jira.hl7.org/browse/FHIR-33726) :  Support SSADATTRANS.  *Will Not Be Supported.  Comms from JeffG 2/17*
 
 ### Discussion Points
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
 * [FHIR-33405](https://jira.hl7.org/browse/FHIR-33405) :    credits
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long
-* [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692) :    Decedent Gender
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :    SSADTHCODE
-* [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE
+* [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE ==> will update messaging to support original, update, update-but-not-for-nchs
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34410](https://jira.hl7.org/browse/FHIR-34410) :    Transportation Role
