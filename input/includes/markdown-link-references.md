@@ -11,6 +11,8 @@
 [Hi3 Solutions Corporation]: https://www.facebook.com/hi3solutions/
 # USCore Resources
 [USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
+[CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
+[CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 
 # VRDR Resources
 [BypassEditFlagCS]: CodeSystem-vrdr-bypass-edit-flag-cs.html

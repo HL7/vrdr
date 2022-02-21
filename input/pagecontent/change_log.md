@@ -125,4 +125,5 @@
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
+* [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
 {% include markdown-link-references.md %}
