@@ -5,16 +5,16 @@
   }
 </style>
 
-# Misc
+<!-- MISC -->
 [MITRE]: https://www.mitre.org/
 [Georgia Institute of Technology (GTRI)]: https://www.gatech.edu/
 [Hi3 Solutions Corporation]: https://www.facebook.com/hi3solutions/
-# USCore Resources
+<!-- USCORE -->
 [USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 
-# VRDR Resources
+<!-- From the VRDR IG -->
 [BypassEditFlagCS]: CodeSystem-vrdr-bypass-edit-flag-cs.html
 [DocumentSectionCS]: CodeSystem-vrdr-document-section-cs.html
 [JurisdictionsCS]: CodeSystem-vrdr-jurisdictions-cs.html
