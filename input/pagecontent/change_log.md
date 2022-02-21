@@ -22,7 +22,7 @@
 * [FHIR-33221](https://jira.hl7.org/browse/FHIR-33221) :  Date of Death DOcumentation
 * [FHIR-33347](https://jira.hl7.org/browse/FHIR-33347) :  Meaningful, complete examples
 * [FHIR-33348](https://jira.hl7.org/browse/FHIR-33348) :  Death certificate composition:  sections, which profiles, complete examples
-* [FHIR-33425](https://jira.hl7.org/browse/FHIR-33425) :  Extensions and valuesets for city/county *** NEED VALUE SETS***
+* [FHIR-33425](https://jira.hl7.org/browse/FHIR-33425) :  Extensions and valuesets for city/county -- will reference CDC FTP files.
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :  Add lat/long to death location and injury location  *** already there...why add them?  MS? ***
 * [FHIR-33610](https://jira.hl7.org/browse/FHIR-33610) :  Death Certificate structure needs to be specified.   Profile has changed, but no examples.  Can't claim it is done without examples.
 * [FHIR-33693](https://jira.hl7.org/browse/FHIR-33693) :  DOcument how address fields are used.   Can't stick everything in address.text field.  JUst like IJE.
@@ -123,5 +123,6 @@
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long --> subject to review of requirements
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type?
-
+* [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
+* [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
 {% include markdown-link-references.md %}

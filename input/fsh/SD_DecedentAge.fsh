@@ -20,11 +20,13 @@ Description: "The decedent's chronological age at the time of death (Observation
 * effective[x] ^short = "The decedent's date of death"
 * effective[x] ^definition = "The effective date of this observation shall be equal to the decedent's date of death."
 * value[x] 0..1 MS
-* value[x] only Quantity
+* value[x] only Quantity  // value = AGE, system = AGETYPE
+* valueQuantity.system from UnitsOfAgeVS (required)
 * value[x] ^short = "The decedent's chronological age at the time of death"
 * value[x] ^definition = "The decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."
 * value[x].extension contains
-    BypassEditFlag named bypassEditFlag 0..1
+    BypassEditFlag named bypassEditFlag 0..1 // BYPASS_AGE
+* value[x].extension[bypassEditFlag] ^short = "Bypass Age Edit Flag"
 * value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-01 (required)
 * value[x].extension[bypassEditFlag].value[x] only CodeableConcept
 * dataAbsentReason 0..1 MS

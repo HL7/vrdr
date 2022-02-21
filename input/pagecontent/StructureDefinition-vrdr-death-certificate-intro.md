@@ -29,11 +29,11 @@ The content is broken down into the following sections:
     * [ConditionContributingToDeath]
     * [CauseOfDeathPathway]
 * Decedent Disposition
-    [DispositionLocation]
-    [FuneralHome]
-    [Mortician]
-    [DispositionMethod]
-    [FuneralServiceLicensee]
+    * [DispositionLocation]
+    * [FuneralHome]
+    * [Mortician]
+    * [DispositionMethod]
+    * [FuneralServiceLicensee]
 
 {: .grid }
 

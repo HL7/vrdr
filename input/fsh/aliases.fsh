@@ -21,6 +21,7 @@ Alias: $statesCS = https://www.usps.com/
 Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
 Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+Alias: $unitsofmeasure = http://unitsofmeasure.org/
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 
@@ -42,5 +43,4 @@ Alias: $documentSectionCodeSystem = DocumentSectionCS
 Alias: $education-level = EducationLevelVS
 Alias: $bypassEditFlagCodeSystem = BypassEditFlagCS
 Alias: $Cause-Of-Death-Condition = CauseOfDeathCondition
-Alias: $method-of-disposition = MethodOfDispositionVS
 Alias: $administrative-gender_1 = AdministrativeGenderVS
