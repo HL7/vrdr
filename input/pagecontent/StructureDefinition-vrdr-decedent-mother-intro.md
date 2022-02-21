@@ -1,12 +1,14 @@
 ### Usage
 
-The Decedent Education level profile contains the following information:
+The Decedent Mother profile contains the following information:
 
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Level of Education   | value  | [EducationLevelVS]  | DEDUC  |
-| Bypass Flag - Level of Education   | value  | [EditBypass01VS]  | DEDUC_BYPASS  |
+| Mother's Maiden Surname (Last)   | humanName.family  | string  | DMOMMDN  |
+| Mother's First name   | humanName.given  | string  | DMOMF   |
+| Mother's middle name   | humanName.given  | string  | DMOMMID *** not supported by library *** |
+| Mother's suffix   | humanName.suffix  | string  | MOTHERSSUFFIX  *** not supported by library *** |
 {: .grid }
 
 

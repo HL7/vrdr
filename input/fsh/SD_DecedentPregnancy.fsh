@@ -20,5 +20,5 @@ Description: "Decedent Pregnancy Status (Observation)"
 * value[x] from PregnancyStatusVS (required)
 * value[x].extension contains
     BypassEditFlag named bypassEditFlag 0..1
-* value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-012 (required)
+* value[x].extension[bypassEditFlag].value[x] from EditBypass012VS (required)
 * value[x].extension[bypassEditFlag].value[x] only CodeableConcept

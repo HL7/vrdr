@@ -14,6 +14,4 @@ Description: "Decedent Military Service (Observation)"
 * subject only Reference(Decedent)
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $Yes-No-Unknown (required)
-* value[x] ^binding.description = "Yes-No-Unknown"
-* note 0..1
+* value[x] from YesNoUnknownVS (required)
