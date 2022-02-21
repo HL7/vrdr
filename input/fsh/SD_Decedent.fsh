@@ -36,8 +36,8 @@ Description: "Decedent (USCorePatient)"
 * address.district.extension[districtCode] ^short = "County code"
 // Add usage note that codes are from: https://ftp.cdc.gov/pub/health_Statistics/nchs/Manuals/Mortality/PLACE_CODES.txt and
 * address.district.extension[districtCode] ^definition = "Numeric code in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf) and https://ftp.cdc.gov/pub/health_Statistics/nchs/Manuals/Mortality/PLACE_CODES.txt."
- * address.country from ResidenceCountryVS (required)  // COUNTRYC
- * address.state from StatesTerritoriesAndProvincesVS (required)  // STATEC
+* address.country from ResidenceCountryVS (required)  // COUNTRYC
+* address.state from StatesTerritoriesAndProvincesVS (required)  // STATEC
 * maritalStatus 0..1
 * maritalStatus only CodeableConcept
 * maritalStatus from MaritalStatusVS (required)  // MARITAL
