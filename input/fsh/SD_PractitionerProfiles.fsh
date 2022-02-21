@@ -39,13 +39,10 @@ Description: "Funeral Home Director (USCorePractitionerRole)"
 * insert RequireMetaProfile(FuneralHomeDirector)
 * practitioner 1..1
 * practitioner only Reference(Mortician)
-* practitioner ^short = "practitioner"
 * organization 1..1
 * organization only Reference(FuneralHome)
-* organization ^short = "organization"
 * code 1..1
-* code from PractitionerRole (required)
-* code ^binding.description = "PractitionerRole"
+// * code from PractitionerRole (required)
 
 Profile: DeathPronouncementPerformer
 Parent: USCorePractitionerProfile
@@ -55,4 +52,3 @@ Description: "Death Pronouncement Performer (USCorePractitioner)"
 * insert RequireMetaProfile(DeathPronouncementPerformer)
 * identifier 1..1
 * name 1..1
-* name ^short = "name"

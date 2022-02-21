@@ -1,6 +1,6 @@
 ### Usage
 
-The Decedent Military Service profile contains the following information:
+The Manner of Death profile contains the following information:
 
 
 | **Name** |  **Field**   | **Encoding** |  **IJE Field Name(s)**  |

@@ -28,7 +28,6 @@ Description: "Injury Incident (Observation)"
 * component[placeOfInjury].value[x] 1..1
 * component[placeOfInjury].value[x] only CodeableConcept
 * component[placeOfInjury].value[x] from PlaceOfInjuryVS (required)
-* component[placeOfInjury].value[x] ^binding.description = "PHVS_PlaceOfInjury_NCHS"
 * component[workInjuryIndicator].code 1..1
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work" (exactly)
 * component[workInjuryIndicator].value[x] 1..1
