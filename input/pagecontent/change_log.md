@@ -48,7 +48,7 @@
 * [FHIR-35595](https://jira.hl7.org/browse/FHIR-35595)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
 * [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
-* <not ticketed> : Add sex at time of death Observation in lieu of gender and birthsex
+* not ticketed : Add sex at time of death Observation in lieu of gender and birthsex
 ### Changes
 * [FHIR-32873](https://jira.hl7.org/browse/FHIR-32873) :  DeathLocation.extension[location-jurisdiction-id] cardinality 1..1
 * [FHIR-32879](https://jira.hl7.org/browse/FHIR-32879) :  Make extension urls consistent.
@@ -110,7 +110,7 @@
 * [FHIR-35992](https://jira.hl7.org/browse/FHIR-35992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealth with later)
 * [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
-* <not ticketed> :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
+* not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 ### No Action Required
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  *Will Not Be Supported.  Comms from JeffG 2/17*
 * [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  *Will Not Be Supported.  Comms from JeffG 2/17*
@@ -126,8 +126,8 @@
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
 * [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
-* <none> :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
-* <none> :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
-* <none> :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
-* <none> :   What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
 {% include markdown-link-references.md %}
