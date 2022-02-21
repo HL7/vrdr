@@ -7,10 +7,10 @@ The content is broken down into the following sections:
     * [DecedentMother]
     * [DecedentSpouse]
     * [DecedentAge]
-    * [BirthRecordID]
-    * [EducationLevel]
-    * [MilitaryService]
-    * [UsualWork]
+    * [BirthRecordIdentifier]
+    * [DecedentEducationLevel]
+    * [DecendentMilitaryService]
+    * [DecedentUsualWork]
     * [Parameters2022]
 * Death Investigation
     * [ExaminerContacted]
@@ -32,7 +32,7 @@ The content is broken down into the following sections:
     * [DispositionLocation]
     * [FuneralHome]
     * [Mortician]
-    * [DispositionMethod]
+    * [DecedentDispositionMethod]
     * [FuneralServiceLicensee]
 
 {: .grid }

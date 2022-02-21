@@ -11,8 +11,6 @@ The Certifier profile includes:
 | State, U.S. Territory or Canadian Province of Certifier - code | address.state | [StateTerritoryProvinceVS] | CERTSTATECD |
 | State, U.S. Territory or Canadian Province of Certifier - literal | address.state | string | CERTSTATE |
 | Certifier Zip | address.postalcode | string | CERTZIP |
-| Certification Date | ?????? - Certification? | string | CERTDATE |
-| Certifier Title | ?????? - Certification? | [CertifierRoleVS] | CERTL |
 {: .grid }
 
 

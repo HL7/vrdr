@@ -31,7 +31,7 @@
 [LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html
 [NVSSEthnicity]: StructureDefinition-NVSS-Ethnicity.html
 [NVSSRace]: StructureDefinition-NVSS-Race.html
-[AutopsyPerformed]: StructureDefinition-vrdr-autopsy-performed-indicator.html
+[AutopsyPerformedIndicator]: StructureDefinition-vrdr-autopsy-performed-indicator.html
 [BirthRecordIdentifier]: StructureDefinition-vrdr-birth-record-identifier.html
 [CauseOfDeathCondition]: StructureDefinition-vrdr-cause-of-death-condition.html
 [CauseOfDeathPathway]: StructureDefinition-vrdr-cause-of-death-pathway.html
@@ -65,10 +65,11 @@
 [FuneralServiceLicensee]: StructureDefinition-vrdr-funeral-service-licensee.html
 [InjuryIncident]: StructureDefinition-vrdr-injury-incident.html
 [InjuryIncidentReference]: StructureDefinition-vrdr-injury-location-reference.html
-[InjuryIncident]: StructureDefinition-vrdr-injury-location.html
+[InjuryLocation]: StructureDefinition-vrdr-injury-location.html
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
+[Parameters-2022]: StructureDefinition-vrdr-parameters-2022.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDatePartAbsentReason]: StructureDefinition-vrdr-partial-date-part-absent-reason.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
@@ -99,6 +100,7 @@
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
+[UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
 [Artifacts]: artifacts.html
 [Background]: background.html
 [ChangeLog]: change_log.html
