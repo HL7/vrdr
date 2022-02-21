@@ -24,8 +24,6 @@ The Decedent profile contains basic information about the decedent, including da
 | Residence - Country  | address.country  | [ResidenceCountryVS] | COUNTRYC  |
 | Residence - Within City Limits  | address.city.extension[withinCityLimits]  | [YesNoUnknownVS] | LIMITS  |
 | Social Security Number    | identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn  and type.coding.code="SB"   | String  | SSN  |
-
-
 {: .grid }
 
 
