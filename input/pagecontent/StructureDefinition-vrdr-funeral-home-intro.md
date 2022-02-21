@@ -5,7 +5,7 @@ The Funeral Home profile contains the following information:
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Funeral Facility Name| name | string | FUNFACNAME |
 | Funeral Facility Address | address.text  | string | FUNFACADDRESS |
-| Funeral Facility Address Compoments | address  | string | FUNFACSTNUM, FUNFACPREDIR, FUNFACSTRNAME, FUNFACSTRDESIG, FUNPOSTDIR, FUNUNITNUM, FUNCITYTEXT, FUNSTATECD, FUNSTATE, FUNZIP **not supported by library ** |
+| Funeral Facility Address Compoments | address  | string | FUNFACSTNUM, FUNFACPREDIR, FUNFACSTRNAME, FUNFACSTRDESIG, FUNPOSTDIR, FUNUNITNUM, FUNCITYTEXT, FUNSTATECD, FUNSTATE, FUNZIP **not supported by library** |
 {: .grid }
 
 
