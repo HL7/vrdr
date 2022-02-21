@@ -35,7 +35,7 @@
 * The development of the VRDR implementation guide by the [development team](credits.html#development-team) was performed under contract to CDC/NCHS/DVS under the direction of the [project facilitators](credits.html#project-facilitators).
 
 ### Testing Partners
-The VRDR project team would like to express a special thanks to    * the following testing partners in their contribution to the VRDR:
+The VRDR project team would like to express a special thanks to the following testing partners in their contribution to the VRDR:
 
 * Centers for Disease Control and Prevention:
     *  Division of Cancer Prevention and Control
