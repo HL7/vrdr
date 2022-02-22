@@ -21,7 +21,7 @@ The Decedent profile contains basic information about the decedent, including da
 | Residence - address  | address.line  | string | ADDRESS_R  |
 | Residence - City  | address.city  | string | CITYTEXT_R  |
 | Residence - coded City  | address.city.extension.districtCode  | integer | CITYC  |
-| Residence - County  | address.district  | integer | COUNTYTEXT_R  |
+| Residence - County  | address.district  | string | COUNTYTEXT_R  |
 | Residence - coded County  | address.district.extension.districtCode  | integer | COUNTYC  |
 | Residence - State  | address.state  | [StatesTerritoriesProvincesVS] | STATEC, STATETEXT_R  |
 | Residence - Country  | address.country  | [ResidenceCountryVS] | COUNTRYC, COUNTRYTEXT_R  |
