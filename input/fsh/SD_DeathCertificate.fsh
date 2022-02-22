@@ -15,6 +15,8 @@ Description: "The body of the death certificate document (Composition)."
 * type 1..1
 * type only CodeableConcept
 * type = $loinc#64297-5 "Death certificate" (exactly)
+* extension contains
+    FilingFormat named filingFormat 0..1
 * subject 1..1
 * subject only Reference(Decedent)
 * date 1..1
