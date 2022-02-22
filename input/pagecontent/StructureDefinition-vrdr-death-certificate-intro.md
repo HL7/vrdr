@@ -7,6 +7,7 @@ The profile includes:
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Date of Registration | date  | dateTime | DOR_YR, DOR_MO, DOR_DY |
+| Source flag: paper/electronic | extension[ filingFormat]  | [FilingFormatVS]] | MFILED **not supported by library**  |
 {: .grid }
 
 
