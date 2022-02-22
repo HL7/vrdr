@@ -10,6 +10,7 @@ STATEC = is US State/Territory or CA Province/Territory, not Jurisdiction.
     * ALIAS, REPLACE, VOID
     * STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R -- not supported by FHIR Addresses
     * SEX_BYPASS  -- deprecated
+    * STATESP  -- deprecated
     * SUR_MO, SUR_DY, SUR_YR  -- not supported
     * AUXNO2 -- use case unclear
 * Some IJE fields map to:
