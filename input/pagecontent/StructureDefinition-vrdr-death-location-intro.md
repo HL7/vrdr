@@ -12,6 +12,10 @@
 | PlaceOfDeath  | code  | [PlaceOfDeathVS] | DPLACE  |
 | Death Location (latitude) | position.latitude | float | LAT_D |
 | Death Location (longitude) | position.longitude | float | LONG_D |
+| Death Location - address  | address.line  | string | ADDRESS_D  |
+| Death Location - City  | address.city  | string | CITYTEXT_D  |
+| Death Location - County  | address.district  | integer | COUNTYTEXT_D  |
+| Death Location - Zipcode  | address.postalCode | string | ZIP9_D  |
 {: .grid }
 
 

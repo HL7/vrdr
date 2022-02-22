@@ -1,6 +1,15 @@
 ### Usage
 
 The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
+
+The profile includes:
+
+| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
+| ---------------| ------------------------ | ------------- | ------------------- |
+| Date of Registration | date  | dateTime | DOR_YR, DOR_MO, DOR_DY |
+{: .grid }
+
+
 The content is broken down into the following sections:
 * Decedent Demographics
     * [DecedentFather]
@@ -34,6 +43,8 @@ The content is broken down into the following sections:
     * [Mortician]
     * [DecedentDispositionMethod]
     * [FuneralServiceLicensee]
+
+
 
 {: .grid }
 
