@@ -1,5 +1,5 @@
 ValueSet: EducationLevelVS
-Id: vrdr-education-level
+Id: vrdr-education-level-vs
 Title: "Education Level"
 Description: "Highest educational level achieved.  Based on PHVS_DecedentEducationLevel_NCHS."
 * $v3-EducationLevel#ASSOC "Associate's or technical degree complete"

@@ -27,6 +27,6 @@ Description: "The decedent's chronological age at the time of death (Observation
 * value[x].extension contains
     BypassEditFlag named bypassEditFlag 0..1 // BYPASS_AGE
 * value[x].extension[bypassEditFlag] ^short = "Bypass Age Edit Flag"
-* value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-01 (required)
+* value[x].extension[bypassEditFlag].value[x] from EditBypass01VS (required)
 * value[x].extension[bypassEditFlag].value[x] only CodeableConcept
 * dataAbsentReason 0..1 MS

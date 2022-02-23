@@ -1,5 +1,5 @@
 ValueSet: RelatedPersonRelationshipTypeVS
-Id: vrdr-RelatedPersonRelationshipType
+Id: vrdr-related-person-relationship-type-vs
 Title: "RelatedPerson Relationship type VS -- PHVS_RelatedPersonRelationshipType_NCHS"
 Description: "PHVS_RelatedPersonRelationshipType_NCHS"
 * $roleCode#CHLDADOPT "adopted child"

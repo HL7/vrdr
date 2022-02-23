@@ -1,5 +1,5 @@
 ValueSet: EditBypass01VS
-Id: Edit-Bypass-01
+Id: vrdr-edit-bypass-01-vs
 Title: "Edit Bypass 01"
 Description: "A subset of code values (0 and 1) use to indicate the outcome of data validation assessment for unusual data values."
 * insert boilerplate
@@ -7,7 +7,7 @@ Description: "A subset of code values (0 and 1) use to indicate the outcome of d
 * BypassEditFlagCS#1 "Edit Failed, Data Queried, and Verified"
 
 ValueSet: EditBypass012VS
-Id: Edit-Bypass-012
+Id: vrdr-edit-bypass-012-vs
 Title: "Edit Bypass 012"
 Description: "A subset of code values (0, 1, and 2) use to indicate the outcome of data validation assessment for unusual data values."
 * insert boilerplate
@@ -16,7 +16,7 @@ Description: "A subset of code values (0, 1, and 2) use to indicate the outcome 
 * BypassEditFlagCS#2 "Edit Failed, Data Queried, but not Verified"
 
 ValueSet: EditBypass0124VS
-Id: Edit-Bypass-0124
+Id: vrdr-edit-bypass-0124-vs
 Title: "Edit Bypass 0124"
 Description: "A subset of code values (0, 1, 2, and 4) use to indicate the outcome of data validation assessment for unusual data values."
 * insert boilerplate
@@ -26,7 +26,7 @@ Description: "A subset of code values (0, 1, 2, and 4) use to indicate the outco
 * BypassEditFlagCS#4 "Edit Failed, Query Needed"
 
 ValueSet: EditBypass01234VS
-Id: Edit-Bypass-01234
+Id: vrdr-edit-bypass-01234-vs
 Title: "Edit Bypass 01234"
 Description: "A subset of code values (0, 1, 2, 3, and 4) use to indicate the outcome of data validation assessment for unusual data values."
 * insert boilerplate

@@ -34,9 +34,8 @@ Description: "Decedent (USCorePatient)"
 * maritalStatus from MaritalStatusVS (required)  // MARITAL
 * maritalStatus.extension contains
     BypassEditFlag named bypassEditFlag 0..1 // MARITAL_BYPASS
-* maritalStatus.extension[bypassEditFlag].valueCodeableConcept from Edit-Bypass-0124 (required)
+* maritalStatus.extension[bypassEditFlag].valueCodeableConcept from EditBypass0124VS (required)
 * maritalStatus.extension[bypassEditFlag].value[x] only CodeableConcept
-// * maritalStatus.extension[bypassEditFlag].value[x] ^binding.description = "edit-Bypass-0124"
 * contact ^short = "Informant information"
 * contact.relationship 0..1
 * contact.relationship ^short = "Informant Relationship (INFORMRELATE)"

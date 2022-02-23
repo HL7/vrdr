@@ -22,5 +22,5 @@ Description: "Decedent Education Level (Observation)"
 * value[x] from EducationLevelVS (required)
 * value[x].extension contains
     BypassEditFlag named bypassEditFlag 0..1
-* value[x].extension[bypassEditFlag].value[x] from Edit-Bypass-01234 (required)
+* value[x].extension[bypassEditFlag].value[x] from EditBypass01234VS (required)
 * value[x].extension[bypassEditFlag].value[x] only CodeableConcept
