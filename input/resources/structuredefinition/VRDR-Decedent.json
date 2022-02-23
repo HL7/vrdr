@@ -1,16 +1,55 @@
 {
-	"resourceType": "StructureDefinition",
 	"id": "VRDR-Decedent",
 	"meta": {
-		"versionId": "115",
-		"lastUpdated": "2021-12-15T21:03:06.708+00:00",
-		"source": "#KhjF3Ul8B1uYrTDv"
+		"versionId": "123",
+		"lastUpdated": "2022-02-16T14:42:30.870+00:00",
+		"source": "#nO1cyBS3jiR4Q7fC",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^dMG-NXHH^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^write"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^TKWZUCCU^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "user^PNgAbFNH^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			}
+		],
+		"tag": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+				"code": "SUBSETTED",
+				"display": "Resource encoded in summary mode"
+			}
+		]
 	},
+	"resourceType": "StructureDefinition",
+	"status": "active",
+	"kind": "resource",
+	"derivation": "constraint",
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
 	"version": "1.0",
 	"name": "Decedent",
 	"title": "VRDR Decedent",
-	"status": "active",
 	"experimental": false,
 	"date": "2020-05-09",
 	"publisher": "Health Level Seven",
@@ -27,11 +66,9 @@
 		}
 	],
 	"fhirVersion": "4.0.1",
-	"kind": "resource",
 	"abstract": false,
 	"type": "Patient",
 	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
@@ -52,19 +89,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Race"
 						]
 					}
-				]
-			},
-			{
-				"id": "Patient.extension:race/uscore-race",
-				"path": "Patient.extension",
-				"sliceName": "race/uscore-race",
-				"max": "1"
-			},
-			{
-				"id": "Patient.extension:ethnicity/uscore-ethnicity",
-				"path": "Patient.extension",
-				"sliceName": "ethnicity/uscore-ethnicity",
-				"max": "1"
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Patient.extension:NVSS-Ethnicity",
@@ -80,7 +106,8 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Ethnicity"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Patient.extension:patient-birthPlace",
@@ -142,7 +169,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_Sex_MFU",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/administrative-gender"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/AdministrativeGender"
 				}
 			},
 			{
@@ -245,7 +272,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_MaritalStatus_NCHS",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/marital-status"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/MaritalStatus"
 				}
 			},
 			{
@@ -263,7 +290,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "edit-Bypass-0124",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-0124"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/EditBypass0124"
 				}
 			},
 			{
@@ -278,8 +305,8 @@
 				],
 				"binding": {
 					"strength": "required",
-					"description": "PHVS_RelatedPersonRelationshipType_NCHS",
-					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"
+					"description": "relatedperson-relationshiptype",
+					"valueSet": "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
 				}
 			}
 		]

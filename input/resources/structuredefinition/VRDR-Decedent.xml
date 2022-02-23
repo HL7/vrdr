@@ -3,9 +3,42 @@
     xmlns="http://hl7.org/fhir">
     <id value="VRDR-Decedent"/>
     <meta>
-        <versionId value="115"/>
-        <lastUpdated value="2021-12-15T21:03:06.708+00:00"/>
-        <source value="#KhjF3Ul8B1uYrTDv"/>
+        <versionId value="123"/>
+        <lastUpdated value="2022-02-16T14:42:30.870+00:00"/>
+        <source value="#nO1cyBS3jiR4Q7fC"/>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^dMG-NXHH^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^TKWZUCCU^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="user^PNgAbFNH^read"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^read"/>
+        </security>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent"/>
     <version value="1.0"/>
@@ -43,16 +76,7 @@
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Race"/>
             </type>
-        </element>
-        <element id="Patient.extension:race/uscore-race">
-            <path value="Patient.extension"/>
-            <sliceName value="race/uscore-race"/>
-            <max value="1"/>
-        </element>
-        <element id="Patient.extension:ethnicity/uscore-ethnicity">
-            <path value="Patient.extension"/>
-            <sliceName value="ethnicity/uscore-ethnicity"/>
-            <max value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Patient.extension:NVSS-Ethnicity">
             <path value="Patient.extension"/>
@@ -64,6 +88,7 @@
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Ethnicity"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Patient.extension:patient-birthPlace">
             <path value="Patient.extension"/>
@@ -113,7 +138,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_Sex_MFU"/>
-                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/administrative-gender"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/AdministrativeGender"/>
             </binding>
         </element>
         <element id="Patient.birthDate">
@@ -193,7 +218,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="PHVS_MaritalStatus_NCHS"/>
-                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/marital-status"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/MaritalStatus"/>
             </binding>
         </element>
         <element id="Patient.maritalStatus.extension">
@@ -206,7 +231,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="edit-Bypass-0124"/>
-                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-0124"/>
+                <valueSet value="http://hl7.org/fhir/us/vrdr/ValueSet/EditBypass0124"/>
             </binding>
         </element>
         <element id="Patient.contact.relationship">
@@ -218,8 +243,8 @@
             </type>
             <binding>
                 <strength value="required"/>
-                <description value="PHVS_RelatedPersonRelationshipType_NCHS"/>
-                <valueSet value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"/>
+                <description value="relatedperson-relationshiptype"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"/>
             </binding>
         </element>
     </differential>
