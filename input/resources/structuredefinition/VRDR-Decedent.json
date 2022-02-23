@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Decedent",
 	"meta": {
-		"versionId": "123",
-		"lastUpdated": "2022-02-16T14:42:30.870+00:00",
-		"source": "#nO1cyBS3jiR4Q7fC"
+		"versionId": "115",
+		"lastUpdated": "2021-12-15T21:03:06.708+00:00",
+		"source": "#KhjF3Ul8B1uYrTDv"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Decedent",
 	"version": "1.0",
@@ -52,8 +52,19 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Race"
 						]
 					}
-				],
-				"mustSupport": true
+				]
+			},
+			{
+				"id": "Patient.extension:race/uscore-race",
+				"path": "Patient.extension",
+				"sliceName": "race/uscore-race",
+				"max": "1"
+			},
+			{
+				"id": "Patient.extension:ethnicity/uscore-ethnicity",
+				"path": "Patient.extension",
+				"sliceName": "ethnicity/uscore-ethnicity",
+				"max": "1"
 			},
 			{
 				"id": "Patient.extension:NVSS-Ethnicity",
@@ -69,8 +80,7 @@
 							"http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-Ethnicity"
 						]
 					}
-				],
-				"mustSupport": true
+				]
 			},
 			{
 				"id": "Patient.extension:patient-birthPlace",
@@ -132,7 +142,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_Sex_MFU",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/AdministrativeGender"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/administrative-gender"
 				}
 			},
 			{
@@ -235,7 +245,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "PHVS_MaritalStatus_NCHS",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/MaritalStatus"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/marital-status"
 				}
 			},
 			{
@@ -253,7 +263,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "edit-Bypass-0124",
-					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/EditBypass0124"
+					"valueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/edit-Bypass-0124"
 				}
 			},
 			{
@@ -268,8 +278,8 @@
 				],
 				"binding": {
 					"strength": "required",
-					"description": "relatedperson-relationshiptype",
-					"valueSet": "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+					"description": "PHVS_RelatedPersonRelationshipType_NCHS",
+					"valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8018"
 				}
 			}
 		]

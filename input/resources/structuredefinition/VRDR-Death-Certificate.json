@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Certificate",
 	"meta": {
-		"versionId": "83",
-		"lastUpdated": "2022-02-14T18:38:49.977+00:00",
-		"source": "#leOnnrn8xUf2bZEi"
+		"versionId": "80",
+		"lastUpdated": "2021-11-18T04:11:34.025+00:00",
+		"source": "#iIhUUwQLJwCerinv"
 	},
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
 	"version": "1.0",
@@ -172,7 +172,7 @@
 					"discriminator": [
 						{
 							"type": "pattern",
-							"path": "code.coding"
+							"path": "code"
 						}
 					],
 					"rules": "open"
@@ -187,12 +187,6 @@
 				"definition": "This section of the Death Certificate Document is comprised of profiles containing decedent demographic data. Demograhic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.",
 				"max": "1",
 				"mustSupport": true
-			},
-			{
-				"id": "Composition.section:DecedentDemographics.title",
-				"path": "Composition.section.title",
-				"min": 1,
-				"max": "1"
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.code",
@@ -605,7 +599,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/vrdr/StructureDefinition/Cause-Of-Death-Condition"
+							"http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Cause-Of-Death-Condition"
 						]
 					}
 				],
