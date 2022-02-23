@@ -1,9 +1,8 @@
 ### New Issues
-* no ticket yet :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
 * [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
     * Cause of Death:  [LOINC 69453-9 ](https://loinc.org/69453-9/)
     * Condition Contributing to Death (underlying ) [LOINC 80358-5](https://loinc.org/80358-5/)
-* Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
+* [FHIR-36088](https://jira.hl7.org/browse/FHIR-36088): Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
     * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
     * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
     * *Proposed Alternatives*:
@@ -11,9 +10,8 @@
             * (preferred) Encode SEX in a SexAtTimeOfDeath extension to decedent with a codeable concept (M,F,unknown).
             * Encode SEX in a *new* Observation (SexAtTimeOfDeath) with a valueset of (M,F,unknown).   The closest code in LOINC for this is https://loinc.org/99502-7/ (Recorded Sex or Gender) "Documentation of a specific instance of sex and/or gender information. " which seems to align pretty well with NCHS's needs.
         * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
-* no ticket yet:
-* no ticket yet: Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
-    * Need a Jira ticket to add these to Decedent.address as extensions.
+* [FHIR-36087](https://jira.hl7.org/browse/FHIR-36087): Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
+* [FHIR-36086](https://jira.hl7.org/browse/FHIR-36086) :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
 * [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
 * [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
     * there is no appropriate LOINC code
@@ -57,6 +55,8 @@
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
 * [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
 * not ticketed : Add sex at time of death Observation in lieu of gender and birthsex
+* [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
+* [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
 ### Changes (check that these are marked as applied in Jira)
 * [FHIR-32873](https://jira.hl7.org/browse/FHIR-32873) :  DeathLocation.extension[location-jurisdiction-id] cardinality 1..1
 * [FHIR-32879](https://jira.hl7.org/browse/FHIR-32879) :  Make extension urls consistent.
@@ -123,6 +123,7 @@
 * [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
 * not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
+* [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
 ### No Action Required (should be marked in Jira)
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :  REPLACE FIELD. Out of scope.  PERHAPS an issue for the messaging IG.
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  *Will Not Be Supported.  Comms from JeffG 2/17*
@@ -134,9 +135,7 @@
 ### Discussion Points
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
-* [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type? ==> timestamp
-* [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
-* [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
-* [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
+
+
 
 {% include markdown-link-references.md %}
