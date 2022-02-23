@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="vrdr"/>
     <meta>
-        <versionId value="564"/>
-        <lastUpdated value="2022-02-16T14:32:08.992+00:00"/>
-        <source value="#tLeZNhcuwZ2GV7Mk"/>
+        <versionId value="506"/>
+        <lastUpdated value="2022-01-03T12:48:54.559+00:00"/>
+        <source value="#39wHOICh3kVRagZc"/>
     </meta>
     <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/vrdr"/>
     <version value="1.1.0"/>
@@ -55,7 +55,7 @@
         </extension>
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
         <packageId value="hl7.fhir.us.core"/>
-        <version value="4.0.0"/>
+        <version value="3.1.0"/>
     </dependsOn>
     <dependsOn id="usodh">
         <extension url="https://trifolia-fhir.lantanagroup.com/r4/StructureDefinition/extension-ig-depends-on-location">
@@ -66,7 +66,7 @@
         </extension>
         <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
         <packageId value="hl7.fhir.us.odh"/>
-        <version value="1.1.0"/>
+        <version value="1.0.0"/>
     </dependsOn>
     <definition>
         <grouping id="default">
@@ -110,7 +110,7 @@
                 <reference value="StructureDefinition/VRDR-Decedent-Education-Level"/>
                 <display value="Decedent's Education Level"/>
             </reference>
-            <name value="VRDR Decedent"/>
+            <name value="VRDR Decedent Education Level"/>
             <description value="The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DecedentDemographics"/>
@@ -257,10 +257,10 @@
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/Cause-Of-Death-Condition"/>
+                <reference value="StructureDefinition/VRDR-Cause-Of-Death-Condition"/>
                 <display value="Cause Of Death Condition"/>
             </reference>
-            <name value="Cause Of Death Condition"/>
+            <name value="VRDR Cause Of Death Condition"/>
             <description value="The Cause Of Death Condition resource represents a clinically relevant condition --disease, injury, or complication-- in the causal pathway of events that directly caused the death. The VRDR Cause of Death Condition profile builds upon the FHIR R4 Condition resource."/>
             <exampleBoolean value="false"/>
             <groupingId value="DeathCertification"/>
@@ -844,7 +844,7 @@
                 <reference value="StructureDefinition/Location-Jurisdiction-Id"/>
                 <display value="LocationJurisdictionId"/>
             </reference>
-            <name value="Location Jurisdiction Id"/>
+            <name value="LocationJurisdictionId"/>
             <description value="An extension intended for use in an FHIR Location resource to identify the national case reporting jurisdiction under which the location falls. The jurisdiction identifier can be express as a string or as a code value from the [PHVS_USVitalRecordsJurisdictions_NCHS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#) value set."/>
             <exampleBoolean value="false"/>
             <groupingId value="Extensions"/>
@@ -909,8 +909,8 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/EditBypass01"/>
-                <display value="Edit Bypass 01"/>
+                <reference value="ValueSet/edit-Bypass-01"/>
+                <display value="Edit Bypass 0 and 1"/>
             </reference>
             <name value="Edit Bypass 01"/>
             <description value="A subset of code values (0 and 1) use to indicate the outcome of data validation assessment for unusual data values."/>
@@ -919,8 +919,8 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/EditBypass0124"/>
-                <display value="Edit Bypass 0124"/>
+                <reference value="ValueSet/edit-Bypass-0124"/>
+                <display value="edit Bypass 0124"/>
             </reference>
             <name value="Edit Bypass 0124"/>
             <description value="A subset of code values (0, 1, 2, and 4) use to indicate the outcome of data validation assessment for unusual data values."/>
@@ -929,8 +929,8 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/EditBypass01234"/>
-                <display value="Edit Bypass 01234"/>
+                <reference value="ValueSet/edit-Bypass-01234"/>
+                <display value="edit Bypass 01234"/>
             </reference>
             <name value="Edit Bypass 01234"/>
             <description value="A subset of code values (0, 1, 2, 3, and 4) use to indicate the outcome of data validation assessment for unusual data values."/>
@@ -939,7 +939,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/EditBypass012"/>
+                <reference value="ValueSet/edit-Bypass-012"/>
                 <display value="edit Bypass 012"/>
             </reference>
             <name value="Edit Bypass 012"/>
@@ -949,7 +949,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/Educationlevel"/>
+                <reference value="ValueSet/education-level"/>
                 <display value="Education Level"/>
             </reference>
             <name value="Education Level"/>
@@ -959,7 +959,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/MaritalStatus"/>
+                <reference value="ValueSet/marital-status"/>
                 <display value="Marital Status"/>
             </reference>
             <name value="Marital Status"/>
@@ -969,7 +969,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/AdministrativeGender"/>
+                <reference value="ValueSet/administrative-gender"/>
                 <display value="Administrative Gender"/>
             </reference>
             <name value="Administrative Gender"/>
@@ -979,7 +979,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/YesNoNotApplicable"/>
+                <reference value="ValueSet/Yes-No-NotApplicable"/>
                 <display value="Yes No NotApplicable"/>
             </reference>
             <name value="Yes No NotApplicable"/>
@@ -989,7 +989,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/YesNoUnknown"/>
+                <reference value="ValueSet/Yes-No-Unknown"/>
                 <display value="Yes No Unknown"/>
             </reference>
             <name value="Yes No Unknown"/>
@@ -999,7 +999,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/MannerOfDeath"/>
+                <reference value="ValueSet/manner-of-death"/>
                 <display value="Manner of Death"/>
             </reference>
             <name value="Manner of Death"/>
@@ -1009,7 +1009,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/PlaceOfDeath"/>
+                <reference value="ValueSet/place-of-death"/>
                 <display value="Place of Death"/>
             </reference>
             <name value="Place of Death"/>
@@ -1019,7 +1019,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/MethodOfDisposition"/>
+                <reference value="ValueSet/method-of-disposition"/>
                 <display value="Method of Disposition"/>
             </reference>
             <name value="Method of Disposition"/>
@@ -1038,7 +1038,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/RaceMissingValueReason"/>
+                <reference value="ValueSet/raceMissingValueReason"/>
                 <display value="Race Missing Value Reason"/>
             </reference>
             <name value="Race Missing Value Reason"/>
@@ -1048,8 +1048,8 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/YesNoUnknownNotApplicable"/>
-                <display value="Yes No Unknown NotApplicable"/>
+                <reference value="ValueSet/Yes-No-Unknown-NotApplicable"/>
+                <display value="Yes, No, Unknown, NotApplicable"/>
             </reference>
             <name value="Yes No Unknown NotApplicable"/>
             <description value="A set of codes used to express an affirmative response (Yes), negative response (No), or indicate that a response is not applicable (NA) or unknown (UNK) with regard to the question posed."/>
@@ -1058,7 +1058,7 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/TransportationIncidentRole"/>
+                <reference value="ValueSet/transportation-incident-role"/>
                 <display value="Transportation Incident Role"/>
             </reference>
             <name value="Transportation Incident Role"/>
@@ -1153,10 +1153,6 @@
         <parameter>
             <code value="copyrightyear"/>
             <value value="2021+"/>
-        </parameter>
-        <parameter>
-            <code value="apply"/>
-            <value value="http://snomed.info/sct/731000124108"/>
         </parameter>
     </definition>
 </ImplementationGuide>
