@@ -1,7 +1,7 @@
 ### New Issues
 * [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
-    * Cause of Death:  [LOINC 69453-9 ](https://loinc.org/69453-9/)
-    * Other significant causes or conditions of death [LOINC 69441-4](https://loinc.org/69441-4/)
+    * Cause of Death (Part 1):  [LOINC 69453-9 ](https://loinc.org/69453-9/)
+    * Other significant causes or conditions of death (Part 2) [LOINC 69441-4](https://loinc.org/69441-4/)
 * [FHIR-36088](https://jira.hl7.org/browse/FHIR-36088): Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
     * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
     * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
