@@ -11,10 +11,13 @@
             * (preferred) Encode SEX in a SexAtTimeOfDeath extension to decedent with a codeable concept (M,F,unknown).
             * Encode SEX in a *new* Observation (SexAtTimeOfDeath) with a valueset of (M,F,unknown).   The closest code in LOINC for this is https://loinc.org/99502-7/ (Recorded Sex or Gender) "Documentation of a specific instance of sex and/or gender information. " which seems to align pretty well with NCHS's needs.
         * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
+* no ticket yet:
 * no ticket yet: Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
     * Need a Jira ticket to add these to Decedent.address as extensions.
 * [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
-* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV ==> extension to Decedent?
+* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
+    * there is no appropriate LOINC code
+    * propose adding an extension to decedent in lieu of an observation
 * none :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
 * none :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
 * none :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?

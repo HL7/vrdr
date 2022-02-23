@@ -34,3 +34,34 @@ Invariant: digitalCityCode
 Description: "The  code is a five digit positive integer value between 00000 and 99999 with leading zeroes included. The allowable values for city code are detailed in the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)."
 Severity: #error
 // NEED TO WRITE THE INVARIANT!!!!!!  DO WE NEED THIS INVARIANT????
+
+
+Extension: PreDirectional
+Id: PreDirectional
+Title: "PreDirectional"
+Description: "PreDirectional"
+* insert addressextension(10)
+Extension: StreetName
+Id: StreetName
+Title: "StreetName"
+Description: "StreetName"
+Extension: StreetNumber
+Id: StreetNumber
+Title: "StreetNumber"
+Description: "StreetNumber"
+* insert addressextension(10)
+Extension: StreetDesignator
+Id: StreetDesignator
+Title: "StreetDesignator"
+Description: "StreetDesignator"
+* insert addressextension(10)
+Extension: PostDirectional
+Id: PostDirectional
+Title: "PostDirectional"
+Description: "PostDirectional"
+* insert addressextension(10)
+Extension: UnitOrAptNumber
+Id: UnitOrAptNumber
+Title: "UnitOrAptNumber"
+Description: "UnitOrAptNumber"
+* insert addressextension(10)

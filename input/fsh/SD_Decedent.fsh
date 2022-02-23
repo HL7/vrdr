@@ -43,3 +43,4 @@ Description: "Decedent (USCorePatient)"
 * contact.relationship only CodeableConcept
 // * contact.relationship from RelatedPersonRelationshipTypeVS (required)
 * contact.relationship.text ^short = "Informant Relationship (INFORMRELATE) - first 30 characters will be used"
+* insert AddressComponents
