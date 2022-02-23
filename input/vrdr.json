@@ -1,9 +1,9 @@
 {
 	"id": "vrdr",
 	"meta": {
-		"versionId": "506",
-		"lastUpdated": "2022-01-03T12:48:54.559+00:00",
-		"source": "#39wHOICh3kVRagZc"
+		"versionId": "564",
+		"lastUpdated": "2022-02-16T14:32:08.992+00:00",
+		"source": "#tLeZNhcuwZ2GV7Mk"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -74,7 +74,7 @@
 			],
 			"uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
 			"packageId": "hl7.fhir.us.core",
-			"version": "3.1.0"
+			"version": "4.0.0"
 		},
 		{
 			"id": "usodh",
@@ -90,7 +90,7 @@
 			],
 			"uri": "http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh",
 			"packageId": "hl7.fhir.us.odh",
-			"version": "1.0.0"
+			"version": "1.1.0"
 		}
 	],
 	"definition": {
@@ -149,7 +149,7 @@
 					"reference": "StructureDefinition/VRDR-Decedent-Education-Level",
 					"display": "Decedent's Education Level"
 				},
-				"name": "VRDR Decedent Education Level",
+				"name": "VRDR Decedent",
 				"description": "The Decedent's Education Level resource represents the highest level of education achieved by the decedent. The VRDR Decedent's Education Level profile builds upon the FHIR Observation resource.",
 				"groupingId": "DecedentDemographics"
 			},
@@ -296,10 +296,10 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "StructureDefinition/VRDR-Cause-Of-Death-Condition",
+					"reference": "StructureDefinition/Cause-Of-Death-Condition",
 					"display": "Cause Of Death Condition"
 				},
-				"name": "VRDR Cause Of Death Condition",
+				"name": "Cause Of Death Condition",
 				"description": "The Cause Of Death Condition resource represents a clinically relevant condition --disease, injury, or complication-- in the causal pathway of events that directly caused the death. The VRDR Cause of Death Condition profile builds upon the FHIR R4 Condition resource.",
 				"groupingId": "DeathCertification"
 			},
@@ -883,7 +883,7 @@
 					"reference": "StructureDefinition/Location-Jurisdiction-Id",
 					"display": "LocationJurisdictionId"
 				},
-				"name": "LocationJurisdictionId",
+				"name": "Location Jurisdiction Id",
 				"description": "An extension intended for use in an FHIR Location resource to identify the national case reporting jurisdiction under which the location falls. The jurisdiction identifier can be express as a string or as a code value from the [PHVS_USVitalRecordsJurisdictions_NCHS](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=282D4DD8-39EA-4C5B-B8A9-B2C3E5878A15#) value set.",
 				"groupingId": "Extensions"
 			},
@@ -948,8 +948,8 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/edit-Bypass-01",
-					"display": "Edit Bypass 0 and 1"
+					"reference": "ValueSet/EditBypass01",
+					"display": "Edit Bypass 01"
 				},
 				"name": "Edit Bypass 01",
 				"groupingId": "ValueSets",
@@ -958,8 +958,8 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/edit-Bypass-0124",
-					"display": "edit Bypass 0124"
+					"reference": "ValueSet/EditBypass0124",
+					"display": "Edit Bypass 0124"
 				},
 				"name": "Edit Bypass 0124",
 				"groupingId": "ValueSets",
@@ -968,8 +968,8 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/edit-Bypass-01234",
-					"display": "edit Bypass 01234"
+					"reference": "ValueSet/EditBypass01234",
+					"display": "Edit Bypass 01234"
 				},
 				"name": "Edit Bypass 01234",
 				"groupingId": "ValueSets",
@@ -978,7 +978,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/edit-Bypass-012",
+					"reference": "ValueSet/EditBypass012",
 					"display": "edit Bypass 012"
 				},
 				"name": "Edit Bypass 012",
@@ -988,7 +988,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/education-level",
+					"reference": "ValueSet/Educationlevel",
 					"display": "Education Level"
 				},
 				"name": "Education Level",
@@ -998,7 +998,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/marital-status",
+					"reference": "ValueSet/MaritalStatus",
 					"display": "Marital Status"
 				},
 				"name": "Marital Status",
@@ -1008,7 +1008,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/administrative-gender",
+					"reference": "ValueSet/AdministrativeGender",
 					"display": "Administrative Gender"
 				},
 				"name": "Administrative Gender",
@@ -1018,7 +1018,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/Yes-No-NotApplicable",
+					"reference": "ValueSet/YesNoNotApplicable",
 					"display": "Yes No NotApplicable"
 				},
 				"name": "Yes No NotApplicable",
@@ -1028,7 +1028,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/Yes-No-Unknown",
+					"reference": "ValueSet/YesNoUnknown",
 					"display": "Yes No Unknown"
 				},
 				"name": "Yes No Unknown",
@@ -1038,7 +1038,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/manner-of-death",
+					"reference": "ValueSet/MannerOfDeath",
 					"display": "Manner of Death"
 				},
 				"name": "Manner of Death",
@@ -1048,7 +1048,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/place-of-death",
+					"reference": "ValueSet/PlaceOfDeath",
 					"display": "Place of Death"
 				},
 				"name": "Place of Death",
@@ -1058,7 +1058,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/method-of-disposition",
+					"reference": "ValueSet/MethodOfDisposition",
 					"display": "Method of Disposition"
 				},
 				"name": "Method of Disposition",
@@ -1077,7 +1077,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/raceMissingValueReason",
+					"reference": "ValueSet/RaceMissingValueReason",
 					"display": "Race Missing Value Reason"
 				},
 				"name": "Race Missing Value Reason",
@@ -1087,8 +1087,8 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/Yes-No-Unknown-NotApplicable",
-					"display": "Yes, No, Unknown, NotApplicable"
+					"reference": "ValueSet/YesNoUnknownNotApplicable",
+					"display": "Yes No Unknown NotApplicable"
 				},
 				"name": "Yes No Unknown NotApplicable",
 				"description": "A set of codes used to express an affirmative response (Yes), negative response (No), or indicate that a response is not applicable (NA) or unknown (UNK) with regard to the question posed.",
@@ -1097,7 +1097,7 @@
 			{
 				"exampleBoolean": false,
 				"reference": {
-					"reference": "ValueSet/transportation-incident-role",
+					"reference": "ValueSet/TransportationIncidentRole",
 					"display": "Transportation Incident Role"
 				},
 				"name": "Transportation Incident Role",
@@ -1199,6 +1199,10 @@
 			{
 				"code": "copyrightyear",
 				"value": "2021+"
+			},
+			{
+				"code": "apply",
+				"value": "http://snomed.info/sct/731000124108"
 			}
 		]
 	}

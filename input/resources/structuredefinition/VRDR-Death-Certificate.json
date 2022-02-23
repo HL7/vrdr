@@ -1,55 +1,16 @@
 {
+	"resourceType": "StructureDefinition",
 	"id": "VRDR-Death-Certificate",
 	"meta": {
 		"versionId": "83",
 		"lastUpdated": "2022-02-14T18:38:49.977+00:00",
-		"source": "#leOnnrn8xUf2bZEi",
-		"security": [
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^TKWZUCCU^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^write"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^PNgAbFNH^write"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^dMG-NXHH^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "user^PNgAbFNH^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^write"
-			}
-		],
-		"tag": [
-			{
-				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-				"code": "SUBSETTED",
-				"display": "Resource encoded in summary mode"
-			}
-		]
+		"source": "#leOnnrn8xUf2bZEi"
 	},
-	"resourceType": "StructureDefinition",
-	"status": "draft",
-	"kind": "resource",
-	"derivation": "constraint",
 	"url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/VRDR-Death-Certificate",
 	"version": "1.0",
 	"name": "DeathCertificate",
 	"title": "VRDR Death Certificate",
+	"status": "draft",
 	"experimental": false,
 	"date": "2020-05-09",
 	"publisher": "Health Level Seven",
@@ -72,9 +33,11 @@
 	],
 	"description": "The Death Certificate profile is the body of the death certificate document. It builds upon the FHIR Composition resource.",
 	"fhirVersion": "4.0.1",
+	"kind": "resource",
 	"abstract": false,
 	"type": "Composition",
 	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
@@ -243,12 +206,12 @@
 				"path": "Composition.section.code.coding",
 				"min": 1,
 				"max": "1",
-				"mustSupport": true,
 				"patternCoding": {
 					"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
 					"code": "Demographics",
 					"display": "Decedent Demographics"
-				}
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDemographics.entry",
@@ -406,12 +369,12 @@
 				"path": "Composition.section.code.coding",
 				"min": 1,
 				"max": "1",
-				"mustSupport": true,
 				"patternCoding": {
 					"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
 					"code": "Investigation",
 					"display": "Death Investigation"
-				}
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathInvestigation.entry",
@@ -596,12 +559,12 @@
 				"path": "Composition.section.code.coding",
 				"min": 1,
 				"max": "1",
-				"mustSupport": true,
 				"patternCoding": {
 					"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
 					"code": "Certification",
 					"display": "Death Certification"
-				}
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DeathCertification.entry",
@@ -696,12 +659,12 @@
 				"path": "Composition.section.code.coding",
 				"min": 1,
 				"max": "1",
-				"mustSupport": true,
 				"patternCoding": {
 					"system": "http://hl7.org/fhir/us/vrdr/CodeSystem/documentSectionCodeSystem",
 					"code": "Disposition",
 					"display": "Decedent Disposition"
-				}
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Composition.section:DecedentDisposition.entry",
