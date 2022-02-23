@@ -45,6 +45,7 @@ Extension: StreetName
 Id: StreetName
 Title: "StreetName"
 Description: "StreetName"
+* insert addressextension(50)
 Extension: StreetNumber
 Id: StreetNumber
 Title: "StreetNumber"
