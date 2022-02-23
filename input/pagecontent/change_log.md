@@ -51,10 +51,10 @@
 * [FHIR-34276](https://jira.hl7.org/browse/FHIR-34276) :    Conformance Section Needed (duplicate)
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561)    : Make DeathCertificate.timestamp MS or add data type (adult/fetal)????
 * [FHIR-34609](https://jira.hl7.org/browse/FHIR-34609) :    Add COncept Maps for IJE->FHIR code mapping
-* [FHIR-35595](https://jira.hl7.org/browse/FHIR-35595)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
 * [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
 * not ticketed : Add sex at time of death Observation in lieu of gender and birthsex
+* [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
 ### Changes (check that these are marked as applied in Jira)
