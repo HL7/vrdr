@@ -1,4 +1,8 @@
 ### New Issues
+* no ticket yet :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
+* [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
+    * Cause of Death:  [LOINC 69453-9 ](https://loinc.org/69453-9/)
+    * Condition Contributing to Death (underlying ) [LOINC 80358-5](https://loinc.org/80358-5/)
 * Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
     * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
     * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
@@ -7,10 +11,14 @@
             * (preferred) Encode SEX in a SexAtTimeOfDeath extension to decedent with a codeable concept (M,F,unknown).
             * Encode SEX in a *new* Observation (SexAtTimeOfDeath) with a valueset of (M,F,unknown).   The closest code in LOINC for this is https://loinc.org/99502-7/ (Recorded Sex or Gender) "Documentation of a specific instance of sex and/or gender information. " which seems to align pretty well with NCHS's needs.
         * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
-* Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
+* no ticket yet: Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
     * Need a Jira ticket to add these to Decedent.address as extensions.
-* Why do we need the location reference in INjuryIncident?   [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103)
-
+* [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
+* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV ==> extension to Decedent?
+* none :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
+* none :   What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
 ### Not Yet
 * [FHIR-32904](https://jira.hl7.org/browse/FHIR-32904) :  Provide examples of all extensions
 * [FHIR-32905](https://jira.hl7.org/browse/FHIR-32905) :  Provide examples of all extensions
@@ -26,13 +34,11 @@
 * [FHIR-33221](https://jira.hl7.org/browse/FHIR-33221) :  Date of Death DOcumentation
 * [FHIR-33347](https://jira.hl7.org/browse/FHIR-33347) :  Meaningful, complete examples
 * [FHIR-33348](https://jira.hl7.org/browse/FHIR-33348) :  Death certificate composition:  sections, which profiles, complete examples
-* [FHIR-33425](https://jira.hl7.org/browse/FHIR-33425) :  Extensions and valuesets for city/county -- will reference CDC FTP files.
 * [FHIR-33610](https://jira.hl7.org/browse/FHIR-33610) :  Death Certificate structure needs to be specified.   Profile has changed, but no examples.  Can't claim it is done without examples.
 * [FHIR-33693](https://jira.hl7.org/browse/FHIR-33693) :  DOcument how address fields are used.   Can't stick everything in address.text field.  JUst like IJE.
 * [FHIR-33698](https://jira.hl7.org/browse/FHIR-33698) :  Variation on 33693.  DOcument how addresses work.
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :  Inappropriate proposed resolution.  INFORMRELATE is currently a text string, not a coded value.
 * [FHIR-33717](https://jira.hl7.org/browse/FHIR-33717) :  Document how to specify 'other' for place of death.  Added usage.md Need to document wherever this is expected.
-* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Support for SPOUSELV ==> extension to Decedent?
 * [FHIR-33734](https://jira.hl7.org/browse/FHIR-33734) :  Something about redoing addresses.  Don't understand.
 * [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739) :    Partial date should include partial time.
 * [FHIR-33741](https://jira.hl7.org/browse/FHIR-33741) :  Inappropriate proposed resolution.  INFORMRELATE is currently a text string, not a coded value. Same as 33701
@@ -67,6 +73,7 @@
 * [FHIR-33210](https://jira.hl7.org/browse/FHIR-33210) :  COnventional Encoding for Addresses.  Value set for country????
 * [FHIR-33211](https://jira.hl7.org/browse/FHIR-33211) :  Update examples to avoid PHINVADs codes except where necessary
 * [FHIR-33344](https://jira.hl7.org/browse/FHIR-33344) :  Dependency on latest USCore (4.0.0)
+* [FHIR-33425](https://jira.hl7.org/browse/FHIR-33425) :  Extensions and valuesets for city/county -- will reference CDC FTP files.
 * [FHIR-33345](https://jira.hl7.org/browse/FHIR-33345) :  Fix links to PHINVADS VS
 * [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :  Add lat/long to death location and injury location  -- already there, but documented now.
 * [FHIR-33714](https://jira.hl7.org/browse/FHIR-33714) :  LImited gender values according to IJE
@@ -123,14 +130,10 @@
 * [FHIR-33727](https://jira.hl7.org/browse/FHIR-33727) :  Support REPLACE.  Duplicate of 33700
 ### Discussion Points
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :    Encoding of STate and Jurisdiction (also FHIR-33743)
-* [FHIR-33426](https://jira.hl7.org/browse/FHIR-33426) :    position lat/long --> subject to review of requirements
 * [FHIR-33702](https://jira.hl7.org/browse/FHIR-33702) :    Consistent answer about IJE compatibility at content and binary levels
 * [FHIR-34561](https://jira.hl7.org/browse/FHIR-34561) :    SOmething got lost in translation.   Timestamp or submission type? ==> timestamp
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
 * [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
-* none :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
+
 {% include markdown-link-references.md %}
