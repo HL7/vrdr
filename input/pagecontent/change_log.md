@@ -57,7 +57,8 @@
 * [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
-### Changes (check that these are marked as applied in Jira)
+### Changes
+(check that these are marked as applied in Jira)
 * [FHIR-32873](https://jira.hl7.org/browse/FHIR-32873) :  DeathLocation.extension[location-jurisdiction-id] cardinality 1..1
 * [FHIR-32879](https://jira.hl7.org/browse/FHIR-32879) :  Make extension urls consistent.
 * [FHIR-32906](https://jira.hl7.org/browse/FHIR-32906) :  Observation-Location.value[x] constrained to Reference(Location)
@@ -124,7 +125,8 @@
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
 * not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
-### No Action Required (should be marked in Jira)
+### No Action Required
+(should be marked in Jira)
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :  REPLACE FIELD. Out of scope.  PERHAPS an issue for the messaging IG.
 * [FHIR-33722](https://jira.hl7.org/browse/FHIR-33722) :  Support SSADTHCODE.  *Will Not Be Supported.  Comms from JeffG 2/17*
 * [FHIR-33723](https://jira.hl7.org/browse/FHIR-33723) :  Support SSAFOREIGN.  *Will Not Be Supported.  Comms from JeffG 2/17*
