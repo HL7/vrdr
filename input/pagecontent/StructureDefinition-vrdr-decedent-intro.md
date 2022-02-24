@@ -20,9 +20,9 @@ The Decedent profile contains basic information about the decedent, including da
 | NVSS Ethnicity | extension[ NVSSEthnicity] | as per IJE | DETHNIC1-5|
 | NVSS Race | extension[ NVSSRace] | as per IJE | RACE1-23, RACE_MVR|
 | Residence - address(predirectional) | address.extension[predir]  | string | PREDIR_D  |
-| Residence - address(predirectional) | address.extension[stnum]  | string | STNUM_D  |
-| Residence - address(predirectional) | address.extension[stname]  | string | STNAME_D  |
-| Residence - address(predirectional) | address.extension[stdesig]  | string | STDESIG_D  |
+| Residence - address(street number) | address.extension[stnum]  | string | STNUM_D  |
+| Residence - address(street name) | address.extension[stname]  | string | STNAME_D  |
+| Residence - address(street designator) | address.extension[stdesig]  | string | STDESIG_D  |
 | Residence - address(postdirectional) | address.extension[postdir]  | string | POSTDIR_D  |
 | Residence - address  | address.line  | string | ADDRESS_R  |
 | Residence - City  | address.city  | string | CITYTEXT_R  |
