@@ -29,6 +29,7 @@ Description: "Decedent Mother (RelatedPerson)"
 * name 1..1
 * address 0..1
 
+
 Profile: DecedentSpouse
 Parent: RelatedPerson
 Id: vrdr-decedent-spouse

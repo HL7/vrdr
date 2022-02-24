@@ -10,7 +10,6 @@ Description: """The gender of a person used for administrative purposes.
 |male|Male|M|Male|
 |female|Female|F|Female|
 |unknown|unknown|U|Unknown|"""
-* insert boilerplate
 * $admingender#male "Male"
 * $admingender#female "Female"
 * $admingender#unknown "unknown"

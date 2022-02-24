@@ -1,3 +1,6 @@
+
+
+
 Profile: Decedent
 Parent: USCorePatientProfile
 Id: vrdr-decedent
@@ -7,9 +10,11 @@ Description: "Decedent (USCorePatient)"
 * extension contains
     NVSSRace named NVSS-Race 0..1 MS and
     NVSSEthnicity named NVSS-Ethnicity 0..1 MS and
-    $patient-birthPlace named patient-birthPlace 0..1
-* extension[patient-birthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
-* extension[patient-birthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
+    NVSSSexAtDeath named NVSS-SexAtDeath 0..1 MS and
+    SpouseAlive named Spouse-Alive 0..1 and
+    $patient-birthPlace named Patient-BirthPlace 0..1
+* extension[Patient-BirthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
+* extension[Patient-BirthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
 * identifier 1..* MS
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
 * name 1..* MS
