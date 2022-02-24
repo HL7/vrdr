@@ -8,8 +8,8 @@ Description: "Decedent (USCorePatient)"
     NVSSRace named NVSS-Race 0..1 MS and
     NVSSEthnicity named NVSS-Ethnicity 0..1 MS and
     $patient-birthPlace named patient-birthPlace 0..1
-* extension[patient-birthPlace].value[x].country from BirthplaceCountryVS (required)    // BPLACE_CNT
-* extension[patient-birthPlace].value[x].state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
+* extension[patient-birthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
+* extension[patient-birthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
 * identifier 1..* MS
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
 * name 1..* MS
