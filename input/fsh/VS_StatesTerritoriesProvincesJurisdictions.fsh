@@ -14,7 +14,7 @@ RuleSet: CanadaProvinces
 * $provinces#YT	"Yukon"
 
 RuleSet: USStatesAndTerritories
-* include codes from valueset $statesVS
+* include codes from system $statesCS
 * exclude $statesCS#FM
 * exclude $statesCS#MH
 * exclude $statesCS#PW
