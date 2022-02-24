@@ -32,6 +32,7 @@ Description: "Decedent (USCorePatient)"
     WithinCityLimitsIndicator named withinCityLimitsIndicator 0..1
 * insert CityCode
 * insert CountyCode
+* insert AddressComponents
 * address.country from ResidenceCountryVS (required)  // COUNTRYC
 * address.state from StatesTerritoriesAndProvincesVS (required)  // STATEC
 * maritalStatus 0..1
@@ -47,4 +48,3 @@ Description: "Decedent (USCorePatient)"
 * contact.relationship only CodeableConcept
 // * contact.relationship from RelatedPersonRelationshipTypeVS (required)
 * contact.relationship.text ^short = "Informant Relationship (INFORMRELATE) - first 30 characters will be used"
-* insert AddressComponents
