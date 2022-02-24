@@ -3,6 +3,7 @@
 
 * [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
 * [FHIR-36102](https://jira.hl7.org/browse/FHIR-36102) Why do we need the location reference in DeathDate?
+* [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc) -- this is prototyped, but can be removed.
 * [FHIR-36094](https://jira.hl7.org/browse/FHIR-36094) : Get rid of them and replace with narrative explanation.
     * What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
     * What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
@@ -42,7 +43,6 @@
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
 * [FHIR-35991](https://jira.hl7.org/browse/FHIR-35991) :    Add second (local) category code for COndition COntributing to Death to differentiate from Cause of Death Condition.
 * not ticketed : Add sex at time of death Observation in lieu of gender and birthsex
-* [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc)
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36071](https://jira.hl7.org/browse/FHIR-36071) :  Required fields in DispositionLocation are unnecessary.
 ### Changes
