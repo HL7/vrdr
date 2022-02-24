@@ -24,5 +24,7 @@ Description: "Cause of death (Observation) Part 1, prior to submission of the co
 * component[interval].code = $loinc#69440-6 "Disease onset to death interval" (exactly)
 * component[interval].value[x] 1..1
 * component[interval].value[x] only Quantity or string
-* component[interval].value[x] ^short = "Cause of Death Part 1 Interval, Line a,b,c,d"
+* component[interval] ^short = "Cause of Death Part 1 Interval, Line a,b,c,d"
+* component[interval].valueString ^short = "Interval as a string"
+* component[interval].valueQuantity ^short = "Interval as a Quantity"
 * component[interval].valueQuantity.system from UnitsOfAgeVS (required)
