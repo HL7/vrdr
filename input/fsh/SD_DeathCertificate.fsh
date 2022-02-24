@@ -87,6 +87,7 @@ Description: "The body of the death certificate document (Composition)."
     DeathPronouncementPerformer 0..* MS and
     InjuryIncident 0..1 MS and
     DeathDate 0..1 MS and
+    SurgeryDate 0..1 MS and
     TransportationRole 0..1 MS
 * section[DeathInvestigation].entry[ExaminerContacted] only Reference(ExaminerContacted)
 * section[DeathInvestigation].entry[PregnancyStatus] only Reference(DecedentPregnancyStatus)
@@ -97,6 +98,7 @@ Description: "The body of the death certificate document (Composition)."
 * section[DeathInvestigation].entry[DeathPronouncementPerformer] only Reference(DeathPronouncementPerformer)
 * section[DeathInvestigation].entry[InjuryIncident] only Reference(InjuryIncident)
 * section[DeathInvestigation].entry[DeathDate] only Reference(DeathDate)
+* section[DeathInvestigation].entry[SurgeryDate] only Reference(SurgeryDate)
 * section[DeathInvestigation].entry[TransportationRole] only Reference(DecedentTransportationRole)
 * section[DeathCertification].code = DocumentSectionCS#Certification "Death Certification"
 * section[DeathCertification].entry 1..*

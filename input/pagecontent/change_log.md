@@ -1,25 +1,13 @@
 ### New Issues
-* [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
-    * Cause of Death (Part 1):  [LOINC 69453-9 ](https://loinc.org/69453-9/)
-    * Other significant causes or conditions of death (Part 2) [LOINC 69441-4](https://loinc.org/69441-4/)
-* [FHIR-36088](https://jira.hl7.org/browse/FHIR-36088): Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
-    * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
-    * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
-    * *Proposed Alternatives*:
-        * Alternatives:
-            * (preferred) Encode SEX in a SexAtTimeOfDeath extension to decedent with a codeable concept (M,F,unknown).
-            * Encode SEX in a *new* Observation (SexAtTimeOfDeath) with a valueset of (M,F,unknown).   The closest code in LOINC for this is https://loinc.org/99502-7/ (Recorded Sex or Gender) "Documentation of a specific instance of sex and/or gender information. " which seems to align pretty well with NCHS's needs.
-        * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
-* [FHIR-36087](https://jira.hl7.org/browse/FHIR-36087): Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
-* [FHIR-36086](https://jira.hl7.org/browse/FHIR-36086) :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
+
+
 * [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
-* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
-    * there is no appropriate LOINC code
-    * propose adding an extension to decedent in lieu of an observation
-* none :   What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
-* none :   What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
+* [FHIR-36102](https://jira.hl7.org/browse/FHIR-36102) Why do we need the location reference in DeathDate?
+* [FHIR-36094](https://jira.hl7.org/browse/FHIR-36094) : Get rid of them and replace with narrative explanation.
+    * What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
+    * What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
+    * What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
+    * What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
 ### Not Yet
 * [FHIR-32904](https://jira.hl7.org/browse/FHIR-32904) :  Provide examples of all extensions
 * [FHIR-32905](https://jira.hl7.org/browse/FHIR-32905) :  Provide examples of all extensions
@@ -125,6 +113,21 @@
 * [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
 * not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
+* [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
+    * Cause of Death (Part 1):  [LOINC 69453-9 ](https://loinc.org/69453-9/)
+    * Other significant causes or conditions of death (Part 2) [LOINC 69441-4](https://loinc.org/69441-4/)
+* [FHIR-36088](https://jira.hl7.org/browse/FHIR-36088): Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))
+    * USCore Patient includes both BirthSex(M,F,unknown) and Gender(M,F,unknown, other).  In an ideal world, information about the decedent would flow as USCore Patient info from an EHR into the EDRS.
+    * NCHS is interested in SEX to be defined as "Sex on visual inspection at the time of death by the funeral home", which is quite different than BirthSex (determined at birth) or Gender(determined by the patient/decedent).
+    * *Proposed Alternatives*:
+        * Alternatives:
+            * Encode SEX in a SexAtTimeOfDeath extension to decedent with a codeable concept (M,F,unknown).
+        * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
+* [FHIR-36086](https://jira.hl7.org/browse/FHIR-36086) :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
+* [FHIR-36087](https://jira.hl7.org/browse/FHIR-36087): Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
+* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
+    * propose adding an extension to decedent in lieu of an observation
+
 ### No Action Required
 (should be marked in Jira)
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :  REPLACE FIELD. Out of scope.  PERHAPS an issue for the messaging IG.
