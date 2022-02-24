@@ -96,18 +96,24 @@ Description: "Provides values of a partial date along with the reason one or mor
 * . ^short = "Partial Date"
 * . ^definition = "Provides a partial date and the reason one or more expected date part is missing."
 * extension contains
-    DateYear named date-year 0..1 and
-    DateAbsentReason named date-year-absent-reason 0..1 and
-    DateMonth named date-month 0..1 and
-    DateAbsentReason named date-month-absent-reason 0..1 and
-    DateDay named date-day 0..1 and
-    DateAbsentReason named date-day-absent-reason 0..1
-* extension[date-day] ^short = "Date Day"
-* extension[date-day] ^definition = "The day portion (DD) of the partial date."
-* extension[date-day-absent-reason] ^short = "Date day absent reason"
-* extension[date-day-absent-reason] ^definition = "The reason the day portion of a partial date is missing."
-* extension[date-year] ^short = "Date Year"
-* extension[date-year] ^definition = "The year portion (YYYY) of the partial date."
+    DateYear named year 0..1 and
+    DateAbsentReason named year-absent-reason 0..1 and
+    DateMonth named month 0..1 and
+    DateAbsentReason named month-absent-reason 0..1 and
+    DateDay named day 0..1 and
+    DateAbsentReason named day-absent-reason 0..1
+* extension[day] ^short = "Date Day"
+* extension[day] ^definition = "The day portion (DD) of the partial date."
+* extension[day-absent-reason] ^short = "day absent reason"
+* extension[day-absent-reason] ^definition = "The reason the day portion of a partial date is missing."
+* extension[year] ^short = "Date Year"
+* extension[year] ^definition = "The year portion (YYYY) of the partial date."
+* extension[year-absent-reason] ^short = "year absent reason"
+* extension[year-absent-reason] ^definition = "The reason the year portion of a partial date is missing."
+* extension[day] ^short = "Date Month"
+* extension[month] ^definition = "The day portion (MM) of the partial date."
+* extension[month-absent-reason] ^short = "month absent reason"
+* extension[month-absent-reason] ^definition = "The reason the month portion of a partial date is missing."
 
 Extension: DateYear
 Id: Date-Year
