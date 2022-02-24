@@ -16,7 +16,6 @@ Description: "Injury Incident (Observation)"
 * effective[x] only dateTime
 * value[x] 1..1
 * value[x] only dateTime or string
-* component ..2
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -34,3 +33,5 @@ Description: "Injury Incident (Observation)"
 * component[workInjuryIndicator].value[x] only CodeableConcept
 * component[workInjuryIndicator].value[x] from $Yes-No-Unknown-NotApplicable (required)
 * component[workInjuryIndicator].value[x] ^binding.description = "Yes No Unknown NotApplicable"
+* method 0..1
+* method from DeathDateMethodsVS (extensible)
