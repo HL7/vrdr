@@ -9,9 +9,15 @@ The profile includes:
 | Date of Registration | date  | dateTime | DOR_YR, DOR_MO, DOR_DY |
 | Source flag: paper/electronic | extension[ filingFormat]  | [FilingFormatVS]] | MFILED **not supported by library**  |
 | State Specific Field | extension[ stateSpecificField]  | string | STATESP **not yet supported by library**  |
-
 {: .grid }
 
+Additional content can be included (in what section?) in the Death Certificate based on standard resources and profiles.
+Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+For example:
+* Funeral Home Licensee (USCorePractitionerRole)
+* Mortician (USCorePractitioner)
+* Funeral Home Director (USCorePractitionerRole)
+* Death Pronouncement Performer (USCorePractitioner)
 
 The content is broken down into the following sections:
 * Decedent Demographics
@@ -21,7 +27,7 @@ The content is broken down into the following sections:
     * [DecedentAge]
     * [BirthRecordIdentifier]
     * [DecedentEducationLevel]
-    * [DecendentMilitaryService]
+    * [DecedentMilitaryService]
     * [DecedentUsualWork]
     * [Parameters2022]
 * Death Investigation

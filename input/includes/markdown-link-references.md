@@ -69,7 +69,7 @@
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
-[Parameters-2022]: StructureDefinition-vrdr-parameters-2022.html
+[Parameters2022]: StructureDefinition-vrdr-parameters-2022.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDatePartAbsentReason]: StructureDefinition-vrdr-partial-date-part-absent-reason.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
