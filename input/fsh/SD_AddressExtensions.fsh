@@ -2,7 +2,6 @@ Extension: CityCode
 Id: CityCode
 Title: "Address City Code"
 Description: "Numeric value in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf). (Extension)"
-* insert boilerplate
 * ^context.type = #element
 * ^context.expression = "Address.city"
 * value[x] 1..1
