@@ -3,7 +3,7 @@
 
 
 Extension: InjuryLocationReference
-Id: vrdr-injury-location-reference
+Id: InjuryLocationReference
 Title: "Injury Location Reference"
 Description: "Injury Location Reference (Extension)"
 * value[x] 1..1
@@ -12,7 +12,7 @@ Description: "Injury Location Reference (Extension)"
 
 
 Extension: DeathLocationReference
-Id: vrdr-death-location-reference
+Id: DeathLocationReference
 Title: "Death Location Reference"
 Description: "Death Location Reference (Extension)"
 * value[x] 1..1
@@ -20,7 +20,7 @@ Description: "Death Location Reference (Extension)"
 * value[x] only Reference(DeathLocation)
 
 Extension: DispositionLocationReference
-Id: vrdr-disposition-location-reference
+Id: DispositionLocationReference
 Title: "Disposition Location Reference"
 Description: "Disposition Location Reference (Extension)"
 * value[x] 1..1

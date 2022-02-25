@@ -1,5 +1,5 @@
 Extension: WithinCityLimitsIndicator
-Id: vrdr-within-city-limits-indicator
+Id: WithinCityLimitsIndicator
 Title: "Within City Limits Indicator"
 Description: "Within City Limits Indicator (Extension)"
 * insert boilerplate
