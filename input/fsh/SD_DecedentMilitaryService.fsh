@@ -7,8 +7,6 @@ Description: "Decedent Military Service (Observation)"
 * status 1..1
 * status only code
 * status = #final (exactly)
-* code 1..1
-* code only CodeableConcept
 * code = $loinc#55280-2 "Military service Narrative" (exactly)
 * subject 1..1
 * subject only Reference(Decedent)

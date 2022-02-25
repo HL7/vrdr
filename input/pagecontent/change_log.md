@@ -5,8 +5,6 @@
     *  According to JeffG the issue is that a date could be 2003, March 2003, March 13 2003, March 13 2003 4pm (no minutes), etc...
     * Propose to replace the current complex extension with a simple flag that indicates the resolution of the time component of the date (H,M,S).  If not specified, the default is S definition.
 * [FHIR-36107](https://jira.hl7.org/browse/FHIR-36107): why is effective date required?
-* [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
-* [FHIR-36102](https://jira.hl7.org/browse/FHIR-36102) Why do we need the location reference in DeathDate?
 * [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc) -- this is prototyped, but can be removed.
 ### Not Yet
 * [FHIR-32904](https://jira.hl7.org/browse/FHIR-32904) :  Provide examples of all extensions
