@@ -21,6 +21,6 @@ Description: """Code values reflecting the death location of the decedent (e.g.,
 * $sct#440071000124103 "Death in hospice"
 * $sct#16983000 "Death in hospital"
 * $sct#450391000124102 "Death in hospital-based emergency department or outpatient department"
-* $sct#450381000124100 " Death in nursing home or long term care facility"
+* $sct#450381000124100 "Death in nursing home or long term care facility"
 * $v3-NullFlavor#OTH "Other"
 * $v3-NullFlavor#UNK "UNK"

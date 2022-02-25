@@ -10,7 +10,6 @@ Description: "Death Location (USCoreLocation)"
 * description 1..1
 * type 1..1
 * type from $place-of-death (required)  // D_PLACE
-* type ^binding.description = "Place of Death"
 * address 1..1
 * insert CityCode
 * insert CountyCode
