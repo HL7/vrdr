@@ -2,7 +2,7 @@ Profile: ConditionContributingToDeath
 Parent: Observation
 Id: vrdr-condition-contributing-to-death
 Title: "Condition Contributing To Death"
-Description: "Cause of Death Part2: Identifies factors contributing to the cause of death as asserted by the death certifier (USCoreCondition)"
+Description: "Cause of Death Part2: Identifies factors contributing to the cause of death as asserted by the death certifier (Observation)"
 * insert RequireMetaProfile(ConditionContributingToDeath)
 * id 0..1
 * code 1..1

@@ -21,37 +21,36 @@ For example:
 
 The content is broken down into the following sections:
 * Decedent Demographics
+    * [BirthRecordIdentifier]
+    * [DecedentAge]
+    * [DecedentEducationLevel]
     * [DecedentFather]
+    * [DecedentMilitaryService]
+    * [Parameters2022]
     * [DecedentMother]
     * [DecedentSpouse]
-    * [DecedentAge]
-    * [BirthRecordIdentifier]
-    * [DecedentEducationLevel]
-    * [DecedentMilitaryService]
     * [DecedentUsualWork]
-    * [Parameters2022]
 * Death Investigation
-    * [ExaminerContacted]
-    * [DecedentPregnancyStatus]
-    * [TobaccoUseContributedToDeath]
-    * [InjuryLocation]
     * [AutopsyPerformedIndicator]
-    * [DeathLocation]
-    * [DeathPronouncementPerformer]
-    * [InjuryIncident]
     * [DeathDate]
+    * [DeathLocation]
+    * [DecedentPregnancyStatus]
     * [DecedentTransportationRole]
+    * [ExaminerContacted]
+    * [InjuryIncident]
+    * [InjuryLocation]
+    * [SurgeryDate]
+    * [TobaccoUseContributedToDeath]
 * Death Certification
-    * [MannerOfDeath]
     * [CauseOfDeathCondition]
-    * [ConditionContributingToDeath]
     * [CauseOfDeathPathway]
+    * [ConditionContributingToDeath]
+    * [MannerOfDeath]
 * Decedent Disposition
+    * [DecedentDispositionMethod]
     * [DispositionLocation]
     * [FuneralHome]
-    * [Mortician]
-    * [DecedentDispositionMethod]
-    * [FuneralServiceLicensee]
+
 
 
 
