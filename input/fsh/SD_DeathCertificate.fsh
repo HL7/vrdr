@@ -84,7 +84,7 @@ Description: "The body of the death certificate document (Composition)."
     InjuryLocation 0..1 MS and
     Autopsy 0..1 MS and
     DeathLocation 0..1 MS and
-    DeathPronouncementPerformer 0..* MS and
+//    DeathPronouncementPerformer 0..* MS and
     InjuryIncident 0..1 MS and
     DeathDate 0..1 MS and
     SurgeryDate 0..1 MS and
@@ -95,7 +95,7 @@ Description: "The body of the death certificate document (Composition)."
 * section[DeathInvestigation].entry[InjuryLocation] only Reference(InjuryLocation)
 * section[DeathInvestigation].entry[Autopsy] only Reference(AutopsyPerformedIndicator)
 * section[DeathInvestigation].entry[DeathLocation] only Reference(DeathLocation)
-* section[DeathInvestigation].entry[DeathPronouncementPerformer] only Reference(DeathPronouncementPerformer)
+//* section[DeathInvestigation].entry[DeathPronouncementPerformer] only Reference(DeathPronouncementPerformer)
 * section[DeathInvestigation].entry[InjuryIncident] only Reference(InjuryIncident)
 * section[DeathInvestigation].entry[DeathDate] only Reference(DeathDate)
 * section[DeathInvestigation].entry[SurgeryDate] only Reference(SurgeryDate)
@@ -121,11 +121,11 @@ Description: "The body of the death certificate document (Composition)."
 * section[DecedentDisposition].entry contains
     DispositionLocation 0..* MS and
     FuneralHome 0..1 MS and
-    Mortician 0..1 MS and
-    DispositionMethod 0..1 MS and
-    FuneralServiceLicensee 0..1 MS
+//    Mortician 0..1 MS and   ** Can be included using USCorePractitioner
+    DispositionMethod 0..1 MS
+//    and FuneralServiceLicensee 0..1 MS   ** Can be included using USCorePractitionerRole
 * section[DecedentDisposition].entry[DispositionLocation] only Reference(DispositionLocation)
 * section[DecedentDisposition].entry[FuneralHome] only Reference(FuneralHome)
-* section[DecedentDisposition].entry[Mortician] only Reference(Mortician)
+// * section[DecedentDisposition].entry[Mortician] only Reference(Mortician)
 * section[DecedentDisposition].entry[DispositionMethod] only Reference(DecedentDispositionMethod)
-* section[DecedentDisposition].entry[FuneralServiceLicensee] only Reference(FuneralServiceLicensee)
+// * section[DecedentDisposition].entry[FuneralServiceLicensee] only Reference(FuneralServiceLicensee)

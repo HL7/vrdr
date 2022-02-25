@@ -1,15 +1,13 @@
 ### New Issues
 
 
+* [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739): **NEW RESOLUTION** Change partial data absent reason to simply include an indicator of date resolution
+    *  According to JeffG the issue is that a date could be 2003, March 2003, March 13 2003, March 13 2003 4pm (no minutes), etc...
+    * Propose to replace the current complex extension with a simple flag that indicates the resolution of the time component of the date (H,M,S).  If not specified, the default is S definition.
 * [FHIR-36107](https://jira.hl7.org/browse/FHIR-36107): why is effective date required?
 * [FHIR-33103](https://jira.hl7.org/browse/FHIR-33103) Why do we need the location reference in INjuryIncident?
 * [FHIR-36102](https://jira.hl7.org/browse/FHIR-36102) Why do we need the location reference in DeathDate?
 * [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc) -- this is prototyped, but can be removed.
-* [FHIR-36094](https://jira.hl7.org/browse/FHIR-36094) : Get rid of them and replace with narrative explanation.
-    * What is the purpose of the 'Funeral Services Licensee' profile?  WHich IJE elements does it support? Is this profile needed?
-    * What is the purpose of the 'Mortician' profile?  WHich IJE elements does it support? Is this profile needed?
-    * What is the purpose of the 'Funeral Home Director' profile?  WHich IJE elements does it support? Is this profile needed?
-    * What is the purpose of the 'Death Pronouncement Performer' profile?  WHich IJE elements does it support? Is this profile needed?
 ### Not Yet
 * [FHIR-32904](https://jira.hl7.org/browse/FHIR-32904) :  Provide examples of all extensions
 * [FHIR-32905](https://jira.hl7.org/browse/FHIR-32905) :  Provide examples of all extensions
@@ -127,6 +125,7 @@
 * [FHIR-36087](https://jira.hl7.org/browse/FHIR-36087): Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
 * [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
     * propose adding an extension to decedent in lieu of an observation
+* [FHIR-36094](https://jira.hl7.org/browse/FHIR-36094) : Get rid of 4 profiles and replace with narrative explanation.
 
 ### No Action Required
 (should be marked in Jira)

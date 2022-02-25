@@ -1,16 +1,4 @@
-Profile: FuneralServiceLicensee
-Parent: USCorePractitionerRoleProfile
-Id: vrdr-funeral-service-licensee
-Title: "Funeral Service Licensee"
-Description: "Funeral Service Licensee (USCorePractitionerRole)"
-* insert boilerplate
 
-Profile: Mortician
-Parent: USCorePractitionerProfile
-Id: vrdr-mortician
-Title: "Mortician"
-Description: "Mortician (USCorePractitioner)"
-* insert boilerplate
 
 Profile: Certifier
 Parent: USCorePractitionerProfile
@@ -30,7 +18,7 @@ Description: "Certifier (USCorePractitioner)"
 * qualification.identifier ^short = "identifier"
 * qualification.code 1..1
 * qualification.code from CertifierTypesVS (required)
-
+/*
 Profile: FuneralHomeDirector
 Parent: USCorePractitionerRoleProfile
 Id: vrdr-funeral-home-director
@@ -53,3 +41,19 @@ Description: "Death Pronouncement Performer (USCorePractitioner)"
 * identifier 1..1
 * name 1..1
 //* code from   // CERTL
+
+Profile: FuneralServiceLicensee
+Parent: USCorePractitionerRoleProfile
+Id: vrdr-funeral-service-licensee
+Title: "Funeral Service Licensee"
+Description: "Funeral Service Licensee (USCorePractitionerRole)"
+* insert boilerplate
+
+Profile: Mortician
+Parent: USCorePractitionerProfile
+Id: vrdr-mortician
+Title: "Mortician"
+Description: "Mortician (USCorePractitioner)"
+* insert boilerplate
+
+*/
