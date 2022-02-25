@@ -28,11 +28,11 @@ Description: "Decedent-Example1"
 * extension[NVSS-Ethnicity].extension[HispanicOther].valueCoding = #Y
 * extension[NVSS-Ethnicity].extension[HispanicCuban].valueCoding = #Y
 * extension[NVSS-Ethnicity].extension[HispanicLiteral].valueString = "who knows"
-* extension[Spouse-Alive].valueCodeableConcept = #Y
-* extension[NVSS-SexAtDeath].valueCodeableConcept = #U
+* extension[Spouse-Alive].valueCodeableConcept = $v2-0136#Y
+* extension[NVSS-SexAtDeath].valueCodeableConcept = $v3-NullFlavor#UNK
 * extension[$patient-birthPlace].valueAddress.city = "Roanoke"
 * extension[$patient-birthPlace].valueAddress.state = "VA"
-* extension[$patient-birthPlace].valueAddress.country = "US"
+* extension[$patient-birthPlace].valueAddress.country = $PH_Country_GEC#US
 * identifier.type = $v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier.value = "987654321"
@@ -52,8 +52,8 @@ Description: "Decedent-Example1"
 * address.district = "Fairfax"
 * address.city.extension[cityCode].valuePositiveInt = 01234
 * address.district.extension[districtCode].valuePositiveInt  = 321
-* address.country = "US"
+* address.country = $PH_Country_GEC#US
 * address.extension[stname].valueString = "Lockwood"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
-* maritalStatus.extension[bypassEditFlag].value[x] = #0
+* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = #0
 * contact.relationship.text = "Friend of family"
