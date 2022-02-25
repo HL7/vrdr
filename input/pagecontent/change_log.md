@@ -1,9 +1,7 @@
 ### New Issues
 
 
-* [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739): **NEW RESOLUTION** Change partial data absent reason to simply include an indicator of date resolution
-    *  According to JeffG the issue is that a date could be 2003, March 2003, March 13 2003, March 13 2003 4pm (no minutes), etc...
-    * Propose to replace the current complex extension with a simple flag that indicates the resolution of the time component of the date (H,M,S).  If not specified, the default is S definition.
+* [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739): **NEW RESOLUTION** Eliminate missing data reasons.  No one cares why.
 * [FHIR-36107](https://jira.hl7.org/browse/FHIR-36107): why is effective date required?
 * [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc) -- this is prototyped, but can be removed.
 ### Not Yet

@@ -25,13 +25,12 @@ Description: "Decedent (USCorePatient)"
 // * gender ^binding.description = "PHVS_Sex_MFU"
 * birthDate 0..1
 * birthDate.extension contains
-    PartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS and
+//    PartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS and
     PartialDate named partialDate 0..1
-* birthDate.extension[partialDatePartAbsentReason] ^short = "partialDatePartAbsentReason"
-* birthDate.extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's birthdate."
+//* birthDate.extension[partialDatePartAbsentReason] ^short = "partialDatePartAbsentReason"
+//* birthDate.extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's birthdate."
 * birthDate.extension[partialDate] ^short = "partialDate"
 * birthDate.extension[partialDate] ^definition = "Alternative component representation of date."
-* gender = #male
 * address 0..*
 * address.extension contains
     WithinCityLimitsIndicator named withinCityLimitsIndicator 0..1
