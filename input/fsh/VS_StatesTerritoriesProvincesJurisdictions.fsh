@@ -13,6 +13,25 @@ RuleSet: CanadaProvinces
 * $provinces#SK	"Saskatchewan"
 * $provinces#YT	"Yukon"
 
+CodeSystem: CanadianProvincesCS
+Id: vrdr-canadian-provinces-cs
+Title: "Canadian Provinces"
+Description: "Canadian Provinces"
+* ^caseSensitive = true
+* #AB	"Alberta" "Alberta"
+* #BC	"British Columbia" "British Columbia"
+* #MB	"Manitoba" "Manitoba"
+* #NB	"New Brunswick" "New Brunswick"
+* #NL	"Newfoundland and Labrador" "Newfoundland and Labrador"
+* #NS	"Nova Scotia" "Nova Scotia"
+* #NT	"Northwest Territories" "Northwest Territories"
+* #NU	"Nunavut" "Nunavut"
+* #ON	"Ontario" "Ontario"
+* #PE	"Prince Edward Island" "Prince Edward Island"
+* #QC	"Quebec" "Quebec"
+* #SK	"Saskatchewan" "Saskatchewan"
+* #YT	"Yukon" "Yukon"
+
 RuleSet: USStatesAndTerritories
 * include codes from valueset $statesVS
 * exclude $statesCS#FM
@@ -38,7 +57,8 @@ Description: "2 Letter States and Provinces Value Set"
 * ^status = #active
 * ^version = "1.0.0"
 * insert USStatesAndTerritories
-* insert CanadaProvinces
+// * insert CanadaProvinces
+* codes from system CanadianProvincesCS
 * $v3-NullFlavor#UNK
 
 ValueSet: CanadaProvincesVS
@@ -46,7 +66,8 @@ Id: vrdr-canada-provinces-vs
 Title: "Canadian Provinces Value Set"
 Description: "2 Letter Candadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
-* insert CanadaProvinces
+// * insert CanadaProvinces
+* codes from system CanadianProvincesCS
 
 ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs

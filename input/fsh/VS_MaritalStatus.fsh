@@ -1,6 +1,6 @@
 ValueSet: MaritalStatusVS
 Id: vrdr-marital-status-vs
-Title: "Marital Status Value Set "
+Title: "Marital Status Value Set"
 Description: """The set of codes used to indicate the marital status of the decedent. PHV
 
 **Inter-jurisdictional Exchange (IJE) concept mapping**

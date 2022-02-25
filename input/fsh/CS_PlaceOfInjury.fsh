@@ -5,6 +5,7 @@ Description: """Place of Injury codes from ICD/WHO
 These values are defined as a 'Place of occurrence code' in [ICD-10](https://icd.who.int/browse10/2019/en#/XX) and are used as 6th or 7th digit character expansions, not a separate code system.
 They correspond to the PHINVADs valueset with oid 2.16.840.1.114222.4.5.320.
 """
+* ^caseSensitive = false
 * #0 "Home"
 * #1 "Residential Institution"
 * #2 "School, Other Institutions, Public Administrative Area"
