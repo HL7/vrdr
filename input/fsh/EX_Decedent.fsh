@@ -22,11 +22,11 @@ Description: "Decedent-Example1"
 * extension[NVSS-Race].extension[OtherAsianLiteral].valueString = "X"
 * extension[NVSS-Race].extension[OtherPacificIslanderLiteral].valueString = "X"
 * extension[NVSS-Race].extension[OtherRaceLiteral].valueString = "X"
-* extension[NVSS-Race].extension[MissingValueReason].valueCodeableConcept = #R
-* extension[NVSS-Ethnicity].extension[HispanicMexican].valueCodeableConcept = #Y
-* extension[NVSS-Ethnicity].extension[HispanicPuertoRican].valueCodeableConcept = #Y
-* extension[NVSS-Ethnicity].extension[HispanicOther].valueCodeableConcept = #Y
-* extension[NVSS-Ethnicity].extension[HispanicCuban].valueCodeableConcept = #Y
+* extension[NVSS-Race].extension[MissingValueReason].valueCoding = #R
+* extension[NVSS-Ethnicity].extension[HispanicMexican].valueCoding = #Y
+* extension[NVSS-Ethnicity].extension[HispanicPuertoRican].valueCoding = #Y
+* extension[NVSS-Ethnicity].extension[HispanicOther].valueCoding = #Y
+* extension[NVSS-Ethnicity].extension[HispanicCuban].valueCoding = #Y
 * extension[NVSS-Ethnicity].extension[HispanicLiteral].valueString = "who knows"
 * extension[Spouse-Alive].valueCodeableConcept = #Y
 * extension[NVSS-SexAtDeath].valueCodeableConcept = #U
@@ -50,8 +50,8 @@ Description: "Decedent-Example1"
 * address.city = "Danville"
 * address.state = "VA"
 * address.district = "Fairfax"
-* address.city.extension[cityCode].valueInteger = 01234
-* address.district.extension[districtCode].valueInteger  = 321
+* address.city.extension[cityCode].valuePositiveInt = 01234
+* address.district.extension[districtCode].valuePositiveInt  = 321
 * address.country = "US"
 * address.extension[stname].valueString = "Lockwood"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
