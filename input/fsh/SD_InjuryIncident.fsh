@@ -33,5 +33,4 @@ Description: "Injury Incident (Observation)"
 * component[workInjuryIndicator].value[x] only CodeableConcept
 * component[workInjuryIndicator].value[x] from $Yes-No-Unknown-NotApplicable (required)
 * component[workInjuryIndicator].value[x] ^binding.description = "Yes No Unknown NotApplicable"
-* method 0..1
-* method from DeathDateMethodsVS (extensible)
+// * method from DeathDateMethodsVS (extensible)

@@ -27,7 +27,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * value[x].extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's death date."
 * note 0..1
 * method 0..1
-* method from DeathDateMethodsVS (extensible)
+//* method from DeathDateMethodsVS (extensible)
 * component 0..1
 * component.code 1..1
 * component.code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
