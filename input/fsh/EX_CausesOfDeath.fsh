@@ -16,10 +16,22 @@ Usage: #example
 Description: "CauseOfDeathCondition-Example2"
 * meta.profile = Canonical(CauseOfDeathCondition)
 * valueCodeableConcept.text = "Eclampsia"
-* subject = Reference(Decedent-Example1)
 * component[interval].valueString = "3 months"
+* subject = Reference(Decedent-Example1)
 * performer = Reference(Certifier-Example1)
 * status = #final
+
+Instance: ConditionContributingToDeath-Example1
+InstanceOf: ConditionContributingToDeath
+Usage: #example
+Description: "ConditionContributingToDeath-Example1"
+* meta.profile = Canonical(ConditionContributingToDeath)
+* valueCodeableConcept.text = "hypertensive heart disease"
+* subject = Reference(Decedent-Example1)
+* performer = Reference(Certifier-Example1)
+* status = #final
+
+
 
 /*  Certifier */
 Instance: Certifier-Example1
