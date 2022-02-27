@@ -14,8 +14,7 @@ Description: "Certifier (USCorePractitioner)"
 * qualification 1..1
 * qualification only BackboneElement
 * qualification ^short = "qualification"
-* qualification.identifier 1..1
-* qualification.identifier ^short = "identifier"
+* qualification.identifier 0..1
 * qualification.code 1..1
 * qualification.code from CertifierTypesVS (required)
 /*
