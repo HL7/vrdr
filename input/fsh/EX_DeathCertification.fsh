@@ -12,6 +12,6 @@ Description: "DeathCertification-Example1"
 * subject = Reference(Decedent-Example1)
 * performedDateTime = "2020-11-14T16:39:40-05:00"
 * performer.function = #OTH
-* performer.function.text = "Individual Allowed to Certify"
+* performer.function.text = "Nurse Practitioner"
 // $sct#434641000124105 "Death certification and verification by physician"
 * performer.actor = Reference(Certifier)
