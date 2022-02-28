@@ -84,7 +84,7 @@ Description: "This extension enables an incomplete date to be expressed with rea
 
 
 Extension: PartialDate
-Id: vrdr-partial-date
+Id: PartialDate
 Title: "Partial Date "
 Description: "Provides values of a partial date (Extension)"
 * insert boilerplate
@@ -92,7 +92,6 @@ Description: "Provides values of a partial date (Extension)"
 * ^context[=].expression = "date"
 * ^context[+].type = #element
 * ^context[=].expression = "dateTime"
-* . 0..*
 * . ^short = "Partial Date"
 * . ^definition = "Provides a partial date."
 * extension contains
@@ -108,22 +107,31 @@ Description: "Provides values of a partial date (Extension)"
 * extension[year] ^definition = "The year portion (YYYY) of the partial date."
 * extension[month] ^short = "Date Month"
 * extension[month] ^definition = "The day portion (MM) of the partial date."
-// * extension[month].value[x] only integer
-// * extension[day].value[x] only integer
-// * extension[year].value[x] only integer
-// * extension[date-month].value[x] only integer
-// * extension[date-month].value[x] ^definition = "Specifies the month portion of a partial date"
-// * extension[date-month].value[x] ^minValueInteger = 1
-// * extension[date-month].value[x] ^maxValueInteger = 12
-// * extension[date-month].value[x] ^maxLength = 2
 
-// * extension[day-absent-reason] ^short = "day absent reason"
-// * extension[day-absent-reason] ^definition = "The reason the day portion of a partial date is missing."
-// * extension[year-absent-reason] ^short = "year absent reason"
-// * extension[year-absent-reason] ^definition = "The reason the year portion of a partial date is missing."
-// * extension[month-absent-reason] ^short = "month absent reason"
-// * extension[month-absent-reason] ^definition = "The reason the month portion of a partial date is missing."
-
+Extension: PartialDateTime
+Id: PartialDateTime
+Title: "Partial Date Time "
+Description: "Provides values of a partial dateTime (Extension)"
+* insert boilerplate
+* ^context[0].type = #element
+* ^context[=].expression = "date"
+* ^context[+].type = #element
+* ^context[=].expression = "dateTime"
+* . ^short = "Partial Date Time"
+* . ^definition = "Provides a partial date time."
+* extension contains
+    DateYear named year 1..1 and
+    DateMonth named month 1..1 and
+    DateDay named day 1..1 and
+    DateTime named time 1..1
+* extension[day] ^short = "Date Day"
+* extension[day] ^definition = "The day portion (DD) of the partial date."
+* extension[year] ^short = "Date Year"
+* extension[year] ^definition = "The year portion (YYYY) of the partial date."
+* extension[month] ^short = "Date Month"
+* extension[month] ^definition = "The day portion (MM) of the partial date."
+* extension[time] ^short = "Date Time"
+* extension[time] ^definition = "The time portion  of the partial datetime."
 
 Extension: DateYear
 Id: Date-Year
@@ -147,7 +155,6 @@ Extension: DateDay
 Id: Date-Day
 Title: "Date Day"
 Description: "The day portion (DD) of the partial date. (Extension)"
-
 * value[x] 1..1
 * value[x] only integer or code
 * value[x] ^definition = "Specifies the day portion of a partial date."
@@ -155,10 +162,18 @@ Description: "The day portion (DD) of the partial date. (Extension)"
 * value[x] ^maxValueInteger = 31
 * valueCode = #NA
 
-Extension: DateAbsentReason
-Id: Date-Absent-Reason
-Title: "Date Absent Reason"
-Description: "Date Component Absent Reason (Extension)"
+Extension: DateTime
+Id: Date-Time
+Title: "Date Time"
+Description: "The time portion (DD) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only code
-* value[x] from $dataabsentreason401 (required)
+* value[x] only time or code
+* value[x] ^definition = "Specifies the time portion of a partial date."
+* valueCode = #NA
+// Extension: DateAbsentReason
+// Id: Date-Absent-Reason
+// Title: "Date Absent Reason"
+// Description: "Date Component Absent Reason (Extension)"
+// * value[x] 1..1
+// * value[x] only code
+// * value[x] from $dataabsentreason401 (required)

@@ -15,16 +15,13 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * effective[x] 1..1
 * effective[x] only dateTime
 * performer 0..1
-* performer ^short = "Death Pronouncement Performer"
 * performer ^short = "Death Pronouncement Performer using USCorePractioner"
 //* performer only Reference(DeathPronouncementPerformer)
 // Should be an invariant so that either value[x] or the partial date absent extension are provided.
 * value[x] 0..1
 * value[x] only dateTime
-* value[x].extension contains
-    PartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS
-* value[x].extension[partialDatePartAbsentReason] ^short = "Indicates reason for missing one or more parts of the decedent's death date."
-* value[x].extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's death date."
+* valueDateTime.extension contains
+    PartialDateTime named partialDateTime 0..1 MS
 * note 0..1
 * method 0..1
 //* method from DeathDateMethodsVS (extensible)

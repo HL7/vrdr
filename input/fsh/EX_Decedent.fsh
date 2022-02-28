@@ -42,9 +42,6 @@ Description: "Decedent-Example1"
 * birthDate.extension[partialDate].extension[day].valueInteger = 12
 * birthDate.extension[partialDate].extension[month].valueCode = #NA
 * birthDate.extension[partialDate].extension[year].valueCode = #NA
-// * birthDate.extension[partialDatePartAbsentReason].extension[date-day].valueInteger = 12
-// * birthDate.extension[partialDatePartAbsentReason].extension[date-month-absent-reason].value[x] = #NA
-// * birthDate.extension[partialDatePartAbsentReason].extension[date-year-absent-reason].value[x] = #NA
 * address.extension[WithinCityLimitsIndicator].valueCoding = $v2-0136#Y "Yes"
 * address.line = "5590 Lockwood Drive"
 * address.city = "Danville"

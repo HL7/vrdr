@@ -2,7 +2,6 @@ Extension: NVSSRace
 Id: NVSS-Race
 Title: "NVSS Race"
 Description: "NVSS Race (Extension) that captures the RACE1-RACE23 flags and literals"
-* insert boilerplate
 * insert Extension(White, 0, 1, White, White, boolean)
 * insert Extension(BlackOrAfricanAmerican, 0, 1, Black Or African American, Black Or African American, boolean)
 * insert Extension(AmericanIndianOrAlaskaNative, 0, 1, American Indian Or Alaska Native, American Indian Or Alaska Native, boolean)
