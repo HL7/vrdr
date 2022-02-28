@@ -1,5 +1,3 @@
-
-
 Instance: DeathDate-Example1
 InstanceOf: DeathDate
 Usage: #example
