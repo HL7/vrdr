@@ -7,7 +7,7 @@ Description: "DeathDate-Example1"
 * meta.profile = Canonical(DeathDate)
 * subject = Reference(Decedent-Example1)
 * effectiveDateTime = "2020-11-12T16:39:40-05:00"
-* performer = Reference(Certifier)
+* performer = Reference(Certifier-Example1)
 // * valueDateTime = "2020-11-12T16:39:40-05:00"
 * valueDateTime.extension[partialDateTime].extension[day].valueInteger = 12
 * valueDateTime.extension[partialDateTime].extension[month].valueInteger = 11
