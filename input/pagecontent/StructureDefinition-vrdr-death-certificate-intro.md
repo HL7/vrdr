@@ -22,6 +22,7 @@ For example:
 The content is broken down into the following sections:
 * Decedent Demographics
     * [BirthRecordIdentifier]
+    * [Decedent]
     * [DecedentAge]
     * [DecedentEducationLevel]
     * [DecedentFather]
