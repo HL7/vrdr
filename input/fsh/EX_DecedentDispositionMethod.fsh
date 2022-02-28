@@ -3,7 +3,6 @@ InstanceOf: DecedentDispositionMethod
 Usage: #example
 Description: "DecedentDispositionMethod-Example1"
 * meta.profile = Canonical(DecedentDispositionMethod)
-* extension.valueReference.reference = "urn:uuid:1d8aab32-90ac-4366-8fd2-7ce577b7056f"
 * status = #final
 * subject = Reference(Decedent-Example1)
 * performer = Reference(Mortician-Example1)
