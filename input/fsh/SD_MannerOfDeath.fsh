@@ -18,4 +18,3 @@ Description: "Manner of Death (Observation)"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from MannerOfDeathVS (required)
-* value[x] ^binding.description = "Manner of Death"

@@ -15,7 +15,5 @@ Description: "Date of Surgery (Observation).  The PartialDatePartAbsent extensio
 // Should be an invariant so that either value[x] or the partial date absent extension are provided.
 * value[x] 0..1
 * value[x] only dateTime
-* value[x].extension contains
-    PartialDatePartAbsentReason named partialDatePartAbsentReason 0..1 MS
-* value[x].extension[partialDatePartAbsentReason] ^short = "Indicates reason for missing one or more parts of the decedent's death date."
-* value[x].extension[partialDatePartAbsentReason] ^definition = "Indicates reason for missing one or more parts of the decedent's death date."
+* valueDateTime.extension contains
+    PartialDateTime named partialDateTime 0..1 MS
