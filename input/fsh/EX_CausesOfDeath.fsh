@@ -41,7 +41,7 @@ Description: "CauseOfDeathPathway-Example1"
 * source = Reference(Decedent)
 * orderedBy = $list-order#priority "Sorted by Priority"
 * entry[0].item = Reference(CauseOfDeathCondition-Example1)
-* entry[+].item = Reference(CauseOfDeathCondition-Example1)
+* entry[+].item = Reference(CauseOfDeathCondition-Example2)
 
 
 /*  Certifier */

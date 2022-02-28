@@ -15,10 +15,12 @@ Description: "The decedent's chronological age at the time of death (Observation
 * subject 1..1
 * subject only Reference(Decedent)
 * subject ^short = "subject"
+/* FHIR 36107 --- not needed
 * effective[x] 1..1
 * effective[x] only dateTime
 * effective[x] ^short = "The decedent's date of death"
 * effective[x] ^definition = "The effective date of this observation shall be equal to the decedent's date of death."
+*/
 * value[x] 0..1 MS
 * value[x] only Quantity  // value = AGE, system = AGETYPE
 * valueQuantity.system from UnitsOfAgeVS (required)

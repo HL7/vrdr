@@ -4,7 +4,7 @@ The Death Certification profile includes:
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Certifier Date Signed | performed | dateTime | CERTDATE |
-| Certifier Role | performed.function | [CertifierTypesVS] | CERTL |
+| Certifier Role | performed.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | [CertifierTypesVS] | CERTL **library doesn't handle OTH case** |
 {: .grid }
 
 

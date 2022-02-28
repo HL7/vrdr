@@ -1,5 +1,3 @@
-
-
 Instance: Decedent-Example1
 InstanceOf: Decedent
 Usage: #example
@@ -42,6 +40,8 @@ Description: "Decedent-Example1"
 * gender = #female
 // * birthDate = "1978-03-12"
 * birthDate.extension[partialDate].extension[day].valueInteger = 12
+* birthDate.extension[partialDate].extension[month].valueCode = #NA
+* birthDate.extension[partialDate].extension[year].valueCode = #NA
 // * birthDate.extension[partialDatePartAbsentReason].extension[date-day].valueInteger = 12
 // * birthDate.extension[partialDatePartAbsentReason].extension[date-month-absent-reason].value[x] = #NA
 // * birthDate.extension[partialDatePartAbsentReason].extension[date-year-absent-reason].value[x] = #NA

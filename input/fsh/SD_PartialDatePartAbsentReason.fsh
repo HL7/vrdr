@@ -96,11 +96,11 @@ Description: "Provides values of a partial date (Extension)"
 * . ^short = "Partial Date"
 * . ^definition = "Provides a partial date."
 * extension contains
-    DateYear named year 0..1 and
+    DateYear named year 1..1 and
  //   DateAbsentReason named year-absent-reason 0..1 and
-    DateMonth named month 0..1 and
+    DateMonth named month 1..1 and
  //   DateAbsentReason named month-absent-reason 0..1 and
-    DateDay named day 0..1
+    DateDay named day 1..1
  //   DateAbsentReason named day-absent-reason 0..1
 * extension[day] ^short = "Date Day"
 * extension[day] ^definition = "The day portion (DD) of the partial date."
@@ -108,9 +108,9 @@ Description: "Provides values of a partial date (Extension)"
 * extension[year] ^definition = "The year portion (YYYY) of the partial date."
 * extension[month] ^short = "Date Month"
 * extension[month] ^definition = "The day portion (MM) of the partial date."
-* extension[month].value[x] only integer
-* extension[day].value[x] only integer
-* extension[year].value[x] only integer
+// * extension[month].value[x] only integer
+// * extension[day].value[x] only integer
+// * extension[year].value[x] only integer
 // * extension[date-month].value[x] only integer
 // * extension[date-month].value[x] ^definition = "Specifies the month portion of a partial date"
 // * extension[date-month].value[x] ^minValueInteger = 1
@@ -130,16 +130,18 @@ Id: Date-Year
 Title: "Date Year"
 Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only integer
+* value[x] only integer or code
+* valueCode = #NA
 
 Extension: DateMonth
 Id: Date-Month
 Title: "Date Month"
 Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only integer
+* value[x] only integer or code
 * value[x] ^minValueInteger = 1
 * value[x] ^maxValueInteger = 12
+* valueCode = #NA
 
 Extension: DateDay
 Id: Date-Day
@@ -147,10 +149,11 @@ Title: "Date Day"
 Description: "The day portion (DD) of the partial date. (Extension)"
 
 * value[x] 1..1
-* value[x] only integer
+* value[x] only integer or code
 * value[x] ^definition = "Specifies the day portion of a partial date."
 * value[x] ^minValueInteger = 1
 * value[x] ^maxValueInteger = 31
+* valueCode = #NA
 
 Extension: DateAbsentReason
 Id: Date-Absent-Reason

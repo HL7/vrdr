@@ -1,22 +1,20 @@
 
-
+/* Do we still need Certifier Profile?????  Probably Not.  Adds zero value */
 Profile: Certifier
 Parent: USCorePractitionerProfile
 Id: vrdr-certifier
 Title: "Certifier"
 Description: "Certifier (USCorePractitioner)"
 * insert RequireMetaProfile(Certifier)
-* ^context.type = #element
-* ^context.expression = "Practitioner"
 * id 0..1
 * name 1..1
 * address 1..1
-* qualification 1..1
-* qualification only BackboneElement
-* qualification ^short = "qualification"
-* qualification.identifier 0..1
-* qualification.code 1..1
-* qualification.code from CertifierTypesVS (required)
+// * qualification 1..1
+// * qualification only BackboneElement
+// * qualification ^short = "qualification"
+// * qualification.identifier 0..1
+// * qualification.code 1..1
+// * qualification.code from CertifierTypesVS (required)
 /*
 Profile: FuneralHomeDirector
 Parent: USCorePractitionerRoleProfile
