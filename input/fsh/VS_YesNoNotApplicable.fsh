@@ -13,3 +13,9 @@ Description: """A set of codes used to express an affirmative response (Yes), ne
 * $v2-0136#N "No"
 * $v2-0136#Y "Yes"
 * $v3-NullFlavor#NA "not applicable"
+
+ValueSet: NotApplicableVS
+Id: vrdr-not-applicable-vs
+Title: "NotApplicable"
+Description: " Value set with Not Applicable"
+* $v3-NullFlavor#NA "not applicable"

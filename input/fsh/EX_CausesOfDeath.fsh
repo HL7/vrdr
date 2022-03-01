@@ -37,7 +37,6 @@ Usage: #example
 Description: "CauseOfDeathPathway-Example1"
 * meta.profile = Canonical(CauseOfDeathPathway)
 * status = #current
-* mode = #snapshot
 * source = Reference(Decedent)
 * orderedBy = $list-order#priority "Sorted by Priority"
 * entry[0].item = Reference(CauseOfDeathCondition-Example1)

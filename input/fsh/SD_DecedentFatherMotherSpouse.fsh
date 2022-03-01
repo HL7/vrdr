@@ -10,6 +10,7 @@ Description: "Decedent Father (RelatedPerson)"
 * relationship 1..1
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#FTH "father" (exactly)
+* relationship.text = "Father"
 * relationship ^short = "relationship"
 * name 1..1
 * name ^short = "name"
@@ -26,6 +27,7 @@ Description: "Decedent Mother (RelatedPerson)"
 * relationship 1..1
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#MTH "mother" (exactly)
+* relationship.text = "Mother"
 * name 1..1
 * address 0..1
 
@@ -43,4 +45,5 @@ Description: "Decedent Spouse (RelatedPerson)"
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#SPS "spouse" (exactly)
 * relationship ^short = "relationship"
+* relationship.text = "Spouse"
 * name 1..1

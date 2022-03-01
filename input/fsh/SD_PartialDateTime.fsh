@@ -139,7 +139,7 @@ Title: "Date Year"
 Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer or code
-* valueCode = #NA
+* valueCode from NotApplicableVS (required)
 * valueInteger ^minValueInteger = 0
 * valueInteger ^maxValueInteger = 9998
 
@@ -151,7 +151,7 @@ Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] only integer or code
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 12
-* valueCode = #NA
+* valueCode from NotApplicableVS (required)
 
 Extension: DateDay
 Id: Date-Day
@@ -162,7 +162,7 @@ Description: "The day portion (DD) of the partial date. (Extension)"
 * value[x] ^definition = "Specifies the day portion of a partial date."
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 31
-* valueCode = #NA
+* valueCode from NotApplicableVS (required)
 
 Extension: DateTime
 Id: Date-Time
@@ -171,7 +171,7 @@ Description: "The time portion (DD) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only time or code
 * value[x] ^definition = "Specifies the time portion of a partial date."
-* valueCode = #NA
+* valueCode from NotApplicableVS (required)
 // Extension: DateAbsentReason
 // Id: Date-Absent-Reason
 // Title: "Date Absent Reason"

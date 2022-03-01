@@ -6,4 +6,4 @@ Description: "DecedentPregnancyStatus-Example1"
 * subject = Reference(Decedent-Example1)
 * status = #final
 * valueCodeableConcept = PregnancyStatusCS#PHC1261
-* valueCodeableConcept.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#4 "Edit Failed, Query Needed"
+* valueCodeableConcept.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#2 "Edit Failed, Data Queried, but not Verified"
