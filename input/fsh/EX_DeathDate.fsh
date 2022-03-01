@@ -10,6 +10,6 @@ Description: "DeathDate-Example1"
 * valueDateTime.extension[partialDateTime].extension[day].valueInteger = 12
 * valueDateTime.extension[partialDateTime].extension[month].valueInteger = 11
 * valueDateTime.extension[partialDateTime].extension[year].valueInteger = 2020
-* valueDateTime.extension[partialDateTime].extension[time].valueTime = "21:39:40"
+* valueDateTime.extension[partialDateTime].extension[time].valueCode = #NA
 * component.code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]"
 * component.valueDateTime = "2020-11-13T16:39:40-05:00"
