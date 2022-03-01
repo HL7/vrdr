@@ -1,6 +1,6 @@
 RuleSet: addentry(type, id)
 * entry[+].resource = {id}
-* entry[=].fullUrl = "{type}/{id}"
+* entry[=].fullUrl = "http://www.example.org/fhir/{type}/{id}"
 
 Instance: DeathCertificateDocument-Example1
 InstanceOf: DeathCertificateDocument
