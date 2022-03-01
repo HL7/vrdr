@@ -52,5 +52,5 @@ Description: "Decedent-Example1"
 * address.country = "US"
 * address.extension[stname].valueString = "Lockwood"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
-* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = #0
+* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0
 * contact.relationship.text = "Friend of family"

@@ -14,4 +14,4 @@ Description: "DeathCertification-Example1"
 * performer.function = #OTH
 * performer.function.text = "Nurse Practitioner"
 // $sct#434641000124105 "Death certification and verification by physician"
-* performer.actor = Reference(Certifier)
+* performer.actor = Reference(Certifier-Example1)

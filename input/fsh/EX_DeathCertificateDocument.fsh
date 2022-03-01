@@ -10,6 +10,8 @@ Description: "DeathCertificateDocument-Example1"
 * identifier.extension[auxiliaryStateIdentifier].valueString = "ID123"
 * entry[0].resource = DeathCertificate-Example1
 * entry[=].fullUrl = "http://example.org/fhir/Bundle/DeathCertificate-Example1"
+* entry[+].resource = Decedent-Example1
+* entry[=].fullUrl = "http://example.org/fhir/Patient/Decedent-Example1"
 
 
 
