@@ -23,8 +23,6 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentMilitaryService-Example1)
 * insert addentry(Observation, DecedentUsualWork-Example1)
 * insert addentry(Parameter, Parameters2022-Example1)
-* insert addentry(Bundle, DeathCertificate-Example1)
-* insert addentry(Observation, ExaminerContacted-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, DeathDate-Example1)
