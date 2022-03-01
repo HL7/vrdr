@@ -35,12 +35,12 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Procedure, DeathCertification-Example1)
 * insert addentry(Observation, CauseOfDeathCondition-Example1)
 * insert addentry(Observation, CauseOfDeathCondition-Example2)
-* insert addentry(Observation, ConditionContributingToDeath)
+* insert addentry(Observation, ConditionContributingToDeath-Example1)
 * insert addentry(List, CauseOfDeathPathway-Example1)
 * insert addentry(Location, DispositionLocation-Example1)
 * insert addentry(Organization, FuneralHome-Example1)
 * insert addentry(Observation, DecedentDispositionMethod-Example1)
-
+* insert addentry(Observation, AutopsyPerformedIndicator-Example1)
 
 Instance: DeathCertificate-Example1
 InstanceOf: DeathCertificate
