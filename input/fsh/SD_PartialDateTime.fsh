@@ -85,7 +85,7 @@ Description: "This extension enables an incomplete date to be expressed with rea
 
 Extension: PartialDate
 Id: PartialDate
-Title: "Partial Date "
+Title: "Partial Date"
 Description: "Provides values of a partial date (Extension)"
 * insert boilerplate
 * ^context[0].type = #element
@@ -110,7 +110,7 @@ Description: "Provides values of a partial date (Extension)"
 
 Extension: PartialDateTime
 Id: PartialDateTime
-Title: "Partial Date Time "
+Title: "Partial Date Time"
 Description: "Provides values of a partial dateTime (Extension)"
 * insert boilerplate
 * ^context[0].type = #element

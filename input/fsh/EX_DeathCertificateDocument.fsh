@@ -12,6 +12,8 @@ Description: "DeathCertificateDocument-Example1"
 * entry[=].fullUrl = "http://example.org/fhir/Bundle/DeathCertificate-Example1"
 * entry[+].resource = Decedent-Example1
 * entry[=].fullUrl = "http://example.org/fhir/Patient/Decedent-Example1"
+* entry[+].resource = DecedentFather-Example1
+* entry[=].fullUrl = "http://example.org/fhir/Patient/DecedentFather-Example1"
 
 
 
@@ -32,7 +34,7 @@ Description: "DeathCertificate-Example1"
 *  event.detail = Reference(DeathCertification-Example1)
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 *  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
-*  section[DecedentDemographics].entry[Father] = Reference(Father-Example1)
+*  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
 *  section[DecedentDemographics].entry[Age] = Reference(DecedentAge-Example1)
 *  section[DecedentDemographics].entry[BirthRecordID] = Reference(BirthRecordIdentifier-Example1)
 *  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)

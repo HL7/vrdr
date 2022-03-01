@@ -7,5 +7,5 @@ Description: "DeathLocation-Example1"
 * description = "nursing home"
 * address.state = "MA"
 * address.country = "US"
-* extension[nationalReportingJurisdictionId].valueCodeableConcept = #MA
+* extension[nationalReportingJurisdictionId].valueCode = #MA
 * type = $sct#450381000124100
