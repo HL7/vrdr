@@ -9,7 +9,6 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $list-order = http://terminology.hl7.org/CodeSystem/list-order
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
-Alias: $ViewCodeSystem.action = https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.274
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
@@ -18,11 +17,11 @@ Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $admingender = http://hl7.org/fhir/administrative-gender
 Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
+Alias: $UCUM = http://unitsofmeasure.org
 // Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $provinces = http://canadapost.ca
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
 Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
-Alias: $unitsofmeasure = http://unitsofmeasure.org/
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 

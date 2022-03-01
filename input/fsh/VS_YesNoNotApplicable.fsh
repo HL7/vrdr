@@ -17,5 +17,5 @@ Description: """A set of codes used to express an affirmative response (Yes), ne
 ValueSet: NotApplicableVS
 Id: vrdr-not-applicable-vs
 Title: "NotApplicable"
-Description: " Value set with Not Applicable"
+Description: "Value set with Not Applicable"
 * $v3-NullFlavor#NA "not applicable"

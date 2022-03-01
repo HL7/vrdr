@@ -95,7 +95,7 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DeathCertification, DeathCertification,  0, 1, DeathCertification, DeathCertification, DeathCertification)
 * insert BundleSectionSlice(DeathCertification, MannerOfDeath,  0, 1, MannerOfDeath, MannerOfDeath, MannerOfDeath)
 * insert BundleSectionSlice(DeathCertification, CauseOfDeathCondition,  0, 5, CauseOfDeathCondition, CauseOfDeathCondition, CauseOfDeathCondition)
-* insert BundleSectionSlice(DeathCertification, ConditionContributingToDeath,  0, 1, ConditionContributingToDeath, ConditionContributingToDeath, DecedentTransportationRole)
+* insert BundleSectionSlice(DeathCertification, ConditionContributingToDeath,  0, 1, ConditionContributingToDeath, ConditionContributingToDeath, ConditionContributingToDeath)
 * insert BundleSectionSlice(DeathCertification, CauseOfDeathPathway,  0, 1, CauseOfDeathPathway, CauseOfDeathPathway, CauseOfDeathPathway)
 //
 * insert BundleSectionSlice(DecedentDisposition, DispositionLocation,  0, 1, DispositionLocation, DispositionLocation, DispositionLocation)
