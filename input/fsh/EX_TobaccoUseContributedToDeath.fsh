@@ -4,4 +4,4 @@ Usage: #example
 Description: "TobaccoUseContributedToDeath-Example1"
 * meta.profile = Canonical(TobaccoUseContributedToDeath)
 * subject = Reference(Decedent-Example1)
-* valueCodeableConcept = $v2-0136#Y "Yes"
+* valueCodeableConcept = $sct#373066001 "Yes"

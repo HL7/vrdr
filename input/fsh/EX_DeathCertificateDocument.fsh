@@ -22,12 +22,12 @@ Description: "DeathCertificate-Example1"
 *  type = $loinc#64297-5 "Death certificate"
 *  subject = Reference(Decedent-Example1)
 *  date = "2020-11-15T16:39:54-05:00"
-*  author = Reference(Certifier)
+*  author = Reference(Certifier-Example1)
 *  title = "Death Certificate"
 *  attester.mode = #legal
 *  attester.time = "2020-11-14T16:39:40-05:00"
-*  attester.party = Reference(Certifier)
-*  event.detail = Reference(DeathCertification)
+*  attester.party = Reference(Certifier-Example1)
+*  event.detail = Reference(DeathCertification-Example1)
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 *  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
 *  section[DecedentDemographics].entry[Father] = Reference(Father-Example1)
@@ -56,4 +56,4 @@ Description: "DeathCertificate-Example1"
 
 *  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
 *  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
-*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DispositionMethod-Example1)
+*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)

@@ -140,6 +140,8 @@ Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer or code
 * valueCode = #NA
+* valueInteger ^minValueInteger = 0
+* valueInteger ^maxValueInteger = 9998
 
 Extension: DateMonth
 Id: Date-Month
@@ -147,8 +149,8 @@ Title: "Date Month"
 Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer or code
-* value[x] ^minValueInteger = 1
-* value[x] ^maxValueInteger = 12
+* valueInteger ^minValueInteger = 1
+* valueInteger ^maxValueInteger = 12
 * valueCode = #NA
 
 Extension: DateDay
@@ -158,8 +160,8 @@ Description: "The day portion (DD) of the partial date. (Extension)"
 * value[x] 1..1
 * value[x] only integer or code
 * value[x] ^definition = "Specifies the day portion of a partial date."
-* value[x] ^minValueInteger = 1
-* value[x] ^maxValueInteger = 31
+* valueInteger ^minValueInteger = 1
+* valueInteger ^maxValueInteger = 31
 * valueCode = #NA
 
 Extension: DateTime
