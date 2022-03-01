@@ -43,6 +43,8 @@ The content is broken down into the following sections:
     * [SurgeryDate]
     * [TobaccoUseContributedToDeath]
 * Death Certification
+    * [Certifier]
+    * [DeathCertification]
     * [CauseOfDeathCondition]
     * [CauseOfDeathPathway]
     * [ConditionContributingToDeath]

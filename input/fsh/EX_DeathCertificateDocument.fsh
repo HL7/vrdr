@@ -31,6 +31,8 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentTransportationRole-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Location, DeathLocation-Example1)
+* insert addentry(Practitioner, Certifier-Example1)
+* insert addentry(Procedure, DeathCertification-Example1)
 * insert addentry(Observation, CauseOfDeathCondition-Example1)
 * insert addentry(Observation, CauseOfDeathCondition-Example2)
 * insert addentry(Observation, ConditionContributingToDeath)
@@ -77,6 +79,8 @@ Description: "DeathCertificate-Example1"
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
 *  section[DeathInvestigation].entry[TransportationRole] = Reference(DecedentTransportationRole-Example1)
 
+*  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
+*  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
 *  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
 *  section[DeathCertification].entry[CauseOfDeathCondition][0] = Reference(CauseOfDeathCondition-Example1)
 *  section[DeathCertification].entry[CauseOfDeathCondition][+] = Reference(CauseOfDeathCondition-Example1)

@@ -72,6 +72,7 @@
 [Parameters2022]: StructureDefinition-vrdr-parameters-2022.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDatePartAbsentReason]: StructureDefinition-vrdr-partial-date-part-absent-reason.html
+[SurgeryDate]: StructureDefinition-vrdr-surgery-date.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
 [WithinCityLimits]: StructureDefinition-vrdr-within-city-limits-indicator.html
 [CanadaProvincesVS]: ValueSet-vrdr-canada-provinces-vs.html
