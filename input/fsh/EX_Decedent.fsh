@@ -2,7 +2,7 @@ Instance: Decedent-Example1
 InstanceOf: Decedent
 Usage: #example
 Description: "Decedent-Example1"
-* meta.profile = Canonical(Decedent)
+* insert AddMetaProfile(Decedent)
 * extension[NVSS-Race].extension[White].valueBoolean = true
 * extension[NVSS-Race].extension[BlackOrAfricanAmerican].valueBoolean = true
 * extension[NVSS-Race].extension[AmericanIndianOrAlaskaNative].valueBoolean = true

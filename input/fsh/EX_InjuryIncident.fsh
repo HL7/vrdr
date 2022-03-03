@@ -2,7 +2,7 @@ Instance: InjuryIncident-Example1
 InstanceOf: InjuryIncident
 Usage: #example
 Description: "InjuryIncident-Example1"
-* meta.profile = Canonical(InjuryIncident)
+* insert AddMetaProfile(InjuryIncident)
 * extension[injuryLocationReference].valueReference = Reference(InjuryLocation-Example1)
 * status = #final
 * subject = Reference(Decedent-Example1)
@@ -17,6 +17,7 @@ Instance: InjuryLocation-Example1
 InstanceOf: InjuryLocation
 Usage: #example
 Description: "InjuryLocation-Example1"
+* insert AddMetaProfile(InjuryLocation)
 * description = "5590 Lockwood Drive 20621 US"
 * name = "Home"
 * address.text = "5590 Lockwood Drive 20621 US"

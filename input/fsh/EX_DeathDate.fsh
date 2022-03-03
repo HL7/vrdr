@@ -2,7 +2,7 @@ Instance: DeathDate-Example1
 InstanceOf: DeathDate
 Usage: #example
 Description: "DeathDate-Example1"
-* meta.profile = Canonical(DeathDate)
+* insert AddMetaProfile(DeathDate)
 * subject = Reference(Decedent-Example1)
 * effectiveDateTime = "2020-11-12T16:39:40-05:00"
 * performer = Reference(Certifier-Example1)

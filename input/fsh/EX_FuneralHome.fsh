@@ -2,7 +2,7 @@ Instance: FuneralHome-Example1
 InstanceOf: FuneralHome
 Usage: #example
 Description: "FuneralHome-Example1"
-* meta.profile = Canonical(FuneralHome)
+* insert AddMetaProfile(FuneralHome)
 * active = true
 * type = $organization-type#bus "Non-Healthcare Business or Corporation"
 * name = "Lancaster Funeral Home and Crematory"

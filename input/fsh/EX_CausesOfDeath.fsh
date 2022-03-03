@@ -35,7 +35,7 @@ Instance: CauseOfDeathPathway-Example1
 InstanceOf: CauseOfDeathPathway
 Usage: #example
 Description: "CauseOfDeathPathway-Example1"
-* meta.profile = Canonical(CauseOfDeathPathway)
+* insert AddMetaProfile(CauseOfDeathPathway)
 * status = #current
 * source = Reference(Certifier-Example1)
 // * orderedBy = $list-order#priority "Sorted by Priority"
@@ -48,6 +48,7 @@ Instance: Certifier-Example1
 InstanceOf: Certifier
 Usage: #example
 Description: "Certifier-Example1"
+* insert AddMetaProfile(Certifier)
 * name.use = #official
 * name.family = "Black"
 * name.given = "Jim"

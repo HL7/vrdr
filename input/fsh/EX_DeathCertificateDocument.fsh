@@ -6,7 +6,7 @@ Instance: DeathCertificateDocument-Example1
 InstanceOf: DeathCertificateDocument
 Usage: #example
 Description: "DeathCertificateDocument-Example1"
-* meta.profile = Canonical(DeathCertificateDocument)
+* insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
 * identifier.value = "2020MA000182"
 * type = #document
