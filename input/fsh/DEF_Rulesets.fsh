@@ -34,19 +34,20 @@ RuleSet: BundleSlice(name, min, max, short, def, class)
 //* entry[{name}].resource.meta.profile = Canonical({class})
 
 RuleSet: RequireMetaProfile(profile)
-* meta 1..1
-* meta.profile 1..*
-* meta.profile ^slicing.discriminator.type = #pattern
-* meta.profile ^slicing.discriminator.path = "$this"
-* meta.profile ^slicing.rules = #open
-* meta.profile ^slicing.ordered = false
-* meta.profile ^slicing.description = "Slice based on value"
-* meta.profile contains supportedProfile 1..1
-* meta.profile[supportedProfile] = Canonical({profile})
-// * meta 0..1
+// * meta 1..1
+// * meta.profile 1..*
+// * meta.profile ^slicing.discriminator.type = #pattern
+// * meta.profile ^slicing.discriminator.path = "$this"
+// * meta.profile ^slicing.rules = #open
+// * meta.profile ^slicing.ordered = false
+// * meta.profile ^slicing.description = "Slice based on value"
+// * meta.profile contains supportedProfile 1..1
+// * meta.profile[supportedProfile] = Canonical({profile})
+* meta 0..1
 
 RuleSet: AddMetaProfile(profile)
-* meta.profile = Canonical({profile})
+//* meta.profile = Canonical({profile})
+* meta.versionId = "v1"
 
 RuleSet: SNOMEDCopyright
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
