@@ -43,11 +43,13 @@ RuleSet: RequireMetaProfile(profile)
 // * meta.profile ^slicing.description = "Slice based on value"
 // * meta.profile contains supportedProfile 1..1
 // * meta.profile[supportedProfile] = Canonical({profile})
-* meta 0..1
+// this now does nothing
+* hello
 
 RuleSet: AddMetaProfile(profile)
 //* meta.profile = Canonical({profile})
-* meta.versionId = "v1"
+// this does nothing
+* hello
 
 RuleSet: SNOMEDCopyright
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
