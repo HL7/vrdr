@@ -39,7 +39,8 @@ Description: "Decedent-Example1"
 * name.given = "Madelyn"
 * gender = #female
 // * birthDate = "1978-03-12"
-* birthDate.extension[partialDate].extension[day].valueInteger = 12
+//* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
+* birthDate.extension[partialDate].extension[day].valueInteger = 10
 * birthDate.extension[partialDate].extension[month].valueInteger = 11
 * birthDate.extension[partialDate].extension[year].valueInteger = 2004
 * address.extension[WithinCityLimitsIndicator].valueCoding = $v2-0136#Y "Yes"

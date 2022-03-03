@@ -96,11 +96,8 @@ Description: "Provides values of a partial date (Extension)"
 * . ^definition = "Provides a partial date."
 * extension contains
     DateYear named year 1..1 and
- //   DateAbsentReason named year-absent-reason 0..1 and
     DateMonth named month 1..1 and
- //   DateAbsentReason named month-absent-reason 0..1 and
     DateDay named day 1..1
- //   DateAbsentReason named day-absent-reason 0..1
 * extension[day] ^short = "Date Day"
 * extension[day] ^definition = "The day portion (DD) of the partial date."
 * extension[year] ^short = "Date Year"
@@ -138,103 +135,43 @@ Id: Date-Year
 Title: "Date Year"
 Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only integer or code
-* valueCode from NotApplicableVS (required)
+* value[x] only integer
 * valueInteger ^minValueInteger = 0
 * valueInteger ^maxValueInteger = 9998
+* value[x].extension contains
+   $DataAbsentReason named dataabsent 0..1
 
 Extension: DateMonth
 Id: Date-Month
 Title: "Date Month"
 Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only integer or code
+* value[x] only integer
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 12
-* valueCode from NotApplicableVS (required)
+* valueInteger.extension contains
+   $DataAbsentReason named dataabsent 0..1
 
 Extension: DateDay
 Id: Date-Day
 Title: "Date Day"
 Description: "The day portion (DD) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only integer or code
+* value[x] only integer
 * value[x] ^definition = "Specifies the day portion of a partial date."
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 31
-* valueCode from NotApplicableVS (required)
+* value[x].extension contains
+   $DataAbsentReason named dataabsent 0..1
 
 Extension: DateTime
 Id: Date-Time
 Title: "Date Time"
 Description: "The time portion (DD) of the partial date. (Extension)"
 * value[x] 1..1
-* value[x] only time or code
+// * value[x] only time or code
+* value[x] only time
 * value[x] ^definition = "Specifies the time portion of a partial date."
-* valueCode from NotApplicableVS (required)
-// Extension: DateAbsentReason
-// Id: Date-Absent-Reason
-// Title: "Date Absent Reason"
-// Description: "Date Component Absent Reason (Extension)"
-// * value[x] 1..1
-// * value[x] only code
-// * value[x] from $dataabsentreason401 (required)
-
-
-
-Extension: PartialDateAlt
-Id: PartialDate-Alt
-Title: "Partial Date"
-Description: "Provides values of a partial date (Extension)"
-* ^context[0].type = #element
-* ^context[=].expression = "date"
-* ^context[+].type = #element
-* ^context[=].expression = "dateTime"
-* . ^short = "Partial Date"
-* . ^definition = "Provides a partial date."
-* extension contains
-    DateYearAlt named year 1..1 and
-    DateAbsentReasonAlt named year-absent-reason 0..1 and
-    DateMonthAlt named month 1..1 and
-    DateAbsentReasonAlt named month-absent-reason 0..1 and
-    DateDayAlt named day 1..1 and
-    DateAbsentReasonAlt named day-absent-reason 0..1
-* extension[day-absent-reason] ^short = "Day Absent"
-* extension[month-absent-reason] ^short = "Month Absent"
-* extension[year-absent-reason] ^short = "Year Absent"
-
-Extension: DateYearAlt
-Id: Date-Year-Alt
-Title: "Date Year"
-Description: "The year portion (YYYY) of the partial date. (Extension)"
-* value[x] 1..1
-* value[x] only integer
-* valueInteger ^minValueInteger = 0
-* valueInteger ^maxValueInteger = 9998
-
-Extension: DateMonthAlt
-Id: Date-Month-Alt
-Title: "Date Month"
-Description: "The month portion (MM) of the partial date. (Extension)"
-* value[x] 1..1
-* value[x] only integer
-* valueInteger ^minValueInteger = 1
-* valueInteger ^maxValueInteger = 12
-
-Extension: DateDayAlt
-Id: Date-Day-Alt
-Title: "Date Day"
-Description: "The day portion (DD) of the partial date. (Extension)"
-* value[x] 1..1
-* value[x] only integer
-* value[x] ^definition = "Specifies the day portion of a partial date."
-* valueInteger ^minValueInteger = 1
-* valueInteger ^maxValueInteger = 31
-
-
-Extension: DateAbsentReasonAlt
-Id: Date-Absent-Reason
-Title: "Date Absent Reason"
-Description: "Date Component Absent Reason (Extension)"
-* value[x] 1..1
-* value[x] only code
+//* valueCode from NotApplicableVS (required)
+* value[x].extension contains
+   $DataAbsentReason named dataabsent 0..1
