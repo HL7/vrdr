@@ -22,6 +22,7 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $provinces = http://canadapost.ca
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
 Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+Alias: $DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 

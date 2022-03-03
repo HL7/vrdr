@@ -4,7 +4,7 @@ Instance: DeathCertification-Example1
 InstanceOf: DeathCertification
 Usage: #example
 Description: "DeathCertification-Example1"
-* meta.profile = Canonical(DeathCertification)
+* insert AddMetaProfile(DeathCertification)
 * identifier.value = "180"
 * status = #completed
 * category = $sct#103693007 "Diagnostic procedure"

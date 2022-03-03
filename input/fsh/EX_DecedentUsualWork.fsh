@@ -2,7 +2,7 @@ Instance: DecedentUsualWork-Example1
 InstanceOf: DecedentUsualWork
 Usage: #example
 Description: "DecedentUsualWork-Example1"
-* meta.profile = Canonical(DecedentUsualWork)
+* insert AddMetaProfile(DecedentUsualWork)
 * status = #final
 * subject = Reference(Decedent-Example1)
 * valueCodeableConcept = urn:oid:2.16.840.1.114222.4.5.314#5700 "Secretaries and administrative assistants"

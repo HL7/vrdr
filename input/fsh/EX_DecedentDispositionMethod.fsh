@@ -2,7 +2,7 @@ Instance: DecedentDispositionMethod-Example1
 InstanceOf: DecedentDispositionMethod
 Usage: #example
 Description: "DecedentDispositionMethod-Example1"
-* meta.profile = Canonical(DecedentDispositionMethod)
+* insert AddMetaProfile(DecedentDispositionMethod)
 * status = #final
 * subject = Reference(Decedent-Example1)
 * performer = Reference(Mortician-Example1)
@@ -14,6 +14,7 @@ Instance: Mortician-Example1
 InstanceOf: USCorePractitionerProfile
 Usage: #example
 Description: "Mortician-Example1"
+* insert AddMetaProfile(USCorePractitionerProfile)
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "212222AB"
 * name.use = #official
@@ -25,6 +26,7 @@ Instance: DispositionLocation-Example1
 InstanceOf: DispositionLocation
 Usage: #example
 Description: "DispositionLocation-Example1"
+* insert AddMetaProfile(DispositionLocation)
 * name = "Rosewood Cemetary"
 * address.line = "303 Rosewood Ave"
 * address.city = "Danville"

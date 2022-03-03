@@ -2,7 +2,7 @@ Instance: Decedent-Example1
 InstanceOf: Decedent
 Usage: #example
 Description: "Decedent-Example1"
-* meta.profile = Canonical(Decedent)
+* insert AddMetaProfile(Decedent)
 * extension[NVSS-Race].extension[White].valueBoolean = true
 * extension[NVSS-Race].extension[BlackOrAfricanAmerican].valueBoolean = true
 * extension[NVSS-Race].extension[AmericanIndianOrAlaskaNative].valueBoolean = true
@@ -39,7 +39,8 @@ Description: "Decedent-Example1"
 * name.given = "Madelyn"
 * gender = #female
 // * birthDate = "1978-03-12"
-* birthDate.extension[partialDate].extension[day].valueInteger = 12
+//* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
+* birthDate.extension[partialDate].extension[day].valueInteger = 10
 * birthDate.extension[partialDate].extension[month].valueInteger = 11
 * birthDate.extension[partialDate].extension[year].valueInteger = 2004
 * address.extension[WithinCityLimitsIndicator].valueCoding = $v2-0136#Y "Yes"

@@ -2,7 +2,7 @@ Instance: DecedentPregnancyStatus-Example1
 InstanceOf: DecedentPregnancyStatus
 Usage: #example
 Description: "DecedentPregnancyStatus-Example1"
-* meta.profile = Canonical(DecedentPregnancyStatus)
+* insert AddMetaProfile(DecedentPregnancyStatus)
 * subject = Reference(Decedent-Example1)
 * status = #final
 * valueCodeableConcept = PregnancyStatusCS#2 "Pregnant at time of death"

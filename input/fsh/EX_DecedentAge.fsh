@@ -2,7 +2,7 @@ Instance: DecedentAge-Example1
 InstanceOf: DecedentAge
 Usage: #example
 Description: "DecedentAge-Example1"
-* meta.profile = Canonical(DecedentAge)
+* insert AddMetaProfile(DecedentAge)
 * status = #final
 * subject = Reference(Decedent-Example1)
 * valueQuantity.value = 42

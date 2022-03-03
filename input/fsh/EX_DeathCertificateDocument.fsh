@@ -6,7 +6,7 @@ Instance: DeathCertificateDocument-Example1
 InstanceOf: DeathCertificateDocument
 Usage: #example
 Description: "DeathCertificateDocument-Example1"
-* meta.profile = Canonical(DeathCertificateDocument)
+* insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
 * identifier.value = "2020MA000182"
 * type = #document
@@ -31,6 +31,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentTransportationRole-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Location, DeathLocation-Example1)
+* insert addentry(Location, InjuryLocation-Example1)
 * insert addentry(Practitioner, Certifier-Example1)
 * insert addentry(Procedure, DeathCertification-Example1)
 * insert addentry(Observation, CauseOfDeathCondition-Example1)
@@ -73,7 +74,8 @@ Description: "DeathCertificate-Example1"
 *  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)
 *  section[DeathInvestigation].entry[TobaccoUse] = Reference(TobaccoUseContributedToDeath-Example1)
 *  section[DeathInvestigation].entry[Autopsy] = Reference(AutopsyPerformedIndicator-Example1)
-*  section[DeathInvestigation].entry[DeathLocation] = Reference(DeathLocation-Example1)
+*  section[DeathInvestigation].entry[InjuryOrDeathLocation][0] = Reference(DeathLocation-Example1)
+*  section[DeathInvestigation].entry[InjuryOrDeathLocation][1] = Reference(InjuryLocation-Example1)
 *  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
 *  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
