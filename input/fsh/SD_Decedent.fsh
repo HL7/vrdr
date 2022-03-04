@@ -14,7 +14,12 @@ Description: "Decedent (USCorePatient)"
     SpouseAlive named Spouse-Alive 0..1 and
     $patient-birthPlace named Patient-BirthPlace 0..1
 * extension[Patient-BirthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
-* extension[Patient-BirthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
+* extension[Patient-BirthPlace].valueAddress.state from JurisdictionsProvincesVS (required) // BPLACE_ST
+* extension[Patient-BirthPlace].valueAddress.city.extension contains
+    CityCode named cityCode 0..1
+* extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^label = "City Code"
+* extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^short = "City Code"
+* extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^definition = "Numeric code from in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf) and https://ftp.cdc.gov/pub/health_Statistics/nchs/Manuals/Mortality/PLACE_CODES.txt."
 * identifier 1..* MS
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
 

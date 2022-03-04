@@ -55,11 +55,23 @@ Title: "States, Territories and Provinces Value Set"
 Description: "2 Letter States and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
-* ^version = "1.0.0"
 * insert USStatesAndTerritories
 // * insert CanadaProvinces
 * codes from system CanadianProvincesCS
 * $v3-NullFlavor#UNK
+
+ValueSet: JurisdictionsProvincesVS
+Id: vrdr-jurisdictions-provinces-vs
+Title: "Jurisdictions and Provinces Value Set"
+Description: "2 Letter Jurisdictions and Provinces Value Set"
+* ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
+* ^status = #active
+* insert USStatesAndTerritories
+
+// * insert CanadaProvinces
+* codes from system CanadianProvincesCS
+* $v3-NullFlavor#UNK
+
 
 ValueSet: CanadaProvincesVS
 Id: vrdr-canada-provinces-vs
