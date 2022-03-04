@@ -67,7 +67,7 @@ Description: "2 Letter Jurisdictions and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
 * insert USStatesAndTerritories
-
+* JurisdictionsCS#YC "New York City"
 // * insert CanadaProvinces
 * codes from system CanadianProvincesCS
 * $v3-NullFlavor#UNK
