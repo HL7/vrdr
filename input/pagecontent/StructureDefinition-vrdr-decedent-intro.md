@@ -11,18 +11,22 @@ The Decedent profile contains basic information about the decedent, including da
 | Date of Birth    | birthDate  | dateTime   | DOB_YR, DOB_MO, DOB_DY  |
 | Informant    | contact  |   | none  |
 | Informant Relationship   | contact.type.text   | string (30 characters)  | INFORMRELATE  |
-| Legal Name  | name        | String | GNAME, MNAME, DMIDDLE, LNAME, SUFF |
+| Legal Name - first name | name.given  | String | GNAME |
+| Legal Name - middle initial | name.given        | String | MNAME (1st letter should be mapped)|
+| Legal Name - middle name | name.given        | String | DMIDDLE (full string should be mapped)|
+| Legal Name - last name | name.surname        | String | LNAME |
+| Legal Name - suffix | name.suffix        | String | SUFF |
 | Marital Status   | maritalStatus  | [MaritalStatusVS] | MARITAL   |
-| Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] (yes, no, unmarried, unknown)| SPOUSEL  **not supported by library** |
+| Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] |  SPOUSELV  **not supported by library** |
 | Marital Status (Bypass Edit Flag)  | maritalStatus.extension[ BypassEditFlag]  | [EditBypass01234VS] | MARITAL_BYPASS   |
 | NVSS Ethnicity | extension[ NVSSEthnicity] | as per IJE | DETHNIC1-5|
 | NVSS Race | extension[ NVSSRace] | as per IJE | RACE1-23, RACE_MVR|
 | Residence - address(predirectional) | address.extension[predir]  | string | PREDIR_D  |
-| Residence - address(street number) | address.extension[stnum]  | string | STNUM_D  |
-| Residence - address(street name) | address.extension[stname]  | string | STNAME_D  |
-| Residence - address(street designator) | address.extension[stdesig]  | string | STDESIG_D  |
-| Residence - address(postdirectional) | address.extension[postdir]  | string | POSTDIR_D  |
-| Residence - address(unit number) | address.extension[unitnum]  | string | UNITNUM_D  |
+| Residence - address(street number) | address.extension[stnum]  | string | STNUM_R  |
+| Residence - address(street name) | address.extension[stname]  | string | STNAME_R  |
+| Residence - address(street designator) | address.extension[stdesig]  | string | STDESIG_R  |
+| Residence - address(postdirectional) | address.extension[postdir]  | string | POSTDIR_R  |
+| Residence - address(unit number) | address.extension[unitnum]  | string | UNITNUM_R  |
 | Residence - address  | address.line  | string | ADDRESS_R  |
 | Residence - City  | address.city  | string | CITYTEXT_R  |
 | Residence - coded City  | address.city.extension.cityCode  | integer | CITYC  |

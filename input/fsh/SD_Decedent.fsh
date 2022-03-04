@@ -17,6 +17,17 @@ Description: "Decedent (USCorePatient)"
 * extension[Patient-BirthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
 * identifier 1..* MS
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
+
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.ordered = false   // can be omitted, since false is the default
+* identifier ^slicing.description = "Slice based on $this pattern"
+* identifier contains
+   ssn 0..1
+* identifier[ssn] ^short = "Social Security Number"
+* identifier[ssn].system = $ssn
+* identifier[ssn].type = $v2-0203#SB
 * name 1..* MS
 * birthDate 0..1
 * birthDate.extension contains
