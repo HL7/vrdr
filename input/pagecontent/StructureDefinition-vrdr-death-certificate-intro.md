@@ -7,7 +7,7 @@ The profile includes:
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Date of Registration | date  | dateTime | DOR_YR, DOR_MO, DOR_DY |
-| Source flag: paper/electronic | extension[ filingFormat]  | [FilingFormatVS]] | MFILED **not supported by library**  |
+| Source flag: paper/electronic | extension[ filingFormat]  | [FilingFormatVS] | MFILED **not supported by library**  |
 | State Specific Field | extension[ stateSpecificField]  | string | STATESP **not yet supported by library**  |
 {: .grid }
 

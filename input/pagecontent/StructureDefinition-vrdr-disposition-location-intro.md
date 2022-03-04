@@ -6,7 +6,7 @@ The Disposition Location profile contains the following information:
 | State, U.S. Territory or Canadian Province of Disposition - literal| address.state | string | DISPSTATE |
 | State, U.S. Territory or Canadian Province of Disposition - code | address.state  | [StatesTerritoriesAndProvincesVS] | DISPSTATECD |
 | City of Disposition - literal | address.city | string | DISPCITY |
-| City of Disposition - code |  <none> | 5 Digit Place code (reference) | DISPCITYCD  **not supported by library or IG ** |
+| City of Disposition - code |  address.city.extension[ cityCode].value | 5 Digit Place code (reference) | DISPCITYCD  **not supported by library or IG ** |
 | Death Institution name | name | string | DINSTI |
 {: .grid }
 
