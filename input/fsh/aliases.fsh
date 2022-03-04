@@ -18,6 +18,7 @@ Alias: $admingender = http://hl7.org/fhir/administrative-gender
 Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $UCUM = http://unitsofmeasure.org
+Alias: $ssn = http://hl7.org/fhir/sid/us-ssn
 // Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $provinces = http://canadapost.ca
 Alias: $icd10PlaceOfOccurence = urn:oid:2.16.840.1.114222.4.5.320
