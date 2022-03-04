@@ -7,7 +7,7 @@ The Decedent Age profile contains the following information:
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Decedent Age   | valueQuantity.value  | decimal  | AGE  |
 | Decedent Age (units)   | valueQuantity.system  | [UnitsOfAgeVS] | AGE_TYPE  |
-| Age Edit Bypass FLag | value.extension[BypassEditFlag].value | [EditBypass01VS] |
+| Age Edit Bypass FLag | value.extension[BypassEditFlag].value | [EditBypass01VS] | AGE_BYPASS     |
 {: .grid }
 
 

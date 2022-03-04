@@ -95,7 +95,7 @@
 [PlaceOfInjuryVS]: ValueSet-vrdr-place-of-injury-vs.html
 [PregnancyStatusVS]: ValueSet-vrdr-pregnancy-status-vs.html
 [RaceMissingValueReasonVS]: ValueSet-vrdr-race-nissing-value-reason-vs.html
-[TRansportationIncidentRoleVS]: ValueSet-vrdr-transportation-incident-role-vs.html
+[TransportationIncidentRoleVS]: ValueSet-vrdr-transportation-incident-role-vs.html
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html

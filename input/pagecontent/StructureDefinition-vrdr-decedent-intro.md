@@ -7,11 +7,10 @@ The Decedent profile contains basic information about the decedent, including da
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Birthplace Country   | extension[patient-birthPlace].value[x].country  | [BirthplaceCountryVS] | BPLACE_CNT  |
 | Birth Place State   | extension[patient-birthPlace].value[x].state  | [StatesTerritoriesProvincesVS] | BPLACE_ST  |
-| Birth Sex   | extension[NVSS-SexAtDeath]  | [AdministrativeGenderVS] | SEX  |
+| Sex at Death   | extension[NVSS-SexAtDeath]  | [AdministrativeGenderVS] | SEX  |
 | Date of Birth    | birthDate  | dateTime   | DOB_YR, DOB_MO, DOB_DY  |
 | Informant    | contact  |   | none  |
 | Informant Relationship   | contact.type.text   | string (30 characters)  | INFORMRELATE  |
-| Informant    | contact  |   | none  |
 | Legal Name  | name        | String | GNAME, MNAME, DMIDDLE, LNAME, SUFF |
 | Marital Status   | maritalStatus  | [MaritalStatusVS] | MARITAL   |
 | Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] (yes, no, unmarried, unknown)| SPOUSEL  **not supported by library** |
@@ -26,7 +25,7 @@ The Decedent profile contains basic information about the decedent, including da
 | Residence - address(unit number) | address.extension[unitnum]  | string | UNITNUM_D  |
 | Residence - address  | address.line  | string | ADDRESS_R  |
 | Residence - City  | address.city  | string | CITYTEXT_R  |
-| Residence - coded City  | address.city.extension.districtCode  | integer | CITYC  |
+| Residence - coded City  | address.city.extension.cityCode  | integer | CITYC  |
 | Residence - County  | address.district  | string | COUNTYTEXT_R  |
 | Residence - coded County  | address.district.extension.districtCode  | integer | COUNTYC  |
 | Residence - State  | address.state  | [StatesTerritoriesProvincesVS] | STATEC, STATETEXT_R  |
