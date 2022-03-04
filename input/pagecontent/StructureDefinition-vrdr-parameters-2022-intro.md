@@ -14,7 +14,7 @@ There are 6 1-char fields (PLACE1_1-6), 3 8-char fields (PLACE8_1-3), and one 20
 | Placeholder PLACE1_5   | parameter[PLACE1_5].value  | string(1)  | PLACE1_5 |
 | Placeholder PLACE1_6   | parameter[PLACE1_6].value  | string(1)  | PLACE1_6  |
 | Placeholder PLACE8_1  | parameter[PLACE8_1].value  | string(8)  | PLACE8_1 |
-| Placeholder PLACE8_1   | parameter[PLACE8_2].value  | string(8)  | PLACE8_2 |
+| Placeholder PLACE8_2   | parameter[PLACE8_2].value  | string(8)  | PLACE8_2 |
 | Placeholder PLACE8_3   | parameter[PLACE8_3].value  | string(8)  | PLACE8_3  |
 | Placeholder PLACE20_1   | parameter[PLACE20_1].value  | string(20)  | PLACE20_1  |
 {: .grid }
