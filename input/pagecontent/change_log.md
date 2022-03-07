@@ -101,10 +101,10 @@
 * [FHIR-34424](https://jira.hl7.org/browse/FHIR-34424) :    LImit causes of death to 5 (same as 34320)
 * [FHIR-34492](https://jira.hl7.org/browse/FHIR-34492) : Delete unnecessary slicing
 * [FHIR-34562](https://jira.hl7.org/browse/FHIR-34562) : 2022 IJE updates - parameters addition.  Needs documentation
-* [FHIR-35992](https://jira.hl7.org/browse/FHIR-35992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealth with later)
-* [FHIR-35993](https://jira.hl7.org/browse/FHIR-35993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealth with later)
+* [FHIR-34992](https://jira.hl7.org/browse/FHIR-34992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealt with later)
+* [FHIR-34993](https://jira.hl7.org/browse/FHIR-34993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealt with later)
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
-* [FHIR-36001](https://jira.hl7.org/browse/FHIR-36001) :    Update IG Version Number
+* [FHIR-36002](https://jira.hl7.org/browse/FHIR-36002) :    Update IG Version Number
 * not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
 * [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
