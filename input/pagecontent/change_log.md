@@ -70,9 +70,9 @@
 * [FHIR-33427](https://jira.hl7.org/browse/FHIR-33427) :  Same as FHIR-32873 (cardinality of jurisdiction ID)
 * [FHIR-33428](https://jira.hl7.org/browse/FHIR-33428) :  Same as FHIR-32906 (constrain observation location)
 * [FHIR-33691](https://jira.hl7.org/browse/FHIR-33491) :  Restrict Decedent.gender to 3 values allowed by IJE
-* [FHIR-33496](https://jira.hl7.org/browse/FHIR-33496) :  City code as a supplement to city name.
-* [FHIR-33497](https://jira.hl7.org/browse/FHIR-33497) :  City code as a supplement to city name.  City name not a controlled vocabulary.
 * [FHIR-33610](https://jira.hl7.org/browse/FHIR-33610) :  Death Certificate structure needs to be specified.   Profile has changed, but no examples.  Can't claim it is done without examples.
+* [FHIR-33696](https://jira.hl7.org/browse/FHIR-33696) :  City code as a supplement to city name.
+* [FHIR-33697](https://jira.hl7.org/browse/FHIR-33697) :  City code as a supplement to city name.  City name not a controlled vocabulary.
 * [FHIR-33700](https://jira.hl7.org/browse/FHIR-33700) :    RELATE ==> will update messaging to support original, update, update-but-not-for-nchs
 * [FHIR-33701](https://jira.hl7.org/browse/FHIR-33701) :    INFORMRELATE / Coded value ==> contact.type.text
 * [FHIR-33715](https://jira.hl7.org/browse/FHIR-33715) :  SUpport for MFILED field (paper, electronic, mixed).  Add extension to DeathCertificate.
