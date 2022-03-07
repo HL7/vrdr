@@ -1,24 +1,12 @@
 ### Usage
-Note: STNUM_D, PREDIR_D, POSTDIR_D, STDESIG_D, STNAM_D are marked as '?'
-
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Death Jurisdiction   | extension[ nationalJurisdictionId].value        | [JurisdictionVS] | jurisdictionID |
-| Long String address for place of death  | address.line  | string | ADDRESS_D  |
-| Place of Death  | code  | [PlaceOfDeathVS] | DPLACE  |
-| Place of death. Latitude | position.latitude | float | LAT_D |
-| Place of death. Longitude | position.longitude | float | LONG_D |
-| Place of death. City or Town name  | address.city  | string | CITYTEXT_D  |
-| Place of death. City FIPS code | address.city.extension[ cityCode].value  | 5 Digit Place code (reference) | CITYCODE_D  |
-| Place of death. County of Death - code  | address.district.extension[ districtCode].value  | 3 Digit County code (reference) | COD  |
-| Place of death. County of Death - literal | address.district  | string | COUNTYTEXT_D  |
-| State, U.S. Territory or Canadian Province of Death - code | address.state | [StatesTerritoriesProvincesVS] | DSTATE |
-| Country of Death - Literal  | address.country  | string | DTHCOUNTRY  |
-| Country of Death - Code | address.country  | [ResidenceCountryVS] | DTHCOUNTRYCD |
-| Place of death. Postal Code  | address.postalCode | string | ZIP9_D  |
+| Hispanic Mexican   | extension[ HispanicMexican].valueCoding  | [YesNoUnknownVS] | DETHNIC1  |
+| Hispanic PuertoRican   | extension[ HispanicPuertoRican].valueCoding  | [YesNoUnknownVS] | DETHNIC2  |
+| Hispanic Other   | extension[ Hispanic Other].valueCoding  | [YesNoUnknownVS] | DETHNIC3  |
+| Hispanic Cuban   | extension[ Hispanic Cuban].valueCoding  | [YesNoUnknownVS] | DETHNIC4  |
+| Hispanic Literal   | extension[ HispanicLiteral].valueString  | String | DETHNIC5  |
 {: .grid }
-
-
 ### Conformance
 
 {% include markdown-link-references.md %}
