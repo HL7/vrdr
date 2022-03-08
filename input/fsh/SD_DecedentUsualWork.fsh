@@ -8,8 +8,3 @@ Description: "Decedent Usual Work (UsualWork)"
 * subject only Reference(Decedent)
 * valueCodeableConcept.text ^short = "Occupation - Literal"
 * component[odh-UsualIndustry].valueCodeableConcept.text ^short = "Industry - Literal"
-
-// Occupation -- Literal 	OCCUP
-// Occupation -- Code (OPTIONAL)	OCCUPC
-// Industry -- Literal 	INDUST
-// Industry -- Code (OPTIONAL)	INDUSTC

@@ -21,8 +21,8 @@ The Decedent profile contains basic information about the decedent, including da
 | Marital Status   | maritalStatus  | [MaritalStatusVS] | MARITAL   |
 | Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] |  SPOUSELV  |
 | Marital Status (Bypass Edit Flag)  | maritalStatus.extension[ BypassEditFlag]  | [EditBypass01234VS] | MARITAL_BYPASS   |
-| NVSS Ethnicity | extension[ NVSSEthnicity] | as per IJE | DETHNIC1-5|
-| NVSS Race | extension[ NVSSRace] | as per IJE | RACE1-23, RACE_MVR|
+| NVSS Ethnicity | extension[ NVSSEthnicity] | [NVSSEthnicity] [] | DETHNIC1-5|
+| NVSS Race | extension[ NVSSRace] | [NVSSRace] | RACE1-23, RACE_MVR|
 | Residence - address(predirectional) | address.extension[predir]  | string | PREDIR_D  |
 | Residence - address(street number) | address.extension[stnum]  | string | STNUM_R  |
 | Residence - address(street name) | address.extension[stname]  | string | STNAME_R  |

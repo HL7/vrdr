@@ -16,3 +16,4 @@ STATEC = is US State/Territory or CA Province/Territory, not Jurisdiction.
 * Some IJE fields map to:
     * Vital Records Messaging IG messages (e.g., VOID, ALIAS, and REPLACE  )
     * Vital Records Messaging IG content (e.g., coded ethnicity and race)
+* Need to somehow differentiate between fields that are REQUIRED by NCHS and those that are mapped for the convenience of Inter-jurisdictional exchange.

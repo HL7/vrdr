@@ -22,7 +22,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentEducationLevel-Example1)
 * insert addentry(Observation, DecedentMilitaryService-Example1)
 * insert addentry(Observation, DecedentUsualWork-Example1)
-* insert addentry(Parameter, Parameters2022-Example1)
+* insert addentry(Parameter, ParametersForEmergingIssues-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, DeathDate-Example1)
@@ -68,7 +68,7 @@ Description: "DeathCertificate-Example1"
 *  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
 *  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
 *  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
-*  section[DecedentDemographics].entry[Parameters2022] = Reference(Parameters2022-Example1)
+*  section[DecedentDemographics].entry[ParametersForEmergingIssues] = Reference(ParametersForEmergingIssues-Example1)
 
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
 *  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)

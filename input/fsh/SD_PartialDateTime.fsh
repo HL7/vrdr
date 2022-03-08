@@ -149,7 +149,7 @@ Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] only integer
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 12
-* valueInteger.extension contains
+* value[x].extension contains
    $DataAbsentReason named dataabsent 0..1
 
 Extension: DateDay

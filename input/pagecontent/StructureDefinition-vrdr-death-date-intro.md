@@ -5,10 +5,10 @@ Death Date profile includes:
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Date of Death | value  | dateTime | DOD_YR, DOD_MO, DOD_DY |
 | Time of Death | value  | dateTime |  TOD |
-| Person Pronounced Time Pronounced | component.value  | dateTime | PPTIME |
 {: .grid }
 
-
+The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
+The certificate signing date is passed via the [DeathCertification] profile.
 ### Conformance
 
 {% include markdown-link-references.md %}

@@ -1,8 +1,8 @@
-Profile: Parameters2022
+Profile: ParametersForEmergingIssues
 Parent: Parameters
-Id: vrdr-parameters-2022
-Title: "Parameters for 2022 Submission"
-Description: "NCHS-required Parameter Slots for 2022 Submissions"
+Id: vrdr-parameters-for-emerging-issues
+Title: "Parameters for Emerging Issues"
+Description: "NCHS-required Parameter Slots for Emerging Issues"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
