@@ -1,6 +1,6 @@
 ValueSet: MannerOfDeathVS
 Id: vrdr-manner-of-death
-Title: "Manner of Death"
+Title: "Manner of Death VS"
 Description: """A set of code used to indicate a manner of death classification.
 
 **Inter-jurisdictional Exchange (IJE) concept mapping**

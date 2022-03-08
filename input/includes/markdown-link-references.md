@@ -69,7 +69,7 @@
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
-[Parameters2022]: StructureDefinition-vrdr-parameters-2022.html
+[ParametersForEmergingIssues]: StructureDefinition-vrdr-parameters-for-emerging-issues.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDatePartAbsentReason]: StructureDefinition-vrdr-partial-date-part-absent-reason.html
 [SurgeryDate]: StructureDefinition-vrdr-surgery-date.html
@@ -81,6 +81,7 @@
 [EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html
 [EditBypass0124VS]: ValueSet-vrdr-edit-bypass-0124-vs.html
 [StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html
+[JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
 [USStatesTerritoriesVS]: ValueSet-vrdr-usstates-territories-vs.html
 [RelatedPersonRelationshipVS]: ValueSet-vrdr-RelatedPersonRelationshipType.html
 [AdministrativeGenderVS]: ValueSet-vrdr-administrative-gender-vs.html
