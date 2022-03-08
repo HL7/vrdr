@@ -8,7 +8,7 @@ The Decedent Father profile contains the following information:
 | Father's Surname (Last)   | name.family  | string  | FLNAME  |
 | Father's First name   | name.given  | string  | DDADF  *** not supported by library *** |
 | Father's middle name   | name.given  | string  | DDADMID *** not supported by library *** |
-| Father's suffix   | nameName.suffix  | string  | FATHERSUFFIX  *** not supported by library *** |
+| Father's suffix   | name.suffix  | string  | FATHERSUFFIX  *** not supported by library *** |
 {: .grid }
 
 

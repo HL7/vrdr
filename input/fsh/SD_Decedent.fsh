@@ -50,6 +50,7 @@ Description: "Decedent (USCorePatient)"
 * maritalStatus 0..1
 * maritalStatus only CodeableConcept
 * maritalStatus from MaritalStatusVS (required)  // MARITAL
+* maritalStatus.text ^short = "Marital Description"
 * maritalStatus.extension contains
     BypassEditFlag named bypassEditFlag 0..1 // MARITAL_BYPASS
 * maritalStatus.extension[bypassEditFlag].valueCodeableConcept from EditBypass0124VS (required)

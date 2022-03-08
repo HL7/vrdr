@@ -13,4 +13,5 @@ Description: "Death Location (USCoreLocation)"
 * address 1..1
 * insert CityCode
 * insert CountyCode
+* insert AddressComponents
 * position 0..1 MS  // LONG_D and LAT_D

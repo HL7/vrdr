@@ -13,12 +13,14 @@ The Decedent profile contains basic information about the decedent, including da
 | Date of Birth    | birthDate  | dateTime   | DOB_YR, DOB_MO, DOB_DY  |
 | Informant    | contact  |   | none  |
 | Informant Relationship   | contact.type.text   | string (30 characters)  | INFORMRELATE  |
-| Legal Name - first name | name.given  | String | GNAME |
-| Legal Name - middle initial | name.given        | String | MNAME (1st letter should be mapped)|
-| Legal Name - middle name | name.given        | String | DMIDDLE (full string should be mapped)|
-| Legal Name - last name | name.surname        | String | LNAME |
-| Legal Name - suffix | name.suffix        | String | SUFF |
-| Marital Status   | maritalStatus  | [MaritalStatusVS] | MARITAL   |
+| Legal Name - first name | name.given , name.type=use = usual | String | GNAME |
+| Legal Name - middle initial | name.given, name.type=use = usual        | String | MNAME (1st letter should be mapped)|
+| Legal Name - middle name | name.given, name.type=use = usual        | String | DMIDDLE (full string should be mapped)|
+| Legal Name - last name | name.surname, name.type=use = usual        | String | LNAME |
+| Legal Name - suffix | name.suffix, name.type=use = usual        | String | SUFF |
+| Maiden Name | name.text , name.type=maiden | STRING | DMAIDEN |
+| Marital Status  - coded  | maritalStatus  | [MaritalStatusVS] | MARITAL   |
+| Marital Status - description  | maritalStatus.text  | string | MARITAL_DESCRIP   |
 | Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] |  SPOUSELV  |
 | Marital Status (Bypass Edit Flag)  | maritalStatus.extension[ BypassEditFlag]  | [EditBypass01234VS] | MARITAL_BYPASS   |
 | NVSS Ethnicity | extension[ NVSSEthnicity] | [NVSSEthnicity] [] | DETHNIC1-5|
