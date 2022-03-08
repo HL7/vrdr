@@ -1,4 +1,5 @@
 ### Usage
+
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
 | White   | extension[ White].valueBoolean  | boolean | RACE1  |
@@ -26,6 +27,7 @@
 | Second Other Race Literal   | extension[ Other Race Literal].valueString[1]  | String | RACE22 |
 | Race Missing Value Reason   | extension[ MissingValueReason].valueCoding  | [RaceMissingValueReasonVS] | RACE_MVR |
 {: .grid }
+
 ### Conformance
 
 {% include markdown-link-references.md %}
