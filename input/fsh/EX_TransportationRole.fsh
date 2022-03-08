@@ -10,7 +10,7 @@ Description: "DecedentTransportationRole-Example1"
 Instance: DecedentTransportationRole-Example2
 InstanceOf: DecedentTransportationRole
 Usage: #example
-Description: "DecedentTransportationRole-Example2.   When value = "OTH", text field should contain actual role"
+Description: "DecedentTransportationRole-Example2.   When value = OTH, text field should contain actual role"
 * insert AddMetaProfile(DecedentTransportationRole)
 * subject = Reference(Decedent-Example1)
 * status = #final
