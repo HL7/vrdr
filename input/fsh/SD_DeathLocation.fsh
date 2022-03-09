@@ -12,11 +12,13 @@ Description: "Death Location (USCoreLocation)"
 * type from $place-of-death (required)
 * type ^short = "Place of Death type"
 * address 1..1
+* address ^short = "Place of Death address"
 * address.city ^short = "Address city"
 * address.state ^short = "Address state"
 * address.district ^short = "Address county"
 * address.country ^short = "Address country"
 * address.postalCode ^short = "Address zip"
+* address.line ^short = "Address text"
 * address.state from JurisdictionVS (required)   // Reconsider.  Otherwise, get rid of extension
 * address.country from ResidenceCountryVS (required)
 * insert CityCode
