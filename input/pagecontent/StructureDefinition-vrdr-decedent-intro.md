@@ -5,7 +5,7 @@ The Decedent profile contains basic information about the decedent, including da
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | STring | DBPLACECITY  |
+| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | String | DBPLACECITY  |
 | Birthplace City - code   | extension[patient-birthPlace].value[x].city.extension[cityCode]  | integer | DBPLACECITYCODE  |
 | Birthplace Country   | extension[patient-birthPlace].value[x].country  | [BirthplaceCountryVS] | BPLACE_CNT  |
 | Birth Place State   | extension[patient-birthPlace].value[x].state  | [JurisdictionsProvincesVS] | BPLACE_ST, STATEBTH (expansion of coded value)  |

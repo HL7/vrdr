@@ -13,16 +13,19 @@ Description: "Decedent (USCorePatient)"
     NVSSSexAtDeath named NVSS-SexAtDeath 0..1 MS and
     SpouseAlive named Spouse-Alive 0..1 and
     $patient-birthPlace named Patient-BirthPlace 0..1
+* extension[NVSS-Race] ^short = "NVSS Race"
+* extension[NVSS-Ethnicity] ^short = "NVSS Ethnicity"
+* extension[NVSS-SexAtDeath] ^short = "NVSS Sex at Death"
+* extension[Spouse-Alive] ^short = "Spouse Alive?"
+* extension[Patient-BirthPlace] ^short = "Decedent birthplace"
 * extension[Patient-BirthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
 * extension[Patient-BirthPlace].valueAddress.state from JurisdictionsProvincesVS (required) // BPLACE_ST
 * extension[Patient-BirthPlace].valueAddress.city.extension contains
     CityCode named cityCode 0..1
 * extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^label = "City Code"
 * extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^short = "City Code"
-* extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^definition = "Numeric code from in accordance with the NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014 (https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf) and https://ftp.cdc.gov/pub/health_Statistics/nchs/Manuals/Mortality/PLACE_CODES.txt."
 * identifier 1..* MS
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
-
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #pattern
@@ -33,13 +36,15 @@ Description: "Decedent (USCorePatient)"
 * identifier[ssn] ^short = "Social Security Number"
 * identifier[ssn].system = $ssn
 * identifier[ssn].type = $v2-0203#SB
-* name 1..* MS
+* name 1..*
+* birthDate ^short = "Date of Birth"
 * birthDate 0..1
 * birthDate.extension contains
     PartialDate named partialDate 0..1
 * birthDate.extension[partialDate] ^short = "partialDate"
 * birthDate.extension[partialDate] ^definition = "Alternative component representation of date."
 * address 0..*
+* address ^short = "Decedent's Residence"
 * address.extension contains
     WithinCityLimitsIndicator named withinCityLimitsIndicator 0..1
 * insert CityCode
