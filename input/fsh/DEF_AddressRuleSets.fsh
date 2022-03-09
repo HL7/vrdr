@@ -25,6 +25,7 @@ RuleSet: AddressComponents
    UnitOrAptNumber named unitnumber 0..1 // Apt 13
 
 RuleSet: addressextension(length)
+* . ^short = "label"
 * ^context.type = #element
 * ^context.expression = "Address"
 * value[x] 1..1
