@@ -11,7 +11,8 @@ Description: "InjuryIncident-Example1"
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work"
 * component[workInjuryIndicator].valueCodeableConcept = $v2-0136#N "No"
 * component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility"
-* component[placeOfInjury].valueCodeableConcept = PlaceOfInjuryCS#0 "Home"
+//* component[placeOfInjury].valueCodeableConcept = PlaceOfInjuryCS#0 "Home"
+* component[placeOfInjury].valueCodeableConcept.text = "Home"
 
 Instance: InjuryLocation-Example1
 InstanceOf: InjuryLocation
