@@ -19,6 +19,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 //* performer only Reference(DeathPronouncementPerformer)
 // Should be an invariant so that either value[x] or the partial date absent extension are provided.
 * value[x] 0..1
+* value[x] ^short = "Date/Time of Death"
 * value[x] only dateTime
 * valueDateTime.extension contains
     PartialDateTime named partialDateTime 0..1 MS
@@ -30,3 +31,4 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * component.code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
 * component.value[x] 1..1
 * component.value[x] only dateTime
+* component.value[x] ^short = "Date/Time Pronounced Dead"

@@ -13,6 +13,7 @@ Description: "Injury Incident (Observation)"
 * subject 1..1
 * subject only Reference(Decedent)
 * effective[x] 0..1
+* effective[x] ^short = "Date/Time of Injury"
 * effective[x] only dateTime
 * effective[x].extension contains
     PartialDateTime named partialDateTime 0..1 MS
@@ -34,6 +35,7 @@ Description: "Injury Incident (Observation)"
 * component[workInjuryIndicator].code 1..1
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work" (exactly)
 * component[workInjuryIndicator].value[x] 1..1
+* component[workInjuryIndicator].value[x] ^short = "Injury at Work?"
 * component[workInjuryIndicator].value[x] only CodeableConcept
 * component[workInjuryIndicator].value[x] from $Yes-No-Unknown-NotApplicable (required)
 * component[workInjuryIndicator].value[x] ^binding.description = "Yes No Unknown NotApplicable"
