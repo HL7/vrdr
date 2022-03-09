@@ -5,11 +5,11 @@ The Place of Injury profile includes:
 | ---------------| ------------------------ | ------------- | ------------------- |
 | Injury Location (latitude) | position.latitude | float | LAT_I |
 | Injury Location (longitude) | position.longitude | float | LONG_I |
-| State of Injury  | address.state  | string  | STINJURY_I **not supported by IG** |
-| County of Injury  | address.district  | string  | CITYTEXT_I **not supported by library or IG** |
-| County of Injury  | <none> | 3 Digit County code (reference) | COUNTYCODE_I **not supported by library or IG**|
-| City of Injury  | address.city  | string | CITYTEXT_I **not supported by library**|
-| City of Injury  | <none>  | 5 Digit Place code (reference) | CITYCODE_I **not supported by library or IG** |
+| State of Injury  | address.state  | string  | STINJURY, STATECODE_I  |
+| County of Injury  | address.district  | string  | COUNTYTEXT_I  |
+| County of Injury  | <none> | 3 Digit County code (reference) | COUNTYCODE_I |
+| City of Injury  | address.city  | string | CITYTEXT_I |
+| City of Injury  | <none>  | 5 Digit Place code (reference) | CITYCODE_I  |
 {: .grid }
 
 

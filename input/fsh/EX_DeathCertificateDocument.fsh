@@ -59,6 +59,7 @@ Description: "DeathCertificate-Example1"
 *  attester.party = Reference(Certifier-Example1)
 *  event.detail = Reference(DeathCertification-Example1)
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
+*  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
 *  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
 *  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
 *  section[DecedentDemographics].entry[Mother] = Reference(DecedentMother-Example1)

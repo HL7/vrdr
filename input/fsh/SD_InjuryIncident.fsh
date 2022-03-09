@@ -14,8 +14,11 @@ Description: "Injury Incident (Observation)"
 * subject only Reference(Decedent)
 * effective[x] 0..1
 * effective[x] only dateTime
+* effective[x].extension contains
+    PartialDateTime named partialDateTime 0..1 MS
 * value[x] 1..1
-* value[x] only dateTime or string
+* value[x] only CodeableConcept
+* value[x].text ^short = "How Injured - Literal?"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -25,8 +28,9 @@ Description: "Injury Incident (Observation)"
 * component[placeOfInjury].code 1..1
 * component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility" (exactly)
 * component[placeOfInjury].value[x] 1..1
-* component[placeOfInjury].value[x] only CodeableConcept
-* component[placeOfInjury].value[x] from PlaceOfInjuryVS (required)
+* component[placeOfInjury].value[x] ^short = "Place of Injury - Literal"
+// * component[placeOfInjury].value[x] only CodeableConcept
+// * component[placeOfInjury].value[x] from PlaceOfInjuryVS (required)
 * component[workInjuryIndicator].code 1..1
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work" (exactly)
 * component[workInjuryIndicator].value[x] 1..1

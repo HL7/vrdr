@@ -7,7 +7,7 @@ Description: "InjuryIncident-Example1"
 * status = #final
 * subject = Reference(Decedent-Example1)
 * effectiveDateTime = "2019-11-02T13:00:00-05:00"
-* valueString = "drug toxicity"
+* value[x].text = "drug toxicity"
 * component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work"
 * component[workInjuryIndicator].valueCodeableConcept = $v2-0136#N "No"
 * component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility"
