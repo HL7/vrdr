@@ -22,7 +22,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentEducationLevel-Example1)
 * insert addentry(Observation, DecedentMilitaryService-Example1)
 * insert addentry(Observation, DecedentUsualWork-Example1)
-* insert addentry(Parameter, ParametersForEmergingIssues-Example1)
+* insert addentry(Parameters, ParametersForEmergingIssues-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, DeathDate-Example1)
