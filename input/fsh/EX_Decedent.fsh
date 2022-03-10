@@ -1,7 +1,7 @@
 Instance: Decedent-Example2
 InstanceOf: Decedent
 Usage: #example
-Description: "Decedent-Example1"
+Description: "Decedent-Example2 - with birth jurisdiction"
 * insert AddMetaProfile(Decedent)
 * extension[NVSS-Race].extension[White].valueBoolean = true
 * extension[NVSS-Race].extension[BlackOrAfricanAmerican].valueBoolean = true
