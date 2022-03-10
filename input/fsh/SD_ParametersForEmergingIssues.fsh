@@ -1,6 +1,6 @@
 Profile: ParametersForEmergingIssues
 Parent: Parameters
-Id: vrdr-parameters-for-emerging-issues
+Id: vrdr-params-for-emerging-issues
 Title: "Parameters for Emerging Issues"
 Description: "NCHS-required Parameter Slots for Emerging Issues"
 * parameter ^slicing.discriminator.type = #value
