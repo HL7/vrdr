@@ -5,10 +5,11 @@ The Decedent profile contains basic information about the decedent, including da
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | String | DBPLACECITY  |
+| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | St   ring | DBPLACECITY  |
 | Birthplace City - code   | extension[patient-birthPlace].value[x].city.extension[cityCode]  | integer | DBPLACECITYCODE  |
 | Birthplace Country   | extension[patient-birthPlace].value[x].country  | [BirthplaceCountryVS] | BPLACE_CNT  |
-| Birth Place State   | extension[patient-birthPlace].value[x].state  | [JurisdictionsProvincesVS] | BPLACE_ST, STATEBTH (expansion of coded value)  |
+| Birth Place State   | extension[patient-birthPlace].value[x].state  | [StatesTerritoriesProvincesVS] | BPLACE_ST, STATEBTH (expansion of coded value)  |
+| Birth Place Jurisdiction   | extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present | [JurisdictionsProvincesVS] | BPLACE_ST  |
 | Sex at Death   | extension[NVSS-SexAtDeath]  | [AdministrativeGenderVS] | SEX  |
 | Date of Birth    | birthDate  | dateTime   | DOB_YR, DOB_MO, DOB_DY  |
 | Informant    | contact  |   | none  |
