@@ -42,6 +42,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Organization, FuneralHome-Example1)
 * insert addentry(Observation, DecedentDispositionMethod-Example1)
 * insert addentry(Observation, AutopsyPerformedIndicator-Example1)
+* insert addentry(Practitioner, Mortician-Example1)
 
 Instance: DeathCertificate-Example1
 InstanceOf: DeathCertificate
