@@ -97,3 +97,4 @@ Description: "DeathCertificate-Example1"
 *  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
 *  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
 *  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)
+*  section[DecedentDisposition].entry[Mortician] = Reference(Mortician-Example1)

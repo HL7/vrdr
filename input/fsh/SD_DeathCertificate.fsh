@@ -101,6 +101,7 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DecedentDisposition, DispositionLocation,  0, 1, DispositionLocation, DispositionLocation, DispositionLocation)
 * insert BundleSectionSlice(DecedentDisposition, FuneralHome,  0, 1, FuneralHome, FuneralHome, FuneralHome)
 * insert BundleSectionSlice(DecedentDisposition, DispositionMethod,  0, 1, DispositionMethod, DispositionMethod, DecedentDispositionMethod)
+* insert BundleSectionSlice(DecedentDisposition, Mortician,  0, 1, Mortician, Mortician, USCorePractitioner)
 
 // // * section[DecedentDisposition].code = DocumentSectionCS#Disposition "Decedent Disposition"
 // // * section[DecedentDisposition].entry ^slicing.discriminator.type = #profile

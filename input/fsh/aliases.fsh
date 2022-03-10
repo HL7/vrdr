@@ -26,6 +26,7 @@ Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.
 Alias: $DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 
 // PHINVADS ValueSets --> most should be eliminated
 // Alias: $PHVSDivisionVitalStatisticsCounty = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212
