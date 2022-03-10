@@ -31,7 +31,7 @@ Description: "Injury Incident (Observation)"
 * component[placeOfInjury].code 1..1
 * component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility" (exactly)
 * component[placeOfInjury].value[x] 1..1
-* component[placeOfInjury].value[x].text ^short = "Place of Injury - Literal"
+* component[placeOfInjury].valueCodeableConcept.text ^short = "Place of Injury - Literal"
 // * component[placeOfInjury].value[x] only CodeableConcept
 // * component[placeOfInjury].value[x] from PlaceOfInjuryVS (required)
 * component[workInjuryIndicator].code 1..1

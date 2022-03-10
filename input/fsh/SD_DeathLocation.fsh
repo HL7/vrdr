@@ -4,8 +4,6 @@ Id: vrdr-death-location
 Title: "Death Location"
 Description: "Death Location (USCoreLocation)"
 * insert RequireMetaProfile(DeathLocation)
-* extension contains
-    LocationJurisdictionId named nationalReportingJurisdictionId 1..1  // jurisdiction_id
 // * name 1..1
 // * description 1..1
 * type 1..1
@@ -19,7 +17,11 @@ Description: "Death Location (USCoreLocation)"
 * address.country ^short = "Address country"
 * address.postalCode ^short = "Address zip"
 * address.line ^short = "Address text"
-* address.state from JurisdictionVS (required)   // Reconsider.  Otherwise, get rid of extension
+* address.state from StatesTerritoriesAndProvincesVS  (required)
+* address.state 1..1
+* address.state ^short = "State/Jurisdiction of death.  Use value in Jurisdiction if present."
+* address.state.extension contains
+    LocationJurisdictionId named nationalReportingJurisdictionId 0..1  // jurisdiction_id
 * address.country from ResidenceCountryVS (required)
 * insert CityCode
 * insert CountyCode
