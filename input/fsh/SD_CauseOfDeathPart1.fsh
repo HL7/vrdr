@@ -12,7 +12,7 @@ Description: "Cause of death prior to submission of the completed death report."
 * valueCodeableConcept.text ^maxLength = 120
 * subject 1..1
 * subject only Reference(Decedent)
-* performer 1..1
+* performer ^short = "Certifier"
 * performer only Reference(Certifier)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"

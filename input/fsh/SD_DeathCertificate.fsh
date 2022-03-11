@@ -45,7 +45,6 @@ Description: "The body of the death certificate document (Composition)."
 * attester.mode only code
 * attester.mode = #legal (exactly)
 * attester.time 1..1
-* attester.party 1..1
 * attester.party only Reference(Certifier)
 * event 1..1
 * event only BackboneElement

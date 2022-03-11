@@ -20,5 +20,4 @@ Description: "The prodedure where the certification of death was performed by th
 * performer 1..1
 * performer.function 1..1
 * performer.function from CertifierTypesVS (required)
-* performer.actor 1..1
 * performer.actor only Reference(Certifier)

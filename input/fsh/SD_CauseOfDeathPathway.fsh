@@ -12,7 +12,6 @@ Description: """VRDR Cause of Death Pathway is an ordered list of cause of death
 * mode 1..1
 * mode only code
 * mode = #snapshot (exactly)
-* source 1..1
 * source only Reference(Certifier)
 * orderedBy 1..1
 * orderedBy only CodeableConcept
