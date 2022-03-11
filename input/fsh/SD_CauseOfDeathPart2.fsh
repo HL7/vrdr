@@ -1,9 +1,9 @@
-Profile: ConditionContributingToDeath
+Profile: CauseOfDeathPart2
 Parent: Observation
-Id: vrdr-condition-contributing-to-death
-Title: "Condition Contributing To Death"
-Description: "Cause of Death Part2: Identifies factors contributing to the cause of death as asserted by the death certifier (Observation)"
-* insert RequireMetaProfile(ConditionContributingToDeath)
+Id: vrdr-cause-of-death-part2
+Title: "Cause of Death Part 2"
+Description: "Identifies factors contributing to the cause of death as asserted by the death certifier (Observation)"
+* insert RequireMetaProfile(CauseOfDeathPart2)
 * id 0..1
 * code 1..1
 * code only CodeableConcept

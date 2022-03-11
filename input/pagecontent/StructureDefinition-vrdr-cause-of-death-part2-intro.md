@@ -1,6 +1,6 @@
 ### Usage
 
-Cndition contributing to death profile captures the following values:
+Cause of death part 2 profile captures the following values:
 
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
