@@ -5,8 +5,8 @@ The Decedent profile contains basic information about the decedent, including da
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | St   ring | DBPLACECITY  |
-| Birthplace City - code   | extension[patient-birthPlace].value[x].city.extension[cityCode]  | integer | DBPLACECITYCODE  |
+| Birthplace City - literal   | extension[patient-birthPlace].value[x].city  | string | DBPLACECITY  |
+| Birthplace City - code   | extension[patient-birthPlace].value[x].city.extension[ cityCode]  | integer | DBPLACECITYCODE  |
 | Birthplace Country   | extension[patient-birthPlace].value[x].country  | [BirthplaceCountryVS] | BPLACE_CNT  |
 | Birth Place State   | extension[patient-birthPlace].value[x].state  | [StatesTerritoriesProvincesVS] | BPLACE_ST, STATEBTH (expansion of coded value)  |
 | Birth Place Jurisdiction   | extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present | [JurisdictionsProvincesVS] | BPLACE_ST  |
@@ -14,12 +14,12 @@ The Decedent profile contains basic information about the decedent, including da
 | Date of Birth    | birthDate  | dateTime   | DOB_YR, DOB_MO, DOB_DY  |
 | Informant    | contact  |   | none  |
 | Informant Relationship   | contact.type.text   | string (30 characters)  | INFORMRELATE  |
-| Legal Name - first name | name.given , name.type=use = usual | String | GNAME |
-| Legal Name - middle initial | name.given, name.type=use = usual        | String | MNAME (1st letter should be mapped)|
-| Legal Name - middle name | name.given, name.type=use = usual        | String | DMIDDLE (full string should be mapped)|
-| Legal Name - last name | name.surname, name.type=use = usual        | String | LNAME |
-| Legal Name - suffix | name.suffix, name.type=use = usual        | String | SUFF |
-| Maiden Name | name.text , name.type=maiden | STRING | DMAIDEN |
+| Legal Name - first name | name.given , name.type=use = usual | string | GNAME |
+| Legal Name - middle initial | name.given, name.type=use = usual        | string | MNAME (1st letter should be mapped)|
+| Legal Name - middle name | name.given, name.type=use = usual        | string | DMIDDLE (full string should be mapped)|
+| Legal Name - last name | name.surname, name.type=use = usual        | string | LNAME |
+| Legal Name - suffix | name.suffix, name.type=use = usual        | string | SUFF |
+| Maiden Name | name.text , name.type=maiden | string | DMAIDEN |
 | Marital Status  - coded  | maritalStatus  | [MaritalStatusVS] | MARITAL   |
 | Marital Status - description  | maritalStatus.text  | string | MARITAL_DESCRIP   |
 | Spouse is Alive?   | extension[SpounseAlive]  | [YesNoUnknownNotApplicableVS] |  SPOUSELV  |
@@ -41,7 +41,7 @@ The Decedent profile contains basic information about the decedent, including da
 | Residence - Country  | address.country  | [ResidenceCountryVS] | COUNTRYC, COUNTRYTEXT_R  |
 | Residence - Zipcode  | address.postalCode | string | ZIP9_R  |
 | Residence - Within City Limits  | address.city.extension[ withinCityLimits]  | [YesNoUnknownVS] | LIMITS  |
-| Social Security Number    | identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn  and type.coding.code="SB"   | String  | SSN  |
+| Social Security Number    | identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn  and type.coding.code="SB"   | string  | SSN  |
 {: .grid }
 
 
