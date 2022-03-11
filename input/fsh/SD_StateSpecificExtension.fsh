@@ -7,7 +7,6 @@ Description: "An identifier associated by the submitting jurisdiction with a spe
 * value[x] 1..1
 * value[x] only string
 * valueString ^maxLength = 12
-* valueString ^minLength = 12
 
 Extension: StateSpecificField
 Id: StateSpecificField
