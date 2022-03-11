@@ -4,6 +4,8 @@
 * [FHIR-33739](https://jira.hl7.org/browse/FHIR-33739): **NEW RESOLUTION** Eliminate missing data reasons.  No one cares why.
 * [FHIR-36107](https://jira.hl7.org/browse/FHIR-36107): why is effective date required?
 * [FHIR-35995](https://jira.hl7.org/browse/FHIR-35995)    : Add optional modifiers for Date of Death/Injury (estimated, actual, etc) -- this is prototyped, but can be removed.
+* [not-created}] :   Made performer (certifier) optional where it is referenced (Causes of Death, Cause of Death Pathway, Death Certificate, Death Certification, and Manner of Death).
+*
 ### Not Yet
 
 * [FHIR-33113](https://jira.hl7.org/browse/FHIR-33113) :  Remove UML Documents and add more per-profile documentation
@@ -107,7 +109,7 @@
 * [FHIR-36002](https://jira.hl7.org/browse/FHIR-36002) :    Update IG Version Number
 * not ticketed :  Simplified handling for AUXNO by adding an extension to DeathCertificateDocument and getting rid of InterestedParty and DeathCertificateReference.. See [DeathCertificateDocument].
 * [FHIR-36069](https://jira.hl7.org/browse/FHIR-36069) :  Units of Age missing
-* [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death)
+* [FHIR-36077](https://jira.hl7.org/browse/FHIR-36077)CauseOfDeathCondition and ConditionContributingToDeath should be Observations, not Conditions (see [LloydM on zulip](https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Cause.20Of.20Death)) -- see [LOINC "cause of death"](https://loinc.org/search/?t=1&s=cause+of+death) Renamed CauseofDeathPart1 and Part2
     * Cause of Death (Part 1):  [LOINC 69453-9 ](https://loinc.org/69453-9/)
     * Other significant causes or conditions of death (Part 2) [LOINC 69441-4](https://loinc.org/69441-4/)
 * [FHIR-36088](https://jira.hl7.org/browse/FHIR-36088): Gender/BirthSex/SEX: (related to [FHIR-33692](https://jira.hl7.org/browse/FHIR-33692))

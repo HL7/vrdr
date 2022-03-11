@@ -1,5 +1,5 @@
 ValueSet: MannerOfDeathVS
-Id: vrdr-manner-of-death
+Id: vrdr-manner-of-death-vs
 Title: "Manner of Death VS"
 Description: "A set of code used to indicate a classification of the manner of death."
 * insert SNOMEDCopyright
