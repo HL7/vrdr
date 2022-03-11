@@ -9,7 +9,7 @@ Description: "Disposition Location (USCoreLocation)"
 // * type 0..1
 //* type.coding from $v3-ServiceDeliveryLocationRoleType (extensible)
 * address 1..1
-* address.state from StatesTerritoriesProvincesVS (required)
+* address.state from StatesTerritoriesAndProvincesVS (required)
 // * physicalType 1..1
 // * physicalType.coding from LocationType (required)
 * insert CityCode
