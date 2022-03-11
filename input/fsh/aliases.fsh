@@ -1,4 +1,11 @@
 // External CS and VS
+Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
+Alias: $admingender = http://hl7.org/fhir/administrative-gender
+Alias: $maritalStatus = http://hl7.org/fhir/ValueSet/marital-status
+Alias: $roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $contactRole = http://terminology.hl7.org/CodeSystem/v2-0131
+Alias: $degreeLicenseCertificateV2 = http://terminology.hl7.org/CodeSystem/v2-0360
+Alias: $HL7_EducationLevelCS = 	http://terminology.hl7.org/CodeSystem/v3-EducationLevel
 Alias: $v2-0136 = http://terminology.hl7.org/CodeSystem/v2-0136
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-EducationLevel = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
@@ -10,11 +17,8 @@ Alias: $list-order = http://terminology.hl7.org/CodeSystem/list-order
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
-Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $v3-ServiceDeliveryLocationRoleType = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
-Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
-Alias: $admingender = http://hl7.org/fhir/administrative-gender
 Alias: $statesVS = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
 Alias: $statesCS = https://www.usps.com/
 Alias: $UCUM = http://unitsofmeasure.org
