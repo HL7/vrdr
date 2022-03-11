@@ -1,11 +1,13 @@
 Extension: AuxiliaryStateIdentifier
 Id: AuxiliaryStateIdentifier
 Title: "Auxiliary State Identifier"
-Description: "An identifier associated by the submitting jurisdiction with a specific death certificate number"
+Description: "An identifier associated by the submitting jurisdiction with a specific death certificate number.  Twelve digit withi leading zeroes"
 * ^context.type = #element
 * ^context.expression = "Identifier"
 * value[x] 1..1
 * value[x] only string
+* valueString ^maxLength = 12
+* valueString ^minLength = 12
 
 Extension: StateSpecificField
 Id: StateSpecificField

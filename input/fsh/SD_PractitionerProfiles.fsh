@@ -6,9 +6,14 @@ Id: vrdr-certifier
 Title: "Certifier"
 Description: "Certifier (USCorePractitioner)"
 * insert RequireMetaProfile(Certifier)
-* id 0..1
 * name 1..1
 * address 1..1
+* insert CityCode
+* insert CountyCode
+* insert AddressComponents
+* address.country from ResidenceCountryVS (required)
+* address.state from StatesTerritoriesAndProvincesVS (required)
+
 // * qualification 1..1
 // * qualification only BackboneElement
 // * qualification ^short = "qualification"
