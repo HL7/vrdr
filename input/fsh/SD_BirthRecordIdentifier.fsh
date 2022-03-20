@@ -25,8 +25,8 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * component[birthJurisdiction].code 1..1
 * component[birthJurisdiction].code = $loinc#21842-0 "Birthplace" (exactly)
 * component[birthJurisdiction].value[x] 1..1
-* component[birthJurisdiction].value[x] only CodeableConcept
-* component[birthJurisdiction].value[x] from JurisdictionVS (required)
+* component[birthJurisdiction].value[x] only string
+* component[birthJurisdiction].valueString from JurisdictionVS (required)
 * component[birthYear].code = $loinc#80904-6 "Birth year" (exactly)
 * component[birthYear].value[x] 1..1
 * component[birthYear].value[x] only dateTime

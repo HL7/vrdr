@@ -19,6 +19,6 @@ Description: "DeathLocation-Example2 - State != Jurisdiction"
 * description = "nursing home"
 * address.city = "Queens"
 * address.state = "NY"
-* address.state.extension[nationalReportingJurisdictionId].valueCode = #YC
+* address.state.extension[nationalReportingJurisdictionId].valueString = "YC"
 * address.country = "US"
 * type = $sct#450381000124100

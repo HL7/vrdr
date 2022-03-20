@@ -30,7 +30,7 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * extension[NVSS-SexAtDeath].valueCodeableConcept = $admingender#unknown "Unknown"
 * extension[$patient-birthPlace].valueAddress.city = "Brooklyn"
 * extension[$patient-birthPlace].valueAddress.state = "NY"
-* extension[$patient-birthPlace].valueAddress.state.extension[nationalReportingJurisdictionId].valueCode = JurisdictionsCS#YC
+* extension[$patient-birthPlace].valueAddress.state.extension[nationalReportingJurisdictionId].valueString = "YC"
 * extension[$patient-birthPlace].valueAddress.country = "US"
 * identifier.type = $v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
