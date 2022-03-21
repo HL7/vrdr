@@ -6,7 +6,7 @@ The Injury Incident profile includes:
 | How Injured?  | value.text  | string | HOWINJ  |
 | Date of Injury | effective | dateTime | DOI_YR, DOI_MO, DOI_DY, TOI_HR, TOI_UNIT |
 | Place of Injury - literal  | component[placeOfInjury].value.text | string | POILTRL |
-| Injury at Work  | component[InjuryAtWork].value  | [YesNoUnknownVS] | WORKINJ  |
+| Injury at Work  | component[InjuryAtWork].value  | [YesNoUnknownNotApplicableVS] | WORKINJ  |
 {: .grid }
 
 

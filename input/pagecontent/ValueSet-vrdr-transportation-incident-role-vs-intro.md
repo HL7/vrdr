@@ -1,12 +1,12 @@
 ### Usage
 
-| IJE code | IJE Description | FHIR code  |FHIR description|
+| VRDR code | VRDR Description | IJE code  |IJE description|
 | ----------------- | ------- | ---------| --------------- |
-|DR |Driver/Operator| 236320001|Vehicle driver|
-|PA |Driver/Operator| 257500003|Vehicle passenger|
-|PE |Driver/Operator| 257518000|Pedestrian|
-| <no code>  |               | UNK  | Unkown     |
-| <literal text>   | Other  | Other |Other (specify in .text field)|
+| 236320001|Vehicle driver| DR |Driver/Operator|
+| 257500003|Vehicle passenger|PA |Driver/Operator|
+| 257518000|Pedestrian| PE |Driver/Operator|
+|  UNK  | Unkown     |<no code>  |               |
+|  Other |Other (specify in .text field)| <literal text>   | Other  |
 {: .grid }
 
 If decedent was not injured in a transportation incident, the DecedentTransportationRole should not be included in the Death Certificate.   There is no code for Not Applicable.
