@@ -6,7 +6,7 @@ It is relevant only in the case where the birth took place in a recognized juris
 
 | **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
 | ---------------| ------------------------ | ------------- | ------------------- |
-| Birth Certificate Number   | value        | String | BCNO |
+| Birth Certificate Number   | value        | String (6) | BCNO |
 | Birth Jurisdiction   | component[birthJurisdiction].value  | [JurisdictionVS] | BSTATE  |
 | Birth Year  | component[birthYear].value  | dateTime (YYYY component) | IDOB_YR  |
 {: .grid }

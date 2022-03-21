@@ -45,9 +45,9 @@ The content is broken down into the following sections:
 * Death Certification
     * [Certifier]
     * [DeathCertification]
-    * [CauseOfDeathCondition]
+    * [CauseOfDeathPart1]
     * [CauseOfDeathPathway]
-    * [ConditionContributingToDeath]
+    * [CauseOfDeathPart2]
     * [MannerOfDeath]
 * Decedent Disposition
     * [DecedentDispositionMethod]
