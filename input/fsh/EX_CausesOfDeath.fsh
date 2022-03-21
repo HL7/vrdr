@@ -55,7 +55,7 @@ Description: "Certifier-Example1"
 * address.city = "Bird in Hand"
 * address.state = "PA"
 * address.postalCode = "17505"
-* address.country = "United States"
+* address.country = "US"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "414444AB"
 * qualification.code = $sct#434641000124105
