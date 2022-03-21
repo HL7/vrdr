@@ -13,6 +13,7 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * subject only Reference(Decedent)
 * value[x] 0..1 MS
 * value[x] only string   // we considered shifting to integer and kept it as string.
+* valueString ^maxLength = 6
 * dataAbsentReason 0..1 MS
 * dataAbsentReason from DataAbsentReason (extensible)
 * component ..*
