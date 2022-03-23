@@ -1,29 +1,25 @@
 ### Usage
-Note: STNUM_D, PREDIR_D, POSTDIR_D, STDESIG_D, STNAM_D are marked as '?'
 
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Long String address for place of death  | address.line  | string | ADDRESS_D  |
-| Place of death - address(predirectional) | address.extension[predir]  | string | PREDIR_D  |
-| Place of death - address(street number) | address.extension[stnum]  | string | STNUM_D  |
-| Place of death - address(street name) | address.extension[stname]  | string | STNAM_D |
-| Place of death - address(street designator) | address.extension[stdesig]  | string | STDESIG_D  |
-| Place of death - address(postdirectional) | address.extension[postdir]  | string | POSTDIR_RD |
-| Place of death code  | type  | [PlaceOfDeathVS] | DPLACE  |
-| Place of death. Latitude | position.latitude | float | LAT_D |
-| Place of death. Longitude | position.longitude | float | LONG_D |
-| Place of death. City or Town name  | address.city  | string | CITYTEXT_D  |
-| Place of death. City FIPS code | address.city.extension[ cityCode].value  | 5 Digit Place code (reference) | CITYCODE_D  |
-| Place of death. County of Death - code  | address.district.extension[ districtCode].value  | 3 Digit County code (reference) | COD  |
-| Place of death. County of Death - literal | address.district  | string | COUNTYTEXT_D  |
-| State, U.S. Territory or Canadian Province of Death - code | address.state or address.state.extension[nationalReportingJurisdictionId ]| [StatesTerritoriesProvincesVS] | DSTATE, STATETEXT_D (expansion of coded value). For US Death certificates should be a US State or Territory. |
-| Death Jurisdiction | address.state or address.state.extension[ nationalJurisdictionId].value  if present      | [JurisdictionVS] | jurisdictionID |
-| Country of Death - Literal  | address.country  | string | DTHCOUNTRY. Not used.  For US Death certificates should be US  |
-| Country of Death - Code | address.country  | [ResidenceCountryVS] | DTHCOUNTRYCD. Not used.  For US Death certificates should be US |
-| Place of death. Postal Code  | address.postalCode | string | ZIP9_D  |
+
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| address.state or address.state.extension[nationalReportingJurisdictionId ] | [StatesTerritoriesProvincesVS] or [JurisdictionVS] |  | 
+| 31 | Place of Death | DPLACE| type | codeable | [PlaceOfDeathVS] | 
+| 32 | County of Death Occurrence | COD| address.district.extension[countyCode] | integer |  | 
+| 130 | Long String address for place of death | ADDRESS_D| address.line | string  |  | 
+| 131 | Place of death. Street number | STNUM_D| address.extension[stnum] | string |  | 
+| 132 | Place of death. Pre Directional | PREDIR_D| address.extension[predir] | string |  | 
+| 133 | Place of death. Street name | STNAME_D| address.extension[stname] | string |  | 
+| 134 | Place of death. Street designator | STDESIG_D| address.extension[stdesig] | string |  | 
+| 135 | Place of death. Post Directional | POSTDIR_D| address.extension[postdir] | string | address.district.extension[countyCode] | 
+| 136 | Place of death. City or Town name | CITYTEXT_D| address.city | string |  | 
+| 137 | Place of death. State name literal | STATETEXT_D| address.state | string |  | 
+| 138 | Place of death. Zip code | ZIP9_D| address.postalCode | string |  | 
+| 139 | Place of death. County of Death | COUNTYTEXT_D| address.district | string |  | 
+| 140 | Place of death. City FIPS code | CITYCODE_D| address.city.extension[cityCode] | integer |  | 
+| 141 | Place of death. Longitude | LONG_D| position.longitude | float |  | 
+| 142 | Place of Death. Latitude | LAT_D| position.latitude | float |  | 
+| 239 | Country of Death - Code | DTHCOUNTRYCD| address.country  | string  | Not Used.  For US Death certificates should be US | 
+| 240 | Country of Death - Literal | DTHCOUNTRY| address.country  | string  | Not used. For US Death certificates should be US | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}
