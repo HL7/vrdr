@@ -20,7 +20,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 27 | Decedent's Residence--Country | COUNTRYC| address.country | string | [ResidenceCountryVS] | 
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
 | 29 | Marital Status | MARITAL| maritalStatus | codeable |  [MaritalStatusVS] | 
-| 30 | Marital Status--Edit Flag | MARITAL_BYPASS| maritalStatus.extension[ BypassEditFlag]  | codeable | | [EditBypass0124VS] | 
+| 30 | Marital Status--Edit Flag | MARITAL_BYPASS| maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| extension[ NVSSEthnicity].extension[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| extension[ NVSSEthnicity].extension[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| extension[ NVSSEthnicity].extension[ Hispanic Other ].valueCoding | codeable | [YesNoUnknownVS] | 
