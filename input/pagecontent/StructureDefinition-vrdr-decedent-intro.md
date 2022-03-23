@@ -4,7 +4,7 @@ The Decedent profile contains basic information about the decedent, including da
 | **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |
 | 7 | Decedent's Legal Name--Given  | GNAME| name.given , name.type=use = usual | string |  | 
-| 8 | Decedent's Legal Name--Middle | MNAME| name.given , name.type=use = usual (first letter) | string |  | 
+| 8 | Decedent's Legal Name--Middle | STATES| name.given , name.type=use = usual (first letter) | string |  | 
 | 9 | Decedent's Legal Name--Last | LNAME| name.surname , name.type=use = usual | string |  | 
 | 10 | Decedent's Legal Name--Suffix | SUFF| name.suffix , name.type=use = usual | string |  | 
 | 13 | Sex | SEX| extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 

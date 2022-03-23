@@ -1,17 +1,9 @@
 ### Usage
 
-The Decedent Age profile contains the following information:
 
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Decedent Age   | valueQuantity.value  | decimal  | AGE  |
-| Decedent Age (units)   | valueQuantity.system  | [UnitsOfAgeVS] | AGETYPE  |
-| Age Edit Bypass FLag | value.extension[BypassEditFlag].value | [EditBypass01VS] | AGE_BYPASS  -- if extension not specified, blank   |
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 17 | Decedent's Age--Units | AGE | valueQuantity.value | decimal |  | 
+| 18 | Decedent's Age--Edit Flag | AGE_BYPASS| value.extension[BypassEditFlag].value | codeable | [EditBypass01VS] | 
 {: .grid }
-
-
-### Conformance
-
-
 {% include markdown-link-references.md %}

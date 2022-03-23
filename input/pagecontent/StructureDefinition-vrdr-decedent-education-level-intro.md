@@ -1,15 +1,9 @@
 ### Usage
 
-The Decedent Education level profile contains the following information:
 
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Level of Education   | value  | [EducationLevelVS]  | DEDUC  |
-| Bypass Flag - Level of Education   | value.extension[ByPassEdit].value  | [EditBypass01234VS]  | DEDUC_BYPASS -- if extension not specified, blank  |
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 37 | Decedent's Education | DEDUC| value | codeable | [EducationLevelVS] | 
+| 38 | Decedent's Education--Edit Flag | DEDUC_BYPASS| value.extension[ByPassEdit].value | codeable | [EditBypass01234VS] | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}
