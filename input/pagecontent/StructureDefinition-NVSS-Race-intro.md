@@ -23,9 +23,9 @@
 | First Other Asian Literal   | extension[ OtherAsianLiteral].valueString[0]  | String | RACE18 |
 | Second Other Asian Literal   | extension[ OtherAsianLiteral].valueString[1]  | String | RACE19 |
 | First Other Pacific Island Literal   | extension[ OtherPacificIslandLiteral].valueString[0]  | String | RACE20 |
-| Second Other Pacific Island Literal   | extension[ Other Pacific IslandLiteral].valueString[1]  | String | RACE21 |
-| First Other Race Literal   | extension[ Other Race Literal].valueString[0]  | String | RACE22  |
-| Second Other Race Literal   | extension[ Other Race Literal].valueString[1]  | String | RACE23 |
+| Second Other Pacific Island Literal   | extension[ OtherPacificIslandLiteral].valueString[1]  | String | RACE21 |
+| First Other Race Literal   | extension[ OtherRaceLiteral].valueString[0]  | String | RACE22  |
+| Second Other Race Literal   | extension[ OtherRaceLiteral].valueString[1]  | String | RACE23 |
 | Race Missing Value Reason   | extension[ MissingValueReason].valueCoding  | [RaceMissingValueReasonVS] | RACE_MVR |
 {: .grid }
 

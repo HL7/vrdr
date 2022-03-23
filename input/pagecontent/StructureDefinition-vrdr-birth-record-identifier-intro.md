@@ -1,17 +1,11 @@
 ### Usage
-
 The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record.
-It is relevant only in the case where the birth took place in a recognized jurisdiction.
+                         It is relevant only in the case where the birth took place in a recognized jurisdiction.
 
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Birth Certificate Number   | value        | String (6) | BCNO |
-| Birth Jurisdiction   | component[birthJurisdiction].value  | [JurisdictionVS] | BSTATE  |
-| Birth Year  | component[birthYear].value  | dateTime (YYYY component) | IDOB_YR  |
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| value | string(6) |  | 
+| 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| component[birthYear].value | dateTime | YYYY component | 
+| 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| component[birthJurisdiction].value | string | [JurisdictionVS] | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}

@@ -1,18 +1,15 @@
 ### Usage
+The [Certifier] is optionally referenced from this profile (performer).
 
-Cause of Death Part 1 profile captures the following values:
-
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Cause of Death Part 1, Line a,b,c,d   |     value.text(120)  | string | COD1A,COD1B,COD1C,COD1D  |
-| Cause of Death Part 1, Interval Line a,b,c,d  | component[$loinc#69440-6].value  |string (20) | INTERVAL1A,INTERVAL1B,INTERVAL1C,INTERVAL1D  |
-| Certifier  | performer  | Reference to the Certifier | see the [Certifier] profile|
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 185 | Cause of Death Part I Line a | COD1A| value.text | string(120) |  | 
+| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| component[$loinc#69440-6].value | string(20) |  | 
+| 187 | Cause of Death Part I Line b | COD1B| value.text | string(120) |  | 
+| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| component[$loinc#69440-6].value | string(20) |  | 
+| 189 | Cause of Death Part I Line c | COD1C| value.text | string(120) |  | 
+| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| component[$loinc#69440-6].value | string(20) |  | 
+| 191 | Cause of Death Part I Line d | COD1D| value.text | string(120) |  | 
+| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| component[$loinc#69440-6].value | string(20) |  | 
 {: .grid }
-
-Up to 4 causes of death are referenced in the [CauseOfDeathPathway] list.
-
-
-
-
 {% include markdown-link-references.md %}

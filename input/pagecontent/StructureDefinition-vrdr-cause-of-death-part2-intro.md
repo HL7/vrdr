@@ -1,12 +1,8 @@
 ### Usage
+The [Certifier] is optionally referenced from this profile (performer).
 
-Cause of death part 2 profile captures the following values:
-
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Cause of Death Part II   |     value.text (240 chars)  | string | OTHERCONDITION  |
-| Certifier  | performer  | Reference to the Certifier | see the [Certifier] profile|
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 193 | Cause of Death Part II | OTHERCONDITION| value.text | string(240) |  | 
 {: .grid }
-
 {% include markdown-link-references.md %}
