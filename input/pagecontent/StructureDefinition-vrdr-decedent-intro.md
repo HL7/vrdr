@@ -3,10 +3,10 @@ The Decedent profile contains basic information about the decedent, including da
 
 | **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |
-| 7 | Decedent's Legal Name--Given  | GNAME| name.given , name.type=use = usual | string |  | 
-| 8 | Decedent's Legal Name--Middle | STATES| name.given , name.type=use = usual (first letter) | string |  | 
-| 9 | Decedent's Legal Name--Last | LNAME| name.surname , name.type=use = usual | string |  | 
-| 10 | Decedent's Legal Name--Suffix | SUFF| name.suffix , name.type=use = usual | string |  | 
+| 7 | Decedent's Legal Name--Given  | GNAME| name.given , name.use = official | string |  | 
+| 8 | Decedent's Legal Name--Middle | MNAME| name.given , name.use = official (first letter) | string |  | 
+| 9 | Decedent's Legal Name--Last | LNAME| name.family , name.use = official | string |  | 
+| 10 | Decedent's Legal Name--Suffix | SUFF| name.suffix , name.use = official | string |  | 
 | 13 | Sex | SEX| extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
 | 15 | Social Security Number | SSN| identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB" | string |  | 
 | 19 | Date of Birth--Year | DOB_YR| birthDate | dateTime |  | 
@@ -63,7 +63,8 @@ The Decedent profile contains basic information about the decedent, including da
 | 155 | Decedent's Residence - State name | STATETEXT_R | address.state (expanded from 2 letter code) |  |  | 
 | 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| address.country (expanded from 2 letter code) | string |  | 
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| address.line | string |  | 
-| 194 | Decedent's Maiden Name | DMAIDEN| name.text , name.type=maiden | string |  | 
+| 166 | Middle Name of Decedent  | DMIDDLE| name.given , name.use = official | string |  | 
+| 194 | Decedent's Maiden Name | DMAIDEN| name.text , name.use=maiden | string |  | 
 | 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer |  | 
 | 196 | Decedent's Birth Place City - Literal | DBPLACECITY| extension[patient-birthPlace].value[x].city | string |  | 
 | 201 | Informant's Relationship | INFORMRELATE| contact.type.text  | string (30 characters) |  | 

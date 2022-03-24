@@ -5,7 +5,7 @@ The Certifier profile includes:
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |
 | 220 | Certifier's First Name | CERTFIRST| name.given  |  |  | 
 | 221 | Certifier's Middle Name | CERTMIDDLE| name.given  |  |  | 
-| 222 | Certifier's Last Name | CERTLAST| name.surname  |  |  | 
+| 222 | Certifier's Last Name | CERTLAST| name.family  |  |  | 
 | 223 | Certifier's Suffix Name | CERTSUFFIX| name.suffix  |  |  | 
 | 224 | Certifier - Street number | CERTSTNUM| address.extension[stnum] | string |  | 
 | 225 | Certifier - Pre Directional | CERTPREDIR| address.extension[predir] | string |  | 

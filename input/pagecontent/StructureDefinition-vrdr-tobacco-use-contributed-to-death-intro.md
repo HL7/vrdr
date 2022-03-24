@@ -1,12 +1,8 @@
 ### Usage
-The Tobacco Use Contributed to Death profile includes:
 
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Tobacco Use Contributed To Death  | value | [ContributoryTobaccoUseVS] | TOBAC |
+
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 111 | Did Tobacco Use Contribute to Death? | TOBAC| value | codeable | [ContributoryTobaccoUseVS] | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}

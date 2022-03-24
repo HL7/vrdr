@@ -1,14 +1,8 @@
 ### Usage
 
-The Examiner Contacted profile contains the following information:
 
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Examiner Contacted?   | value  | [YesNoUnknownVS]  | REFERRED  |
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 172 | Was case Referred to Medical Examiner/Coroner? | REFERRED| value | codeable | [YesNoUnknownVS] | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}

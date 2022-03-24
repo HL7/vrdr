@@ -10,5 +10,7 @@ The profile includes a component for the time of death pronouncement that is not
 | 34 | Date of Death--Month | DOD_MO| value | dateTime |  | 
 | 35 | Date of Death--Day | DOD_DY| value | dateTime |  | 
 | 36 | Time of Death | TOD| value | dateTime |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| component[$loinc#80616-6].value | dateTime |  | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| component[$loinc#80616-6].value | dateTime |  | 
 {: .grid }
 {% include markdown-link-references.md %}

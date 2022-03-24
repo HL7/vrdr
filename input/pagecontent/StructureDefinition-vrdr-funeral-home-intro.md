@@ -1,24 +1,19 @@
 ### Usage
-The Funeral Home profile contains the following information:
 
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Funeral Facility Name| name | string | FUNFACNAME |
-| Funeral Facility Address | address.text  | string | FUNFACADDRESS |
-| Funeral Home Address  | address.line  | string | FUNADDRESS  |
-| Funeral Home - City  | address.city  | string | FUNCITYTEXT  |
-| State, U.S. Territory or Canadian Province of Certifier - code | address.state | [StateTerritoryProvinceVS] | FUNSTATECD |
-| State, U.S. Territory or Canadian Province of Certifier - literal | address.state | string | FUNSTATE |
-| Funeral Home Zip | address.postalcode | string | FUNZIP |
-| Funeral Home Address(predirectional) | address.extension[predir]  | string | FUNPREDIR  |
-| Funeral Home Address(street number) | address.extension[stnum]  | string | FUNSTNUM  |
-| Funeral Home Address(street name) | address.extension[stname]  | string | FUNSTNAME  |
-| Funeral Home Address(street designator) | address.extension[stdesig]  | string | FUNSTDESIG  |
-| Funeral Home Address(postdirectional) | address.extension[postdir]  | string | FUNPOSTDIR  |
-| Funeral Home Address(unit number) | address.extension[unitnum]  | string | FUNUNITNUM  |
+
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 206 | Funeral Facility Name | FUNFACNAME| name | string |  | 
+| 207 | Funeral Facility - Street number | FUNFACSTNUM| address.extension[stnum] | string |  | 
+| 208 | Funeral Facility - Pre Directional | FUNFACPREDIR| address.extension[predir] | string |  | 
+| 209 | Funeral Facility - Street name | FUNFACSTRNAME| address.extension[stname] | string |  | 
+| 210 | Funeral Facility - Street designator | FUNFACSTRDESIG| address.extension[stdesig] | string |  | 
+| 211 | Funeral Facility - Post Directional | FUNPOSTDIR| address.extension[postdir] | string |  | 
+| 212 | Funeral Facility - Unit or apt number | FUNUNITNUM| address.extension[unitnum] | string |  | 
+| 213 | Long string address for Funeral Facility same as above but allows states to choose the way they capture information. | FUNFACADDRESS| address.line | string | address.line  | 
+| 214 | Funeral Facility - City or Town name | FUNCITYTEXT| address.city | string | address.city  | 
+| 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| address.state | string | [StateTerritoryProvinceVS] | 
+| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| address.state. (expanded from code) | string | [StateTerritoryProvinceVS] | 
+| 217 | Funeral Facility - ZIP | FUNZIP| address.postalCode | string |  | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}
