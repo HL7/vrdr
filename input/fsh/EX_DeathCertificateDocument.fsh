@@ -9,9 +9,10 @@ Description: "DeathCertificateDocument-Example1"
 * insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
 * identifier.value = "000182"
+* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
+* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
-* identifier.extension[auxiliaryStateIdentifier].valueString = "009182"
 * insert addentry(Bundle, DeathCertificate-Example1)
 * insert addentry(Patient, Decedent-Example1)
 * insert addentry(RelatedPerson, DecedentFather-Example1)
