@@ -35,9 +35,12 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * identifier.type = $v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier.value = "987654321"
-* name.use = #official
-* name.family = "Patel"
-* name.given = "Madelyn"
+* name[0].use = #official
+* name[0].family = "Patel"
+* name[0].given = "Madelyn"
+* name[1].use = #maiden
+* name[1].family = "McCain"
+* name[1].given = "Joyce"
 * gender = #female
 // * birthDate = "1978-03-12"
 //* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
