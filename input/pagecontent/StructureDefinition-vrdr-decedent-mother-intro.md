@@ -1,17 +1,11 @@
 ### Usage
 
-The Decedent Mother profile contains the following information:
 
-
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| Mother's Maiden Surname (Last)   | humanName.family  | string  | DMOMMDN  |
-| Mother's First name   | name.given  | string  | DMOMF   |
-| Mother's middle name   | name.given  | string  | DMOMMID *** not supported by library *** |
-| Mother's suffix   | name.suffix  | string  | MOTHERSSUFFIX  *** not supported by library *** |
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 169 | Mother's First Name | DMOMF| name.given | string |  | 
+| 170 | Mother's Middle Name | DMOMMID| name.given | string |  | 
+| 171 | Mother's Maiden Surname | DMOMMDN| name.surname , name.type=maiden | string  |  | 
+| 200 | Mother's Suffix | MOTHERSSUFFIX| name.suffix | string |  | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}

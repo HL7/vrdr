@@ -1,16 +1,12 @@
 ### Usage
-The Disposition Location profile contains the following information:
 
-| **Name** |  **Field**   |  **Encoding**  |  **IJE Field Name(s)**  |
-| ---------------| ------------------------ | ------------- | ------------------- |
-| State, U.S. Territory or Canadian Province of Disposition - literal| address.state | string | DISPSTATE |
-| State, U.S. Territory or Canadian Province of Disposition - code | address.state  | [StatesTerritoriesProvincesVS] | DISPSTATECD |
-| City of Disposition - literal | address.city | string | DISPCITY |
-| City of Disposition - code |  address.city.extension[ cityCode].value | 5 Digit Place code (reference) | DISPCITYCODE |
-| Death Institution name | name | string | DINSTI |
+
+| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
+| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| 129 | Death Institution name | DINSTI| name | string  |  | 
+| 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 203 | Disposition State or Territory - Literal | DISPSTATE| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 204 | Disposition City - Code | DISPCITYCODE| address.city.extension[ cityCode].value | integer |  | 
+| 205 | Disposition City - Literal | DISPCITY| address.city | string |  | 
 {: .grid }
-
-
-### Conformance
-
 {% include markdown-link-references.md %}

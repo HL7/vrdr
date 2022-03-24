@@ -3,9 +3,9 @@
 
 | **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |
-| 169 | Mother's First Name | DMOMF| name.given | string |  | 
-| 170 | Mother's Middle Name | DMOMMID| name.given | string |  | 
-| 171 | Mother's Maiden Surname | DMOMMDN| name.surname , name.type=maiden | string  |  | 
-| 200 | Mother's Suffix | MOTHERSSUFFIX| name.suffix | string |  | 
+| 12 | Father's Surname | FLNAME| name.family | string |  | 
+| 167 | Father's First Name | DDADF| name.given | string |  | 
+| 168 | Father's Middle Name | DDADMID| name.given | string |  | 
+| 199 | Father's Suffix | FATHERSUFFIX| name.suffix | string |  | 
 {: .grid }
 {% include markdown-link-references.md %}
