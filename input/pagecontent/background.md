@@ -7,6 +7,6 @@ This implementation guide is an initial step to help define a common set of prot
 ### Structure of a Death Record
 The profiles in this IG, together with profiles from USCore, are used to represent the content of the death record as used for submission from jurisdictional VROs to NCHS, and for inter-jurisdictional exchange among VROs.   The narrative content for each profile shows the mapping of death record content to the fields of the profile.   Instances of these profiles are assembled as shown below in a [DeathCertificateDocument], a profile of a FHIR Bundle of type document.  Within that Bundle are contained a [DeathCertificate], a profile of a FHIR Composition, along with instances of FHIR profiles that are referenced from the DeathCertificate.
 <center>
-<table><tr><td><img src="Structure.jpg" style="width:100%;"/></td></tr></table>
+<table><tr><td><img src="Structure.jpg" style="width:60%;"/></td></tr></table>
 </center>
 {% include markdown-link-references.md %}
