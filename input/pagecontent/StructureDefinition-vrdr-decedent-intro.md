@@ -60,7 +60,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 152 | Decedent's Residence - City or Town name | CITYTEXT_R| address.city | string |  | 
 | 153 | Decedent's Residence - ZIP code | ZIP9_R| address.postalCode | string |  | 
 | 154 | Decedent's Residence - County | COUNTYTEXT_R| address.district | string |  | 
-| 155 | Decedent's Residence - State name | STATETEXT_R | address.state (expanded from 2 letter code) |  |  | 
+| 155 | Decedent's Residence - State name | STATETEXT_R | address.state (expanded from 2 letter code) | string |  | 
 | 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| address.country (expanded from 2 letter code) | string |  | 
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| address.line | string |  | 
 | 166 | Middle Name of Decedent  | DMIDDLE| name.given , name.use = official | string |  | 
