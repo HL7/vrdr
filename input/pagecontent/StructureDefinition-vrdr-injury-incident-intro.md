@@ -11,13 +11,6 @@
 | 126 | Time of Injury Unit | TOI_UNIT| effective | dateTime |  | 
 | 173 | Place of Injury- literal | POILITRL| component[placeOfInjury].value.text | string |  | 
 | 174 | Describe How Injury Occurred | HOWINJ| value.text | string |  | 
-| 176 | County of Injury - literal | COUNTYTEXT_I| address.district | string |  | 
-| 177 | County of Injury code | COUNTYCODE_I| address.district.extension[countyCode].value | integer |  | 
-| 178 | Town/city of Injury - literal | CITYTEXT_I| address.city | string |  | 
-| 179 | Town/city of Injury code | CITYCODE_I| address.city.extension[ cityCode].value | integer |  | 
-| 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| address.state | string | [StatesTerritoriesProvincesVS] | 
-| 181 | Place of injury. Longitude | LONG_I| position.longitude | float |  | 
-| 182 | Place of injury. Latitude | LAT_I| position.latitude | float |  | 
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| address.state (expanded from 2 letter code) | string | [StateTerritoryProvinceVS] | 
 {: .grid }
 {% include markdown-link-references.md %}
