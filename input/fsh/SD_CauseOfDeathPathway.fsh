@@ -2,8 +2,8 @@ Profile: CauseOfDeathPathway
 Parent: List
 Id: vrdr-cause-of-death-pathway
 Title: "Cause of Death Pathway"
-Description: """VRDR Cause of Death Pathway is an ordered list of cause of death conditions (List).  The source of VRDR Cause of Death Pathway (LIST.source) is a cause of death certifier.
-"""
+Description: "Cause of Death Pathway is an ordered list of cause of death conditions (List).  The source of VRDR Cause of Death Pathway (LIST.source) is a cause of death certifier.
+"
 * insert RequireMetaProfile(CauseOfDeathPathway)
 * id 0..1
 * status 1..1

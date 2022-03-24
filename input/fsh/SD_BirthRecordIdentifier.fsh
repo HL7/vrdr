@@ -13,6 +13,7 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * subject only Reference(Decedent)
 * value[x] 0..1 MS
 * value[x] only string   // we considered shifting to integer and kept it as string.
+* valueString ^short = "Birth registry number"
 * valueString ^maxLength = 6
 * dataAbsentReason 0..1 MS
 * dataAbsentReason from DataAbsentReason (extensible)
@@ -23,11 +24,13 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * component contains
     birthJurisdiction 1..1 and
     birthYear 1..1
+* component[birthJurisdiction] ^short = "Birth Jurisdiction"
 * component[birthJurisdiction].code 1..1
 * component[birthJurisdiction].code = $loinc#21842-0 "Birthplace" (exactly)
 * component[birthJurisdiction].value[x] 1..1
 * component[birthJurisdiction].value[x] only string
 * component[birthJurisdiction].valueString from JurisdictionVS (required)
+* component[birthYear] ^short = "Birth Year"
 * component[birthYear].code = $loinc#80904-6 "Birth year" (exactly)
 * component[birthYear].value[x] 1..1
 * component[birthYear].value[x] only dateTime

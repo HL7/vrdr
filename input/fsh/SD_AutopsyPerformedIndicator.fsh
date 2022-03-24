@@ -15,8 +15,9 @@ Description: "Autopsy Performed Indicator (Observation)"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from YesNoUnknownVS (required)
+* valueCodeableConcept ^short = "Autopsy was performed?"
 * component 0..1
-* component ^comment = "Autopsy Results Available"
+* component ^short = "Autopsy Results Available"
 * component.code 1..1
 * component.code only CodeableConcept
 * component.code = $loinc#69436-4 "Autopsy results available" (exactly)
