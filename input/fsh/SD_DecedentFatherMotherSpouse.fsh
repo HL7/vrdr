@@ -6,14 +6,14 @@ Description: "Decedent Father (RelatedPerson)"
 * insert RequireMetaProfile(DecedentFather)
 * patient 1..1
 * patient only Reference(Decedent)
-* patient ^short = "patient"
+* patient ^short = "Decedent"
 * relationship 1..1
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#FTH "father" (exactly)
 * relationship.text = "Father"
 * relationship ^short = "relationship"
 * name 1..1
-* name ^short = "name"
+* name ^short = "Name"
 * address 0..1
 
 Profile: DecedentMother
@@ -23,12 +23,14 @@ Title: "Decedent Mother"
 Description: "Decedent Mother (RelatedPerson)"
 * insert RequireMetaProfile(DecedentMother)
 * patient 1..1
+* patient ^short = "Decedent"
 * patient only Reference(Decedent)
 * relationship 1..1
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#MTH "mother" (exactly)
 * relationship.text = "Mother"
 * name 1..1
+* name ^short = "Name.   Maiden name if name.use=maiden"
 * address 0..1
 
 
@@ -40,10 +42,11 @@ Description: "Decedent Spouse (RelatedPerson)"
 * insert RequireMetaProfile(DecedentSpouse)
 * patient 1..1
 * patient only Reference(Decedent)
-* patient ^short = "patient"
+* patient ^short = "Decedent"
 * relationship 1..1
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#SPS "spouse" (exactly)
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
 * name 1..1
+* name ^short = "Name.   Maiden name if name.use=maiden"
