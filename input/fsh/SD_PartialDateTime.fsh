@@ -138,7 +138,7 @@ Description: "The year portion (YYYY) of the partial date. (Extension)"
 * value[x] only integer
 * valueInteger ^minValueInteger = 0
 * valueInteger ^maxValueInteger = 9998
-* value[x].extension contains
+* valueInteger.extension contains
    $DataAbsentReason named dataabsent 0..1
 
 Extension: DateMonth
@@ -149,7 +149,7 @@ Description: "The month portion (MM) of the partial date. (Extension)"
 * value[x] only integer
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 12
-* value[x].extension contains
+* valueInteger.extension contains
    $DataAbsentReason named dataabsent 0..1
 
 Extension: DateDay
@@ -161,7 +161,7 @@ Description: "The day portion (DD) of the partial date. (Extension)"
 * value[x] ^definition = "Specifies the day portion of a partial date."
 * valueInteger ^minValueInteger = 1
 * valueInteger ^maxValueInteger = 31
-* value[x].extension contains
+* valueInteger.extension contains
    $DataAbsentReason named dataabsent 0..1
 
 Extension: DateTime
@@ -173,5 +173,5 @@ Description: "The time portion (DD) of the partial date. (Extension)"
 * value[x] only time
 * value[x] ^definition = "Specifies the time portion of a partial date."
 //* valueCode from NotApplicableVS (required)
-* value[x].extension contains
+* valueTime.extension contains
    $DataAbsentReason named dataabsent 0..1
