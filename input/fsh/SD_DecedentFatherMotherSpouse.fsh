@@ -30,7 +30,7 @@ Description: "Decedent Mother (RelatedPerson)"
 * relationship = $v3-RoleCode#MTH "mother" (exactly)
 * relationship.text = "Mother"
 * name 1..1
-* name ^short = "Name.   Maiden name if name.use=maiden"
+* name.family ^short = "Maiden name if name.use=maiden"
 * address 0..1
 
 
@@ -49,4 +49,4 @@ Description: "Decedent Spouse (RelatedPerson)"
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
 * name 1..1
-* name ^short = "Name.   Maiden name if name.use=maiden"
+* name.family ^short = "Maiden name if name.use=maiden"
