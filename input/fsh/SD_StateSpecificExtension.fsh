@@ -13,7 +13,7 @@ Description: "An identifier associated by the submitting jurisdiction with a spe
 
 Extension: AuxiliaryStateIdentifier2
 Id: AuxiliaryStateIdentifier2
-Title: "Auxiliary State Identifier"
+Title: "Auxiliary State Identifier2"
 Description: "An identifier associated by the submitting jurisdiction with a specific death certificate number.  Twelve digit withi leading zeroes"
 * insert AuxiliaryStateIdentifier
 
