@@ -1,5 +1,7 @@
+### Usage
+
 | **#** |  **Description**   |  **IJE Name**   |   **Profile**  | **Field**  |  **Type**  | **Value Set**  |
-| ----- | ------------------ | --------------- | -------------- | ---------- | -----------| -------------- |
+| ----- | ------------------ | --------------- | -------------- | ---------- | ---------- | -------------- |
 | 7 | Decedent's Legal Name--Given  | GNAME| Decedent| name.given , name.use = official | string |  |
 | 8 | Decedent's Legal Name--Middle | MNAME| Decedent| name.given , name.use = official (first letter) | string |  |
 | 9 | Decedent's Legal Name--Last | LNAME| Decedent| name.family , name.use = official | string |  |
