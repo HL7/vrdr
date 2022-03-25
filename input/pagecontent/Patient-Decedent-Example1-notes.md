@@ -60,6 +60,20 @@ Usage: #example
 * extension[=].valueAddress.city = "Roanoke"
 * extension[=].valueAddress.state = "VA"
 * extension[=].valueAddress.country = "US"
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
+* identifier.system = "http://hl7.org/fhir/sid/us-ssn"
+* identifier.value = "987654321"
+* name.use = #official
+* name.family = "Patel"
+* name.given = "Madelyn"
+* gender = #female
+* birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
+* birthDate.extension.extension[=].valueInteger = 10
+* birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
+* birthDate.extension.extension[=].valueInteger = 2004
+* birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
+* birthDate.extension.extension[=].valueInteger = 11
+* birthDate.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDate"
 * address.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/WithinCityLimitsIndicator"
 * address.extension[=].valueCoding = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 * address.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/StreetName"
@@ -68,28 +82,14 @@ Usage: #example
 * address.city = "Danville"
 * address.city.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/CityCode"
 * address.city.extension.valuePositiveInt = 1234
-* address.state = "VA"
 * address.district = "Fairfax"
 * address.district.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/DistrictCode"
 * address.district.extension.valuePositiveInt = 321
+* address.state = "VA"
 * address.country = "US"
 * maritalStatus.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
 * maritalStatus.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#S "Never Married"
-* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
-* identifier.system = "http://hl7.org/fhir/sid/us-ssn"
-* identifier.value = "987654321"
-* name.use = #official
-* name.family = "Patel"
-* name.given = "Madelyn"
-* gender = #female
-* contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"
-* birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
-* birthDate.extension.extension[=].valueInteger = 10
-* birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
-* birthDate.extension.extension[=].valueInteger = 2004
-* birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
-* birthDate.extension.extension[=].valueInteger = 11
-* birthDate.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDate"
+* contact.name.text = "Joe Smith"
 ```

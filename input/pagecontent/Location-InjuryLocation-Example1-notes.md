@@ -4,7 +4,7 @@ InstanceOf: InjuryLocation
 Title: "InjuryLocation-Example1"
 Description: "InjuryLocation-Example1"
 Usage: #example
-* description = "5590 Lockwood Drive 20621 US"
 * name = "Home"
+* description = "5590 Lockwood Drive 20621 US"
 * address.text = "5590 Lockwood Drive 20621 US"
 ```

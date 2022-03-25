@@ -4,8 +4,8 @@ InstanceOf: FuneralHome
 Title: "FuneralHome-Example1"
 Description: "FuneralHome-Example1"
 Usage: #example
-* type = http://terminology.hl7.org/CodeSystem/organization-type#bus "Non-Healthcare Business or Corporation"
 * active = true
+* type = http://terminology.hl7.org/CodeSystem/organization-type#bus "Non-Healthcare Business or Corporation"
 * name = "Lancaster Funeral Home and Crematory"
 * address.line = "211 High Street"
 * address.city = "Lancaster"
