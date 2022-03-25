@@ -71,7 +71,8 @@
 [Mortician]: StructureDefinition-vrdr-mortician.html
 [ParametersForEmergingIssues]: StructureDefinition-vrdr-parameters-for-emerging-issues.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
-[PartialDatePartAbsentReason]: StructureDefinition-vrdr-partial-date-part-absent-reason.html
+[PartialDate]: StructureDefinition-PartialDate.html
+[PartialDateTime]: StructureDefinition-PartialDateTime.html
 [SurgeryDate]: StructureDefinition-vrdr-surgery-date.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
 [WithinCityLimits]: StructureDefinition-vrdr-within-city-limits-indicator.html
