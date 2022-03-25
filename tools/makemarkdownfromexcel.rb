@@ -195,8 +195,10 @@ xlsx.default_sheet = "Mortality"
 filename = "generated/IJE_File_Layouts_Version_2021_FHIR.md"
 puts filename
 fullout = File.open(filename, "w")
+fullout.puts "### Data Dictionary"
+fullout.puts ""
 fullout.puts "| **#** |  **Description**   |  **IJE Name**   |   **Profile**  | **Field**  |  **Type**  | **Value Set**  |"
-fullout.puts "| ----- | ------------------ | --------------- | -------------- | ---------- | ---------- | -------------- |"
+fullout.puts "| --------- | --------------- | ------------- | ------------ | ---------- | ---------- | -------------- |"
 
 profiles.each do |key, value|
   puts key
