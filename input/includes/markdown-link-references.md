@@ -112,5 +112,5 @@
 [ScopeOfVRDRIG]: scope_of_the_vrdr_fhir_ig.html
 [Terminology]: terminology_bindings.html
 [PartialDatesAndTimes]: usage.html#partial-dates-and-times
-[PlaceCodes]: usage.html#place-codes
+[CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
