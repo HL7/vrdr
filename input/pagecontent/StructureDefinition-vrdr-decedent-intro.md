@@ -9,9 +9,9 @@ The Decedent profile contains basic information about the decedent, including da
 | 10 | Decedent's Legal Name--Suffix | SUFF| name.suffix , name.use = official | string |  | 
 | 13 | Sex | SEX| extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
 | 15 | Social Security Number | SSN| identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB" | string |  | 
-| 19 | Date of Birth--Year | DOB_YR| birthDate | dateTime | See notes on PartialDateTime | 
-| 20 | Date of Birth--Month | DOB_MO| birthDate | dateTime | See notes on PartialDateTime | 
-| 21 | Date of Birth--Day | DOB_DY| birthDate | dateTime | See notes on PartialDateTime | 
+| 19 | Date of Birth--Year | DOB_YR| birthDate | dateTime | See [PartialDatesAndTimes] | 
+| 20 | Date of Birth--Month | DOB_MO| birthDate | dateTime | See [PartialDatesAndTimes] | 
+| 21 | Date of Birth--Day | DOB_DY| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 22 | Birthplace--Country | BPLACE_CNT| extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
 | 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | [JurisdictionsProvincesVS] | 
 | 24 | Decedent's Residence--City | CITYC| address.city.extension[cityCode] | string |  | 
