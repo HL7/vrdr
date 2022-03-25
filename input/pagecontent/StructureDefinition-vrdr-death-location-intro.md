@@ -5,7 +5,7 @@
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
 | 31 | Place of Death | DPLACE| type | codeable | [PlaceOfDeathVS] | 
-| 32 | County of Death Occurrence | COD| address.district.extension[countyCode] | integer |  | 
+| 32 | County of Death Occurrence | COD| address.district.extension[countyCode] | integer | see [CountyCodes] | 
 | 130 | Long String address for place of death | ADDRESS_D| address.line | string  |  | 
 | 131 | Place of death. Street number | STNUM_D| address.extension[stnum] | string |  | 
 | 132 | Place of death. Pre Directional | PREDIR_D| address.extension[predir] | string |  | 
@@ -16,7 +16,7 @@
 | 137 | Place of death. State name literal | STATETEXT_D| address.state | string |  | 
 | 138 | Place of death. Zip code | ZIP9_D| address.postalCode | string |  | 
 | 139 | Place of death. County of Death | COUNTYTEXT_D| address.district | string |  | 
-| 140 | Place of death. City FIPS code | CITYCODE_D| address.city.extension[cityCode] | integer |  | 
+| 140 | Place of death. City FIPS code | CITYCODE_D| address.city.extension[cityCode] | integer | see [CityCodes] | 
 | 141 | Place of death. Longitude | LONG_D| position.longitude | float |  | 
 | 142 | Place of Death. Latitude | LAT_D| position.latitude | float |  | 
 | 239 | Country of Death - Code | DTHCOUNTRYCD| address.country  | string  | Not Used.  For US Death certificates should be US | 

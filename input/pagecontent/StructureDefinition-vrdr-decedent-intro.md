@@ -14,8 +14,8 @@ The Decedent profile contains basic information about the decedent, including da
 | 21 | Date of Birth--Day | DOB_DY| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 22 | Birthplace--Country | BPLACE_CNT| extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
 | 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | [JurisdictionsProvincesVS] | 
-| 24 | Decedent's Residence--City | CITYC| address.city.extension[cityCode] | string |  | 
-| 25 | Decedent's Residence--County | COUNTYC| address.district.extension[countyCode] | string |  | 
+| 24 | Decedent's Residence--City | CITYC| address.city.extension[cityCode] | string | see [CityCodes] | 
+| 25 | Decedent's Residence--County | COUNTYC| address.district.extension[countyCode] | string | see [CountyCodes] | 
 | 26 | State, U.S. Territory or Canadian Province of Decedent's residence - code | TOD| address.state | string | [StatesTerritoriesProvincesVS] | 
 | 27 | Decedent's Residence--Country | COUNTRYC| address.country | string | [ResidenceCountryVS] | 
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
@@ -65,7 +65,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| address.line | string |  | 
 | 166 | Middle Name of Decedent  | DMIDDLE| name.given , name.use = official | string |  | 
 | 194 | Decedent's Maiden Name | DMAIDEN| name.text , name.use=maiden | string |  | 
-| 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer |  | 
+| 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer | see [CityCodes] | 
 | 196 | Decedent's Birth Place City - Literal | DBPLACECITY| extension[patient-birthPlace].value[x].city | string |  | 
 | 201 | Informant's Relationship | INFORMRELATE| contact.type.text  | string (30 characters) |  | 
 | 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | Expanded from coded value | 

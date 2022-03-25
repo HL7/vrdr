@@ -110,3 +110,6 @@
 [Credits]: credits.html
 [ScopeOfVRDRIG]: scope_of_the_vrdr_fhir_ig.html
 [Terminology]: terminology_bindings.html
+[PartialDatesAndTimes]: usage.html#partial-dates-and-times
+[PlaceCodes]: usage.html#place-codes
+[CountyCodes]: usage.html#county-codes
