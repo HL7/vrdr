@@ -113,8 +113,8 @@
 | 229 | Certifier - Unit or apt number | CERTUNITNUM| Certifier| address.extension[unitnum] | string |  | 
 | 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| Certifier| address.line  | string |  | 
 | 231 | Certifier - City or Town name | CERTCITYTEXT| Certifier| address.city  | string |  | 
-| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| Certifier| address.state | string | [StateTerritoryProvinceVS] | 
-| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| Certifier| address.state | string | [StateTerritoryProvinceVS] | 
+| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| Certifier| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| Certifier| address.state | string | [StatesTerritoriesProvincesVS] | 
 | 234 | Certifier - Zip | CERTZIP| Certifier| address.postalCode | string |  | 
 | 3 | Certificate Number | FILENO| DeathCertificateDocument| identifier.value | string(6) |  | 
 | 5 | Auxiliary State file number | AUXNO| DeathCertificateDocument| identifier.extension[auxiliaryStateIdentifier1].value | string(12) |  | 
@@ -151,8 +151,7 @@
 | 145 | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | DecedentSpouse| name.family, name.use = 'maiden | string |  | 
 | 197 | Spouse's Middle Name | SPOUSEMIDNAME| DecedentSpouse| name.given | string |  | 
 | 198 | Spouse's Suffix | SPOUSESUFFIX| DecedentSpouse| name.suffix | string |  | 
-| 112 | Pregnancy
- | PREG| DecedentPregnancyStatus| value | codeable | [PregnancyStatusVS] | 
+| 112 | Pregnancy | PREG| DecedentPregnancyStatus| value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| DecedentPregnancyStatus| value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
 | 84 | Occupation -- Literal (REQUIRED) | OCCUP| DecedentUsualWork| value.text | string(40) |  | 
 | 86 | Industry -- Literal (REQUIRED) | INDUST| DecedentUsualWork| component.value.text | string(40) |  | 
@@ -171,8 +170,8 @@
 | 212 | Funeral Facility - Unit or apt number | FUNUNITNUM| FuneralHome| address.extension[unitnum] | string |  | 
 | 213 | Long string address for Funeral Facility same as above but allows states to choose the way they capture information. | FUNFACADDRESS| FuneralHome| address.line | string | address.line  | 
 | 214 | Funeral Facility - City or Town name | FUNCITYTEXT| FuneralHome| address.city | string | address.city  | 
-| 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| FuneralHome| address.state | string | [StateTerritoryProvinceVS] | 
-| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| FuneralHome| address.state. (expanded from code) | string | [StateTerritoryProvinceVS] | 
+| 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| FuneralHome| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| FuneralHome| address.state. (expanded from code) | string | [StatesTerritoriesProvincesVS] | 
 | 217 | Funeral Facility - ZIP | FUNZIP| FuneralHome| address.postalCode | string |  | 
 | 114 | Date of injury--month | DOI_MO| InjuryIncident| effective | dateTime | See [PartialDatesAndTimes] | 
 | 115 | Date of injury--day | DOI_DY| InjuryIncident| effective | dateTime | See [PartialDatesAndTimes] | 
@@ -182,7 +181,7 @@
 | 126 | Time of Injury Unit | TOI_UNIT| InjuryIncident| effective | dateTime | See [PartialDatesAndTimes] | 
 | 173 | Place of Injury- literal | POILITRL| InjuryIncident| component[placeOfInjury].value.text | string |  | 
 | 174 | Describe How Injury Occurred | HOWINJ| InjuryIncident| value.text | string |  | 
-| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| InjuryIncident| address.state (expanded from 2 letter code) | string | [StateTerritoryProvinceVS] | 
+| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| InjuryIncident| address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| InjuryLocation| address.district | string |  | 
 | 177 | County of Injury code | COUNTYCODE_I| InjuryLocation| address.district.extension[countyCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| InjuryLocation| address.city | string |  | 

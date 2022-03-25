@@ -15,8 +15,8 @@ The Certifier profile includes:
 | 229 | Certifier - Unit or apt number | CERTUNITNUM| address.extension[unitnum] | string |  | 
 | 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| address.line  | string |  | 
 | 231 | Certifier - City or Town name | CERTCITYTEXT| address.city  | string |  | 
-| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| address.state | string | [StateTerritoryProvinceVS] | 
-| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| address.state | string | [StateTerritoryProvinceVS] | 
+| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| address.state | string | [StatesTerritoriesProvincesVS] | 
 | 234 | Certifier - Zip | CERTZIP| address.postalCode | string |  | 
 {: .grid }
 {% include markdown-link-references.md %}

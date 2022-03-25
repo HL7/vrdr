@@ -12,8 +12,8 @@
 | 212 | Funeral Facility - Unit or apt number | FUNUNITNUM| address.extension[unitnum] | string |  | 
 | 213 | Long string address for Funeral Facility same as above but allows states to choose the way they capture information. | FUNFACADDRESS| address.line | string | address.line  | 
 | 214 | Funeral Facility - City or Town name | FUNCITYTEXT| address.city | string | address.city  | 
-| 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| address.state | string | [StateTerritoryProvinceVS] | 
-| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| address.state. (expanded from code) | string | [StateTerritoryProvinceVS] | 
+| 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| address.state. (expanded from code) | string | [StatesTerritoriesProvincesVS] | 
 | 217 | Funeral Facility - ZIP | FUNZIP| address.postalCode | string |  | 
 {: .grid }
 {% include markdown-link-references.md %}
