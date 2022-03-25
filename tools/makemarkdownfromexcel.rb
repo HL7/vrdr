@@ -192,6 +192,12 @@ puts ARGV[0]
 
 xlsx = open_spreadsheet(ARGV[0])
 xlsx.default_sheet = "Mortality"
+filename = "generated/IJE_File_Layouts_Version_2021_FHIR.md"
+puts filename
+fullout = File.open(filename, "w")
+fullout.puts "| **#** |  **Description**   |  **IJE Name**   |   **Profile**  |**Field**  |  **Type**  | **Value Set**  |"
+fullout.puts "| ---------| ------------- | ------------ | -------------- | -------- | -------- | -------- |"
+
 profiles.each do |key, value|
   puts key
   out = File.open("generated/" + value[:out], "w")
@@ -210,9 +216,13 @@ profiles.each do |key, value|
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
+    fullout.puts "| " + field + " | " + description + " | " + ijename + "| " + key + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
     out.puts "| " + field + " | " + description + " | " + ijename + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
   end
   out.puts "{: .grid }"
   out.puts "{% include markdown-link-references.md %}"
   out.close
 end
+  fullout.puts "{: .grid }"
+  fullout.puts "{% include markdown-link-references.md %}"
+  fullout.close
