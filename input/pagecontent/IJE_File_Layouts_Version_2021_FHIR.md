@@ -40,14 +40,14 @@
 | 56 | Decedent's Race--Samoan | RACE13| Decedent| extension[ NVSSRace].extension[ Samoan].valueBoolean | boolean |  | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| Decedent| extension[ NVSSRace].extension[ OtherPacificIslander].valueBoolean | boolean |  | 
 | 58 | Decedent's Race--Other | RACE15| Decedent| extension[ NVSSRace].extension[ OtherRace].valueBoolean | boolean |  | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][0].valueString | string |  | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][1].valueString | string |  | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[0] | string |  | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[1] | string |  | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[0]   | string |  | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[1]   | string |  | 
-| 65 | Decedent's Race--First Other Literal | RACE22| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[0] | string |  | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[1] | string |  | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral1].valueString | string |  | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral2].valueString | string |  | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral1].valueString | string |  | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  | 
+| 65 | Decedent's Race--First Other Literal | RACE22| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  | 
 | 83 | Decedent's Race--Missing | RACE_MVR| Decedent| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| Decedent| extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| Decedent| address.extension[stnum] | string |  | 
@@ -82,7 +82,7 @@
 | 137 | Place of death. State name literal | STATETEXT_D| DeathLocation| address.state | string |  | 
 | 138 | Place of death. Zip code | ZIP9_D| DeathLocation| address.postalCode | string |  | 
 | 139 | Place of death. County of Death | COUNTYTEXT_D| DeathLocation| address.district | string |  | 
-| 140 | Place of death. City FIPS code | CITYCODE_D| DeathLocation| address.city.extension[cityCode] | integer | see [CityCodes] | 
+| 140 | Place of death. City FIPS code | CITYCODE_D| DeathLocation| address.city.extension[ cityCode] | integer | see [CityCodes] | 
 | 141 | Place of death. Longitude | LONG_D| DeathLocation| position.longitude | float |  | 
 | 142 | Place of Death. Latitude | LAT_D| DeathLocation| position.latitude | float |  | 
 | 239 | Country of Death - Code | DTHCOUNTRYCD| DeathLocation| address.country  | string  | Not Used.  For US Death certificates should be US | 
@@ -183,7 +183,7 @@
 | 174 | Describe How Injury Occurred | HOWINJ| InjuryIncident| value.text | string |  | 
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| InjuryIncident| address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| InjuryLocation| address.district | string |  | 
-| 177 | County of Injury code | COUNTYCODE_I| InjuryLocation| address.district.extension[countyCode].value | integer | see [CountyCodes] | 
+| 177 | County of Injury code | COUNTYCODE_I| InjuryLocation| address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| InjuryLocation| address.city | string |  | 
 | 179 | Town/city of Injury code | CITYCODE_I| InjuryLocation| address.city.extension[ cityCode].value | integer | see [CityCodes] | 
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| InjuryLocation| address.state | string | [StatesTerritoriesProvincesVS] | 

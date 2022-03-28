@@ -16,7 +16,7 @@
 | 137 | Place of death. State name literal | STATETEXT_D| address.state | string |  | 
 | 138 | Place of death. Zip code | ZIP9_D| address.postalCode | string |  | 
 | 139 | Place of death. County of Death | COUNTYTEXT_D| address.district | string |  | 
-| 140 | Place of death. City FIPS code | CITYCODE_D| address.city.extension[cityCode] | integer | see [CityCodes] | 
+| 140 | Place of death. City FIPS code | CITYCODE_D| address.city.extension[ cityCode] | integer | see [CityCodes] | 
 | 141 | Place of death. Longitude | LONG_D| position.longitude | float |  | 
 | 142 | Place of Death. Latitude | LAT_D| position.latitude | float |  | 
 | 239 | Country of Death - Code | DTHCOUNTRYCD| address.country  | string  | Not Used.  For US Death certificates should be US | 
