@@ -104,4 +104,4 @@ Description: "Place Of Injury"
 * code = $loinc#11376-1 "Injury location" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept
-// * value[x] from $loinc:LL1051-3 -- these are the answers
+* value[x] from http://loinc.org/vs/LL1051-3 (required)
