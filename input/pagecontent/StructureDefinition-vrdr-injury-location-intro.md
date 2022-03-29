@@ -2,7 +2,7 @@
 
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 176 | County of Injury - literal | COUNTYTEXT_I| x|address.district | string |  | 
 | 177 | County of Injury code | COUNTYCODE_I| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| x|address.city | string |  | 

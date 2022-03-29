@@ -2,7 +2,7 @@
 
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 114 | Date of injury--month | DOI_MO| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 115 | Date of injury--day | DOI_DY| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 116 | Date of injury--year | DOI_YR| |effective | dateTime | See [PartialDatesAndTimes] | 

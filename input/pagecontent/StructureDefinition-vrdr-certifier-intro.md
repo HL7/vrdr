@@ -2,7 +2,7 @@
 The Certifier profile includes:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 220 | Certifier's First Name | CERTFIRST| x|name.given  | string |  | 
 | 221 | Certifier's Middle Name | CERTMIDDLE| x|name.given  | string |  | 
 | 222 | Certifier's Last Name | CERTLAST| x|name.family  | string |  | 

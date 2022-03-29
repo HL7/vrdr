@@ -4,7 +4,7 @@ ParamsForEmergingIssues profile supports placeholder fields required for 2022 su
                 There are 6 1-char fields (PLACE1_1-6), 3 8-char fields (PLACE8_1-3), and one 20-char field (PLACE20-1).
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 248 | Blank for One-Byte Field 1 | PLACE1_1| |parameter[PLACE1_1].value | string(1) |  | 
 | 249 | Blank for One-Byte Field 2 | PLACE1_2| |parameter[PLACE1_2].value | string(1) |  | 
 | 250 | Blank for One-Byte Field 3 | PLACE1_3| |parameter[PLACE1_3].value | string(1) |  | 

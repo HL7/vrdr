@@ -201,8 +201,8 @@ puts filename
 fullout = File.open(filename, "w")
 fullout.puts "### Data Dictionary"
 fullout.puts ""
-fullout.puts "| **#** |  **Description**   |  **IJE Name**   | IJE only | **Profile**  | **Field**  |  **Type**  | **Value Set**  |"
-fullout.puts "| --------- | --------------- | ------------ | ---------- | ------------ | ---------- | ---------- | -------------- |"
+fullout.puts "| **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |"
+fullout.puts "| :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |"
 
 profiles.each do |key, value|
   puts key
@@ -211,7 +211,7 @@ profiles.each do |key, value|
   out.puts value[:desc]
   out.puts ""
   out.puts "| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |"
-  out.puts "| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |"
+  out.puts "| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |"
   xlsx.each_row_streaming do |row|
     next if row[Profile] == nil || row[Profile].value != key
     field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""

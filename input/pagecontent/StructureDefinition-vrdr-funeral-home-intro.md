@@ -2,7 +2,7 @@
 
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 206 | Funeral Facility Name | FUNFACNAME| x|name | string |  | 
 | 207 | Funeral Facility - Street number | FUNFACSTNUM| x|address.extension[stnum] | string |  | 
 | 208 | Funeral Facility - Pre Directional | FUNFACPREDIR| x|address.extension[predir] | string |  | 

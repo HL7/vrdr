@@ -2,7 +2,7 @@
 
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
 | 31 | Place of Death | DPLACE| |type | codeable | [PlaceOfDeathVS] | 
 | 32 | County of Death Occurrence | COD| |address.district.extension[countyCode] | integer | see [CountyCodes] | 

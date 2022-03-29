@@ -2,7 +2,7 @@
 
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 169 | Mother's First Name | DMOMF| x|name.given | string |  | 
 | 170 | Mother's Middle Name | DMOMMID| x|name.given | string |  | 
 | 171 | Mother's Maiden Surname | DMOMMDN| x|name.family , name.type=maiden | string  |  | 

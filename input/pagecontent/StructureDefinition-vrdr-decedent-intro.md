@@ -2,7 +2,7 @@
 The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 7 | Decedent's Legal Name--Given  | GNAME| |name.given , name.use = official | string |  | 
 | 8 | Decedent's Legal Name--Middle | MNAME| |name.given , name.use = official (first letter) | string |  | 
 | 9 | Decedent's Legal Name--Last | LNAME| |name.family , name.use = official | string |  | 
