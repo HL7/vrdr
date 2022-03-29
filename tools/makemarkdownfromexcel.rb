@@ -18,13 +18,14 @@ end
 IJEField = 0
 IJEBegin = 1
 IJELength = 2
-CodeStructureDescription = 4
 Description = 3
 IJEName = 4
-Profile = 6
-FHIRField = 7
-FHIRType = 8
-FHIREncoding = 9
+CodeStructureDescription = 5
+IJEOnly = 6
+Profile = 7
+FHIRField = 8
+FHIRType = 9
+FHIREncoding = 10
 
 profiles = Hash.new
 profiles["AutopsyPerformedIndicator"] = { :out => "StructureDefinition-vrdr-autopsy-performed-indicator-intro.md",
@@ -200,8 +201,8 @@ puts filename
 fullout = File.open(filename, "w")
 fullout.puts "### Data Dictionary"
 fullout.puts ""
-fullout.puts "| **#** |  **Description**   |  **IJE Name**   |   **Profile**  | **Field**  |  **Type**  | **Value Set**  |"
-fullout.puts "| --------- | --------------- | ------------- | ------------ | ---------- | ---------- | -------------- |"
+fullout.puts "| **#** |  **Description**   |  **IJE Name**   | IJE only | **Profile**  | **Field**  |  **Type**  | **Value Set**  |"
+fullout.puts "| --------- | --------------- | ------------ | ---------- | ------------ | ---------- | ---------- | -------------- |"
 
 profiles.each do |key, value|
   puts key
@@ -209,20 +210,25 @@ profiles.each do |key, value|
   out.puts "### Usage"
   out.puts value[:desc]
   out.puts ""
-  out.puts "| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |"
-  out.puts "| ---------| ------------- | ------------ | -------------- | -------- | -------- |"
+  out.puts "| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |"
+  out.puts "| ---------| ------------- | ------------ | ---------- |---------- | -------- | -------- |"
   xlsx.each_row_streaming do |row|
     next if row[Profile] == nil || row[Profile].value != key
-    field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ""
+    field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
     field = row[IJEField].value.to_s if row[IJEField]
     ijename = row[IJEName].value.to_s if row[IJEName]
+    if row[IJEOnly]
+      # puts row[IJEOnly].to_s
+      ijeonly = "x" if row[IJEOnly].to_s == "i"
+    end
+    # puts "field = " + field + " ijeonly =" + ijeonly
     profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
     fhirfield = row[FHIRField].value.to_s if row[FHIRField]
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
-    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
-    out.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + profile + "| " + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    out.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| "  + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
   end
   out.puts "{: .grid }"
   out.puts "{% include markdown-link-references.md %}"
