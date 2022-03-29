@@ -217,10 +217,7 @@ profiles.each do |key, value|
     field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
     field = row[IJEField].value.to_s if row[IJEField]
     ijename = row[IJEName].value.to_s if row[IJEName]
-    if row[IJEOnly]
-      # puts row[IJEOnly].to_s
-      ijeonly = "x" if row[IJEOnly].to_s == "i"
-    end
+    ijeonly = "x"  if row[IJEOnly]
     # puts "field = " + field + " ijeonly =" + ijeonly
     profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
     fhirfield = row[FHIRField].value.to_s if row[FHIRField]
