@@ -50,6 +50,7 @@
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
 | 31 | Place of Death | DPLACE| [DeathLocation]| type | codeable | [PlaceOfDeathVS] | 
 | 32 | County of Death Occurrence | COD| [DeathLocation]| address.district.extension[countyCode] | integer | see [CountyCodes] | 
+| 129 | Death Institution name | DINSTI| [DeathLocation]| name | string  |  | 
 | 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| address.line | string  |  | 
 | 131 | Place of death. Street number | STNUM_D| [DeathLocation]| address.extension[stnum] | string |  | 
 | 132 | Place of death. Pre Directional | PREDIR_D| [DeathLocation]| address.extension[predir] | string |  | 
@@ -103,14 +104,14 @@
 | 56 | Decedent's Race--Samoan | RACE13| [Decedent]| extension[ NVSSRace].extension[ Samoan].valueBoolean | boolean |  | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslander].valueBoolean | boolean |  | 
 | 58 | Decedent's Race--Other | RACE15| [Decedent]| extension[ NVSSRace].extension[ OtherRace].valueBoolean | boolean |  | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [Decedent]| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][0].valueString | string |  | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [Decedent]| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][1].valueString | string |  | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| [Decedent]| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[0] | string |  | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [Decedent]| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[1] | string |  | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[0]   | string |  | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[1]   | string |  | 
-| 65 | Decedent's Race--First Other Literal | RACE22| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[0] | string |  | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[1] | string |  | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [Decedent]| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [Decedent]| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| [Decedent]| extension[ NVSSRace].extension[ OtherAsianLiteral1].valueString | string |  | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [Decedent]| extension[ NVSSRace].extension[ OtherAsianLiteral2].valueString | string |  | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslandLiteral1].valueString | string |  | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  | 
+| 65 | Decedent's Race--First Other Literal | RACE22| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| [Decedent]| address.extension[stnum] | string |  | 
@@ -156,7 +157,6 @@
 | 175 | If Transportation Accident, Specify | TRANSPRT| [DecedentTransportationRole]| value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 84 | Occupation -- Literal (REQUIRED) | OCCUP| [DecedentUsualWork]| value.text | string(40) |  | 
 | 86 | Industry -- Literal (REQUIRED) | INDUST| [DecedentUsualWork]| component.value.text | string(40) |  | 
-| 129 | Death Institution name | DINSTI| [DispositionLocation]| name | string  |  | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| address.state | string | [StatesTerritoriesProvincesVS] | 
 | 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| address.state | string | [StatesTerritoriesProvincesVS] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| address.city.extension[ cityCode].value | integer | see [CityCodes] | 
