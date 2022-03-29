@@ -2,6 +2,69 @@
 
 | **#** |  **Description**   |  **IJE Name**   |   **Profile**  | **Field**  |  **Type**  | **Value Set**  |
 | --------- | --------------- | ------------- | ------------ | ---------- | ---------- | -------------- |
+| 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| value | codeable | [YesNoUnknownVS] | 
+| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| component[$loinc#69436-4].value | codeable | [YesNoUnknownNotApplicableVS] | 
+| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| value | string(6) |  | 
+| 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| component[birthYear].value | dateTime | YYYY component | 
+| 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| component[birthJurisdiction].value | string | [JurisdictionVS] | 
+| 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| value.text | string(120) |  | 
+| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
+| 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| value.text | string(120) |  | 
+| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
+| 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| value.text | string(120) |  | 
+| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
+| 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| value.text | string(120) |  | 
+| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
+| 193 | Cause of Death Part II | OTHERCONDITION| [CauseOfDeathPart2]| value.text | string(240) |  | 
+| 220 | Certifier's First Name | CERTFIRST| [Certifier]| name.given  | string |  | 
+| 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| name.given  | string |  | 
+| 222 | Certifier's Last Name | CERTLAST| [Certifier]| name.family  | string |  | 
+| 223 | Certifier's Suffix Name | CERTSUFFIX| [Certifier]| name.suffix  | string |  | 
+| 224 | Certifier - Street number | CERTSTNUM| [Certifier]| address.extension[stnum] | string |  | 
+| 225 | Certifier - Pre Directional | CERTPREDIR| [Certifier]| address.extension[predir] | string |  | 
+| 226 | Certifier - Street name | CERTSTRNAME| [Certifier]| address.extension[stname] | string |  | 
+| 227 | Certifier - Street designator | CERTSTRDESIG| [Certifier]| address.extension[stdesig] | string |  | 
+| 228 | Certifier - Post Directional | CERTPOSTDIR| [Certifier]| address.extension[postdir] | string |  | 
+| 229 | Certifier - Unit or apt number | CERTUNITNUM| [Certifier]| address.extension[unitnum] | string |  | 
+| 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| [Certifier]| address.line  | string |  | 
+| 231 | Certifier - City or Town name | CERTCITYTEXT| [Certifier]| address.city  | string |  | 
+| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| address.state | string | [StatesTerritoriesProvincesVS] | 
+| 234 | Certifier - Zip | CERTZIP| [Certifier]| address.postalCode | string |  | 
+| 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
+| 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| date | dateTime |  | 
+| 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| date | dateTime |  | 
+| 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| date | dateTime |  | 
+| 122 | State Specific Data  | STATESP| [DeathCertificate]| extension[ stateSpecificField] | string(30) |  | 
+| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| identifier.value | string(6) |  | 
+| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| identifier.extension[auxiliaryStateIdentifier1].value | string(12) |  | 
+| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| identifier.extension[auxiliaryStateIdentifier2].value | string(12) |  | 
+| 1 | Date of Death--Year | DOD_YR| [DeathDate]| value | dateTime | Required for processing | 
+| 34 | Date of Death--Month | DOD_MO| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
+| 35 | Date of Death--Day | DOD_DY| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
+| 36 | Time of Death | TOD| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| component[$loinc#80616-6].value | dateTime |  | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| component[$loinc#80616-6].value | dateTime |  | 
+| 119 | Title of Certifier | CERTL| [DeathCertification]| performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
+| 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| performed | dateTime |  | 
+| 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
+| 31 | Place of Death | DPLACE| [DeathLocation]| type | codeable | [PlaceOfDeathVS] | 
+| 32 | County of Death Occurrence | COD| [DeathLocation]| address.district.extension[countyCode] | integer | see [CountyCodes] | 
+| 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| address.line | string  |  | 
+| 131 | Place of death. Street number | STNUM_D| [DeathLocation]| address.extension[stnum] | string |  | 
+| 132 | Place of death. Pre Directional | PREDIR_D| [DeathLocation]| address.extension[predir] | string |  | 
+| 133 | Place of death. Street name | STNAME_D| [DeathLocation]| address.extension[stname] | string |  | 
+| 134 | Place of death. Street designator | STDESIG_D| [DeathLocation]| address.extension[stdesig] | string |  | 
+| 135 | Place of death. Post Directional | POSTDIR_D| [DeathLocation]| address.extension[postdir] | string |  | 
+| 136 | Place of death. City or Town name | CITYTEXT_D| [DeathLocation]| address.city | string |  | 
+| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| address.state | string |  | 
+| 138 | Place of death. Zip code | ZIP9_D| [DeathLocation]| address.postalCode | string |  | 
+| 139 | Place of death. County of Death | COUNTYTEXT_D| [DeathLocation]| address.district | string |  | 
+| 140 | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| address.city.extension[ cityCode] | integer | see [CityCodes] | 
+| 141 | Place of death. Longitude | LONG_D| [DeathLocation]| position.longitude | float |  | 
+| 142 | Place of Death. Latitude | LAT_D| [DeathLocation]| position.latitude | float |  | 
+| 239 | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| address.country  | string  | Not Used.  For US Death certificates should be US | 
+| 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| address.country  | string  | Not used. For US Death certificates should be US | 
 | 7 | Decedent's Legal Name--Given  | GNAME| [Decedent]| name.given , name.use = official | string |  | 
 | 8 | Decedent's Legal Name--Middle | MNAME| [Decedent]| name.given , name.use = official (first letter) | string |  | 
 | 9 | Decedent's Legal Name--Last | LNAME| [Decedent]| name.family , name.use = official | string |  | 
@@ -69,69 +132,6 @@
 | 201 | Informant's Relationship | INFORMRELATE| [Decedent]| contact.type.text  | string (30 characters) |  | 
 | 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| [Decedent]| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | Expanded from coded value | 
 | 246 | Marital Descriptor | MARITAL_DESCRIP| [Decedent]| maritalStatus.text  | string |  | 
-| 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
-| 31 | Place of Death | DPLACE| [DeathLocation]| type | codeable | [PlaceOfDeathVS] | 
-| 32 | County of Death Occurrence | COD| [DeathLocation]| address.district.extension[countyCode] | integer | see [CountyCodes] | 
-| 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| address.line | string  |  | 
-| 131 | Place of death. Street number | STNUM_D| [DeathLocation]| address.extension[stnum] | string |  | 
-| 132 | Place of death. Pre Directional | PREDIR_D| [DeathLocation]| address.extension[predir] | string |  | 
-| 133 | Place of death. Street name | STNAME_D| [DeathLocation]| address.extension[stname] | string |  | 
-| 134 | Place of death. Street designator | STDESIG_D| [DeathLocation]| address.extension[stdesig] | string |  | 
-| 135 | Place of death. Post Directional | POSTDIR_D| [DeathLocation]| address.extension[postdir] | string |  | 
-| 136 | Place of death. City or Town name | CITYTEXT_D| [DeathLocation]| address.city | string |  | 
-| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| address.state | string |  | 
-| 138 | Place of death. Zip code | ZIP9_D| [DeathLocation]| address.postalCode | string |  | 
-| 139 | Place of death. County of Death | COUNTYTEXT_D| [DeathLocation]| address.district | string |  | 
-| 140 | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| address.city.extension[ cityCode] | integer | see [CityCodes] | 
-| 141 | Place of death. Longitude | LONG_D| [DeathLocation]| position.longitude | float |  | 
-| 142 | Place of Death. Latitude | LAT_D| [DeathLocation]| position.latitude | float |  | 
-| 239 | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| address.country  | string  | Not Used.  For US Death certificates should be US | 
-| 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| address.country  | string  | Not used. For US Death certificates should be US | 
-| 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| value | codeable | [YesNoUnknownVS] | 
-| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| component[$loinc#69436-4].value | codeable | [YesNoUnknownNotApplicableVS] | 
-| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| value | string(6) |  | 
-| 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| component[birthYear].value | dateTime | YYYY component | 
-| 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| component[birthJurisdiction].value | string | [JurisdictionVS] | 
-| 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| value.text | string(120) |  | 
-| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
-| 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| value.text | string(120) |  | 
-| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
-| 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| value.text | string(120) |  | 
-| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
-| 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| value.text | string(120) |  | 
-| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| component[$loinc#69440-6].value | string(20) |  | 
-| 193 | Cause of Death Part II | OTHERCONDITION| [CauseOfDeathPart2]| value.text | string(240) |  | 
-| 220 | Certifier's First Name | CERTFIRST| [Certifier]| name.given  | string |  | 
-| 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| name.given  | string |  | 
-| 222 | Certifier's Last Name | CERTLAST| [Certifier]| name.family  | string |  | 
-| 223 | Certifier's Suffix Name | CERTSUFFIX| [Certifier]| name.suffix  | string |  | 
-| 224 | Certifier - Street number | CERTSTNUM| [Certifier]| address.extension[stnum] | string |  | 
-| 225 | Certifier - Pre Directional | CERTPREDIR| [Certifier]| address.extension[predir] | string |  | 
-| 226 | Certifier - Street name | CERTSTRNAME| [Certifier]| address.extension[stname] | string |  | 
-| 227 | Certifier - Street designator | CERTSTRDESIG| [Certifier]| address.extension[stdesig] | string |  | 
-| 228 | Certifier - Post Directional | CERTPOSTDIR| [Certifier]| address.extension[postdir] | string |  | 
-| 229 | Certifier - Unit or apt number | CERTUNITNUM| [Certifier]| address.extension[unitnum] | string |  | 
-| 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| [Certifier]| address.line  | string |  | 
-| 231 | Certifier - City or Town name | CERTCITYTEXT| [Certifier]| address.city  | string |  | 
-| 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| address.state | string | [StatesTerritoriesProvincesVS] | 
-| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| address.state | string | [StatesTerritoriesProvincesVS] | 
-| 234 | Certifier - Zip | CERTZIP| [Certifier]| address.postalCode | string |  | 
-| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| identifier.value | string(6) |  | 
-| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| identifier.extension[auxiliaryStateIdentifier1].value | string(12) |  | 
-| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| identifier.extension[auxiliaryStateIdentifier2].value | string(12) |  | 
-| 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
-| 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| date | dateTime |  | 
-| 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| date | dateTime |  | 
-| 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| date | dateTime |  | 
-| 122 | State Specific Data  | STATESP| [DeathCertificate]| extension[ stateSpecificField] | string(30) |  | 
-| 119 | Title of Certifier | CERTL| [DeathCertification]| performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
-| 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| performed | dateTime |  | 
-| 1 | Date of Death--Year | DOD_YR| [DeathDate]| value | dateTime | Required for processing | 
-| 34 | Date of Death--Month | DOD_MO| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
-| 35 | Date of Death--Day | DOD_DY| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
-| 36 | Time of Death | TOD| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| component[$loinc#80616-6].value | dateTime |  | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| component[$loinc#80616-6].value | dateTime |  | 
 | 16 | Decedent's Age--Type | AGETYPE| [DecedentAge]| valueQuantity.system | codeable | [UnitsOfAgeVS] | 
 | 17 | Decedent's Age--Units | AGE | [DecedentAge]| valueQuantity.value | decimal |  | 
 | 18 | Decedent's Age--Edit Flag | AGE_BYPASS| [DecedentAge]| value.extension[BypassEditFlag].value | codeable | [EditBypass01VS] | 

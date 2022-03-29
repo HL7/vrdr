@@ -27,10 +27,6 @@ FHIRType = 8
 FHIREncoding = 9
 
 profiles = Hash.new
-profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
-                         :desc => "The Decedent profile contains basic information about the decedent, including data that are essential to the death record." }
-profiles["DeathLocation"] = { :out => "StructureDefinition-vrdr-death-location-intro.md",
-                              :desc => "" }
 profiles["AutopsyPerformedIndicator"] = { :out => "StructureDefinition-vrdr-autopsy-performed-indicator-intro.md",
                                           :desc => "The Autopsy Performed Indicator profile captures the following values:" }
 profiles["BirthRecordIdentifier"] = { :out => "StructureDefinition-vrdr-birth-record-identifier-intro.md",
@@ -44,13 +40,6 @@ profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-dea
                                   :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["Certifier"] = { :out => "StructureDefinition-vrdr-certifier-intro.md",
                           :desc => "The Certifier profile includes:" }
-profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
-                                        :desc => "The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.
-
-                         Note that the unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
-
-                         In addition to  the [DeathCertificate] Bundle it includes the following content:
-                         " }
 profiles["DeathCertificate"] = { :out => "StructureDefinition-vrdr-death-certificate-intro.md",
                                 :desc => "The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
 
@@ -98,18 +87,32 @@ The content is broken down into the following sections:
     * [FuneralHome]
 
 The profile includes:" }
+profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
+  :desc => "The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.
+
+Note that the unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
+
+In addition to  the [DeathCertificate] Bundle it includes the following content:
+" }
+profiles["DeathDate"] = {
+  :out => "StructureDefinition-vrdr-death-date-intro.md",
+  :desc => "The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
+
+  The certificate signing date is passed via the [DeathCertification] profile.
+
+  The death date specifies the date the death occurred, not the date the record was submitted.
+
+  The pronouncer of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument] and referenced from the [DeathCertificate].",
+}
 profiles["DeathCertification"] = {
   :out => "StructureDefinition-vrdr-death-certification-intro.md",
   :desc => "The Death Certification profile includes:",
 }
-profiles["DeathDate"] = {
-  :out => "StructureDefinition-vrdr-death-date-intro.md",
-  :desc => "The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
-                The certificate signing date is passed via the [DeathCertification] profile.
-
-                The death date specifies the date the death occurred, not the date the record was submitted.",
-}
-profiles["DecedentAge"] = {
+profiles["DeathLocation"] = { :out => "StructureDefinition-vrdr-death-location-intro.md",
+  :desc => "" }
+profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
+  :desc => "The Decedent profile contains basic information about the decedent, including data that are essential to the death record." }
+  profiles["DecedentAge"] = {
   :out => "StructureDefinition-vrdr-decedent-age-intro.md",
   :desc => "",
 }
