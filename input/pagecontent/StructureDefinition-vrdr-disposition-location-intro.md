@@ -1,5 +1,5 @@
 ### Usage
-
+Implementors are free to use the name field for the name of the disposition location.
 
 | **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
 | ---------| ------------- | ------------ | -------------- | -------- | -------- |

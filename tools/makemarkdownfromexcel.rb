@@ -154,7 +154,7 @@ profiles["DecedentUsualWork"] = {
 }
 profiles["DispositionLocation"] = {
   :out => "StructureDefinition-vrdr-disposition-location-intro.md",
-  :desc => "",
+  :desc => "Implementors are free to use the name field for the name of the disposition location.",
 }
 profiles["ExaminerContacted"] = {
   :out => "StructureDefinition-vrdr-examiner-contacted-intro.md",

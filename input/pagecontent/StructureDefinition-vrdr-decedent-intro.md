@@ -23,8 +23,8 @@ The Decedent profile contains basic information about the decedent, including da
 | 30 | Marital Status--Edit Flag | MARITAL_BYPASS| maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| extension[ NVSSEthnicity].extension[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| extension[ NVSSEthnicity].extension[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| extension[ NVSSEthnicity].extension[ Hispanic Other ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| extension[ NVSSEthnicity].extension[ Hispanic Cuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| extension[ NVSSEthnicity].extension[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| extension[ NVSSEthnicity].extension[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| extension[ NVSSEthnicity].extension[ HispanicLiteral ].valueString | string |  | 
 | 44 | Decedent's Race--White | RACE1| extension[ NVSSRace].extension[ White].valueBoolean | boolean |  | 
 | 45 | Decedent's Race--Black or African American | RACE2| extension[ NVSSRace].extension[ BlackOrAfricanAmerican].valueBoolean | boolean |  | 
