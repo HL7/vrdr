@@ -41,14 +41,14 @@ The Decedent profile contains basic information about the decedent, including da
 | 56 | Decedent's Race--Samoan | RACE13| extension[ NVSSRace].extension[ Samoan].valueBoolean | boolean |  | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| extension[ NVSSRace].extension[ OtherPacificIslander].valueBoolean | boolean |  | 
 | 58 | Decedent's Race--Other | RACE15| extension[ NVSSRace].extension[ OtherRace].valueBoolean | boolean |  | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| extension[ NVSSRace].extension[ OtherAsianLiteral1].valueString | string |  | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| extension[ NVSSRace].extension[ OtherAsianLiteral2].valueString | string |  | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| extension[ NVSSRace].extension[ OtherPacificIslandLiteral1].valueString | string |  | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  | 
-| 65 | Decedent's Race--First Other Literal | RACE22| extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][0].valueString | string |  | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][1].valueString | string |  | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[0] | string |  | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[1] | string |  | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[0]   | string |  | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[1]   | string |  | 
+| 65 | Decedent's Race--First Other Literal | RACE22| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[0] | string |  | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[1] | string |  | 
 | 83 | Decedent's Race--Missing | RACE_MVR| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| address.extension[stnum] | string |  | 

@@ -40,14 +40,14 @@
 | 56 | Decedent's Race--Samoan | RACE13| Decedent| extension[ NVSSRace].extension[ Samoan].valueBoolean | boolean |  | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| Decedent| extension[ NVSSRace].extension[ OtherPacificIslander].valueBoolean | boolean |  | 
 | 58 | Decedent's Race--Other | RACE15| Decedent| extension[ NVSSRace].extension[ OtherRace].valueBoolean | boolean |  | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral1].valueString | string |  | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral2].valueString | string |  | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral1].valueString | string |  | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  | 
-| 65 | Decedent's Race--First Other Literal | RACE22| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][0].valueString | string |  | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| Decedent| extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral][1].valueString | string |  | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[0] | string |  | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| Decedent| extension[ NVSSRace].extension[ OtherAsianLiteral].valueString[1] | string |  | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[0]   | string |  | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| Decedent| extension[ NVSSRace].extension[ OtherPacificIslandLiteral].valueString[1]   | string |  | 
+| 65 | Decedent's Race--First Other Literal | RACE22| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[0] | string |  | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| Decedent| extension[ NVSSRace].extension[ OtherRaceLiteral].valueString[1] | string |  | 
 | 83 | Decedent's Race--Missing | RACE_MVR| Decedent| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| Decedent| extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| Decedent| address.extension[stnum] | string |  | 
@@ -153,6 +153,7 @@
 | 198 | Spouse's Suffix | SPOUSESUFFIX| DecedentSpouse| name.suffix | string |  | 
 | 112 | Pregnancy | PREG| DecedentPregnancyStatus| value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| DecedentPregnancyStatus| value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
+| 175 | If Transportation Accident, Specify | TRANSPRT| DecedentTransportationRole| value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 84 | Occupation -- Literal (REQUIRED) | OCCUP| DecedentUsualWork| value.text | string(40) |  | 
 | 86 | Industry -- Literal (REQUIRED) | INDUST| DecedentUsualWork| component.value.text | string(40) |  | 
 | 129 | Death Institution name | DINSTI| DispositionLocation| name | string  |  | 
