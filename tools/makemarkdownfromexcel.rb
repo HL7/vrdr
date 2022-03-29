@@ -213,12 +213,12 @@ profiles.each do |key, value|
     field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ""
     field = row[IJEField].value.to_s if row[IJEField]
     ijename = row[IJEName].value.to_s if row[IJEName]
-    profile = row[Profile].value.to_s if row[Profile]
+    profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
     fhirfield = row[FHIRField].value.to_s if row[FHIRField]
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
-    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + key + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
     out.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
   end
   out.puts "{: .grid }"
