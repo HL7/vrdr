@@ -69,7 +69,7 @@
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
-[ParametersForEmergingIssues]: StructureDefinition-vrdr-parameters-for-emerging-issues.html
+[ParamsForEmergingIssues]: StructureDefinition-vrdr-params-for-emerging-issues.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDate]: StructureDefinition-PartialDate.html
 [PartialDateTime]: StructureDefinition-PartialDateTime.html
