@@ -106,9 +106,30 @@ Description: "Place Of Injury"
 * value[x] only CodeableConcept
 * value[x] from http://loinc.org/vs/LL1051-3 (required)
 
+
+RuleSet: obscodecomponent(code, valueSet)
+* component contains {code} 1..1
+* component[{code}].code 1..1
+* component[{code}].code = #{code} "{code}" (exactly)
+* component[{code}].value[x] 1..1
+* component[{code}].value[x] only CodeableConcept
+* component[{code}] ^short = "{code}"
+* component[{code}].value[x] from {valueSet}
+
+
+ValueSet: RaceCodesVS
+Id: vrdr-race-codes-vs
+Description: "Race Codes VS"
+Title: "Race Codes VS"
+* $v2-0136#Y "Yes"
+* $v2-0136#N "No"
+* $v3-NullFlavor#UNK "unknown"
+* $v3-NullFlavor#NA "not applicable"
+
+
 Profile: CodedRaceAndEthnicity
 Parent: Observation
-Id: vrdr-coded-race-and-ethnicity-injury
+Id: vrdr-coded-race-and-ethnicity
 Title: "Coded Race and Ethnicity"
 Description: "Coded Race and Ethnicity"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
@@ -117,13 +138,11 @@ Description: "Coded Race and Ethnicity"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
-* component contains
-    lineNumber 1..1 and
-    position 1..1 and
-    eCodeIndicator 0..1
-* component[lineNumber].code 1..1
-* component[lineNumber].code = #lineNumber "lineNumber" (exactly)
-* component[lineNumber].value[x] 1..1
-* component[lineNumber].value[x] only integer
-* component[lineNumber] ^short = "lineNumber"
-* component[lineNumber].valueInteger ^short = "lineNumber"
+* insert obscodecomponent(RACE1E,RaceCodesVS)
+* insert obscodecomponent(RACE2E,RaceCodesVS)
+* insert obscodecomponent(RACE8E,RaceCodesVS)
+* insert obscodecomponent(RACE16C,RaceCodesVS)
+* insert obscodecomponent(RACE23C,RaceCodesVS)
+* insert obscodecomponent(RECODE40,RaceCodesVS)
+* insert obscodecomponent(DETHNICE,RaceCodesVS)
+* insert obscodecomponent(DETHNIC5C,RaceCodesVS)
