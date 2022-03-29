@@ -116,6 +116,14 @@ RuleSet: obscodecomponent(code, valueSet)
 * component[{code}] ^short = "{code}"
 * component[{code}].value[x] from {valueSet}
 
+RuleSet: primobscodecomponent(code, type)
+* component contains {code} 1..1
+* component[{code}].code 1..1
+* component[{code}].code = #{code} "{code}" (exactly)
+* component[{code}].value[x] 1..1
+* component[{code}].value[x] only {type}
+* component[{code}] ^short = "{code}"
+
 
 ValueSet: RaceCodesVS
 Id: vrdr-race-codes-vs
@@ -131,7 +139,7 @@ Profile: CodedRaceAndEthnicity
 Parent: Observation
 Id: vrdr-coded-race-and-ethnicity
 Title: "Coded Race and Ethnicity"
-Description: "Coded Race and Ethnicity"
+Description: "Coded (from NCHS) Race and Ethnicity"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
 * code = #codedraceandethnicity "Coded Race and Ethnicity" (exactly)
 * value[x] 0..0
@@ -146,3 +154,42 @@ Description: "Coded Race and Ethnicity"
 * insert obscodecomponent(RECODE40,RaceCodesVS)
 * insert obscodecomponent(DETHNICE,RaceCodesVS)
 * insert obscodecomponent(DETHNIC5C,RaceCodesVS)
+
+Profile: InputRaceAndEthnicity
+Parent: Observation
+Id: vrdr-input-race-and-ethnicity
+Title: "Input Race and Ethnicity"
+Description: "Input (from EDRS) Race and Ethnicity"
+* insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
+* code = #inputraceandethnicity "Input Race and Ethnicity" (exactly)
+* value[x] 0..0
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* insert primobscodecomponent(White,boolean)
+* insert primobscodecomponent(BlackOrAfricanAmerican,boolean)
+* insert primobscodecomponent(OtherRaceLiteral,string)
+* insert obscodecomponent(RACEMVR,$raceMissingValueReason)
+
+
+
+// * insert Extension(White, 0, 1, White, White, boolean)
+// * insert Extension(BlackOrAfricanAmerican, 0, 1, Black Or African American, Black Or African American, boolean)
+// * insert Extension(AmericanIndianOrAlaskaNative, 0, 1, American Indian Or Alaska Native, American Indian Or Alaska Native, boolean)
+// * insert Extension(AsianIndian, 0, 1, Asian Indian, Asian Indian, boolean)
+// * insert Extension(Chinese, 0, 1, Chinese, CHinese, boolean)
+// * insert Extension(Filipino, 0, 1, Filipino, Filipino, boolean)
+// * insert Extension(Japanese, 0, 1, Japanese, Japanese, boolean)
+// * insert Extension(Korean, 0, 1, Korean, Korean, boolean)
+// * insert Extension(Vietnamese, 0, 1, Vietnamese,Vietnamese, boolean)
+// * insert Extension(OtherAsian, 0, 1, Other Asian, OtherAsian, boolean)
+// * insert Extension(NativeHawaiian, 0, 1, Native Hawaiian, Native Hawaiian, boolean)
+// * insert Extension(GuamanianOrChamorro, 0, 1, Guamanian Or Chamorro, Guamanian Or Chamorro, boolean)
+// * insert Extension(Samoan, 0, 1, Samoan, Samoan, boolean)
+// * insert Extension(OtherPacificIslander, 0, 1, Other Pacific Islander, Other Pacific Islander, boolean)
+// * insert Extension(OtherRace, 0, 1, Other Race, Other Race, boolean)
+// * insert Extension(AmericanIndianOrAlaskaNativeLiteral, 0, 2, American Indian Or Alaska Native Literal, American Indian Or Alaska Native Literal, string)
+// * insert Extension(OtherAsianLiteral, 0, 2, Other Asian Literal, Other Asian Literal, string)
+// * insert Extension(OtherPacificIslanderLiteral, 0, 2, Other Pacific Islander Literal, Other Pacific Islander Literal, string)
+// * insert Extension(OtherRaceLiteral, 0, 2, Other Race Literal, Other Race Literal, string)
+// * insert Extension(MissingValueReason, 0, 1, Missing Value Reason, MissingValueReason, Coding)
