@@ -226,8 +226,7 @@
 | 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| | |  |  | 
 | 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| | |  |  | 
 | 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| | |  |  | 
-| 160 | Hispanic -
-NCHS will send this information to occurrence state for editing or special codes. Send it if available at the time of regular transmission to receiving states. Do not wait to obtain from NCHS if outside of the normal time frame for Interjurisdictional exchange | DETHNICE | [CodedRaceAndEthnicity]| |component[DETHNICE].value | codeable |  | 
+| 160 | Hispanic | DETHNICE | [CodedRaceAndEthnicity]| |component[DETHNICE].value | codeable |  | 
 | 247 | Hispanic Code for Literal | <html>DETHNIC5C<b> </b></html>| [CodedRaceAndEthnicity]| |component[DETHNIC5C].value |  |  | 
 {: .grid }
 {% include markdown-link-references.md %}
