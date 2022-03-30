@@ -115,3 +115,9 @@
 [CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
 [InjuryLocation]: https://loinc.org/LL1051-3/
+[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
+[PlaceOfInjury]: StructureDefinition-vrdr-place-of-injury.html
+[EntityAxisCauseOfDeath]: StructureDefinition-vrdr-entity-axis-cause-of-death.html
+[RecordAxisCauseOfDeath]: StructureDefinition-vrdr-record-axis-cause-of-death.html
+[ManualUnderlyingCauseOfDeath]: StructureDefinition-vrdr-manual-underlying-cause-of-death.html
+[AutomatedUnderlyingCauseOfDeath]: StructureDefinition-vrdr-automated-underlying-cause-of-death.html
