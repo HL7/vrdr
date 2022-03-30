@@ -1,7 +1,8 @@
 ### Usage
 
 
-| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |
-| ---------| ------------- | ------------ | -------------- | -------- | -------- |
+| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
+| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
+| 108 | Record-axis codes | RAC| |see Profile for description |  |  | 
 {: .grid }
 {% include markdown-link-references.md %}

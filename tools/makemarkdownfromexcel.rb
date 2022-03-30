@@ -18,19 +18,16 @@ end
 IJEField = 0
 IJEBegin = 1
 IJELength = 2
-CodeStructureDescription = 4
 Description = 3
 IJEName = 4
-Profile = 6
-FHIRField = 7
-FHIRType = 8
-FHIREncoding = 9
+CodeStructureDescription = 5
+IJEOnly = 6
+Profile = 7
+FHIRField = 8
+FHIRType = 9
+FHIREncoding = 10
 
 profiles = Hash.new
-profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
-                         :desc => "The Decedent profile contains basic information about the decedent, including data that are essential to the death record." }
-profiles["DeathLocation"] = { :out => "StructureDefinition-vrdr-death-location-intro.md",
-                              :desc => "" }
 profiles["AutopsyPerformedIndicator"] = { :out => "StructureDefinition-vrdr-autopsy-performed-indicator-intro.md",
                                           :desc => "The Autopsy Performed Indicator profile captures the following values:" }
 profiles["BirthRecordIdentifier"] = { :out => "StructureDefinition-vrdr-birth-record-identifier-intro.md",
@@ -44,72 +41,79 @@ profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-dea
                                   :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["Certifier"] = { :out => "StructureDefinition-vrdr-certifier-intro.md",
                           :desc => "The Certifier profile includes:" }
-profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
-                                        :desc => "The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.
-
-                         Note that the unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
-
-                         In addition to  the [DeathCertificate] Bundle it includes the following content:
-                         " }
 profiles["DeathCertificate"] = { :out => "StructureDefinition-vrdr-death-certificate-intro.md",
                                 :desc => "The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
 
-                         Additional content can be included (in what section?) in the Death Certificate based on standard resources and profiles.
-                         Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
-                         For example:
-                         * Funeral Home Licensee (USCorePractitionerRole)
-                         * Mortician (USCorePractitioner)
-                         * Funeral Home Director (USCorePractitionerRole)
-                         * Death Pronouncement Performer (USCorePractitioner)
+Additional content can be included (in what section?) in the Death Certificate based on standard resources and profiles.
+Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+For example:
+* Funeral Home Licensee (USCorePractitionerRole)
+* Mortician (USCorePractitioner)
+* Funeral Home Director (USCorePractitionerRole)
+* Death Pronouncement Performer (USCorePractitioner)
 
-                         The content is broken down into the following sections:
-                         * Decedent Demographics
-                             * [BirthRecordIdentifier]
-                             * [Decedent]
-                             * [DecedentAge]
-                             * [DecedentEducationLevel]
-                             * [DecedentFather]
-                             * [DecedentMilitaryService]
-                             * [Parameters2022]
-                             * [DecedentMother]
-                             * [DecedentSpouse]
-                             * [DecedentUsualWork]
-                         * Death Investigation
-                             * [AutopsyPerformedIndicator]
-                             * [DeathDate]
-                             * [DeathLocation]
-                             * [DecedentPregnancyStatus]
-                             * [DecedentTransportationRole]
-                             * [ExaminerContacted]
-                             * [InjuryIncident]
-                             * [InjuryLocation]
-                             * [SurgeryDate]
-                             * [TobaccoUseContributedToDeath]
-                         * Death Certification
-                             * [Certifier]
-                             * [DeathCertification]
-                             * [CauseOfDeathPart1]
-                             * [CauseOfDeathPathway]
-                             * [CauseOfDeathPart2]
-                             * [MannerOfDeath]
-                         * Decedent Disposition
-                             * [DecedentDispositionMethod]
-                             * [DispositionLocation]
-                             * [FuneralHome]
+The content is broken down into the following sections:
+* Decedent Demographics
+    * [BirthRecordIdentifier]
+    * [Decedent]
+    * [DecedentAge]
+    * [DecedentEducationLevel]
+    * [DecedentFather]
+    * [DecedentMilitaryService]
+    * [Parameters2022]
+    * [DecedentMother]
+    * [DecedentSpouse]
+    * [DecedentUsualWork]
+* Death Investigation
+    * [AutopsyPerformedIndicator]
+    * [DeathDate]
+    * [DeathLocation]
+    * [DecedentPregnancyStatus]
+    * [DecedentTransportationRole]
+    * [ExaminerContacted]
+    * [InjuryIncident]
+    * [InjuryLocation]
+    * [SurgeryDate]
+    * [TobaccoUseContributedToDeath]
+* Death Certification
+    * [Certifier]
+    * [DeathCertification]
+    * [CauseOfDeathPart1]
+    * [CauseOfDeathPathway]
+    * [CauseOfDeathPart2]
+    * [MannerOfDeath]
+* Decedent Disposition
+    * [DecedentDispositionMethod]
+    * [DispositionLocation]
+    * [FuneralHome]
 
-                         The profile includes:" }
+The profile includes:" }
+profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
+  :desc => "The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.
+
+Note that the unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
+
+In addition to  the [DeathCertificate] Bundle it includes the following content:
+" }
+profiles["DeathDate"] = {
+  :out => "StructureDefinition-vrdr-death-date-intro.md",
+  :desc => "The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
+
+  The certificate signing date is passed via the [DeathCertification] profile.
+
+  The death date specifies the date the death occurred, not the date the record was submitted.
+
+  The pronouncer of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument] and referenced from the [DeathCertificate].",
+}
 profiles["DeathCertification"] = {
   :out => "StructureDefinition-vrdr-death-certification-intro.md",
   :desc => "The Death Certification profile includes:",
 }
-profiles["DeathDate"] = {
-  :out => "StructureDefinition-vrdr-death-date-intro.md",
-  :desc => "The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
-                The certificate signing date is passed via the [DeathCertification] profile.
-
-                The death date specifies the date the death occurred, not the date the record was submitted.",
-}
-profiles["DecedentAge"] = {
+profiles["DeathLocation"] = { :out => "StructureDefinition-vrdr-death-location-intro.md",
+  :desc => "" }
+profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
+  :desc => "The Decedent profile contains basic information about the decedent, including data that are essential to the death record." }
+  profiles["DecedentAge"] = {
   :out => "StructureDefinition-vrdr-decedent-age-intro.md",
   :desc => "",
 }
@@ -151,7 +155,7 @@ profiles["DecedentUsualWork"] = {
 }
 profiles["DispositionLocation"] = {
   :out => "StructureDefinition-vrdr-disposition-location-intro.md",
-  :desc => "",
+  :desc => "Implementors are free to use the name field for the name of the disposition location.",
 }
 profiles["ExaminerContacted"] = {
   :out => "StructureDefinition-vrdr-examiner-contacted-intro.md",
@@ -181,6 +185,10 @@ profiles["ParamsForEmergingIssues"] = {
 }
 profiles["SurgeryDate"] = {
   :out => "StructureDefinition-vrdr-surgery-date-intro.md",
+  :desc => "",
+}
+profiles["TobaccoUseContributedToDeath"] = {
+  :out => "StructureDefinition-vrdr-tobacco-use-contributed-to-death-intro.md",
   :desc => "",
 }
 profiles["AutomatedUnderlyingCauseOfDeath"] = {
@@ -217,8 +225,8 @@ puts filename
 fullout = File.open(filename, "w")
 fullout.puts "### Data Dictionary"
 fullout.puts ""
-fullout.puts "| **#** |  **Description**   |  **IJE Name**   |   **Profile**  | **Field**  |  **Type**  | **Value Set**  |"
-fullout.puts "| --------- | --------------- | ------------- | ------------ | ---------- | ---------- | -------------- |"
+fullout.puts "| **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |"
+fullout.puts "| :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |"
 
 profiles.each do |key, value|
   puts key
@@ -226,20 +234,22 @@ profiles.each do |key, value|
   out.puts "### Usage"
   out.puts value[:desc]
   out.puts ""
-  out.puts "| **#** |  **Description**   |  **IJE Name**   |  **Field**  |  **Type**  | **Value Set**  |"
-  out.puts "| ---------| ------------- | ------------ | -------------- | -------- | -------- |"
+  out.puts "| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |"
+  out.puts "| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |"
   xlsx.each_row_streaming do |row|
     next if row[Profile] == nil || row[Profile].value != key
-    field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ""
+    field = description = ijename = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
     field = row[IJEField].value.to_s if row[IJEField]
     ijename = row[IJEName].value.to_s if row[IJEName]
-    profile = row[Profile].value.to_s if row[Profile]
+    ijeonly = "x"  if row[IJEOnly] && (row[IJEOnly].to_s == "I" || row[IJEOnly].to_s == "i")
+    # puts "field = " + field + " ijeonly =" + ijeonly
+    profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
     fhirfield = row[FHIRField].value.to_s if row[FHIRField]
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
-    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
-    out.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    fullout.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| " + profile + "| " + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    out.puts "| " + field.chomp + " | " + description.chomp + " | " + ijename + "| "  + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
   end
   out.puts "{: .grid }"
   out.puts "{% include markdown-link-references.md %}"
