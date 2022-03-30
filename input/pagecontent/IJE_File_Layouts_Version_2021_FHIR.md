@@ -155,8 +155,8 @@
 | 112 | Pregnancy | PREG| [DecedentPregnancyStatus]| |value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| [DecedentPregnancyStatus]| |value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
 | 175 | If Transportation Accident, Specify | TRANSPRT| [DecedentTransportationRole]| |value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
-| 84 | Occupation -- Literal (REQUIRED) | OCCUP| [DecedentUsualWork]| |value.text | string(40) |  | 
-| 86 | Industry -- Literal (REQUIRED) | INDUST| [DecedentUsualWork]| |component.value.text | string(40) |  | 
+| 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) |  | 
+| 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component.value.text | string(40) |  | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
