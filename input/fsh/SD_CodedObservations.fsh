@@ -35,7 +35,7 @@ Profile: RecordAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-record-axis-cause-of-death
 Title: "Record Axis Cause Of Death"
-Description: "Record Axis Cause Of Death"
+Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
 * insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)
 * code = $loinc#80357-7 "Cause of death record axis" (exactly)
 * value[x] 1..1
@@ -60,7 +60,7 @@ Profile: EntityAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-entity-axis-cause-of-death
 Title: "Entity Axis Cause Of Death"
-Description: "Entity Axis Cause Of Death"
+Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9 "Cause of Death Entity Axis Code" (exactly)
 * value[x] 1..1

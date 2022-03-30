@@ -114,3 +114,4 @@
 [PartialDatesAndTimes]: usage.html#partial-dates-and-times
 [CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
+[InjuryLocation]: https://loinc.org/LL1051-3/

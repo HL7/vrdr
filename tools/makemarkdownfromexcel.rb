@@ -183,8 +183,28 @@ profiles["SurgeryDate"] = {
   :out => "StructureDefinition-vrdr-surgery-date-intro.md",
   :desc => "",
 }
-profiles["TobaccoUseContributedToDeath"] = {
-  :out => "StructureDefinition-vrdr-tobacco-use-contributed-to-death-intro.md",
+profiles["AutomatedUnderlyingCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-automated-underlying-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["ManualUnderlyingCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-manual-underlying-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["RecordAxisCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-record-axis-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["EntityAxisCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-entity-axis-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["PlaceOfInjury"] = {
+  :out => "StructureDefinition-vrdr-place-of-injury-intro.md",
+  :desc => "",
+}
+profiles["CodedRaceAndEthnicity"] = {
+  :out => "StructureDefinition-vrdr-race-and-ethnicity-intro.md",
   :desc => "",
 }
 
