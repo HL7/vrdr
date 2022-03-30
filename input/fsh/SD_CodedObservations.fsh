@@ -59,9 +59,9 @@ Description: "Record Axis Cause Of Death"
 Profile: EntityAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-entity-axis-cause-of-death
-Title: "Record Axis Cause Of Death"
-Description: "Record Axis Cause Of Death"
-* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)
+Title: "Entity Axis Cause Of Death"
+Description: "Entity Axis Cause Of Death"
+* insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9 "Cause of Death Entity Axis Code" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
@@ -146,11 +146,11 @@ Description: "Coded (from NCHS) Race and Ethnicity"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
-* insert obscodecomponent(RACE1E,RaceCodesVS)
-* insert obscodecomponent(RACE2E,RaceCodesVS)
-* insert obscodecomponent(RACE8E,RaceCodesVS)
-* insert obscodecomponent(RACE16C,RaceCodesVS)
-* insert obscodecomponent(RACE23C,RaceCodesVS)
+* insert obscodecomponent(FirstEditedCode,RaceCodesVS) // First through eighth edited codes
+* insert obscodecomponent(SecondEditedCode,RaceCodesVS)
+* insert obscodecomponent(ThirdEditedCode,RaceCodesVS)
+* insert obscodecomponent(FirstNativeAmericanCode,RaceCodesVS)
+* insert obscodecomponent(SecondNativeAmericanCode,RaceCodesVS)
 * insert obscodecomponent(RECODE40,RaceCodesVS)
 * insert obscodecomponent(DETHNICE,RaceCodesVS)
 * insert obscodecomponent(DETHNIC5C,RaceCodesVS)
@@ -172,24 +172,29 @@ Description: "Input (from EDRS) Race and Ethnicity"
 * insert obscodecomponent(RACEMVR,$raceMissingValueReason)
 
 
-
-// * insert Extension(White, 0, 1, White, White, boolean)
-// * insert Extension(BlackOrAfricanAmerican, 0, 1, Black Or African American, Black Or African American, boolean)
-// * insert Extension(AmericanIndianOrAlaskaNative, 0, 1, American Indian Or Alaska Native, American Indian Or Alaska Native, boolean)
-// * insert Extension(AsianIndian, 0, 1, Asian Indian, Asian Indian, boolean)
-// * insert Extension(Chinese, 0, 1, Chinese, CHinese, boolean)
-// * insert Extension(Filipino, 0, 1, Filipino, Filipino, boolean)
-// * insert Extension(Japanese, 0, 1, Japanese, Japanese, boolean)
-// * insert Extension(Korean, 0, 1, Korean, Korean, boolean)
-// * insert Extension(Vietnamese, 0, 1, Vietnamese,Vietnamese, boolean)
-// * insert Extension(OtherAsian, 0, 1, Other Asian, OtherAsian, boolean)
-// * insert Extension(NativeHawaiian, 0, 1, Native Hawaiian, Native Hawaiian, boolean)
-// * insert Extension(GuamanianOrChamorro, 0, 1, Guamanian Or Chamorro, Guamanian Or Chamorro, boolean)
-// * insert Extension(Samoan, 0, 1, Samoan, Samoan, boolean)
-// * insert Extension(OtherPacificIslander, 0, 1, Other Pacific Islander, Other Pacific Islander, boolean)
-// * insert Extension(OtherRace, 0, 1, Other Race, Other Race, boolean)
-// * insert Extension(AmericanIndianOrAlaskaNativeLiteral, 0, 2, American Indian Or Alaska Native Literal, American Indian Or Alaska Native Literal, string)
-// * insert Extension(OtherAsianLiteral, 0, 2, Other Asian Literal, Other Asian Literal, string)
-// * insert Extension(OtherPacificIslanderLiteral, 0, 2, Other Pacific Islander Literal, Other Pacific Islander Literal, string)
-// * insert Extension(OtherRaceLiteral, 0, 2, Other Race Literal, Other Race Literal, string)
-// * insert Extension(MissingValueReason, 0, 1, Missing Value Reason, MissingValueReason, Coding)
+Profile: CodedContentDocument
+Parent: Bundle
+Id: vrdr-coded-content-document
+Title: "Coded Content Document"
+Description: "The resources comprising coded content."
+* insert RequireMetaProfile(CodedContentDocument)
+* identifier ^short = "Death Certificate Number"
+* identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). "
+* identifier.value ^maxLength = 6
+* identifier.extension contains
+    AuxiliaryStateIdentifier1 named auxiliaryStateIdentifier1 0..1 and
+    AuxiliaryStateIdentifier2 named auxiliaryStateIdentifier2 0..1
+* type 1..1
+* type only code
+* type = #document (exactly)
+* entry.resource 1..1 MS // each entry must have a resource
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile"
+* insert BundleSlice(  AutomatedUnderlyingCauseOfDeath,  0, 1,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath)
+* insert BundleSlice(  ManualUnderlyingCauseOfDeath,  0, 1,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath)
+* insert BundleSlice(  CodedRaceAndEthnicity,  0, 1,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity)
+* insert BundleSlice(  EntityAxisCauseOfDeath,  0, 20,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath)
+* insert BundleSlice(  RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
+* insert BundleSlice(  PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
