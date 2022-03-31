@@ -220,7 +220,7 @@ profiles["PlaceOfInjury"] = {
   :desc => "",
 }
 profiles["CodedRaceAndEthnicity"] = {
-  :out => "StructureDefinition-vrdr-race-and-ethnicity-intro.md",
+  :out => "StructureDefinition-vrdr-coded-race-and-ethnicity-intro.md",
   :desc => "",
 }
 
