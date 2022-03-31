@@ -62,9 +62,9 @@ Description: "CodedRaceAndEthnicity-Example1"
 * insert AddMetaProfile(CodedRaceAndEthnicity)
 * status = #final
 * subject.display = "NCHS generated"
-* component[FirstEditedCode].valueCodeableConcept = #100
-* component[SecondEditedCode].valueCodeableConcept = #200
-* component[HispanicCode].valueCodeableConcept = #300
+* component[FirstEditedCode].valueCodeableConcept = RaceCodeCS#101 "White"
+* component[SecondEditedCode].valueCodeableConcept = RaceCodeCS#122 "Israeli"
+* component[HispanicCode].valueCodeableConcept = HispanicOriginCS#233 "Chilean"
 * component[RECODE40].valueCodeableConcept = #12
 
 Instance: InputRaceAndEthnicity-Example1
@@ -90,7 +90,7 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[Samoan].valueBoolean = false
 * component[OtherPacificIslander].valueBoolean = false
 * component[OtherRace].valueBoolean = false
-* component[HispanicMexican].valueCodeableConcept = #Y
-* component[HispanicMexican].valueCodeableConcept = #Y
-* component[HispanicMexican].valueCodeableConcept = #Y
-* component[HispanicMexican].valueCodeableConcept = #Y
+* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
+* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
+* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
+* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
