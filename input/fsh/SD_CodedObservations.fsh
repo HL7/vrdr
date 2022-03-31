@@ -139,7 +139,7 @@ Description: "Activity at Time of Death"
 
 
 RuleSet: obscodecomponent(code, valueSet)
-* component contains {code} 1..1
+* component contains {code} 0..1
 * component[{code}].code 1..1
 * component[{code}].code = #{code} "{code}" (exactly)
 * component[{code}].value[x] 1..1
@@ -148,7 +148,7 @@ RuleSet: obscodecomponent(code, valueSet)
 * component[{code}].value[x] from {valueSet}
 
 RuleSet: primobscodecomponent(code, type)
-* component contains {code} 1..1
+* component contains {code} 0..1
 * component[{code}].code 1..1
 * component[{code}].code = #{code} "{code}" (exactly)
 * component[{code}].value[x] 1..1
