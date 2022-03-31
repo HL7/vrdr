@@ -21,7 +21,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
 | 29 | Marital Status | MARITAL| |maritalStatus | codeable |  [MaritalStatusVS] | 
 | 30 | Marital Status--Edit Flag | MARITAL_BYPASS| |maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
-| 83 | Decedent's Race--Missing | RACE_MVR| |extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
+| 83 | Decedent's Race--Missing | RACE_MVR| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| x|extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| |address.extension[stnum] | string |  | 
 | 147 | Decedent's Residence - Pre Directional | PREDIR_R| |address.extension[predir] | string |  | 

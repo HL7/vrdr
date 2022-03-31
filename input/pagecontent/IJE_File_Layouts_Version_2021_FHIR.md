@@ -84,7 +84,7 @@
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
 | 29 | Marital Status | MARITAL| [Decedent]| |maritalStatus | codeable |  [MaritalStatusVS] | 
 | 30 | Marital Status--Edit Flag | MARITAL_BYPASS| [Decedent]| |maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
-| 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| |extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
+| 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| x|extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| [Decedent]| |address.extension[stnum] | string |  | 
 | 147 | Decedent's Residence - Pre Directional | PREDIR_R| [Decedent]| |address.extension[predir] | string |  | 
@@ -162,34 +162,34 @@
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float |  | 
 | 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float |  | 
-| 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |extension[ NVSSEthnicity].extension[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |extension[ NVSSEthnicity].extension[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |extension[ NVSSEthnicity].extension[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |extension[ NVSSEthnicity].extension[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |extension[ NVSSEthnicity].extension[ HispanicLiteral ].valueString | string |  | 
-| 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ White].valueBoolean | boolean |  | 
-| 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ BlackOrAfricanAmerican].valueBoolean | boolean |  | 
-| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ AmericanIndianOrAlaskaNative].valueBoolean | boolean |  | 
-| 47 | Decedent's Race--Asian Indian | RACE4| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ AsianIndian].valueBoolean | boolean |  | 
-| 48 | Decedent's Race--Chinese | RACE5| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Chinese].valueBoolean | boolean |  | 
-| 49 | Decedent's Race--Filipino | RACE6| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Filipino].valueBoolean | boolean |  | 
-| 50 | Decedent's Race--Japanese | RACE7| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Japanese].valueBoolean | boolean |  | 
-| 51 | Decedent's Race--Korean | RACE8| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Korean].valueBoolean | boolean |  | 
-| 52 | Decedent's Race--Vietnamese | RACE9| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Vietnamese].valueBoolean | boolean |  | 
-| 53 | Decedent's Race--Other Asian | RACE10| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherAsian].valueBoolean | boolean |  | 
-| 54 | Decedent's Race--Native Hawaiian | RACE11| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ NativeHawaiian].valueBoolean | boolean |  | 
-| 55 | Decedent's Race--Guamanian or Chamorro | RACE12| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ GuamanianOrChamorro].valueBoolean | boolean |  | 
-| 56 | Decedent's Race--Samoan | RACE13| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ Samoan].valueBoolean | boolean |  | 
-| 57 | Decedent's Race--Other Pacific Islander | RACE14| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherPacificIslander].valueBoolean | boolean |  | 
-| 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherRace].valueBoolean | boolean |  | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherAsianLiteral1].valueString | string |  | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherAsianLiteral2].valueString | string |  | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherPacificIslandLiteral1].valueString | string |  | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  | 
-| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  | 
+| 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
+| 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
+| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string |  | 
+| 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean |  | 
+| 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean |  | 
+| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |component[ AmericanIndianOrAlaskaNative].valueBoolean | boolean |  | 
+| 47 | Decedent's Race--Asian Indian | RACE4| [InputRaceAndEthnicity]| |component[ AsianIndian].valueBoolean | boolean |  | 
+| 48 | Decedent's Race--Chinese | RACE5| [InputRaceAndEthnicity]| |component[ Chinese].valueBoolean | boolean |  | 
+| 49 | Decedent's Race--Filipino | RACE6| [InputRaceAndEthnicity]| |component[ Filipino].valueBoolean | boolean |  | 
+| 50 | Decedent's Race--Japanese | RACE7| [InputRaceAndEthnicity]| |component[ Japanese].valueBoolean | boolean |  | 
+| 51 | Decedent's Race--Korean | RACE8| [InputRaceAndEthnicity]| |component[ Korean].valueBoolean | boolean |  | 
+| 52 | Decedent's Race--Vietnamese | RACE9| [InputRaceAndEthnicity]| |component[ Vietnamese].valueBoolean | boolean |  | 
+| 53 | Decedent's Race--Other Asian | RACE10| [InputRaceAndEthnicity]| |component[ OtherAsian].valueBoolean | boolean |  | 
+| 54 | Decedent's Race--Native Hawaiian | RACE11| [InputRaceAndEthnicity]| |component[ NativeHawaiian].valueBoolean | boolean |  | 
+| 55 | Decedent's Race--Guamanian or Chamorro | RACE12| [InputRaceAndEthnicity]| |component[ GuamanianOrChamorro].valueBoolean | boolean |  | 
+| 56 | Decedent's Race--Samoan | RACE13| [InputRaceAndEthnicity]| |component[ Samoan].valueBoolean | boolean |  | 
+| 57 | Decedent's Race--Other Pacific Islander | RACE14| [InputRaceAndEthnicity]| |component[ OtherPacificIslander].valueBoolean | boolean |  | 
+| 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |component[ OtherRace].valueBoolean | boolean |  | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |  | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |  | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral1].valueString | string |  | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral2].valueString | string |  | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral1].valueString | string |  | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral2].valueString | string |  | 
+| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral1].valueString | string |  | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string |  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
 | 248 | Blank for One-Byte Field 1 | PLACE1_1| [ParamsForEmergingIssues]| |parameter[PLACE1_1].value | string(1) |  | 
 | 249 | Blank for One-Byte Field 2 | PLACE1_2| [ParamsForEmergingIssues]| |parameter[PLACE1_2].value | string(1) |  | 
