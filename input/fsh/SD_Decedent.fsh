@@ -8,13 +8,9 @@ Title: "Decedent"
 Description: "Decedent (USCorePatient)"
 * insert RequireMetaProfile(Decedent)
 * extension contains
-    NVSSRace named NVSS-Race 0..1 MS and
-    NVSSEthnicity named NVSS-Ethnicity 0..1 MS and
     NVSSSexAtDeath named NVSS-SexAtDeath 0..1 MS and
     SpouseAlive named Spouse-Alive 0..1 and
     $patient-birthPlace named Patient-BirthPlace 0..1
-* extension[NVSS-Race] ^short = "NVSS Race"
-* extension[NVSS-Ethnicity] ^short = "NVSS Ethnicity"
 * extension[NVSS-SexAtDeath] ^short = "NVSS Sex at Death"
 * extension[Spouse-Alive] ^short = "Spouse Alive?"
 * extension[Patient-BirthPlace] ^short = "Decedent birthplace"

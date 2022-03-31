@@ -213,21 +213,21 @@
 | 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocation] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value |  |  | 
 | 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable |  | 
-| 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| | |  |  | 
-| 70 | Fourth Edited Code | RACE4E| [CodedRaceAndEthnicity]| | |  |  | 
-| 71 | Fifth Edited Code | RACE5E| [CodedRaceAndEthnicity]| | |  |  | 
-| 72 | Sixth Edited Code | RACE6E| [CodedRaceAndEthnicity]| | |  |  | 
-| 73 | Seventh Edited Code | RACE7E| [CodedRaceAndEthnicity]| | |  |  | 
-| 74 | Eighth Edited Code | RACE8E| [CodedRaceAndEthnicity]| | |  |  | 
-| 75 | First American Indian Code | RACE16C| [CodedRaceAndEthnicity]| | |  |  | 
-| 76 | Second American Indian Code | RACE17C| [CodedRaceAndEthnicity]| | |  |  | 
-| 77 | First Other Asian Code | RACE18C| [CodedRaceAndEthnicity]| | |  |  | 
-| 78 | Second Other Asian Code | RACE19C| [CodedRaceAndEthnicity]| | |  |  | 
-| 79 | First Other Pacific Islander Code | RACE20C| [CodedRaceAndEthnicity]| | |  |  | 
-| 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| | |  |  | 
-| 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| | |  |  | 
-| 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| | |  |  | 
+| 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| |component[ThirdEditedCode].value | codeable |  | 
+| 70 | Fourth Edited Code | RACE4E| [CodedRaceAndEthnicity]| |component[FourthEditedCode].value | codeable |  | 
+| 71 | Fifth Edited Code | RACE5E| [CodedRaceAndEthnicity]| |component[FifthEditedCode].value | codeable |  | 
+| 72 | Sixth Edited Code | RACE6E| [CodedRaceAndEthnicity]| |component[SixthEditedCode].value | codeable |  | 
+| 73 | Seventh Edited Code | RACE7E| [CodedRaceAndEthnicity]| |component[SeventhEditedCode].value | codeable |  | 
+| 74 | Eighth Edited Code | RACE8E| [CodedRaceAndEthnicity]| |component[EighthEditedCode].value | codeable |  | 
+| 75 | First American Indian Code | RACE16C| [CodedRaceAndEthnicity]| |component[FirstAmericanIndianCode].value | codeable |  | 
+| 76 | Second American Indian Code | RACE17C| [CodedRaceAndEthnicity]| |component[SecondAmericanIndianCode].value | codeable |  | 
+| 77 | First Other Asian Code | RACE18C| [CodedRaceAndEthnicity]| |component[FirstOtherAsianCode].value | codeable |  | 
+| 78 | Second Other Asian Code | RACE19C| [CodedRaceAndEthnicity]| |component[SecondOtherAsianCode].value | codeable |  | 
+| 79 | First Other Pacific Islander Code | RACE20C| [CodedRaceAndEthnicity]| |component[FirstOtherPacificIslanderCode].value | codeable |  | 
+| 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| |component[SecondOtherPacificIslanderCode].value | codeable |  | 
+| 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| |component[FirstOtherRaceCode].value | codeable |  | 
+| 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| |component[SecondOtherRaceCode].value | codeable |  | 
 | 160 | Hispanic | DETHNICE | [CodedRaceAndEthnicity]| |component[DETHNICE].value | codeable |  | 
-| 247 | Hispanic Code for Literal | <html>DETHNIC5C<b> </b></html>| [CodedRaceAndEthnicity]| |component[DETHNIC5C].value |  |  | 
+| 247 | Hispanic Code for Literal | DETHNIC5C| [CodedRaceAndEthnicity]| |component[DETHNIC5C].value | codeable |  | 
 {: .grid }
 {% include markdown-link-references.md %}
