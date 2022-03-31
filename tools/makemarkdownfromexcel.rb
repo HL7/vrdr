@@ -173,6 +173,10 @@ profiles["InjuryLocation"] = {
   :out => "StructureDefinition-vrdr-injury-location-intro.md",
   :desc => "",
 }
+profiles["InputRaceAndEthnicity"] = {
+  :out => "StructureDefinition-vrdr-input-race-and-ethnicity-intro.md",
+  :desc => "",
+}
 profiles["MannerOfDeath"] = {
   :out => "StructureDefinition-vrdr-manner-of-death-intro.md",
   :desc => "A reference to the [Certifier] may be provided through the performer field.",
@@ -189,6 +193,10 @@ profiles["SurgeryDate"] = {
 }
 profiles["TobaccoUseContributedToDeath"] = {
   :out => "StructureDefinition-vrdr-tobacco-use-contributed-to-death-intro.md",
+  :desc => "",
+}
+profiles["ActivityAtTimeOfDeath"] = {
+  :out => "StructureDefinition-vrdr-activity-at-time-of-death-intro.md",
   :desc => "",
 }
 profiles["AutomatedUnderlyingCauseOfDeath"] = {
