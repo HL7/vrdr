@@ -205,6 +205,7 @@
 | 124 | Surgery Date--day | SUR_DY| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 125 | Surgery Date--year | SUR_YR| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 111 | Did Tobacco Use Contribute to Death? | TOBAC| [TobaccoUseContributedToDeath]| |value | codeable | [ContributoryTobaccoUseVS] | 
+| 120 | Activity at time of death (computer generated) | INACT| [ActivityAtTimeOfDeath]| |value | codeable | [ActivityAtTimeOfDeathVS] | 
 | 105 | ACME Underlying Cause | ACME_UC| [AutomatedUnderlyingCauseOfDeath]| |value | codeable | ICD-10 | 
 | 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | ICD-10 | 
 | 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |see Profile for description |  |  | 
