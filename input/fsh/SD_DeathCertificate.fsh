@@ -69,6 +69,7 @@ Description: "The body of the death certificate document (Composition)."
 * insert CompositionSectionEntrySlicing(DeathInvestigation)
 * insert CompositionSectionEntrySlicing(DeathCertification)
 * insert CompositionSectionEntrySlicing(DecedentDisposition)
+* insert CompositionSectionEntrySlicing(CodedContent)
 //
 * insert BundleSectionSlice(DecedentDemographics, Decedent, 1, 1, Decedent, Decedent, Decedent)
 * insert BundleSectionSlice(DecedentDemographics, Father,  0, 1, DecedentFather, DecedentFather, DecedentFather)
@@ -81,8 +82,6 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DecedentDemographics, UsualWork,  0, 1, DecedentUsualWork, DecedentUsualWork, DecedentUsualWork)
 * insert BundleSectionSlice(DecedentDemographics, ParametersForEmergingIssues,  0, 1, ParametersForEmergingIssues, ParametersForEmergingIssues, ParametersForEmergingIssues)
 * insert BundleSectionSlice(DecedentDemographics, InputRaceAndEthnicity,  0, 1, InputRaceAndEthnicity, InputRaceAndEthnicity, InputRaceAndEthnicity)
-* insert BundleSectionSlice(DecedentDemographics, CodedRaceAndEthnicity,  0, 1, CodedRaceAndEthnicity, CodedRaceAndEthnicity, CodedRaceAndEthnicity)
-
 //
 * insert BundleSectionSlice(DeathInvestigation, ExaminerContacted, 1, 1, ExaminerContacted, ExaminerContacted, ExaminerContacted)
 * insert BundleSectionSlice(DeathInvestigation, PregnancyStatus, 1, 1, DecedentPregnancyStatus, DecedentPregnancyStatus, DecedentPregnancyStatus)
@@ -107,7 +106,13 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DecedentDisposition, FuneralHome,  0, 1, FuneralHome, FuneralHome, FuneralHome)
 * insert BundleSectionSlice(DecedentDisposition, DispositionMethod,  0, 1, DispositionMethod, DispositionMethod, DecedentDispositionMethod)
 * insert BundleSectionSlice(DecedentDisposition, Mortician,  0, 1, Mortician, Mortician, USCorePractitioner)
-
+//
+* insert BundleSectionSlice(CodedContent, AutomatedUnderlyingCauseOfDeath,  0, 1,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath)
+* insert BundleSectionSlice(CodedContent, ManualUnderlyingCauseOfDeath,  0, 1,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath)
+* insert BundleSectionSlice(CodedContent, CodedRaceAndEthnicity,  0, 1,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity)
+* insert BundleSectionSlice(CodedContent, EntityAxisCauseOfDeath,  0, 20,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath)
+* insert BundleSectionSlice(CodedContent, RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
+* insert BundleSectionSlice(CodedContent, PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
 // // * section[DecedentDisposition].code = DocumentSectionCS#Disposition "Decedent Disposition"
 // // * section[DecedentDisposition].entry ^slicing.discriminator.type = #profile
 // // * section[DecedentDisposition].entry ^slicing.discriminator.path = "$this.resolve()"

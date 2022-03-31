@@ -121,3 +121,5 @@
 [RecordAxisCauseOfDeath]: StructureDefinition-vrdr-record-axis-cause-of-death.html
 [ManualUnderlyingCauseOfDeath]: StructureDefinition-vrdr-manual-underlying-cause-of-death.html
 [AutomatedUnderlyingCauseOfDeath]: StructureDefinition-vrdr-automated-underlying-cause-of-death.html
+[ActivityAtTimeOfDeath]: StructureDefinition-vrdr-activity-at-time-of-death.html
+[ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death.html

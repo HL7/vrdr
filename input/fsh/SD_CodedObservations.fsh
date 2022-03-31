@@ -106,6 +106,37 @@ Description: "Place Of Injury"
 * value[x] only CodeableConcept
 * value[x] from http://loinc.org/vs/LL1051-3 (required)
 
+CodeSystem: ActivityAtTimeOfDeathCS
+Id: vrdr-activity-at-time-of-death-cs
+Title: "Activity at Time of Death Codesystem"
+Description: "Activity at Time of Death Codesystem based on PHVS_ActivityType_NCHS"
+* ^caseSensitive = false
+* #0 "During unspecified activity"
+* #1 "While engaged in leisure activities."
+* #2 "While engaged in other specified activities."
+* #4 "While engaged in other types of work"
+* #5 "While engaged in sports activity"
+* #6 "While resting, sleeping, eating, or engaging in other vital activities"
+* #7 "While working for income"
+
+ValueSet: ActivityAtTimeOfDeathVS
+Id: vrdr-activity-at-time-of-death-vs
+Title: "Activity at Time of Death VS"
+Description: "Activity at Time of Death"
+* include codes from system ActivityAtTimeOfDeathCS
+* $v3-NullFlavor#UNK "unknown"
+
+Profile: ActivityAtTimeOfDeath
+Parent: Observation
+Id: vrdr-activity-at-time-of-death
+Title: "Activity at Time of Death"
+Description: "Activity at Time of Death"
+* insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
+* code = $loinc#80626-5​ "Activity at time of death [CDC]" (exactly)
+* value[x] 1..1
+* value[x] only CodeableConcept
+* value[x] from ActivityAtTimeOfDeathVS (required)
+
 
 RuleSet: obscodecomponent(code, valueSet)
 * component contains {code} 1..1
@@ -176,7 +207,7 @@ Profile: CodedContentDocument
 Parent: Bundle
 Id: vrdr-coded-content-document
 Title: "Coded Content Document"
-Description: "The resources comprising coded content."
+Description: "A bundle containing instances of the resources comprising coded content."
 * insert RequireMetaProfile(CodedContentDocument)
 * identifier ^short = "Death Certificate Number"
 * identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). "
@@ -198,3 +229,4 @@ Description: "The resources comprising coded content."
 * insert BundleSlice(  EntityAxisCauseOfDeath,  0, 20,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath)
 * insert BundleSlice(  RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
 * insert BundleSlice(  PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
+* insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
