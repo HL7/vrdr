@@ -11,7 +11,7 @@ Id: vrdr-automated-underlying-cause-of-death
 Title: "Automated Underlying Cause Of Death"
 Description: "Automated Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
-* code = $loinc#80358-8 "Cause of death underyling.Automated" (exactly)
+* code = $loinc#80358-5 "Cause of death underyling.Automated" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
 * value[x] from $icd10 (required)
@@ -259,7 +259,7 @@ Description: "A bundle containing instances of the resources comprising coded co
 * insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
 
 ValueSet: HispanicOriginVS
-Id: vrdr-hispanic-origin-code-vs
+Id: vrdr-hispanic-origin-vs
 Title: "HispanicOrigin Value Set"
 Description: "NCHS HispanicOrigin Value Set"
 * include codes from system HispanicOriginCS
@@ -273,7 +273,7 @@ Description: "NCHS Race Codes "
 * $v3-NullFlavor#UNK "unknown"
 
 CodeSystem: HispanicOriginCS
-Id: vrdr-hispanic-origin-code-cs
+Id: vrdr-hispanic-origin-cs
 Title: "HispanicOrigin CS"
 Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCodeTitles.pdf"
 * ^caseSensitive = true
