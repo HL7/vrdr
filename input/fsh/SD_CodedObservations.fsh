@@ -1,8 +1,7 @@
 RuleSet: NCHSObservationCommon
-* subject 0..1  // optional, since these observations may be part of bundles that don't include the decedent
 * subject only Reference(Decedent)
 * subject ^short = "Decedent"
-* effective[x] 1..1
+// * effective[x] 1..1
 * effective[x] only dateTime
 * effective[x] ^short = "Date/Time when added to death record"
 
