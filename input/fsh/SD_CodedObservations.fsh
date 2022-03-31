@@ -11,10 +11,10 @@ Id: vrdr-automated-underlying-cause-of-death
 Title: "Automated Underlying Cause Of Death"
 Description: "Automated Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
-* code = $loinc#80358-5 "Cause of death underyling.Automated" (exactly)
+* code = $loinc#80358-5 "Cause of death entity axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
-* value[x] from $icd10 (required)
+* value[x] from $icd10
 * insert NCHSObservationCommon
 
 Profile: ManualUnderlyingCauseOfDeath
@@ -132,7 +132,7 @@ Id: vrdr-activity-at-time-of-death
 Title: "Activity at Time of Death"
 Description: "Activity at Time of Death"
 * insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
-* code = $loinc#80626-5​ "Activity at time of death [CDC]" (exactly)
+* code = $loinc#80626-5 "Activity at time of death [CDC]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from ActivityAtTimeOfDeathVS (required)
