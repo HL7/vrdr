@@ -19,7 +19,7 @@
 | 80 | Second Other Pacific Islander Code | RACE21C| |component[SecondOtherPacificIslanderCode].value | codeable | [RaceCodeVS] | 
 | 81 | First Other Race Code | RACE22C| |component[FirstOtherRaceCode].value | codeable | [RaceCodeVS] | 
 | 82 | Second Other Race Code | RACE23C| |component[SecondOtherRaceCode].value | codeable | [RaceCodeVS] | 
-| <NA> | Race Recode 40  | <NO IJE MAPPING>| |component[RaceRecode40].value | codeable | [RaceRecord40VS] | 
+| <NA> | Race Recode 40  | <NO IJE MAPPING>| |component[RaceRecode40].value | codeable | [RaceRecode40VS] | 
 | 160 | Hispanic | DETHNICE | |component[HispanicCode].value | codeable | [HispanicOriginVS] | 
 | 247 | Hispanic Code for Literal | DETHNIC5C| |component[HispanicCodeForLiteral].value | codeable | [HispanicOriginVS] | 
 {: .grid }
