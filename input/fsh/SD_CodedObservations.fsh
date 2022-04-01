@@ -185,7 +185,7 @@ Description: "Coded (from NCHS) Race and Ethnicity"
 * insert obscodecomponent(SecondOtherPacificIslanderCode,RaceCodeVS)
 * insert obscodecomponent(FirstOtherRaceCode,RaceCodeVS)
 * insert obscodecomponent(SecondOtherRaceCode,RaceCodeVS)
-* insert obscodecomponent(RECODE40,RaceCodeVS)
+* insert obscodecomponent(RaceRecode40,RaceRecode40VS)
 * insert obscodecomponent(HispanicCode,HispanicOriginVS)
 * insert obscodecomponent(HispanicCodeForLiteral,HispanicOriginVS)
 
@@ -237,7 +237,7 @@ Title: "Coded Content Document"
 Description: "A bundle containing instances of the resources comprising coded content."
 * insert RequireMetaProfile(CodedContentDocument)
 * identifier ^short = "Death Certificate Number"
-* identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). "
+* identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros)."
 * identifier.value ^maxLength = 6
 * identifier.extension contains
     AuxiliaryStateIdentifier1 named auxiliaryStateIdentifier1 0..1 and
@@ -268,14 +268,14 @@ Description: "NCHS HispanicOrigin Value Set"
 ValueSet: RaceCodeVS
 Id: vrdr-race-code-vs
 Title: "Race Code Value Set"
-Description: "NCHS Race Codes "
+Description: "NCHS Race Codes"
 * include codes from system RaceCodeCS
 * $v3-NullFlavor#UNK "unknown"
 
 ValueSet: RaceRecode40VS
 Id: vrdr-race-recode-40-vs
 Title: "Race Recode 40 Value Set"
-Description: "NCHS Race Recode 40 Valueset "
+Description: "NCHS Race Recode 40 Valueset"
 * include codes from system RaceRecode40CS
 
 CodeSystem: HispanicOriginCS
@@ -365,7 +365,7 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 CodeSystem: RaceCodeCS
 Id: vrdr-race-code-cs
 Title: "Race Code CS"
-Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf "
+Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * ^caseSensitive = true
 // WHITE (100-199) White
 * #100 "White Checkbox"

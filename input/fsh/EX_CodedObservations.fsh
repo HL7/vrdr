@@ -65,7 +65,7 @@ Description: "CodedRaceAndEthnicity-Example1"
 * component[FirstEditedCode].valueCodeableConcept = RaceCodeCS#101 "White"
 * component[SecondEditedCode].valueCodeableConcept = RaceCodeCS#122 "Israeli"
 * component[HispanicCode].valueCodeableConcept = HispanicOriginCS#233 "Chilean"
-* component[RECODE40].valueCodeableConcept = RaceRecode40CS#20 "AIAN and Asian"
+* component[RaceRecode40].valueCodeableConcept = RaceRecode40CS#20 "AIAN and Asian"
 
 Instance: InputRaceAndEthnicity-Example1
 InstanceOf: InputRaceAndEthnicity
