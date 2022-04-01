@@ -5,7 +5,7 @@ Description: "AutomatedUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(AutomatedUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#I13.1
+* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
 
 Instance: RecordAxisCauseOfDeath-Example1
 InstanceOf: RecordAxisCauseOfDeath
@@ -14,7 +14,7 @@ Description: "RecordAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(RecordAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#I13.2
+* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
 * component[position].valueInteger = 1
 
 Instance: EntityAxisCauseOfDeath-Example1
@@ -24,7 +24,7 @@ Description: "EntityAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(EntityAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#I13.2
+* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
 * component[lineNumber].valueInteger = 1
 * component[position].valueInteger = 1
 
@@ -35,7 +35,7 @@ Description: "ManualUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(ManualUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#I13.2
+* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
 
 Instance: PlaceOfInjury-Example1
 InstanceOf: PlaceOfInjury
@@ -44,7 +44,7 @@ Description: "PlaceOfInjury-Example1"
 * insert AddMetaProfile(PlaceOfInjury)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#I13.2
+* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
 
 Instance: ActivityAtTimeOfDeath-Example1
 InstanceOf: ActivityAtTimeOfDeath
@@ -65,7 +65,7 @@ Description: "CodedRaceAndEthnicity-Example1"
 * component[FirstEditedCode].valueCodeableConcept = RaceCodeCS#101 "White"
 * component[SecondEditedCode].valueCodeableConcept = RaceCodeCS#122 "Israeli"
 * component[HispanicCode].valueCodeableConcept = HispanicOriginCS#233 "Chilean"
-* component[RECODE40].valueCodeableConcept = #12
+* component[RECODE40].valueCodeableConcept = RaceRecode40CS#20 "AIAN and Asian"
 
 Instance: InputRaceAndEthnicity-Example1
 InstanceOf: InputRaceAndEthnicity

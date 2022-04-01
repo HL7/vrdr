@@ -11,7 +11,7 @@ Id: vrdr-automated-underlying-cause-of-death
 Title: "Automated Underlying Cause Of Death"
 Description: "Automated Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
-* code = $loinc#80358-5 "Cause of death entity axis code [Automated]" (exactly)
+* code = $loinc#80358-5 "Cause of death.underlying [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
 * value[x] from $ICD10VS
