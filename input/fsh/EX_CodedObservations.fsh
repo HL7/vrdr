@@ -5,7 +5,7 @@ Description: "AutomatedUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(AutomatedUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
 
 Instance: RecordAxisCauseOfDeath-Example1
 InstanceOf: RecordAxisCauseOfDeath
@@ -14,7 +14,7 @@ Description: "RecordAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(RecordAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
 * component[position].valueInteger = 1
 
 Instance: EntityAxisCauseOfDeath-Example1
@@ -24,7 +24,7 @@ Description: "EntityAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(EntityAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
 * component[lineNumber].valueInteger = 1
 * component[position].valueInteger = 1
 
@@ -35,7 +35,7 @@ Description: "ManualUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(ManualUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
 
 Instance: PlaceOfInjury-Example1
 InstanceOf: PlaceOfInjury
