@@ -14,7 +14,7 @@ Description: "Automated Underlying Cause Of Death"
 * code = $loinc#80358-5 "Cause of death.underlying [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
-* value[x] from $ICD10VS
+* value[x] from ICD10CausesOfDeathVS
 * insert NCHSObservationCommon
 
 Profile: ManualUnderlyingCauseOfDeath
@@ -26,7 +26,7 @@ Description: "Manual Underlying Cause Of Death"
 * code = $loinc#80359-3 "Cause of death.underlying [Manual]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
-* value[x] from $ICD10VS (required)
+* value[x] from ICD10CausesOfDeathVS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
@@ -40,7 +40,7 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 * code = $loinc#80357-7 "Cause of death record axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
-* value[x] from $ICD10VS (required)
+* value[x] from ICD10CausesOfDeathVS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
@@ -65,7 +65,7 @@ Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profil
 * code = $loinc#80356-9 "Cause of death entity axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
-* value[x] from $ICD10VS (required)
+* value[x] from ICD10CausesOfDeathVS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
@@ -257,6 +257,12 @@ Description: "A bundle containing instances of the resources comprising coded co
 * insert BundleSlice(  RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
 * insert BundleSlice(  PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
 * insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
+
+ValueSet: ICD10CausesOfDeathVS
+Id: vrdr-icd10-causes-of-death-vs
+Title: "ICD10 Causes of Death VS"
+Description: "ICD10 Causes of Death VS"
+* include codes from system $icd10
 
 ValueSet: HispanicOriginVS
 Id: vrdr-hispanic-origin-vs
