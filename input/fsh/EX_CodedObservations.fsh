@@ -52,7 +52,7 @@ Usage: #example
 Description: "ActivityAtTimeOfDeath-Example1"
 * insert AddMetaProfile(ActivityAtTimeOfDeath)
 * status = #final
-* subject.display = "NCHS generated today"
+* subject.display = "NCHS generated"
 * valueCodeableConcept = ActivityAtTimeOfDeathCS#1 "While engaged in leisure activities."
 
 Instance: CodedRaceAndEthnicity-Example1
