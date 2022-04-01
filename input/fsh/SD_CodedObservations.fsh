@@ -244,7 +244,7 @@ Description: "A bundle containing instances of the resources comprising coded co
     AuxiliaryStateIdentifier2 named auxiliaryStateIdentifier2 0..1
 * type 1..1
 * type only code
-* type = #document (exactly)
+* type = #collection (exactly)
 * entry.resource 1..1 MS // each entry must have a resource
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
