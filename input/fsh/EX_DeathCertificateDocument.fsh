@@ -19,6 +19,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(RelatedPerson, DecedentMother-Example1)
 * insert addentry(RelatedPerson, DecedentSpouse-Example1)
 * insert addentry(Observation, DecedentAge-Example1)
+* insert addentry(Observation, InputRaceAndEthnicity-Example1)
 * insert addentry(Observation, BirthRecordIdentifier-Example1)
 * insert addentry(Observation, DecedentEducationLevel-Example1)
 * insert addentry(Observation, DecedentMilitaryService-Example1)
@@ -72,6 +73,7 @@ Description: "DeathCertificate-Example1"
 *  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
 *  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
 *  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
+*  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
 *  section[DecedentDemographics].entry[ParametersForEmergingIssues] = Reference(ParametersForEmergingIssues-Example1)
 // The next line shouldn't be necessary
 *  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
