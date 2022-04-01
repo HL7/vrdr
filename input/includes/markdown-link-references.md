@@ -123,7 +123,7 @@
 [ManualUnderlyingCauseOfDeath]: StructureDefinition-vrdr-manual-underlying-cause-of-death.html
 [AutomatedUnderlyingCauseOfDeath]: StructureDefinition-vrdr-automated-underlying-cause-of-death.html
 [ActivityAtTimeOfDeath]: StructureDefinition-vrdr-activity-at-time-of-death.html
-[ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death.html
+[ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death-vs.html
 [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
 [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
