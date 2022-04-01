@@ -126,3 +126,4 @@
 [ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death.html
 [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
+[RaceRecodeVS]: ValueSet-vrdr-race-recode-40-vs.html
