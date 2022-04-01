@@ -23,7 +23,7 @@ Id: vrdr-manual-underlying-cause-of-death
 Title: "Manual Underlying Cause Of Death"
 Description: "Manual Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
-* code = $loinc#80359-3 "Cause of death underyling.Manual" (exactly)
+* code = $loinc#80359-3 "Cause of death.underlying [Manual]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from $icd10 (required)
@@ -62,7 +62,7 @@ Id: vrdr-entity-axis-cause-of-death
 Title: "Entity Axis Cause Of Death"
 Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
-* code = $loinc#80356-9 "Cause of Death Entity Axis Code" (exactly)
+* code = $loinc#80356-9 "Cause of death entity axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
 * value[x] from $icd10 (required)
