@@ -31,5 +31,6 @@
 | 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| |component[ OtherPacificIslandLiteral2].valueString | string |  | 
 | 65 | Decedent's Race--First Other Literal | RACE22| |component[ OtherRaceLiteral1].valueString | string |  | 
 | 66 | Decedent's Race--Second Other Literal | RACE23| |component[ OtherRaceLiteral2].valueString | string |  | 
+| 83 | Decedent's Race--Missing | RACE_MVR| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 {: .grid }
 {% include markdown-link-references.md %}

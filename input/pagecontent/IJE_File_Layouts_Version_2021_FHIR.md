@@ -84,7 +84,6 @@
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
 | 29 | Marital Status | MARITAL| [Decedent]| |maritalStatus | codeable |  [MaritalStatusVS] | 
 | 30 | Marital Status--Edit Flag | MARITAL_BYPASS| [Decedent]| |maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
-| 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| x|extension[SpounseAlive]  | codeable |  [YesNoUnknownNotApplicableVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| [Decedent]| |address.extension[stnum] | string |  | 
 | 147 | Decedent's Residence - Pre Directional | PREDIR_R| [Decedent]| |address.extension[predir] | string |  | 
@@ -190,6 +189,7 @@
 | 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral2].valueString | string |  | 
 | 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral1].valueString | string |  | 
 | 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string |  | 
+| 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
 | 248 | Blank for One-Byte Field 1 | PLACE1_1| [ParamsForEmergingIssues]| |parameter[PLACE1_1].value | string(1) |  | 
 | 249 | Blank for One-Byte Field 2 | PLACE1_2| [ParamsForEmergingIssues]| |parameter[PLACE1_2].value | string(1) |  | 
@@ -212,21 +212,22 @@
 | 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   |  |  | 
 | 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocation] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value |  |  | 
-| 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable |  | 
-| 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| |component[ThirdEditedCode].value | codeable |  | 
-| 70 | Fourth Edited Code | RACE4E| [CodedRaceAndEthnicity]| |component[FourthEditedCode].value | codeable |  | 
-| 71 | Fifth Edited Code | RACE5E| [CodedRaceAndEthnicity]| |component[FifthEditedCode].value | codeable |  | 
-| 72 | Sixth Edited Code | RACE6E| [CodedRaceAndEthnicity]| |component[SixthEditedCode].value | codeable |  | 
-| 73 | Seventh Edited Code | RACE7E| [CodedRaceAndEthnicity]| |component[SeventhEditedCode].value | codeable |  | 
-| 74 | Eighth Edited Code | RACE8E| [CodedRaceAndEthnicity]| |component[EighthEditedCode].value | codeable |  | 
-| 75 | First American Indian Code | RACE16C| [CodedRaceAndEthnicity]| |component[FirstAmericanIndianCode].value | codeable |  | 
-| 76 | Second American Indian Code | RACE17C| [CodedRaceAndEthnicity]| |component[SecondAmericanIndianCode].value | codeable |  | 
-| 77 | First Other Asian Code | RACE18C| [CodedRaceAndEthnicity]| |component[FirstOtherAsianCode].value | codeable |  | 
-| 78 | Second Other Asian Code | RACE19C| [CodedRaceAndEthnicity]| |component[SecondOtherAsianCode].value | codeable |  | 
-| 79 | First Other Pacific Islander Code | RACE20C| [CodedRaceAndEthnicity]| |component[FirstOtherPacificIslanderCode].value | codeable |  | 
-| 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| |component[SecondOtherPacificIslanderCode].value | codeable |  | 
-| 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| |component[FirstOtherRaceCode].value | codeable |  | 
-| 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| |component[SecondOtherRaceCode].value | codeable |  | 
+| 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
+| 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| |component[ThirdEditedCode].value | codeable | [RaceCodeVS] | 
+| 70 | Fourth Edited Code | RACE4E| [CodedRaceAndEthnicity]| |component[FourthEditedCode].value | codeable | [RaceCodeVS] | 
+| 71 | Fifth Edited Code | RACE5E| [CodedRaceAndEthnicity]| |component[FifthEditedCode].value | codeable | [RaceCodeVS] | 
+| 72 | Sixth Edited Code | RACE6E| [CodedRaceAndEthnicity]| |component[SixthEditedCode].value | codeable | [RaceCodeVS] | 
+| 73 | Seventh Edited Code | RACE7E| [CodedRaceAndEthnicity]| |component[SeventhEditedCode].value | codeable | [RaceCodeVS] | 
+| 74 | Eighth Edited Code | RACE8E| [CodedRaceAndEthnicity]| |component[EighthEditedCode].value | codeable | [RaceCodeVS] | 
+| 75 | First American Indian Code | RACE16C| [CodedRaceAndEthnicity]| |component[FirstAmericanIndianCode].value | codeable | [RaceCodeVS] | 
+| 76 | Second American Indian Code | RACE17C| [CodedRaceAndEthnicity]| |component[SecondAmericanIndianCode].value | codeable | [RaceCodeVS] | 
+| 77 | First Other Asian Code | RACE18C| [CodedRaceAndEthnicity]| |component[FirstOtherAsianCode].value | codeable | [RaceCodeVS] | 
+| 78 | Second Other Asian Code | RACE19C| [CodedRaceAndEthnicity]| |component[SecondOtherAsianCode].value | codeable | [RaceCodeVS] | 
+| 79 | First Other Pacific Islander Code | RACE20C| [CodedRaceAndEthnicity]| |component[FirstOtherPacificIslanderCode].value | codeable | [RaceCodeVS] | 
+| 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| |component[SecondOtherPacificIslanderCode].value | codeable | [RaceCodeVS] | 
+| 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| |component[FirstOtherRaceCode].value | codeable | [RaceCodeVS] | 
+| 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| |component[SecondOtherRaceCode].value | codeable | [RaceCodeVS] | 
+| <NA> | Race Recode 40  | <NO IJE MAPPING>| [CodedRaceAndEthnicity]| |component[RaceRecode40].value | codeable | [RaceRecord40VS] | 
 | 160 | Hispanic | DETHNICE | [CodedRaceAndEthnicity]| |component[HispanicCode].value | codeable | [HispanicOriginVS] | 
 | 247 | Hispanic Code for Literal | DETHNIC5C| [CodedRaceAndEthnicity]| |component[HispanicCodeForLiteral].value | codeable | [HispanicOriginVS] | 
 {: .grid }
