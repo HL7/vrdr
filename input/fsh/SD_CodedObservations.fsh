@@ -230,10 +230,10 @@ Description: "Input (from EDRS) Race and Ethnicity"
 * insert obscodecomponent(HispanicOther,YesNoUnknownVS)
 * insert primobscodecomponent(HispanicLiteral,string)
 
-Profile: CodedContentDocument
+Profile: CodedContentBundle
 Parent: Bundle
-Id: vrdr-coded-content-document
-Title: "Coded Content Document"
+Id: vrdr-coded-content-bundle
+Title: "Coded Content Bundle"
 Description: "A bundle containing instances of the resources comprising coded content."
 * insert RequireMetaProfile(CodedContentDocument)
 * identifier ^short = "Death Certificate Number"

@@ -5,7 +5,7 @@ Description: "AutomatedUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(AutomatedUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
 
 Instance: RecordAxisCauseOfDeath-Example1
 InstanceOf: RecordAxisCauseOfDeath
@@ -14,7 +14,7 @@ Description: "RecordAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(RecordAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
 * component[position].valueInteger = 1
 
 Instance: EntityAxisCauseOfDeath-Example1
@@ -24,7 +24,7 @@ Description: "EntityAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(EntityAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
 * component[lineNumber].valueInteger = 1
 * component[position].valueInteger = 1
 
@@ -35,7 +35,7 @@ Description: "ManualUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(ManualUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm of upper third of esophagus"
+* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
 
 Instance: PlaceOfInjury-Example1
 InstanceOf: PlaceOfInjury
@@ -96,11 +96,11 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 
 
-Instance: CodedContentDocument-Example1
-InstanceOf: CodedContentDocument
+Instance: CodedContentBundle-Example1
+InstanceOf: CodedContentBundle
 Usage: #example
-Description: "CodedContentDocument-Example1"
-* insert AddMetaProfile(CodedContentDocument)
+Description: "CodedContentBundle-Example1"
+* insert AddMetaProfile(CodedContentBundle)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
 * identifier.value = "000182"
 * identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
