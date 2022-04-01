@@ -127,3 +127,4 @@
 [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
 [RaceRecodeVS]: ValueSet-vrdr-race-recode-40-vs.html
+[ICD10VS]: https://www.hl7.org/fhir/valueset-icd-10.html

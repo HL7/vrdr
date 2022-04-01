@@ -3,6 +3,6 @@
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 108 | Record-axis codes | RAC| |Each entry is a 2-tuple (value, component[position]) |  |  | 
+| 108 | Record-axis codes | RAC| |Each entry is a 2-tuple (value, component[position]) | [ICD10VS] |  | 
 {: .grid }
 {% include markdown-link-references.md %}
