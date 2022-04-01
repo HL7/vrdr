@@ -37,7 +37,7 @@ Id: vrdr-record-axis-cause-of-death
 Title: "Record Axis Cause Of Death"
 Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
 * insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)
-* code = $loinc#80357-7 "Cause of death record axis" (exactly)
+* code = $loinc#80357-7 "Cause of death record axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from $ICD10VS (required)
