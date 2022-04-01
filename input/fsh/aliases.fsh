@@ -13,6 +13,7 @@ Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatu
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
+Alias: $ICD10VS = http://hl7.org/fhir/ValueSet/icd-10
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $list-order = http://terminology.hl7.org/CodeSystem/list-order
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode

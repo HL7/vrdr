@@ -14,7 +14,7 @@ Description: "Automated Underlying Cause Of Death"
 * code = $loinc#80358-5 "Cause of death entity axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
-* value[x] from $icd10
+* value[x] from $ICD10VS
 * insert NCHSObservationCommon
 
 Profile: ManualUnderlyingCauseOfDeath
@@ -26,7 +26,7 @@ Description: "Manual Underlying Cause Of Death"
 * code = $loinc#80359-3 "Cause of death.underlying [Manual]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
-* value[x] from $icd10 (required)
+* value[x] from $ICD10VS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
@@ -40,7 +40,7 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 * code = $loinc#80357-7 "Cause of death record axis" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
-* value[x] from $icd10 (required)
+* value[x] from $ICD10VS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
@@ -65,7 +65,7 @@ Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profil
 * code = $loinc#80356-9 "Cause of death entity axis code [Automated]" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
-* value[x] from $icd10 (required)
+* value[x] from $ICD10VS (required)
 * subject 1..1
 * subject only Reference(Decedent)
 * insert NCHSObservationCommon
