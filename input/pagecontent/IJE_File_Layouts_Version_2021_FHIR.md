@@ -208,8 +208,8 @@
 | 120 | Activity at time of death (computer generated) | INACT| [ActivityAtTimeOfDeath]| |value | codeable | [ActivityAtTimeOfDeathVS] | 
 | 105 | ACME Underlying Cause | ACME_UC| [AutomatedUnderlyingCauseOfDeath]| |value | codeable | [ICD10VS] | 
 | 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10VS] | 
-| 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 2-tuple (value, component[position]) | [ICD10VS] |  | 
-| 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | [ICD10VS] |  | 
+| 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 2-tuple (value, component[position]) | codeable | [ICD10VS] | 
+| 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10VS] | 
 | 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocation] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value |  |  | 
 | 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
@@ -227,7 +227,7 @@
 | 80 | Second Other Pacific Islander Code | RACE21C| [CodedRaceAndEthnicity]| |component[SecondOtherPacificIslanderCode].value | codeable | [RaceCodeVS] | 
 | 81 | First Other Race Code | RACE22C| [CodedRaceAndEthnicity]| |component[FirstOtherRaceCode].value | codeable | [RaceCodeVS] | 
 | 82 | Second Other Race Code | RACE23C| [CodedRaceAndEthnicity]| |component[SecondOtherRaceCode].value | codeable | [RaceCodeVS] | 
-| <NA> | Race Recode 40  | <NO IJE MAPPING>| [CodedRaceAndEthnicity]| |component[RaceRecode40].value | codeable | [RaceRecode40VS] | 
+| NA | Race Recode 40  | *NO IJE MAPPING*| [CodedRaceAndEthnicity]| |component[RaceRecode40].value | codeable | [RaceRecode40VS] | 
 | 160 | Hispanic | DETHNICE | [CodedRaceAndEthnicity]| |component[HispanicCode].value | codeable | [HispanicOriginVS] | 
 | 247 | Hispanic Code for Literal | DETHNIC5C| [CodedRaceAndEthnicity]| |component[HispanicCodeForLiteral].value | codeable | [HispanicOriginVS] | 
 {: .grid }
