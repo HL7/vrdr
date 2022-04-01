@@ -44,7 +44,7 @@ Description: "PlaceOfInjury-Example1"
 * insert AddMetaProfile(PlaceOfInjury)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#E08.8 "Diabetes mellitus due to underlying condition with unspecified complications"
+* valueCodeableConcept = $loinc#LA14084-0	"Home"
 
 Instance: ActivityAtTimeOfDeath-Example1
 InstanceOf: ActivityAtTimeOfDeath
