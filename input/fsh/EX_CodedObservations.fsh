@@ -100,7 +100,7 @@ InstanceOf: CodingStatusValues
 Usage: #example
 Description:   "CodingStatusValues-Example1"
 * insert AddMetaProfile(CodingStatusValues)
-* parameter[shipmentNumber].valueInteger = 3
+* parameter[shipmentNumber].valueString = "A2B2"
 * parameter[receiptDate].valueDate = "2021-12-12"
 * parameter[coderStatus].valueInteger = 5
 * parameter[intentionalReject].valueCodeableConcept = IntentionalRejectCS#1

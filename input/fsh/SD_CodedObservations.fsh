@@ -27,7 +27,7 @@ Title:  "Coding Status Values"
 Description:   "Coding Status Values contains various status flags that result from the coding process"
 * insert RequireMetaProfile(CodingStatusValues)
 * insert ParameterSlicing
-* insert ParameterNameType(shipmentNumber, integer, shipment number, shipment number)
+* insert ParameterNameType(shipmentNumber, string, shipment number, shipment number)
 * insert ParameterNameType(receiptDate, date, receipt date, receipt date)
 * insert ParameterNameType(coderStatus, integer, coder status, coder status)
 * insert ParameterNameType(intentionalReject, CodeableConcept, Intentional reject, Intentional reject)
