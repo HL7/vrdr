@@ -180,7 +180,7 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
-* insert addentry(Bundle, DeathCertificate-Example1)
+* insert addentry(Bundle, DeathCertificate-Example2)
 * insert addentry(Patient, Decedent-Example1)
 * insert addentry(RelatedPerson, DecedentFather-Example1)
 * insert addentry(RelatedPerson, DecedentMother-Example1)
