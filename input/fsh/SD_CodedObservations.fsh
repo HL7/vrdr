@@ -28,7 +28,7 @@ Description:   "Coding Status Values contains various status flags that result f
 * insert RequireMetaProfile(CodingStatusValues)
 * insert ParameterSlicing
 * insert ParameterNameType(shipmentNumber, integer, shipment number, shipment number)
-* insert ParameterNameType(receiptDate, string, receipt date, receipt date)
+* insert ParameterNameType(receiptDate, date, receipt date, receipt date)
 * insert ParameterNameType(coderStatus, integer, coder status, coder status)
 * insert ParameterNameType(intentionalReject, string, Intentional reject, Intentional reject)
 * insert ParameterNameType(acmeSystemReject, string, ACME System Reject, ACME System Reject)
@@ -36,6 +36,8 @@ Description:   "Coding Status Values contains various status flags that result f
 * parameter[intentionalReject].value[x] from IntentionalRejectVS
 * parameter[intentionalReject].value[x] from SystemRejectVS
 * parameter[intentionalReject].value[x] from TransaxConversionVS
+* parameter[receiptDate].valueDate.extension contains
+    PartialDate named partialDate 0..1
 
 
 CodeSystem: IntentionalRejectCS
