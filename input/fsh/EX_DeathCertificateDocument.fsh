@@ -162,6 +162,7 @@ Description: "DeathCertificate-Example2 (with coded content)"
 // The next line shouldn't be necessary
 *  section[CodedContent].code = DocumentSectionCS#CodedContent
 *  section[CodedContent].entry[ActivityAtTimeOfDeath] = Reference(ActivityAtTimeOfDeath-Example1)
+*  section[CodedContent].entry[PlaceOfInjury] = Reference(PlaceOfInjury-Example1)
 *  section[CodedContent].entry[CodedRaceAndEthnicity] = Reference(CodedRaceAndEthnicity-Example1)
 *  section[CodedContent].entry[ManualUnderlyingCauseOfDeath] = Reference(ManualUnderlyingCauseOfDeath-Example1)
 *  section[CodedContent].entry[AutomatedUnderlyingCauseOfDeath] = Reference(AutomatedUnderlyingCauseOfDeath-Example1)
