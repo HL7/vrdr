@@ -86,6 +86,7 @@ The content is broken down into the following sections:
     * [DecedentDispositionMethod]
     * [DispositionLocation]
     * [FuneralHome]
+<<<<<<< HEAD
 * Coded Content
     * [ActivityAtTimeOfDeath]
     * [AutomatedUnderlyingCauseOfDeath]
@@ -95,6 +96,8 @@ The content is broken down into the following sections:
     * [RecordAxisCauseOfDeath]
     * [PlaceOfInjury]
     * [CodingStatusValues]
+=======
+>>>>>>> master
 
 The profile includes:" }
 profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",

@@ -24,3 +24,5 @@ Description: "Autopsy Performed Indicator (Observation)"
 * component.value[x] 1..1
 * component.value[x] only CodeableConcept
 * component.value[x] from YesNoUnknownNotApplicableVS (required)
+* performer 0..1
+* performer ^short = "Autopsy Performer using USCorePractioner"
