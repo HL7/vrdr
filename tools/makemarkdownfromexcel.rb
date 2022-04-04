@@ -86,6 +86,15 @@ The content is broken down into the following sections:
     * [DecedentDispositionMethod]
     * [DispositionLocation]
     * [FuneralHome]
+* Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
 
 The profile includes:" }
 profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
@@ -222,6 +231,20 @@ profiles["PlaceOfInjury"] = {
 profiles["CodedRaceAndEthnicity"] = {
   :out => "StructureDefinition-vrdr-coded-race-and-ethnicity-intro.md",
   :desc => "",
+}
+profiles["CodingStatusValues"] = {
+  :out => "StructureDefinition-vrdr-coding-status-values-intro.md",
+  :desc => "
+  * Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
+    ",
 }
 
 puts ARGV[0]

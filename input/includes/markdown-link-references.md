@@ -128,3 +128,6 @@
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
 [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
 [ICD10VS]: https://www.hl7.org/fhir/valueset-icd-10.html
+[IntentionalRejectVS]: ValueSet-vrdr-intentional-reject-vs.html
+[ACMESystemRejectVS]: ValueSet-vrdr-system-reject-vs.html
+[TransaxConversionVS]: ValueSet-vrdr-transax-conversion-vs.html
