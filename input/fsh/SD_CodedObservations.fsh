@@ -34,8 +34,8 @@ Description:   "Coding Status Values contains various status flags that result f
 * insert ParameterNameType(acmeSystemReject, CodeableConcept, ACME System Reject, ACME System Reject)
 * insert ParameterNameType(transaxConversion, CodeableConcept, ALIAS: Transax Conversion, Transax Conversion)
 * parameter[intentionalReject].value[x] from IntentionalRejectVS
-* parameter[intentionalReject].value[x] from SystemRejectVS
-* parameter[intentionalReject].value[x] from TransaxConversionVS
+* parameter[acmeSystemReject].value[x] from SystemRejectVS
+* parameter[transaxConversion].value[x] from TransaxConversionVS
 * parameter[receiptDate].valueDate.extension contains
     PartialDate named partialDate 0..1
 
