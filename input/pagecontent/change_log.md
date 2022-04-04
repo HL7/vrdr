@@ -123,6 +123,8 @@
 * [FHIR-36268](https://jira.hl7.org/browse/FHIR-36268) :  Fix State/Jurisdiction Value Sets (work around IGP issue)
 * [FHIR-36404](https://jira.hl7.org/browse/FHIR-36404) :  Consistent encoding of States/Jurisdictions
 * [FHIR-36585](https://jira.hl7.org/browse/FHIR-36585) : Remove Davinci Logo
+* [FHIR-36688](https://jira.hl7.org/browse/FHIR-36682) : Moved Race and Ethnicity info from Decedent into a separate Observation profile
+* [FHIR-36688](https://jira.hl7.org/browse/FHIR-36688) : Added Observation and a Parameter profiles to support all coded information
 
 
 
