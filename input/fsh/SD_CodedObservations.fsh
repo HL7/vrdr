@@ -30,9 +30,9 @@ Description:   "Coding Status Values contains various status flags that result f
 * insert ParameterNameType(shipmentNumber, integer, shipment number, shipment number)
 * insert ParameterNameType(receiptDate, date, receipt date, receipt date)
 * insert ParameterNameType(coderStatus, integer, coder status, coder status)
-* insert ParameterNameType(intentionalReject, string, Intentional reject, Intentional reject)
-* insert ParameterNameType(acmeSystemReject, string, ACME System Reject, ACME System Reject)
-* insert ParameterNameType(transaxConversion, string, ALIAS: Transax Conversion, Transax Conversion)
+* insert ParameterNameType(intentionalReject, CodeableConcept, Intentional reject, Intentional reject)
+* insert ParameterNameType(acmeSystemReject, CodeableConcept, ACME System Reject, ACME System Reject)
+* insert ParameterNameType(transaxConversion, CodeableConcept, ALIAS: Transax Conversion, Transax Conversion)
 * parameter[intentionalReject].value[x] from IntentionalRejectVS
 * parameter[intentionalReject].value[x] from SystemRejectVS
 * parameter[intentionalReject].value[x] from TransaxConversionVS

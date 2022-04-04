@@ -95,6 +95,19 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 
+Instance: CodingStatusValues-Example1
+InstanceOf: CodingStatusValues
+Usage: #example
+Description:   "CodingStatusValues-Example1"
+* insert AddMetaProfile(CodingStatusValues)
+* parameter[shipmentNumber].valueInteger = 3
+* parameter[receiptDate].valueDate = "2021-12-12"
+* parameter[coderStatus].valueInteger = 5
+* parameter[intentionalReject].valueCodeableConcept = IntentionalRejectCS#1
+* parameter[acmeSystemReject].valueCodeableConcept = SystemRejectCS#0
+* parameter[transaxConversion].valueCodeableConcept = TransaxConversionCS#3
+
+
 
 Instance: CodedContentBundle-Example1
 InstanceOf: CodedContentBundle
@@ -113,3 +126,4 @@ Description: "CodedContentBundle-Example1"
 * insert addentry(Observation, RecordAxisCauseOfDeath-Example1)
 * insert addentry(Observation, EntityAxisCauseOfDeath-Example1)
 * insert addentry(Observation, PlaceOfInjury-Example1)
+* insert addentry(Parameter, CodingStatusValues-Example1)
