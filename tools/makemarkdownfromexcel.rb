@@ -234,7 +234,11 @@ profiles["CodedRaceAndEthnicity"] = {
 }
 profiles["CodingStatusValues"] = {
   :out => "StructureDefinition-vrdr-coding-status-values-intro.md",
-  :desc => "
+  :desc => "",
+}
+profiles["CodedContentBundle"] = {
+  :out => "StructureDefinition-vrdr-coding-content-bundle-intro.md",
+  :desc =>" Bundle containing  the following coded content:
   * Coded Content
     * [ActivityAtTimeOfDeath]
     * [AutomatedUnderlyingCauseOfDeath]
@@ -245,7 +249,7 @@ profiles["CodingStatusValues"] = {
     * [PlaceOfInjury]
     * [CodingStatusValues]
     ",
-}
+  }
 
 puts ARGV[0]
 

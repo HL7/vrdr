@@ -1,15 +1,5 @@
 ### Usage
 
-  * Coded Content
-    * [ActivityAtTimeOfDeath]
-    * [AutomatedUnderlyingCauseOfDeath]
-    * [ManualUnderlyingCauseOfDeath]
-    * [CodedRaceAndEthnicity]
-    * [EntityAxisCauseOfDeath]
-    * [RecordAxisCauseOfDeath]
-    * [PlaceOfInjury]
-    * [CodingStatusValues]
-    
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
