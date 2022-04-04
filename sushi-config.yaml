@@ -70,6 +70,7 @@ groups:
     - StructureDefinition/vrdr-decedent-spouse
     - StructureDefinition/vrdr-decedent-usual-work
     - StructureDefinition/vrdr-decedent-military-service
+    - StructureDefinition/vrdr-input-race-and-ethnicity
     - StructureDefinition/vrdr-params-for-emerging-issues
   DeathInvestigation:
     name: B. Death Investigation
@@ -104,6 +105,19 @@ groups:
     - StructureDefinition/vrdr-disposition-location
     - StructureDefinition/vrdr-decedent-disposition-method
     - StructureDefinition/vrdr-funeral-home
+  CodedObservations:
+    name: E. Coded Observations
+    description: Coded Observations based on the submitted death record.
+    resources:
+    - StructureDefinition/vrdr-activity-at-time-of-death
+    - StructureDefinition/vrdr-automated-underlying-cause-of-death
+    - StructureDefinition/vrdr-manual-underlying-cause-of-death
+    - StructureDefinition/vrdr-record-axis-cause-of-death
+    - StructureDefinition/vrdr-entity-axis-cause-of-death
+    - StructureDefinition/vrdr-place-of-injury
+    - StructureDefinition/vrdr-coded-race-and-ethnicity
+    - StructureDefinition/vrdr-coded-content-bundle
+    - StructureDefinition/vrdr-coding-status-values
   Extensions:
     name: Extensions
     description: Extensions.
@@ -126,8 +140,6 @@ groups:
     - StructureDefinition/FilingFormat
     - StructureDefinition/Location-Jurisdiction-Id
     - StructureDefinition/NVSS-SexAtDeath
-    - StructureDefinition/NVSS-Ethnicity
-    - StructureDefinition/NVSS-Race
     - StructureDefinition/PostDirectional
     - StructureDefinition/PreDirectional
     - StructureDefinition/SpouseAlive
@@ -140,15 +152,20 @@ groups:
     name: CodeSystems
     description: Code Systems.
     resources:
+    - CodeSystem/vrdr-activity-at-time-of-death-cs
     - CodeSystem/vrdr-bypass-edit-flag-cs
     - CodeSystem/vrdr-document-section-cs
     - CodeSystem/vrdr-jurisdictions-cs
     - CodeSystem/vrdr-missing-value-reason-cs
     - CodeSystem/vrdr-pregnancy-status-cs
+    - CodeSystem/vrdr-system-reject-cs
+    - CodeSystem/vrdr-intentional-reject-cs
+    - CodeSystem/vrdr-transax-conversion-cs
   ValueSets:
     name: ValueSets
     description: ValueSets.
     resources:
+    - ValueSet/vrdr-activity-at-time-of-death-vs
     - ValueSet/vrdr-edit-bypass-01-vs
     - ValueSet/vrdr-edit-bypass-012-vs
     - ValueSet/vrdr-edit-bypass-01234-vs
@@ -176,6 +193,9 @@ groups:
     - ValueSet/vrdr-birthplace-country-vs
     - ValueSet/vrdr-filing-format-vs
     - ValueSet/vrdr-units-of-age-vs
+    - ValueSet/vrdr-system-reject-vs
+    - ValueSet/vrdr-intentional-reject-vs
+    - ValueSet/vrdr-transax-conversion-vs
 copyrightYear: 2022+
 publisher:
   name: HL7 Public Health Working Group

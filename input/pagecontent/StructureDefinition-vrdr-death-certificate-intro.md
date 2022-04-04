@@ -43,6 +43,18 @@ The content is broken down into the following sections:
     * [DecedentDispositionMethod]
     * [DispositionLocation]
     * [FuneralHome]
+<<<<<<< HEAD
+* Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
+=======
+>>>>>>> master
 
 The profile includes:
 

@@ -9,4 +9,7 @@ The profiles in this IG, together with profiles from USCore, are used to represe
 <center>
 <table><tr><td><img src="Structure.jpg" style="width:60%;"/></td></tr></table>
 </center>
+
+### Structure of a Coded Content Bundle
+Coded cause of death and demographic content can be sent either as part of a [DeathCertificateDocument], or as a separate [CodedContentBundle] which is a simple collection bundle, as may be appropriate for a particular use case.  Examples of both are provided.
 {% include markdown-link-references.md %}

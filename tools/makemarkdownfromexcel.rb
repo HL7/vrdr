@@ -86,6 +86,18 @@ The content is broken down into the following sections:
     * [DecedentDispositionMethod]
     * [DispositionLocation]
     * [FuneralHome]
+<<<<<<< HEAD
+* Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
+=======
+>>>>>>> master
 
 The profile includes:" }
 profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
@@ -173,6 +185,10 @@ profiles["InjuryLocation"] = {
   :out => "StructureDefinition-vrdr-injury-location-intro.md",
   :desc => "",
 }
+profiles["InputRaceAndEthnicity"] = {
+  :out => "StructureDefinition-vrdr-input-race-and-ethnicity-intro.md",
+  :desc => "",
+}
 profiles["MannerOfDeath"] = {
   :out => "StructureDefinition-vrdr-manner-of-death-intro.md",
   :desc => "A reference to the [Certifier] may be provided through the performer field.",
@@ -191,6 +207,52 @@ profiles["TobaccoUseContributedToDeath"] = {
   :out => "StructureDefinition-vrdr-tobacco-use-contributed-to-death-intro.md",
   :desc => "",
 }
+profiles["ActivityAtTimeOfDeath"] = {
+  :out => "StructureDefinition-vrdr-activity-at-time-of-death-intro.md",
+  :desc => "",
+}
+profiles["AutomatedUnderlyingCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-automated-underlying-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["ManualUnderlyingCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-manual-underlying-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["RecordAxisCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-record-axis-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["EntityAxisCauseOfDeath"] = {
+  :out => "StructureDefinition-vrdr-entity-axis-cause-of-death-intro.md",
+  :desc => "",
+}
+profiles["PlaceOfInjury"] = {
+  :out => "StructureDefinition-vrdr-place-of-injury-intro.md",
+  :desc => "",
+}
+profiles["CodedRaceAndEthnicity"] = {
+  :out => "StructureDefinition-vrdr-coded-race-and-ethnicity-intro.md",
+  :desc => "",
+}
+profiles["CodingStatusValues"] = {
+  :out => "StructureDefinition-vrdr-coding-status-values-intro.md",
+  :desc => "",
+}
+profiles["CodedContentBundle"] = {
+  :out => "StructureDefinition-vrdr-coding-content-bundle-intro.md",
+  :desc =>" Bundle containing  the following coded content:
+  * Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
+    ",
+  }
 
 puts ARGV[0]
 
