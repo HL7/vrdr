@@ -1,3 +1,98 @@
+RuleSet: ParameterSlicing
+* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+
+RuleSet: ParameterName(name,short,def)
+* parameter contains {name} 0..1
+* parameter[{name}].name = "{name}"
+* parameter[{name}] ^short = "{short}"
+* parameter[{name}] ^definition = "{def}"
+* parameter[{name}].extension 0..0
+
+RuleSet: ParameterNameType(name, type, short, def)
+* insert ParameterName({name},{short}, {def})
+* parameter[{name}].value[x] only {type}
+* parameter[{name}].value[x] 1..1
+* parameter[{name}].resource 0..0
+* parameter[{name}].part 0..0
+* parameter[{name}].extension 0..0
+
+
+Profile: CodingStatusValues
+Parent: Parameters
+Id: vrdr-coding-status-values
+Title:  "Coding Status Values"
+Description:   "Coding Status Values contains various status flags that result from the coding process"
+* insert RequireMetaProfile(CodingStatusValues)
+* insert ParameterSlicing
+* insert ParameterNameType(shipmentNumber, integer, shipment number, shipment number)
+* insert ParameterNameType(receiptDate, string, receipt date, receipt date)
+* insert ParameterNameType(coderStatus, integer, coder status, coder status)
+* insert ParameterNameType(intentionalReject, string, Intentional reject, Intentional reject)
+* insert ParameterNameType(acmeSystemReject, string, ACME System Reject, ACME System Reject)
+* insert ParameterNameType(transaxConversion, string, ALIAS: Transax Conversion, Transax Conversion)
+* parameter[intentionalReject].value[x] from IntentionalRejectVS
+* parameter[intentionalReject].value[x] from SystemRejectVS
+* parameter[intentionalReject].value[x] from TransaxConversionVS
+
+
+CodeSystem: IntentionalRejectCS
+Id: vrdr-intentional-reject-cs
+Title: "Intentional Reject CodeSystem"
+Description: "Intentional Reject CodeSystem"
+* ^caseSensitive = true
+* #1 "Reject1" "Reject1"
+* #2 "Reject2" "Reject2"
+* #3 "Reject3" "Reject3"
+* #4 "Reject4" "Reject4"
+* #5 "Reject5" "Reject5"
+* #9 "Reject9" "Reject9"
+
+
+ValueSet: IntentionalRejectVS
+Id: vrdr-intentional-reject-vs
+Title: "Intentional Reject ValueSet"
+Description: "Intentional Reject ValueSet"
+* codes from system IntentionalRejectCS
+
+CodeSystem: SystemRejectCS
+Id: vrdr-system-reject-cs
+Title: "System Reject Code System"
+Description: "System Reject Code System"
+* ^caseSensitive = true
+* #0 "Not Rejected" "Not Rejected"
+* #1 "MICAR Reject Dictionary Match" "MICAR Reject  Dictionary match"
+* #2 "ACME Reject" "ACME Reject"
+* #3 "MICAR Reject Rule Application" "MICAR Reject Rule Application"
+* #4 "Record Reviewed" "Record Reviewed"
+
+ValueSet: SystemRejectVS
+Id: vrdr-system-reject-vs
+Title: "System Reject ValueSet"
+Description: "System Reject ValueSet"
+* codes from system SystemRejectCS
+
+CodeSystem: TransaxConversionCS
+Id: vrdr-transax-conversion-cs
+Title: "Transax Conversion Code System"
+Description: "Transax Conversion Code System"
+* ^caseSensitive = true
+* #3 "Conversion using non-ambivalent table entries " "Conversion using non-ambivalent table entries"
+* #4 "Conversion using ambivalent table entries " "Conversion using ambivalent table entries"
+* #5 "Duplicate entity-axis codes deleted; no other action involved " "Duplicate entity-axis codes deleted; no other action involved"
+* #6 "Artificial code conversion; no other action " "Artificial code conversion; no other action"
+
+ValueSet: TransaxConversionVS
+Id: vrdr-transax-conversion-vs
+Title: "System Reject ValueSet"
+Description: "System Reject ValueSet"
+* codes from system TransaxConversionCS
+
+
+
+
 RuleSet: NCHSObservationCommon
 * subject only Reference(Decedent)
 * subject ^short = "Decedent"
@@ -48,13 +143,25 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    position 1..1
+    position 1..1 and
+    wouldBeUnderlyingCauseOfDeathWithoutPregnancy 0..1
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy] ^short = "wouldBeUnderlyingCauseOfDeathWithoutPregnancy"
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].valueBoolean ^short = "wouldBeUnderlyingCauseOfDeathWithoutPregnancy"
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code 1..1
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code = #position "wouldBeUnderlyingCauseOfDeathWithoutPregnancy" (exactly)
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] 1..1
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] only boolean
+* component[position] ^short = "Position"
+* component[position].valueInteger ^short = "Position"
 * component[position].code 1..1
 * component[position].code = #position "Position" (exactly)
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
 * component[position] ^short = "Position"
 * component[position].valueInteger ^short = "Position"
+
+
+
 
 Profile: EntityAxisCauseOfDeath
 Parent: Observation
@@ -111,13 +218,13 @@ Id: vrdr-activity-at-time-of-death-cs
 Title: "Activity at Time of Death Codesystem"
 Description: "Activity at Time of Death Codesystem based on PHVS_ActivityType_NCHS"
 * ^caseSensitive = false
-* #0 "During unspecified activity"
+* #0 "While engaged in sports activity"
 * #1 "While engaged in leisure activities."
-* #2 "While engaged in other specified activities."
-* #4 "While engaged in other types of work"
-* #5 "While engaged in sports activity"
-* #6 "While resting, sleeping, eating, or engaging in other vital activities"
-* #7 "While working for income"
+* #2 "While working for income"
+* #3 "While engaged in other types of work"
+* #4 "While resting, sleeping, eating, or engaging in other vital activities"
+* #8 "While engaged in other specified activities."
+* #9 "During unspecified activity"
 
 ValueSet: ActivityAtTimeOfDeathVS
 Id: vrdr-activity-at-time-of-death-vs
@@ -250,13 +357,16 @@ Description: "A bundle containing instances of the resources comprising coded co
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile"
+* insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
 * insert BundleSlice(  AutomatedUnderlyingCauseOfDeath,  0, 1,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath)
 * insert BundleSlice(  ManualUnderlyingCauseOfDeath,  0, 1,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath)
 * insert BundleSlice(  CodedRaceAndEthnicity,  0, 1,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity)
 * insert BundleSlice(  EntityAxisCauseOfDeath,  0, 20,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath)
 * insert BundleSlice(  RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
 * insert BundleSlice(  PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
-* insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
+* insert BundleSlice(  CodingStatusValues,  0, 1,  CodingStatusValues,  CodingStatusValues,  CodingStatusValues)
+
+
 
 ValueSet: ICD10CausesOfDeathVS
 Id: vrdr-icd10-causes-of-death-vs

@@ -210,7 +210,7 @@
 | 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10VS] | 
 | 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 2-tuple (value, component[position]) | codeable | [ICD10VS] | 
 | 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10VS] | 
-| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocation] | 
+| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocationVS] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value |  |  | 
 | 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
 | 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| |component[ThirdEditedCode].value | codeable | [RaceCodeVS] | 
@@ -230,5 +230,11 @@
 | NA | Race Recode 40  | *NO IJE MAPPING*| [CodedRaceAndEthnicity]| |component[RaceRecode40].value | codeable | [RaceRecode40VS] | 
 | 160 | Hispanic | DETHNICE | [CodedRaceAndEthnicity]| |component[HispanicCode].value | codeable | [HispanicOriginVS] | 
 | 247 | Hispanic Code for Literal | DETHNIC5C| [CodedRaceAndEthnicity]| |component[HispanicCodeForLiteral].value | codeable | [HispanicOriginVS] | 
+| 91 | NCHS USE ONLY: Receipt date -- Year | R_YR| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
+| 92 | NCHS USE ONLY: Receipt date -- Month | R_MO| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
+| 93 | NCHS USE ONLY: Receipt date -- Day | R_DY| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
+| 101 | Intentional Reject  | INT_REJ| [CodingStatusValues]| |parameter[intentionalReject].value | codeable | [IntentionalRejectVS] | 
+| 102 | Acme System Reject Codes | SYS_REJ| [CodingStatusValues]| |parameter[acmeSystemReject].value  | codeable | [ACMESystemRejectVS] | 
+| 107 | Transax conversion flag: Computer Generated | TRX_FLG| [CodingStatusValues]| |parameter[transaxConversion].value  | codeable | [TransaxConversionVS] | 
 {: .grid }
 {% include markdown-link-references.md %}
