@@ -233,8 +233,8 @@
 | 91 | Receipt date -- Year | R_YR| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 92 | Receipt date -- Month | R_MO| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 93 | Receipt date -- Day | R_DY| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
-| NA | coder status  | CS| [CodingStatusValues]| |parameter[coderStatus].value | integer |  | 
-| NA | shipment number  | SHIP| [CodingStatusValues]| |parameter[shipmentNumber].value | string |  | 
+| NA | coder status  | CS (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[coderStatus].value | integer |  | 
+| NA | shipment number  | SHIP (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[shipmentNumber].value | string |  | 
 | 101 | Intentional Reject  | INT_REJ| [CodingStatusValues]| |parameter[intentionalReject].value | codeable | [IntentionalRejectVS] | 
 | 102 | Acme System Reject Codes | SYS_REJ| [CodingStatusValues]| |parameter[acmeSystemReject].value  | codeable | [ACMESystemRejectVS] | 
 | 107 | Transax conversion flag: Computer Generated | TRX_FLG| [CodingStatusValues]| |parameter[transaxConversion].value  | codeable | [TransaxConversionVS] | 
