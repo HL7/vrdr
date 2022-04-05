@@ -127,5 +127,4 @@
 * [FHIR-36688](https://jira.hl7.org/browse/FHIR-36688) : Added Observation and a Parameter profiles to support all coded information
 
 
-
 {% include markdown-link-references.md %}

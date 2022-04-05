@@ -7,7 +7,12 @@ Title: "Certifier"
 Description: "Certifier (USCorePractitioner)"
 * insert RequireMetaProfile(Certifier)
 * name 1..1
+* name ^short = "name"
 * address 1..1
+* address ^short = "address"
+* address.city ^short = "city"
+* address.district ^short = "county"
+* address.postalCode ^short = "zip"
 * insert CityCode
 * insert CountyCode
 * insert AddressComponents

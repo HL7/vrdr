@@ -8,7 +8,7 @@ RuleSet: AuxiliaryStateIdentifier
 Extension: AuxiliaryStateIdentifier1
 Id: AuxiliaryStateIdentifier1
 Title: "Auxiliary State Identifier1"
-Description: "An identifier associated by the submitting jurisdiction with a specific death certificate number.  Twelve digit withi leading zeroes"
+Description: "An identifier associated by the submitting jurisdiction with a specific death certificate number.  Twelve digit with leading zeroes"
 * insert AuxiliaryStateIdentifier
 
 Extension: AuxiliaryStateIdentifier2
