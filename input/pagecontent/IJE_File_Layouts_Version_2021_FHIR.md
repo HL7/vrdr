@@ -151,7 +151,7 @@
 | 117 | Time of injury | TOI_HR| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 118 | Injury at work | WORKINJ| [InjuryIncident]| |component[InjuryAtWork].value | codeable | [YesNoUnknownNotApplicableVS] | 
 | 126 | Time of Injury Unit | TOI_UNIT| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
-| 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[placeOfInjury].value.text | string |  | 
+| 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string |  | 
 | 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string |  | 
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryIncident]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string |  | 
