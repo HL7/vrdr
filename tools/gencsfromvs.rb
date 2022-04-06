@@ -23,22 +23,59 @@ namespace VRDR
 =end
 require "json"
 require "pry"
+require "byebug"
+
 codesystems = {
   "http://snomed.info/sct" => "VRDR.CodeSystems.SCT",
   "http://terminology.hl7.org/CodeSystem/v3-NullFlavor" => "VRDR.CodeSystems.PH_NullFlavor_HL7_V3",
   "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" => "VRDR.CodeSystems.PH_MaritalStatus_HL7_2x",
-  "urn:oid:2.16.840.1.114222.4.5.320" => "VRDR.CodeSystems.PH_PlaceOfOccurrence_ICD_10_WHO",
-  "http://hl7.org/fhir/us/vrdr/CodeSystem/PH-PHINVS-CDC" => "VRDR.CodeSystems.PH_PHINVS_CDC",
+  "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-activity-at-time-of-death-cs" => "VRDR.CodeSystems.ActivityAtTimeOfDeath",
+  "http://hl7.org/fhir/administrative-gender" => "VRDR.CodeSystems.HL7_Administrative_Gender",
+  "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs" => "VRDR.CodeSystems.BypassEditFlags",
+  "http://terminology.hl7.org/CodeSystem/v3-EducationLevel" => "VRDR.CodeSystems.HL7_EducationLevel",
+  "http://terminology.hl7.org/CodeSystem/v2-0360" => "VRDR.CodeSystems.HL7_DegreesCertificates",
+  "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-jurisdictions-cs" => "VRDR.CodeSystems.Jurisdictions",
+  "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-pregnancy-status-cs" => "VRDR.CodeSystems.PregnancyStatus",
+  "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-missing-value-reason-cs" => "VRDR.CodeSystem.MissingValueReason",
+
+
 }
 valuesets = {
-  "ValueSet-PHVS-DecedentEducationLevel-NCHS.json" => "EducationLevel",
-  "ValueSet-PHVS-MannerOfDeath-NCHS.json" => "MannerOfDeath",
-  "ValueSet-PHVS-MaritalStatus-NCHS.json" => "MaritalStatus",
-  "ValueSet-PHVS-PlaceOfInjury-NCHS.json" => "PlaceOfInjury",
-  "ValueSet-PHVS-PlaceOfDeath-NCHS.json" => "PlaceOfDeath",
-  "ValueSet-PHVS-TransportationRelationships-NCHS.json" => "TransportationRelationships",
-  "ValueSet-PHVS-PregnancyStatus-NCHS.json" => "PregnancyStatus",
-  "ValueSet-PHVS-MethodsOfDisposition-NCHS.json" => "MethodsOfDisposition",
+    "ValueSet-vrdr-activity-at-time-of-death-vs.json" => "ActivityAtTimeOfDeath",
+    "ValueSet-vrdr-administrative-gender-vs.json" => "AdministrativeGender",
+#    "ValueSet-vrdr-birthplace-country-vs.json" => "BirthplaceCountry",
+#    "ValueSet-vrdr-canada-provinces-vs.json" => "CanadaProvinces",
+    "ValueSet-vrdr-certifier-types-vs.json" => "CertifierTypes",
+    "ValueSet-vrdr-contributory-tobacco-use-vs.json" => "ContributoryTobaccoUse",
+    "ValueSet-vrdr-edit-bypass-01-vs.json" => "Bypass01",
+    "ValueSet-vrdr-edit-bypass-012-vs.json" => "Bypass012",
+    "ValueSet-vrdr-edit-bypass-01234-vs.json" => "Bypass01234",
+    "ValueSet-vrdr-edit-bypass-0124-vs.json" => "Bypass0124",
+    "ValueSet-vrdr-education-level-vs.json" => "EducationLevel",
+    "ValueSet-vrdr-filing-format-vs.json" => "FilingFormat",
+    "ValueSet-vrdr-hispanic-origin-vs.json" => "HispanicOrigin",
+    "ValueSet-vrdr-intentional-reject-vs.json" => "IntentionalReject",
+#    "ValueSet-vrdr-jurisdiction-vs.json" => "Jurisdiction",
+#    "ValueSet-vrdr-jurisdictions-provinces-vs.json" => "JurisdictionsAndProvinces",
+    "ValueSet-vrdr-manner-of-death-vs.json" => "MannerOfDeath",
+    "ValueSet-vrdr-marital-status-vs.json" => "MaritalStatus",
+    "ValueSet-vrdr-method-of-disposition-vs.json" => "MethodOfDisposition",
+    "ValueSet-vrdr-not-applicable-vs.json" => "NotApplicable",
+    "ValueSet-vrdr-place-of-death-vs.json" => "PlaceOfDeath",
+    "ValueSet-vrdr-pregnancy-status-vs.json" => "PregnancyStatus",
+    "ValueSet-vrdr-race-code-vs.json" => "RaceCode",
+    "ValueSet-vrdr-race-missing-value-reason-vs.json" => "RaceMissingValueReason",
+    "ValueSet-vrdr-race-recode-40-vs.json" => "RaceRecode40",
+#    "ValueSet-vrdr-residence-country-vs.json" => "ResidenceCountry",
+#    "ValueSet-vrdr-states-territories-provinces-vs.json" => "StatesTerritoriesAndProvinces",
+#    "ValueSet-vrdr-system-reject-vs.json" => "ResidenceCountry",
+    "ValueSet-vrdr-transax-conversion-vs.json" => "TransaxConversion",
+    "ValueSet-vrdr-transportation-incident-role-vs.json" => "TransportationIncidentRole",
+    "ValueSet-vrdr-units-of-age-vs.json" => "UnitsOfAge",
+#    "ValueSet-vrdr-usstates-territories-vs.json" => "USStatesAndTerritories",
+    "ValueSet-vrdr-yes-no-not-applicable-vs.json" => "YesNoNotApplicable",
+    "ValueSet-vrdr-yes-no-unknown-not-applicable-vs.json" => "YesNoUnknownNotApplicable",
+    "ValueSet-vrdr-yes-no-unknown-vs.json" => "YesNoUnknown"
 }
 basedir = ARGV[0]
 
@@ -48,7 +85,7 @@ puts "namespace VRDR
          public static class ValueSets"
 puts "    {"
 valuesets.each do |vsfile, fieldname|
-  filename = ARGV[0] + "/fsh-generated/resources/" + vsfile
+  filename = ARGV[0] + "/" + vsfile
   ruby = JSON.parse(File.read(filename))
   puts "            /// <summary> #{fieldname} </summary>
             public static class #{fieldname} {
@@ -56,11 +93,13 @@ valuesets.each do |vsfile, fieldname|
                 public static string[,] Codes = {"
   groups = ruby["compose"]["include"]
   first = true
+  # debugger
   groups.each { |group|
     system = group["system"]
     if codesystems[system]
       system = codesystems[system]
     end
+    next if group["concept"] == nil
     for concept in group["concept"]
       puts "," if first == false
       first = false
@@ -73,7 +112,9 @@ valuesets.each do |vsfile, fieldname|
     if codesystems[system]
       system = codesystems[system]
     end
+    next if group["concept"] == nil
     for concept in group["concept"]
+      next if concept["display"] == nil
       display = concept["display"].gsub("/", " ")
       display = display.gsub(",", " ")
       display = display.gsub(";", " ")

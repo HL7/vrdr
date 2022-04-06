@@ -242,7 +242,13 @@ ValueSet: ActivityAtTimeOfDeathVS
 Id: vrdr-activity-at-time-of-death-vs
 Title: "Activity at Time of Death VS"
 Description: "Activity at Time of Death"
-* include codes from system ActivityAtTimeOfDeathCS
+* ActivityAtTimeOfDeathCS#0 "While engaged in sports activity"
+* ActivityAtTimeOfDeathCS#1 "While engaged in leisure activities."
+* ActivityAtTimeOfDeathCS#2 "While working for income"
+* ActivityAtTimeOfDeathCS#3 "While engaged in other types of work"
+* ActivityAtTimeOfDeathCS#4 "While resting, sleeping, eating, or engaging in other vital activities"
+* ActivityAtTimeOfDeathCS#8 "While engaged in other specified activities."
+* ActivityAtTimeOfDeathCS#9 "During unspecified activity"
 * $v3-NullFlavor#UNK "unknown"
 
 Profile: ActivityAtTimeOfDeath
