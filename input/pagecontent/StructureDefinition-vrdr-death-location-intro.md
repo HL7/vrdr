@@ -21,6 +21,6 @@
 | 141 | Place of death. Longitude | LONG_D| x|position.longitude | float |  | 
 | 142 | Place of Death. Latitude | LAT_D| x|position.latitude | float |  | 
 | 239 | Country of Death - Code | DTHCOUNTRYCD| x|address.country  | string  | Not Used.  For US Death certificates should be US | 
-| 240 | Country of Death - Literal | DTHCOUNTRY| x|address.country  | string  | Not used. For US Death certificates should be US | 
+| 240 | Country of Death - Literal | DTHCOUNTRY| x|address.country  (expanded from 2 letter code) | string  | Not used. For US Death certificates should be US | 
 {: .grid }
 {% include markdown-link-references.md %}

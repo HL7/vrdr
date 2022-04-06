@@ -33,7 +33,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 154 | Decedent's Residence - County | COUNTYTEXT_R| |address.district | string |  | 
 | 155 | Decedent's Residence - State name | STATETEXT_R | |address.state (expanded from 2 letter code) | string |  | 
 | 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| |address.country (expanded from 2 letter code) | string |  | 
-| 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| |address.line | string |  | 
+| 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| |address.line[0] | string |  | 
 | 166 | Middle Name of Decedent  | DMIDDLE| x|name.given , name.use = official | string |  | 
 | 194 | Decedent's Maiden Name | DMAIDEN| x|name.text , name.use=maiden | string |  | 
 | 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| x|extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer | see [CityCodes] | 

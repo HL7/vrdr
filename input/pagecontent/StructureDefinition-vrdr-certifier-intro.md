@@ -16,7 +16,7 @@ The Certifier profile includes:
 | 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| x|address.line  | string |  | 
 | 231 | Certifier - City or Town name | CERTCITYTEXT| x|address.city  | string |  | 
 | 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| x|address.state | string | [StatesTerritoriesProvincesVS] | 
+| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| x|address.state (expanded from 2 letter code) | string |  | 
 | 234 | Certifier - Zip | CERTZIP| x|address.postalCode | string |  | 
 {: .grid }
 {% include markdown-link-references.md %}
