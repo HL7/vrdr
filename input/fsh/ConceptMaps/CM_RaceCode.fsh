@@ -1,4 +1,4 @@
-Instance: RaceCodesCM
+Instance: RaceCodeCM
 InstanceOf: ConceptMap
 Usage: #definition
 * insert ConceptMapIntro(Race Codes, RaceCodeVS)
