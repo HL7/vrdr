@@ -12,4 +12,4 @@ Description: "Place of Injury from NCHS TRX Format.  THis contains all of the co
 * $loinc#LA14091-5 "Industrial or construction area"
 * $loinc#LA14092-3 "Farm"
 * $loinc#LA14093-1 "Unspecified"
-* $v3-NullFlavor#OTH "Other specified place"
+* $v3-NullFlavor#OTH "Other"
