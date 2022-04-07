@@ -513,7 +513,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #D44 "Fort Belknap"
 * #D45 "FORT BERTHOLD"
 // AMERICAN INDIAN (A01-M43)
-* #Three "Affiliated Tribes of North Dakota"
+// Three "Affiliated Tribes of North Dakota"
 * #D46 "Three Affiliated Tribes of North Dakota"
 // AMERICAN INDIAN (A01-M43) Fort McDowell
 * #D49 "Fort McDowell MohaveApache Community"
@@ -923,7 +923,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #J90 "Wind River Shoshone"
 * #J91 "Yomba"
 // AMERICAN INDIAN (A01-M43)
-* #Te-Moak "Tribes of Western Shoshone Ind. of Nevada"
+// Te-Moak "Tribes of Western Shoshone Ind. of Nevada"
 * #J93 "TeMoak Tribes of Western Shoshone Indians"
 * #J94 "Battle Mountain"
 * #J95 "Elko"
