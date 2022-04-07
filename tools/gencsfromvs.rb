@@ -37,8 +37,8 @@ codesystems = {
   "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-jurisdictions-cs" => "VRDR.CodeSystems.Jurisdictions",
   "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-pregnancy-status-cs" => "VRDR.CodeSystems.PregnancyStatus",
   "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-missing-value-reason-cs" => "VRDR.CodeSystem.MissingValueReason",
-
-
+  "http://unitsofmeasure.org" => "VRDR.CodeSystems.UnitsOfMeasure",
+  "http://terminology.hl7.org/CodeSystem/v2-0136" => "VRDR.CodeSystems.YesNo"
 }
 valuesets = {
     "ValueSet-vrdr-activity-at-time-of-death-vs.json" => "ActivityAtTimeOfDeath",
@@ -77,55 +77,67 @@ valuesets = {
     "ValueSet-vrdr-yes-no-unknown-not-applicable-vs.json" => "YesNoUnknownNotApplicable",
     "ValueSet-vrdr-yes-no-unknown-vs.json" => "YesNoUnknown"
 }
-basedir = ARGV[0]
-
-puts "namespace VRDR
-    {
-         /// <summary> ValueSet Helpers </summary>
-         public static class ValueSets"
-puts "    {"
+outfilename = ARGV[1] + "/ValueSets.cs"
+puts outfilename
+file = file=File.open(outfilename,"w")
+systems_without_constants = []
+file.puts "namespace VRDR
+{
+    /// <summary> ValueSet Helpers </summary>
+    public static class ValueSets"
+file.puts "    {"
 valuesets.each do |vsfile, fieldname|
-  filename = ARGV[0] + "/" + vsfile
-  ruby = JSON.parse(File.read(filename))
-  puts "            /// <summary> #{fieldname} </summary>
-            public static class #{fieldname} {
-                /// <summary> Codes </summary>
-                public static string[,] Codes = {"
-  groups = ruby["compose"]["include"]
-  first = true
-  # debugger
-  groups.each { |group|
-    system = group["system"]
-    if codesystems[system]
-      system = codesystems[system]
+        puts "Generating output for #{vsfile}"
+        filename = ARGV[0] + "/resources/" + vsfile
+        value_set_data = JSON.parse(File.read(filename))
+        file.puts "        /// <summary> #{fieldname} </summary>
+        public static class #{fieldname} {
+            /// <summary> Codes </summary>
+            public static string[,] Codes = {"
+        groups = value_set_data["compose"]["include"]
+        first = true
+        groups.each { | group |
+            system = group["system"]
+            if codesystems[system]
+                system = codesystems[system]
+            else
+              systems_without_constants << system
+            end
+            next if group["concept"] == nil
+            for concept in group["concept"]
+                file.puts "," if first == false
+                first = false
+                file.print "                { \"#{concept["code"]}\", \"#{concept["display"]}\", #{system} }"
+            end
+        }
+        file.puts "\n            };"
+        groups.each { | group |
+            system = group["system"]
+            if codesystems[system]
+                system = codesystems[system]
+            end
+            next if group["concept"] == nil
+            for concept in group["concept"]
+                next if concept["display"] == nil
+                display = concept["display"].split(/-[A-Z]/).first
+                display = display.split(/[^a-z]+/i).map(&:capitalize).join('_')
+                if display[0][/\d/] then display = "_" + display end
+                file.puts "            /// <summary> #{display} </summary>"
+                file.puts "            public static string  #{display} = \"#{concept["code"]}\";"
+            end
+        }
+        file.puts "        };"
     end
-    next if group["concept"] == nil
-    for concept in group["concept"]
-      puts "," if first == false
-      first = false
-      print "                    { \"#{concept["code"]}\", \"#{concept["display"]}\", #{system} }"
-    end
-  }
-  puts "\n            };"
-  groups.each { |group|
-    system = group["system"]
-    if codesystems[system]
-      system = codesystems[system]
-    end
-    next if group["concept"] == nil
-    for concept in group["concept"]
-      next if concept["display"] == nil
-      display = concept["display"].gsub("/", " ")
-      display = display.gsub(",", " ")
-      display = display.gsub(";", " ")
-      display = display.gsub("'", "")
-      display = display.split(" ").map(&:capitalize).join("_")
-      if display[0][/\d/] then display = "_" + display end
-      puts "            /// <summary> #{display} </summary>"
-      puts "            public static string  #{display} = \"#{concept["code"]}\";"
-    end
-  }
-  puts "        };"
-end
-puts "   }
+file.puts "   }
 }"
+puts
+puts "Saw the following code systems that don't have constants:"
+puts
+puts systems_without_constants.uniq
+puts
+puts "Suggestions:"
+puts
+systems_without_constants.uniq.each do |system|
+  puts "        /// <summary> #{system} </summary>"
+  puts "        public static string XYZ = \"#{system}\";"
+end
