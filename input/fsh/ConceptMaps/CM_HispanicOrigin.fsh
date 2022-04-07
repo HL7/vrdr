@@ -1,5 +1,6 @@
 Instance: HispanicOriginCM
 InstanceOf: ConceptMap
+// Id: vrdr-hispanic-origin-cm
 Usage: #definition
 * insert ConceptMapIntro(Hispanic Origin, HispanicOriginVS)
 * insert AddGroup("MRE",Canonical(HispanicOriginCS))

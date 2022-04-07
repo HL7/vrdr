@@ -1,6 +1,7 @@
 Instance: PlaceOfInjuryCM
 InstanceOf: ConceptMap
 Usage: #definition
+// Id: vrdr-place-of-injury-cm
 * insert ConceptMapIntro(Place of Injury, PlaceOfInjuryVS)
 * insert AddGroup("TRX",$loinc)
 * insert MapConcept( #0,  "Home",#LA14084-0, "Home")

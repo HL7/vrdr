@@ -1,5 +1,6 @@
 Instance: PlaceOfDeathCM
 InstanceOf: ConceptMap
+// Id: vrdr-place-of-death-cm
 Usage: #definition
 * insert ConceptMapIntro(Place of Death, PlaceOfDeathVS)
 * insert AddGroup("IJE",$sct)

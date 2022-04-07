@@ -1,5 +1,6 @@
 Instance: MannerOfDeathCM
 InstanceOf: ConceptMap
+// Id: vrdr-manner-of-death-cm
 Usage: #definition
 * insert ConceptMapIntro(Manner of Death, MannerOfDeathVS)
 * insert AddGroup("IJE",$sct)

@@ -1,5 +1,6 @@
 Instance: PregnancyStatusCM
 InstanceOf: ConceptMap
+// Id: vrdr-pregnancy-status-cm
 Usage: #definition
 * insert ConceptMapIntro(Pregnancy Status, PregnancyStatusVS)
 * insert AddGroup("IJE",Canonical(PregnancyStatusCS))

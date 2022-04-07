@@ -1,5 +1,6 @@
 Instance: RaceRecode40CM
 InstanceOf: ConceptMap
+// Id: vrdr-race-recode40-cm
 Usage: #definition
 * insert ConceptMapIntro(Race Recode 40, RaceRecode40VS)
 * insert AddGroup("MRE",Canonical(RaceRecode40CS))
