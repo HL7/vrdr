@@ -69,7 +69,7 @@ RuleSet: NCHSObservationCommon
 Profile: AutomatedUnderlyingCauseOfDeath
 Parent: Observation
 Id: vrdr-automated-underlying-cause-of-death
-Title: "Automated Underlying Cause Of Death"
+Title: "Automated Underlying Cause Of Death (Observation)"
 Description: "Automated Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
 * code = $loinc#80358-5 "Cause of death.underlying [Automated]" (exactly)
@@ -81,7 +81,7 @@ Description: "Automated Underlying Cause Of Death"
 Profile: ManualUnderlyingCauseOfDeath
 Parent: Observation
 Id: vrdr-manual-underlying-cause-of-death
-Title: "Manual Underlying Cause Of Death"
+Title: "Manual Underlying Cause Of Death  (Observation)"
 Description: "Manual Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
 * code = $loinc#80359-3 "Cause of death.underlying [Manual]" (exactly)
@@ -95,7 +95,7 @@ Description: "Manual Underlying Cause Of Death"
 Profile: RecordAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-record-axis-cause-of-death
-Title: "Record Axis Cause Of Death"
+Title: "Record Axis Cause Of Death  (Observation)"
 Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20).
 
 Additional information on Record Axis Cause of death can be found in the case of multiple causes of death can be found in this CDC [publication](https://www.cdc.gov/nchs/data/dvs/Multiple-Cause-Record-Layout-2020.pdf)
@@ -142,7 +142,7 @@ In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a fla
 Profile: EntityAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-entity-axis-cause-of-death
-Title: "Entity Axis Cause Of Death"
+Title: "Entity Axis Cause Of Death  (Observation)"
 Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9 "Cause of death entity axis code [Automated]" (exactly)
@@ -182,7 +182,7 @@ Profile: PlaceOfInjury
 Parent: Observation
 Id: vrdr-place-of-injury
 Title: "Place Of Injury"
-Description: "Place Of Injury"
+Description: "Place Of Injury  (Observation)"
 * insert RequireMetaProfile(Profile: PlaceOfInjury)
 * code = $loinc#11376-1 "Injury location" (exactly)
 * value[x] 1..1
@@ -206,7 +206,7 @@ Description: "Activity at Time of Death"
 Profile: ActivityAtTimeOfDeath
 Parent: Observation
 Id: vrdr-activity-at-time-of-death
-Title: "Activity at Time of Death"
+Title: "Activity at Time of Death  (Observation)"
 Description: "Activity at Time of Death"
 * insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
 * code = $loinc#80626-5 "Activity at time of death [CDC]" (exactly)
@@ -235,7 +235,7 @@ RuleSet: primobscodecomponent(code, type)
 Profile: CodedRaceAndEthnicity
 Parent: Observation
 Id: vrdr-coded-race-and-ethnicity
-Title: "Coded Race and Ethnicity"
+Title: "Coded Race and Ethnicity  (Observation)"
 Description: "Coded (from NCHS) Race and Ethnicity"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
 * code = #codedraceandethnicity "Coded Race and Ethnicity" (exactly)
@@ -266,7 +266,7 @@ Description: "Coded (from NCHS) Race and Ethnicity"
 Profile: InputRaceAndEthnicity
 Parent: Observation
 Id: vrdr-input-race-and-ethnicity
-Title: "Input Race and Ethnicity"
+Title: "Input Race and Ethnicity  (Observation)"
 Description: "Input (from EDRS) Race and Ethnicity"
 * insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
 * code = #inputraceandethnicity "Input Race and Ethnicity" (exactly)
@@ -307,7 +307,7 @@ Description: "Input (from EDRS) Race and Ethnicity"
 Profile: CodedContentBundle
 Parent: Bundle
 Id: vrdr-coded-content-bundle
-Title: "Coded Content Bundle"
+Title: "Coded Content Bundle (Bundle)"
 Description: "A bundle containing instances of the resources comprising coded content."
 * insert RequireMetaProfile(CodedContentDocument)
 * identifier ^short = "Death Certificate Number"
