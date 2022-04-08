@@ -304,35 +304,6 @@ Description: "Input (from EDRS) Race and Ethnicity"
 * insert obscodecomponent(HispanicOther,YesNoUnknownVS)
 * insert primobscodecomponent(HispanicLiteral,string)
 
-Profile: CodedContentBundle
-Parent: Bundle
-Id: vrdr-coded-content-bundle
-Title: "Coded Content Bundle (Bundle)"
-Description: "A bundle containing instances of the resources comprising coded content."
-* insert RequireMetaProfile(CodedContentDocument)
-* identifier ^short = "Death Certificate Number"
-* identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros)."
-* identifier.value ^maxLength = 6
-* identifier.extension contains
-    AuxiliaryStateIdentifier1 named auxiliaryStateIdentifier1 0..1 and
-    AuxiliaryStateIdentifier2 named auxiliaryStateIdentifier2 0..1
-* type 1..1
-* type only code
-* type = #collection (exactly)
-* entry.resource 1..1 MS // each entry must have a resource
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile"
-* insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
-* insert BundleSlice(  AutomatedUnderlyingCauseOfDeath,  0, 1,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath)
-* insert BundleSlice(  ManualUnderlyingCauseOfDeath,  0, 1,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath,  ManualUnderlyingCauseOfDeath)
-* insert BundleSlice(  CodedRaceAndEthnicity,  0, 1,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity)
-* insert BundleSlice(  EntityAxisCauseOfDeath,  0, 20,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath,  EntityAxisCauseOfDeath)
-* insert BundleSlice(  RecordAxisCauseOfDeath,  0, 20,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath,  RecordAxisCauseOfDeath)
-* insert BundleSlice(  PlaceOfInjury,  0, 1,  PlaceOfInjury,  PlaceOfInjury,  PlaceOfInjury)
-* insert BundleSlice(  CodingStatusValues,  0, 1,  CodingStatusValues,  CodingStatusValues,  CodingStatusValues)
-
 
 
 ValueSet: ICD10CausesOfDeathVS
