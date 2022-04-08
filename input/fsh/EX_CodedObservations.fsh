@@ -5,7 +5,7 @@ Description: "AutomatedUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(AutomatedUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
+* valueCodeableConcept = $icd10#J96.0
 
 Instance: RecordAxisCauseOfDeath-Example1
 InstanceOf: RecordAxisCauseOfDeath
@@ -14,7 +14,7 @@ Description: "RecordAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(RecordAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
+* valueCodeableConcept = $icd10#J96.0
 * component[position].valueInteger = 1
 
 Instance: EntityAxisCauseOfDeath-Example1
@@ -24,9 +24,35 @@ Description: "EntityAxisCauseOfDeath-Example1"
 * insert AddMetaProfile(EntityAxisCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
+* valueCodeableConcept = $icd10#J96.0
 * component[lineNumber].valueInteger = 1
 * component[position].valueInteger = 1
+
+Instance: EntityAxisCauseOfDeath-Example2
+InstanceOf: EntityAxisCauseOfDeath
+Usage: #example
+Description: "EntityAxisCauseOfDeath-Example2"
+* insert AddMetaProfile(EntityAxisCauseOfDeath)
+* status = #final
+* subject.display = "NCHS generated"
+* valueCodeableConcept = $icd10#T27.3
+* component[lineNumber].valueInteger = 2
+* component[position].valueInteger = 1
+
+Instance: EntityAxisCauseOfDeath-Example3
+InstanceOf: EntityAxisCauseOfDeath
+Usage: #example
+Description: "EntityAxisCauseOfDeath-Example3"
+* insert AddMetaProfile(EntityAxisCauseOfDeath)
+* status = #final
+* subject.display = "NCHS generated"
+* valueCodeableConcept = $icd10#X00
+* component[lineNumber].valueInteger = 2
+* component[position].valueInteger = 2
+* component[eCodeIndicator].valueBoolean = true
+
+
+
 
 Instance: ManualUnderlyingCauseOfDeath-Example1
 InstanceOf: ManualUnderlyingCauseOfDeath
@@ -35,7 +61,7 @@ Description: "ManualUnderlyingCauseOfDeath-Example1"
 * insert AddMetaProfile(ManualUnderlyingCauseOfDeath)
 * status = #final
 * subject.display = "NCHS generated"
-* valueCodeableConcept = $icd10#C15.3 "Malignant neoplasm: Upper third of oesophagus"
+* valueCodeableConcept = $icd10#J96.0
 
 Instance: PlaceOfInjury-Example1
 InstanceOf: PlaceOfInjury
