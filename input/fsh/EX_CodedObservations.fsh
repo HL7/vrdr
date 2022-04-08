@@ -106,24 +106,3 @@ Description:   "CodingStatusValues-Example1"
 * parameter[intentionalReject].valueCodeableConcept = IntentionalRejectCS#1
 * parameter[acmeSystemReject].valueCodeableConcept = SystemRejectCS#0
 * parameter[transaxConversion].valueCodeableConcept = TransaxConversionCS#3
-
-
-
-Instance: CodedContentBundle-Example1
-InstanceOf: CodedContentBundle
-Usage: #example
-Description: "CodedContentBundle-Example1"
-* insert AddMetaProfile(CodedContentBundle)
-* identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* identifier.value = "000182"
-* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
-* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
-* timestamp = "2020-10-20T14:48:35.401641-04:00"
-* insert addentry(Observation, ActivityAtTimeOfDeath-Example1)
-* insert addentry(Observation, CodedRaceAndEthnicity-Example1)
-* insert addentry(Observation, ManualUnderlyingCauseOfDeath-Example1)
-* insert addentry(Observation, AutomatedUnderlyingCauseOfDeath-Example1)
-* insert addentry(Observation, RecordAxisCauseOfDeath-Example1)
-* insert addentry(Observation, EntityAxisCauseOfDeath-Example1)
-* insert addentry(Observation, PlaceOfInjury-Example1)
-* insert addentry(Parameter, CodingStatusValues-Example1)
