@@ -4,6 +4,6 @@ Implementors are free to use the coded fields with the defined valuesets, but co
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 84 | Occupation -- Literal  | OCCUP| |value.text | string(40) | y | 
-| 86 | Industry -- Literal  | INDUST| |component.value.text | string(40) | y | 
+| 86 | Industry -- Literal  | INDUST| |component [ odh-UsualIndustry	].value.text | string(40) | y | 
 {: .grid }
 {% include markdown-link-references.md %}
