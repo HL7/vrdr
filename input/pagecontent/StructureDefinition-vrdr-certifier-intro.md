@@ -3,10 +3,10 @@ The Certifier profile includes:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 220 | Certifier's First Name | CERTFIRST| x|name.given  | string |  | 
-| 221 | Certifier's Middle Name | CERTMIDDLE| x|name.given  | string |  | 
-| 222 | Certifier's Last Name | CERTLAST| x|name.family  | string |  | 
-| 223 | Certifier's Suffix Name | CERTSUFFIX| x|name.suffix  | string |  | 
+| 220 | Certifier's First Name | CERTFIRST| x|name.given , name.use = official | string |  | 
+| 221 | Certifier's Middle Name | CERTMIDDLE| x|name.given , name.use = official | string |  | 
+| 222 | Certifier's Last Name | CERTLAST| x|name.family , name.use = official | string |  | 
+| 223 | Certifier's Suffix Name | CERTSUFFIX| x|name.suffix , name.use = official | string |  | 
 | 224 | Certifier - Street number | CERTSTNUM| x|address.extension[stnum] | string |  | 
 | 225 | Certifier - Pre Directional | CERTPREDIR| x|address.extension[predir] | string |  | 
 | 226 | Certifier - Street name | CERTSTRNAME| x|address.extension[stname] | string |  | 
