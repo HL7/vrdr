@@ -153,7 +153,6 @@
 | 126 | Time of Injury Unit | TOI_UNIT| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string | y | 
 | 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | y | 
-| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryIncident]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string |  | 
 | 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| x|address.city | string |  | 
@@ -161,6 +160,7 @@
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float |  | 
 | 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float |  | 
+| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
