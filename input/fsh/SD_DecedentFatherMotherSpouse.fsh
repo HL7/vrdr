@@ -12,8 +12,7 @@ Description: "Decedent Father (RelatedPerson)"
 * relationship = $v3-RoleCode#FTH "father" (exactly)
 * relationship.text = "Father"
 * relationship ^short = "relationship"
-* name 1..1
-* name ^short = "Name"
+* name ^short = "Name. If more than 1 use name.use = official"
 * address 0..1
 
 Profile: DecedentMother
@@ -29,7 +28,6 @@ Description: "Decedent Mother (RelatedPerson)"
 * relationship only CodeableConcept
 * relationship = $v3-RoleCode#MTH "mother" (exactly)
 * relationship.text = "Mother"
-* name 1..1
 * name.family ^short = "Maiden name if name.use=maiden"
 * address 0..1
 
@@ -48,5 +46,4 @@ Description: "Decedent Spouse (RelatedPerson)"
 * relationship = $v3-RoleCode#SPS "spouse" (exactly)
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
-* name 1..1
 * name.family ^short = "Maiden name if name.use=maiden"

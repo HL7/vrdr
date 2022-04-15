@@ -30,7 +30,6 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DeathDate-Example1)
 * insert addentry(Observation, SurgeryDate-Example1)
 * insert addentry(Observation, ExaminerContacted-Example1)
-* insert addentry(Observation, DecedentTransportationRole-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Location, DeathLocation-Example1)
 * insert addentry(Location, InjuryLocation-Example1)
@@ -86,7 +85,6 @@ Description: "DeathCertificate-Example1"
 *  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
 *  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
-*  section[DeathInvestigation].entry[TransportationRole] = Reference(DecedentTransportationRole-Example1)
 // The next line shouldn't be necessary
 *  section[DeathCertification].code = DocumentSectionCS#DeathCertification
 *  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
@@ -143,7 +141,6 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
 *  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
-*  section[DeathInvestigation].entry[TransportationRole] = Reference(DecedentTransportationRole-Example1)
 // The next line shouldn't be necessary
 *  section[DeathCertification].code = DocumentSectionCS#DeathCertification
 *  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
@@ -198,7 +195,6 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert addentry(Observation, DeathDate-Example1)
 * insert addentry(Observation, SurgeryDate-Example1)
 * insert addentry(Observation, ExaminerContacted-Example1)
-* insert addentry(Observation, DecedentTransportationRole-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Location, DeathLocation-Example1)
 * insert addentry(Location, InjuryLocation-Example1)

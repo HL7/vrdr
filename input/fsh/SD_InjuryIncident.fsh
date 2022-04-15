@@ -24,8 +24,9 @@ Description: "Injury Incident (Observation)"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    placeOfInjury 1..1 and
-    workInjuryIndicator 1..1
+    placeOfInjury 0..1 and
+    workInjuryIndicator 0..1 and
+    transportationRole 0..1
 * component[placeOfInjury] ^short = "Place of injury"
 * component[workInjuryIndicator] ^short = "Injury at Work?"
 * component[placeOfInjury].code 1..1
@@ -40,5 +41,11 @@ Description: "Injury Incident (Observation)"
 * component[workInjuryIndicator].value[x] ^short = "Injury at Work?"
 * component[workInjuryIndicator].value[x] only CodeableConcept
 * component[workInjuryIndicator].value[x] from $Yes-No-Unknown-NotApplicable (required)
-* component[workInjuryIndicator].value[x] ^binding.description = "Yes No Unknown NotApplicable"
 // * method from DeathDateMethodsVS (extensible)
+* component[transportationRole].code 1..1
+* component[transportationRole].code = $loinc#69451-3 "Transportation role of decedent" (exactly)
+* component[transportationRole].value[x] 1..1
+* component[transportationRole].value[x] ^short = "Transportation role of decedent"
+* component[transportationRole].value[x] only CodeableConcept
+* component[transportationRole].value[x] from TransportationIncidentRoleVS (required)
+* component[transportationRole].valueCodeableConcept.text ^short = "Transportation role of decedent, if code = OTH"

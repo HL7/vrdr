@@ -8,10 +8,10 @@ Description: "InjuryIncident-Example1"
 * subject = Reference(Decedent-Example1)
 * effectiveDateTime = "2019-11-02T13:00:00-05:00"
 * valueCodeableConcept.text  = "drug toxicity"
-* component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work"
 * component[workInjuryIndicator].valueCodeableConcept = $v2-0136#N "No"
-* component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility"
 * component[placeOfInjury].valueCodeableConcept.text = "Home"
+* component[transportationRole].valueCodeableConcept = $v3-NullFlavor#OTH "Other"
+* component[transportationRole].valueCodeableConcept.text = "Hoverboard Rider"
 
 Instance: InjuryLocation-Example1
 InstanceOf: InjuryLocation
