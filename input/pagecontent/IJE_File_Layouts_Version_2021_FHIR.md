@@ -125,7 +125,6 @@
 | 198 | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| x|name.suffix , name.use = official | string |  | 
 | 112 | Pregnancy | PREG| [DecedentPregnancyStatus]| |value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| [DecedentPregnancyStatus]| |value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
-| 175 | If Transportation Accident, Specify | TRANSPRT| [DecedentTransportationRole]| |value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) | y | 
 | 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component [ odh-UsualIndustry	].value.text | string(40) | y | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
@@ -153,6 +152,7 @@
 | 126 | Time of Injury Unit | TOI_UNIT| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string | y | 
 | 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | y | 
+| 175 | If Transportation Accident, Specify | TRANSPRT| [InjuryIncident]| |component[ transportationRole ].value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string |  | 
 | 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| x|address.city | string |  | 
