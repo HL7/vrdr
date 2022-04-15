@@ -125,6 +125,7 @@
 * [FHIR-36585](https://jira.hl7.org/browse/FHIR-36585) : Remove Davinci Logo
 * [FHIR-36688](https://jira.hl7.org/browse/FHIR-36682) : Moved Race and Ethnicity info from Decedent into a separate Observation profile
 * [FHIR-36688](https://jira.hl7.org/browse/FHIR-36688) : Added Observation and a Parameter profiles to support all coded information
+* [FHIR-36773](https://jira.hl7.org/browse/FHIR-36773) : Merge TransportationRole into Injury Incident as per FHIR-20774 and FHIR-22358
 
 
 {% include markdown-link-references.md %}
