@@ -4,7 +4,7 @@
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| |value | codeable | [YesNoUnknownVS] | 
 | 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[$loinc#69436-4].value | codeable | [YesNoUnknownNotApplicableVS] | 
-| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | y | 
+| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) |   | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionVS] | 
 | 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text | string(120) | y | 
@@ -32,10 +32,10 @@
 | 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string |  | 
 | 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
-| 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime | y | 
-| 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | y | 
-| 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | y | 
-| 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | y | 
+| 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime |   | 
+| 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime |   | 
+| 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime |   | 
+| 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) |   | 
 | 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.value | string(6) | y | 
 | 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | y | 
@@ -126,8 +126,8 @@
 | 198 | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| x|name.suffix , name.use = official | string |  | 
 | 112 | Pregnancy | PREG| [DecedentPregnancyStatus]| |value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| [DecedentPregnancyStatus]| |value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
-| 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) | y | 
-| 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component [ odh-UsualIndustry	].value.text | string(40) | y | 
+| 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) |   | 
+| 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component [ odh-UsualIndustry	].value.text | string(40) |   | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
@@ -166,30 +166,30 @@
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
 | 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string | y | 
-| 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean | y | 
-| 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | y | 
-| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |component[ AmericanIndianOrAlaskaNative].valueBoolean | boolean | y | 
-| 47 | Decedent's Race--Asian Indian | RACE4| [InputRaceAndEthnicity]| |component[ AsianIndian].valueBoolean | boolean | y | 
-| 48 | Decedent's Race--Chinese | RACE5| [InputRaceAndEthnicity]| |component[ Chinese].valueBoolean | boolean | y | 
-| 49 | Decedent's Race--Filipino | RACE6| [InputRaceAndEthnicity]| |component[ Filipino].valueBoolean | boolean | y | 
-| 50 | Decedent's Race--Japanese | RACE7| [InputRaceAndEthnicity]| |component[ Japanese].valueBoolean | boolean | y | 
-| 51 | Decedent's Race--Korean | RACE8| [InputRaceAndEthnicity]| |component[ Korean].valueBoolean | boolean | y | 
-| 52 | Decedent's Race--Vietnamese | RACE9| [InputRaceAndEthnicity]| |component[ Vietnamese].valueBoolean | boolean | y | 
-| 53 | Decedent's Race--Other Asian | RACE10| [InputRaceAndEthnicity]| |component[ OtherAsian].valueBoolean | boolean | y | 
-| 54 | Decedent's Race--Native Hawaiian | RACE11| [InputRaceAndEthnicity]| |component[ NativeHawaiian].valueBoolean | boolean | y | 
-| 55 | Decedent's Race--Guamanian or Chamorro | RACE12| [InputRaceAndEthnicity]| |component[ GuamanianOrChamorro].valueBoolean | boolean | y | 
-| 56 | Decedent's Race--Samoan | RACE13| [InputRaceAndEthnicity]| |component[ Samoan].valueBoolean | boolean | y | 
-| 57 | Decedent's Race--Other Pacific Islander | RACE14| [InputRaceAndEthnicity]| |component[ OtherPacificIslander].valueBoolean | boolean | y | 
-| 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |component[ OtherRace].valueBoolean | boolean | y | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string | y | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string | y | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral1].valueString | string | y | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral2].valueString | string | y | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral1].valueString | string | y | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral2].valueString | string | y | 
-| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral1].valueString | string | y | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string | y | 
+| 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string |   | 
+| 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean |   | 
+| 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean |   | 
+| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |component[ AmericanIndianOrAlaskaNative].valueBoolean | boolean |   | 
+| 47 | Decedent's Race--Asian Indian | RACE4| [InputRaceAndEthnicity]| |component[ AsianIndian].valueBoolean | boolean |   | 
+| 48 | Decedent's Race--Chinese | RACE5| [InputRaceAndEthnicity]| |component[ Chinese].valueBoolean | boolean |   | 
+| 49 | Decedent's Race--Filipino | RACE6| [InputRaceAndEthnicity]| |component[ Filipino].valueBoolean | boolean |   | 
+| 50 | Decedent's Race--Japanese | RACE7| [InputRaceAndEthnicity]| |component[ Japanese].valueBoolean | boolean |   | 
+| 51 | Decedent's Race--Korean | RACE8| [InputRaceAndEthnicity]| |component[ Korean].valueBoolean | boolean |   | 
+| 52 | Decedent's Race--Vietnamese | RACE9| [InputRaceAndEthnicity]| |component[ Vietnamese].valueBoolean | boolean |   | 
+| 53 | Decedent's Race--Other Asian | RACE10| [InputRaceAndEthnicity]| |component[ OtherAsian].valueBoolean | boolean |   | 
+| 54 | Decedent's Race--Native Hawaiian | RACE11| [InputRaceAndEthnicity]| |component[ NativeHawaiian].valueBoolean | boolean |   | 
+| 55 | Decedent's Race--Guamanian or Chamorro | RACE12| [InputRaceAndEthnicity]| |component[ GuamanianOrChamorro].valueBoolean | boolean |   | 
+| 56 | Decedent's Race--Samoan | RACE13| [InputRaceAndEthnicity]| |component[ Samoan].valueBoolean | boolean |   | 
+| 57 | Decedent's Race--Other Pacific Islander | RACE14| [InputRaceAndEthnicity]| |component[ OtherPacificIslander].valueBoolean | boolean |   | 
+| 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |component[ OtherRace].valueBoolean | boolean |   | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string |   | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string |   | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral1].valueString | string |   | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral2].valueString | string |   | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral1].valueString | string |   | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral2].valueString | string |   | 
+| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral1].valueString | string |   | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string |   | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
 | 248 | Blank for One-Byte Field 1 | PLACE1_1| [EmergingIssues]| |component[EmergingIssue1_1].value | string(1) | y | 
