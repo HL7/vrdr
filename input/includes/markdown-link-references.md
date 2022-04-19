@@ -54,7 +54,6 @@
 [DecedentMother]: StructureDefinition-vrdr-decedent-mother.html
 [DecedentPregnancyStatus]: StructureDefinition-vrdr-decedent-pregnancy-status.html
 [DecedentSpouse]: StructureDefinition-vrdr-decedent-spouse.html
-[DecedentTransportationRole]: StructureDefinition-vrdr-decedent-transportation-role.html
 [DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
 [Decedent]: StructureDefinition-vrdr-decedent.html
 [DispositionLocationReference]: StructureDefinition-vrdr-disposition-location-reference.html
@@ -69,7 +68,7 @@
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
-[ParamsForEmergingIssues]: StructureDefinition-vrdr-params-for-emerging-issues.html
+[EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
 [PartialDate]: StructureDefinition-PartialDate.html
 [PartialDateTime]: StructureDefinition-PartialDateTime.html
@@ -83,6 +82,7 @@
 [EditBypass0124VS]: ValueSet-vrdr-edit-bypass-0124-vs.html
 [StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html
 [JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
+[ReplaceStatusVS]: ValueSet-vrdr-replace-status-vs.html
 [USStatesTerritoriesVS]: ValueSet-vrdr-usstates-territories-vs.html
 [RelatedPersonRelationshipVS]: ValueSet-vrdr-RelatedPersonRelationshipType.html
 [AdministrativeGenderVS]: ValueSet-vrdr-administrative-gender-vs.html
@@ -101,6 +101,7 @@
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
+[CountryCS]: CodeSystem-vrdr-country-code-cs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
@@ -114,6 +115,8 @@
 [PartialDatesAndTimes]: usage.html#partial-dates-and-times
 [CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
+[StateLiterals]: usage.html#state-literals
+[CountryLiterals]: usage.html#country-literals
 [InjuryLocation]: https://loinc.org/LL1051-3/
 [InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
 [CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html

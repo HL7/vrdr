@@ -60,7 +60,7 @@ The content is broken down into the following sections:
     * [DecedentEducationLevel]
     * [DecedentFather]
     * [DecedentMilitaryService]
-    * [Parameters2022]
+    * [EmergingIssues]
     * [DecedentMother]
     * [DecedentSpouse]
     * [DecedentUsualWork]
@@ -69,7 +69,6 @@ The content is broken down into the following sections:
     * [DeathDate]
     * [DeathLocation]
     * [DecedentPregnancyStatus]
-    * [DecedentTransportationRole]
     * [ExaminerContacted]
     * [InjuryIncident]
     * [InjuryLocation]
@@ -154,10 +153,6 @@ profiles["DecedentPregnancyStatus"] = {
   :out => "StructureDefinition-vrdr-decedent-pregnancy-status-intro.md",
   :desc => "",
 }
-profiles["DecedentTransportationRole"] = {
-  :out => "StructureDefinition-vrdr-decedent-transportation-role-intro.md",
-  :desc => "",
-}
 profiles["DecedentUsualWork"] = {
   :out => "StructureDefinition-vrdr-decedent-usual-work-intro.md",
   :desc => "Implementors are free to use the coded fields with the defined valuesets, but coded values are not expected for death certificate submission.",
@@ -190,9 +185,9 @@ profiles["MannerOfDeath"] = {
   :out => "StructureDefinition-vrdr-manner-of-death-intro.md",
   :desc => "A reference to the [Certifier] may be provided through the performer field.",
 }
-profiles["ParamsForEmergingIssues"] = {
-  :out => "StructureDefinition-vrdr-params-for-emerging-issues-intro.md",
-  :desc => "ParamsForEmergingIssues profile supports placeholder fields required for 2022 submissions to NCHS.
+profiles["EmergingIssues"] = {
+  :out => "StructureDefinition-vrdr-emerging-issues-intro.md",
+  :desc => "EmergingIssues profile supports placeholder fields required for 2022 submissions to NCHS.
                 For documentation on their use see referenceTBD.
                 There are 6 1-char fields (PLACE1_1-6), 3 8-char fields (PLACE8_1-3), and one 20-char field (PLACE20-1).",
 }

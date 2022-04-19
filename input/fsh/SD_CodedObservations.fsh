@@ -108,23 +108,13 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    position 1..1 and
-    eCodeIndicator 0..1
-* component[eCodeIndicator] ^short = "eCodeIndicator"
-* component[eCodeIndicator].valueBoolean ^short = "eCodeIndicator"
-* component[eCodeIndicator].code 1..1
-* component[eCodeIndicator].code = #position "eCodeIndicator" (exactly)
-* component[eCodeIndicator].value[x] 1..1
-* component[eCodeIndicator].value[x] only boolean
+    position 1..1
 * component[position] ^short = "Position"
 * component[position].valueInteger ^short = "Position"
 * component[position].code 1..1
-* component[position].code = #position "Position" (exactly)
+* component[position].code = ComponentCS#position "Position" (exactly)
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
-* component[position] ^short = "Position"
-* component[position].valueInteger ^short = "Position"
-
 
 
 
@@ -149,13 +139,13 @@ Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profil
     position 1..1 and
     eCodeIndicator 0..1
 * component[lineNumber].code 1..1
-* component[lineNumber].code = #lineNumber "lineNumber" (exactly)
+* component[lineNumber].code = ComponentCS#lineNumber "lineNumber" (exactly)
 * component[lineNumber].value[x] 1..1
 * component[lineNumber].value[x] only integer
 * component[lineNumber] ^short = "lineNumber"
 * component[lineNumber].valueInteger ^short = "lineNumber"
 * component[position].code 1..1
-* component[position].code = #position "Position" (exactly)
+* component[position].code = ComponentCS#position "Position" (exactly)
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
 * component[position] ^short = "position"

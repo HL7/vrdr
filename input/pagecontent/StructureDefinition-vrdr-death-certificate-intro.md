@@ -17,7 +17,7 @@ The content is broken down into the following sections:
     * [DecedentEducationLevel]
     * [DecedentFather]
     * [DecedentMilitaryService]
-    * [Parameters2022]
+    * [EmergingIssues]
     * [DecedentMother]
     * [DecedentSpouse]
     * [DecedentUsualWork]
@@ -26,7 +26,6 @@ The content is broken down into the following sections:
     * [DeathDate]
     * [DeathLocation]
     * [DecedentPregnancyStatus]
-    * [DecedentTransportationRole]
     * [ExaminerContacted]
     * [InjuryIncident]
     * [InjuryLocation]
@@ -58,9 +57,10 @@ The profile includes:
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 6 | Source flag: paper/electronic | MFILED| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
-| 96 | Date of Registration--Year | DOR_YR| |date | dateTime | y | 
-| 97 | Date of Registration--Month | DOR_MO| |date | dateTime | y | 
-| 98 | Date of Registration--Day | DOR_DY| |date | dateTime | y | 
-| 122 | State Specific Data  | STATESP| |extension[ stateSpecificField] | string(30) | y | 
+| 96 | Date of Registration--Year | DOR_YR| |date | dateTime | - | 
+| 97 | Date of Registration--Month | DOR_MO| |date | dateTime | - | 
+| 98 | Date of Registration--Day | DOR_DY| |date | dateTime | - | 
+| 122 | State Specific Data  | STATESP| |extension[ stateSpecificField] | string(30) | - | 
+| 184 | Replacement Record -- suggested codes | REPLACE| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 {: .grid }
 {% include markdown-link-references.md %}

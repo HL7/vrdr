@@ -35,6 +35,7 @@ Description: "The body of the death certificate document (Composition)."
 * type = $loinc#64297-5 "Death certificate" (exactly)
 * extension contains
     FilingFormat named filingFormat 0..1 and
+    ReplaceStatus named replaceStatus 0..1 and
     StateSpecificField named stateSpecificField 0..1
 * subject 1..1
 * subject only Reference(Decedent)
@@ -80,7 +81,7 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DecedentDemographics, EducationLevel,  0, 1, DecedentEducationLevel, DecedentEducationLevel, DecedentEducationLevel)
 * insert BundleSectionSlice(DecedentDemographics, MilitaryService,  0, 1, DecedentMilitaryService, DecedentMilitaryService, DecedentMilitaryService)
 * insert BundleSectionSlice(DecedentDemographics, UsualWork,  0, 1, DecedentUsualWork, DecedentUsualWork, DecedentUsualWork)
-* insert BundleSectionSlice(DecedentDemographics, ParametersForEmergingIssues,  0, 1, ParametersForEmergingIssues, ParametersForEmergingIssues, ParametersForEmergingIssues)
+* insert BundleSectionSlice(DecedentDemographics, EmergingIssues,  0, 1, EmergingIssues, EmergingIssues, EmergingIssues)
 * insert BundleSectionSlice(DecedentDemographics, InputRaceAndEthnicity,  0, 1, InputRaceAndEthnicity, InputRaceAndEthnicity, InputRaceAndEthnicity)
 //
 * insert BundleSectionSlice(DeathInvestigation, ExaminerContacted, 1, 1, ExaminerContacted, ExaminerContacted, ExaminerContacted)
