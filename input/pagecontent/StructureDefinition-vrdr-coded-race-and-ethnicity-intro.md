@@ -3,7 +3,7 @@
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 67 | First Edited Code | RACE1E| |component[FirstEditedCode].value |  |  | 
+| 67 | First Edited Code | RACE1E| |component[FirstEditedCode].value | - |  | 
 | 68 | Second Edited Code | RACE2E| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
 | 69 | Third Edited Code | RACE3E| |component[ThirdEditedCode].value | codeable | [RaceCodeVS] | 
 | 70 | Fourth Edited Code | RACE4E| |component[FourthEditedCode].value | codeable | [RaceCodeVS] | 
