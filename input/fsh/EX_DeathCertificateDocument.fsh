@@ -24,7 +24,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, DecedentEducationLevel-Example1)
 * insert addentry(Observation, DecedentMilitaryService-Example1)
 * insert addentry(Observation, DecedentUsualWork-Example1)
-* insert addentry(Parameters, ParametersForEmergingIssues-Example1)
+* insert addentry(Observation, EmergingIssues-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, DeathDate-Example1)
@@ -73,7 +73,7 @@ Description: "DeathCertificate-Example1"
 *  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
 *  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
 *  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
-*  section[DecedentDemographics].entry[ParametersForEmergingIssues] = Reference(ParametersForEmergingIssues-Example1)
+*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
 // The next line shouldn't be necessary
 *  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
@@ -129,7 +129,7 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
 *  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
 *  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
-*  section[DecedentDemographics].entry[ParametersForEmergingIssues] = Reference(ParametersForEmergingIssues-Example1)
+*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
 // The next line shouldn't be necessary
 *  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
@@ -189,7 +189,7 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert addentry(Observation, DecedentEducationLevel-Example1)
 * insert addentry(Observation, DecedentMilitaryService-Example1)
 * insert addentry(Observation, DecedentUsualWork-Example1)
-* insert addentry(Parameters, ParametersForEmergingIssues-Example1)
+* insert addentry(Observation, EmergingIssues-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, DeathDate-Example1)
