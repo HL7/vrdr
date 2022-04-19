@@ -29,13 +29,14 @@
 | 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| [Certifier]| x|address.line  | string |  | 
 | 231 | Certifier - City or Town name | CERTCITYTEXT| [Certifier]| x|address.city  | string |  | 
 | 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string |  | 
+| 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string |  | 
 | 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
 | 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime | y | 
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | y | 
 | 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | y | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | y | 
+| 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.value | string(6) | y | 
 | 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | y | 
 | 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) |  | 
@@ -64,8 +65,8 @@
 | 140 | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| x|address.city.extension[ cityCode] | integer | see [CityCodes] | 
 | 141 | Place of death. Longitude | LONG_D| [DeathLocation]| x|position.longitude | float |  | 
 | 142 | Place of Death. Latitude | LAT_D| [DeathLocation]| x|position.latitude | float |  | 
-| 239 | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| x|address.country  | string  | Not Used.  For US Death certificates should be US | 
-| 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| x|address.country  (expanded from 2 letter code) | string  | Not used. For US Death certificates should be US | 
+| 239 | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| x|address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US | 
+| 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| x|address.country  (expanded from 2 letter code) | string  | See [CountryLIterals].   Not used. For US Death certificates should be 'United States'. | 
 | 7 | Decedent's Legal Name--Given  | GNAME| [Decedent]| |name.given , name.use = official | string | y | 
 | 8 | Decedent's Legal Name--Middle | MNAME| [Decedent]| |name.given , name.use = official (first letter) | string | y | 
 | 9 | Decedent's Legal Name--Last | LNAME| [Decedent]| |name.family , name.use = official | string | y | 
@@ -94,15 +95,15 @@
 | 152 | Decedent's Residence - City or Town name | CITYTEXT_R| [Decedent]| |address.city | string | y | 
 | 153 | Decedent's Residence - ZIP code | ZIP9_R| [Decedent]| |address.postalCode | string | y | 
 | 154 | Decedent's Residence - County | COUNTYTEXT_R| [Decedent]| |address.district | string | y | 
-| 155 | Decedent's Residence - State name | STATETEXT_R | [Decedent]| |address.state (expanded from 2 letter code) | string | y | 
-| 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| [Decedent]| |address.country (expanded from 2 letter code) | string | y | 
+| 155 | Decedent's Residence - State name | STATETEXT_R | [Decedent]| |address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
+| 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| [Decedent]| |address.country (expanded from 2 letter code) | string | See [CountryLiterals] | 
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| [Decedent]| |address.line[0] | string | y | 
 | 166 | Middle Name of Decedent  | DMIDDLE| [Decedent]| x|name.given , name.use = official | string |  | 
 | 194 | Decedent's Maiden Name | DMAIDEN| [Decedent]| x|name.text , name.use=maiden | string |  | 
 | 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| [Decedent]| x|extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer | see [CityCodes] | 
 | 196 | Decedent's Birth Place City - Literal | DBPLACECITY| [Decedent]| x|extension[patient-birthPlace].value[x].city | string |  | 
 | 201 | Informant's Relationship | INFORMRELATE| [Decedent]| x|contact.type.text  | string (30 characters) |  | 
-| 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| [Decedent]| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string |  | 
+| 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| [Decedent]| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 246 | Marital Descriptor | MARITAL_DESCRIP| [Decedent]| x|maritalStatus.text  | string |  | 
 | 16 | Decedent's Age--Type | AGETYPE| [DecedentAge]| |valueQuantity.system | codeable | [UnitsOfAgeVS] | 
 | 17 | Decedent's Age--Units | AGE | [DecedentAge]| |valueQuantity.value | decimal | y | 
@@ -128,7 +129,7 @@
 | 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) | y | 
 | 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component [ odh-UsualIndustry	].value.text | string(40) | y | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
+| 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
 | 205 | Disposition City - Literal | DISPCITY| [DispositionLocation]| x|address.city | string |  | 
 | 172 | Was case Referred to Medical Examiner/Coroner? | REFERRED| [ExaminerContacted]| x|value | codeable | [YesNoUnknownVS] | 
@@ -142,7 +143,7 @@
 | 213 | Long string address for Funeral Facility same as above but allows states to choose the way they capture information. | FUNFACADDRESS| [FuneralHome]| x|address.line | string | address.line  | 
 | 214 | Funeral Facility - City or Town name | FUNCITYTEXT| [FuneralHome]| x|address.city | string | address.city  | 
 | 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| [FuneralHome]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| [FuneralHome]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
+| 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| [FuneralHome]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 217 | Funeral Facility - ZIP | FUNZIP| [FuneralHome]| x|address.postalCode | string |  | 
 | 114 | Date of injury--month | DOI_MO| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 115 | Date of injury--day | DOI_DY| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
@@ -160,7 +161,7 @@
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float |  | 
 | 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float |  | 
-| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | [StatesTerritoriesProvincesVS] | 
+| 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 

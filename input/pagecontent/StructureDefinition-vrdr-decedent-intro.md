@@ -31,15 +31,15 @@ The Decedent profile contains basic information about the decedent, including da
 | 152 | Decedent's Residence - City or Town name | CITYTEXT_R| |address.city | string | y | 
 | 153 | Decedent's Residence - ZIP code | ZIP9_R| |address.postalCode | string | y | 
 | 154 | Decedent's Residence - County | COUNTYTEXT_R| |address.district | string | y | 
-| 155 | Decedent's Residence - State name | STATETEXT_R | |address.state (expanded from 2 letter code) | string | y | 
-| 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| |address.country (expanded from 2 letter code) | string | y | 
+| 155 | Decedent's Residence - State name | STATETEXT_R | |address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
+| 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| |address.country (expanded from 2 letter code) | string | See [CountryLiterals] | 
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| |address.line[0] | string | y | 
 | 166 | Middle Name of Decedent  | DMIDDLE| x|name.given , name.use = official | string |  | 
 | 194 | Decedent's Maiden Name | DMAIDEN| x|name.text , name.use=maiden | string |  | 
 | 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| x|extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer | see [CityCodes] | 
 | 196 | Decedent's Birth Place City - Literal | DBPLACECITY| x|extension[patient-birthPlace].value[x].city | string |  | 
 | 201 | Informant's Relationship | INFORMRELATE| x|contact.type.text  | string (30 characters) |  | 
-| 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string |  | 
+| 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 246 | Marital Descriptor | MARITAL_DESCRIP| x|maritalStatus.text  | string |  | 
 {: .grid }
 {% include markdown-link-references.md %}
