@@ -60,6 +60,10 @@ Description: "DeathCertificate-Example1"
 *  attester.time = "2020-11-14T16:39:40-05:00"
 *  attester.party = Reference(Certifier-Example1)
 *  event.detail = Reference(DeathCertification-Example1)
+*  extension[filingFormat].valueCodeableConcept = #electronic
+*  extension[replaceStatus].valueCodeableConcept = #original
+*  extension[stateSpecificField].valueString = "State Specific Content"
+
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
 *  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics

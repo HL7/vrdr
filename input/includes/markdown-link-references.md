@@ -101,6 +101,7 @@
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
+[CountryCS]: Codesystem-vrdr-country-cs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
@@ -114,6 +115,8 @@
 [PartialDatesAndTimes]: usage.html#partial-dates-and-times
 [CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
+[StateLiterals]: usage.html#state-literals
+[CountryLiterals]: usage.html#country-literals
 [InjuryLocation]: https://loinc.org/LL1051-3/
 [InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
 [CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
