@@ -82,6 +82,7 @@
 [EditBypass0124VS]: ValueSet-vrdr-edit-bypass-0124-vs.html
 [StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html
 [JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
+[ReplaceStatusVS]: ValueSet-vrdr-replace-status-vs.html
 [USStatesTerritoriesVS]: ValueSet-vrdr-usstates-territories-vs.html
 [RelatedPersonRelationshipVS]: ValueSet-vrdr-RelatedPersonRelationshipType.html
 [AdministrativeGenderVS]: ValueSet-vrdr-administrative-gender-vs.html
