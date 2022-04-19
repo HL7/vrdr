@@ -102,9 +102,9 @@ Description: "NCHS-required Parameter Slots for Emerging Issues"
 
 RuleSet: PlaceComponent(len, number)
 * component contains place{len}_{number} 0..1
-* component[place{len}_{number}] ^short = "{len}_{number}"
+* component[place{len}_{number}] ^short = "place{len}_{number}"
 * component[place{len}_{number}].code 1..1
-* component[place{len}_{number}].code = #{len}_{number} (exactly)
+* component[place{len}_{number}].code = ComponentCS#place{len}_{number} (exactly)
 * component[place{len}_{number}].value[x] 1..1
 * component[place{len}_{number}].value[x] only string
 * component[place{len}_{number}].valueString ^maxLength = 1
