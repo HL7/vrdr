@@ -102,12 +102,14 @@ Description: "NCHS-required Parameter Slots for Emerging Issues"
 
 RuleSet: PlaceComponent(len, number)
 * component contains place{len}_{number} 0..1
-* component[place{len}_{number}] ^short = "place{len}_{number}"
+* component[place{len}_{number}] ^short = "EmergingIssue{len}_{number}"
 * component[place{len}_{number}].code 1..1
-* component[place{len}_{number}].code = ComponentCS#place{len}_{number} (exactly)
+* component[place{len}_{number}].code = ComponentCS#EmergingIssue{len}_{number} (exactly)
 * component[place{len}_{number}].value[x] 1..1
 * component[place{len}_{number}].value[x] only string
 * component[place{len}_{number}].valueString ^maxLength = 1
+
+
 
 Profile: EmergingIssues
 Parent: Observation
@@ -137,4 +139,10 @@ Description: "Emerging Issues (Observation)"
 * insert PlaceComponent(8,1)
 * insert PlaceComponent(8,2)
 * insert PlaceComponent(8,3)
-* insert PlaceComponent(20,1)
+* component contains place20 0..1
+* component[place20] ^short = "EmergingIssue20"
+* component[place20].code 1..1
+* component[place20].code = ComponentCS#EmergingIssue20 (exactly)
+* component[place20].value[x] 1..1
+* component[place20].value[x] only string
+* component[place20].valueString ^maxLength = 1

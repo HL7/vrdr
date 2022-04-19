@@ -10,7 +10,7 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 
 RuleSet: PlaceComponentCode(len, number)
-* #place{len}_{number} "place{len}_{number}"
+* #EmergingIssue{len}_{number} "EmergingIssue{len}_{number}"
 
 
 CodeSystem: ComponentCS
@@ -34,4 +34,4 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * insert PlaceComponentCode(8,1)
 * insert PlaceComponentCode(8,2)
 * insert PlaceComponentCode(8,3)
-* insert PlaceComponentCode(20,1)
+* #EmergingIssue20 "EmergingIssue20"
