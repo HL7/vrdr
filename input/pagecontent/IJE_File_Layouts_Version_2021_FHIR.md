@@ -191,6 +191,16 @@
 | 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string | y | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
+| 248 | Blank for One-Byte Field 1 | PLACE1_1| [EmergingIssues]| |component[EmergingIssue1_1].value | string(1) | y | 
+| 249 | Blank for One-Byte Field 2 | PLACE1_2| [EmergingIssues]| |component[EmergingIssue1_2].value | string(1) | y | 
+| 250 | Blank for One-Byte Field 3 | PLACE1_3| [EmergingIssues]| |component[EmergingIssue1_3].value | string(1) | y | 
+| 251 | Blank for One-Byte Field 4 | PLACE1_4| [EmergingIssues]| |component[EmergingIssue1_4].value | string(1) | y | 
+| 252 | Blank for One-Byte Field 5 | PLACE1_5| [EmergingIssues]| |component[EmergingIssue1_5].value | string(1) | y | 
+| 253 | Blank for One-Byte Field 6 | PLACE1_6| [EmergingIssues]| |component[EmergingIssue1_6].value | string(1) | y | 
+| 254 | Blank for Eight-Byte Field 1 | PLACE8_1| [EmergingIssues]| |component[EmergingIssue8_1].value | string(8) | y | 
+| 255 | Blank for Eight-Byte Field 2 | PLACE8_2| [EmergingIssues]| |component[EmergingIssue8_2].value | string(8) | y | 
+| 256 | Blank for Eight-Byte Field 3 | PLACE8_3| [EmergingIssues]| |component[EmergingIssue8_3].value | string(8) | y | 
+| 257 | Blank for Twenty-Byte Field | PLACE20| [EmergingIssues]| |component[EmergingIssue20].value | string(20) | y | 
 | 123 | Surgery Date--month | SUR_MO| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 124 | Surgery Date--day | SUR_DY| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 125 | Surgery Date--year | SUR_YR| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 

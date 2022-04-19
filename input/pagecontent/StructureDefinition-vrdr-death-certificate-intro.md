@@ -17,7 +17,7 @@ The content is broken down into the following sections:
     * [DecedentEducationLevel]
     * [DecedentFather]
     * [DecedentMilitaryService]
-    * [Parameters2022]
+    * [EmergingIssues]
     * [DecedentMother]
     * [DecedentSpouse]
     * [DecedentUsualWork]
