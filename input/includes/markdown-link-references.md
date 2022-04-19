@@ -101,7 +101,7 @@
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
-[CountryCS]: Codesystem-vrdr-country-cs.html
+[CountryCS]: CodeSystem-vrdr-country-code-cs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
