@@ -69,7 +69,6 @@ The content is broken down into the following sections:
     * [DeathDate]
     * [DeathLocation]
     * [DecedentPregnancyStatus]
-    * [DecedentTransportationRole]
     * [ExaminerContacted]
     * [InjuryIncident]
     * [InjuryLocation]
@@ -152,10 +151,6 @@ profiles["DecedentSpouse"] = {
 }
 profiles["DecedentPregnancyStatus"] = {
   :out => "StructureDefinition-vrdr-decedent-pregnancy-status-intro.md",
-  :desc => "",
-}
-profiles["DecedentTransportationRole"] = {
-  :out => "StructureDefinition-vrdr-decedent-transportation-role-intro.md",
   :desc => "",
 }
 profiles["DecedentUsualWork"] = {

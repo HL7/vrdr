@@ -26,7 +26,6 @@ The content is broken down into the following sections:
     * [DeathDate]
     * [DeathLocation]
     * [DecedentPregnancyStatus]
-    * [DecedentTransportationRole]
     * [ExaminerContacted]
     * [InjuryIncident]
     * [InjuryLocation]
