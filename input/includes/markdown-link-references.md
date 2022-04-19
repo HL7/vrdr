@@ -54,7 +54,6 @@
 [DecedentMother]: StructureDefinition-vrdr-decedent-mother.html
 [DecedentPregnancyStatus]: StructureDefinition-vrdr-decedent-pregnancy-status.html
 [DecedentSpouse]: StructureDefinition-vrdr-decedent-spouse.html
-[DecedentTransportationRole]: StructureDefinition-vrdr-decedent-transportation-role.html
 [DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
 [Decedent]: StructureDefinition-vrdr-decedent.html
 [DispositionLocationReference]: StructureDefinition-vrdr-disposition-location-reference.html
