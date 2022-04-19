@@ -98,3 +98,43 @@ Description: "NCHS-required Parameter Slots for Emerging Issues"
 * parameter[PLACE20].value[x] ^maxLength = 20
 * parameter[PLACE20].resource ..0
 * parameter[PLACE20].part ..0
+
+
+RuleSet: PlaceComponent(len, number)
+* component contains place{len}_{number} 0..1
+* component[place{len}_{number}] ^short = "{len}_{number}"
+* component[place{len}_{number}].code 1..1
+* component[place{len}_{number}].code = #{len}_{number} (exactly)
+* component[place{len}_{number}].value[x] 1..1
+* component[place{len}_{number}].value[x] only string
+* component[place{len}_{number}].valueString ^maxLength = 1
+
+Profile: EmergingIssues
+Parent: Observation
+Id: vrdr-emerging-issues
+Title: "Emerging Issues"
+Description: "Emerging Issues (Observation)"
+* insert RequireMetaProfile(EmergingIssues)
+* status 1..1
+* status = #final (exactly)
+* code 1..1
+* code = #emergingissues "NCHS-required Parameter Slots for Emerging Issues" (exactly)
+* subject 1..1
+* subject only Reference(Decedent)
+* effective[x] 0..0
+* value[x] 0..0
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* insert PlaceComponent(1,1)
+* insert PlaceComponent(1,2)
+* insert PlaceComponent(1,3)
+* insert PlaceComponent(1,4)
+* insert PlaceComponent(1,5)
+* insert PlaceComponent(1,6)
+* insert PlaceComponent(1,7)
+* insert PlaceComponent(1,8)
+* insert PlaceComponent(8,1)
+* insert PlaceComponent(8,2)
+* insert PlaceComponent(8,3)
+* insert PlaceComponent(20,1)
