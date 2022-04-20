@@ -45,8 +45,8 @@
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[placeOfDeath].value | dateTime |  | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[placeOfDeath].value | dateTime |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime |  | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].value | dateTime |  | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime |  | 
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
@@ -151,8 +151,8 @@
 | 117 | Time of injury | TOI_HR| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 118 | Injury at work | WORKINJ| [InjuryIncident]| |component[InjuryAtWork].value | codeable | [YesNoUnknownNotApplicableVS] | 
 | 126 | Time of Injury Unit | TOI_UNIT| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
-| 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string | y | 
-| 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | y | 
+| 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string | - | 
+| 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | - | 
 | 175 | If Transportation Accident, Specify | TRANSPRT| [InjuryIncident]| |component[ transportationRole ].value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string |  | 
 | 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
