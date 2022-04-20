@@ -12,5 +12,5 @@ Description: "DeathDate-Example1"
 * valueDateTime.extension[partialDateTime].extension[year].valueInteger = 2020
 * valueDateTime.extension[partialDateTime].extension[time].valueTime = "12:13:14"
 // * valueDateTime.extension[partialDateTime].extension[time].valueTime.extension[dataabsent].valueCode = $dataabsentreason401#NA
-* component[datePronouncedDead].valueDateTime = "2020-11-13T16:39:40-05:00"
+* component[datetimePronouncedDead].valueDateTime = "2020-11-13T16:39:40-05:00"
 * component[placeOfDeath].valueCodeableConcept = $sct#16983000 "Death in hospital"
