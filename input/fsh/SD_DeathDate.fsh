@@ -30,13 +30,13 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    datePronouncedDead 1..1 and
+    datetimePronouncedDead 1..1 and
     placeOfDeath 0..1
-* component[datePronouncedDead] ^short = "Date/Time Pronounced Dead"
-* component[datePronouncedDead].value[x] only dateTime
-* component[datePronouncedDead].value[x] 1..1
-* component[datePronouncedDead].code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
-* component[placeOfDeath] ^short = "Date/Time Pronounced Dead"
+* component[datetimePronouncedDead] ^short = "Date/Time Pronounced Dead"
+* component[datetimePronouncedDead].value[x] only dateTime
+* component[datetimePronouncedDead].value[x] 1..1
+* component[datetimePronouncedDead].code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
+* component[placeOfDeath] ^short = "Place of Death"
 * component[placeOfDeath].value[x] only CodeableConcept
 * component[placeOfDeath].value[x] from $place-of-death
 * component[placeOfDeath].value[x] 1..1
