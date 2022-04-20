@@ -35,3 +35,12 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * insert PlaceComponentCode(8,2)
 * insert PlaceComponentCode(8,3)
 * #EmergingIssue20 "EmergingIssue20"
+
+CodeSystem: OrganizationTypeCS
+Id: vrdr-organization-type-cs
+Title: "Local Organization Type"
+Description: "Local Organization Types"
+* insert boilerplate
+* ^content = #complete
+* ^caseSensitive = false
+* #funeralhome "Funeral Home" "Funeral Home."

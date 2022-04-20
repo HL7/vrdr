@@ -4,7 +4,7 @@ Usage: #example
 Description: "FuneralHome-Example1"
 * insert AddMetaProfile(FuneralHome)
 * active = true
-* type = $organization-type#bus "Non-Healthcare Business or Corporation"
+* type = OrganizationTypeCS#funeralhome "Funeral Home" (exactly)
 * name = "Lancaster Funeral Home and Crematory"
 * address.line = "211 High Street"
 * address.city = "Lancaster"
