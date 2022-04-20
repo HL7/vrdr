@@ -14,3 +14,4 @@ Description: "Disposition Location (USCoreLocation)"
 // * physicalType.coding from LocationType (required)
 * insert CityCode
 * insert CountyCode
+* type = LocationTypeCS#disposition

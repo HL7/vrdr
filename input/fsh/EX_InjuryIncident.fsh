@@ -3,7 +3,7 @@ InstanceOf: InjuryIncident
 Usage: #example
 Description: "InjuryIncident-Example1"
 * insert AddMetaProfile(InjuryIncident)
-* extension[injuryLocationReference].valueReference = Reference(InjuryLocation-Example1)
+//* extension[injuryLocationReference].valueReference = Reference(InjuryLocation-Example1)
 * status = #final
 * subject = Reference(Decedent-Example1)
 * effectiveDateTime = "2019-11-02T13:00:00-05:00"

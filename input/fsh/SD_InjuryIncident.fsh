@@ -4,8 +4,8 @@ Id: vrdr-injury-incident
 Title: "Injury Incident"
 Description: "Injury Incident (Observation)"
 * insert RequireMetaProfile(InjuryIncident)
-* extension contains
-    InjuryLocationReference named injuryLocationReference 0..1
+//* extension contains
+//    InjuryLocationReference named injuryLocationReference 0..1
 * status 1..1
 * status = #final (exactly)
 * code 1..1

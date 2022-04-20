@@ -12,3 +12,4 @@ Description: "Injury Location (USCoreLocation)"
 * position ^short = "Lat/Long of Injury"
 * insert CityCode
 * insert CountyCode
+* type = LocationTypeCS#injury
