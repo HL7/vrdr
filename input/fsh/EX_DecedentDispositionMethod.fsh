@@ -7,7 +7,7 @@ Description: "DecedentDispositionMethod-Example1"
 * subject = Reference(Decedent-Example1)
 * performer = Reference(Mortician-Example1)
 * valueCodeableConcept = $sct#449971000124106 "Patient status determination, deceased and buried"
-* extension[dispositionLocationReference].valueReference  = Reference(DispositionLocation-Example1)
+//* extension[dispositionLocationReference].valueReference  = Reference(DispositionLocation-Example1)
 
 /*  Mortician */
 Instance: Mortician-Example1

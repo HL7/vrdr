@@ -117,7 +117,6 @@
 [CountyCodes]: usage.html#county-codes
 [StateLiterals]: usage.html#state-literals
 [CountryLiterals]: usage.html#country-literals
-[InjuryLocation]: https://loinc.org/LL1051-3/
 [InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
 [CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
 [PlaceOfInjury]: StructureDefinition-vrdr-place-of-injury.html

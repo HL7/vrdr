@@ -4,8 +4,8 @@ Id: vrdr-death-date
 Title: "Death Date"
 Description: "Date of death (Observation).  The PartialDatePartAbsent extension supports partial dates."
 * insert RequireMetaProfile(DeathDate)
-* extension contains
-    DeathLocationReference named deathLocationReference 0..1
+// * extension contains
+//     DeathLocationReference named deathLocationReference 0..1
 * status 1..1
 * status = #final (exactly)
 * code 1..1
@@ -26,9 +26,18 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * note 0..1
 * method 0..1
 //* method from DeathDateMethodsVS (extensible)
-* component 0..1
-* component.code 1..1
-* component.code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
-* component.value[x] 1..1
-* component.value[x] only dateTime
-* component.value[x] ^short = "Date/Time Pronounced Dead"
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component contains
+    datePronouncedDead 1..1 and
+    placeOfDeath 0..1
+* component[datePronouncedDead] ^short = "Date/Time Pronounced Dead"
+* component[datePronouncedDead].value[x] only dateTime
+* component[datePronouncedDead].value[x] 1..1
+* component[datePronouncedDead].code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
+* component[placeOfDeath] ^short = "Date/Time Pronounced Dead"
+* component[placeOfDeath].value[x] only CodeableConcept
+* component[placeOfDeath].value[x] from $place-of-death
+* component[placeOfDeath].value[x] 1..1
+* component[placeOfDeath].code = $loinc#58332-8 "Location of death" (exactly)

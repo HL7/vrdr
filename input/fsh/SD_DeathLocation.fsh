@@ -6,10 +6,8 @@ Description: "Death Location (USCoreLocation)"
 * insert RequireMetaProfile(DeathLocation)
 // * name 1..1
 // * description 1..1
+* type = LocationTypeCS#death
 * name ^short = "Name of Death Location"
-* type 1..1
-* type from $place-of-death (required)
-* type ^short = "Place of Death type"
 * address 1..1
 * address ^short = "Place of Death address"
 * address.city ^short = "Address city"
