@@ -24,8 +24,9 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * valueDateTime.extension contains
     PartialDateTime named partialDateTime 0..1 MS
 * note 0..1
+* method ^short = "Date of Death Determination Method (optional)"
 * method 0..1
-//* method from DeathDateMethodsVS (extensible)
+* method from DateOfDeathDeterminationMethodsVS (extensible)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
