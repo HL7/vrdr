@@ -95,6 +95,9 @@ The content is broken down into the following sections:
     * [PlaceOfInjury]
     * [CodingStatusValues]
 
+**Note:**
+NCHS will not process submissions where the death certificate contains a 'replace status' of updated_notforNCHS.
+
 The profile includes:" }
 profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death-certificate-document-intro.md",
   :desc => "The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.

@@ -14,7 +14,7 @@ The profile includes a component for the time of death pronouncement that is not
 | 34 | Date of Death--Month | DOD_MO| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| x|component[datetimePronouncedDead	].value | dateTime |  | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| x|component[datetimePronouncedDead].value | dateTime |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| x|component[datetimePronouncedDead	].value | dateTime | - | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| x|component[datetimePronouncedDead].value | dateTime | - | 
 {: .grid }
 {% include markdown-link-references.md %}

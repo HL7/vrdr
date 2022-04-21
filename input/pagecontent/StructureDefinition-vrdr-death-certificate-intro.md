@@ -52,6 +52,9 @@ The content is broken down into the following sections:
     * [PlaceOfInjury]
     * [CodingStatusValues]
 
+**Note:**
+NCHS will not process submissions where the death certificate contains a 'replace status' of updated_notforNCHS.
+
 The profile includes:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |

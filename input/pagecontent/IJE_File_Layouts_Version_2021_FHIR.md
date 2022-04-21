@@ -3,34 +3,34 @@
 | **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| |value | codeable | [YesNoUnknownVS] | 
-| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[$loinc#69436-4].value | codeable | [YesNoUnknownNotApplicableVS] | 
+| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[autopsyPerformedIndicator].value | codeable | [YesNoUnknownNotApplicableVS] | 
 | 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | - | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionVS] | 
 | 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[$loinc#69440-6].value | string(20) | - | 
+| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
 | 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[$loinc#69440-6].value | string(20) | - | 
+| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
 | 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[$loinc#69440-6].value | string(20) | - | 
+| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
 | 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[$loinc#69440-6].value | string(20) | - | 
+| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
 | 193 | Cause of Death Part II | OTHERCONDITION| [CauseOfDeathPart2]| |value.text | string(240) | - | 
-| 220 | Certifier's First Name | CERTFIRST| [Certifier]| x|name.given , name.use = official | string |  | 
-| 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| x|name.given , name.use = official | string |  | 
-| 222 | Certifier's Last Name | CERTLAST| [Certifier]| x|name.family , name.use = official | string |  | 
-| 223 | Certifier's Suffix Name | CERTSUFFIX| [Certifier]| x|name.suffix , name.use = official | string |  | 
-| 224 | Certifier - Street number | CERTSTNUM| [Certifier]| x|address.extension[stnum] | string |  | 
-| 225 | Certifier - Pre Directional | CERTPREDIR| [Certifier]| x|address.extension[predir] | string |  | 
-| 226 | Certifier - Street name | CERTSTRNAME| [Certifier]| x|address.extension[stname] | string |  | 
-| 227 | Certifier - Street designator | CERTSTRDESIG| [Certifier]| x|address.extension[stdesig] | string |  | 
-| 228 | Certifier - Post Directional | CERTPOSTDIR| [Certifier]| x|address.extension[postdir] | string |  | 
-| 229 | Certifier - Unit or apt number | CERTUNITNUM| [Certifier]| x|address.extension[unitnum] | string |  | 
-| 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| [Certifier]| x|address.line  | string |  | 
-| 231 | Certifier - City or Town name | CERTCITYTEXT| [Certifier]| x|address.city  | string |  | 
+| 220 | Certifier's First Name | CERTFIRST| [Certifier]| x|name.given , name.use = official | string | - | 
+| 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| x|name.given , name.use = official | string | - | 
+| 222 | Certifier's Last Name | CERTLAST| [Certifier]| x|name.family , name.use = official | string | - | 
+| 223 | Certifier's Suffix Name | CERTSUFFIX| [Certifier]| x|name.suffix , name.use = official | string | - | 
+| 224 | Certifier - Street number | CERTSTNUM| [Certifier]| x|address.extension[stnum] | string | - | 
+| 225 | Certifier - Pre Directional | CERTPREDIR| [Certifier]| x|address.extension[predir] | string | - | 
+| 226 | Certifier - Street name | CERTSTRNAME| [Certifier]| x|address.extension[stname] | string | - | 
+| 227 | Certifier - Street designator | CERTSTRDESIG| [Certifier]| x|address.extension[stdesig] | string | - | 
+| 228 | Certifier - Post Directional | CERTPOSTDIR| [Certifier]| x|address.extension[postdir] | string | - | 
+| 229 | Certifier - Unit or apt number | CERTUNITNUM| [Certifier]| x|address.extension[unitnum] | string | - | 
+| 230 | Long string address for Certifier same as above but allows states to choose the way they capture information. | CERTADDRESS| [Certifier]| x|address.line  | string | - | 
+| 231 | Certifier - City or Town name | CERTCITYTEXT| [Certifier]| x|address.city  | string | - | 
 | 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
-| 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string |  | 
+| 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string | - | 
 | 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
 | 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime | - | 
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | - | 
@@ -38,33 +38,33 @@
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | y | 
-| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) |  | 
+| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 1 | Date of Death--Year | DOD_YR| [DeathDate]| |value | dateTime | Required for processing | 
 | 31 | Place of Death | DPLACE| [DeathDate]| |component[placeOfDeath].value | codeable | [PlaceOfDeathVS] | 
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime |  | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].value | dateTime |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime | - | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].value | dateTime | - | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
-| 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime |  | 
+| 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] or [JurisdictionVS] | 
 | 32 | County of Death Occurrence | COD| [DeathLocation]| |address.district.extension[countyCode] | integer | see [CountyCodes] | 
-| 129 | Death Institution name | DINSTI| [DeathLocation]| x|name | string  |  | 
-| 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| x|address.line | string  |  | 
-| 131 | Place of death. Street number | STNUM_D| [DeathLocation]| x|address.extension[stnum] | string |  | 
-| 132 | Place of death. Pre Directional | PREDIR_D| [DeathLocation]| x|address.extension[predir] | string |  | 
-| 133 | Place of death. Street name | STNAME_D| [DeathLocation]| x|address.extension[stname] | string |  | 
-| 134 | Place of death. Street designator | STDESIG_D| [DeathLocation]| x|address.extension[stdesig] | string |  | 
-| 135 | Place of death. Post Directional | POSTDIR_D| [DeathLocation]| x|address.extension[postdir] | string |  | 
-| 136 | Place of death. City or Town name | CITYTEXT_D| [DeathLocation]| x|address.city | string |  | 
-| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| x|address.state | string |  | 
-| 138 | Place of death. Zip code | ZIP9_D| [DeathLocation]| x|address.postalCode | string |  | 
-| 139 | Place of death. County of Death | COUNTYTEXT_D| [DeathLocation]| x|address.district | string |  | 
+| 129 | Death Institution name | DINSTI| [DeathLocation]| x|name | string  | - | 
+| 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| x|address.line | string  | - | 
+| 131 | Place of death. Street number | STNUM_D| [DeathLocation]| x|address.extension[stnum] | string | - | 
+| 132 | Place of death. Pre Directional | PREDIR_D| [DeathLocation]| x|address.extension[predir] | string | - | 
+| 133 | Place of death. Street name | STNAME_D| [DeathLocation]| x|address.extension[stname] | string | - | 
+| 134 | Place of death. Street designator | STDESIG_D| [DeathLocation]| x|address.extension[stdesig] | string | - | 
+| 135 | Place of death. Post Directional | POSTDIR_D| [DeathLocation]| x|address.extension[postdir] | string | - | 
+| 136 | Place of death. City or Town name | CITYTEXT_D| [DeathLocation]| x|address.city | string | - | 
+| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| x|address.state | string | - | 
+| 138 | Place of death. Zip code | ZIP9_D| [DeathLocation]| x|address.postalCode | string | - | 
+| 139 | Place of death. County of Death | COUNTYTEXT_D| [DeathLocation]| x|address.district | string | - | 
 | 140 | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| x|address.city.extension[ cityCode] | integer | see [CityCodes] | 
-| 141 | Place of death. Longitude | LONG_D| [DeathLocation]| x|position.longitude | float |  | 
-| 142 | Place of Death. Latitude | LAT_D| [DeathLocation]| x|position.latitude | float |  | 
+| 141 | Place of death. Longitude | LONG_D| [DeathLocation]| x|position.longitude | float | - | 
+| 142 | Place of Death. Latitude | LAT_D| [DeathLocation]| x|position.latitude | float | - | 
 | 239 | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| x|address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US | 
 | 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| x|address.country  (expanded from 2 letter code) | string  | See [CountryLIterals].   Not used. For US Death certificates should be 'United States'. | 
 | 7 | Decedent's Legal Name--Given  | GNAME| [Decedent]| |name.given , name.use = official | string | - | 
@@ -98,32 +98,32 @@
 | 155 | Decedent's Residence - State name | STATETEXT_R | [Decedent]| |address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 156 | Decedent's Residence - COUNTRY name | COUNTRYTEXT_R| [Decedent]| |address.country (expanded from 2 letter code) | string | See [CountryLiterals] | 
 | 157 | Long string address for decedent's place of residence same as above but allows states to choose the way they capture information. | ADDRESS_R| [Decedent]| |address.line[0] | string | - | 
-| 166 | Middle Name of Decedent  | DMIDDLE| [Decedent]| x|name.given , name.use = official | string |  | 
-| 194 | Decedent's Maiden Name | DMAIDEN| [Decedent]| x|name.text , name.use=maiden | string |  | 
+| 166 | Middle Name of Decedent  | DMIDDLE| [Decedent]| x|name.given , name.use = official | string | - | 
+| 194 | Decedent's Maiden Name | DMAIDEN| [Decedent]| x|name.text , name.use=maiden | string | - | 
 | 195 | Decedent's Birth Place City - Code | DBPLACECITYCODE| [Decedent]| x|extension[patient-birthPlace].value[x].city.extension[ cityCode] | integer | see [CityCodes] | 
-| 196 | Decedent's Birth Place City - Literal | DBPLACECITY| [Decedent]| x|extension[patient-birthPlace].value[x].city | string |  | 
-| 201 | Informant's Relationship | INFORMRELATE| [Decedent]| x|contact.type.text  | string (30 characters) |  | 
+| 196 | Decedent's Birth Place City - Literal | DBPLACECITY| [Decedent]| x|extension[patient-birthPlace].value[x].city | string | - | 
+| 201 | Informant's Relationship | INFORMRELATE| [Decedent]| x|contact.type.text  | string (30 characters) | - | 
 | 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| [Decedent]| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
-| 246 | Marital Descriptor | MARITAL_DESCRIP| [Decedent]| x|maritalStatus.text  | string |  | 
+| 246 | Marital Descriptor | MARITAL_DESCRIP| [Decedent]| x|maritalStatus.text  | string | - | 
 | 16 | Decedent's Age--Type | AGETYPE| [DecedentAge]| |valueQuantity.system | codeable | [UnitsOfAgeVS] | 
-| 17 | Decedent's Age--Units | AGE | [DecedentAge]| |valueQuantity.value | decimal | y | 
+| 17 | Decedent's Age--Units | AGE | [DecedentAge]| |valueQuantity.value | decimal | - | 
 | 18 | Decedent's Age--Edit Flag | AGE_BYPASS| [DecedentAge]| |value.extension[BypassEditFlag].value | codeable | [EditBypass01VS] | 
 | 33 | Method of Disposition | DISP| [DecedentDispositionMethod]| |value | codeable | [MethodOfDispositionVS] | 
 | 37 | Decedent's Education | DEDUC| [DecedentEducationLevel]| |value | codeable | [EducationLevelVS] | 
 | 38 | Decedent's Education--Edit Flag | DEDUC_BYPASS| [DecedentEducationLevel]| |value.extension[ByPassEdit].value | codeable | [EditBypass01234VS] | 
 | 12 | Father's Surname | FLNAME| [DecedentFather]| |name.family | string | - | 
-| 167 | Father's First Name | DDADF| [DecedentFather]| x|name.given , name.use = official | string |  | 
-| 168 | Father's Middle Name | DDADMID| [DecedentFather]| x|name.given , name.use = official | string |  | 
-| 199 | Father's Suffix | FATHERSUFFIX| [DecedentFather]| x|name.suffix , name.use = official | string |  | 
+| 167 | Father's First Name | DDADF| [DecedentFather]| x|name.given , name.use = official | string | - | 
+| 168 | Father's Middle Name | DDADMID| [DecedentFather]| x|name.given , name.use = official | string | - | 
+| 199 | Father's Suffix | FATHERSUFFIX| [DecedentFather]| x|name.suffix , name.use = official | string | - | 
 | 128 | Decedent ever served in Armed Forces? | ARMEDF| [DecedentMilitaryService]| x|value | codeable | [YesNoUnknownVS] | 
-| 169 | Mother's First Name | DMOMF| [DecedentMother]| x|name.given , name.use = official | string |  | 
-| 170 | Mother's Middle Name | DMOMMID| [DecedentMother]| x|name.given , name.use = official | string |  | 
-| 171 | Mother's Maiden Surname | DMOMMDN| [DecedentMother]| x|name.family , name.type=maiden | string  |  | 
-| 200 | Mother's Suffix | MOTHERSSUFFIX| [DecedentMother]| x|name.suffix , name.use = official | string |  | 
-| 144 | Spouse's First Name | SPOUSEF| [DecedentSpouse]| x|name.given | string |  | 
-| 145 | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | [DecedentSpouse]| x|name.family, name.use = 'maiden | string |  | 
-| 197 | Spouse's Middle Name | SPOUSEMIDNAME| [DecedentSpouse]| x|name.given , name.use = official | string |  | 
-| 198 | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| x|name.suffix , name.use = official | string |  | 
+| 169 | Mother's First Name | DMOMF| [DecedentMother]| x|name.given , name.use = official | string | - | 
+| 170 | Mother's Middle Name | DMOMMID| [DecedentMother]| x|name.given , name.use = official | string | - | 
+| 171 | Mother's Maiden Surname | DMOMMDN| [DecedentMother]| x|name.family , name.type=maiden | string  | - | 
+| 200 | Mother's Suffix | MOTHERSSUFFIX| [DecedentMother]| x|name.suffix , name.use = official | string | - | 
+| 144 | Spouse's First Name | SPOUSEF| [DecedentSpouse]| x|name.given | string | - | 
+| 145 | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | [DecedentSpouse]| x|name.family, name.use = 'maiden | string | - | 
+| 197 | Spouse's Middle Name | SPOUSEMIDNAME| [DecedentSpouse]| x|name.given , name.use = official | string | - | 
+| 198 | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| x|name.suffix , name.use = official | string | - | 
 | 112 | Pregnancy | PREG| [DecedentPregnancyStatus]| |value | codeable | [PregnancyStatusVS] | 
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| [DecedentPregnancyStatus]| |value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
 | 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) | - | 
@@ -131,20 +131,20 @@
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
-| 205 | Disposition City - Literal | DISPCITY| [DispositionLocation]| x|address.city | string |  | 
+| 205 | Disposition City - Literal | DISPCITY| [DispositionLocation]| x|address.city | string | - | 
 | 172 | Was case Referred to Medical Examiner/Coroner? | REFERRED| [ExaminerContacted]| x|value | codeable | [YesNoUnknownVS] | 
-| 206 | Funeral Facility Name | FUNFACNAME| [FuneralHome]| x|name | string |  | 
-| 207 | Funeral Facility - Street number | FUNFACSTNUM| [FuneralHome]| x|address.extension[stnum] | string |  | 
-| 208 | Funeral Facility - Pre Directional | FUNFACPREDIR| [FuneralHome]| x|address.extension[predir] | string |  | 
-| 209 | Funeral Facility - Street name | FUNFACSTRNAME| [FuneralHome]| x|address.extension[stname] | string |  | 
-| 210 | Funeral Facility - Street designator | FUNFACSTRDESIG| [FuneralHome]| x|address.extension[stdesig] | string |  | 
-| 211 | Funeral Facility - Post Directional | FUNPOSTDIR| [FuneralHome]| x|address.extension[postdir] | string |  | 
-| 212 | Funeral Facility - Unit or apt number | FUNUNITNUM| [FuneralHome]| x|address.extension[unitnum] | string |  | 
+| 206 | Funeral Facility Name | FUNFACNAME| [FuneralHome]| x|name | string | - | 
+| 207 | Funeral Facility - Street number | FUNFACSTNUM| [FuneralHome]| x|address.extension[stnum] | string | - | 
+| 208 | Funeral Facility - Pre Directional | FUNFACPREDIR| [FuneralHome]| x|address.extension[predir] | string | - | 
+| 209 | Funeral Facility - Street name | FUNFACSTRNAME| [FuneralHome]| x|address.extension[stname] | string | - | 
+| 210 | Funeral Facility - Street designator | FUNFACSTRDESIG| [FuneralHome]| x|address.extension[stdesig] | string | - | 
+| 211 | Funeral Facility - Post Directional | FUNPOSTDIR| [FuneralHome]| x|address.extension[postdir] | string | - | 
+| 212 | Funeral Facility - Unit or apt number | FUNUNITNUM| [FuneralHome]| x|address.extension[unitnum] | string | - | 
 | 213 | Long string address for Funeral Facility same as above but allows states to choose the way they capture information. | FUNFACADDRESS| [FuneralHome]| x|address.line | string | address.line  | 
 | 214 | Funeral Facility - City or Town name | FUNCITYTEXT| [FuneralHome]| x|address.city | string | address.city  | 
 | 215 | State, U.S. Territory or Canadian Province of Funeral Facility - code | FUNSTATECD| [FuneralHome]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 216 | State, U.S. Territory or Canadian Province of Funeral Facility - literal | FUNSTATE| [FuneralHome]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
-| 217 | Funeral Facility - ZIP | FUNZIP| [FuneralHome]| x|address.postalCode | string |  | 
+| 217 | Funeral Facility - ZIP | FUNZIP| [FuneralHome]| x|address.postalCode | string | - | 
 | 114 | Date of injury--month | DOI_MO| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 115 | Date of injury--day | DOI_DY| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
 | 116 | Date of injury--year | DOI_YR| [InjuryIncident]| |effective | dateTime | See [PartialDatesAndTimes] | 
@@ -154,13 +154,13 @@
 | 173 | Place of Injury- literal | POILITRL| [InjuryIncident]| |component[ placeOfInjury ].value.text | string | - | 
 | 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | - | 
 | 175 | If Transportation Accident, Specify | TRANSPRT| [InjuryIncident]| |component[ transportationRole ].value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
-| 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string |  | 
+| 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string | - | 
 | 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
-| 178 | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| x|address.city | string |  | 
+| 178 | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| x|address.city | string | - | 
 | 179 | Town/city of Injury code | CITYCODE_I| [InjuryLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float |  | 
-| 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float |  | 
+| 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float | - | 
+| 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float | - | 
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
@@ -192,16 +192,16 @@
 | 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string | - | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
-| 248 | Blank for One-Byte Field 1 | PLACE1_1| [EmergingIssues]| |component[EmergingIssue1_1].value | string(1) | y | 
-| 249 | Blank for One-Byte Field 2 | PLACE1_2| [EmergingIssues]| |component[EmergingIssue1_2].value | string(1) | y | 
-| 250 | Blank for One-Byte Field 3 | PLACE1_3| [EmergingIssues]| |component[EmergingIssue1_3].value | string(1) | y | 
-| 251 | Blank for One-Byte Field 4 | PLACE1_4| [EmergingIssues]| |component[EmergingIssue1_4].value | string(1) | y | 
-| 252 | Blank for One-Byte Field 5 | PLACE1_5| [EmergingIssues]| |component[EmergingIssue1_5].value | string(1) | y | 
-| 253 | Blank for One-Byte Field 6 | PLACE1_6| [EmergingIssues]| |component[EmergingIssue1_6].value | string(1) | y | 
-| 254 | Blank for Eight-Byte Field 1 | PLACE8_1| [EmergingIssues]| |component[EmergingIssue8_1].value | string(8) | y | 
-| 255 | Blank for Eight-Byte Field 2 | PLACE8_2| [EmergingIssues]| |component[EmergingIssue8_2].value | string(8) | y | 
-| 256 | Blank for Eight-Byte Field 3 | PLACE8_3| [EmergingIssues]| |component[EmergingIssue8_3].value | string(8) | y | 
-| 257 | Blank for Twenty-Byte Field | PLACE20| [EmergingIssues]| |component[EmergingIssue20].value | string(20) | y | 
+| 248 | Blank for One-Byte Field 1 | PLACE1_1| [EmergingIssues]| |component[EmergingIssue1_1].value | string(1) | - | 
+| 249 | Blank for One-Byte Field 2 | PLACE1_2| [EmergingIssues]| |component[EmergingIssue1_2].value | string(1) | - | 
+| 250 | Blank for One-Byte Field 3 | PLACE1_3| [EmergingIssues]| |component[EmergingIssue1_3].value | string(1) | - | 
+| 251 | Blank for One-Byte Field 4 | PLACE1_4| [EmergingIssues]| |component[EmergingIssue1_4].value | string(1) | - | 
+| 252 | Blank for One-Byte Field 5 | PLACE1_5| [EmergingIssues]| |component[EmergingIssue1_5].value | string(1) | - | 
+| 253 | Blank for One-Byte Field 6 | PLACE1_6| [EmergingIssues]| |component[EmergingIssue1_6].value | string(1) | - | 
+| 254 | Blank for Eight-Byte Field 1 | PLACE8_1| [EmergingIssues]| |component[EmergingIssue8_1].value | string(8) | - | 
+| 255 | Blank for Eight-Byte Field 2 | PLACE8_2| [EmergingIssues]| |component[EmergingIssue8_2].value | string(8) | - | 
+| 256 | Blank for Eight-Byte Field 3 | PLACE8_3| [EmergingIssues]| |component[EmergingIssue8_3].value | string(8) | - | 
+| 257 | Blank for Twenty-Byte Field | PLACE20| [EmergingIssues]| |component[EmergingIssue20].value | string(20) | - | 
 | 123 | Surgery Date--month | SUR_MO| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 124 | Surgery Date--day | SUR_DY| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 125 | Surgery Date--year | SUR_YR| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
@@ -234,8 +234,8 @@
 | 91 | Receipt date -- Year | R_YR| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 92 | Receipt date -- Month | R_MO| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 93 | Receipt date -- Day | R_DY| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
-| NA | coder status  | CS (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[coderStatus].value | integer |  | 
-| NA | shipment number  | SHIP (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[shipmentNumber].value | string |  | 
+| NA | coder status  | CS (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[coderStatus].value | integer | - | 
+| NA | shipment number  | SHIP (TRX Field, no IJE Mapping)| [CodingStatusValues]| |parameter[shipmentNumber].value | string | - | 
 | 101 | Intentional Reject  | INT_REJ| [CodingStatusValues]| |parameter[intentionalReject].value | codeable | [IntentionalRejectVS] | 
 | 102 | Acme System Reject Codes | SYS_REJ| [CodingStatusValues]| |parameter[acmeSystemReject].value  | codeable | [ACMESystemRejectVS] | 
 | 107 | Transax conversion flag: Computer Generated | TRX_FLG| [CodingStatusValues]| |parameter[transaxConversion].value  | codeable | [TransaxConversionVS] | 
