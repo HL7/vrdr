@@ -27,3 +27,5 @@ Description: "Death Location (USCoreLocation)"
 * insert AddressComponents
 * position 0..1 MS
 * position ^short = "Place of death lat/long" // LONG_D and LAT_D
+* position.latitude = 38.889248
+* position.longitude = -77.050636
