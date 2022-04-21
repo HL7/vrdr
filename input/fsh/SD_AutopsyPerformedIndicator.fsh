@@ -16,13 +16,17 @@ Description: "Autopsy Performed Indicator (Observation)"
 * value[x] only CodeableConcept
 * value[x] from YesNoUnknownVS (required)
 * valueCodeableConcept ^short = "Autopsy was performed?"
-* component 0..1
-* component ^short = "Autopsy Results Available"
-* component.code 1..1
-* component.code only CodeableConcept
-* component.code = $loinc#69436-4 "Autopsy results available" (exactly)
-* component.value[x] 1..1
-* component.value[x] only CodeableConcept
-* component.value[x] from YesNoUnknownNotApplicableVS (required)
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component contains
+    autopsyResultsAvailable 1..1
+* component[autopsyResultsAvailable] ^short = "Autopsy Results Available"
+* component[autopsyResultsAvailable].code 1..1
+* component[autopsyResultsAvailable].code only CodeableConcept
+* component[autopsyResultsAvailable].code = $loinc#69436-4 "Autopsy results available" (exactly)
+* component[autopsyResultsAvailable].value[x] 1..1
+* component[autopsyResultsAvailable].value[x] only CodeableConcept
+* component[autopsyResultsAvailable].value[x] from YesNoUnknownNotApplicableVS (required)
 * performer 0..1
 * performer ^short = "Autopsy Performer using USCorePractioner"
