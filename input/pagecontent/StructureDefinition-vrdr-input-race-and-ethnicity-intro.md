@@ -5,8 +5,8 @@
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| |component[ HispanicLiteral ].valueString | string | - | 
 | 44 | Decedent's Race--White | RACE1| |component[ White].valueBoolean | boolean | - | 
 | 45 | Decedent's Race--Black or African American | RACE2| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 

@@ -59,7 +59,7 @@
 | 134 | Place of death. Street designator | STDESIG_D| [DeathLocation]| x|address.extension[stdesig] | string | - | 
 | 135 | Place of death. Post Directional | POSTDIR_D| [DeathLocation]| x|address.extension[postdir] | string | - | 
 | 136 | Place of death. City or Town name | CITYTEXT_D| [DeathLocation]| x|address.city | string | - | 
-| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| x|address.state | string | - | 
+| 137 | Place of death. State name literal | STATETEXT_D| [DeathLocation]| x|address.state (expanded from 2 letter code) | string | - | 
 | 138 | Place of death. Zip code | ZIP9_D| [DeathLocation]| x|address.postalCode | string | - | 
 | 139 | Place of death. County of Death | COUNTYTEXT_D| [DeathLocation]| x|address.district | string | - | 
 | 140 | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| x|address.city.extension[ cityCode] | integer | see [CityCodes] | 
@@ -164,8 +164,8 @@
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
 | 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string | - | 
 | 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean | - | 
 | 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 

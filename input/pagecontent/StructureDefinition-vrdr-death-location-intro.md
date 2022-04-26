@@ -13,7 +13,7 @@
 | 134 | Place of death. Street designator | STDESIG_D| x|address.extension[stdesig] | string | - | 
 | 135 | Place of death. Post Directional | POSTDIR_D| x|address.extension[postdir] | string | - | 
 | 136 | Place of death. City or Town name | CITYTEXT_D| x|address.city | string | - | 
-| 137 | Place of death. State name literal | STATETEXT_D| x|address.state | string | - | 
+| 137 | Place of death. State name literal | STATETEXT_D| x|address.state (expanded from 2 letter code) | string | - | 
 | 138 | Place of death. Zip code | ZIP9_D| x|address.postalCode | string | - | 
 | 139 | Place of death. County of Death | COUNTYTEXT_D| x|address.district | string | - | 
 | 140 | Place of death. City FIPS code | CITYCODE_D| x|address.city.extension[ cityCode] | integer | see [CityCodes] | 
