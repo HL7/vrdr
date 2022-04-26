@@ -1,9 +1,12 @@
 ### Usage
-The Death Certificate is a Bundle document that contains the [DeathCertificate] Bundle.
+The Death Certificate is a Bundle document that contains the [DeathCertificate] Composition and the other instances comprising the content of the death record.
 
-Note that the unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
+  Notes:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+  * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+  * The unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
 
-In addition to  the [DeathCertificate] Bundle it includes the following content:
+In addition to  the [DeathCertificate] Composition it includes the following content:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |

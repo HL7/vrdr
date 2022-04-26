@@ -1,5 +1,9 @@
 ### Usage
-The Death Certification profile includes:
+
+  Note:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+
+  The Death Certification profile includes:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
