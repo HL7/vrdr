@@ -23,6 +23,7 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #position "position"
 * #lineNumber "line number"
 * #eCodeIndicator "e Code Indicator"
+* #wouldBeUnderlyingCauseOfDeathWithoutPregnancy "Would be underlying cause of death without pregnancy."
 * insert PlaceComponentCode(1,1)
 * insert PlaceComponentCode(1,2)
 * insert PlaceComponentCode(1,3)

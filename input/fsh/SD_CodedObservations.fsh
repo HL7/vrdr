@@ -117,13 +117,19 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    position 1..1
+    position 1..1 and
+    wouldBeUnderlyingCauseOfDeathWithoutPregnancy 0..1
 * component[position] ^short = "Position"
-* component[position].valueInteger ^short = "Position"
 * component[position].code 1..1
 * component[position].code = ComponentCS#position "Position" (exactly)
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy] ^short = "Would be Underlying Cause of Death Without Pregnancy"
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].valueBoolean ^short = "Position"
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code 1..1
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code = ComponentCS#wouldBeUnderlyingCauseOfDeathWithoutPregnancy "Would be underlying cause of death without pregnancy, if true" (exactly)
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] 1..1
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] only boolean
 
 
 
