@@ -41,21 +41,30 @@ Description:   "Coding Status Values contains various status flags that result f
 
 ValueSet: IntentionalRejectVS
 Id: vrdr-intentional-reject-vs
-Title: "Intentional Reject ValueSet"
+Title: "Intentional Reject ValueSet.
+
+Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html).
+"
 Description: "Intentional Reject ValueSet"
 * codes from system IntentionalRejectCS
 
 ValueSet: SystemRejectVS
 Id: vrdr-system-reject-vs
 Title: "System Reject ValueSet"
-Description: "System Reject ValueSet"
+Description: "System Reject ValueSet.
+
+Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html).
+"
 * codes from system SystemRejectCS
 
 
 ValueSet: TransaxConversionVS
 Id: vrdr-transax-conversion-vs
-Title: "System Reject ValueSet"
-Description: "System Reject ValueSet"
+Title: "Transax Conversion ValueSet"
+Description: "Transax Conversion ValueSet.
+
+Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html).
+"
 * codes from system TransaxConversionCS
 
 
@@ -172,7 +181,10 @@ Description: "Place Of Injury  (Observation)"
 ValueSet: ActivityAtTimeOfDeathVS
 Id: vrdr-activity-at-time-of-death-vs
 Title: "Activity at Time of Death VS"
-Description: "Activity at Time of Death"
+Description: "Activity at Time of Death.
+
+Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathtCM.html).
+"
 * ActivityAtTimeOfDeathCS#0 "While engaged in sports activity"
 * ActivityAtTimeOfDeathCS#1 "While engaged in leisure activities."
 * ActivityAtTimeOfDeathCS#2 "While working for income"
@@ -294,19 +306,29 @@ Description: "ICD10 Causes of Death VS"
 ValueSet: HispanicOriginVS
 Id: vrdr-hispanic-origin-vs
 Title: "HispanicOrigin Value Set"
-Description: "NCHS HispanicOrigin Value Set"
+Description: "NCHS HispanicOrigin Value Set.
+
+
+Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html).
+"
 * include codes from system HispanicOriginCS
 * $v3-NullFlavor#UNK "unknown"
 
 ValueSet: RaceCodeVS
 Id: vrdr-race-code-vs
 Title: "Race Code Value Set"
-Description: "NCHS Race Codes"
+Description: "NCHS Race Codes.
+
+Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html).
+"
 * include codes from system RaceCodeCS
 * $v3-NullFlavor#UNK "unknown"
 
 ValueSet: RaceRecode40VS
 Id: vrdr-race-recode-40-vs
 Title: "Race Recode 40 Value Set"
-Description: "NCHS Race Recode 40 Valueset"
+Description: "NCHS Race Recode 40 Valueset.
+
+Mapping to IJE codes [here](ConceptMap-RaceRecode40CM.html).
+"
 * include codes from system RaceRecode40CS

@@ -1,7 +1,11 @@
 ValueSet: MannerOfDeathVS
 Id: vrdr-manner-of-death-vs
 Title: "Manner of Death VS"
-Description: "A set of code used to indicate a classification of the manner of death."
+Description: "A set of code used to indicate a classification of the manner of death.
+
+
+Mapping to IJE codes [here](ConceptMap-MannerOfDeathCM.html).
+"
 * insert SNOMEDCopyright
 * $sct#38605008 "Natural death"
 * $sct#7878000 "Accidental death"

@@ -1,7 +1,10 @@
 ValueSet: EducationLevelVS
 Id: vrdr-education-level-vs
 Title: "Education Level"
-Description: "Highest educational level achieved.  Based on PHVS_DecedentEducationLevel_NCHS."
+Description: "Highest educational level achieved.  Based on PHVS_DecedentEducationLevel_NCHS.
+
+Mapping to IJE codes [here](ConceptMap-EducationLevelCM.html).
+"
 * $HL7_EducationLevelCS#ELEM "Elementary School"
 * $HL7_EducationLevelCS#SEC "Some secondary or high school education"
 * $HL7_EducationLevelCS#HS "High School or secondary school degree complete"

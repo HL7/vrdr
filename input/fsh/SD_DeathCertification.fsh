@@ -16,7 +16,7 @@ Description: "The procedure where the certification of death was performed by th
 * code = $sct#308646001 "Death certification" (exactly)
 * performed[x] 1..1
 * performed[x] only dateTime
-* performed[x] ^short = "certificationDatetime"
+* performed[x] ^short = "certification Datetime"
 * performer 1..1
 * performer.function 1..1
 * performer.function from CertifierTypesVS (required)
