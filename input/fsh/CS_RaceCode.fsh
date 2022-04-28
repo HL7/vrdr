@@ -237,7 +237,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 // SOME OTHER RACE (600-999) Uncodable, Deferred, Unknown
 * #996 "Uncodable"
 * #997 "Deferred"
-* #998 "UNKNOWN"
+* #998 "UNKNOWN 2"
 * #999 "First Pass Reject"
 // AMERICAN INDIAN (A01-M43) Abenaki
 * #A01 "Abenaki Nation of Missiquoi"

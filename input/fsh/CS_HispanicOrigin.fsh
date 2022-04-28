@@ -17,7 +17,7 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #209 "Spanish Basque"
 // 210 -219 Mexican
 * #210 "Mexican"
-* #211 "Mexican"
+* #211 "Mexican 2"
 * #212 "Mexican American"
 * #213 "Mexicano"
 * #214 "Chicano"
@@ -56,10 +56,10 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #252 "Latino"
 // 260 -269 Puerto Rican
 * #260 "Puerto Rican"
-* #261 "Puerto Rican"
+* #261 "Puerto Rican 2"
 // 270 -274 Cuban
 * #270 "Cuban"
-* #271 "Cuban"
+* #271 "Cuban 2"
 // 275 -279 Dominican
 * #275 "Dominican"
 // 280 -299 Other Spanish/Hispanic
@@ -74,9 +74,9 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #288 "Meso American Indian"
 * #289 "Mestizo"
 * #291 "Multiple Hispanic Responses"
-* #299 "Other Spanish"
+* #299 "Other Spanish 2"
 // 996 -999 Uncodable, deferred, unknown
 * #996 "Uncodable"
 * #997 "Deferred"
-* #998 "Unknown"
+* #998 "Unknown 2"
 * #999 "First Pass Reject"

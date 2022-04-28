@@ -4,7 +4,7 @@ Title: "Date of Death Determination Methods"
 Description: "Date of Death Determination Methods"
 * ^content = #complete
 * ^caseSensitive = false
-* #actual "Actual Date of Death"
-* #approximate "Approximate Date of Death"
+* #exact "Exact"
+* #approximate "Approximate"
 * #presumed "Presumed Date of Death"
-* #courtdetermined "Court determined Date of Death"
+* #court-appointed "Court Appointed"
