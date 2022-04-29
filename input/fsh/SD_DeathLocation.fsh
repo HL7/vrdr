@@ -25,5 +25,5 @@ Description: "Death Location (USCoreLocation)"
 * insert CityCode
 * insert CountyCode
 * insert AddressComponents
-* position 0..1 MS
+* position 0..1
 * position ^short = "Place of death lat/long" // LONG_D and LAT_D

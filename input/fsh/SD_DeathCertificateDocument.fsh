@@ -13,7 +13,7 @@ Description: "The resources comprising the death certificate composition (Bundle
 * type 1..1
 * type only code
 * type = #document (exactly)
-* entry.resource 1..1 MS // each entry must have a resource
+* entry.resource 1..1 // each entry must have a resource
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open

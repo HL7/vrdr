@@ -14,7 +14,7 @@ Description: "A bundle containing instances of the resources comprising cause of
 * type 1..1
 * type only code
 * type = #collection (exactly)
-* entry.resource 1..1 MS // each entry must have a resource
+* entry.resource 1..1 // each entry must have a resource
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
@@ -55,7 +55,7 @@ Description: "A bundle containing instances of the resources comprising demograp
 * type 1..1
 * type only code
 * type = #collection (exactly)
-* entry.resource 1..1 MS // each entry must have a resource
+* entry.resource 1..1 // each entry must have a resource
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open

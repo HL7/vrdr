@@ -17,7 +17,7 @@ RuleSet: boilerplate
 
 
 RuleSet: Extension(name, min, max, short, def, class)
-* extension contains {name} {min}..{max} MS
+* extension contains {name} {min}..{max}
 * extension[{name}] ^short = "{short}"
 * extension[{name}] ^definition = "{def}"
 * extension[{name}].value[x] only {class}
@@ -27,7 +27,7 @@ RuleSet: CodingExtension(name, min, max, short, def, valueset)
 * extension[{name}].value[x] from {valueset} (required)
 
 RuleSet: BundleSlice(name, min, max, short, def, class)
-* entry contains {name} {min}..{max} MS
+* entry contains {name} {min}..{max}
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}

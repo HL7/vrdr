@@ -16,4 +16,4 @@ Description: "Date of Surgery (Observation).  The PartialDatePartAbsent extensio
 * value[x] 0..1
 * value[x] only dateTime
 * valueDateTime.extension contains
-    PartialDateTime named partialDateTime 0..1 MS
+    PartialDateTime named partialDateTime 0..1

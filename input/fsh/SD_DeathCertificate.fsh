@@ -10,7 +10,7 @@ RuleSet: CompositionSectionEntrySlicing(section)
 
 
 RuleSet: BundleSectionSlice(section, name, min, max, short, def, class)
-* section[{section}].entry contains {name} {min}..{max} MS
+* section[{section}].entry contains {name} {min}..{max}
 * section[{section}].entry[{name}] ^short = "{short}"
 * section[{section}].entry[{name}] ^definition = "{def}"
 * section[{section}].entry[{name}] only Reference({class})
@@ -60,7 +60,7 @@ Description: "The body of the death certificate document (Composition)."
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
-* section.code 1..1 MS
+* section.code 1..1
 // * section contains DecedentDemographics 0..1
 // * section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
 // * section[DecedentDemographics] ^label = "DecedentDemographics"
@@ -122,11 +122,11 @@ Description: "The body of the death certificate document (Composition)."
 // // * section[DecedentDisposition].entry ^slicing.discriminator.path = "$this.resolve()"
 // // * section[DecedentDisposition].entry ^slicing.rules = #open
 // * section[DecedentDisposition].entry contains
-//     DispositionLocation 0..* MS and
-//     FuneralHome 0..1 MS and
-// //    Mortician 0..1 MS and   ** Can be included using USCorePractitioner
-//     DispositionMethod 0..1 MS
-// //    and FuneralServiceLicensee 0..1 MS   ** Can be included using USCorePractitionerRole
+//     DispositionLocation 0..* and
+//     FuneralHome 0..1 and
+// //    Mortician 0..1 and   ** Can be included using USCorePractitioner
+//     DispositionMethod 0..1
+// //    and FuneralServiceLicensee 0..1   ** Can be included using USCorePractitionerRole
 // * section[DecedentDisposition].entry[DispositionLocation] only Reference(DispositionLocation)
 // * section[DecedentDisposition].entry[FuneralHome] only Reference(FuneralHome)
 // // * section[DecedentDisposition].entry[Mortician] only Reference(Mortician)

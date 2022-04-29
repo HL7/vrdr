@@ -8,7 +8,7 @@ Title: "Decedent"
 Description: "Decedent (USCorePatient)"
 * insert RequireMetaProfile(Decedent)
 * extension contains
-    NVSSSexAtDeath named NVSS-SexAtDeath 0..1 MS and
+    NVSSSexAtDeath named NVSS-SexAtDeath 0..1 and
     SpouseAlive named Spouse-Alive 0..1 and
     $patient-birthPlace named Patient-BirthPlace 0..1
 * extension[NVSS-SexAtDeath] ^short = "NVSS Sex at Death"
@@ -22,7 +22,7 @@ Description: "Decedent (USCorePatient)"
     CityCode named cityCode 0..1
 * extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^label = "City Code"
 * extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^short = "City Code"
-* identifier 1..* MS
+* identifier 1..*
 // identifier where system = 'http://hl7.org/fhir/sid/us-ssn is SSN
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open

@@ -21,7 +21,7 @@ Description: "The decedent's chronological age at the time of death (Observation
 * effective[x] ^short = "The decedent's date of death"
 * effective[x] ^definition = "The effective date of this observation shall be equal to the decedent's date of death."
 */
-* value[x] 0..1 MS
+* value[x] 0..1
 * value[x] only Quantity  // value = AGE, system = AGETYPE
 * valueQuantity.system from UnitsOfAgeVS (required)
 * value[x] ^short = "The decedent's chronological age at the time of death"
@@ -31,4 +31,4 @@ Description: "The decedent's chronological age at the time of death (Observation
 * value[x].extension[bypassEditFlag] ^short = "Bypass Age Edit Flag"
 * value[x].extension[bypassEditFlag].value[x] from EditBypass01VS (required)
 * value[x].extension[bypassEditFlag].value[x] only CodeableConcept
-* dataAbsentReason 0..1 MS
+* dataAbsentReason 0..1

@@ -22,7 +22,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * value[x] ^short = "Date/Time of Death"
 * value[x] only dateTime
 * valueDateTime.extension contains
-    PartialDateTime named partialDateTime 0..1 MS
+    PartialDateTime named partialDateTime 0..1
 * note 0..1
 * method ^short = "Date of Death Determination Method (optional)"
 * method 0..1

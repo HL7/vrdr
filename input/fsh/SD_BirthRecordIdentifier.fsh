@@ -11,11 +11,11 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * code = $v2-0203#BR "Birth registry number" (exactly)
 * subject 1..1
 * subject only Reference(Decedent)
-* value[x] 0..1 MS
+* value[x] 0..1
 * value[x] only string   // we considered shifting to integer and kept it as string.
 * valueString ^short = "Birth registry number"
 * valueString ^maxLength = 6
-* dataAbsentReason 0..1 MS
+* dataAbsentReason 0..1
 * dataAbsentReason from DataAbsentReason (extensible)
 * component ..*
 * component ^slicing.discriminator.type = #value

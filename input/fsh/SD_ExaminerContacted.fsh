@@ -12,6 +12,6 @@ Description: "Examiner Contacted (Observation)"
 * code = $loinc#74497-9 "Medical examiner or coroner was contacted [US Standard Certificate of Death]" (exactly)
 * subject 1..1
 * subject only Reference(Decedent)
-* value[x] 1.. MS
+* value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from YesNoUnknownVS (required)
