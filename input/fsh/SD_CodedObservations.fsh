@@ -189,7 +189,7 @@ Id: vrdr-activity-at-time-of-death-vs
 Title: "Activity at Time of Death VS"
 Description: "Activity at Time of Death.
 
-Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathtCM.html).
+Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html).
 "
 * ActivityAtTimeOfDeathCS#0 "While engaged in sports activity"
 * ActivityAtTimeOfDeathCS#1 "While engaged in leisure activities."
