@@ -6,6 +6,7 @@ Description: "Place of Injury from NCHS TRX Format.  THis contains all of the co
 
 Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html).
 "
+* insert LOINCCopyright
 * $loinc#LA14084-0 "Home"
 * $loinc#LA14085-7 "Residential institution	"
 * $loinc#LA14086-5 "School"

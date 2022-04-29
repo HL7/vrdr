@@ -181,7 +181,7 @@ Description: "Place Of Injury  (Observation)"
 * code = $loinc#11376-1 "Injury location" (exactly)
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from http://loinc.org/vs/LL1051-3 (required)
+* value[x] from PlaceOfInjuryVS (required)
 
 
 ValueSet: ActivityAtTimeOfDeathVS
