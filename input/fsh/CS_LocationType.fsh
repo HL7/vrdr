@@ -9,4 +9,4 @@ Description: "Location Type Code System"
 * ^content = #complete
 * #injury "Injury Location"
 * #disposition "Disposition Location"
-* #death "Death"
+* #death "Death Location"
