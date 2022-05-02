@@ -3,7 +3,7 @@
 | **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| |value | codeable | [YesNoUnknownVS] | 
-| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[autopsyPerformedIndicator].value | codeable | [YesNoUnknownNotApplicableVS] | 
+| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[ autopsyPerformedIndicator ].value | codeable | [YesNoUnknownNotApplicableVS] | 
 | 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | - | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionVS] | 
@@ -78,8 +78,8 @@
 | 21 | Date of Birth--Day | DOB_DY| [Decedent]| |birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 22 | Birthplace--Country | BPLACE_CNT| [Decedent]| |extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
 | 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| |extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | [JurisdictionsProvincesVS] | 
-| 24 | Decedent's Residence--City | CITYC| [Decedent]| |address.city.extension[cityCode] | string | see [CityCodes] | 
-| 25 | Decedent's Residence--County | COUNTYC| [Decedent]| |address.district.extension[countyCode] | string | see [CountyCodes] | 
+| 24 | Decedent's Residence--City | CITYC| [Decedent]| |address.city.extension[ cityCode ] | string | see [CityCodes] | 
+| 25 | Decedent's Residence--County | COUNTYC| [Decedent]| |address.district.extension[ countyCode ] | string | see [CountyCodes] | 
 | 26 | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| [Decedent]| |address.state | string | [StatesTerritoriesProvincesVS] | 
 | 27 | Decedent's Residence--Country | COUNTRYC| [Decedent]| |address.country | string | [ResidenceCountryVS] | 
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
