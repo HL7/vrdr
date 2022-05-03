@@ -12,8 +12,6 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * code = $loinc#81956-5 "Date+time of death" (exactly)
 * subject 1..1
 * subject only Reference(Decedent)
-* effective[x] 1..1
-* effective[x] only dateTime
 * performer 0..1
 * performer ^short = "Death Pronouncement Performer using USCorePractioner"
 //* performer only Reference(DeathPronouncementPerformer)
