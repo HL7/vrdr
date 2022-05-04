@@ -32,7 +32,7 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * address.city.extension[cityCode].valuePositiveInt = 01234
 * address.district.extension[districtCode].valuePositiveInt  = 321
 * address.country = "US"
-* address.extension[unitnum].valueString = "#1"
+* address.extension[unitnumber].valueString = "#1"
 * address.extension[stnum].valueString = "5590"
 * address.extension[stname].valueString = "Lockwood"
 * address.extension[stdesig].valueString = "Drive"
