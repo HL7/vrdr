@@ -215,7 +215,7 @@ Description: "Activity at Time of Death"
 RuleSet: obscodecomponent(code, valueSet)
 * component contains {code} 0..1
 * component[{code}].code 1..1
-* component[{code}].code = ComponentCS#{code} "{code}" (exactly)
+* component[{code}].code = ComponentCS#{code}  (exactly)
 * component[{code}].value[x] 1..1
 * component[{code}].value[x] only CodeableConcept
 * component[{code}] ^short = "{code}"
@@ -224,7 +224,7 @@ RuleSet: obscodecomponent(code, valueSet)
 RuleSet: primobscodecomponent(code, type)
 * component contains {code} 0..1
 * component[{code}].code 1..1
-* component[{code}].code = ComponentCS#{code} "{code}" (exactly)
+* component[{code}].code = ComponentCS#{code}  (exactly)
 * component[{code}].value[x] 1..1
 * component[{code}].value[x] only {type}
 * component[{code}] ^short = "{code}"

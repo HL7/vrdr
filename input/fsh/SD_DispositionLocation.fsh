@@ -15,3 +15,4 @@ Description: "Disposition Location (USCoreLocation)"
 * insert CityCode
 * insert CountyCode
 * type = LocationTypeCS#disposition
+* type 1..1

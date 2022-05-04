@@ -13,3 +13,4 @@ Description: "Injury Location (USCoreLocation)"
 * insert CityCode
 * insert CountyCode
 * type = LocationTypeCS#injury
+* type 1..1

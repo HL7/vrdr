@@ -7,6 +7,7 @@ Description: "Death Location (USCoreLocation)"
 // * name 1..1
 // * description 1..1
 * type = LocationTypeCS#death
+* type 1..1
 * name ^short = "Name of Death Location"
 * address 1..1
 * address ^short = "Place of Death address"
