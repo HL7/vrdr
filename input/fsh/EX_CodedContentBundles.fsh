@@ -20,7 +20,6 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
 * insert addentry(Observation, SurgeryDate-Example1)
-* insert addentry(Observation, ExaminerContacted-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Observation, InjuryIncident-Example1)
 * insert addentry(Procedure, DeathCertification-Example1)
