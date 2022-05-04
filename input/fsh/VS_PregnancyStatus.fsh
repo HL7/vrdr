@@ -3,8 +3,7 @@ Id: vrdr-pregnancy-status-vs
 Title: "Pregnancy Status"
 Description: "Pregnancy Status based on PHVS_PregnancyStatus_NCHS
 
-Mapping to IJE codes [here](ConceptMap-PregnancyStatusCM.html).
-"
+Mapping to IJE codes [here](ConceptMap-PregnancyStatusCM.html)."
 * insert boilerplate
 * PregnancyStatusCS#1 "Not pregnant within past year"
 * PregnancyStatusCS#2 "Pregnant at time of death"

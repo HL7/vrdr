@@ -3,8 +3,7 @@ Id: vrdr-method-of-disposition-vs
 Title: "Method of Disposition VS"
 Description: "The set of codes used to indicate the method used to dispose of the decedents remains.
 
-Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html).
-"
+Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html)."
 * insert boilerplate
 * insert SNOMEDCopyright
 * $sct#449931000124108 "Entombment"

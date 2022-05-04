@@ -4,8 +4,7 @@ Id: vrdr-place-of-injury-vs
 Title: "Place of Injury VS"
 Description: "Place of Injury from NCHS TRX Format.  THis contains all of the codes from https://loinc.org/LL1051-3/ except for LA14087-3 (Public Institution).
 
-Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html).
-"
+Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."
 * insert LOINCCopyright
 * $loinc#LA14084-0 "Home"
 * $loinc#LA14085-7 "Residential institution	"
