@@ -1,13 +1,3 @@
-### Not Yet
-* [FHIR-33114](https://jira.hl7.org/browse/FHIR-33114) :  Mapping of fields to IJE and DCF at the global and per-profile/extension level. ==> only IJE needed.  At profile level is complete.
-* [FHIR-33115](https://jira.hl7.org/browse/FHIR-33115) :  Document Terminologies
-* [FHIR-33116](https://jira.hl7.org/browse/FHIR-33116) :  Definition and use of Must Support
-* [FHIR-33117](https://jira.hl7.org/browse/FHIR-33117) :  Guidance on missing data
-* [FHIR-34337](https://jira.hl7.org/browse/FHIR-34337) :    Conformance Section Needed (duplicate)
-* [FHIR-34338](https://jira.hl7.org/browse/FHIR-34338) :    Conformance Section Needed (not clear how it differs from 34337) (duplicate)
-* [FHIR-34276](https://jira.hl7.org/browse/FHIR-34276) :    Conformance Section Needed (duplicate)
-* [FHIR-34609](https://jira.hl7.org/browse/FHIR-34609) :    Add COncept Maps for IJE->FHIR code mapping
-
 ### Changes
 (check that these are marked as applied in Jira)
 * [FHIR-26584](https://jira.hl7.org/browse/FHIR-26584) :  Manner of Death Value Set Corrected
@@ -25,13 +15,16 @@
 * [FHIR-32998](https://jira.hl7.org/browse/FHIR-32998) :  Valuesets bound to wrong element.   No valueset now bound.
 * [FHIR-33051](https://jira.hl7.org/browse/FHIR-33051) :  Move from PHINVADs-hosted value sets to locally defined valuesets
 * [FHIR-33113](https://jira.hl7.org/browse/FHIR-33113) :  Delete outdated UML diagrams
-* [FHIR-33114](https://jira.hl7.org/browse/FHIR-33114) :  Changes to BirthRecordIdentifier including binding to jurisdiction, and requiring jurisdiction and year.
+* [FHIR-33114](https://jira.hl7.org/browse/FHIR-33114) :  Mapping of fields to IJE and DCF at the global and per-profile/extension level. ==> only IJE needed.  At profile level is complete.
+* [FHIR-33115](https://jira.hl7.org/browse/FHIR-33115) :  Document Terminologies
+* [FHIR-33116](https://jira.hl7.org/browse/FHIR-33116) :  Definition and use of Must Support
+* [FHIR-33117](https://jira.hl7.org/browse/FHIR-33117) :  Guidance on missing data
 * [FHIR-33149](https://jira.hl7.org/browse/FHIR-33149) :  Avoid PHINVADs terminologies where possible.   All except PHVSDivisionVitalStatisticsCounty, PHVSDecedentBirthplaceCountry, PHVSDecedentResidentCountry
 * [FHIR-33151](https://jira.hl7.org/browse/FHIR-33151) :  avoid patternFixed
 * [FHIR-33152](https://jira.hl7.org/browse/FHIR-33152) :  Defined VS for states, provinces, territories and jurisdictions.
 * [FHIR-33168](https://jira.hl7.org/browse/FHIR-33168) :  Decedent.address.city.extension[citycode] bound to PHVS_CityPlaces_NCHS, address.district.extension[countyCode] bound to PHVS_DivisionVitalStatistics__County (FIPS-6-4 County Codes)
 * [FHIR-33179](https://jira.hl7.org/browse/FHIR-33179) :  Standardize address encodings
-* [FHIR-33193](https://jira.hl7.org/browse/FHIR-33193) :  Same as FHIR-33114
+* [FHIR-33193](https://jira.hl7.org/browse/FHIR-33193) :  Changes to BirthRecordIdentifier including binding to jurisdiction, and requiring jurisdiction and year.
 * [FHIR-33194](https://jira.hl7.org/browse/FHIR-33194) :  difference between BirthRecordIdentifier.component.birthstate and the Decedent.extension.birthPlace.   Where is state a jurisdiction, and where is it a state/province/territory.
 * [FHIR-33204](https://jira.hl7.org/browse/FHIR-33204) :  Document partial date/time
 * [FHIR-33208](https://jira.hl7.org/browse/FHIR-33208) :  Constrain all components of Date-Part-Absent Reason extension to 1..1
@@ -55,8 +48,11 @@
 * [FHIR-33411](https://jira.hl7.org/browse/FHIR-33411) :  Update USCore Dependency
 * [FHIR-33415](https://jira.hl7.org/browse/FHIR-33415) :  Eliminate PHINVADS dependency where possible
 * [FHIR-33424](https://jira.hl7.org/browse/FHIR-33424) :  Fix PHINVADs valueset links
+* [FHIR-34276](https://jira.hl7.org/browse/FHIR-34276) :    Conformance Section Needed (duplicate)
 * [FHIR-33427](https://jira.hl7.org/browse/FHIR-33427) :  Same as FHIR-32873 (cardinality of jurisdiction ID)
 * [FHIR-33428](https://jira.hl7.org/browse/FHIR-33428) :  Same as FHIR-32906 (constrain observation location)
+* [FHIR-34337](https://jira.hl7.org/browse/FHIR-34337) :    Conformance Section Needed (duplicate)
+* [FHIR-34338](https://jira.hl7.org/browse/FHIR-34338) :    Conformance Section Needed (not clear how it differs from 34337) (duplicate)
 * [FHIR-33691](https://jira.hl7.org/browse/FHIR-33491) :  Restrict Decedent.gender to 3 values allowed by IJE
 * [FHIR-33610](https://jira.hl7.org/browse/FHIR-33610) :  Death Certificate structure needs to be specified.   Profile has changed, but no examples.  Can't claim it is done without examples.
 * [FHIR-33696](https://jira.hl7.org/browse/FHIR-33696) :  City code as a supplement to city name.
@@ -95,6 +91,7 @@
 * [FHIR-34432](https://jira.hl7.org/browse/FHIR-34432) :    Usage tables for mapping values in IJE to FHIR
 * [FHIR-34492](https://jira.hl7.org/browse/FHIR-34492) : Delete unnecessary slicing
 * [FHIR-34562](https://jira.hl7.org/browse/FHIR-34562) : 2022 IJE updates - parameters addition.  Needs documentation
+* [FHIR-34609](https://jira.hl7.org/browse/FHIR-34609) :    Add COncept Maps for IJE->FHIR code mapping
 * [FHIR-34992](https://jira.hl7.org/browse/FHIR-34992) :    Cardinality of Decedent Race extension 0..1 (must support flags dealt with later)
 * [FHIR-34993](https://jira.hl7.org/browse/FHIR-34993) :    Cardinality of Decedent Ethnicity extension 0..1 (must support flags dealt with later)
 * [FHIR-35934](https://jira.hl7.org/browse/FHIR-35934) :    Support for custodial state AUXNO in VRDR IG
