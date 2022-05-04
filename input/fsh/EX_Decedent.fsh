@@ -32,6 +32,8 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * address.city.extension[cityCode].valuePositiveInt = 01234
 * address.district.extension[districtCode].valuePositiveInt  = 321
 * address.country = "US"
+* address.extension[stnum].valueString = "5590"
+* address.extension[stnum].valueString = "5590"
 * address.extension[stname].valueString = "Lockwood"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
 * maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0
