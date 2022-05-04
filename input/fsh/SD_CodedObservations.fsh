@@ -81,7 +81,7 @@ Id: vrdr-automated-underlying-cause-of-death
 Title: "Automated Underlying Cause Of Death (Observation)"
 Description: "Automated Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
-* code = $loinc#80358-5 "Cause of death.underlying [Automated]" (exactly)
+* code = $loinc#80358-5
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
 * value[x] from ICD10CausesOfDeathVS
@@ -93,7 +93,7 @@ Id: vrdr-manual-underlying-cause-of-death
 Title: "Manual Underlying Cause Of Death  (Observation)"
 Description: "Manual Underlying Cause Of Death"
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
-* code = $loinc#80359-3 "Cause of death.underlying [Manual]" (exactly)
+* code = $loinc#80359-3
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from ICD10CausesOfDeathVS (required)
@@ -106,7 +106,7 @@ Parent: Observation
 Id: vrdr-record-axis-cause-of-death
 Title: "Record Axis Cause Of Death  (Observation)"
 Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
-* code = $loinc#80357-7 "Cause of death record axis code [Automated]" (exactly)
+* code = $loinc#80357-7
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from ICD10CausesOfDeathVS (required)
@@ -121,13 +121,13 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
     wouldBeUnderlyingCauseOfDeathWithoutPregnancy 0..1
 * component[position] ^short = "Position"
 * component[position].code 1..1
-* component[position].code = ComponentCS#position "Position" (exactly)
+* component[position].code = ComponentCS#position
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
 * component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy] ^short = "Would be Underlying Cause of Death Without Pregnancy"
 * component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].valueBoolean ^short = "Position"
 * component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code 1..1
-* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code = ComponentCS#wouldBeUnderlyingCauseOfDeathWithoutPregnancy "Would be underlying cause of death without pregnancy, if true" (exactly)
+* component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].code = ComponentCS#wouldBeUnderlyingCauseOfDeathWithoutPregnancy
 * component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] 1..1
 * component[wouldBeUnderlyingCauseOfDeathWithoutPregnancy].value[x] only boolean
 
@@ -139,7 +139,7 @@ Id: vrdr-entity-axis-cause-of-death
 Title: "Entity Axis Cause Of Death  (Observation)"
 Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
-* code = $loinc#80356-9 "Cause of death entity axis code [Automated]" (exactly)
+* code = $loinc#80356-9
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
 * value[x] from ICD10CausesOfDeathVS (required)
@@ -154,19 +154,19 @@ Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profil
     position 1..1 and
     eCodeIndicator 0..1
 * component[lineNumber].code 1..1
-* component[lineNumber].code = ComponentCS#lineNumber "lineNumber" (exactly)
+* component[lineNumber].code = ComponentCS#lineNumber
 * component[lineNumber].value[x] 1..1
 * component[lineNumber].value[x] only integer
 * component[lineNumber] ^short = "lineNumber"
 * component[lineNumber].valueInteger ^short = "lineNumber"
 * component[position].code 1..1
-* component[position].code = ComponentCS#position "Position" (exactly)
+* component[position].code = ComponentCS#position
 * component[position].value[x] 1..1
 * component[position].value[x] only integer
 * component[position] ^short = "position"
 * component[position].valueInteger ^short = "Position"
 * component[eCodeIndicator].code 1..1
-* component[eCodeIndicator].code = #eCodeIndicator "eCodeIndicator" (exactly)
+* component[eCodeIndicator].code = #eCodeIndicator
 * component[eCodeIndicator].value[x] 1..1
 * component[eCodeIndicator].value[x] only boolean
 * component[eCodeIndicator] ^short = "Entity Axis Cause of Death order"
@@ -178,7 +178,7 @@ Id: vrdr-place-of-injury
 Title: "Place Of Injury"
 Description: "Place Of Injury  (Observation)"
 * insert RequireMetaProfile(Profile: PlaceOfInjury)
-* code = $loinc#11376-1 "Injury location" (exactly)
+* code = $loinc#11376-1
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from PlaceOfInjuryVS (required)
@@ -206,7 +206,7 @@ Id: vrdr-activity-at-time-of-death
 Title: "Activity at Time of Death  (Observation)"
 Description: "Activity at Time of Death"
 * insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
-* code = $loinc#80626-5 "Activity at time of death [CDC]" (exactly)
+* code = $loinc#80626-5
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from ActivityAtTimeOfDeathVS (required)
@@ -215,7 +215,7 @@ Description: "Activity at Time of Death"
 RuleSet: obscodecomponent(code, valueSet)
 * component contains {code} 0..1
 * component[{code}].code 1..1
-* component[{code}].code = ComponentCS#{code}  (exactly)
+* component[{code}].code = ComponentCS#{code}
 * component[{code}].value[x] 1..1
 * component[{code}].value[x] only CodeableConcept
 * component[{code}] ^short = "{code}"
@@ -224,7 +224,7 @@ RuleSet: obscodecomponent(code, valueSet)
 RuleSet: primobscodecomponent(code, type)
 * component contains {code} 0..1
 * component[{code}].code 1..1
-* component[{code}].code = ComponentCS#{code}  (exactly)
+* component[{code}].code = ComponentCS#{code}
 * component[{code}].value[x] 1..1
 * component[{code}].value[x] only {type}
 * component[{code}] ^short = "{code}"
@@ -235,7 +235,7 @@ Id: vrdr-coded-race-and-ethnicity
 Title: "Coded Race and Ethnicity  (Observation)"
 Description: "Coded (from NCHS) Race and Ethnicity"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
-* code = ObservationsCS#codedraceandethnicity "Coded Race and Ethnicity" (exactly)
+* code = ObservationsCS#codedraceandethnicity
 * value[x] 0..0
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
@@ -266,7 +266,7 @@ Id: vrdr-input-race-and-ethnicity
 Title: "Input Race and Ethnicity  (Observation)"
 Description: "Input (from EDRS) Race and Ethnicity"
 * insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
-* code = ObservationsCS#inputraceandethnicity "Input Race and Ethnicity" (exactly)
+* code = ObservationsCS#inputraceandethnicity
 * value[x] 0..0
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"

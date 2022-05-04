@@ -10,4 +10,4 @@ Usage: #definition
 * insert MapConcept( #4,  "Not pregnant\, but pregnant 43 days to 1 year before death",#4, "Not pregnant\, but pregnant 43 days to 1 year before death")
 * insert MapConcept( #9,  "Unknown if pregnant within the past year",#9, "Unknown if pregnant within the past year")
 * insert AddGroup("None",$v3-NullFlavor)
-* insert MapConcept( #8 ,  "Not Applicable ",#NA , "Not Applicable")
+* insert MapConcept( #8 ,  "Not Applicable",#NA , "Not Applicable")

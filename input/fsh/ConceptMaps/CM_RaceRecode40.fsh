@@ -6,7 +6,7 @@ Usage: #definition
 * insert AddGroup("MRE",Canonical(RaceRecode40CS))
 * insert MapConcept(#01, "White", #01,  "White")
 * insert MapConcept(#02, "Black", #02,  "Black")
-* insert MapConcept(#03, "American Indian or Alaskan Native - AIAN", #03,  "American Indian or Alaskan Native -AIAN ")
+* insert MapConcept(#03, "American Indian or Alaskan Native - AIAN", #03,  "American Indian or Alaskan Native -AIAN")
 * insert MapConcept(#04, "Asian Indian", #04,  "Asian Indian")
 * insert MapConcept(#05, "Chinese", #05,  "Chinese")
 * insert MapConcept(#06, "Filipino", #06,  "Filipino")
