@@ -118,8 +118,8 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[Samoan].valueBoolean = false
 * component[OtherPacificIslander].valueBoolean = false
 * component[OtherRace].valueBoolean = false
-* component[FirstOtherAsianCode] = "Malaysian"
-* component[FirstAmericanIndianOrAlaskaNativeLiteral] = "Arikara"
+* component[FirstOtherAsianLiteral].valueString = "Malaysian"
+* component[FirstAmericanIndianOrAlaskaNativeLiteral].valueString = "Arikara"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
