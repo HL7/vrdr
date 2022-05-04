@@ -1,8 +1,8 @@
 Profile: CauseOfDeathCodedContentBundle
 Parent: Bundle
 Id: vrdr-cause-of-death-coded-content-bundle
-Title: "Cause of Death Coded Content Bundle (Bundle)"
-Description: "A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format."
+Title: "Cause of Death Coded Content Bundle"
+Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format."
 * insert RequireMetaProfile(CauseOfDeathCodedContentBundle)
 * identifier ^short = "Death Certificate Number"
 * identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros)."
@@ -42,8 +42,8 @@ Description: "A bundle containing instances of the resources comprising cause of
 Profile: DemographicCodedContentBundle
 Parent: Bundle
 Id: vrdr-demographic-coded-content-bundle
-Title: "Demographic Coded Content Bundle (Bundle)"
-Description: "A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content. This bundle is information-content equivalent to the traditional NCHS MRE format."
+Title: "Demographic Coded Content Bundle"
+Description: "Demographic Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content. This bundle is information-content equivalent to the traditional NCHS MRE format."
 * insert RequireMetaProfile(CodedContentDocument)
 * identifier ^short = "Death Certificate Number"
 * identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros)."

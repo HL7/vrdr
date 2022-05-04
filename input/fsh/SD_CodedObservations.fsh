@@ -75,8 +75,8 @@ RuleSet: NCHSObservationCommon
 Profile: AutomatedUnderlyingCauseOfDeath
 Parent: Observation
 Id: vrdr-automated-underlying-cause-of-death
-Title: "Automated Underlying Cause Of Death (Observation)"
-Description: "Automated Underlying Cause Of Death"
+Title: "Automated Underlying Cause Of Death"
+Description: "Automated Underlying Cause Of Death (Observation)"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
 * code = $loinc#80358-5
 * value[x] 1..1
@@ -87,8 +87,8 @@ Description: "Automated Underlying Cause Of Death"
 Profile: ManualUnderlyingCauseOfDeath
 Parent: Observation
 Id: vrdr-manual-underlying-cause-of-death
-Title: "Manual Underlying Cause Of Death  (Observation)"
-Description: "Manual Underlying Cause Of Death"
+Title: "Manual Underlying Cause Of Death"
+Description: "Manual Underlying Cause Of Death (Observation)"
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
 * code = $loinc#80359-3
 * value[x] 1..1
@@ -101,8 +101,8 @@ Description: "Manual Underlying Cause Of Death"
 Profile: RecordAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-record-axis-cause-of-death
-Title: "Record Axis Cause Of Death  (Observation)"
-Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
+Title: "Record Axis Cause Of Death"
+Description: "Record Axis Cause Of Death (Observation): Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
 * code = $loinc#80357-7
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
@@ -133,8 +133,8 @@ Description: "Record Axis Cause Of Death : Up to 20 of instances of this profile
 Profile: EntityAxisCauseOfDeath
 Parent: Observation
 Id: vrdr-entity-axis-cause-of-death
-Title: "Entity Axis Cause Of Death  (Observation)"
-Description: "Entity Axis Cause Of Death:   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
+Title: "Entity Axis Cause Of Death"
+Description: "Entity Axis Cause Of Death (Observation):   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9
 * value[x] 1..1
@@ -199,8 +199,8 @@ Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."
 Profile: ActivityAtTimeOfDeath
 Parent: Observation
 Id: vrdr-activity-at-time-of-death
-Title: "Activity at Time of Death  (Observation)"
-Description: "Activity at Time of Death"
+Title: "Activity at Time of Death"
+Description: "Activity at Time of Death (Observation)"
 * insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
 * code = $loinc#80626-5
 * value[x] 1..1
@@ -228,8 +228,8 @@ RuleSet: primobscodecomponent(code, type)
 Profile: CodedRaceAndEthnicity
 Parent: Observation
 Id: vrdr-coded-race-and-ethnicity
-Title: "Coded Race and Ethnicity  (Observation)"
-Description: "Coded (from NCHS) Race and Ethnicity"
+Title: "Coded Race and Ethnicity"
+Description: "Coded (from NCHS) Race and Ethnicity (Observation)"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
 * code = ObservationsCS#codedraceandethnicity
 * value[x] 0..0
@@ -259,8 +259,8 @@ Description: "Coded (from NCHS) Race and Ethnicity"
 Profile: InputRaceAndEthnicity
 Parent: Observation
 Id: vrdr-input-race-and-ethnicity
-Title: "Input Race and Ethnicity  (Observation)"
-Description: "Input (from EDRS) Race and Ethnicity"
+Title: "Input Race and Ethnicity"
+Description: "Input (from EDRS) Race and Ethnicity (Observation)"
 * insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
 * code = ObservationsCS#inputraceandethnicity
 * value[x] 0..0
