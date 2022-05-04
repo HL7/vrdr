@@ -10,7 +10,6 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Observation, ActivityAtTimeOfDeath-Example1)
-* insert addentry(Observation, CodedRaceAndEthnicity-Example1)
 * insert addentry(Observation, ManualUnderlyingCauseOfDeath-Example1)
 * insert addentry(Observation, AutomatedUnderlyingCauseOfDeath-Example1)
 * insert addentry(Observation, RecordAxisCauseOfDeath-Example1)
