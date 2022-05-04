@@ -90,8 +90,10 @@ Description: "CodedRaceAndEthnicity-Example1"
 * subject.display = "NCHS generated"
 * component[FirstEditedCode].valueCodeableConcept = RaceCodeCS#101 "White"
 * component[SecondEditedCode].valueCodeableConcept = RaceCodeCS#122 "Israeli"
-* component[HispanicCode].valueCodeableConcept = HispanicOriginCS#233 "Chilean"
+* component[FirstAmericanIndianCode].valueCodeableConcept = RaceCodeCS#A31 "Arikara"
 * component[RaceRecode40].valueCodeableConcept = RaceRecode40CS#20 "AIAN and Asian"
+* component[HispanicCode].valueCodeableConcept = HispanicOriginCS#233 "Chilean"
+
 
 Instance: InputRaceAndEthnicity-Example1
 InstanceOf: InputRaceAndEthnicity
@@ -103,19 +105,21 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[White].valueBoolean = true
 * component[BlackOrAfricanAmerican].valueBoolean = false
 * component[BlackOrAfricanAmerican].valueBoolean = false
-* component[AmericanIndianOrAlaskaNative].valueBoolean = false
+* component[AmericanIndianOrAlaskaNative].valueBoolean = true
 * component[AsianIndian].valueBoolean = false
 * component[Chinese].valueBoolean = false
 * component[Filipino].valueBoolean = false
 * component[Japanese].valueBoolean = false
 * component[Korean].valueBoolean = false
 * component[Vietnamese].valueBoolean = false
-* component[OtherAsian].valueBoolean = false
+* component[OtherAsian].valueBoolean = true
 * component[NativeHawaiian].valueBoolean = false
 * component[GuamanianOrChamorro].valueBoolean = false
 * component[Samoan].valueBoolean = false
 * component[OtherPacificIslander].valueBoolean = false
 * component[OtherRace].valueBoolean = false
+* component[FirstOtherAsianCode] = "Malaysian"
+* component[FirstAmericanIndianOrAlaskaNativeLiteral] = "Arikara"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
