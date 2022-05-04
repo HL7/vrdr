@@ -3,7 +3,7 @@ Instance: TransaxConversionCM
 InstanceOf: ConceptMap
 // Id: vrdr-transax-conversion-cm
 Usage: #definition
-* insert ConceptMapIntro(Transax Conversion, TransaxConversionVS)
+* insert ConceptMapIntro(TransaxConversion, TransaxConversionVS)
 * insert AddGroup("TRX",Canonical(SystemRejectCS))
 * insert MapConcept(#3, "Conversion using non-ambivalent table entries", #3,  "Conversion using non-ambivalent table entries")
 * insert MapConcept(#4, "Conversion using ambivalent table entries", #4,  "Conversion using ambivalent table entries")

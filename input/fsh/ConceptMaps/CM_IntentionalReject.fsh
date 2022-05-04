@@ -3,7 +3,7 @@ Instance: IntentionalRejectCM
 InstanceOf: ConceptMap
 // Id: vrdr-intentional-reject-cm
 Usage: #definition
-* insert ConceptMapIntro(Intentional Reject, IntentionalRejectVS)
+* insert ConceptMapIntro(IntentionalReject, IntentionalRejectVS)
 * insert AddGroup("TRX",Canonical(IntentionalRejectCS))
 * insert MapConcept(#1, "Reject1", #1,  "Reject1")
 * insert MapConcept(#2, "Reject2", #2,  "Reject2")

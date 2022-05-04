@@ -2,7 +2,7 @@ Instance: MethodOfDispositionCM
 InstanceOf: ConceptMap
 // Id: vrdr-method-of-disposition-cm
 Usage: #definition
-* insert ConceptMapIntro(Method of Disposition, MethodOfDispositionVS)
+* insert ConceptMapIntro(MethodOfDisposition, MethodOfDispositionVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #B,  "Burial",#449971000124106, "Burial")
 * insert MapConcept( #C,  "Cremation",#449961000124104, "Cremation")

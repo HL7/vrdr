@@ -2,7 +2,7 @@ Instance: CertifierTypesCM
 // Id: vrdr-certifier-types-cm
 InstanceOf: ConceptMap
 Usage: #definition
-* insert ConceptMapIntro(Certifier Types, CertifierTypesVS)
+* insert ConceptMapIntro(CertifierTypes, CertifierTypesVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #D ,  "Certifying Physician",#434651000124107 , "Certifying physician.")
 * insert MapConcept( #P ,  "Pronouncing and Certifying Physician",#434641000124105 , "Pronouncing & Certifying physician.")

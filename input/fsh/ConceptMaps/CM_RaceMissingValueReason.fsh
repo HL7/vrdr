@@ -2,7 +2,7 @@ Instance: RaceMissingValueReasonCM
 InstanceOf: ConceptMap
 // Id: vrdr-race-missing-value-reason-cm
 Usage: #definition
-* insert ConceptMapIntro(Race Missing Value Reason, RaceMissingValueReasonVS)
+* insert ConceptMapIntro(RaceMissingValueReason, RaceMissingValueReasonVS)
 * insert AddGroup("IJE",Canonical(MissingValueReasonCS))
 * insert MapConcept( #R,  "Refused",#R, "Refused")
 * insert MapConcept( #S,  "Sought\, but unknown",#S, "Sought\, but unknown")

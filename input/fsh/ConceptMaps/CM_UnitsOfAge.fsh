@@ -2,7 +2,7 @@ Instance: UnitsOfAgeCM
 InstanceOf: ConceptMap
 // Id: vrdr-units-of-age-cm
 Usage: #definition
-* insert ConceptMapIntro(Units of Age, UnitsOfAgeVS)
+* insert ConceptMapIntro(UnitsOfAge, UnitsOfAgeVS)
 * insert AddGroup("IJE",$UCUM)
 * insert MapConcept( #1,  "Years",#a, "Years")
 * insert MapConcept( #2,  "Months",#mo, "Months")

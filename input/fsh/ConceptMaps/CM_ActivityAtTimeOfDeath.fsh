@@ -1,9 +1,8 @@
 
 Instance: ActivityAtTimeOfDeathCM
 InstanceOf: ConceptMap
-// Id: vrdr-activity-at-time-of-death-cm
 Description: "Concept Map for ActivityAtTimeOfDeath Value Set"
-* insert ConceptMapIntro(Activity at Time of Death, ActivityAtTimeOfDeathVS)
+* insert ConceptMapIntro(ActivityAtTimeOfDeath, ActivityAtTimeOfDeathVS)
 * insert AddGroup("TRX",Canonical(ActivityAtTimeOfDeathCS))
 * insert MapConcept(#0, "While engaged in sports activity", #0,  "While engaged in sports activity")
 * insert MapConcept(#1, "While engaged in leisure activities.", #1,  "While engaged in leisure activities.")

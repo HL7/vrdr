@@ -1,5 +1,5 @@
 RuleSet: ConceptMapIntro(name, vsname)
-* name = "{name} Concept Map"
+* name = "{name}"
 * title = "{name} Concept Map"
 * status = #draft
 * contact.telecom.system = #url
