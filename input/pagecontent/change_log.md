@@ -112,7 +112,7 @@
         * USCorePatient.extension[ birthSex] and USCorePatient.gender would not be profiled in decedent.
 * [FHIR-36086](https://jira.hl7.org/browse/FHIR-36086) :   Add an observation with code = [80992-1 Date and time of surgery](https://loinc.org/80992-1/) to represent SUR_YR, SUR_MO, SUR_DY, and add it to the DeathCertificateDocument.
 * [FHIR-36087](https://jira.hl7.org/browse/FHIR-36087): Address components for Decedent's residence (STNUM_R, PREDIR_R, STNAME_R, STDESIG_R, POSTDIR_R, UNITNUM_R) as required for 2022
-* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  ALternate resolution -- Support for SPOUSELV
+* [FHIR-33721](https://jira.hl7.org/browse/FHIR-33721) :  Alternate resolution -- Support for SPOUSELV
     * propose adding an extension to decedent in lieu of an observation
 * [FHIR-36068](https://jira.hl7.org/browse/FHIR-36068) :  Label for AgeAtDeath.effectiveTime ....incorrect
 * [FHIR-36094](https://jira.hl7.org/browse/FHIR-36094) : Get rid of 4 profiles and replace with narrative explanation.
