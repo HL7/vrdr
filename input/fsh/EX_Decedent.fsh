@@ -21,9 +21,9 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * gender = #female
 // * birthDate = "1978-03-12"
 //* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
-* birthDate.extension[partialDate].extension[day].valueInteger = 10
-* birthDate.extension[partialDate].extension[month].valueInteger = 11
-* birthDate.extension[partialDate].extension[year].valueInteger = 2004
+* birthDate.extension[partialDate].extension[day].valueUnsignedInt = 10
+* birthDate.extension[partialDate].extension[month].valueUnsignedInt = 11
+* birthDate.extension[partialDate].extension[year].valueUnsignedInt = 2004
 * address.extension[WithinCityLimitsIndicator].valueCoding = $v2-0136#Y "Yes"
 * address.line = "5590 E Lockwood Drive SW, #1"
 * address.city = "Queens"
@@ -62,9 +62,9 @@ Description: "Decedent-Example1"
 * gender = #female
 // * birthDate = "1978-03-12"
 //* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
-* birthDate.extension[partialDate].extension[day].valueInteger = 10
-* birthDate.extension[partialDate].extension[month].valueInteger = 11
-* birthDate.extension[partialDate].extension[year].valueInteger = 2004
+* birthDate.extension[partialDate].extension[day].valueUnsignedInt = 10
+* birthDate.extension[partialDate].extension[month].valueUnsignedInt = 11
+* birthDate.extension[partialDate].extension[year].valueUnsignedInt = 2004
 * address.extension[WithinCityLimitsIndicator].valueCoding = $v2-0136#Y "Yes"
 * address.line = "5590 Lockwood Drive"
 * address.city = "Danville"
