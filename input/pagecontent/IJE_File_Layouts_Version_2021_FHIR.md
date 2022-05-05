@@ -40,7 +40,6 @@
 | 121 | Auxiliary State file number | AUXNO2| [DeathCertificate]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
-| NA | Document Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) |  | 
 | 1 | Date of Death--Year | DOD_YR| [DeathDate]| |value | dateTime | Required for processing | 
 | 31 | Place of Death | DPLACE| [DeathDate]| |component[placeOfDeath].value | codeable | [PlaceOfDeathVS] | 
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 

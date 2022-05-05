@@ -10,6 +10,5 @@ In addition to  the [DeathCertificate] Composition it includes the following con
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| NA | Document Identifier | *NO IJE MAPPING*| |identifier.value | string(12) |  | 
 {: .grid }
 {% include markdown-link-references.md %}
