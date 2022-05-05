@@ -31,15 +31,16 @@
 | 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string | - | 
+| 3 | Certificate Number | FILENO| [DeathCertificate]| |identifier.value | string(6) | - | 
+| 5 | Auxiliary State file number | AUXNO| [DeathCertificate]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
 | 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
 | 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime | - | 
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | - | 
+| 121 | Auxiliary State file number | AUXNO2| [DeathCertificate]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
-| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
-| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
+| NA | Document Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) |  | 
 | 1 | Date of Death--Year | DOD_YR| [DeathDate]| |value | dateTime | Required for processing | 
 | 31 | Place of Death | DPLACE| [DeathDate]| |component[placeOfDeath].value | codeable | [PlaceOfDeathVS] | 
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
