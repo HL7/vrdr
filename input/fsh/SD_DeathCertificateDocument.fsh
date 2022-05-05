@@ -4,7 +4,7 @@ Id: vrdr-death-certificate-document
 Title: "Death Certificate Document"
 Description: "The resources comprising the death certificate composition (Bundle/Document)."
 * insert RequireMetaProfile(DeathCertificateDocument)
-* identifier ^short = "Death Certificate Identifier"
+* identifier ^short = "Document Identifier (YYYYJJNNNNNN)"
 * identifier ^definition = "A unique value used by the NCHS to identify a death record. The NCHS uniquely identifies death records by combining three concepts: the year of death (as a four digit number), the jurisdiction of death (as a two character jurisdiction identifier), and the death certificate number assigned by the jurisdiction (a number with up to six digits, left padded with zeros). "
 * identifier.value ^maxLength = 12
 * type 1..1
