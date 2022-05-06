@@ -58,7 +58,6 @@ Title: "System Reject ValueSet"
 Description: "System Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html)."
-* codes from system SystemRejectCS
 * SystemRejectCS#0 "Not Rejected"
 * SystemRejectCS#1 "MICAR Reject Dictionary Match"
 * SystemRejectCS#2 "ACME Reject"
@@ -326,7 +325,6 @@ Description: "NCHS HispanicOrigin Value Set.
 
 Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 //* include codes from system HispanicOriginCS
-* $v3-NullFlavor#UNK "unknown"
 * HispanicOriginCS#100 "Not Hispanic"
 * HispanicOriginCS#200 "Spaniard"
 * HispanicOriginCS#201 "Andalusian"
@@ -340,7 +338,7 @@ Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 * HispanicOriginCS#209 "Spanish Basque"
 // 210 -219 Mexican
 * HispanicOriginCS#210 "Mexican"
-* HispanicOriginCS#211 "Mexican 2"
+* HispanicOriginCS#211 "Mexican-2"
 * HispanicOriginCS#212 "Mexican American"
 * HispanicOriginCS#213 "Mexicano"
 * HispanicOriginCS#214 "Chicano"
@@ -379,10 +377,10 @@ Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 * HispanicOriginCS#252 "Latino"
 // 260 -269 Puerto Rican
 * HispanicOriginCS#260 "Puerto Rican"
-* HispanicOriginCS#261 "Puerto Rican 2"
+* HispanicOriginCS#261 "Puerto Rican-2"
 // 270 -274 Cuban
 * HispanicOriginCS#270 "Cuban"
-* HispanicOriginCS#271 "Cuban 2"
+* HispanicOriginCS#271 "Cuban-2"
 // 275 -279 Dominican
 * HispanicOriginCS#275 "Dominican"
 // 280 -299 Other Spanish/Hispanic
@@ -397,7 +395,7 @@ Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 * HispanicOriginCS#288 "Meso American Indian"
 * HispanicOriginCS#289 "Mestizo"
 * HispanicOriginCS#291 "Multiple Hispanic Responses"
-* HispanicOriginCS#299 "Other Spanish"
+* HispanicOriginCS#299 "Other Spanish 2"
 // 996 -999 Uncodable, deferred, unknown
 * HispanicOriginCS#996 "Uncodable"
 * HispanicOriginCS#997 "Deferred"
@@ -411,7 +409,6 @@ Description: "NCHS Race Codes.
 
 Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 //* include codes from system RaceCodeCS
-* $v3-NullFlavor#UNK "unknown"
 * RaceCodeCS#100 "White Checkbox"
 * RaceCodeCS#101 "White"
 * RaceCodeCS#102 "Arab"
@@ -506,7 +503,7 @@ Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 * RaceCodeCS#451 "Vietnamese"
 // ASIAN (400-499) Other Asian
 * RaceCodeCS#461 "Amerasian"
-* RaceCodeCS#462 "Asian"
+* RaceCodeCS#462 "Asian2"
 * RaceCodeCS#463 "Asiatic"
 * RaceCodeCS#464 "Eurasian"
 * RaceCodeCS#465 "Mongolian"
@@ -1578,7 +1575,7 @@ Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 * RaceCodeCS#N23 "Wiseman"
 * RaceCodeCS#N24 "Kenaitze Indian Tribe"
 // ALASKA INDIAN TRIBES (M44-N66) Tlingit-Haida
-* RaceCodeCS#N27 "TLINGIT-HAIDA"
+* RaceCodeCS#N27 "TLINGIT HAIDA"
 * RaceCodeCS#N28 "Angoon Community Association"
 * RaceCodeCS#N29 "Central Council of the Tlingit and Haida Indian Tribes"
 * RaceCodeCS#N30 "Chilkat Indian Village"
@@ -1846,10 +1843,10 @@ Mapping to IJE codes [here](ConceptMap-RaceRecode40CM.html)."
 * RaceRecode40CS#18 "AIAN and NHOPI"
 * RaceRecode40CS#19 "NHOPI and White"
 * RaceRecode40CS#20 "AIAN and Asian"
-* RaceRecode40CS#21 "AIAN and NHOPI 2"
+* RaceRecode40CS#21 "AIAN and NHOPI-2"
 * RaceRecode40CS#22 "Asian and White"
 * RaceRecode40CS#23 "Asian and NHOPI"
-* RaceRecode40CS#24 "NHOPI and White 2"
+* RaceRecode40CS#24 "NHOPI and White-2"
 * RaceRecode40CS#25 "Black, AIAN and White"
 * RaceRecode40CS#26 "Black, AIAN and Asian"
 * RaceRecode40CS#27 "Black, AIAN and NHOPI"
