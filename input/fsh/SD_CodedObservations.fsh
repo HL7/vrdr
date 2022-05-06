@@ -45,7 +45,12 @@ Title: "Intentional Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."
 Description: "Intentional Reject ValueSet"
-* codes from system IntentionalRejectCS
+* IntentionalRejectCS#1 "Reject1"
+* IntentionalRejectCS#2 "Reject2"
+* IntentionalRejectCS#3 "Reject3"
+* IntentionalRejectCS#4 "Reject4"
+* IntentionalRejectCS#5 "Reject5"
+* IntentionalRejectCS#9 "Reject9"
 
 ValueSet: SystemRejectVS
 Id: vrdr-system-reject-vs
@@ -54,6 +59,11 @@ Description: "System Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html)."
 * codes from system SystemRejectCS
+* SystemRejectCS#0 "Not Rejected"
+* SystemRejectCS#1 "MICAR Reject Dictionary Match"
+* SystemRejectCS#2 "ACME Reject"
+* SystemRejectCS#3 "MICAR Reject Rule Application"
+* SystemRejectCS#4 "Record Reviewed"
 
 
 ValueSet: TransaxConversionVS
@@ -62,7 +72,10 @@ Title: "Transax Conversion ValueSet"
 Description: "Transax Conversion ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html)."
-* codes from system TransaxConversionCS
+* TransaxConversionCS#3 "Conversion using non-ambivalent table entries"
+* TransaxConversionCS#4 "Conversion using ambivalent table entries"
+* TransaxConversionCS#5 "Duplicate entity-axis codes deleted; no other action involved"
+* TransaxConversionCS#6 "Artificial code conversion; no other action"
 
 
 RuleSet: NCHSObservationCommon
