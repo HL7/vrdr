@@ -8,9 +8,7 @@ Usage: #example
 Description: "DeathCertificateDocument-Example1"
 * insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* identifier.value = "000182"
-* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
-* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
+* identifier.value = "2020NY000182"
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Bundle, DeathCertificate-Example1)
@@ -64,7 +62,9 @@ Description: "DeathCertificate-Example1"
 *  extension[filingFormat].valueCodeableConcept = #electronic
 *  extension[replaceStatus].valueCodeableConcept = #original
 *  extension[stateSpecificField].valueString = "State Specific Content"
-
+* identifier.value = "000182"
+* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
+* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
 *  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
@@ -122,6 +122,9 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  attester.time = "2020-11-14T16:39:40-05:00"
 *  attester.party = Reference(Certifier-Example1)
 *  event.detail = Reference(DeathCertification-Example1)
+* identifier.value = "000182"
+* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
+* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
 *  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
@@ -180,9 +183,7 @@ Usage: #example
 Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* identifier.value = "000182"
-* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
-* identifier.extension[auxiliaryStateIdentifier2].valueString = "100000000001"
+* identifier.value = "2020YC000182"
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Bundle, DeathCertificate-Example2)

@@ -62,10 +62,13 @@ The profile includes:
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
+| 3 | Certificate Number | FILENO| |identifier.value | string(6) | - | 
+| 5 | Auxiliary State file number | AUXNO| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
 | 6 | Source flag: paper/electronic | MFILED| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
 | 96 | Date of Registration--Year | DOR_YR| |date | dateTime | - | 
 | 97 | Date of Registration--Month | DOR_MO| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| |date | dateTime | - | 
+| 121 | Auxiliary State file number | AUXNO2| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 122 | State Specific Data  | STATESP| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record -- suggested codes | REPLACE| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 {: .grid }
