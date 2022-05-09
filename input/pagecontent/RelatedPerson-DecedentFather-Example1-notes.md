@@ -4,11 +4,11 @@ InstanceOf: DecedentFather
 Title: "DecedentFather-Example1"
 Description: "DecedentFather-Example1"
 Usage: #example
-* patient = Reference(Decedent-Example1)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#FTH "father"
-* name.use = #official
+* patient.reference = "Patient/Decedent-Example1"
 * name.text = "Decedent Dad"
-* name.family = "Smith"
+* name.use = #official
 * name.given = "John"
+* name.family = "Smith"
 * name.suffix = "Sr"
 ```

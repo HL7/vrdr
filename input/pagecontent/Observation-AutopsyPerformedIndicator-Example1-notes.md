@@ -6,8 +6,8 @@ Description: "AutopsyPerformedIndicator-Example1"
 Usage: #example
 * status = #final
 * code = http://loinc.org#85699-7 "Autopsy was performed"
-* subject = Reference(Decedent-Example1)
-* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 * component.code = http://loinc.org#69436-4 "Autopsy results available"
 * component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
+* subject.reference = "Patient/Decedent-Example1"
+* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 ```
