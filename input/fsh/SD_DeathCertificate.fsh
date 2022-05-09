@@ -37,12 +37,6 @@ Description: "The body of the death certificate document (Composition)."
     FilingFormat named filingFormat 0..1 and
     ReplaceStatus named replaceStatus 0..1 and
     StateSpecificField named stateSpecificField 0..1
-* identifier ^short = "Death Certificate Number"
-* identifier 1..1
-* identifier.value ^maxLength = 6
-* identifier.extension contains
-    AuxiliaryStateIdentifier1 named auxiliaryStateIdentifier1 0..1 and
-    AuxiliaryStateIdentifier2 named auxiliaryStateIdentifier2 0..1
 * subject 1..1
 * subject only Reference(Decedent)
 * date 1..1
