@@ -41,10 +41,10 @@ Description:   "Coding Status Values contains various status flags that result f
 
 ValueSet: IntentionalRejectVS
 Id: vrdr-intentional-reject-vs
-Title: "Intentional Reject ValueSet.
+Title: "Intentional Reject ValueSet"
+Description: "Intentional Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."
-Description: "Intentional Reject ValueSet"
 * IntentionalRejectCS#1 "Reject1"
 * IntentionalRejectCS#2 "Reject2"
 * IntentionalRejectCS#3 "Reject3"
