@@ -245,7 +245,7 @@ profiles["CodingStatusValues"] = {
   :desc => "",
 }
 profiles["CauseOfDeathCodedContentBundle"] = {
-  :out => "StructureDefinition-vrdr-cause-of-death-coded-content-bundle-intro.md",
+  :out => "StructureDefinition-vrdr-cause-of-death-coded-bundle-intro.md",
   :desc =>"This bundle is information-content equivalent to the traditional NCHS TRX format.
 
   This bundle contains:
@@ -269,7 +269,7 @@ profiles["CauseOfDeathCodedContentBundle"] = {
      ",
   }
   profiles["DemographicCodedContentBundle"] = {
-  :out => "StructureDefinition-vrdr-demographic-coded-content-bundle-intro.md",
+  :out => "StructureDefinition-vrdr-demographic-coded-bundle-intro.md",
   :desc =>"
   This bundle is information-content equivalent to the traditional NCHS MRE format.
 

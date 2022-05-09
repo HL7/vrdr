@@ -1,6 +1,6 @@
 Profile: CauseOfDeathCodedContentBundle
 Parent: Bundle
-Id: vrdr-cause-of-death-coded-content-bundle
+Id: vrdr-cause-of-death-coded-bundle
 Title: "Cause of Death Coded Content Bundle"
 Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format."
 * insert RequireMetaProfile(CauseOfDeathCodedContentBundle)
@@ -36,7 +36,7 @@ Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing 
 
 Profile: DemographicCodedContentBundle
 Parent: Bundle
-Id: vrdr-demographic-coded-content-bundle
+Id: vrdr-demographic-coded-bundle
 Title: "Demographic Coded Content Bundle"
 Description: "Demographic Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content. This bundle is information-content equivalent to the traditional NCHS MRE format."
 * insert RequireMetaProfile(CodedContentDocument)
