@@ -31,16 +31,16 @@
 | 232 | State, U.S. Territory or Canadian Province of Certifier - code | CERTSTATECD| [Certifier]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 233 | State, U.S. Territory or Canadian Province of Certifier - literal | CERTSTATE| [Certifier]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 234 | Certifier - Zip | CERTZIP| [Certifier]| x|address.postalCode | string | - | 
-| 3 | Certificate Number | FILENO| [DeathCertificate]| |identifier.value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [DeathCertificate]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
 | 6 | Source flag: paper/electronic | MFILED| [DeathCertificate]| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
 | 96 | Date of Registration--Year | DOR_YR| [DeathCertificate]| |date | dateTime | - | 
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | - | 
-| 121 | Auxiliary State file number | AUXNO2| [DeathCertificate]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
-| NA | Document Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
+| NA | Death Record Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
+| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.extension[ certificateNumber].value | string(6) | - | 
+| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 1 | Date of Death--Year | DOD_YR| [DeathDate]| |value | dateTime | Required for processing | 
 | 31 | Place of Death | DPLACE| [DeathDate]| |component[placeOfDeath].value | codeable | [PlaceOfDeathVS] | 
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
@@ -240,5 +240,13 @@
 | 101 | Intentional Reject  | INT_REJ| [CodingStatusValues]| |parameter[intentionalReject].value | codeable | [IntentionalRejectVS] | 
 | 102 | Acme System Reject Codes | SYS_REJ| [CodingStatusValues]| |parameter[acmeSystemReject].value  | codeable | [ACMESystemRejectVS] | 
 | 107 | Transax conversion flag: Computer Generated | TRX_FLG| [CodingStatusValues]| |parameter[transaxConversion].value  | codeable | [TransaxConversionVS] | 
+| NA | Death Record Identifier | *NO IJE MAPPING*| [CauseOfDeathCodedContentBundle]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
+| 3 | Certificate Number | FILENO| [CauseOfDeathCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | - | 
+| 5 | Auxiliary State file number | AUXNO| [CauseOfDeathCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 121 | Auxiliary State file number | AUXNO2| [CauseOfDeathCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
+| NA | Death Record Identifier | *NO IJE MAPPING*| [DemographicCodedContentBundle]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
+| 3 | Certificate Number | FILENO| [DemographicCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | - | 
+| 5 | Auxiliary State file number | AUXNO| [DemographicCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 121 | Auxiliary State file number | AUXNO2| [DemographicCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 {: .grid }
 {% include markdown-link-references.md %}

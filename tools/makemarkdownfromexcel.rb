@@ -245,23 +245,8 @@ profiles["CodingStatusValues"] = {
   :desc => "",
 }
 profiles["CauseOfDeathCodedContentBundle"] = {
-  :out => "StructureDefinition-vrdr-cause-of-deathcoding-content-bundle-intro.md",
-  :desc =>" Bundle containing  the following coded content:
-  * Coded Content
-    * [ActivityAtTimeOfDeath]
-    * [AutomatedUnderlyingCauseOfDeath]
-    * [ManualUnderlyingCauseOfDeath]
-    * [CodedRaceAndEthnicity]
-    * [EntityAxisCauseOfDeath]
-    * [RecordAxisCauseOfDeath]
-    * [PlaceOfInjury]
-    * [CodingStatusValues]
-    ",
-  }
-  profiles["DemographicCodedContentBundle"] = {
-  :out => "StructureDefinition-vrdr-demographic-coding-content-bundle-intro.md",
-  :desc =>"
-  This bundle is information-content equivalent to the traditional NCHS TRX format.
+  :out => "StructureDefinition-vrdr-cause-of-death-coding-content-bundle-intro.md",
+  :desc =>"This bundle is information-content equivalent to the traditional NCHS TRX format.
 
   This bundle contains:
   * Coded Content:
@@ -281,6 +266,18 @@ profiles["CauseOfDeathCodedContentBundle"] = {
     * Tobacco Use Contributed to Death - [TobaccoUseContributedToDeath]
     * Decedent Pregnancy Status - [DecedentPregnancyStatus]
     * Surgery Date - [SurgeryDate]
+     ",
+  }
+  profiles["DemographicCodedContentBundle"] = {
+  :out => "StructureDefinition-vrdr-demographic-coding-content-bundle-intro.md",
+  :desc =>"
+  This bundle is information-content equivalent to the traditional NCHS MRE format.
+
+  This bundle contains:
+  * Coded Content:
+    * Coded Race and Ethnicity [CodedRaceAndEthnicity]
+  * Input Content:
+    * Input Race and Ethnicity - [InputRaceAndEthnicity]
      ",
   }
 
