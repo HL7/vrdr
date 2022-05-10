@@ -208,10 +208,10 @@
 | 125 | Surgery Date--year | SUR_YR| [SurgeryDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 111 | Did Tobacco Use Contribute to Death? | TOBAC| [TobaccoUseContributedToDeath]| |value | codeable | [ContributoryTobaccoUseVS] | 
 | 120 | Activity at time of death (computer generated) | INACT| [ActivityAtTimeOfDeath]| |value | codeable | [ActivityAtTimeOfDeathVS] | 
-| 105 | ACME Underlying Cause | ACME_UC| [AutomatedUnderlyingCauseOfDeath]| |value | codeable | [ICD10VS] | 
-| 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10VS] | 
-| 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 3-tuple (value, component[position], component[WouldBeUnderlyingCauseOfDeathWithoutPregnancy]) | codeable | [ICD10VS] | 
-| 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10VS] | 
+| 105 | ACME Underlying Cause | ACME_UC| [AutomatedUnderlyingCauseOfDeath]| |value | codeable | [ICD10CausesOfDeathVS] | 
+| 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10CausesOfDeathVS] | 
+| 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 3-tuple (value, component[position], component[WouldBeUnderlyingCauseOfDeathWithoutPregnancy]) | codeable | [ICD10CausesOfDeathVS] | 
+| 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10CausesOfDeathVS] | 
 | 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocationVS] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value | - |  | 
 | 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
