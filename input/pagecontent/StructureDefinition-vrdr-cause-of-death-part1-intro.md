@@ -1,8 +1,6 @@
 ### Usage
 The [Certifier] is optionally referenced from this profile (performer).
 
-                         Up to 4 instances of CauseOfDeathPart1 are ordered by a [CauseOfDeathPathway].
-
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 185 | Cause of Death Part I Line a | COD1A| |value.text,   component[lineNumber] = 1 | string(120) | - | 

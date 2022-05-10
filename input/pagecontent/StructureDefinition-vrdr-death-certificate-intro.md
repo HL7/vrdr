@@ -38,7 +38,6 @@ The content is broken down into the following sections:
     * [Certifier]
     * [DeathCertification]
     * [CauseOfDeathPart1]
-    * [CauseOfDeathPathway]
     * [CauseOfDeathPart2]
     * [MannerOfDeath]
 * Decedent Disposition
