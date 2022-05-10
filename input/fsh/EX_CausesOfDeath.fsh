@@ -32,16 +32,16 @@ Description: "CauseOfDeathPart2-Example1"
 * performer = Reference(Certifier-Example1)
 * status = #final
 
-Instance: CauseOfDeathPathway-Example1
-InstanceOf: CauseOfDeathPathway
-Usage: #example
-Description: "CauseOfDeathPathway-Example1"
-* insert AddMetaProfile(CauseOfDeathPathway)
-* status = #current
-* source = Reference(Certifier-Example1)
-// * orderedBy = $list-order#priority "Sorted by Priority"
-* entry[0].item = Reference(CauseOfDeathPart1-Example1)
-* entry[+].item = Reference(CauseOfDeathPart1-Example2)
+// Instance: CauseOfDeathPathway-Example1
+// InstanceOf: CauseOfDeathPathway
+// Usage: #example
+// Description: "CauseOfDeathPathway-Example1"
+// * insert AddMetaProfile(CauseOfDeathPathway)
+// * status = #current
+// * source = Reference(Certifier-Example1)
+// // * orderedBy = $list-order#priority "Sorted by Priority"
+// * entry[0].item = Reference(CauseOfDeathPart1-Example1)
+// * entry[+].item = Reference(CauseOfDeathPart1-Example2)
 
 
 /*  Certifier */

@@ -24,7 +24,7 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * insert addentry(Observation, CauseOfDeathPart1-Example1)
 * insert addentry(Observation, CauseOfDeathPart1-Example2)
 * insert addentry(Observation, CauseOfDeathPart2-Example1)
-* insert addentry(List, CauseOfDeathPathway-Example1)
+// * insert addentry(List, CauseOfDeathPathway-Example1)
 * insert addentry(Observation, AutopsyPerformedIndicator-Example1)
 
 
