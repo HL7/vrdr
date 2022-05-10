@@ -34,7 +34,6 @@
 [AutopsyPerformedIndicator]: StructureDefinition-vrdr-autopsy-performed-indicator.html
 [BirthRecordIdentifier]: StructureDefinition-vrdr-birth-record-identifier.html
 [CauseOfDeathPart1]: StructureDefinition-vrdr-cause-of-death-part1.html
-[CauseOfDeathPathway]: StructureDefinition-vrdr-cause-of-death-pathway.html
 [CensusTract]: StructureDefinition-vrdr-census-tract.html
 [Certifier]: StructureDefinition-vrdr-certifier.html
 [CauseOfDeathPart2]: StructureDefinition-vrdr-cause-of-death-part2.html

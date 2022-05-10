@@ -1,5 +1,5 @@
 ### Changes
-(check that these are marked as applied in Jira)
+* [FHIR-22430](https://jira.hl7.org/browse/FHIR-22430) : Make ordering of Part1 Causes of Death Explicit in Profile, Eliminate CausesOfDeathPathway Profile, since it adds no value
 * [FHIR-26584](https://jira.hl7.org/browse/FHIR-26584) :  Manner of Death Value Set Corrected
 * [FHIR-26587](https://jira.hl7.org/browse/FHIR-26587) :  Coding for SSN IDentifier corrected
 * [FHIR-28131](https://jira.hl7.org/browse/FHIR-28131) :  Added Sex At Death

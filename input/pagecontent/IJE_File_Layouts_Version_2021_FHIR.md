@@ -7,14 +7,14 @@
 | 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | - | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionVS] | 
-| 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
-| 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
-| 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
-| 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| |value.text | string(120) | - | 
-| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[interval].value | string(20) | - | 
+| 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 1 | string(120) | - | 
+| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 1 | string(20) | - | 
+| 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 2 | string(120) | - | 
+| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 2 | string(20) | - | 
+| 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 3 | string(120) | - | 
+| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 3 | string(20) | - | 
+| 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 4 | string(120) | - | 
+| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 4 | string(20) | - | 
 | 193 | Cause of Death Part II | OTHERCONDITION| [CauseOfDeathPart2]| |value.text | string(240) | - | 
 | 220 | Certifier's First Name | CERTFIRST| [Certifier]| x|name.given , name.use = official | string | - | 
 | 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| x|name.given , name.use = official | string | - | 

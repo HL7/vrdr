@@ -34,9 +34,7 @@ profiles["BirthRecordIdentifier"] = { :out => "StructureDefinition-vrdr-birth-re
                                      :desc => "The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record.
                          It is relevant only in the case where the birth took place in a recognized jurisdiction." }
 profiles["CauseOfDeathPart1"] = { :out => "StructureDefinition-vrdr-cause-of-death-part1-intro.md",
-                                 :desc => "The [Certifier] is optionally referenced from this profile (performer).
-
-                         Up to 4 instances of CauseOfDeathPart1 are ordered by a [CauseOfDeathPathway]." }
+                                 :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-death-part2-intro.md",
                                   :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["Certifier"] = { :out => "StructureDefinition-vrdr-certifier-intro.md",
@@ -81,7 +79,6 @@ The content is broken down into the following sections:
     * [Certifier]
     * [DeathCertification]
     * [CauseOfDeathPart1]
-    * [CauseOfDeathPathway]
     * [CauseOfDeathPart2]
     * [MannerOfDeath]
 * Decedent Disposition
@@ -257,7 +254,7 @@ profiles["CauseOfDeathCodedContentBundle"] = {
     * Place of Injury [PlaceOfInjury]
     * Coding Status Values [CodingStatusValues] - various flags that are part of the TRX format
   * Input Content:
-    * Cause of Death Part 1 - [CauseOfDeathPart1] and [CauseOfDeathPathway]
+    * Cause of Death Part 1 - [CauseOfDeathPart1]
     * Cause of Death Part 2 - [CauseOfDeathPart2]
     * Manner of Death - [MannerOfDeath]
     * Autopsy Performed Indicator - [AutopsyPerformedIndicator]

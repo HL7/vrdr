@@ -43,7 +43,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert addentry(Observation, CauseOfDeathPart1-Example1)
 * insert addentry(Observation, CauseOfDeathPart1-Example2)
 * insert addentry(Observation, CauseOfDeathPart2-Example1)
-* insert addentry(List, CauseOfDeathPathway-Example1)
+//* insert addentry(List, CauseOfDeathPathway-Example1)
 * insert addentry(Location, DispositionLocation-Example1)
 * insert addentry(Organization, FuneralHome-Example1)
 * insert addentry(Observation, DecedentDispositionMethod-Example1)
@@ -102,7 +102,7 @@ Description: "DeathCertificate-Example1"
 *  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary
 *  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
 *  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
@@ -159,7 +159,7 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary
 *  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
 *  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
@@ -212,7 +212,7 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert addentry(Observation, CauseOfDeathPart1-Example1)
 * insert addentry(Observation, CauseOfDeathPart1-Example2)
 * insert addentry(Observation, CauseOfDeathPart2-Example1)
-* insert addentry(List, CauseOfDeathPathway-Example1)
+//* insert addentry(List, CauseOfDeathPathway-Example1)
 * insert addentry(Location, DispositionLocation-Example1)
 * insert addentry(Organization, FuneralHome-Example1)
 * insert addentry(Observation, DecedentDispositionMethod-Example1)

@@ -10,7 +10,7 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
     * Place of Injury [PlaceOfInjury]
     * Coding Status Values [CodingStatusValues] - various flags that are part of the TRX format
   * Input Content:
-    * Cause of Death Part 1 - [CauseOfDeathPart1] and [CauseOfDeathPathway]
+    * Cause of Death Part 1 - [CauseOfDeathPart1]
     * Cause of Death Part 2 - [CauseOfDeathPart2]
     * Manner of Death - [MannerOfDeath]
     * Autopsy Performed Indicator - [AutopsyPerformedIndicator]
