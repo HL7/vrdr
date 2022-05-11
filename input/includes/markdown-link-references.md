@@ -133,6 +133,5 @@
 [ACMESystemRejectVS]: ValueSet-vrdr-system-reject-vs.html
 [TransaxConversionVS]: ValueSet-vrdr-transax-conversion-vs.html
 [CodingStatusValues]: StructureDefinition-vrdr-coding-status-values.html
-[InjuryLocationVS]: https://loinc.org/LL1051-3/
 [DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-bundle.html
 [CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
