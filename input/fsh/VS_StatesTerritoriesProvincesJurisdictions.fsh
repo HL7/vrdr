@@ -143,5 +143,5 @@ ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs
 Title: "Jurisdictions Value Set"
 Description: "2 Letter Codes for all 57 Jurisdictions Reporting Deaths to NCHS"
-* insert USStatesAndTerritories
+* codes from valueset USStatesAndTerritoriesVS
 * JurisdictionsCS#YC "New York City"
