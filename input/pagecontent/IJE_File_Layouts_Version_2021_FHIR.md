@@ -212,7 +212,7 @@
 | 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10CausesOfDeathVS] | 
 | 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 3-tuple (value, component[position], component[WouldBeUnderlyingCauseOfDeathWithoutPregnancy]) | codeable | [ICD10CausesOfDeathVS] | 
 | 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10CausesOfDeathVS] | 
-| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [InjuryLocationVS] | 
+| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | [PlaceOfInjuryVS] | 
 | 67 | First Edited Code | RACE1E| [CodedRaceAndEthnicity]| |component[FirstEditedCode].value | - |  | 
 | 68 | Second Edited Code | RACE2E| [CodedRaceAndEthnicity]| |component[SecondEditedCode].value | codeable | [RaceCodeVS] | 
 | 69 | Third Edited Code | RACE3E| [CodedRaceAndEthnicity]| |component[ThirdEditedCode].value | codeable | [RaceCodeVS] | 
