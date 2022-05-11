@@ -137,7 +137,8 @@ Id: vrdr-canada-provinces-vs
 Title: "Canadian Provinces Value Set"
 Description: "2 Letter Candadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
-* insert CanadaProvinces
+// * insert CanadaProvinces
+* codes from system CanadianProvincesCS
 
 ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs
