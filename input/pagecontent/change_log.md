@@ -1,4 +1,30 @@
-### Changes
+### VRDR STU 2 Publication Version (Fall 2022)
+#### General Changes
+* __Scope:__ The VRDR IG now supports standards-based interoperable exchange of death record information that is information-content equivalent with the legacy IJE, MRE, and TRX formats.   The mapping of legacy IJE fields to the FHIR profiles is clearly documented.   Profiles that did not support any data fields used for submission of death records to NCHS or for inter-jurisdictional exchange were eliminated.
+* __Documentation:__ A [data dictionary](IJE_File_Layouts_Version_2021_FHIR.html) that maps IJE fields has been added, and each profile includes the data dictionary elements that the profile supports.
+* __Use Case Documentation:__ Documentation is provided for the [three use cases](background.html#use-cases) the VRDR is intended to support, and how the IG's profiles are used in support of each use case.
+* __Inclusion of FHIR Profiles for Coded Content:__ Eight [new profiles](http://build.fhir.org/ig/HL7/vrdr/branches/master/artifacts.html#e-coded-observations), seven of which are Observations, have been added to support interoperable exchange of the decedent's coded race and ethnicity.
+* __Race and Ethnicity:__ The Race and Ethnicity submitted as part of death registration are now represented accurately with respect to the NCHS process.  Separate profiles are provided for submission of [sending race and ethnicity to NCHS](StructureDefinition-vrdr-input-race-and-ethnicity.html), and to represent [coded race and ethnicity](StructureDefinition-vrdr-coded-race-and-ethnicity.html).
+* __Additional Bundles:__ In addition to the [DeathCertificateDocument](StructureDefinition-vrdr-death-certificate-document.html) new bundles have been defined for exchange of [coded demographic](StructureDefinition-vrdr-demographic-coded-bundle.html) and [cause of death](http://build.fhir.org/ig/HL7/vrdr/StructureDefinition-vrdr-cause-of-death-coded-bundle.html) information.  The new bundles are information content equivalent to their legacy counterparts.
+* __Examples:__ [Examples](artifacts.html#example-example-instances) are included for all profiles and extensions.
+* __Consistent Naming and Identifiers:__ The names and identifiers have been changed to achieve consistency.
+#### Terminology Changes
+* __Standard Terminologies:__  An attempt has been made to use standard terminologies and codesystems (e.g., SNOMED-CT, LOINC, HL7) whereever possible.
+* __Non-Standard Terminologies:__ Non-standard terminologies are represented within the IG, rather than by reference to PHINVADs.
+* __ValueSets:__ All valuesets are included within the IG, rather than by reference to PHINVADs.   [Concept maps](artifacts.html#terminology-concept-maps) are provided to enable client software to map from legacy codes to the codes used in the IG's valuesets.
+* __States, Territories, Jurisdictions, Provinces and Countries:__ All of these geographic entities are represented consistently throughout the IG using 2-letter postal abbreviations.
+
+#### Notable Changes to Profiles
+* __Part1 and Part2 Causes of Death:__ The [Part1](StructureDefinition-vrdr-cause-of-death-part1.html) and [Part2](StructureDefinition-vrdr-cause-of-death-part1.html) Cause of Death profiles are now profiles of Observation, rather than Condition.  The association of the Part1 causes of death with line numbers is now explicit as part of the profile, rather than implicit based on order in a list.
+* __Deleted Profiles:__ Profiles for Death Pronouncement Perfomer, Cause of Death Pathway, Death Certificate Reference, Mortician, Funeral Home Licensee, and Transportation Role have been deleted.
+* __Location Profiles and References:__ The three location profiles ([Death](StructureDefinition-vrdr-death-location.html), [Disposition](StructureDefinition-vrdr-disposition-location.html), [Injury](StructureDefinition-vrdr-injury-location.html)) are now clearly distinguished by their type field.  The extensions that were previously used to link from other profiles to these locations were no longer needed and have been deleted.  The Location profiles include some detailed address components as extensions.
+* __Injury Incident:__ This profile now incorporates the tranportation role as a component, eliminating the separate Transportation Role Observation profile.
+* __Certifier:__ The [Certifier](StructureDefinition-vrdr-certifier.html) profile now incorporates extensions for detailed components of the Certifier's address.
+* __Death Date:__ The [Death Date](StructureDefinition-vrdr-death-date.html) now incorporates the characterization of the place of death as a component.  Previously this mapped to the type field of the Death Location, which was inapprorpiate.
+* __Decedent:__ The [Decedent](StructureDefinition-vrdr-decedent.html) profile now incorporates extensions to represent the birth jurisdiction, sex at time of death, and detailed components of residence address.  The race and ethnicity needs of death registration are now met by a separate profile since the USCore-provided fields lack the granularity needed.
+* __Death Certificate Document:__ The [DeathCertificateDocument](StructureDefinition-vrdr-death-certificate-document.html) Composition profile has defined sections for the different types of information included in the death certificate.
+
+### Ballot Reconciliation - Changes By Jira Ticket
 * [FHIR-22430](https://jira.hl7.org/browse/FHIR-22430) : Make ordering of Part1 Causes of Death Explicit in Profile, Eliminate CausesOfDeathPathway Profile, since it adds no value
 * [FHIR-26584](https://jira.hl7.org/browse/FHIR-26584) :  Manner of Death Value Set Corrected
 * [FHIR-26587](https://jira.hl7.org/browse/FHIR-26587) :  Coding for SSN IDentifier corrected
