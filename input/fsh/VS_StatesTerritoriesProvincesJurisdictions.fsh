@@ -33,70 +33,62 @@ Description: "Canadian Provinces"
 * #YT	"Yukon" "Yukon"
 
 RuleSet: USStatesAndTerritories
-// * $statesCS#AL  "Alabama"
-// * $statesCS#AK  "Alaska"
-// * $statesCS#AS  "American Samoa"
-// * $statesCS#AZ  "Arizona"
-// * $statesCS#AR  "Arkansas"
-// * $statesCS#CA  "California"
-// * $statesCS#CO  "Colorado"
-// * $statesCS#CT  "Connecticut"
-// * $statesCS#DE  "Delaware"
-// * $statesCS#DC  "District of Columbia"
-// * $statesCS#FL  "Florida"
-// * $statesCS#GA  "Georgia"
-// * $statesCS#GU  "Guam"
-// * $statesCS#HI  "Hawaii"
-// * $statesCS#ID  "Idaho"
-// * $statesCS#IL  "Illinois"
-// * $statesCS#IN  "Indiana"
-// * $statesCS#IA  "Iowa"
-// * $statesCS#KS  "Kansas"
-// * $statesCS#KY  "Kentucky"
-// * $statesCS#LA  "Louisiana"
-// * $statesCS#ME  "Maine"
-// * $statesCS#MD  "Maryland"
-// * $statesCS#MA  "Massachusetts"
-// * $statesCS#MI  "Michigan"
-// * $statesCS#MN  "Minnesota"
-// * $statesCS#MS  "Mississippi"
-// * $statesCS#MO  "Missouri"
-// * $statesCS#MT  "Montana"
-// * $statesCS#NE  "Nebraska"
-// * $statesCS#NV  "Nevada"
-// * $statesCS#NH  "New Hampshire"
-// * $statesCS#NJ  "New Jersey"
-// * $statesCS#NM  "New Mexico"
-// * $statesCS#NY  "New York"
-// * $statesCS#NC  "North Carolina"
-// * $statesCS#ND  "North Dakota"
-// * $statesCS#MP  "Northern Mariana Islands"
-// * $statesCS#OH  "Ohio"
-// * $statesCS#OK  "Oklahoma"
-// * $statesCS#OR  "Oregon"
-// * $statesCS#PA  "Pennsylvania"
-// * $statesCS#PR  "Puerto Rico"
-// * $statesCS#RI  "Rhode Island"
-// * $statesCS#SC  "South Carolina"
-// * $statesCS#SD  "South Dakota"
-// * $statesCS#TN  "Tennessee"
-// * $statesCS#TX  "Texas"
-// * $statesCS#UT  "Utah"
-// * $statesCS#VT  "Vermont"
-// * $statesCS#VI  "Virgin Islands"
-// * $statesCS#VA  "Virginia"
-// * $statesCS#WA  "Washington"
-// * $statesCS#WV  "West Virginia"
-// * $statesCS#WI  "Wisconsin"
-// * $statesCS#WY  "Wyoming"
-* include codes from valueset $statesVS
-* exclude $statesCS#FM
-* exclude $statesCS#MH
-* exclude $statesCS#PW
-* exclude $statesCS#AP
-* exclude $statesCS#AE
-* exclude $statesCS#AA
-
+* $statesCS#AL  "Alabama"
+* $statesCS#AK  "Alaska"
+* $statesCS#AS  "American Samoa"
+* $statesCS#AZ  "Arizona"
+* $statesCS#AR  "Arkansas"
+* $statesCS#CA  "California"
+* $statesCS#CO  "Colorado"
+* $statesCS#CT  "Connecticut"
+* $statesCS#DE  "Delaware"
+* $statesCS#DC  "District of Columbia"
+* $statesCS#FL  "Florida"
+* $statesCS#GA  "Georgia"
+* $statesCS#GU  "Guam"
+* $statesCS#HI  "Hawaii"
+* $statesCS#ID  "Idaho"
+* $statesCS#IL  "Illinois"
+* $statesCS#IN  "Indiana"
+* $statesCS#IA  "Iowa"
+* $statesCS#KS  "Kansas"
+* $statesCS#KY  "Kentucky"
+* $statesCS#LA  "Louisiana"
+* $statesCS#ME  "Maine"
+* $statesCS#MD  "Maryland"
+* $statesCS#MA  "Massachusetts"
+* $statesCS#MI  "Michigan"
+* $statesCS#MN  "Minnesota"
+* $statesCS#MS  "Mississippi"
+* $statesCS#MO  "Missouri"
+* $statesCS#MT  "Montana"
+* $statesCS#NE  "Nebraska"
+* $statesCS#NV  "Nevada"
+* $statesCS#NH  "New Hampshire"
+* $statesCS#NJ  "New Jersey"
+* $statesCS#NM  "New Mexico"
+* $statesCS#NY  "New York"
+* $statesCS#NC  "North Carolina"
+* $statesCS#ND  "North Dakota"
+* $statesCS#MP  "Northern Mariana Islands"
+* $statesCS#OH  "Ohio"
+* $statesCS#OK  "Oklahoma"
+* $statesCS#OR  "Oregon"
+* $statesCS#PA  "Pennsylvania"
+* $statesCS#PR  "Puerto Rico"
+* $statesCS#RI  "Rhode Island"
+* $statesCS#SC  "South Carolina"
+* $statesCS#SD  "South Dakota"
+* $statesCS#TN  "Tennessee"
+* $statesCS#TX  "Texas"
+* $statesCS#UT  "Utah"
+* $statesCS#VT  "Vermont"
+* $statesCS#VI  "Virgin Islands"
+* $statesCS#VA  "Virginia"
+* $statesCS#WA  "Washington"
+* $statesCS#WV  "West Virginia"
+* $statesCS#WI  "Wisconsin"
+* $statesCS#WY  "Wyoming"
 
 
 ValueSet: USStatesAndTerritoriesVS
@@ -114,8 +106,8 @@ Description: "2 Letter States and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
 * insert USStatesAndTerritories
-// * insert CanadaProvinces
-* codes from system CanadianProvincesCS
+* insert CanadaProvinces
+//* codes from system CanadianProvincesCS
 * $v3-NullFlavor#UNK
 
 ValueSet: JurisdictionsProvincesVS
@@ -126,8 +118,7 @@ Description: "2 Letter Jurisdictions and Provinces Value Set"
 * ^status = #active
 * insert USStatesAndTerritories
 * JurisdictionsCS#YC "New York City"
-// * insert CanadaProvinces
-* codes from system CanadianProvincesCS
+* insert CanadaProvinces
 * $v3-NullFlavor#UNK
 
 
@@ -136,12 +127,11 @@ Id: vrdr-canada-provinces-vs
 Title: "Canadian Provinces Value Set"
 Description: "2 Letter Candadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
-// * insert CanadaProvinces
-* codes from system CanadianProvincesCS
+* insert CanadaProvinces
 
 ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs
 Title: "Jurisdictions Value Set"
 Description: "2 Letter Codes for all 57 Jurisdictions Reporting Deaths to NCHS"
-* include codes from valueset USStatesAndTerritoriesVS
+* insert USStatesAndTerritories
 * JurisdictionsCS#YC "New York City"
