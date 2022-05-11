@@ -98,7 +98,7 @@ Description: "2 Letter States and Territories Value Set"
 * ^status = #active
 * ^version = "1.0.0"
 // * insert USStatesAndTerritories -- this doesn't work.  Don't be tempted.
-* include codes from valueset $statesVS
+* include codes from system $statesCS
 * exclude $statesCS#FM
 * exclude $statesCS#MH
 * exclude $statesCS#PW
@@ -112,8 +112,9 @@ Title: "States, Territories and Provinces Value Set"
 Description: "2 Letter States and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
-* insert USStatesAndTerritories
+//* insert USStatesAndTerritories
 // * insert CanadaProvinces -- this doesn't work, don't be tempted
+* codes from valueset USStatesAndTerritoriesVS
 * codes from system CanadianProvincesCS
 * $v3-NullFlavor#UNK
 
@@ -123,10 +124,11 @@ Title: "Jurisdictions and Provinces Value Set"
 Description: "2 Letter Jurisdictions and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
-* insert USStatesAndTerritories
-* JurisdictionsCS#YC "New York City"
+// * insert USStatesAndTerritories
 // * insert CanadaProvinces
+* codes from valueset USStatesAndTerritoriesVS
 * codes from system CanadianProvincesCS
+* JurisdictionsCS#YC "New York City"
 * $v3-NullFlavor#UNK
 
 

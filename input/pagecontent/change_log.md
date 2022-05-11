@@ -10,7 +10,7 @@
 * __Consistent Naming and Identifiers:__ The names and identifiers have been changed to achieve consistency.
 
 #### Terminology Changes
-* __Standard Terminologies:__  An attempt has been made to use standard terminologies and codesystems (e.g., SNOMED-CT, LOINC, HL7) whereever possible.
+* __Standard Terminologies:__  An attempt has been made to use standard terminologies and code systems (e.g., SNOMED-CT, LOINC, HL7) wherever possible.
 * __Non-Standard Terminologies:__ Non-standard terminologies are represented within the IG, rather than by reference to PHINVADs.
 * __ValueSets:__ All valuesets are included within the IG, rather than by reference to PHINVADs.   [Concept maps](artifacts.html#terminology-concept-maps) are provided to enable client software to map from legacy codes to the codes used in the IG's valuesets.
 * __States, Territories, Jurisdictions, Provinces and Countries:__ All of these geographic entities are represented consistently throughout the IG using 2-letter postal abbreviations.
