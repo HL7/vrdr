@@ -97,14 +97,14 @@ Title: "US States, Territories Value Set"
 Description: "2 Letter States and Territories Value Set"
 * ^status = #active
 * ^version = "1.0.0"
-* insert USStatesAndTerritories
-//* include codes from system $statesCS
-//* exclude $statesCS#FM
-//* exclude $statesCS#MH
-//* exclude $statesCS#PW
-//* exclude $statesCS#AP
-//* exclude $statesCS#AE
-//* exclude $statesCS#AA
+//* insert USStatesAndTerritories
+* include codes from system $statesCS
+* exclude $statesCS#FM
+* exclude $statesCS#MH
+* exclude $statesCS#PW
+* exclude $statesCS#AP
+* exclude $statesCS#AE
+* exclude $statesCS#AA
 
 ValueSet: StatesTerritoriesAndProvincesVS
 Id: vrdr-states-territories-provinces-vs
