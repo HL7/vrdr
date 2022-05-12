@@ -12,4 +12,4 @@ Title: "Spouse Is Alive"
 Description: "Spouse is Alive."
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from YesNoUnknownNotApplicableVS (required)
+* value[x] from SpouseAliveVS (required)
