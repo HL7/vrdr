@@ -1,18 +1,12 @@
-ValueSet: YesNoNotApplicableVS
-Id: vrdr-yes-no-not-applicable-vs
-Title: "Yes No NotApplicable"
-Description: "Value Set with Yes, No, Not Applicable.
+// ValueSet: YesNoNotApplicableVS
+// Id: vrdr-yes-no-not-applicable-vs
+// Title: "Yes No NotApplicable"
+// Description: "Value Set with Yes, No, Not Applicable.
 
-Mapping to IJE codes [here](ConceptMap-YesNoNotApplicableCM.html)."
-* $v2-0136#N "No"
-* $v2-0136#Y "Yes"
-* $v3-NullFlavor#NA "not applicable"
-
-ValueSet: NotApplicableVS
-Id: vrdr-not-applicable-vs
-Title: "NotApplicable"
-Description: "Value set with Not Applicable."
-* $v3-NullFlavor#NA "not applicable"
+// Mapping to IJE codes [here](ConceptMap-YesNoNotApplicableCM.html)."
+// * $v2-0136#N "No"
+// * $v2-0136#Y "Yes"
+// * $v3-NullFlavor#NA "not applicable"
 
 ValueSet: YesNoUnknownVS
 Id: vrdr-yes-no-unknown-vs
