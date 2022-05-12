@@ -42,7 +42,6 @@
 [DeathCertificate]: StructureDefinition-vrdr-death-certificate.html
 [DeathCertification]: StructureDefinition-vrdr-death-certification.html
 [DeathDate]: StructureDefinition-vrdr-death-date.html
-[DeathLocationReference]: StructureDefinition-vrdr-death-location-reference.html
 [DeathLocation]: StructureDefinition-vrdr-death-location.html
 [DeathPronouncementPerformer]: StructureDefinition-vrdr-death-pronouncement-performer.html
 [DecedentAge]: StructureDefinition-vrdr-decedent-age.html
@@ -55,14 +54,12 @@
 [DecedentSpouse]: StructureDefinition-vrdr-decedent-spouse.html
 [DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
 [Decedent]: StructureDefinition-vrdr-decedent.html
-[DispositionLocationReference]: StructureDefinition-vrdr-disposition-location-reference.html
 [DispositionLocation]: StructureDefinition-vrdr-disposition-location.html
 [ExaminerContacted]: StructureDefinition-vrdr-examiner-contacted.html
 [FuneralHomeDirector]: StructureDefinition-vrdr-funeral-home-director.html
 [FuneralHome]: StructureDefinition-vrdr-funeral-home.html
 [FuneralServiceLicensee]: StructureDefinition-vrdr-funeral-service-licensee.html
 [InjuryIncident]: StructureDefinition-vrdr-injury-incident.html
-[InjuryIncidentReference]: StructureDefinition-vrdr-injury-location-reference.html
 [InjuryLocation]: StructureDefinition-vrdr-injury-location.html
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
@@ -127,6 +124,7 @@
 [ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death-vs.html
 [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
+[SpouseAliveVS]: ValueSet-vrdr-spouse-alive-vs.html
 [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
 [ICD10CausesOfDeathVS]: ValueSet-vrdr-icd10-causes-of-death-vs.html
 [IntentionalRejectVS]: ValueSet-vrdr-intentional-reject-vs.html
