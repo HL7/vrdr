@@ -163,10 +163,10 @@
 | 181 | Place of injury. Longitude | LONG_I| [InjuryLocation]| x|position.longitude | float | - | 
 | 182 | Place of injury. Latitude | LAT_I| [InjuryLocation]| x|position.latitude | float | - | 
 | 237 | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
-| 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [YesNoUnknownVS] | 
-| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [YesNoUnknownVS] | 
-| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [YesNoUnknownVS] | 
+| 39 | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| |component[ HispanicMexican].valueCoding | codeable | [HispanicNoUnknownVS] | 
+| 40 | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| |component[ HispanicPuertoRican].valueCoding | codeable | [HispanicNoUnknownVS] | 
+| 41 | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| |component[ HispanicCuban ].valueCoding | codeable | [HispanicNoUnknownVS] | 
+| 42 | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| |component[ HispanicOther ].valueCoding | codeable | [HispanicNoUnknownVS] | 
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string | - | 
 | 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean | - | 
 | 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 
