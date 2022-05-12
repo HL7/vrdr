@@ -121,9 +121,9 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[FirstOtherAsianLiteral].valueString = "Malaysian"
 * component[FirstAmericanIndianOrAlaskaNativeLiteral].valueString = "Arikara"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
-* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
-* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
-* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
+* component[HispanicCuban].valueCodeableConcept = $v2-0136#Y
+* component[HispanicPuertoRican].valueCodeableConcept = $v2-0136#Y
+* component[HispanicOther].valueCodeableConcept = $v2-0136#N
 
 Instance: CodingStatusValues-Example1
 InstanceOf: CodingStatusValues

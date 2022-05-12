@@ -303,10 +303,10 @@ Description: "Input (from EDRS) Race and Ethnicity (Observation)"
 * insert primobscodecomponent(FirstOtherRaceLiteral,string)
 * insert primobscodecomponent(SecondOtherRaceLiteral,string)
 * insert obscodecomponent(RACEMVR,$raceMissingValueReason)
-* insert obscodecomponent(HispanicMexican,YesNoUnknownVS)
-* insert obscodecomponent(HispanicPuertoRican,YesNoUnknownVS)
-* insert obscodecomponent(HispanicCuban,YesNoUnknownVS)
-* insert obscodecomponent(HispanicOther,YesNoUnknownVS)
+* insert obscodecomponent(HispanicMexican,HispanicNoUnknownVS)
+* insert obscodecomponent(HispanicPuertoRican,HispanicNoUnknownVS)
+* insert obscodecomponent(HispanicCuban,HispanicNoUnknownVS)
+* insert obscodecomponent(HispanicOther,HispanicNoUnknownVS)
 * insert primobscodecomponent(HispanicLiteral,string)
 
 
