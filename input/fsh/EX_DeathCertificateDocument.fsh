@@ -148,7 +148,7 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  section[DeathInvestigation].entry[DeathOrInjuryLocation][0] = Reference(DeathLocation-Example1)
 *  section[DeathInvestigation].entry[DeathOrInjuryLocation][1] = Reference(InjuryLocation-Example1)
 *  section[DeathInvestigation].entry[InjuryIncident] = Reference(InjuryIncident-Example2)
-*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
+*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example2)
 *  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
 *  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
 // The next line shouldn't be necessary
@@ -183,7 +183,7 @@ Usage: #example
 Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert AddMetaProfile(DeathCertificateDocument)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* identifier.value = "2020YC000182"
+* insert Identifiers2020NY000182
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Bundle, DeathCertificate-Example2)
@@ -200,7 +200,7 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert addentry(Observation, EmergingIssues-Example1)
 * insert addentry(Observation, DecedentPregnancyStatus-Example1)
 * insert addentry(Observation, TobaccoUseContributedToDeath-Example1)
-* insert addentry(Observation, DeathDate-Example1)
+* insert addentry(Observation, DeathDate-Example2)
 * insert addentry(Observation, SurgeryDate-Example1)
 * insert addentry(Observation, ExaminerContacted-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
