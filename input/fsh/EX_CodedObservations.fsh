@@ -17,6 +17,16 @@ Description: "RecordAxisCauseOfDeath-Example1"
 * valueCodeableConcept = $icd10#J96.0
 * component[position].valueInteger = 1
 
+Instance: RecordAxisCauseOfDeath-Example2
+InstanceOf: RecordAxisCauseOfDeath
+Usage: #example
+Description: "RecordAxisCauseOfDeath-Example2"
+* insert AddMetaProfile(RecordAxisCauseOfDeath)
+* status = #final
+* subject.display = "NCHS generated"
+* valueCodeableConcept = $icd10#T27.3
+* component[position].valueInteger = 2
+
 Instance: EntityAxisCauseOfDeath-Example1
 InstanceOf: EntityAxisCauseOfDeath
 Usage: #example
@@ -51,7 +61,17 @@ Description: "EntityAxisCauseOfDeath-Example3"
 * component[position].valueInteger = 2
 * component[eCodeIndicator].valueBoolean = true
 
-
+Instance: EntityAxisCauseOfDeath-Example4
+InstanceOf: EntityAxisCauseOfDeath
+Usage: #example
+Description: "EntityAxisCauseOfDeath-Example3"
+* insert AddMetaProfile(EntityAxisCauseOfDeath)
+* status = #final
+* subject.display = "NCHS generated"
+* valueCodeableConcept = $icd10#T27.2
+* component[lineNumber].valueInteger = 2
+* component[position].valueInteger = 3
+* component[eCodeIndicator].valueBoolean = false
 
 
 Instance: ManualUnderlyingCauseOfDeath-Example1

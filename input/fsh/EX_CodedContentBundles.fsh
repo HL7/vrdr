@@ -12,6 +12,9 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * insert addentry(Observation, AutomatedUnderlyingCauseOfDeath-Example1)
 * insert addentry(Observation, RecordAxisCauseOfDeath-Example1)
 * insert addentry(Observation, EntityAxisCauseOfDeath-Example1)
+* insert addentry(Observation, EntityAxisCauseOfDeath-Example2)
+* insert addentry(Observation, EntityAxisCauseOfDeath-Example3)
+* insert addentry(Observation, EntityAxisCauseOfDeath-Example4)
 * insert addentry(Observation, PlaceOfInjury-Example1)
 * insert addentry(Parameter, CodingStatusValues-Example1)
 // Input Data
@@ -20,7 +23,7 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * insert addentry(Observation, SurgeryDate-Example1)
 * insert addentry(Observation, MannerOfDeath-Example1)
 * insert addentry(Observation, InjuryIncident-Example1)
-* insert addentry(Procedure, DeathCertification-Example1)
+* insert addentry(Procedure, DeathCertification-Example2)
 * insert addentry(Observation, CauseOfDeathPart1-Example1)
 * insert addentry(Observation, CauseOfDeathPart1-Example2)
 * insert addentry(Observation, CauseOfDeathPart2-Example1)
