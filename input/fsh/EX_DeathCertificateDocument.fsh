@@ -100,7 +100,7 @@ Description: "DeathCertificate-Example1"
 *  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
 *  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example1)
+*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
 *  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
 //*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary
@@ -157,7 +157,7 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
 *  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
 *  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example1)
+*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
 *  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
 //*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary

@@ -25,7 +25,7 @@ Description: "InjuryIncident-Example2 (with coded transportationRole)"
 * valueCodeableConcept.text  = "drug toxicity"
 * component[workInjuryIndicator].valueCodeableConcept = $v2-0136#N "No"
 * component[placeOfInjury].valueCodeableConcept.text = "Home"
-* component[transportationRole].valueCodeableConcept = $sct#257518000 "Passenger"
+* component[transportationRole].valueCodeableConcept = $sct#257518000 "Pedestrian"
 
 Instance: InjuryLocation-Example1
 InstanceOf: InjuryLocation
