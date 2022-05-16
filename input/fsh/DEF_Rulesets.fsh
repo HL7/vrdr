@@ -60,3 +60,48 @@ RuleSet: LOINCCopyright
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
+
+RuleSet: ParameterSlicing
+* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.description = "Slicing based on the profile conformance of the sliced element"
+
+RuleSet: ParameterName(name,short,def)
+* parameter contains {name} 0..1
+* parameter[{name}].name = "{name}"
+* parameter[{name}] ^short = "{short}"
+* parameter[{name}] ^definition = "{def}"
+* parameter[{name}].extension 0..0
+
+RuleSet: ParameterNameType(name, type, short, def)
+* insert ParameterName({name},{short}, {def})
+* parameter[{name}].value[x] only {type}
+* parameter[{name}].value[x] 1..1
+* parameter[{name}].resource 0..0
+* parameter[{name}].part 0..0
+* parameter[{name}].extension 0..0
+
+RuleSet: obscodecomponent(code, valueSet)
+* component contains {code} 0..1
+* component[{code}].code 1..1
+* component[{code}].code = ComponentCS#{code}
+* component[{code}].value[x] 1..1
+* component[{code}].value[x] only CodeableConcept
+* component[{code}] ^short = "{code}"
+* component[{code}].value[x] from {valueSet}
+
+RuleSet: primobscodecomponent(code, type)
+* component contains {code} 0..1
+* component[{code}].code 1..1
+* component[{code}].code = ComponentCS#{code}
+* component[{code}].value[x] 1..1
+* component[{code}].value[x] only {type}
+* component[{code}] ^short = "{code}"
+
+RuleSet: NCHSObservationCommon
+* subject only Reference(Decedent)
+* subject ^short = "Decedent"
+// * effective[x] 1..1
+* effective[x] only dateTime
+* effective[x] ^short = "Date/Time when added to death record"
