@@ -165,7 +165,7 @@ profiles["DecedentPregnancyStatus"] = {
 }
 profiles["DecedentUsualWork"] = {
   :out => "StructureDefinition-vrdr-decedent-usual-work-intro.md",
-  :desc => "Implementors are free to use the coded fields with the defined valuesets, but coded values are not expected for death certificate submission.",
+  :desc => "Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange, but coded values are not expected for death certificate submission.",
 }
 profiles["DispositionLocation"] = {
   :out => "StructureDefinition-vrdr-disposition-location-intro.md",

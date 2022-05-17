@@ -1,5 +1,5 @@
 ### Usage
-Implementors are free to use the coded fields with the defined valuesets, but coded values are not expected for death certificate submission.
+Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange, but coded values are not expected for death certificate submission.
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
