@@ -10,7 +10,8 @@ Description: "DecedentUsualWork-Example1 - without coded values"
 * component.code = $loinc#21844-6 "History of Usual industry"
 * component.valueCodeableConcept.text = "State agency"
 * component.valueCodeableConcept = $v3-NullFlavor#unknown "unknown"
-
+* effectivePeriod.start = "2001"
+* effectivePeriod.end = "2005"
 
 Instance: DecedentUsualWork-Example2
 InstanceOf: DecedentUsualWork
@@ -24,3 +25,5 @@ Description: "DecedentUsualWork-Example2 - with coded values"
 * component.code = $loinc#21844-6 "History of Usual industry"
 * component.valueCodeableConcept = urn:oid:2.16.840.1.114222.4.5.315#9390 "Other general government and support"
 * component.valueCodeableConcept.text = "State agency"
+* effectivePeriod.start = "2001"
+* effectivePeriod.end = "2005"
