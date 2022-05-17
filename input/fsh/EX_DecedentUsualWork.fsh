@@ -6,10 +6,10 @@ Description: "DecedentUsualWork-Example1 - without coded values"
 * status = #final
 * subject = Reference(Decedent-Example1)
 * valueCodeableConcept.text = "secretary"
-* valueCodeableConcept = $v3-NullFlavor#unknown "unknown"
+* valueCodeableConcept = $v3-NullFlavor#UNK "unknown"
 * component.code = $loinc#21844-6 "History of Usual industry"
 * component.valueCodeableConcept.text = "State agency"
-* component.valueCodeableConcept = $v3-NullFlavor#unknown "unknown"
+* component.valueCodeableConcept = $v3-NullFlavor#UNK "unknown"
 * effectivePeriod.start = "2001"
 * effectivePeriod.end = "2005"
 
