@@ -1,5 +1,8 @@
 ### Usage
-Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange, but coded values are not expected for death certificate submission.
+Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange,
+            but coded values are not expected for death certificate submission. The underlying profile requires coded
+            values for validity, so a null flavor value can be used as in Example1. Similarly the effective period is required,
+            and null flavor values can be substituted.
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
