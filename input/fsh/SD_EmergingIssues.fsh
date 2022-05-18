@@ -20,7 +20,7 @@ Description: "Emerging Issues (Observation)"
 * status 1..1
 * status = #final (exactly)
 * code 1..1
-* code = ObservationsCS##emergingissues "NCHS-required Parameter Slots for Emerging Issues" (exactly)
+* code = ObservationsCS#emergingissues "NCHS-required Parameter Slots for Emerging Issues" (exactly)
 * subject 1..1
 * subject only Reference(Decedent)
 * effective[x] 0..0
