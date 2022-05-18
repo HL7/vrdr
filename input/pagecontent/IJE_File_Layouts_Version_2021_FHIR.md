@@ -129,6 +129,8 @@
 | 113 | If Female--Edit Flag: From EDR only | PREG_BYPASS| [DecedentPregnancyStatus]| |value.extension[BypassEditFlag].value | codeable | [EditBypass012VS] | 
 | 84 | Occupation -- Literal  | OCCUP| [DecedentUsualWork]| |value.text | string(40) | - | 
 | 86 | Industry -- Literal  | INDUST| [DecedentUsualWork]| |component [ odh-UsualIndustry	].value.text | string(40) | - | 
+| 94 | Occupation -- 4 digit Code  | OCCUPC4| [DecedentUsualWork]| |valueCodeableConcept.coding[occupationCDCCensus2010] | codeable | [PHVS_Occupation_CDC_Census2010VS] | 
+| 95 | Industry -- 4 digit Code | INDUSTC4| [DecedentUsualWork]| |component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2010] | codeable | [PHVS_Industry_CDC_Census2010VS] | 
 | 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| [DispositionLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 
 | 203 | Disposition State or Territory - Literal | DISPSTATE| [DispositionLocation]| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 204 | Disposition City - Code | DISPCITYCODE| [DispositionLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 

@@ -2,7 +2,7 @@ Profile: SurgeryDate
 Parent: Observation
 Id: vrdr-surgery-date
 Title: "Surgery Date"
-Description: "Date of Surgery (Observation).  The PartialDatePartAbsent extension supports partial dates."
+Description: "Date of Surgery (Observation).  The PartialDate extension supports partial dates."
 * insert RequireMetaProfile(SurgeryDate)
 * status 1..1
 * status = #final (exactly)
@@ -16,4 +16,4 @@ Description: "Date of Surgery (Observation).  The PartialDatePartAbsent extensio
 * value[x] 0..1
 * value[x] only dateTime
 * valueDateTime.extension contains
-    PartialDateTime named partialDateTime 0..1
+    PartialDate named partialDate 0..1

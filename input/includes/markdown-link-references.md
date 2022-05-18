@@ -100,6 +100,8 @@
 [HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html
 [CountryCS]: CodeSystem-vrdr-country-code-cs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
+[PHVS_Occupation_CDC_Census2010VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
+[PHVS_Industry_CDC_Census2010VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
 [FIlingFormatVS]: ValueSet-vrdr-filing-format-vs.html

@@ -29,7 +29,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    datetimePronouncedDead 1..1 and
+    datetimePronouncedDead 0..1 and
     placeOfDeath 0..1
 * component[datetimePronouncedDead] ^short = "Date/Time Pronounced Dead"
 * component[datetimePronouncedDead].value[x] only dateTime

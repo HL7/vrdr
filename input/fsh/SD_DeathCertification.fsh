@@ -4,7 +4,6 @@ Id: vrdr-death-certification
 Title: "Death Certification Procedure"
 Description: "Death Certification Procedure (USCoreProcedure). The procedure where the certification of death was performed by the certifier (USCoreProcedure)."
 * insert RequireMetaProfile(DeathCertification)
-* identifier 1..*
 * status 1..1
 * status only code
 * status = #completed (exactly)

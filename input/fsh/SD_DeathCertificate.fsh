@@ -86,8 +86,8 @@ Description: "The body of the death certificate document (Composition)."
 * insert BundleSectionSlice(DecedentDemographics, EmergingIssues,  0, 1, EmergingIssues, EmergingIssues, EmergingIssues)
 * insert BundleSectionSlice(DecedentDemographics, InputRaceAndEthnicity,  0, 1, InputRaceAndEthnicity, InputRaceAndEthnicity, InputRaceAndEthnicity)
 //
-* insert BundleSectionSlice(DeathInvestigation, ExaminerContacted, 1, 1, ExaminerContacted, ExaminerContacted, ExaminerContacted)
-* insert BundleSectionSlice(DeathInvestigation, PregnancyStatus, 1, 1, DecedentPregnancyStatus, DecedentPregnancyStatus, DecedentPregnancyStatus)
+* insert BundleSectionSlice(DeathInvestigation, ExaminerContacted, 0, 1, ExaminerContacted, ExaminerContacted, ExaminerContacted)
+* insert BundleSectionSlice(DeathInvestigation, PregnancyStatus, 0, 1, DecedentPregnancyStatus, DecedentPregnancyStatus, DecedentPregnancyStatus)
 * insert BundleSectionSlice(DeathInvestigation, TobaccoUse,  0, 1, DecedentFather, DecedentFather, TobaccoUseContributedToDeath)
 * insert BundleSectionSlice(DeathInvestigation, DeathOrInjuryLocation,  0, 2, Death or Injury  Location, Death or Injury Location, Location)
 * insert BundleSectionSlice(DeathInvestigation, PlaceOfInjury,  0, 1, PlaceOfInjury, PlaceOfInjury, PlaceOfInjury)
