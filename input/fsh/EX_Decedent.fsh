@@ -39,7 +39,7 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * address.extension[predir].valueString = "E"
 * address.extension[postdir].valueString = "SW"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
-* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0
+* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0 "Edit Passed"
 * contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"
 
@@ -75,6 +75,6 @@ Description: "Decedent-Example1"
 * address.country = "US"
 * address.extension[stname].valueString = "Lockwood"
 * maritalStatus = $v3-MaritalStatus#S "Never Married"
-* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0
+* maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0 "Edit Passed"
 * contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"

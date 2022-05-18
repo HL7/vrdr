@@ -6,4 +6,3 @@ Description: "DeathDate-Example1"
 * subject = Reference(Decedent-Example1)
 * status = #final
 * valueCodeableConcept = $v3-EducationLevel#SEC "Some secondary or high school education"
-* valueCodeableConcept.text = "11th grade"
