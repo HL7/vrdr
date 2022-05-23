@@ -4,7 +4,7 @@ Usage: #example
 Description: "FuneralHome-Example1"
 * insert AddMetaProfile(FuneralHome)
 * active = true
-* type = OrganizationTypeCS#funeralhome "Funeral Home" (exactly)
+* type = OrganizationTypeCS#funeralhome "Funeral Home"
 * name = "Lancaster Funeral Home and Crematory"
 * address.line = "211 High Street"
 * address.city = "Lancaster"

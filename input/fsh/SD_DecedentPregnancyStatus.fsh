@@ -10,7 +10,7 @@ Description: "Decedent Pregnancy Status (Observation)"
 * status ^short = "status"
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#69442-2 "Timing of recent pregnancy in relation to death" (exactly)
+* code = $loinc#69442-2 // "Timing of recent pregnancy in relation to death"
 * code ^short = "code"
 * subject 1..1
 * subject only Reference(Decedent)

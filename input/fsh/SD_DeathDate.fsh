@@ -9,7 +9,7 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * status 1..1
 * status = #final (exactly)
 * code 1..1
-* code = $loinc#81956-5 "Date+time of death" (exactly)
+* code = $loinc#81956-5 // "Date+time of death"
 * subject 1..1
 * subject only Reference(Decedent)
 * performer 0..1
@@ -34,9 +34,9 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
 * component[datetimePronouncedDead] ^short = "Date/Time Pronounced Dead"
 * component[datetimePronouncedDead].value[x] only dateTime
 * component[datetimePronouncedDead].value[x] 1..1
-* component[datetimePronouncedDead].code = $loinc#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]" (exactly)
+* component[datetimePronouncedDead].code = $loinc#80616-6 // "Date and time pronounced dead [US Standard Certificate of Death]"
 * component[placeOfDeath] ^short = "Place of Death"
 * component[placeOfDeath].value[x] only CodeableConcept
 * component[placeOfDeath].value[x] from $place-of-death
 * component[placeOfDeath].value[x] 1..1
-* component[placeOfDeath].code = $loinc#58332-8 "Location of death" (exactly)
+* component[placeOfDeath].code = $loinc#58332-8 // "Location of death"

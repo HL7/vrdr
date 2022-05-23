@@ -9,10 +9,10 @@ Description: "Death Certification Procedure (USCoreProcedure). The procedure whe
 * status = #completed (exactly)
 * category 1..1
 * category only CodeableConcept
-* category = $sct#103693007 "Diagnostic procedure" (exactly)
+* category = $sct#103693007 // "Diagnostic procedure"
 * code 1..1
 * code only CodeableConcept
-* code = $sct#308646001 "Death certification" (exactly)
+* code = $sct#308646001 // "Death certification"
 * performed[x] 1..1
 * performed[x] only dateTime
 * performed[x] ^short = "certification Datetime"

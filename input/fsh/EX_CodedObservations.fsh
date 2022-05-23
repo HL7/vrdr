@@ -140,10 +140,10 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[OtherRace].valueBoolean = false
 * component[FirstOtherAsianLiteral].valueString = "Malaysian"
 * component[FirstAmericanIndianOrAlaskaNativeLiteral].valueString = "Arikara"
-* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y
-* component[HispanicCuban].valueCodeableConcept = $v2-0136#Y
-* component[HispanicPuertoRican].valueCodeableConcept = $v2-0136#Y
-* component[HispanicOther].valueCodeableConcept = $v2-0136#N
+* component[HispanicMexican].valueCodeableConcept = $v2-0136#Y "Yes"
+* component[HispanicCuban].valueCodeableConcept = $v2-0136#Y "No"
+* component[HispanicPuertoRican].valueCodeableConcept = $v2-0136#Y "Yes"
+* component[HispanicOther].valueCodeableConcept = $v2-0136#N "No"
 
 Instance: CodingStatusValues-Example1
 InstanceOf: CodingStatusValues
@@ -153,6 +153,6 @@ Description:   "CodingStatusValues-Example1"
 * parameter[shipmentNumber].valueString = "A2B2"
 * parameter[receiptDate].valueDate = "2021-12-12"
 * parameter[coderStatus].valueInteger = 5
-* parameter[intentionalReject].valueCodeableConcept = IntentionalRejectCS#1
-* parameter[acmeSystemReject].valueCodeableConcept = SystemRejectCS#0
-* parameter[transaxConversion].valueCodeableConcept = TransaxConversionCS#3
+* parameter[intentionalReject].valueCodeableConcept = IntentionalRejectCS#1 "Reject1"
+* parameter[acmeSystemReject].valueCodeableConcept = SystemRejectCS#0 "Not Rejected"
+* parameter[transaxConversion].valueCodeableConcept = TransaxConversionCS#3 "Conversion using non-ambivalent table entries"

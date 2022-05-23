@@ -9,7 +9,7 @@ Description: "Autopsy Performed Indicator (Observation)"
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#85699-7 "Autopsy was performed" (exactly)
+* code = $loinc#85699-7 // "Autopsy was performed"
 * subject 1..1
 * subject only Reference(Decedent)
 * value[x] 1..1
@@ -24,7 +24,7 @@ Description: "Autopsy Performed Indicator (Observation)"
 * component[autopsyResultsAvailable] ^short = "Autopsy Results Available"
 * component[autopsyResultsAvailable].code 1..1
 * component[autopsyResultsAvailable].code only CodeableConcept
-* component[autopsyResultsAvailable].code = $loinc#69436-4 "Autopsy results available" (exactly)
+* component[autopsyResultsAvailable].code = $loinc#69436-4 // "Autopsy results available"
 * component[autopsyResultsAvailable].value[x] 1..1
 * component[autopsyResultsAvailable].value[x] only CodeableConcept
 * component[autopsyResultsAvailable].value[x] from YesNoUnknownNotApplicableVS (required)

@@ -12,7 +12,7 @@ Description: "Decedent Education Level (Observation)"
 * status ^short = "status"
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#80913-7 "Highest level of education [US Standard Certificate of Death]" (exactly)
+* code = $loinc#80913-7 // "Highest level of education [US Standard Certificate of Death]"
 * code ^short = "code"
 * subject 1..1
 * subject only Reference(Decedent)
