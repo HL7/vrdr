@@ -9,7 +9,7 @@ Description: "Decedent Father (RelatedPerson)"
 * patient ^short = "Decedent"
 * relationship 1..1
 * relationship only CodeableConcept
-* relationship = $v3-RoleCode#FTH "father" (exactly)
+* relationship = $v3-RoleCode#FTH // "father"
 * relationship.text = "Father"
 * relationship ^short = "relationship"
 * name ^short = "Name. If more than 1 use name.use = official"
@@ -26,7 +26,7 @@ Description: "Decedent Mother (RelatedPerson)"
 * patient only Reference(Decedent)
 * relationship 1..1
 * relationship only CodeableConcept
-* relationship = $v3-RoleCode#MTH "mother" (exactly)
+* relationship = $v3-RoleCode#MTH // "mother"
 * relationship.text = "Mother"
 * name.family ^short = "Maiden name if name.use=maiden"
 * address 0..1
@@ -43,7 +43,7 @@ Description: "Decedent Spouse (RelatedPerson)"
 * patient ^short = "Decedent"
 * relationship 1..1
 * relationship only CodeableConcept
-* relationship = $v3-RoleCode#SPS "spouse" (exactly)
+* relationship = $v3-RoleCode#SPS // "spouse"
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
 * name.family ^short = "Maiden name if name.use=maiden"

@@ -32,7 +32,7 @@ Description: "The body of the death certificate document (Composition)."
 * status from CompositionStatus (required)
 * type 1..1
 * type only CodeableConcept
-* type = $loinc#64297-5 "Death certificate" (exactly)
+* type = $loinc#64297-5 // "Death certificate"
 * extension contains
     FilingFormat named filingFormat 0..1 and
     ReplaceStatus named replaceStatus 0..1 and
@@ -54,7 +54,7 @@ Description: "The body of the death certificate document (Composition)."
 * event only BackboneElement
 * event.code 1..1
 * event.code only CodeableConcept
-* event.code = $sct#103693007 "Diagnostic procedure (procedure)" (exactly)
+* event.code = $sct#103693007 // "Diagnostic procedure (procedure)"
 * event.detail 1..1
 * event.detail only Reference(DeathCertification)
 * section ^slicing.discriminator.type = #pattern

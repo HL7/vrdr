@@ -9,7 +9,7 @@ Description: "Examiner Contacted (Observation)"
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#74497-9 "Medical examiner or coroner was contacted [US Standard Certificate of Death]" (exactly)
+* code = $loinc#74497-9 // "Medical examiner or coroner was contacted [US Standard Certificate of Death]"
 * subject 1..1
 * subject only Reference(Decedent)
 * value[x] 1..

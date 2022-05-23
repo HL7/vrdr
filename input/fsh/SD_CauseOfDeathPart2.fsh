@@ -7,7 +7,7 @@ Description: "Cause of death Part 2 (Observation). Identifies factors contributi
 * id 0..1
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#69441-4 "Other significant causes or conditions of death" (exactly)
+* code = $loinc#69441-4 // "Other significant causes or conditions of death"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept.text 1..1

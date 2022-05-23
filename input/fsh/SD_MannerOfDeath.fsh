@@ -10,7 +10,7 @@ Description: "Manner of Death (Observation)"
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#69449-7 "Manner of death" (exactly)
+* code = $loinc#69449-7 // "Manner of death"
 * subject 1..1
 * subject only Reference(Patient)
 * performer ^short = "Certifier"

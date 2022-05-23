@@ -4,7 +4,7 @@ RuleSet: PlaceComponent(len, number)
 * component contains EmergingIssue{len}_{number} 0..1
 * component[EmergingIssue{len}_{number}] ^short = "EmergingIssue{len}_{number}"
 * component[EmergingIssue{len}_{number}].code 1..1
-* component[EmergingIssue{len}_{number}].code = ComponentCS#EmergingIssue{len}_{number} (exactly)
+* component[EmergingIssue{len}_{number}].code = ComponentCS#EmergingIssue{len}_{number}
 * component[EmergingIssue{len}_{number}].value[x] 1..1
 * component[EmergingIssue{len}_{number}].value[x] only string
 * component[EmergingIssue{len}_{number}].valueString ^maxLength = 1
@@ -20,7 +20,7 @@ Description: "Emerging Issues (Observation)"
 * status 1..1
 * status = #final (exactly)
 * code 1..1
-* code = ObservationsCS#emergingissues "NCHS-required Parameter Slots for Emerging Issues" (exactly)
+* code = ObservationsCS#emergingissues // "NCHS-required Parameter Slots for Emerging Issues"
 * subject 1..1
 * subject only Reference(Decedent)
 * effective[x] 0..0
@@ -42,7 +42,7 @@ Description: "Emerging Issues (Observation)"
 * component contains EmergingIssue20 0..1
 * component[EmergingIssue20] ^short = "EmergingIssue20"
 * component[EmergingIssue20].code 1..1
-* component[EmergingIssue20].code = ComponentCS#EmergingIssue20 (exactly)
+* component[EmergingIssue20].code = ComponentCS#EmergingIssue20
 * component[EmergingIssue20].value[x] 1..1
 * component[EmergingIssue20].value[x] only string
 * component[EmergingIssue20].valueString ^maxLength = 1

@@ -6,7 +6,7 @@ Description: "Funeral Home (USCoreOrganization)"
 * insert RequireMetaProfile(FuneralHome)
 * id 0..1
 * type 1..1
-* type = OrganizationTypeCS#funeralhome "Funeral Home" (exactly)
+* type = OrganizationTypeCS#funeralhome // "Funeral Home"
 * name 1..1
 * address ^short = "Funeral Home Name"
 * address 1..1

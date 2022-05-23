@@ -8,7 +8,7 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#BR "Birth registry number" (exactly)
+* code = $v2-0203#BR // "Birth registry number"
 * subject 1..1
 * subject only Reference(Decedent)
 * value[x] 0..1
@@ -26,12 +26,12 @@ Description: "Birth Record Identifier (Observation).  This includes the record i
     birthYear 1..1
 * component[birthJurisdiction] ^short = "Birth Jurisdiction"
 * component[birthJurisdiction].code 1..1
-* component[birthJurisdiction].code = $loinc#21842-0 "Birthplace" (exactly)
+* component[birthJurisdiction].code = $loinc#21842-0 // "Birthplace"
 * component[birthJurisdiction].value[x] 1..1
 * component[birthJurisdiction].value[x] only string
 * component[birthJurisdiction].valueString from JurisdictionVS (required)
 * component[birthYear] ^short = "Birth Year"
-* component[birthYear].code = $loinc#80904-6 "Birth year" (exactly)
+* component[birthYear].code = $loinc#80904-6 // "Birth year"
 * component[birthYear].value[x] 1..1
 * component[birthYear].value[x] only dateTime
 * component[birthYear].value[x] ^comment = "The birth year is expressed using the YYYY portion of date and is expected to correspond to the YYYY component of the birthdate included in the Decedent resource."

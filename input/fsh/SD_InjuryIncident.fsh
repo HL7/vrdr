@@ -9,7 +9,7 @@ Description: "Injury Incident (Observation)"
 * status 1..1
 * status = #final (exactly)
 * code 1..1
-* code = $loinc#11374-6 "Injury incident description Narrative" (exactly)
+* code = $loinc#11374-6 // "Injury incident description Narrative"
 * subject 1..1
 * subject only Reference(Decedent)
 * effective[x] 0..1
@@ -30,20 +30,20 @@ Description: "Injury Incident (Observation)"
 * component[placeOfInjury] ^short = "Place of injury"
 * component[workInjuryIndicator] ^short = "Injury at Work?"
 * component[placeOfInjury].code 1..1
-* component[placeOfInjury].code = $loinc#69450-5 "Place of injury Facility" (exactly)
+* component[placeOfInjury].code = $loinc#69450-5 // "Place of injury Facility"
 * component[placeOfInjury].value[x] 1..1
 * component[placeOfInjury].valueCodeableConcept.text ^short = "Place of Injury - Literal"
 // * component[placeOfInjury].value[x] only CodeableConcept
 // * component[placeOfInjury].value[x] from PlaceOfInjuryVS (required)
 * component[workInjuryIndicator].code 1..1
-* component[workInjuryIndicator].code = $loinc#69444-8 "Did death result from injury at work" (exactly)
+* component[workInjuryIndicator].code = $loinc#69444-8 // "Did death result from injury at work"
 * component[workInjuryIndicator].value[x] 1..1
 * component[workInjuryIndicator].value[x] ^short = "Injury at Work?"
 * component[workInjuryIndicator].value[x] only CodeableConcept
 * component[workInjuryIndicator].value[x] from $Yes-No-Unknown-NotApplicable (required)
 // * method from DeathDateMethodsVS (extensible)
 * component[transportationRole].code 1..1
-* component[transportationRole].code = $loinc#69451-3 "Transportation role of decedent" (exactly)
+* component[transportationRole].code = $loinc#69451-3 // "Transportation role of decedent"
 * component[transportationRole].value[x] 1..1
 * component[transportationRole].value[x] ^short = "Transportation role of decedent"
 * component[transportationRole].value[x] only CodeableConcept
