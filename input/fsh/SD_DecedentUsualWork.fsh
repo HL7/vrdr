@@ -19,9 +19,9 @@ because it is overconstrained for death reporting purposes.  Future versions of 
 * category.coding ^slicing.discriminator.path = "code"
 * category.coding ^slicing.ordered = false
 * category.coding ^slicing.rules = #open
-* category.coding contains Fixed_social-history 1..1 SU
+* category.coding contains Fixed_social-history 1..1
 * category = $observation-category#social-history  // social history
-* code = $loinc##21843-8 // History of Usual Occupation
+* code = $loinc#21843-8 // History of Usual Occupation
 * subject 1..1
 * subject only Reference(Decedent)
 * subject ^short = "Decedent"
