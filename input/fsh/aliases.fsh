@@ -10,6 +10,7 @@ Alias: $v2-0136 = http://terminology.hl7.org/CodeSystem/v2-0136
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-EducationLevel = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
