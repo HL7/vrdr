@@ -228,4 +228,4 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert addentry(Observation, RecordAxisCauseOfDeath-Example1)
 * insert addentry(Observation, EntityAxisCauseOfDeath-Example1)
 * insert addentry(Observation, PlaceOfInjury-Example1)
-* insert addentry(Parameter, CodingStatusValues-Example1)
+* insert addentry(Parameters, CodingStatusValues-Example1)
