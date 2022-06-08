@@ -6,7 +6,29 @@ Description: "Decedent Usual Work (UsualWork)"
 * insert RequireMetaProfile(DecedentUsualWork)
 * subject 1..1
 * subject only Reference(Decedent)
-* valueCodeableConcept.text ^short = "Occupation - Literal"
-* valueCodeableConcept.coding[occupationCDCCensus2010] ^short = "Occupation - code"
-* component[odh-UsualIndustry].valueCodeableConcept.text ^short = "Industry - Literal"
-* component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2010] ^short = "Industry - code"
+* component[odh-UsualIndustry]
+  * valueCodeableConcept.
+    * coding ^slicing.discriminator.type = #pattern
+    * coding ^slicing.discriminator.path = "$this"
+    * coding ^slicing.rules = #open
+    * text ^short = "Industry - Literal"
+    * coding contains
+       industryCDCCensus2018 0..1
+    * coding[industryCDCCensus2010] ^short = "Industry - CDC Census 2010"
+    * coding[industryCDCCensus2018] ^short = "Industry - CDC Census 2010"
+    * coding[industryCDCCensus2018] from $PHVS_Industry_CDC_Census2018 (required)
+    * coding[industryCDCCensus2018] ^definition = "Industry CDC Census 2018"
+    * coding[industryCDCCensus2018] ^binding.description = "Industry CDC Census 2018"
+* valueCodeableConcept
+  * coding ^slicing.discriminator.type = #pattern
+  * coding ^slicing.discriminator.path = "$this"
+  * coding ^slicing.rules = #open
+  * text ^short = "Occupation - Literal"
+  * coding contains
+    occupationCDCCensus2018 0..1
+  * coding[occupationCDCCensus2010] ^short = "Occupation - CDC Census 2010"
+  * coding[occupationCDCCensus2018] from $PHVS_Occupation_CDC_Census2018 (required)
+  * coding[occupationCDCCensus2018] ^short = "Occupation CDC Census 2018"
+  * coding[occupationCDCCensus2018] ^definition = "Occupation CDC Census 2018"
+  * coding[occupationCDCCensus2018] ^binding.description = "Occupation CDC Census 2018"
+  * text ^short = "Occupation - Literal"
