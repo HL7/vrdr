@@ -15,7 +15,7 @@ Description: "Decedent Usual Work (UsualWork)"
     * coding contains
        industryCDCCensus2018 0..1
     * coding[industryCDCCensus2010] ^short = "Industry - CDC Census 2010"
-    * coding[industryCDCCensus2018] ^short = "Industry - CDC Census 2010"
+    * coding[industryCDCCensus2018] ^short = "Industry - CDC Census 2018"
     * coding[industryCDCCensus2018] from $PHVS_Industry_CDC_Census2018 (required)
     * coding[industryCDCCensus2018] ^definition = "Industry CDC Census 2018"
     * coding[industryCDCCensus2018] ^binding.description = "Industry CDC Census 2018"
