@@ -19,11 +19,11 @@ Description: "Decedent Usual Work (UsualWork)"
     * coding[industryCDCCensus2012] ^short = "Industry - CDC Census 2012"
     * coding[industryCDCCensus2012] from $PHVS_Industry_CDC_Census2012 (required)
     * coding[industryCDCCensus2012] ^definition = "Industry CDC Census 2012"
-    * coding[industryCDCCensus2012] ^binding.description = "Industry CDC Census 2012"
+    * coding[industryCDCCensus2012] ^binding.description = "PHVS_Industry_CDC_Census2012"
     * coding[industryCDCCensus2018] ^short = "Industry - CDC Census 2018"
     * coding[industryCDCCensus2018] from $PHVS_Industry_CDC_Census2018 (required)
     * coding[industryCDCCensus2018] ^definition = "Industry CDC Census 2018"
-    * coding[industryCDCCensus2018] ^binding.description = "Industry CDC Census 2018"
+    * coding[industryCDCCensus2018] ^binding.description = "PHVS_Industry_CDC_Census2018"
 * valueCodeableConcept
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
@@ -36,9 +36,9 @@ Description: "Decedent Usual Work (UsualWork)"
   * coding[occupationCDCCensus2012] from $PHVS_Occupation_CDC_Census2012 (required)
   * coding[occupationCDCCensus2012] ^short = "Occupation CDC Census 2012"
   * coding[occupationCDCCensus2012] ^definition = "Occupation CDC Census 2012"
-  * coding[occupationCDCCensus2012] ^binding.description = "Occupation CDC Census 2012"
+  * coding[occupationCDCCensus2012] ^binding.description = "PHVS_Occupation_CDC_Census2012"
   * coding[occupationCDCCensus2018] from $PHVS_Occupation_CDC_Census2018 (required)
   * coding[occupationCDCCensus2018] ^short = "Occupation CDC Census 2018"
   * coding[occupationCDCCensus2018] ^definition = "Occupation CDC Census 2018"
-  * coding[occupationCDCCensus2018] ^binding.description = "Occupation CDC Census 2018"
+  * coding[occupationCDCCensus2018] ^binding.description = "PHVS_Occupation_CDC_Census2018"
   * text ^short = "Occupation - Literal"
