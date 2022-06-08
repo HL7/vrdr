@@ -35,8 +35,10 @@ Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-
 Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 
 // PHINVADS ValueSets - only occupation and industry remain
-Alias: $PHVS_Industry_CDC_Census2018 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=2.16.840.1.114222.4.11.8066
-Alias: $PHVS_Occupation_CDC_Census2018 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=2.16.840.1.114222.4.11.8065
+Alias: $PHVS_Industry_CDC_Census2018 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8066
+Alias: $PHVS_Occupation_CDC_Census2018 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8065
+Alias: $PHVS_Industry_CDC_Census2012 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8027
+Alias: $PHVS_Occupation_CDC_Census2012 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8026
 
 /// VRDR CS and VS
 Alias: $Yes-No-Unknown = YesNoUnknownVS
