@@ -34,13 +34,13 @@ Alias: $DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-r
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 
-// PHINVADS ValueSets --> most should be eliminated
-// Alias: $PHVSDivisionVitalStatisticsCounty = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=C2F2220B-270F-4BDF-9F8C-D5CB369F7212
-// Alias: $PHVSDecedentBirthplaceCountry = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=8B471CEB-EA88-45A4-8FAD-7805402A53F7
-// Alias: $PHVSDecedentResidentCountry = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=BF77DB9E-1023-4CBE-A79D-7354FF9C968C
-// Alias: $PHVSCityPlacesNCHS = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=D06EE94C-4D4C-440A-AD2A-1C3CB35E6D08#
-// Alias: $PH_Country_GEC = urn:oid:2.16.840.1.113883.13.250
-// VRDR CS and VS
+// PHINVADS ValueSets - only occupation and industry remain
+Alias: $PHVS_Industry_CDC_Census2018 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8066
+Alias: $PHVS_Occupation_CDC_Census2018 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065
+Alias: $PHVS_Industry_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8027
+Alias: $PHVS_Occupation_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8026
+
+/// VRDR CS and VS
 Alias: $Yes-No-Unknown = YesNoUnknownVS
 Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS
 Alias: $raceMissingValueReason = RaceMissingValueReasonVS
