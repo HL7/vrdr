@@ -1,3 +1,5 @@
+#  ruby tools/makemarkdownfromexcel.rb input/images/IJE_File_Layouts_Version_2021_FHIR.md ; cp generated/*.md input/pagecontent
+#
 require "json"
 require "pry"
 require "roo"
@@ -168,7 +170,10 @@ profiles["DecedentUsualWork"] = {
   :desc => "Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange,
             but coded values are not expected for death certificate submission. The underlying profile requires coded
             values for validity, so a null flavor value can be used as in Example1. Similarly the effective period is required,
-            and null flavor values can be substituted.",
+            and null flavor values can be substituted.
+
+            Note that the coded industry and occupation fields are bound to PHINVADs-hosted value sets.  These are the only PHINVADs
+            references in this IG.  For NCHS provided coded values the specific vocabulary used will depend on the death year.",
 }
 profiles["DispositionLocation"] = {
   :out => "StructureDefinition-vrdr-disposition-location-intro.md",
