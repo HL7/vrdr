@@ -12,9 +12,7 @@ Implementors are free to use the coded fields with the defined valuesets for int
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 84 | Occupation -- Literal  | OCCUP| |value.text | string(40) | - | 
 | 86 | Industry -- Literal  | INDUST| |component [ odh-UsualIndustry	].value.text | string(40) | - | 
-| 94 | Occupation -- 4 digit Code  | OCCUPC4| |valueCodeableConcept.coding[occupationCDCCensus2012] for death years 2022-2023 | codeable | [PHVS_Occupation_CDC_Census2012VS] | 
-| 94 | Occupation -- 4 digit Code  | OCCUPC4| |valueCodeableConcept.coding[occupationCDCCensus2018] for death years 2024 and beyond | codeable | [PHVS_Occupation_CDC_Census2018VS] | 
-| 95 | Industry -- 4 digit Code | INDUSTC4| |component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2012] for death years 2022-2023 | codeable | [PHVS_Industry_CDC_Census2012VS] | 
-| 95 | Industry -- 4 digit Code | INDUSTC4| |component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018] for death years 2024 and beyond | codeable | [PHVS_Industry_CDC_Census2018VS] | 
+| 94 | Occupation -- 4 digit Code  | OCCUPC4| |valueCodeableConcept.coding[occupationCDCCensus2018]  | codeable | [PHVS_Occupation_CDC_Census2018VS] | 
+| 95 | Industry -- 4 digit Code | INDUSTC4| |component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018]  | codeable | [PHVS_Industry_CDC_Census2018VS] | 
 {: .grid }
 {% include markdown-link-references.md %}
