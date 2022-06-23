@@ -1,4 +1,4 @@
-#  ruby tools/makemarkdownfromexcel.rb input/images/IJE_File_Layouts_Version_2021_FHIR.md ; cp generated/*.md input/pagecontent
+#  ruby tools/makemarkdownfromexcel.rb input/images/IJE_File_Layouts_Version_2021_FHIR.xlsx ; cp generated/*.md input/pagecontent
 #
 require "json"
 require "pry"
@@ -308,7 +308,10 @@ xlsx.default_sheet = "Mortality"
 filename = "generated/IJE_File_Layouts_Version_2021_FHIR.md"
 puts filename
 fullout = File.open(filename, "w")
-fullout.puts "### Data Dictionary"
+filename = "generated/DeathRoster.md"
+puts filename
+roster = File.open(filename, "w")
+fullout.puts "### Death Record Data Dictionary"
 fullout.puts ""
 fullout.puts "| **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |"
 fullout.puts "| :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |"
@@ -343,3 +346,39 @@ end
   fullout.puts "{: .grid }"
   fullout.puts "{% include markdown-link-references.md %}"
   fullout.close
+
+roster.puts "### Death Roster Data Dictionary"
+roster.puts ""
+roster.puts "| **#** |  **Description**   |  **Roster Name** |  **IJE Name**  | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |"
+roster.puts "| :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |"
+IJEField = 0
+IJEBegin = 1
+IJELength = 2
+Description = 3
+RosterName = 4
+IJEName = 10
+CodeStructureDescription = 5
+Profile = 6
+FHIRField = 7
+FHIRType = 8
+FHIREncoding = 9
+xlsx.default_sheet = "Mortality Roster"
+profiles.each do |key, value|
+  puts key
+  xlsx.each_row_streaming do |row|
+    next if row[Profile] == nil || row[Profile].value != key
+    field = description = ijename = rostername = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
+    field = row[IJEField].value.to_s if row[IJEField]
+    ijename = row[IJEName].value.to_s if row[IJEName]
+    rostername = row[RosterName].value.to_s if row[RosterName]
+    profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
+    fhirfield = row[FHIRField].value.to_s if row[FHIRField]
+    fhirtype = row[FHIRType].value.to_s if row[FHIRType]
+    fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
+    description = row[Description].value.to_s if row[Description]
+    roster.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| " + profile + "| " + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+  end
+end
+  roster.puts "{: .grid }"
+  roster.puts "{% include markdown-link-references.md %}"
+  roster.close
