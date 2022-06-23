@@ -1,12 +1,12 @@
 # Run gofsh -o fshoutput
 # create the input/pagecontent directory
-# run ruby fshtomd input output output --- last directory is redundant
+# run ruby tools/fshtomd.rb fshoutput  fsh-generated/resources  fshoutput
 # output is in fshoutput/input/pagecontent -- copy into the input/pagecontent of your IG
 
 require "pry"
-# input directory ARGV[0] -- process all files [a-z]*.fsh
-# output directory ARGV[0] -- directory to place md files that include the fsh content
-# output directory ARGV[2] -- directory to place md files that include the fsh content
+# gofsh generated fsh input directory ARGV[0] -- process all files [a-z]*.fsh
+# json input directory ARGV[1] -- directory of json artifacts
+# md output directory ARGV[2] -- directory to place md files that include the fsh content
 puts "FSHInput = #{ARGV[0]}"
 puts "JSONInput = #{ARGV[1]}"
 puts "MDOutput = #{ARGV[2]}"
