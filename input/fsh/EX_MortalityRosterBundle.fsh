@@ -1,8 +1,8 @@
-Instance: DeathRosterBundle-Example1
-InstanceOf: DeathRosterBundle
+Instance: MortalityRosterBundle-Example1
+InstanceOf: MortalityRosterBundle
 Usage: #example
-Description: "DeathRosterBundle-Example1"
-* insert AddMetaProfile(DeathRosterBundle)
+Description: "MortalityRosterBundle-Example1"
+* insert AddMetaProfile(MortalityRosterBundle)
 * insert Identifiers2020NY000182
 * meta.extension[aliasStatus].valueBoolean = false
 * meta.extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original "original record"

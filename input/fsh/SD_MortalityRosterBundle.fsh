@@ -1,9 +1,9 @@
-Profile: DeathRosterBundle
+Profile: MortalityRosterBundle
 Parent: Bundle
-Id: vrdr-death-roster-bundle
-Title: "Death ROster Bundle"
-Description: "Death Roster Bundle (Bundle): A bundle containing instances of the resources comprising death roster content.  This bundle is information-content equivalent to the traditional Death Roster."
-* insert RequireMetaProfile(DeathRosterBundle)
+Id: vrdr-mortality-roster-bundle
+Title: "Mortality Roster Bundle"
+Description: "Mortality Roster Bundle (Bundle): A bundle containing instances of the resources comprising mortality roster content.  This bundle is information-content equivalent to the traditional Mortality Roster."
+* insert RequireMetaProfile(MortalityRosterBundle)
 * insert BundleIdentifiers // includes certificate number
 * type 1..1
 * type only code

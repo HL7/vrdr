@@ -144,3 +144,4 @@
 [CodingStatusValues]: StructureDefinition-vrdr-coding-status-values.html
 [DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-bundle.html
 [CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
+[MortalityRosterBundle]: StructureDefinition-vrdr-mortality-roster-bundle.html
