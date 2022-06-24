@@ -14,6 +14,8 @@
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 
+[MortalityRosterDataDictionary]: MortalityRoster.html
+
 <!-- From the VRDR IG -->
 [BypassEditFlagCS]: CodeSystem-vrdr-bypass-edit-flag-cs.html
 [DocumentSectionCS]: CodeSystem-vrdr-document-section-cs.html

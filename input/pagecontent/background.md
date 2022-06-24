@@ -34,6 +34,12 @@ The VRDR IG is intended to support the full information content of the IJE forma
 <table><tr><td><img src="Slide23.png" style="width:60%;"/></td></tr></table>
 </center>
 
+#### Transmission of Mortality Rosters among Jurisdictions
+The VRDR IG is intended to support the full information content of the Mortality Roster format used for inter-jurisdictional exchange among jurisdictions.  The content is constructed from a small set of VRDR profiles, within a Mortality Roster bundle, as shown here.
+<center>
+<table><tr><td><img src="Slide24.png" style="width:60%;"/></td></tr></table>
+</center>
+
 ### References
 * [2022 Mortality Data reference](https://r20.rs6.net/tn.jsp?f=001u-eBMBj0UGlhPdHxUU_w_MafJMX_8rYmjFZga3pBUoUhwcUSSzMK5lw-ncpe9c1_OCJdI66kcNI-ILEyJKT9ILqF6v3RMIxQHe-k9-IYCzq96MQmC3sO0FgIOhAgnvf_zF7l6N4k8lCQjzRnFuzO-UmCFtlHJpOYd3fjY2Cw2StY-TA-wVQOw320Sj_WyhIuq2H9GPAtpsuuBkomxjl6jizGiL_Ql0yOwjp-cUjTOTA=&c=hrGtL9tmvJ1DKGpbzqPuF3KvUpFVK0qchygyr7StLU1Sluvl9ZBcLg==&ch=hptEZrbFDWPJdXxXwQsrUk7F-lUko-MpszM6NS4g8yVkg29mqPQHXA==)
 * [NCHS Instruction Manual part 8](https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)

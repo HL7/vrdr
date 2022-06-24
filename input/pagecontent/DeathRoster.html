@@ -1,0 +1,371 @@
+<h3 id="death-roster-data-dictionary">Death Roster Data Dictionary</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>#</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Roster Name</strong></th>
+<th><strong>IJE Name</strong></th>
+<th style="text-align:center"><strong>Profile</strong></th>
+<th><strong>Field</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Value Set</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">34</td>
+<td>Replacement Record -- suggested codes</td>
+<td>REPLACE</td>
+<td></td>
+<td style="text-align:center">[DeathCertificate]</td>
+<td></td>
+<td>extension[replaceStatus].value</td>
+<td>codeable</td>
+<td>[ReplaceStatusVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td>State File Number</td>
+<td>FILENO</td>
+<td></td>
+<td style="text-align:center">[DeathCertificateDocument]</td>
+<td></td>
+<td>identifier.extension[ certificateNumber].value</td>
+<td>string(6)</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td>Date of Death--Month</td>
+<td>DOD_MO</td>
+<td></td>
+<td style="text-align:center">[DeathDate]</td>
+<td></td>
+<td>value</td>
+<td>dateTime</td>
+<td>See [PartialDatesAndTimes]</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td>Date of Death--Day</td>
+<td>DOD_DY</td>
+<td></td>
+<td style="text-align:center">[DeathDate]</td>
+<td></td>
+<td>value</td>
+<td>dateTime</td>
+<td>See [PartialDatesAndTimes]</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td>Date of Death--Year</td>
+<td>DOD_YR</td>
+<td></td>
+<td style="text-align:center">[DeathDate]</td>
+<td></td>
+<td>value</td>
+<td>dateTime</td>
+<td>Required for processing</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td>State, U.S. Territory or Canadian Province of Death - literal</td>
+<td>STATETEXT_D</td>
+<td></td>
+<td style="text-align:center">[DeathLocation]</td>
+<td></td>
+<td>address.state (expanded from 2 letter code)</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td>State, U.S. Territory or Canadian Province of Death - code</td>
+<td>DSTATE</td>
+<td></td>
+<td style="text-align:center">[DeathLocation]</td>
+<td></td>
+<td>address.state or address.state.extension[nationalReportingJurisdictionId ]</td>
+<td>codeable</td>
+<td>[StatesTerritoriesProvincesVS] or [JurisdictionVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td>Death Country - Code</td>
+<td>DCOUNTRYC</td>
+<td>DTHCOUNTRYCD</td>
+<td style="text-align:center">[DeathLocation]</td>
+<td></td>
+<td>address.country</td>
+<td>string</td>
+<td>[ResidenceCountryVS].  Note: For US Death certificates should be US.</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td>State, U.S. Territory or Canadian Province of Birth - literal</td>
+<td>STATEBTH</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
+<td>string</td>
+<td>See [StateLiterals]</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>State, U.S. Territory or Canadian Province of Birth - code</td>
+<td>BPLACE_ST</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present</td>
+<td>string</td>
+<td>[JurisdictionsProvincesVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>Decedent&#39;s Legal Name--Given</td>
+<td>GNAME</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>name.given , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td>Decedent&#39;s Legal Name--Middle</td>
+<td>MIDNAME</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>name.given , name.use = official (first letter)</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td>Decedent&#39;s Legal Name--Last</td>
+<td>LNAME</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>name.family , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td>Date of Birth--Month</td>
+<td>DOB_MO</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>birthDate</td>
+<td>dateTime</td>
+<td>See [PartialDatesAndTimes]</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td>Date of Birth--Day</td>
+<td>DOB_DY</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>birthDate</td>
+<td>dateTime</td>
+<td>See [PartialDatesAndTimes]</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td>Date of Birth--Year</td>
+<td>DOB_YR</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>birthDate</td>
+<td>dateTime</td>
+<td>See [PartialDatesAndTimes]</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td>Sex</td>
+<td>SEX</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>extension[NVSS-SexAtDeath]</td>
+<td>codeable</td>
+<td>[AdministrativeGenderVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td>Decedent&#39;s Suffix</td>
+<td>SUFF</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>name.suffix , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td>Decedent&#39;s Maiden Name</td>
+<td>DMAIDEN</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>name.text , name.use=maiden</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td>State, U.S. Territory or Canadian Province of Decedent&#39;s Residence - literal</td>
+<td>STATETEXT_R</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>address.state (expanded from 2 letter code)</td>
+<td>string</td>
+<td>See [StateLiterals]</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td>State, U.S. Territory or Canadian Province of Decedent&#39;s Residence - code</td>
+<td>STATEC</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>address.state</td>
+<td>string</td>
+<td>[StatesTerritoriesProvincesVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td>Birthplace Country - Code</td>
+<td>BPLACE_CT</td>
+<td>BIRTPHPLACE_CNT</td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>extension[patient-birthPlace].value[x].country</td>
+<td>string</td>
+<td>[BirthplaceCountryVS].</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td>Decedent&#39;s Residence Country - Code</td>
+<td>COUNTRYC</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>address.country</td>
+<td>string</td>
+<td>[ResidenceCountryVS]</td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td>Decedent&#39;s SSN (may be used by some jurisdictions when allowed by law, to match with the SSN contained with the birth record)</td>
+<td>SSN</td>
+<td></td>
+<td style="text-align:center">[Decedent]</td>
+<td></td>
+<td>identifier.value where system = &#39;<a href="http://hl7.org/fhir/sid/us-ssn">http://hl7.org/fhir/sid/us-ssn</a> and type.coding.code=&quot;SB&quot;</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td>Father&#39;s First Name</td>
+<td>DADFNAME</td>
+<td>DDADF</td>
+<td style="text-align:center">[DecedentFather]</td>
+<td></td>
+<td>name.given , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td>Father&#39;s Middle Name</td>
+<td>DADMIDNAME</td>
+<td>DDADMID</td>
+<td style="text-align:center">[DecedentFather]</td>
+<td></td>
+<td>name.given , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td>Father&#39;s Surname</td>
+<td>DADLNAME</td>
+<td>FLNAME</td>
+<td style="text-align:center">[DecedentFather]</td>
+<td></td>
+<td>name.family</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td>Father&#39;s Suffix</td>
+<td>DADSUFF</td>
+<td>FATHERSUFFIX</td>
+<td style="text-align:center">[DecedentFather]</td>
+<td></td>
+<td>name.suffix , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td>Mother&#39;s Given Name</td>
+<td>MOMGNAME</td>
+<td>DMOMF</td>
+<td style="text-align:center">[DecedentMother]</td>
+<td></td>
+<td>name.given , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td>Mother&#39;s Middle Name</td>
+<td>MOMMIDNAME</td>
+<td>DMOMMID</td>
+<td style="text-align:center">[DecedentMother]</td>
+<td></td>
+<td>name.given , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td>Mother&#39;s Maiden Surname</td>
+<td>MOMMAIDNAME</td>
+<td>DMOMMDN</td>
+<td style="text-align:center">[DecedentMother]</td>
+<td></td>
+<td>name.family , name.type=maiden</td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td>Mother&#39;s Suffix</td>
+<td>MOMSUFF</td>
+<td>MOTHERSUFFIX</td>
+<td style="text-align:center">[DecedentMother]</td>
+<td></td>
+<td>name.suffix , name.use = official</td>
+<td>string</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>{: .grid }
+{% include markdown-link-references.md %}</p>
