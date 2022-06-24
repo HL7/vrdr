@@ -66,6 +66,6 @@ The profile includes:
 | 97 | Date of Registration--Month | DOR_MO| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| |date | dateTime | - | 
 | 122 | State Specific Data  | STATESP| |extension[ stateSpecificField] | string(30) | - | 
-| 184 | Replacement Record -- suggested codes | REPLACE| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
+| 184 | Replacement Record  | REPLACE| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 {: .grid }
 {% include markdown-link-references.md %}
