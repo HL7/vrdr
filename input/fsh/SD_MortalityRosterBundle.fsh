@@ -21,6 +21,6 @@ Description: "Mortality Roster Bundle (Bundle): A bundle containing instances of
 * entry ^slicing.description = "Slicing based on the profile"
 * insert BundleSlice(  Decedent,  1, 1,  Decedent,  Decedent,  Decedent)
 * insert BundleSlice(  DecedentFather,  0, 1,  DecedentFather,  DecedentFather,  DecedentFather)
-* insert BundleSlice(  Mother,  0, 1,  DecedentMother,  DecedentMother,  DecedentMother)
+* insert BundleSlice(  DecedentMother,  0, 1,  DecedentMother,  DecedentMother,  DecedentMother)
 * insert BundleSlice(  DeathLocation,  0, 1,  DeathLocation,  DeathLocation,  DeathLocation)
 * insert BundleSlice(  DeathDate,  0, 1,  DeathDate,  DeathDate,  DeathDate)
