@@ -125,7 +125,7 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[White].valueBoolean = true
 * component[BlackOrAfricanAmerican].valueBoolean = false
 * component[BlackOrAfricanAmerican].valueBoolean = false
-* component[AmericanIndianOrAlaskaNative].valueBoolean = true
+* component[AmericanIndianOrAlaskanNative].valueBoolean = true
 * component[AsianIndian].valueBoolean = false
 * component[Chinese].valueBoolean = false
 * component[Filipino].valueBoolean = false
@@ -139,7 +139,7 @@ Description: "InputRaceAndEthnicity-Example1"
 * component[OtherPacificIslander].valueBoolean = false
 * component[OtherRace].valueBoolean = false
 * component[FirstOtherAsianLiteral].valueString = "Malaysian"
-* component[FirstAmericanIndianOrAlaskaNativeLiteral].valueString = "Arikara"
+* component[FirstAmericanIndianOrAlaskanNativeLiteral].valueString = "Arikara"
 * component[HispanicMexican].valueCodeableConcept = $v2-0136#Y "Yes"
 * component[HispanicCuban].valueCodeableConcept = $v2-0136#Y "Yes"
 * component[HispanicPuertoRican].valueCodeableConcept = $v2-0136#Y "Yes"
