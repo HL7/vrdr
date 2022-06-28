@@ -1,4 +1,4 @@
-### Death Roster Data Dictionary
+### Mortality Roster Data Dictionary
 
 | **#** |  **Description**   |  **Roster Name** |  **IJE Name**  | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
@@ -32,5 +32,9 @@
 | 20 | Mother's Middle Name | MOMMIDNAME|DMOMMID| [DecedentMother]| |name.given , name.use = official | string | - | 
 | 21 | Mother's Maiden Surname | MOMMAIDNAME|DMOMMDN| [DecedentMother]| |name.family , name.type=maiden | string  | - | 
 | 24 | Mother's Suffix | MOMSUFF|MOTHERSUFFIX| [DecedentMother]| |name.suffix , name.use = official | string | - | 
+| NA | Death Record Identifier | *NO IJE MAPPING*|| [MortalityRosterBundle]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
+| 15 | State File Number | FILENO|| [MortalityRosterBundle]| |identifier.extension[ certificateNumber].value | string(6) | - | 
+| 33 | Alias Record Flag | ALIAS|| [MortalityRosterBundle]| |meta.extension[aliasStatus].value | boolean |  | 
+| 34 | Replacement Record Flag | REPLACE|| [MortalityRosterBundle]| |meta.extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 {: .grid }
 {% include markdown-link-references.md %}
