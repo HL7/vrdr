@@ -17,8 +17,8 @@ Description: "Decedent-Example3 - Stripped down for Mortality Roster"
 * name[0].given = "Madelyn"
 * name[1].use = #maiden
 * name[1].text = "Joyce McCain"
-//* name[1].family = "McCain"
-//* name[1].given = "Joyce"
+* name[1].family = "McCain"
+* name[1].given = "Joyce"
 * gender = #female   // required by USCore
 // * birthDate = "1978-03-12"
 //* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
@@ -64,7 +64,8 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * name[0].given = "Madelyn"
 * name[1].use = #maiden
 * name[1].text = "Joyce McCain"
-// * name[1].given = "Joyce"
+* name[1].given = "Joyce"
+* name[1].family = "McCain"
 * gender = #female
 // * birthDate = "1978-03-12"
 //* birthDate.extension[partialDate].extension[day].valueInteger.extension[dataabsent].valueCode = $dataabsentreason401#NA
