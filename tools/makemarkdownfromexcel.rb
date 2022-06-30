@@ -305,10 +305,10 @@ puts ARGV[0]
 
 xlsx = open_spreadsheet(ARGV[0])
 xlsx.default_sheet = "Mortality"
-filename = "generated/IJE_File_Layouts_Version_2021_FHIR.md"
+filename = "generated/DeathRecordDataDictionary.md"
 puts filename
 fullout = File.open(filename, "w")
-filename = "generated/DeathRoster.md"
+filename = "generated/MortalityRosterDataDictionary.md"
 puts filename
 roster = File.open(filename, "w")
 fullout.puts "### Death Record Data Dictionary"
@@ -347,7 +347,7 @@ end
   fullout.puts "{% include markdown-link-references.md %}"
   fullout.close
 
-roster.puts "### Death Roster Data Dictionary"
+roster.puts "### Mortality Roster Data Dictionary"
 roster.puts ""
 roster.puts "| **#** |  **Description**   |  **Roster Name** |  **IJE Name**  | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |"
 roster.puts "| :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |"
@@ -362,9 +362,26 @@ Profile = 6
 FHIRField = 7
 FHIRType = 8
 FHIREncoding = 9
+
+profiles["MortalityRosterBundle"] = {
+    :out => "StructureDefinition-vrdr-mortality-roster-bundle-intro.md",
+    :desc =>"
+   The mortality roster is used by jurisdictions to exchange death reports. <More information is needed here>.
+   There are some discrepancies that between roster and IJE field names, that are noted in the table below.
+   See the [MortalityRosterDataDictionary] for full content of the death register.",
+}
+out = nil
 xlsx.default_sheet = "Mortality Roster"
 profiles.each do |key, value|
   puts key
+  if key == "MortalityRosterBundle"
+    out = File.open("generated/" + value[:out], "w")
+    out.puts "### Usage"
+    out.puts value[:desc]
+    out.puts ""
+    out.puts "| **#** |  **Description**   |  **Roster Name** |  **IJE Name**  |  **Field**  |  **Type**  | **Value Set**  |"
+    out.puts "| :---------: | --------------- | ------------ | ---------- |  ---------- | ---------- | -------------- |"
+  end
   xlsx.each_row_streaming do |row|
     next if row[Profile] == nil || row[Profile].value != key
     field = description = ijename = rostername = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
@@ -376,9 +393,15 @@ profiles.each do |key, value|
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
-    roster.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| " + profile + "| " + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
-  end
+    roster.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    if key == "MortalityRosterBundle"
+      out.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| "  + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    end
+    end
 end
+  out.puts "{: .grid }"
+  out.puts "{% include markdown-link-references.md %}"
+  out.close
   roster.puts "{: .grid }"
   roster.puts "{% include markdown-link-references.md %}"
   roster.close
