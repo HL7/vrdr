@@ -393,7 +393,7 @@ profiles.each do |key, value|
     fhirtype = row[FHIRType].value.to_s if row[FHIRType]
     fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
     description = row[Description].value.to_s if row[Description]
-    roster.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| " + profile + "| " + ijeonly + "|" + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    roster.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
     if key == "MortalityRosterBundle"
       out.puts "| " + field.chomp + " | " + description.chomp + " | " + rostername + "|" + ijename + "| "  + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
     end

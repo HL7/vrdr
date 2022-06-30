@@ -1,4 +1,4 @@
-### Data Dictionary
+### Death Record Data Dictionary
 
 | **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
@@ -36,7 +36,7 @@
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | - | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
-| 184 | Replacement Record -- suggested codes | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
+| 184 | Replacement Record  | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | NA | Death Record Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
 | 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.extension[ certificateNumber].value | string(6) | - | 
 | 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
@@ -172,7 +172,7 @@
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| |component[ HispanicLiteral ].valueString | string | - | 
 | 44 | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| |component[ White].valueBoolean | boolean | - | 
 | 45 | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 
-| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |component[ AmericanIndianOrAlaskaNative].valueBoolean | boolean | - | 
+| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| [InputRaceAndEthnicity]| |component[ AmericanIndianOrAlaskanNative].valueBoolean | boolean | - | 
 | 47 | Decedent's Race--Asian Indian | RACE4| [InputRaceAndEthnicity]| |component[ AsianIndian].valueBoolean | boolean | - | 
 | 48 | Decedent's Race--Chinese | RACE5| [InputRaceAndEthnicity]| |component[ Chinese].valueBoolean | boolean | - | 
 | 49 | Decedent's Race--Filipino | RACE6| [InputRaceAndEthnicity]| |component[ Filipino].valueBoolean | boolean | - | 
