@@ -10,7 +10,7 @@
 | 43 | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| |component[ HispanicLiteral ].valueString | string | - | 
 | 44 | Decedent's Race--White | RACE1| |component[ White].valueBoolean | boolean | - | 
 | 45 | Decedent's Race--Black or African American | RACE2| |component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 
-| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| |component[ AmericanIndianOrAlaskaNative].valueBoolean | boolean | - | 
+| 46 | Decedent's Race--American Indian or Alaska Native | RACE3| |component[ AmericanIndianOrAlaskanNative].valueBoolean | boolean | - | 
 | 47 | Decedent's Race--Asian Indian | RACE4| |component[ AsianIndian].valueBoolean | boolean | - | 
 | 48 | Decedent's Race--Chinese | RACE5| |component[ Chinese].valueBoolean | boolean | - | 
 | 49 | Decedent's Race--Filipino | RACE6| |component[ Filipino].valueBoolean | boolean | - | 
