@@ -9,6 +9,7 @@ The profiles were designed to enable standards-based interoperable exchange in s
 * Transmission of Death Records by Jurisdictions to NCHS
 * Transmission of Coded Cause of Death and Demographics information by NCHS to Jurisdictions
 * Transmission of Death Records among Jurisdictions
+* Transmission of Mortality Rosters among Jurisdictions
 
 The profiles defined in this IG along with the mappings to the existing InterJurisdictional Exchange ([IJE](IJE_File_Layouts_Version_2021_FHIR.xlsx)) format, and associated Transax ([TRX](https://www.cdc.gov/nchs/data/dvs/2003trx.pdf)), and Mortality ([MRE](https://www.cdc.gov/nchs/data/dvs/Multiple_race_documentation_5-10-04.pdf)) documentation.  The narrative content for each profile shows the mapping of IJE-defined death record content to the fields of the profile.  Instances of these profiles are assembled as described below in bundles to support the three use cases.
 
