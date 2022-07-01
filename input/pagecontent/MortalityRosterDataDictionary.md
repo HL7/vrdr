@@ -1,6 +1,6 @@
 ### Mortality Roster Data Dictionary
 
-| **#** |  **Description**   |  **Roster Name** |  **IJE Name**  | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |
+| **#** |  **Description**   |  **Roster Name** | **IJE Name** | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 8 | Date of Death--Month | DOD_MO|| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] |
 | 9 | Date of Death--Day | DOD_DY|| [DeathDate]| value | dateTime | See [PartialDatesAndTimes] |
