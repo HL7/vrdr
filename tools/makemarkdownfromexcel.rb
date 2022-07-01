@@ -368,7 +368,7 @@ profiles["MortalityRosterBundle"] = {
     :desc =>"
    The mortality roster is used by jurisdictions to exchange death reports. <More information is needed here>.
    There are some discrepancies that between roster and IJE field names, that are noted in the table below.
-   See the [MortalityRosterDataDictionary] for full content of the death register.",
+   See the [MortalityRosterDataDictionary] for full content of the Mortality Register.",
 }
 out = nil
 xlsx.default_sheet = "Mortality Roster"
