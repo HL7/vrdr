@@ -2,7 +2,9 @@ Profile: MortalityRosterBundle
 Parent: Bundle
 Id: vrdr-mortality-roster-bundle
 Title: "Mortality Roster Bundle"
-Description: "Mortality Roster Bundle (Bundle): A bundle containing instances of the resources comprising mortality roster content.  This bundle is information-content equivalent to the traditional Mortality Roster."
+Description: "Mortality Roster Bundle (Bundle): A bundle containing instances of the resources comprising mortality roster content.  This bundle is information-content equivalent to the traditional Mortality Roster.
+The mortality roster is a supplemental report of death for the purpose of notifying the decedent's jurisdiction of birth that the death has occurred. The roster data points are sufficient to locate the birth certificate of the decedent but do not otherwise contain the full death record.
+Once received, the jurisdiction of birth uses the mortality roster data to locate the record of birth and marks it as deceased."
 * insert RequireMetaProfile(MortalityRosterBundle)
 * insert BundleIdentifiers // includes certificate number
 * type 1..1
