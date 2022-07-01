@@ -366,9 +366,11 @@ FHIREncoding = 9
 profiles["MortalityRosterBundle"] = {
     :out => "StructureDefinition-vrdr-mortality-roster-bundle-intro.md",
     :desc =>"
-   The mortality roster is used by jurisdictions to exchange death reports. <More information is needed here>.
-   There are some discrepancies that between roster and IJE field names, that are noted in the table below.
-   See the [MortalityRosterDataDictionary] for full content of the Mortality Register.",
+The mortality roster is a supplemental report of death for the purpose of notifying the decedent's jurisdiction of birth that the death has occurred. The roster data points are sufficient to locate the birth certificate of the decedent but do not otherwise contain the full death record.
+Once received, the jurisdiction of birth uses the mortality roster data to locate the record of birth and marks it as deceased.
+
+There are some discrepancies that between roster and IJE field names, that are noted in the table below.
+See the [MortalityRosterDataDictionary] for full content of the Mortality Register.",
 }
 out = nil
 xlsx.default_sheet = "Mortality Roster"
