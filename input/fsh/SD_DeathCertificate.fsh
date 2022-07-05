@@ -39,9 +39,9 @@ Description: "The body of the death certificate document (Composition)."
     StateSpecificField named stateSpecificField 0..1
 * subject 1..1
 * subject only Reference(Decedent)
-* date 1..1
+// * date 1..1
 * date ^short = "Date of Registration"
-* attester 1..1
+//* attester 1..1
 * attester only BackboneElement
 * attester.mode 1..1
 * attester.mode only code
