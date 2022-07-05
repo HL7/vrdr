@@ -66,8 +66,6 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2"
 * entry[+].resource = CauseOfDeathPart2-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1"
-* entry[+].resource = CauseOfDeathPathway-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/List/CauseOfDeathPathway-Example1"
 * entry[+].resource = DispositionLocation-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Location/DispositionLocation-Example1"
 * entry[+].resource = FuneralHome-Example1

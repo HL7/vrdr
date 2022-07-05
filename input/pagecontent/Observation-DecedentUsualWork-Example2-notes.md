@@ -1,8 +1,8 @@
 ```
-Instance: DecedentUsualWork-Example1
+Instance: DecedentUsualWork-Example2
 InstanceOf: DecedentUsualWork
-Title: "DecedentUsualWork-Example1"
-Description: "DecedentUsualWork-Example1 - without coded values"
+Title: "DecedentUsualWork-Example2"
+Description: "DecedentUsualWork-Example2 - with coded values"
 Usage: #example
 * code = http://loinc.org#21843-8
 * component.code = http://loinc.org#21844-6

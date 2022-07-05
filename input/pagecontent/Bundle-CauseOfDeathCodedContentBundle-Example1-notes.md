@@ -24,6 +24,12 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/RecordAxisCauseOfDeath-Example1"
 * entry[+].resource = EntityAxisCauseOfDeath-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example1"
+* entry[+].resource = EntityAxisCauseOfDeath-Example2
+* entry[=].fullUrl = "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example2"
+* entry[+].resource = EntityAxisCauseOfDeath-Example3
+* entry[=].fullUrl = "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example3"
+* entry[+].resource = EntityAxisCauseOfDeath-Example4
+* entry[=].fullUrl = "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example4"
 * entry[+].resource = PlaceOfInjury-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/PlaceOfInjury-Example1"
 * entry[+].resource = CodingStatusValues-Example1
@@ -38,16 +44,14 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/MannerOfDeath-Example1"
 * entry[+].resource = InjuryIncident-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/InjuryIncident-Example1"
-* entry[+].resource = DeathCertification-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/Procedure/DeathCertification-Example1"
+* entry[+].resource = DeathCertification-Example2
+* entry[=].fullUrl = "http://www.example.org/fhir/Procedure/DeathCertification-Example2"
 * entry[+].resource = CauseOfDeathPart1-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example1"
 * entry[+].resource = CauseOfDeathPart1-Example2
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2"
 * entry[+].resource = CauseOfDeathPart2-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1"
-* entry[+].resource = CauseOfDeathPathway-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/List/CauseOfDeathPathway-Example1"
 * entry[+].resource = AutopsyPerformedIndicator-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/AutopsyPerformedIndicator-Example1"
 ```

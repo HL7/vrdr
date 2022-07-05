@@ -8,7 +8,7 @@ Usage: #example
 * attester.mode = #legal
 * attester.time = "2020-11-14T16:39:40-05:00"
 * attester.party.reference = "Practitioner/Certifier-Example1"
-* event.code = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* event.code = http://snomed.info/sct#103693007
 * event.detail.reference = "Procedure/DeathCertification-Example1"
 * extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat"
 * extension[=].valueCodeableConcept.coding.code = #electronic
@@ -43,9 +43,8 @@ Usage: #example
 * section[=].entry[+].reference = "Procedure/DeathCertification-Example1"
 * section[=].entry[+].reference = "Observation/MannerOfDeath-Example1"
 * section[=].entry[+].reference = "Observation/CauseOfDeathPart1-Example1"
-* section[=].entry[+].reference = "Observation/CauseOfDeathPart1-Example1"
+* section[=].entry[+].reference = "Observation/CauseOfDeathPart1-Example2"
 * section[=].entry[+].reference = "Observation/CauseOfDeathPart2-Example1"
-* section[=].entry[+].reference = "List/CauseOfDeathPathway-Example1"
 * section[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DecedentDisposition
 * section[=].entry[0].reference = "Location/DispositionLocation-Example1"
 * section[=].entry[+].reference = "Organization/FuneralHome-Example1"

@@ -12,6 +12,4 @@ Usage: #example
 * address.country = "US"
 * name = "Pecan Grove Nursing Home"
 * description = "nursing home"
-* position.latitude = 38.889248
-* position.longitude = -77.050636
 ```

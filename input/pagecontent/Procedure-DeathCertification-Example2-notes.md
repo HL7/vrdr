@@ -1,7 +1,7 @@
 ```
-Instance: DeathCertification-Example1
+Instance: DeathCertification-Example2
 InstanceOf: DeathCertification
-Title: "DeathCertification-Example1"
+Title: "DeathCertification-Example2"
 Description: "DeathCertification-Example1"
 Usage: #example
 * status = #completed
@@ -10,7 +10,6 @@ Usage: #example
 * identifier.value = "180"
 * subject.reference = "Patient/Decedent-Example1"
 * performedDateTime = "2020-11-14T16:39:40-05:00"
-* performer.function = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#OTH "Other"
-* performer.function.text = "Nurse Practitioner"
+* performer.function = http://snomed.info/sct#434641000124105 "Death certification and verification by physician"
 * performer.actor.reference = "Practitioner/Certifier-Example1"
 ```

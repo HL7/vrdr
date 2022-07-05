@@ -119,7 +119,12 @@ profiles["DeathDate"] = {
 
   The death date specifies the date the death occurred, not the date the record was submitted.
 
-  The pronouncer of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument] and referenced from the [DeathCertificate].",
+  The pronouncer of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument] and referenced from the [DeathCertificate].
+
+  The method of date of death determination is not used for the Death Record submission process, and thus does not appear in the table below.  The binding
+  to [DateOfDeathDeterminationMethodsVS] is included for compatibility with the Medicolegal Death Investigation ([MDI]) Implementation Guide.  The valueset only
+includes the values used by MDI, but is bound [extensibly](http://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires additional values (e.g., 'presumed'), these values can be used
+while remaining in full conformance with the VRDR IG.",
 }
 profiles["DeathCertification"] = {
   :out => "StructureDefinition-vrdr-death-certification-intro.md",

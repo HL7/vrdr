@@ -9,7 +9,7 @@ Usage: #example
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskaNative
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian
 * component[=].valueBoolean = false
@@ -37,10 +37,16 @@ Usage: #example
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstOtherAsianLiteral
 * component[=].valueString = "Malaysian"
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskaNativeLiteral
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskanNativeLiteral
 * component[=].valueString = "Arikara"
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican
-* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicCuban
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicPuertoRican
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 * status = #final
 * subject.display = "NCHS generated"
 ```

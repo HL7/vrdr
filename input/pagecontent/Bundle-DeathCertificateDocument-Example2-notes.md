@@ -5,8 +5,14 @@ Title: "DeathCertificateDocument-Example2"
 Description: "DeathCertificateDocument-Example2 (with coded content)"
 Usage: #example
 * type = #document
+* identifier.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/CertificateNumber"
+* identifier.extension[=].valueString = "000182"
+* identifier.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/AuxiliaryStateIdentifier1"
+* identifier.extension[=].valueString = "000000000001"
+* identifier.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/AuxiliaryStateIdentifier2"
+* identifier.extension[=].valueString = "100000000001"
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* identifier.value = "2020YC000182"
+* identifier.value = "2020NY000182"
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * entry[0].resource = DeathCertificate-Example2
 * entry[=].fullUrl = "http://www.example.org/fhir/Bundle/DeathCertificate-Example2"
@@ -36,8 +42,8 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/DecedentPregnancyStatus-Example1"
 * entry[+].resource = TobaccoUseContributedToDeath-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/TobaccoUseContributedToDeath-Example1"
-* entry[+].resource = DeathDate-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/Observation/DeathDate-Example1"
+* entry[+].resource = DeathDate-Example2
+* entry[=].fullUrl = "http://www.example.org/fhir/Observation/DeathDate-Example2"
 * entry[+].resource = SurgeryDate-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/SurgeryDate-Example1"
 * entry[+].resource = ExaminerContacted-Example1
@@ -48,8 +54,8 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Location/DeathLocation-Example1"
 * entry[+].resource = InjuryLocation-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Location/InjuryLocation-Example1"
-* entry[+].resource = InjuryIncident-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/Observation/InjuryIncident-Example1"
+* entry[+].resource = InjuryIncident-Example2
+* entry[=].fullUrl = "http://www.example.org/fhir/Observation/InjuryIncident-Example2"
 * entry[+].resource = Certifier-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Practitioner/Certifier-Example1"
 * entry[+].resource = DeathCertification-Example1
@@ -60,8 +66,6 @@ Usage: #example
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2"
 * entry[+].resource = CauseOfDeathPart2-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1"
-* entry[+].resource = CauseOfDeathPathway-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/List/CauseOfDeathPathway-Example1"
 * entry[+].resource = DispositionLocation-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Location/DispositionLocation-Example1"
 * entry[+].resource = FuneralHome-Example1
@@ -87,5 +91,5 @@ Usage: #example
 * entry[+].resource = PlaceOfInjury-Example1
 * entry[=].fullUrl = "http://www.example.org/fhir/Observation/PlaceOfInjury-Example1"
 * entry[+].resource = CodingStatusValues-Example1
-* entry[=].fullUrl = "http://www.example.org/fhir/Parameter/CodingStatusValues-Example1"
+* entry[=].fullUrl = "http://www.example.org/fhir/Parameters/CodingStatusValues-Example1"
 ```

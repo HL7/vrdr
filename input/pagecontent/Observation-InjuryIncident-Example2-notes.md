@@ -1,8 +1,8 @@
 ```
-Instance: InjuryIncident-Example1
+Instance: InjuryIncident-Example2
 InstanceOf: InjuryIncident
-Title: "InjuryIncident-Example1"
-Description: "InjuryIncident-Example1 (with literal transportationRole)"
+Title: "InjuryIncident-Example2"
+Description: "InjuryIncident-Example2 (with coded transportationRole)"
 Usage: #example
 * status = #final
 * code = http://loinc.org#11374-6
@@ -11,8 +11,7 @@ Usage: #example
 * component[+].code = http://loinc.org#69450-5
 * component[=].valueCodeableConcept.text = "Home"
 * component[+].code = http://loinc.org#69451-3
-* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#OTH "Other"
-* component[=].valueCodeableConcept.text = "Hoverboard Rider"
+* component[=].valueCodeableConcept = http://snomed.info/sct#257518000 "Pedestrian"
 * subject.reference = "Patient/Decedent-Example1"
 * effectiveDateTime = "2019-11-02T13:00:00-05:00"
 * valueCodeableConcept.text = "drug toxicity"

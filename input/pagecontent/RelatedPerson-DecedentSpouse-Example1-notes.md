@@ -4,7 +4,7 @@ InstanceOf: DecedentSpouse
 Title: "DecedentSpouse-Example1"
 Description: "DecedentSpouse-Example1"
 Usage: #example
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPS "spouse"
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPS
 * patient.reference = "Patient/Decedent-Example1"
 * name.text = "Decedent Spouse"
 * name.use = #maiden

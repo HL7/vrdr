@@ -38,7 +38,7 @@ Usage: #example
 * address.district.extension.valuePositiveInt = 321
 * address.country = "US"
 * maritalStatus.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
-* maritalStatus.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0
+* maritalStatus.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0 "Edit Passed"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#S "Never Married"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
@@ -47,8 +47,9 @@ Usage: #example
 * name[=].family = "Patel"
 * name[=].given = "Madelyn"
 * name[+].use = #maiden
-* name[=].family = "McCain"
+* name[=].text = "Joyce McCain"
 * name[=].given = "Joyce"
+* name[=].family = "McCain"
 * gender = #female
 * contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"
