@@ -12,7 +12,7 @@ Description: "Injury Incident (Observation)"
 * code = $loinc#11374-6 // "Injury incident description Narrative"
 * subject 1..1
 * subject only Reference(Decedent)
-* effective[x] 0..1
+//* effective[x] 0..1
 * effective[x] ^short = "Date/Time of Injury"
 * effective[x] only dateTime
 * effective[x].extension contains

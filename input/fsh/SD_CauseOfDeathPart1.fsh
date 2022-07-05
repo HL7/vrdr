@@ -19,7 +19,7 @@ Description: "Cause of death Part 1 (Observation). Cause of death prior to submi
 * component ^slicing.rules = #open
 * component contains
     lineNumber 1..1 and
-    interval 1..1
+    interval 0..1   // no point in having a Part1 COD without the cause (value), but possible to have one with no interval
 * component[interval].code 1..1
 * component[interval].code = $loinc#69440-6 // "Disease onset to death interval"
 * component[interval].value[x] 1..1
