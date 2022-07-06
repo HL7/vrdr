@@ -8,8 +8,7 @@ Description: "Funeral Home (USCoreOrganization)"
 * type 1..1
 * type = OrganizationTypeCS#funeralhome // "Funeral Home"
 * name 1..1
-* address ^short = "Funeral Home Name"
-* address 1..1
+* name ^short = "Funeral Home Name"
 * address ^short = "Funeral Home Address"
 * address.state from StatesTerritoriesAndProvincesVS  (required)
 * address.city  ^short = "city"

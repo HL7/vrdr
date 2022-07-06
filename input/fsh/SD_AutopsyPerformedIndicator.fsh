@@ -20,7 +20,7 @@ Description: "Autopsy Performed Indicator (Observation)"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-    autopsyResultsAvailable 1..1
+    autopsyResultsAvailable 0..1
 * component[autopsyResultsAvailable] ^short = "Autopsy Results Available"
 * component[autopsyResultsAvailable].code 1..1
 * component[autopsyResultsAvailable].code only CodeableConcept

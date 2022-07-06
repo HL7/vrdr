@@ -17,7 +17,6 @@ Description: "Injury Incident (Observation)"
 * effective[x] only dateTime
 * effective[x].extension contains
     PartialDateTime named partialDateTime 0..1
-* value[x] 1..1
 * value[x] only CodeableConcept
 * value[x].text ^short = "How Injured - Literal?"
 * component ^slicing.discriminator.type = #value
