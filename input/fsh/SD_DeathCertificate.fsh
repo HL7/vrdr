@@ -46,8 +46,8 @@ Description: "The body of the death certificate document (Composition)."
 * attester.mode 1..1
 * attester.mode only code
 * attester.mode = #legal (exactly)
-* attester.time 1..1
-* attester.time ^short = "Death Certification time."
+// * attester.time 1..1
+// * attester.time ^short = "Death Certification time."
 * attester.party only Reference(Certifier)
 * attester.party ^short = "Certifier."
 * event 1..1

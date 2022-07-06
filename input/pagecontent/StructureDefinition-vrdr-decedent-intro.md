@@ -1,6 +1,10 @@
 ### Usage
 The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html) which requires gender.
+  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
+  due to lack of a value for gender.
+
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 7 | Decedent's Legal Name--Given  | GNAME| |name.given , name.use = official | string | - | 

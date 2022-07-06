@@ -1,5 +1,7 @@
 ### Usage
-The Certifier profile includes:
+Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
+The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
+an identifier.
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
