@@ -1,9 +1,10 @@
 Profile: DecedentFather
-Parent: RelatedPerson
+Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-father
 Title: "Decedent Father"
 Description: "Decedent Father (RelatedPerson)"
 * insert RequireMetaProfile(DecedentFather)
+* active = true
 * patient 1..1
 * patient only Reference(Decedent)
 * patient ^short = "Decedent"
@@ -16,11 +17,12 @@ Description: "Decedent Father (RelatedPerson)"
 * address 0..1
 
 Profile: DecedentMother
-Parent: RelatedPerson
+Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-mother
 Title: "Decedent Mother"
 Description: "Decedent Mother (RelatedPerson)"
 * insert RequireMetaProfile(DecedentMother)
+* active = true
 * patient 1..1
 * patient ^short = "Decedent"
 * patient only Reference(Decedent)
@@ -33,11 +35,12 @@ Description: "Decedent Mother (RelatedPerson)"
 
 
 Profile: DecedentSpouse
-Parent: RelatedPerson
+Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-spouse
 Title: "Decedent Spouse"
 Description: "Decedent Spouse (RelatedPerson)"
 * insert RequireMetaProfile(DecedentSpouse)
+* active = true
 * patient 1..1
 * patient only Reference(Decedent)
 * patient ^short = "Decedent"
