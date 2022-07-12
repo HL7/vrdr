@@ -2,7 +2,7 @@ Profile: DecedentAge
 Parent: Observation
 Id: vrdr-decedent-age
 Title: "Decedent Age"
-Description: "The decedent's chronological age at the time of death (Observation). "
+Description: "The decedent's chronological age at the time of death (Observation)."
 * insert RequireMetaProfile(DecedentAge)
 * status 1..1
 * status only code
