@@ -14,6 +14,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   | 1 month &le;  age  < 12 months | months |
   | 1 year &le; age | years|
   | age unknown | unknown |
+  {: .grid }
 
   The Decedent Age profile includes:
 

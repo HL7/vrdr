@@ -165,6 +165,7 @@ profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
   | 1 month &le;  age  < 12 months | months |
   | 1 year &le; age | years|
   | age unknown | unknown |
+  {: .grid }
 
   The Decedent Age profile includes:",
 }
