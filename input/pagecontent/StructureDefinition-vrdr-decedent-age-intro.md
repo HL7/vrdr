@@ -14,6 +14,8 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   | 1 month &le;  age  < 12 months | months |
   | 1 year &le; age | years|
 
+  The Decedent Age profile includes:
+
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 16 | Decedent's Age--Type | AGETYPE| |valueQuantity.system | codeable | [UnitsOfAgeVS] | 
