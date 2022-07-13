@@ -4,7 +4,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   Notes:
   * When present, the effective date of this observation shall be equal to the decedent's date of death.
   * Age is derived as the difference in time between the decedent's death date and birth date.  Age is an integer value, reported in the largest appropriate unit.
-  An age of 13 months should be reported as 1 year, not 13 months, or 1.083 years.  Although the FHIR quantity provides a decimal value, only the integer component
+  An age of 1 year and 1 month should be reported as 1 year, not 13 months, or 1.083 years.  Although the FHIR quantity provides a decimal value, only the integer component
   of the value will be used by NCHS.
   * The appropriate units for age are defined here:
 
