@@ -8,6 +8,7 @@
 * __Additional Bundles:__ In addition to the [DeathCertificateDocument](StructureDefinition-vrdr-death-certificate-document.html) new bundles have been defined for exchange of [coded demographic](StructureDefinition-vrdr-demographic-coded-bundle.html),  [cause of death](http://build.fhir.org/ig/HL7/vrdr/StructureDefinition-vrdr-cause-of-death-coded-bundle.html), and [mortality roster](http://build.fhir.org/ig/HL7/vrdr/StructureDefinition-vrdr-mortality-roster-bundle.html) information.  The new bundles are information content equivalent to their legacy counterparts.  All four bundles use the same set of identifiers.
 * __Examples:__ [Examples](artifacts.html#example-example-instances) are included for all profiles and extensions.
 * __Consistent Naming and Identifiers:__ The names and identifiers have been changed to achieve consistency.
+* __USCore:__ Now depends on USCore 5.0.1, and the included USCoreRelatedPersonProfile.
 
 #### Terminology Changes
 * __Standard Terminologies:__  An attempt has been made to use standard terminologies and code systems (e.g., SNOMED-CT, LOINC, HL7) wherever possible.
