@@ -2,7 +2,7 @@ Profile: DecedentFather
 Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-father
 Title: "Decedent Father"
-Description: "Decedent Father (RelatedPerson)"
+Description: "Decedent Father (USCoreRelatedPerson)"
 * insert RequireMetaProfile(DecedentFather)
 * active = true
 * patient 1..1
@@ -20,7 +20,7 @@ Profile: DecedentMother
 Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-mother
 Title: "Decedent Mother"
-Description: "Decedent Mother (RelatedPerson)"
+Description: "Decedent Mother (USCoreRelatedPerson)"
 * insert RequireMetaProfile(DecedentMother)
 * active = true
 * patient 1..1
@@ -38,7 +38,7 @@ Profile: DecedentSpouse
 Parent: USCoreRelatedPersonProfile
 Id: vrdr-decedent-spouse
 Title: "Decedent Spouse"
-Description: "Decedent Spouse (RelatedPerson)"
+Description: "Decedent Spouse (USCoreRelatedPerson)"
 * insert RequireMetaProfile(DecedentSpouse)
 * active = true
 * patient 1..1
