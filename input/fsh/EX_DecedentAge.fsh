@@ -6,5 +6,6 @@ Description: "DecedentAge-Example1"
 * status = #final
 * subject = Reference(Decedent-Example1)
 * valueQuantity.value = 42
-* valueQuantity.unit = "a"
+* valueQuantity.code = #a
+* valueQuantity.unit = "years"
 * valueQuantity.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0 "Edit Passed"

@@ -23,7 +23,7 @@ Description: "The decedent's chronological age at the time of death (Observation
 */
 * value[x] 0..1
 * value[x] only Quantity  // value = AGE, system = AGETYPE
-* valueQuantity.system from UnitsOfAgeVS (required)
+* valueQuantity.code from UnitsOfAgeVS (required)
 * valueQuantity.value ^short = "Decedent's age at time of death"
 * value[x] ^short = "The decedent's chronological age at the time of death"
 * value[x] ^definition = "The decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."
