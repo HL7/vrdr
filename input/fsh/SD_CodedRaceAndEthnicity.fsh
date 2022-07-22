@@ -9,6 +9,7 @@ Description: "Coded (from NCHS) Race and Ethnicity (Observation). This is inform
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
+* insert NCHSObservationCommon
 * insert obscodecomponent(FirstEditedCode,RaceCodeVS) // First through eighth edited codes
 * insert obscodecomponent(SecondEditedCode,RaceCodeVS)
 * insert obscodecomponent(ThirdEditedCode,RaceCodeVS)

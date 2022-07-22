@@ -9,11 +9,9 @@ Description: "Decedent Disposition Method (Observation)"
 * status 1..1
 * status only code
 * status = #final
-* status ^short = "status"
 * code 1..1
 * code only CodeableConcept
 * code = $loinc#80905-3 // "Body disposition method"
-* code ^short = "code"
 * subject 1..1
 * subject only Reference(Decedent)
 * performer ^short = "Mortician"

@@ -8,3 +8,5 @@ Description: "Place Of Injury  (Observation)"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from PlaceOfInjuryVS (required)
+* subject 1..1
+* subject only Reference(Decedent)

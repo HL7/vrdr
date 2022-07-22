@@ -22,11 +22,10 @@ Description: "The decedent's chronological age at the time of death (Observation
 * effective[x] ^definition = "The effective date of this observation shall be equal to the decedent's date of death."
 */
 * value[x] 0..1
-* value[x] only Quantity  // value = AGE, system = AGETYPE
+* value[x] only Quantity  // value = AGE, code = AGETYPE
 * valueQuantity.code from UnitsOfAgeVS (required)
 * valueQuantity.code 1..1
 * valueQuantity.value 1..1
-* valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.value ^short = "Decedent's age at time of death"
 * value[x] ^short = "The decedent's chronological age at the time of death"
 * value[x] ^definition = "The decedent's chronological age at the time of death. Age is derived as the difference in time between the decedent's death date and birth date. When age is less than one day then unit shall be minutes, when age is less than one year then unit shall be days, else unit shall be years."

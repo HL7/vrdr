@@ -6,6 +6,8 @@ Description: "Input (from EDRS) Race and Ethnicity (Observation). This is inform
 * insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
 * code = ObservationsCS#inputraceandethnicity
 * value[x] 0..0
+* subject 1..1
+* subject only Reference(Decedent)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open

@@ -8,3 +8,4 @@ Description: "Activity at Time of Death (Observation)"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from ActivityAtTimeOfDeathVS (required)
+* insert NCHSObservationCommon

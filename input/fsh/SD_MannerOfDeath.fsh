@@ -12,7 +12,7 @@ Description: "Manner of Death (Observation)"
 * code only CodeableConcept
 * code = $loinc#69449-7 // "Manner of death"
 * subject 1..1
-* subject only Reference(Patient)
+* subject only Reference(Decedent)
 * performer ^short = "Certifier"
 * performer only Reference(Certifier)
 * value[x] 1..1
