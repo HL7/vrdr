@@ -106,7 +106,7 @@
 | 201 | Informant's Relationship | INFORMRELATE| [Decedent]| x|contact.type.text  | string (30 characters) | - | 
 | 238 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH| [Decedent]| x|extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 246 | Marital Descriptor | MARITAL_DESCRIP| [Decedent]| x|maritalStatus.text  | string | - | 
-| 16 | Decedent's Age--Type | AGETYPE| [DecedentAge]| |valueQuantity.system | codeable | [UnitsOfAgeVS] | 
+| 16 | Decedent's Age--Type | AGETYPE| [DecedentAge]| |valueQuantity.code | codeable | [UnitsOfAgeVS] | 
 | 17 | Decedent's Age--Units | AGE | [DecedentAge]| |valueQuantity.value | decimal | - | 
 | 18 | Decedent's Age--Edit Flag | AGE_BYPASS| [DecedentAge]| |value.extension[BypassEditFlag].value | codeable | [EditBypass01VS] | 
 | 33 | Method of Disposition | DISP| [DecedentDispositionMethod]| |value | codeable | [MethodOfDispositionVS] | 

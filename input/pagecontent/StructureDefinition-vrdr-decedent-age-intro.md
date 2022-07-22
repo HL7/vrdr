@@ -14,7 +14,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   | 1 hr &le; age < 24 hours | hours |
   | 1 day &le; age < 28 days (1 "month") | days |
   | 1 month &le;  age  < 12 months | months |
-  | 1 year &le; age | years|
+  | 1 year &le; age &le; 135 | years|
   | age unknown | unknown |
   {: .grid }
 
@@ -22,7 +22,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 16 | Decedent's Age--Type | AGETYPE| |valueQuantity.system | codeable | [UnitsOfAgeVS] | 
+| 16 | Decedent's Age--Type | AGETYPE| |valueQuantity.code | codeable | [UnitsOfAgeVS] | 
 | 17 | Decedent's Age--Units | AGE | |valueQuantity.value | decimal | - | 
 | 18 | Decedent's Age--Edit Flag | AGE_BYPASS| |value.extension[BypassEditFlag].value | codeable | [EditBypass01VS] | 
 {: .grid }
