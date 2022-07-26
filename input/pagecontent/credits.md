@@ -15,7 +15,7 @@
 * [AbdulMalik Shakir Sr.](https://www.linkedin.com/in/ashakir/), Hi3 Solutions
 * [AbdulMalik Shakir Jr.](https://www.linkedin.com/in/abdul-shakir-a3078437/), Hi3 Solutions
 * [Salimah Shakir](https://www.linkedin.com/in/salimah-shakir-16469413/), Hi3 Solutions
-* [Saul Kravitz](https://www.linkedin.com/in/skravitz/), MITRE
+* [Saul A. Kravitz](https://www.linkedin.com/in/skravitz/), MITRE
 * [Pete Krautscheid](https://www.linkedin.com/in/pete-krautscheid-1b77437/), MITRE
 
 #### Development Team
