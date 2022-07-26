@@ -7,7 +7,9 @@ Description: "Decedent Usual Work (UsualWork)"
 * subject 1..1
 * subject only Reference(Decedent)
 * component[odh-UsualIndustry]
-  * valueCodeableConcept.
+  * valueCodeableConcept
     * text ^short = "Industry - Literal"
+    * coding[industryCDCCensus2018] ^short = "Industry Code"
 * valueCodeableConcept
   * text ^short = "Occupation - Literal"
+  * coding[occupationCDCCensus2018] ^short = "Occupation Code"
