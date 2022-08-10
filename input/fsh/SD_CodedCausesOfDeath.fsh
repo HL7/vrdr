@@ -90,7 +90,7 @@ Description: "Entity Axis Cause Of Death (Observation):   Up to 20 of instances 
 * component[position] ^short = "position"
 * component[position].valueInteger ^short = "Position"
 * component[eCodeIndicator].code 1..1
-* component[eCodeIndicator].code = #eCodeIndicator
+* component[eCodeIndicator].code = ComponentCS#eCodeIndicator
 * component[eCodeIndicator].value[x] 1..1
 * component[eCodeIndicator].value[x] only boolean
 * component[eCodeIndicator] ^short = "Entity Axis Cause of Death order"

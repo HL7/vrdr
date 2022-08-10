@@ -65,8 +65,8 @@ Description: "DeathCertificate-Example1"
 *  attester.time = "2020-11-14T16:39:40-05:00"
 *  attester.party = Reference(Certifier-Example1)
 *  event.detail = Reference(DeathCertification-Example1)
-*  extension[filingFormat].valueCodeableConcept = #electronic
-*  extension[replaceStatus].valueCodeableConcept = #original
+*  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
+*  extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original
 *  extension[stateSpecificField].valueString = "State Specific Content"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
@@ -127,8 +127,8 @@ Description: "DeathCertificate-Example2 (with coded content)"
 *  attester.time = "2020-11-14T16:39:40-05:00"
 *  attester.party = Reference(Certifier-Example1)
 *  event.detail = Reference(DeathCertification-Example1)
-*  extension[filingFormat].valueCodeableConcept = #electronic
-*  extension[replaceStatus].valueCodeableConcept = #original
+*  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
+*  extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original
 *  extension[stateSpecificField].valueString = "State Specific Content"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
