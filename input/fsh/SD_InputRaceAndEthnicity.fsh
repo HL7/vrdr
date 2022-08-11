@@ -2,7 +2,9 @@ Profile: InputRaceAndEthnicity
 Parent: Observation
 Id: vrdr-input-race-and-ethnicity
 Title: "Input Race and Ethnicity"
-Description: "Input (from EDRS) Race and Ethnicity (Observation). This is information collected by jurisdictions and submitted to NCHS."
+Description: "Input (from EDRS) Race and Ethnicity (Observation). This is information collected by jurisdictions and submitted to NCHS.
+
+This profile is only for use in a Vital Records Exchange. Systems looking to exchange this observation more broadly should reference US Core."
 * insert RequireMetaProfile(Profile: InputRaceAndEthnicity)
 * code = ObservationsCS#inputraceandethnicity
 * value[x] 0..0
