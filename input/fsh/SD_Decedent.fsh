@@ -16,8 +16,6 @@ Description: "Decedent (USCorePatient)"
 * extension[Patient-BirthPlace] ^short = "Decedent birthplace"
 * extension[Patient-BirthPlace].valueAddress.country from BirthplaceCountryVS (required)    // BPLACE_CNT
 * extension[Patient-BirthPlace].valueAddress.state from StatesTerritoriesAndProvincesVS (required) // BPLACE_ST
-* extension[Patient-BirthPlace].valueAddress.state.extension contains
-    LocationJurisdictionId named nationalReportingJurisdictionId 0..1
 * extension[Patient-BirthPlace].valueAddress.city.extension contains
     CityCode named cityCode 0..1
 * extension[Patient-BirthPlace].valueAddress.city.extension[cityCode] ^label = "City Code"
