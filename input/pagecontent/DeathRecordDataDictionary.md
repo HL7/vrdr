@@ -78,7 +78,7 @@
 | 20 | Date of Birth--Month | DOB_MO| [Decedent]| |birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 21 | Date of Birth--Day | DOB_DY| [Decedent]| |birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 22 | Birthplace--Country | BPLACE_CNT| [Decedent]| |extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
-| 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| |extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesAndProvincesVS] | 
+| 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| |extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesProvincesVS] | 
 | 24 | Decedent's Residence--City | CITYC| [Decedent]| |address.city.extension[ cityCode ] | string | see [CityCodes] | 
 | 25 | Decedent's Residence--County | COUNTYC| [Decedent]| |address.district.extension[ countyCode ] | string | see [CountyCodes] | 
 | 26 | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| [Decedent]| |address.state | string | [StatesTerritoriesProvincesVS] | 

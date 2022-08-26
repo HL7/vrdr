@@ -17,7 +17,7 @@ The Decedent profile contains basic information about the decedent, including da
 | 20 | Date of Birth--Month | DOB_MO| |birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 21 | Date of Birth--Day | DOB_DY| |birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 22 | Birthplace--Country | BPLACE_CNT| |extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
-| 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| |extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesAndProvincesVS] | 
+| 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| |extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesProvincesVS] | 
 | 24 | Decedent's Residence--City | CITYC| |address.city.extension[ cityCode ] | string | see [CityCodes] | 
 | 25 | Decedent's Residence--County | COUNTYC| |address.district.extension[ countyCode ] | string | see [CountyCodes] | 
 | 26 | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| |address.state | string | [StatesTerritoriesProvincesVS] | 
