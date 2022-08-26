@@ -8,8 +8,6 @@ Usage: #example
 * extension[=].valueCodeableConcept = http://hl7.org/fhir/administrative-gender#unknown "Unknown"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.state = "NY"
-* extension[=].valueAddress.state.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Location-Jurisdiction-Id"
-* extension[=].valueAddress.state.extension.valueString = "YC"
 * extension[=].valueAddress.country = "US"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-ssn"
@@ -22,7 +20,6 @@ Usage: #example
 * name[=].family = "McCain"
 * name[=].given = "Joyce"
 * gender = #female
-* address.state = "NY"
 * birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
 * birthDate.extension.extension[=].valueUnsignedInt = 10
 * birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
@@ -30,4 +27,5 @@ Usage: #example
 * birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
 * birthDate.extension.extension[=].valueUnsignedInt = 11
 * birthDate.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDate"
+* address.state = "NY"
 ```

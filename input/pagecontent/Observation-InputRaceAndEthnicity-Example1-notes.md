@@ -4,7 +4,9 @@ InstanceOf: InputRaceAndEthnicity
 Title: "InputRaceAndEthnicity-Example1"
 Description: "InputRaceAndEthnicity-Example1"
 Usage: #example
+* status = #final
 * code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity
+* subject.display = "NCHS generated"
 * component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican
@@ -47,6 +49,4 @@ Usage: #example
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* status = #final
-* subject.display = "NCHS generated"
 ```

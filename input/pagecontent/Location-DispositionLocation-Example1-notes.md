@@ -4,8 +4,8 @@ InstanceOf: DispositionLocation
 Title: "DispositionLocation-Example1"
 Description: "DispositionLocation-Example1"
 Usage: #example
-* type = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs#disposition
 * name = "Rosewood Cemetary"
+* type = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs#disposition
 * address.line = "303 Rosewood Ave"
 * address.city = "Danville"
 * address.state = "VA"
