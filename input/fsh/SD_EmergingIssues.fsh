@@ -7,7 +7,7 @@ RuleSet: PlaceComponent(len, number)
 * component[EmergingIssue{len}_{number}].code = ComponentCS#EmergingIssue{len}_{number}
 * component[EmergingIssue{len}_{number}].value[x] 1..1
 * component[EmergingIssue{len}_{number}].value[x] only string
-* component[EmergingIssue{len}_{number}].valueString ^maxLength = 1
+* component[EmergingIssue{len}_{number}].valueString ^maxLength = {len}
 
 
 
