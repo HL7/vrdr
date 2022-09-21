@@ -3,6 +3,7 @@ Id: vrdr-race-recode-40-cs
 Title: "Race Recode 40 CS"
 Description: "Race Recode 40"
 * ^caseSensitive = true
+* ^experimental = false
 * #01 "White"
 * #02 "Black"
 * #03 "American Indian or Alaskan Native (AIAN)"

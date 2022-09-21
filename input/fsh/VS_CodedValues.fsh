@@ -10,6 +10,7 @@ Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."
 * IntentionalRejectCS#4 "Reject4"
 * IntentionalRejectCS#5 "Reject5"
 * IntentionalRejectCS#9 "Reject9"
+* ^experimental = false
 
 ValueSet: SystemRejectVS
 Id: vrdr-system-reject-vs
@@ -22,7 +23,7 @@ Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html)."
 * SystemRejectCS#2 "ACME Reject"
 * SystemRejectCS#3 "MICAR Reject Rule Application"
 * SystemRejectCS#4 "Record Reviewed"
-
+* ^experimental = false
 
 ValueSet: TransaxConversionVS
 Id: vrdr-transax-conversion-vs
@@ -34,6 +35,7 @@ Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html)."
 * TransaxConversionCS#4 "Conversion using ambivalent table entries"
 * TransaxConversionCS#5 "Duplicate entity-axis codes deleted; no other action involved"
 * TransaxConversionCS#6 "Artificial code conversion; no other action"
+* ^experimental = false
 
 ValueSet: ActivityAtTimeOfDeathVS
 Id: vrdr-activity-at-time-of-death-vs
@@ -49,7 +51,7 @@ Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."
 * ActivityAtTimeOfDeathCS#8 "While engaged in other specified activities."
 * ActivityAtTimeOfDeathCS#9 "During unspecified activity"
 * $v3-NullFlavor#UNK "unknown"
-
+* ^experimental = false
 
 
 ValueSet: ICD10CausesOfDeathVS
@@ -57,3 +59,4 @@ Id: vrdr-icd10-causes-of-death-vs
 Title: "ICD10 Causes of Death VS"
 Description: "ICD10 Causes of Death VS"
 * include codes from system $icd10
+* ^experimental = false

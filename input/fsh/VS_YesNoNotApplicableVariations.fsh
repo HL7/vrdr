@@ -17,6 +17,7 @@ Mapping to IJE codes [here](ConceptMap-YesNoUnknownCM.html)."
 * $v2-0136#N "No"
 * $v2-0136#Y "Yes"
 * $v3-NullFlavor#UNK "unknown"
+* ^experimental = false
 
 ValueSet: YesNoUnknownNotApplicableVS
 Id: vrdr-yes-no-unknown-not-applicable-vs
@@ -28,3 +29,4 @@ Mapping to IJE codes [here](ConceptMap-YesNoUnknownNotApplicableCM.html)."
 * $v2-0136#N "No"
 * $v3-NullFlavor#UNK "unknown"
 * $v3-NullFlavor#NA "not applicable"
+* ^experimental = false

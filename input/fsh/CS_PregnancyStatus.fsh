@@ -9,3 +9,4 @@ Description: "PHVS_PregnancyStatus_NCHS codes from PH_PHINVS_CDC"
 * #4 "Not pregnant, but pregnant 43 days to 1 year before death"
 * #8 "Not Applicable: Computer generated"
 * #9 "Unknown if pregnant within the past year"
+* ^experimental = false

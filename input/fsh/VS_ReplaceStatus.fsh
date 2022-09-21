@@ -8,3 +8,4 @@ Mapping to IJE codes [here](ConceptMap-ReplaceStatusCM.html)."
 * ReplaceStatusCS#original "original record"
 * ReplaceStatusCS#updated "updated record"
 * ReplaceStatusCS#updated_notforNCHS "updated record not for nchs"
+* ^experimental = false

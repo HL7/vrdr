@@ -11,3 +11,4 @@ Mapping to IJE codes [here](ConceptMap-TransportationIncidentRoleCM.html)."
 * $v3-NullFlavor#OTH "Other"
 * $v3-NullFlavor#UNK "unknown"
 * $v3-NullFlavor#NA "not applicable"
+* ^experimental = false

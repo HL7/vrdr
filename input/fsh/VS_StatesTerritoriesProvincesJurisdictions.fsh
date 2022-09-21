@@ -31,6 +31,7 @@ Description: "Canadian Provinces"
 * #QC	"Quebec" "Quebec"
 * #SK	"Saskatchewan" "Saskatchewan"
 * #YT	"Yukon" "Yukon"
+* ^experimental = false
 
 RuleSet: USStatesAndTerritories
 * $statesCS#AL  "Alabama"
@@ -97,6 +98,7 @@ Title: "US States, Territories Value Set"
 Description: "2 Letter States and Territories Value Set"
 * ^status = #active
 * ^version = "1.0.0"
+* ^experimental = false
 //* insert USStatesAndTerritories
 // * include codes from system $statesCS
 * include codes from valueset http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
@@ -169,6 +171,7 @@ Title: "States, Territories and Provinces Value Set"
 Description: "2 Letter States and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
+* ^experimental = false
 //* insert USStatesAndTerritories
 // * insert CanadaProvinces -- this doesn't work, don't be tempted
 * codes from valueset USStatesAndTerritoriesVS
@@ -181,6 +184,7 @@ Title: "Jurisdictions and Provinces Value Set"
 Description: "2 Letter Jurisdictions and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
+* ^experimental = false
 // * insert USStatesAndTerritories
 // * insert CanadaProvinces
 * codes from valueset USStatesAndTerritoriesVS
@@ -196,6 +200,7 @@ Description: "2 Letter Candadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 // * insert CanadaProvinces
 * codes from system CanadianProvincesCS
+* ^experimental = false
 
 ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs
@@ -203,3 +208,4 @@ Title: "Jurisdictions Value Set"
 Description: "2 Letter Codes for all 57 Jurisdictions Reporting Deaths to NCHS"
 * codes from valueset USStatesAndTerritoriesVS
 * JurisdictionsCS#YC "New York City"
+* ^experimental = false

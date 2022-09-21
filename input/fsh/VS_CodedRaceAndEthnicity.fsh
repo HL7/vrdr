@@ -1496,6 +1496,7 @@ Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 * RaceCodeCS#R94 "Unalaska"
 * RaceCodeCS#R95 "Native Village of Unga"
 * RaceCodeCS#R96 "Kaguyak Village"
+* ^experimental = false
 
 ValueSet: RaceRecode40VS
 Id: vrdr-race-recode-40-vs
@@ -1545,3 +1546,4 @@ Mapping to IJE codes [here](ConceptMap-RaceRecode40CM.html)."
 * RaceRecode40CS#39 "AIAN, Asian, NHOPI and White"
 * RaceRecode40CS#40 "Black, AIAN, Asian, NHOPI and White"
 * RaceRecode40CS#99 "Unknown and Other Race"
+* ^experimental = false

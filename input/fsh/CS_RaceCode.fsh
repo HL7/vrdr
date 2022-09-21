@@ -3,6 +3,7 @@ Id: vrdr-race-code-cs
 Title: "Race Code CS"
 Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * ^caseSensitive = true
+* ^experimental = false
 // WHITE (100-199) White
 * #100 "White Checkbox"
 * #101 "White"

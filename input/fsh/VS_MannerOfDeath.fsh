@@ -12,3 +12,4 @@ Mapping to IJE codes [here](ConceptMap-MannerOfDeathCM.html)."
 * $sct#27935005 "Homicide"
 * $sct#185973002 "Patient awaiting investigation"
 * $sct#65037004 "Death, manner undetermined"
+* ^experimental = false

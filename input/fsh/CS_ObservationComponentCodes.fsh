@@ -8,6 +8,8 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #emergingissues "Emerging Issues" "NCHS-required emerging issues data."
 * #codedraceandethnicity "Coded Race and Ethnicity" "Coded Race and Ethnicity Data produced by NCHS from submitted death record"
 * #inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
+* ^experimental = false
+
 
 RuleSet: PlaceComponentCode(len, number)
 * #EmergingIssue{len}_{number} "EmergingIssue{len}_{number}"
@@ -84,6 +86,7 @@ Description: "Local Component Codes for observation components that lack an appr
 * #SecondOtherPacificIslanderLiteral "Second Other Pacific Islander Literal"
 * #FirstOtherRaceLiteral "First Other Race Literal"
 * #SecondOtherRaceLiteral "Second Other Race Literal"
+* ^experimental = false
 
 
 
@@ -95,3 +98,4 @@ Description: "Local Organization Types"
 * ^content = #complete
 * ^caseSensitive = false
 * #funeralhome "Funeral Home" "Funeral Home."
+* ^experimental = false

@@ -9,3 +9,4 @@ additional values (e.g., 'presumed'), these values can be used while remaining i
 * DateOfDeathDeterminationMethodsCS#approximate "Approximate"
 // * DateOfDeathDeterminationMethodsCS#presumed "Presumed Date of Death"
 * DateOfDeathDeterminationMethodsCS#court-appointed "Court Appointed"
+* ^experimental = false

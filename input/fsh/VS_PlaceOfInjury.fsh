@@ -16,3 +16,4 @@ Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."
 * $loinc#LA14092-3 "Farm"
 * $loinc#LA14093-1 "Unspecified"
 * $v3-NullFlavor#OTH "Other"
+* ^experimental = false

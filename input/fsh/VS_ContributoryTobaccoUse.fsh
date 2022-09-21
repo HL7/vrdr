@@ -10,3 +10,4 @@ Mapping to IJE codes [here](ConceptMap-ContributoryTobaccoUseCM.html)."
 * $sct#2931005 "Probably"
 * $v3-NullFlavor#UNK "Unknown"
 * $v3-NullFlavor#NI "no information"
+* ^experimental = false

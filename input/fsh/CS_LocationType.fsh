@@ -10,3 +10,4 @@ Description: "Location Type Code System"
 * #injury "Injury Location"
 * #disposition "Disposition Location"
 * #death "Death Location"
+* ^experimental = false

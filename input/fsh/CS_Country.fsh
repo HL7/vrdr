@@ -299,3 +299,4 @@ Description: "2 Letter Country Codes from GEC and ISO 3166-1"
 * #ZA "Zambia" "Zambia"
 * #ZI "Zimbabwe" "Zimbabwe"
 * #ZZ "Not Classifiable" "Not Classifiable"
+* ^experimental = false

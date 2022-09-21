@@ -8,3 +8,4 @@ Description: "Date of Death Determination Methods"
 * #approximate "Approximate"
 * #presumed "Presumed Date of Death"
 * #court-appointed "Court Appointed"
+* ^experimental = false

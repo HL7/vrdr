@@ -13,3 +13,4 @@ Mapping to IJE codes [here](ConceptMap-PlaceOfDeathCM.html)."
 * $sct#450381000124100 "Death in nursing home or long term care facility"
 * $v3-NullFlavor#OTH "Other"
 * $v3-NullFlavor#UNK "UNK"
+* ^experimental = false

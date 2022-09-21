@@ -13,3 +13,4 @@ Mapping to IJE codes [here](ConceptMap-EducationLevelCM.html)."
 * $degreeLicenseCertificateV2#MA "Master's degree"
 * $HL7_EducationLevelCS#POSTG "Doctoral or post graduate education"
 * $v3-NullFlavor#UNK "unknown"
+* ^experimental = false
