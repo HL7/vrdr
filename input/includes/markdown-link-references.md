@@ -16,6 +16,7 @@
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 
 [MortalityRosterDataDictionary]: MortalityRosterDataDictionary.html
+[SurveillanceDataDictionary]: SurveillanceDataDictionary.html
 
 <!-- From the VRDR IG -->
 [BypassEditFlagCS]: CodeSystem-vrdr-bypass-edit-flag-cs.html
@@ -146,4 +147,5 @@
 [DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-bundle.html
 [CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
 [MortalityRosterBundle]: StructureDefinition-vrdr-mortality-roster-bundle.html
+[SurveillanceBundle]: StructureDefinition-vrdr-surveillance-bundle-intro.html
 [DateOfDeathDeterminationMethodsVS]: ValueSet-vrdr-date-of-death-determination-methods-vs.html

@@ -345,6 +345,9 @@ fullout = File.open(filename, "w")
 filename = "generated/MortalityRosterDataDictionary.md"
 puts filename
 roster = File.open(filename, "w")
+filename = "generated/SurveillanceDataDictionary.md"
+puts filename
+surveillance = File.open(filename, "w")
 fullout.puts "### Death Record Data Dictionary"
 fullout.puts ""
 fullout.puts "| **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |"
@@ -439,3 +442,61 @@ end
   roster.puts "{: .grid }"
   roster.puts "{% include markdown-link-references.md %}"
   roster.close
+
+  IJEField = 0
+  IJEBegin = 1
+  IJELength = 2
+  Description = 3
+  IJEName = 4
+  CodeStructureDescription = 5
+  IJEOnly = 6
+  Profile = 7
+  FHIRField = 8
+  FHIRType = 9
+  FHIREncoding = 10
+  surveillance.puts "### Surveillance Data Dictionary"
+  surveillance.puts ""
+  surveillance.puts "| **Description**   |  **IJE Name**  | **Profile**  |  **Field**  |  **Type**  | **Value Set**  |"
+  surveillance.puts "| --------- |  ---------- | :------------: | ---------- | ---------- | -------------- |"
+
+  profiles["SurveillanceBundle"] = {
+    :out => "StructureDefinition-vrdr-surveillance-bundle-intro.md",
+    :desc =>"
+
+There are some discrepancies that between the Surveillance Bundle and IJE field names, that are noted in the table below.
+See the [SurveillanceDataDictionary] for full content of the Surveillance Bundle.",
+}
+  out = nil
+xlsx.default_sheet = "Surveillance"
+profiles.each do |key, value|
+  puts key
+  if key == "SurveillanceBundle"
+    out = File.open("generated/" + value[:out], "w")
+    out.puts "### Usage"
+    out.puts value[:desc]
+    out.puts ""
+    out.puts "|  **Description**   |  **IJE Name**  |  **Field**  |  **Type**  | **Value Set**  |"
+    out.puts "| --------------- | ---------- |  ---------- | ---------- | -------------- |"
+  end
+  xlsx.each_row_streaming do |row|
+    next if row[Profile] == nil || row[Profile].value != key
+    field = description = ijename = rostername = profile = fhirfield = fhirtype = fhirencoding = ijeonly = ""
+    field = row[IJEField].value.to_s if row[IJEField]
+    ijename = row[IJEName].value.to_s if row[IJEName]
+    profile = "[" + row[Profile].value.to_s + "]" if row[Profile]
+    fhirfield = row[FHIRField].value.to_s if row[FHIRField]
+    fhirtype = row[FHIRType].value.to_s if row[FHIRType]
+    fhirencoding = row[FHIREncoding].value.to_s if row[FHIREncoding]
+    description = row[Description].value.to_s if row[Description]
+    surveillance.puts " | " + description.chomp + " | " + ijename + "| " + profile + "| " + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    if key == "SurveillanceBundle"
+      out.puts "| " + description.chomp + " | " + ijename + "| "  + fhirfield + " | " + fhirtype + " | " + fhirencoding + " | "
+    end
+    end
+end
+  out.puts "{: .grid }"
+  out.puts "{% include markdown-link-references.md %}"
+  out.close
+  surveillance.puts "{: .grid }"
+  surveillance.puts "{% include markdown-link-references.md %}"
+  surveillance.close
