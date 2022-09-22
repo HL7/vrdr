@@ -41,6 +41,12 @@ The VRDR IG is intended to support the full information content of the Mortality
 <table><tr><td><img src="Slide24.png" style="width:60%;"/></td></tr></table>
 </center>
 
+#### Transmission of Data from EDRS to Public Health Surveillance (Work in Progress)
+We anticipate/hope that the data transmitted by VROs for public health surveillance will be a subset of the information used for submission to NCHS or inter-jurisdictional exchange of mortality data.  As such, the profiles developed for those use cases can be reused for this use case, with a subset of the profiles packaged within a new surveillance bundle for this purpose. (As with the previous use cases, the VRDR IG does not address the mechanism for exchange of this information, only the data content.)   The profiles used for the surveillance usecase are shown here.   At least two VRDR profiles (Part1 and Part2 Cause of Death) require addtional documentation for use here.   Other profiles that may require changes are marked with '?'.   Profiles where only subsets of content are likely needed are marked with a 'half moon' symbol.  Profiles that are not needed are marked with an 'x'.
+<center>
+<table><tr><td><img src="Surveillance.png" style="width:60%;"/></td></tr></table>
+</center>
+
 ### References
 * [2022 Mortality Data reference](https://r20.rs6.net/tn.jsp?f=001u-eBMBj0UGlhPdHxUU_w_MafJMX_8rYmjFZga3pBUoUhwcUSSzMK5lw-ncpe9c1_OCJdI66kcNI-ILEyJKT9ILqF6v3RMIxQHe-k9-IYCzq96MQmC3sO0FgIOhAgnvf_zF7l6N4k8lCQjzRnFuzO-UmCFtlHJpOYd3fjY2Cw2StY-TA-wVQOw320Sj_WyhIuq2H9GPAtpsuuBkomxjl6jizGiL_Ql0yOwjp-cUjTOTA=&c=hrGtL9tmvJ1DKGpbzqPuF3KvUpFVK0qchygyr7StLU1Sluvl9ZBcLg==&ch=hptEZrbFDWPJdXxXwQsrUk7F-lUko-MpszM6NS4g8yVkg29mqPQHXA==)
 * [NCHS Instruction Manual part 8](https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf)
