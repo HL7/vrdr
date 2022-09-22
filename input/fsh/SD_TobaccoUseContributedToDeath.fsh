@@ -10,7 +10,7 @@ Description: "Tobacco Use Contributed To Death (Observation)"
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#69443-0 "Did tobacco use contribute to death" (exactly)
+* code = $loinc#69443-0 "Did tobacco use contribute to death"
 * subject 1..1
 * subject only Reference(Decedent)
 * value[x] 1..1
