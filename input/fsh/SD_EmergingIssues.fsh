@@ -45,4 +45,4 @@ Description: "Emerging Issues (Observation)"
 * component[EmergingIssue20].code = ComponentCS#EmergingIssue20
 * component[EmergingIssue20].value[x] 1..1
 * component[EmergingIssue20].value[x] only string
-* component[EmergingIssue20].valueString ^maxLength = 1
+* component[EmergingIssue20].valueString ^maxLength = 20
