@@ -11,7 +11,8 @@ Description: "Cause of death Part 2 (Observation). Identifies factors contributi
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding 0..*
-* valueCodeableConcept.coding from ICD10CausesOfDeathVS (required) // not used by NCHS or for IJE, only surveillance
+* valueCodeableConcept.coding from ICD10CausesOfDeathVS (required)  // not used by NCHS or for IJE, only surveillance
+* valueCodeableConcept.coding ^short = "Coded Cause(s) of Death Associated with the Text Field"
 * valueCodeableConcept.text 1..1
 * valueCodeableConcept.text ^short = "Cause of Death Part 2"
 * valueCodeableConcept.text ^maxLength = 240
