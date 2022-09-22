@@ -11,7 +11,8 @@ Description: "Cause of death Part 1 (Observation). Cause of death prior to submi
 * valueCodeableConcept.text ^short = "Cause of Death Part 1, Line a,b,c,d"
 * valueCodeableConcept.text ^maxLength = 120
 * valueCodeableConcept.coding ^short = "Coded Cause(s) of Death Associated with the Text Field"
-* value[x] from ICD10CausesOfDeathVS (required) // not used by NCHS or for IJE, only surveillance
+* valueCodeableConcept.coding 0..*
+* valueCodeableConcept.coding from ICD10CausesOfDeathVS (required) // not used by NCHS or for IJE, only surveillance
 * subject 1..1
 * subject only Reference(Decedent)
 * performer ^short = "Certifier"
