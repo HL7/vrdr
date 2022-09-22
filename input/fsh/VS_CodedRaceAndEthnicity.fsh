@@ -3,9 +3,9 @@ Id: vrdr-hispanic-origin-vs
 Title: "HispanicOrigin Value Set"
 Description: "NCHS HispanicOrigin Value Set.
 
-
 Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 //* include codes from system HispanicOriginCS
+* ^experimental = false
 * HispanicOriginCS#100 "Not Hispanic"
 * HispanicOriginCS#200 "Spaniard"
 * HispanicOriginCS#201 "Andalusian"
@@ -89,6 +89,7 @@ Title: "Race Code Value Set"
 Description: "NCHS Race Codes.
 
 Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
+* ^experimental = false
 //* include codes from system RaceCodeCS
 * RaceCodeCS#100 "White Checkbox"
 * RaceCodeCS#101 "White"
