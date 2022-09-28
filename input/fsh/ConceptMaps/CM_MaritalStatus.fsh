@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-marital-status-cm
 Usage: #definition
 * insert ConceptMapIntro(MaritalStatus, MaritalStatusVS)
-* insert AddGroup("IJE",$sct)
+* insert AddGroup("IJE",$v3-MaritalStatus)
 * insert MapConcept( #D,  "Divorced",#D, "Divorced")
 * insert MapConcept( #A,  "Married but Separated",#L, "Legally Separated")
 * insert MapConcept( #M,  "Married",#M, "Married")
