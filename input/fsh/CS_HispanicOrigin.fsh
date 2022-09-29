@@ -3,6 +3,7 @@ Id: vrdr-hispanic-origin-cs
 Title: "HispanicOrigin CS"
 Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCodeTitles.pdf"
 * ^caseSensitive = true
+* ^experimental = false
 // 100-199 Not Hispanic
 * #100 "Not Hispanic"
 * #200 "Spaniard"
