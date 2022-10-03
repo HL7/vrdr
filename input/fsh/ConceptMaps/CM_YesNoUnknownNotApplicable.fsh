@@ -4,10 +4,10 @@ InstanceOf: ConceptMap
 // Id: vrdr-yes-no-unknown-not-applicable-cm
 Usage: #definition
 * insert ConceptMapIntro(YesNoUnknownNotApplicable, YesNoUnknownNotApplicableVS)
-* insert AddGroup("TRX",$v2-0136)
+* insert AddGroup("IJE",$v2-0136)
 * insert MapConcept( #N,  "No",#N, "No")
 * insert MapConcept( #Y,  "Yes",#Y, "Yes")
-* insert AddGroup("TRX",$v3-NullFlavor)
+* insert AddGroup("IJE",$v3-NullFlavor)
 * insert MapConcept( #X,  "Not Applicable",#NA, "Not Applicable")
 * insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
 
@@ -16,10 +16,10 @@ InstanceOf: ConceptMap
 // Id: vrdr-yes-no-unknown-cm
 Usage: #definition
 * insert ConceptMapIntro(YesNoUnknown , YesNoUnknownVS)
-* insert AddGroup("TRX",$v2-0136)
+* insert AddGroup("IJE",$v2-0136)
 * insert MapConcept( #N,  "No",#N, "No")
 * insert MapConcept( #Y,  "Yes",#Y, "Yes")
-* insert AddGroup("TRX",$v3-NullFlavor)
+* insert AddGroup("IJE",$v3-NullFlavor)
 * insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
 
 
