@@ -1,17 +1,17 @@
-RuleSet: CanadaProvinces
-* $provinces#AB	"Alberta"
-* $provinces#BC	"British Columbia"
-* $provinces#MB	"Manitoba"
-* $provinces#NB	"New Brunswick"
-* $provinces#NL	"Newfoundland and Labrador"
-* $provinces#NS	"Nova Scotia"
-* $provinces#NT	"Northwest Territories"
-* $provinces#NU	"Nunavut"
-* $provinces#ON	"Ontario"
-* $provinces#PE	"Prince Edward Island"
-* $provinces#QC	"Quebec"
-* $provinces#SK	"Saskatchewan"
-* $provinces#YT	"Yukon"
+// RuleSet: CanadaProvinces
+// * $provinces#AB	"Alberta"
+// * $provinces#BC	"British Columbia"
+// * $provinces#MB	"Manitoba"
+// * $provinces#NB	"New Brunswick"
+// * $provinces#NL	"Newfoundland and Labrador"
+// * $provinces#NS	"Nova Scotia"
+// * $provinces#NT	"Northwest Territories"
+// * $provinces#NU	"Nunavut"
+// * $provinces#ON	"Ontario"
+// * $provinces#PE	"Prince Edward Island"
+// * $provinces#QC	"Quebec"
+// * $provinces#SK	"Saskatchewan"
+// * $provinces#YT	"Yukon"
 
 CodeSystem: CanadianProvincesCS
 Id: vrdr-canadian-provinces-cs
@@ -196,7 +196,7 @@ Description: "2 Letter Jurisdictions and Provinces Value Set"
 ValueSet: CanadaProvincesVS
 Id: vrdr-canada-provinces-vs
 Title: "Canadian Provinces Value Set"
-Description: "2 Letter Candadian Provinces Value Set"
+Description: "2 Letter Canadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 // * insert CanadaProvinces
 * codes from system CanadianProvincesCS
