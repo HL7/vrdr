@@ -1,10 +1,9 @@
 CodeSystem: RaceCodeCS
 Id: vrdr-race-code-cs
 Title: "Race Code CS"
-Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
+Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/Appendix_E_Accessible_Race_Code_List_Update_2011.pdf"
 * ^caseSensitive = true
 * ^experimental = false
-// WHITE (100-199) White
 * #100 "White Checkbox"
 * #101 "White"
 * #102 "Arab"
@@ -41,8 +40,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #133 "BOSNIAN"
 * #134 "KOSOVIAN"
 * #199 "Multiple WHITE responses"
-* #200 "Black or African American"
-// BLACK OR AFRICAN AMERICAN (200-299) Black
+* #200 "Black Checkbox"
 * #201 "Black"
 * #202 "African"
 * #203 "African American"
@@ -66,42 +64,36 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #226 "ERITREAN"
 * #227 "TOGOLESE"
 * #228 "SOMALIAN"
-* #299 "Multiple BLACK or AFRICAN AMERICAN responses"
-// AMERICAN INDIAN AND ALASKA NATIVE (300-399, A01-R99) American Indian or Alaskan Native
+* #299 "Multiple BLACK  or AFRICAN AMERICAN responses"
 * #300 "American Indian Checkbox"
-// ASIAN (400-499)
-* #400 "Asian"
+* #400 "Asian Indian Checkbox"
 * #401 "Asian Indian"
 * #402 "Bangladeshi"
 * #403 "Bhutanese"
 * #404 "Burmese"
 * #405 "Cambodian"
-// ASIAN (400-499) Chinese
+* #410 "Chinese Checkbox"
 * #411 "Chinese"
 * #412 "Taiwanese"
-// ASIAN (400-499) Filipino
+* #420 "Filipino Checkbox"
 * #421 "Filipino"
 * #422 "Hmong"
 * #423 "Indonesian"
-// ASIAN (400-499) Japanese
+* #430 "Japanese Checkbox"
 * #431 "Japanese"
-// ASIAN (400-499) Korean
+* #440 "Korean Checkbox"
 * #441 "Korean"
-// ASIAN (400-499) Other Asian
 * #442 "Laotian"
-// ASIAN (400-499) Other Asian
 * #443 "Malaysian"
 * #444 "Okinawan"
 * #445 "Pakistani"
 * #446 "Sri Lankan"
 * #447 "Thai"
-// ASIAN (400-499) Vietnamese
+* #450 "Vietnamese Checkbox"
 * #451 "Vietnamese"
-// ASIAN (400-499) Other Asian
-* #461 "Amerasian"
+* #460 "Other Asian Checkbox"
 * #462 "Asian"
 * #463 "Asiatic"
-* #464 "Eurasian"
 * #465 "Mongolian"
 * #466 "Oriental"
 * #467 "Whello"
@@ -115,23 +107,23 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #475 "MIEN"
 * #476 "TIBETAN"
 * #499 "Multiple ASIAN responses"
-//  NATIVE HAWAIIAN AND OTHER PACIFIC ISLANDER (500-599) Polynesian
 * #500 "Native Hawaiian Checkbox"
 * #501 "Native Hawaiian"
 * #502 "Hawaiian"
 * #503 "Part Hawaiian"
+* #510 "Samoan Checkbox"
 * #511 "Samoan"
 * #512 "Tahitian"
 * #513 "Tongan"
 * #514 "Polynesian"
 * #515 "Tokelauan"
-// NATIVE HAWAIIAN AND OTHER PACIFIC ISLANDER (500-599) Micronesian
+* #520 "Guamanian Checkbox"
 * #521 "Guamanian"
 * #522 "Chamorro"
+* #530 "Other Pacific Islander Checkbox"
 * #531 "Mariana Islander"
 * #532 "Marshallese"
 * #533 "Palauan"
-// NATIVE HAWAIIAN AND OTHER PACIFIC ISLANDER (500-599) Micronesian
 * #534 "Carolinian"
 * #535 "Kosraean"
 * #536 "Micronesian"
@@ -140,16 +132,14 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #539 "Kirabati"
 * #540 "Chuukese"
 * #541 "Yapese"
-// NATIVE HAWAIIAN AND OTHER PACIFIC ISLANDER (500-599) Melanesian
 * #542 "Fijian"
 * #543 "Melanesian"
 * #544 "Papua New Guinean"
 * #545 "Solomon Islander"
 * #546 "New Hebrides"
-// NATIVE HAWAIIAN AND OTHER PACIFIC ISLANDER (500-599) Other Pacific Islander
 * #547 "Pacific Islander"
 * #599 "Multiple NATIVE HAWAIIAN and OTHER PACIFIC ISLANDER responses"
-// SOME OTHER RACE (600-999) Some Other Race
+* #600 "Other Race Checkbox"
 * #601 "Argentinean"
 * #602 "Bolivian"
 * #604 "Central American"
@@ -174,7 +164,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #623 "Morena"
 * #624 "South American"
 * #625 "Spanish"
-// SOME OTHER RACE (600-999) Some Other Race
 * #626 "Spanish American"
 * #627 "Sudamericano"
 * #628 "Uruguayan"
@@ -197,6 +186,8 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #646 "Guyanese"
 * #647 "Surinam"
 * #648 "Sudanese"
+* #649 "Amerasian"
+* #650 "Eurasian"
 * #651 "Brazilian"
 * #652 "Brown"
 * #653 "Bushwacker"
@@ -223,7 +214,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #675 "Quadroon"
 * #676 "Multiracial"
 * #677 "Interracial"
-// SOME OTHER RACE (600-999) Some Other Race
 * #678 "Multiethnic"
 * #679 "Multinational"
 * #680 "JEWISH"
@@ -234,17 +224,14 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #685 "MALADA"
 * #686 "OTHER SPANISH"
 * #699 "OTHER RACE, N.E.C."
-* #990 "Multiple SOME OTHER RACE responses 995 American"
-// SOME OTHER RACE (600-999) Uncodable, Deferred, Unknown
+* #990 "Multiple SOME OTHER RACE responses"
+* #995 "American"
 * #996 "Uncodable"
 * #997 "Deferred"
-* #998 "UNKNOWN 2"
+* #998 "UNKNOWN"
 * #999 "First Pass Reject"
-// AMERICAN INDIAN (A01-M43) Abenaki
 * #A01 "Abenaki Nation of Missiquoi"
-// AMERICAN INDIAN (A01-M43) Algonquian
 * #A05 "Algonquian"
-// AMERICAN INDIAN (A01-M43) Apache
 * #A09 "Apache"
 * #A10 "Chiricahua"
 * #A11 "Fort Sill Apache"
@@ -255,33 +242,23 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #A16 "Payson Tonto Apache"
 * #A17 "San Carlos Apache"
 * #A18 "White Mountain Apache"
-// AMERICAN INDIAN (A01-M43) Arapahoe
 * #A24 "Arapahoe"
 * #A25 "Northern Arapahoe"
 * #A26 "Southern Arapahoe"
 * #A27 "Wind River Arapahoe"
-// AMERICAN INDIAN (A01-M43) Arikara
 * #A31 "Arikara"
-// AMERICAN INDIAN (A01-M43) Assiniboine
 * #A34 "Assiniboine"
 * #A35 "Fort Peck Assiniboine"
 * #A36 "Fort Belknap Assiniboine"
-// AMERICAN INDIAN (A01-M43) Assiniboine Sioux
 * #A38 "Assiniboine Sioux"
 * #A39 "Fort Peck Assiniboine and Sioux"
-// AMERICAN INDIAN (A01-M43) Bannock
 * #A42 "Bannock"
-// AMERICAN INDIAN (A01-M43) Blackfeet
 * #A45 "Blackfeet"
-// AMERICAN INDIAN (A01-M43) Brotherton
 * #A51 "Brotherton"
-// AMERICAN INDIAN (A01-M43) Burt Lake Band
 * #A54 "Burt Lake Band"
-// AMERICAN INDIAN (A01-M43) Caddo
 * #A56 "Caddo"
 * #A57 "Caddo Indian Tribe of Oklahoma"
 * #A58 "Caddo Adais Indians"
-// AMERICAN INDIAN (A01-M43) Cahuilla
 * #A61 "Agua Caliente Band of Cahuilla Indians"
 * #A62 "Augustine"
 * #A63 "Cabazon Band of Cahuilla Mission Indians"
@@ -291,7 +268,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #A67 "Santa Rosa Cahuilla"
 * #A68 "Torres Martinez Band of Cahuilla Mission Indians"
 * #A69 "Ramona Band or Village of Cahuilla Mission Indians"
-// AMERICAN INDIAN (A01-M43) California Tribes
 * #A74 "CALIFORNIA TRIBES N.E.C."
 * #A75 "Cahto Indian Tribe of the Laytonville Rancheria"
 * #A76 "Chimariko"
@@ -309,28 +285,20 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #A88 "Bear River Band of Rohnerville Rancheria"
 * #A89 "DIGGER"
 * #A90 "WIKCHAMNI"
-// AMERICAN INDIAN (A01-M43) Tolowa
 * #A91 "Smith River Rancheria"
-// AMERICAN INDIAN (A01-M43) Canadian and Latin America
 * #A94 "Canadian Indian"
 * #A95 "Central American Indian"
 * #A96 "French American Indian"
 * #A97 "Mexican American Indian"
 * #A98 "South American Indian"
 * #A99 "Spanish American Indian"
-// AMERICAN INDIAN (A01-M43) Catawba
 * #B04 "Catawba Indian Nation"
-// AMERICAN INDIAN (A01-M43) Cayuse
 * #B07 "Cayuse"
-// AMERICAN INDIAN (A01-M43) Chehalis
 * #B11 "Chehalis"
-// AMERICAN INDIAN (A01-M43) Chemakuan
 * #B14 "Chemakuan"
 * #B15 "Hoh Indian Tribe"
 * #B16 "Quileute"
-// AMERICAN INDIAN (A01-M43) Chemehuevi
 * #B19 "Chemehuevi"
-// AMERICAN INDIAN (A01-M43) Cherokee
 * #B21 "Cherokee"
 * #B22 "Cherokee Alabama"
 * #B23 "Cherokees of Northeast Alabama"
@@ -347,31 +315,23 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #B34 "White River Band of the Chickamauga Cherokee"
 * #B35 "Four Winds Cherokee"
 * #B36 "Cherokee of Georgia"
-// AMERICAN INDIAN (A01-M43) Cherokee Shawnee
 * #B37 "Cherokee Shawnee"
-// AMERICAN INDIAN (A01-M43) Cheyenne
 * #B40 "Cheyenne"
 * #B41 "Northern Cheyenne"
 * #B42 "Southern Cheyenne"
-// AMERICAN INDIAN (A01-M43) Cheyenne-Arapaho
 * #B46 "Cheyenne Arapaho"
-// AMERICAN INDIAN (A01-M43) Chickahominy
 * #B49 "Chickahominy Indian Tribe"
 * #B50 "Chickahominy Eastern Band"
 * #B51 "WESTERN CHICKAHOMINY"
-// AMERICAN INDIAN (A01-M43) Chickasaw
 * #B53 "Chickasaw"
-// AMERICAN INDIAN (A01-M43) Chinook
 * #B57 "Chinook"
 * #B58 "Clatsop"
-// AMERICAN INDIAN (A01-M43) Chinook
 * #B59 "Columbia River Chinook"
 * #B60 "Kathlamet"
 * #B61 "Upper Chinook"
 * #B62 "Wakiakum Chinook"
 * #B63 "Willapa Chinook"
 * #B64 "Wishram"
-// AMERICAN INDIAN (A01-M43) Chippewa
 * #B67 "Bad River Band of the Lake Superior Tribe"
 * #B68 "Bay Mills Indian Community of the Sault Ste. Marie Band"
 * #B69 "Bois Forte Nett Lake Band of Chippewa"
@@ -399,52 +359,33 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #B91 "Turtle Mountain Band"
 * #B92 "White Earth"
 * #B93 "Swan Creek Black River Confederate Tribe"
-// AMERICAN INDIAN (A01-M43) Chippewa Cree
 * #C02 "Rocky Boy's Chippewa Cree"
-// AMERICAN INDIAN (A01-M43) Chitimacha
 * #C05 "Chitimacha Tribe of Louisiana"
-// AMERICAN INDIAN (A01-M43) Choctaw
 * #C08 "Choctaw"
 * #C09 "Clifton Choctaw"
-// AMERICAN INDIAN (A01-M43) Choctaw
 * #C10 "Jena Band of Choctaw"
 * #C11 "Mississippi Band of Choctaw"
 * #C12 "Mowa Band of Choctaw"
 * #C13 "Oklahoma Choctaw"
-// AMERICAN INDIAN (A01-M43) Choctaw-Apache
 * #C17 "Choctaw Apache Community of Ebarb"
-// AMERICAN INDIAN (A01-M43) Chumash
 * #C20 "Chumash"
 * #C21 "Santa Ynez"
 * #C22 "San Luis Rey Mission Indian"
-// AMERICAN INDIAN (A01-M43) Clear Lake
 * #C25 "Clear Lake"
-// AMERICAN INDIAN (A01-M43) Coeur D'Alene
 * #C26 "Coeur D'Alene"
-// AMERICAN INDIAN (A01-M43) Coharie
 * #C29 "Coharie"
-// AMERICAN INDIAN (A01-M43) Colorado River Indian
 * #C32 "Colorado River"
-// AMERICAN INDIAN (A01-M43) Colville
 * #C35 "Colville"
-// AMERICAN INDIAN (A01-M43) Comanche
 * #C39 "Comanche"
 * #C40 "Oklahoma Comanche"
-// AMERICAN INDIAN (A01-M43) Coos, Lower Umpqua, and Siuslaw
 * #C44 "Coos Lower Umpqua and Siuslaw"
-// AMERICAN INDIAN (A01-M43) Coos
 * #C46 "Coos"
-// AMERICAN INDIAN (A01-M43) Coquille
 * #C47 "Coquille"
 * #C48 "Costanoan"
-// AMERICAN INDIAN (A01-M43) Coushatta
 * #C52 "Alabama Coushatta Tribes of Texas"
 * #C53 "Coushatta"
-// AMERICAN INDIAN (A01-M43) Cowlitz
 * #C56 "Cowlitz"
-// AMERICAN INDIAN (A01-M43) Cree
 * #C59 "Cree"
-// AMERICAN INDIAN (A01-M43) Creek
 * #C64 "Alabama Creek"
 * #C65 "Alabama Quassarte Tribal Town"
 * #C66 "Muscogee Creek Nation"
@@ -458,16 +399,11 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #C74 "Star Clan of Muskogee Creeks"
 * #C75 "Thiopthlocco Tribal Town"
 * #C76 "Tuckabachee"
-// AMERICAN INDIAN (A01-M43) Croatan
 * #C81 "Croatan"
-// AMERICAN INDIAN (A01-M43) Crow
 * #C82 "Crow"
-// AMERICAN INDIAN (A01-M43) Cumberland
 * #C87 "Cumberland County Association for Indian People"
-// AMERICAN INDIAN (A01-M43) Cupeno
 * #C89 "Agua Caliente"
 * #C90 "Cupeno"
-// AMERICAN INDIAN (A01-M43) Delaware
 * #C93 "Delaware"
 * #C94 "Delaware Tribe of Indians, Oklahoma"
 * #C95 "Lenni Lanape"
@@ -475,7 +411,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #C97 "Delaware Tribe of Western Oklahoma"
 * #C98 "Ramapough Mountain"
 * #C99 "Sand Hill Band of Delaware Indians"
-// AMERICAN INDIAN (A01-M43) Diegueno
 * #D05 "Barona Group of Capitan Grande Band"
 * #D06 "Campo Band of Diegueno Mission Indians"
 * #D07 "Capitan Grande Band of Diegueno Mission Indians"
@@ -490,16 +425,13 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #D16 "Viejas Group of Capitan Grande Band"
 * #D17 "Inaja Band of Diegueno Mission Indians of the Inaja and Cosmit Reservation"
 * #D18 "Jarnul Indian Village"
-// AMERICAN INDIAN (A01-M43) Eastern Tribes
 * #D20 "Attacapa"
 * #D21 "Biloxi"
 * #D22 "Georgetown"
 * #D24 "Nansemond Indian Tribe"
 * #D25 "Natchez"
 * #D26 "Nausu Waiwash"
-// AMERICAN INDIAN (A01-M43) Nipmuc
 * #D27 "Nipmuc"
-// AMERICAN INDIAN (A01-M43) Eastern Tribes
 * #D28 "Golden Hill Paugussett"
 * #D29 "Pocomoke Acohonock"
 * #D30 "Southeastern Indians"
@@ -508,48 +440,29 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #D34 "Waccamaw Siouan"
 * #D36 "Wicomico"
 * #D37 "Mehemn Indian Tribe"
-// AMERICAN INDIAN (A01-M43) Esselen
 * #D42 "Esselen"
-// AMERICAN INDIAN (A01-M43) Forts Belknap and Berthold
 * #D44 "Fort Belknap"
 * #D45 "FORT BERTHOLD"
-// AMERICAN INDIAN (A01-M43)
-// Three "Affiliated Tribes of North Dakota"
 * #D46 "Three Affiliated Tribes of North Dakota"
-// AMERICAN INDIAN (A01-M43) Fort McDowell
 * #D49 "Fort McDowell MohaveApache Community"
-// AMERICAN INDIAN (A01-M43) Fort Hall
 * #D51 "ShoshoneBannock Tribes of the Fort Hall Reservation"
-// AMERICAN INDIAN (A01-M43) Gabrieleno
 * #D55 "Gabrieleno"
-// AMERICAN INDIAN (A01-M43) Grand Ronde
 * #D57 "Grand Ronde"
-// AMERICAN INDIAN (A01-M43) Gilford
 * #D58 "Guilford Native American Association"
-// AMERICAN INDIAN (A01-M43) Gros Ventres
 * #D60 "Atsina"
 * #D61 "Gros Ventres"
 * #D62 "Fort Belknap Gros Ventres"
-// AMERICAN INDIAN (A01-M43) Haliwa-Saponi
 * #D64 "HaliwaSaponi"
-// AMERICAN INDIAN (A01-M43) Hidatsa
 * #D67 "Hidatsa"
-// AMERICAN INDIAN (A01-M43) Hoopa
 * #D70 "Hoopa Valley Tribe"
 * #D71 "Trinity"
-// AMERICAN INDIAN (A01-M43) Hoopa
 * #D72 "Whilkut"
-// AMERICAN INDIAN (A01-M43) Hoopa Extension
 * #D76 "Hoopa Extension"
-// AMERICAN INDIAN (A01-M43) Houma
 * #D78 "United Houma Nation"
-// AMERICAN INDIAN (A01-M43) Iowa
 * #D87 "Iowa"
 * #D88 "Iowa of Kansas and Nebraska"
 * #D89 "Iowa of Oklahoma"
-// AMERICAN INDIAN (A01-M43) Indians of Person County
 * #D91 "Indians of Person County"
-// AMERICAN INDIAN (A01-M43) Iroquois
 * #D93 "Cayuga Nation"
 * #D94 "Iroquois"
 * #D95 "Mohawk"
@@ -561,41 +474,28 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #E02 "Tonawanda Band of Seneca"
 * #E03 "Tuscarora"
 * #E04 "Wyandotte"
-// AMERICAN INDIAN (A01-M43) Juaneno (Acjachemem)
 * #E10 "Juaneno"
-// AMERICAN INDIAN (A01-M43) Kalispel
 * #E13 "Kalispel Indian Community"
-// AMERICAN INDIAN (A01-M43) Karuk
 * #E17 "Karuk Tribe of California"
-// AMERICAN INDIAN (A01-M43) Kaw
 * #E21 "Kaw"
-// AMERICAN INDIAN (A01-M43) Kickapoo
 * #E24 "Kickapoo"
 * #E25 "Oklahoma Kickapoo"
 * #E26 "Texas Kickapoo"
-// AMERICAN INDIAN (A01-M43) Kiowa
 * #E30 "Kiowa"
 * #E31 "Oklahoma Kiowa"
-// AMERICAN INDIAN (A01-M43) S'Klallam
 * #E37 "Jamestown S'Klallam"
 * #E38 "Klallam"
 * #E39 "Lower Elwha Tribal Community"
 * #E40 "Port Gamble Klallam"
-// AMERICAN INDIAN (A01-M43) Klamath
 * #E44 "Klamath"
-// AMERICAN INDIAN (A01-M43) Konkow
 * #E48 "Konkow"
-// AMERICAN INDIAN (A01-M43) Kootenai
 * #E50 "Kootenai"
-// AMERICAN INDIAN (A01-M43) Lassik
 * #E53 "Lassik"
-// AMERICAN INDIAN (A01-M43) Long Island
 * #E59 "Matinecock"
 * #E60 "Montauk"
 * #E61 "Poospatuck"
 * #E62 "Setauket"
 * #E63 "LONG ISLAND"
-// AMERICAN INDIAN (A01-M43) Luiseno
 * #E66 "La Jolla Band of Luiseno Mission Indians"
 * #E67 "Luiseno"
 * #E68 "Pala Band of Luiseno Mission Indians"
@@ -603,14 +503,10 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #E70 "Pechanga Band of Luiseno Mission Indians"
 * #E71 "Soboba"
 * #E72 "TwentyNine Palms Band of Luiseno Mission Indians"
-// AMERICAN INDIAN (A01-M43) Luiseno
 * #E73 "Temecula"
 * #E74 "Rincon Band of Luiseno Mission Indians"
-// AMERICAN INDIAN (A01-M43) Lumbee
 * #E78 "Lumbee"
-// AMERICAN INDIAN (A01-M43) Lummi
 * #E84 "Lummi"
-// AMERICAN INDIAN (A01-M43) Maidu
 * #E87 "Mooretown Rancheria of Maidu Indians"
 * #E88 "Maidu"
 * #E89 "Mountain Maidu"
@@ -619,74 +515,51 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #E92 "Berry Creek Rancheria of Maidu Indians"
 * #E93 "Enterprise Rancheria"
 * #E94 "Greenville Rancheria"
-// AMERICAN INDIAN (A01-M43) Makah
 * #E95 "Makah"
-// AMERICAN INDIAN (A01-M43) Maliseet
 * #F01 "Maliseet"
 * #F02 "Houlton Band of Maliseet Indians"
-// AMERICAN INDIAN (A01-M43) Mandan
 * #F05 "Mandan"
-// AMERICAN INDIAN (A01-M43) Mattaponi
 * #F09 "Mattaponi Indian Tribe"
 * #F10 "Upper Mattaponi Tribe"
-// AMERICAN INDIAN (A01-M43) Menominee
 * #F11 "Menominee"
-// AMERICAN INDIAN (A01-M43) Metrolina
 * #F15 "Metrolina Nadve American Association"
-// AMERICAN INDIAN (A01-M43) Miami
 * #F17 "Illinois Miami"
 * #F18 "Indiana Miami"
 * #F19 "Miami"
 * #F20 "Oklahoma Miami"
-// AMERICAN INDIAN (A01-M43) Miccosukee
 * #F24 "Miccosukee"
-// AMERICAN INDIAN (A01-M43) Micmac
 * #F27 "Aroostook Band"
 * #F28 "Micmac"
-// AMERICAN INDIAN (A01-M43) Mission Indians
 * #F31 "Mission Indians"
 * #F32 "Cahuilla Band of Mission Indians"
-// AMERICAN INDIAN (A01-M43) Miwok
 * #F34 "Ione Band of Miwok Indians"
 * #F35 "Shingle Springs Band of Miwok Indians"
-// AMERICAN INDIAN (A01-M43) Me-Wuk
 * #F36 "MeWuk"
 * #F37 "Jackson Rancheria of MeWuk Indians of California"
 * #F38 "Tuolumne Band of MeWuk Indians of California"
 * #F39 "Buena Vista Rancheria of MeWuk Indians of California"
 * #F40 "Chicken Ranch Rancheria of MeWuk Indians"
 * #F41 "Sheep Ranch Rancheria of MeWuk Indians"
-// AMERICAN INDIAN (A01-M43) Modoc
 * #F42 "Modoc"
 * #F43 "Oklahoma Modoc"
-// AMERICAN INDIAN (A01-M43) Mohegan
 * #F46 "Mohegan"
 * #F47 "Monacan Indian Nation"
-// AMERICAN INDIAN (A01-M43) Mono
 * #F49 "Mono"
 * #F50 "North Fork Rancheria"
 * #F51 "Cold Springs Rancheria"
 * #F52 "Big Sandy Rancheria"
-// AMERICAN INDIAN (A01-M43) Nanticode
 * #F53 "Nanticoke"
-// AMERICAN INDIAN (A01-M43) Nanticode Lenni-Lenape
 * #F56 "Nanticoke LenniLenape"
-// AMERICAN INDIAN (A01-M43) Narragansett
 * #F57 "Narragansett"
-// AMERICAN INDIAN (A01-M43) Navajo
 * #F62 "Alamo Navajo"
 * #F63 "Tohajiileehee Navajo"
 * #F64 "Navajo"
 * #F65 "Ramah Navajo"
-// AMERICAN INDIAN (A01-M43) Nez Perce
 * #F71 "Nez Perce"
-// AMERICAN INDIAN (A01-M43) Nipmuc
 * #F75 "Hassanamisco Band of the Nipmuc Nation"
 * #F76 "Chaubunagungameg Nipmuc"
-// AMERICAN INDIAN (A01-M43) Nomlaki
 * #F77 "Nomlaki"
 * #F78 "Paskenta Band of Nomlaki Indians"
-// AMERICAN INDIAN (A01-M43) Northwest Tribes
 * #F80 "Alsea"
 * #F81 "Celilo"
 * #F82 "Columbia"
@@ -696,24 +569,17 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #F86 "Tenino"
 * #F87 "Tillamook"
 * #F88 "Wenatchee"
-// AMERICAN INDIAN (A01-M43) Omaha
 * #F95 "Omaha"
-// AMERICAN INDIAN (A01-M43) Oneida Tribe
 * #F99 "Oneida Tribe of Wisconsin"
-// AMERICAN INDIAN (A01-M43) Oregon Athabaskan
 * #G01 "Oregon Athabaskan"
-// AMERICAN INDIAN (A01-M43) Osage
 * #G04 "Osage"
-// AMERICAN INDIAN (A01-M43) Otoe-Missouria
 * #G10 "OtoeMissouria"
-// AMERICAN INDIAN (A01-M43) Ottawa
 * #G14 "Burt Lake Ottawa"
 * #G15 "Little River Band of Ottawa Indians of Michigan"
 * #G16 "Oklahoma Ottawa"
 * #G17 "Ottawa"
 * #G18 "Little Traverse Bay Bands of Ottawa Indians of Michigan"
 * #G19 "Grand River Band of Ottawa Indians"
-// AMERICAN INDIAN (A01-M43) Paiute
 * #G24 "Bridgeport Paiute Indian Colony"
 * #G25 "Burns Paiute Tribe"
 * #G26 "Cedarville Rancheria"
@@ -736,37 +602,26 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #G45 "Yahooskin Band of Snake"
 * #G47 "Susanville"
 * #G48 "Winnemucca"
-// AMERICAN INDIAN (A01-M43) Pamunkey
 * #G50 "Pamunkey Indian Tribe"
-// AMERICAN INDIAN (A01-M43) Passamaquoddy
 * #G53 "Indian Township"
 * #G54 "Passamaquoddy"
 * #G55 "Pleasant Point Passamaquoddy"
-// AMERICAN INDIAN (A01-M43) Pawnee
 * #G61 "Oklahoma Pawnee"
 * #G62 "Pawnee"
-// AMERICAN INDIAN (A01-M43) Penobscot
 * #G68 "Penobscot"
-// AMERICAN INDIAN (A01-M43) Peoria
 * #G72 "Oklahoma Peoria"
 * #G73 "Peoria"
-// AMERICAN INDIAN (A01-M43) Pequot
 * #G77 "Mashantucket Pequot"
 * #G78 "Pequot"
 * #G79 "Paucatuck Eastern Pequot"
-// AMERICAN INDIAN (A01-M43) Pima
 * #G84 "Gila River Indian Community"
 * #G85 "Pima"
 * #G86 "Salt River PimaMaricopa"
-// AMERICAN INDIAN (A01-M43) Piscataway
 * #G92 "Piscataway"
-// AMERICAN INDIAN (A01-M43) Pit River
 * #G96 "Pit River Tribe of California"
 * #G97 "Alturas Indian Rancheria"
 * #G98 "Redding Rancheria"
-// AMERICAN INDIAN (A01-M43) Pomo and Pit River Indians
 * #G99 "Big Valley Rancheria of Pomo and Pit River Indians"
-// AMERICAN INDIAN (A01-M43) Pomo
 * #H01 "Central Pomo"
 * #H02 "Dry Creek"
 * #H03 "Eastern Pomo"
@@ -781,11 +636,9 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #H12 "Lytton Rancheria of California"
 * #H13 "Cloverdale Rancheria"
 * #H14 "Coyote Valley Band"
-// AMERICAN INDIAN (A01-M43) Ponca
 * #H15 "Nebraska Ponca"
 * #H16 "Oklahoma Ponca"
 * #H17 "Ponca"
-// AMERICAN INDIAN (A01-M43) Potawatomi
 * #H21 "Citizen Potawatomi Nation"
 * #H22 "Forest County"
 * #H23 "Hannahville Indian Community of Wisconsin Potawatomi"
@@ -794,9 +647,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #H26 "Potawatomi"
 * #H27 "Prairie Band of Potawatomi Indians"
 * #H28 "Wisconsin Potawatomi"
-// AMERICAN INDIAN (A01-M43) Powhatan
 * #H34 "Powhatan"
-// AMERICAN INDIAN (A01-M43) Pueblo
 * #H38 "Acoma"
 * #H39 "Arizona Tewa"
 * #H40 "Cochiti"
@@ -808,13 +659,12 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #H46 "Nambe"
 * #H47 "Picuris"
 * #H48 "Piro"
-// AMERICAN INDIAN (A01-M43) Pueblo
 * #H49 "Pojoaque"
 * #H50 "Pueblo"
 * #H51 "San Felipe"
 * #H52 "San Ildefonso"
 * #H53 "San Juan Pueblo"
-* #H54 "SAN JUAN DE"
+* #H54 "SAN JUAN DE GUADELUPE"
 * #H55 "San Juan"
 * #H56 "Sandia"
 * #H57 "Santa Ana"
@@ -826,12 +676,10 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #H63 "Ysleta Del Sur Pueblo of Texas"
 * #H64 "Zia"
 * #H65 "Zuni"
-// AMERICAN INDIAN (A01-M43) Pomo
 * #H66 "Hopland Band of Pomo Indians"
 * #H67 "Manchester Band of Pomo Indians of the ManchesterPoint Arena Racheria"
 * #H68 "Middletown Rancheria of Pomo Indians"
 * #H69 "Pinoleville Rancheria of Pomo Indians"
-// AMERICAN INDIAN (A01-M43) Puget Sount Salish
 * #H70 "Marietta Band of Nooksack"
 * #H71 "Duwamish"
 * #H72 "Kikiallus"
@@ -853,41 +701,27 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #H88 "Stillaguamish"
 * #H89 "Suquamish"
 * #H90 "Swinomish"
-// AMERICAN INDIAN (A01-M43) Puget Sount Salish
 * #H91 "Tulalip"
 * #H92 "Upper Skagit"
-// AMERICAN INDIAN (A01-M43) Pomo
 * #H93 "Potter Valley Rancheria of Pomo Indians"
 * #H94 "Redwood Valley Rancheria of Pomo Indians"
 * #H95 "Robinson Rancheria of Pomo Indians"
 * #H96 "Upper Lake Band of Pomo Indians of Upper Lake Rancheria"
-// AMERICAN INDIAN (A01-M43) Quapaw
 * #H97 "Quapaw"
-// AMERICAN INDIAN (A01-M43) Tiqua
 * #I01 "TIGUA"
-// AMERICAN INDIAN (A01-M43) Quinault
 * #J01 "Quinault"
-// AMERICAN INDIAN (A01-M43) Rappahaonnock
 * #J05 "Rappahannock Indian Tribe"
-// AMERICAN INDIAN (A01-M43) Reno-Sparks
 * #J07 "RenoSparks"
-// AMERICAN INDIAN (A01-M43) Round Valley
 * #J14 "Round Valley"
-// AMERICAN INDIAN (A01-M43) Sac and Fox
 * #J19 "Sac and Fox Tribe of the Mississippi in Iowa"
 * #J20 "Sac and Fox Nation of Missouri in Kansas and Nebraska"
 * #J21 "Sac and Fox Nation, Oklahoma"
 * #J22 "Sac and Fox"
-// AMERICAN INDIAN (A01-M43) Salinan
 * #J28 "Salinan"
-// AMERICAN INDIAN (A01-M43) Salish
 * #J31 "Salish"
-// AMERICAN INDIAN (A01-M43) Salish and Kootenai
 * #J35 "Salish and Kootenai"
 * #J36 "Pondre Band of Salish and Kootenai"
-// AMERICAN INDIAN (A01-M43) Schaghticoke
 * #J39 "Schaghticoke"
-// AMERICAN INDIAN (A01-M43) Seminole
 * #J47 "Big Cypress"
 * #J48 "Brighton"
 * #J49 "Florida Seminole"
@@ -896,35 +730,26 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #J52 "Seminole"
 * #J53 "Dania Seminole"
 * #J54 "Tampa Seminole"
-// AMERICAN INDIAN (A01-M43) Serrano
 * #J58 "San Manual Band"
 * #J59 "Serrano"
-// AMERICAN INDIAN (A01-M43) Shasta
 * #J62 "Shasta"
 * #J63 "Quartz Valley"
-// AMERICAN INDIAN (A01-M43) Shawnee
 * #J66 "Absentee Shawnee Tribe of Indians of Oklahoma"
 * #J67 "Eastern Shawnee"
 * #J68 "Shawnee"
 * #J69 "Piqua Sept of Ohio Shawnee"
-// AMERICAN INDIAN (A01-M43) Shinnecock
 * #J74 "Shinnecock"
-// AMERICAN INDIAN (A01-M43) Shoalwater Bay
 * #J78 "Shoalwater Bay"
-// AMERICAN INDIAN (A01-M43) Shoshone
 * #J81 "Duckwater"
 * #J82 "Ely"
 * #J83 "Goshute"
 * #J84 "PANAMINT"
-// AMERICAN INDIAN (A01-M43) Shoshone
 * #J85 "Shoshone"
 * #J86 "Skull Valley Band of Goshute Indians"
 * #J88 "Death Valley TimbiSha Shoshone"
 * #J89 "Northwestern Band of Shoshoni Nation of Utah"
 * #J90 "Wind River Shoshone"
 * #J91 "Yomba"
-// AMERICAN INDIAN (A01-M43)
-// Te-Moak "Tribes of Western Shoshone Ind. of Nevada"
 * #J93 "TeMoak Tribes of Western Shoshone Indians"
 * #J94 "Battle Mountain"
 * #J95 "Elko"
@@ -932,7 +757,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #J97 "Wells Band"
 * #J98 "Ruby Valley"
 * #J99 "Odgers Ranch"
-// AMERICAN INDIAN (A01-M43) Paiute-Shoshone
 * #K01 "Duck Valley"
 * #K02 "Fallen"
 * #K03 "Fort McDermitt Paiute and Shoshone Tribes"
@@ -940,9 +764,7 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #K05 "Bishop"
 * #K06 "Lone Pine"
 * #K07 "Big Pine Band of Owens Valley PaiuteShoshone"
-// AMERICAN INDIAN (A01-M43) Siletz
 * #K10 "Confederated Tribes of the Siletz Reservation"
-// AMERICAN INDIAN (A01-M43) Sioux
 * #K16 "Blackfoot Sioux"
 * #K17 "Brule Sioux"
 * #K18 "Cheyenne River Sioux"
@@ -959,7 +781,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #K29 "Pine Ridge Sioux"
 * #K30 "Pipestone Sioux"
 * #K31 "Prairie Island Sioux"
-// AMERICAN INDIAN (A01-M43) Sioux
 * #K32 "Shakopee Mdewakanton Sioux Community"
 * #K33 "Rosebud Sioux"
 * #K34 "Sans Arc Sioux"
@@ -977,104 +798,74 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #K46 "Wazhaza Sioux"
 * #K47 "Yankton Sioux"
 * #K48 "Yanktonai Sioux"
-// AMERICAN INDIAN (A01-M43) Siuslaw
 * #K54 "Siuslaw"
-// AMERICAN INDIAN (A01-M43) Spokane
 * #K59 "Spokane"
-// AMERICAN INDIAN (A01-M43) Stockbridge-Munsee
 * #K67 "StockbridgeMunsee Community of Mohican Indians of Wisconsin"
-// AMERICAN INDIAN (A01-M43) Tohono O'Odham
 * #K77 "AkChin"
 * #K78 "Gila Bend"
 * #K79 "San Xavier"
 * #K80 "Sells"
 * #K81 "Tohono O'Odham"
-// AMERICAN INDIAN (A01-M43) Tolowa
 * #K87 "Tolowa"
 * #K88 "Big Lagoon Rancheria"
 * #K89 "Elk Valley Rancheria"
-// AMERICAN INDIAN (A01-M43) Tonkawa
 * #K90 "Tonkawa"
-// AMERICAN INDIAN (A01-M43) Trinidad
 * #K93 "CherAe Indian Community of Trinidad Rancheria"
-// AMERICAN INDIAN (A01-M43) Tygh
 * #K94 "Tygh"
-// AMERICAN INDIAN (A01-M43) Umatilla
 * #K97 "Umatilla"
-// AMERICAN INDIAN (A01-M43) Umpqua
 * #L01 "Cow Creek Umpqua"
 * #L02 "Umpqua"
-// AMERICAN INDIAN (A01-M43) Ute
 * #L06 "Alien Canyon"
 * #L07 "Uintah Ute"
 * #L08 "Ute Mountain"
 * #L09 "Ute"
 * #L10 "Southern Ute"
-// AMERICAN INDIAN (A01-M43) Wailaki
 * #L15 "Wailaki"
-// AMERICAN INDIAN (A01-M43) Walla-Walla
 * #L19 "WallaWalla"
-// AMERICAN INDIAN (A01-M43) Wampanoag
 * #L22 "Gay Head Wampanoag"
 * #L23 "Mashpee Wampanoag"
 * #L24 "Wampanoag"
 * #L25 "Seaconeke Wampanoag"
 * #L26 "Pocasset Wampanoag"
-// AMERICAN INDIAN (A01-M43) Warm Springs
 * #L28 "Warm Springs"
-// AMERICAN INDIAN (A01-M43) Wascopum
 * #L34 "Wascopum"
-// AMERICAN INDIAN (A01-M43) Washoe
 * #L38 "Alpine"
 * #L39 "Carson Colony"
 * #L40 "Dresslerville Colony"
 * #L41 "Washoe"
 * #L42 "Stewart Community"
 * #L43 "Woodsfords Community"
-// AMERICAN INDIAN (A01-M43) Wichita
 * #L47 "Wichita"
 * #L48 "Keechi"
 * #L49 "Waco"
 * #L50 "Tawakonie"
-// AMERICAN INDIAN (A01-M43) Wind River
 * #L52 "Wind River"
-// AMERICAN INDIAN (A01-M43) Winnebago
 * #L55 "HoChunk Nation of Wisconsin"
 * #L56 "Nebraska Winnebago"
 * #L57 "Winnebago"
-// AMERICAN INDIAN (A01-M43) Wintun
 * #L66 "Wintun"
 * #L67 "Cachil Dehe Band of Wintun Indians of the Colusa Rancheria"
 * #L68 "Cortina Indian Rancheria of Wintun Indians"
 * #L69 "Rumsey Indian Rancheria of Wintun Indians"
-// AMERICAN INDIAN (A01-M43) WinTun-Wailaki
 * #L71 "Grindstone Indian Rancheria of WintunWailaki Indians"
-// AMERICAN INDIAN (A01-M43) Wiyot
 * #L72 "Table Bluff"
 * #L73 "Wiyot"
 * #L74 "Blue Lake Rancheria"
-// AMERICAN INDIAN (A01-M43) Yakama
 * #L79 "Yakama"
-// AMERICAN INDIAN (A01-M43) Yakama Cowlitz
 * #L85 "Yakama Cowlitz"
-// AMERICAN INDIAN (A01-M43) Yaqui
 * #L91 "Barrio Libre"
 * #L92 "Pascua Yaqui"
 * #L93 "Yaqui"
-// AMERICAN INDIAN (A01-M43) Yavapai Apache
 * #M01 "Yavapai Apache"
-// AMERICAN INDIAN (A01-M43) Yokuts
 * #M07 "Picayune Rancheria of Chukchansi Indians"
 * #M08 "Tachi"
 * #M09 "Tule River"
 * #M10 "Yokuts"
 * #M11 "Table Mountain Rancheria"
-// AMERICAN INDIAN (A01-M43) Yuchi
 * #M16 "Yuchi"
 * #M17 "Tia"
 * #M18 "Wilono"
 * #M19 "Anstohini"
-// AMERICAN INDIAN (A01-M43) Yuman
 * #M22 "Cocopah Tribe of Arizona"
 * #M23 "Havasupai"
 * #M24 "Hualapai"
@@ -1083,20 +874,15 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #M27 "Quechan"
 * #M28 "YavapaiPrescott Tribe of the Yavapai Reservation"
 * #M29 "YUMAN"
-// AMERICAN INDIAN (A01-M43) Yurok
 * #M34 "Resighini Rancheria"
 * #M35 "Yurok"
 * #M36 "COAST YUROK"
-// AMERICAN INDIAN (A01-M43) Other Tribes or Not Specified
 * #M41 "American Indian"
 * #M42 "Tribal Response, NEC"
 * #M43 "KUTENAI INDIAN"
-// ALASKA INDIAN TRIBES (M44-N66) Alaska Indian Tribes
 * #M44 "Alaska Indian"
-// ALASKA INDIAN TRIBES (M44-N66) Alaska Native
 * #M47 "Alaska Native"
 * #M48 "Other Alaskan, NEC"
-// ALASKA INDIAN TRIBES (M44-N66) Alaskan Athabascans
 * #M52 "Ahtna"
 * #M53 "Alaskan Athabascan"
 * #M54 "Alatna Village"
@@ -1140,7 +926,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #M92 "McGrath Native Village"
 * #M93 "Manley Hot Springs Village"
 * #M94 "Mentasta Traditional Council"
-// ALASKA INDIAN TRIBES (M44-N66) Alaskan Athabascans
 * #M95 "Native Village of Minto"
 * #M96 "Nenana Native Association"
 * #M97 "Nikolai Village"
@@ -1170,7 +955,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #N22 "Village of Venetie"
 * #N23 "Wiseman"
 * #N24 "Kenaitze Indian Tribe"
-// ALASKA INDIAN TRIBES (M44-N66) Tlingit-Haida
 * #N27 "TLINGIT-HAIDA"
 * #N28 "Angoon Community Association"
 * #N29 "Central Council of the Tlingit and Haida Indian Tribes"
@@ -1187,7 +971,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #N41 "Klawock Cooperative Association"
 * #N43 "Pelican"
 * #N44 "Petersburg Indian Association"
-// ALASKA INDIAN TRIBES (M44-N66) Tlingit-Haida
 * #N45 "Organized Village of Saxman"
 * #N46 "Sitka Tribe of Alaska"
 * #N47 "Tenakee Springs"
@@ -1195,21 +978,16 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #N49 "Wrangell Cooperative Association"
 * #N50 "Yakutat Tlingit Tribe"
 * #N51 "Juneau"
-// ALASKA INDIAN TRIBES (M44-N66) Tsimshian
 * #N56 "Metlakatia Indian Community, Annette Island Reserve"
 * #N57 "Tsimshian"
-// ALASKA INDIAN TRIBES (M44-N66) Sealaska
 * #N59 "Sealaska"
 * #N60 "Sealaska Corporation"
-// ALASKA INDIAN TRIBES (M44-N66) Southeast Alaska
 * #N64 "Southeast Alaska"
 * #N65 "Skagway Village"
-// ESKIMO TRIBES (N67-R10) Eskimo Tribes
 * #N67 "American Eskimo"
 * #N68 "Eskimo"
 * #N69 "Greenland Eskimo"
 * #N75 "Inuit"
-// ESKIMO TRIBES (N67-R10) Inupiat Eskimo
 * #N78 "INUPIAT ESKIMO"
 * #N79 "Native Village of Ambler"
 * #N80 "Anaktuvuk"
@@ -1227,7 +1005,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #N92 "Native Village of Elim"
 * #N93 "GOLOVIN"
 * #N94 "Native Village of Diomede"
-// ESKIMO TRIBES (N67-R10) Inupiat Eskimo
 * #N95 "Inupiaq"
 * #N96 "Inupiat"
 * #N97 "Kaktovik Village"
@@ -1259,29 +1036,25 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #P24 "White Mountain Inupiat"
 * #P25 "Native Village of Mary's Igloo"
 * #P26 "King Island Native Community"
-// ESKIMO TRIBES (N67-R10) Siberian Eskimo
 * #P29 "SIBERIAN ESKIMO"
 * #P30 "Native Village of Gambell"
 * #P31 "Native Village of Savoonga"
 * #P32 "Siberian Yupik"
-// ESKIMO TRIBES (N67-R10) Cupiks Eskimo
 * #P36 "Chevak Native Village"
 * #P37 "Native Village of Mekoryuk"
-// ESKIMO TRIBES (N67-R10) Yup'ik
 * #P38 "Akiachak Native Community"
 * #P39 "Akiak Native Community"
-// ESKIMO TRIBES (N67-R10) Yup'ik
 * #P40 "Village of Alakanuk"
 * #P41 "Native Village of Aleknagik"
 * #P42 "Yupiit of Andreafski"
 * #P43 "Village of Aniak"
 * #P44 "Village of Atmautluak"
 * #P45 "Orutsararmuit Native Village"
-* #P46 "Village of Bill Moore's Slough Bay"
+* #P46 "Village of Bill Moore's Slough"
 * #P47 "Bristol Bay"
 * #P48 "Calista"
 * #P49 "Village of Chefomak"
-* #P50 "Native of Hamilton"
+* #P50 "Native Village of Hamilton"
 * #P51 "Native Village of Chuathbaluk"
 * #P52 "Village of Clark's Point"
 * #P53 "Village of Crooked Creek"
@@ -1319,7 +1092,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #P85 "Oscarville Traditional Village"
 * #P86 "Pilot Station Traditional Village"
 * #P87 "Native Village of Pitkas Point"
-// ESKIMO TRIBES (N67-R10) Yup'ik
 * #P88 "Platinum Traditional Village"
 * #P89 "Portage Creek Village"
 * #P90 "Native Village of Kwinhagak"
@@ -1342,15 +1114,12 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #R07 "Algaaciq Native Village"
 * #R08 "Umkumiute Native Village"
 * #R09 "Chuloonawick Native Village"
-// ALEUT TRIBES (R11-R99) Aleut
 * #R11 "Aleut"
-// ALEUT TRIBES (R11-R99) Alutiiq Aleut
 * #R15 "ALUTIIQ ALEUT"
 * #R16 "Alutiiq"
 * #R17 "Village of Afognak"
 * #R18 "Native Village of Tatitlek"
 * #R19 "Ugashik Village"
-// ALEUT TRIBES (R11-R99) Bristol Bay Aleut
 * #R28 "Bristol Bay Aleut"
 * #R29 "Native Village of Chignik"
 * #R30 "Chignik Lake Village"
@@ -1362,15 +1131,12 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #R36 "Native Village of Perryville"
 * #R37 "Native Village of Pilot Point"
 * #R38 "Native Village of Port Heiden"
-// ALEUT TRIBES (R11-R99) Chugach Aleut
 * #R43 "Native Village of Chanega"
 * #R44 "Chugach Aleut"
 * #R45 "Chugach Corporation"
 * #R46 "Native Village of Nanwaiek"
 * #R47 "Native Village of Port Graham"
-// ALEUT TRIBES (R11-R99) Eyak
 * #R51 "Eyak"
-// ALEUT TRIBES (R11-R99) Koniag Aleut
 * #R55 "Native Village of Akhiok"
 * #R56 "Agdaagux Tribe of King Cove"
 * #R57 "Native Village of Karluk"
@@ -1382,11 +1148,8 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #R63 "Native Village of Ouzinkie"
 * #R64 "Native Village of Port Lions"
 * #R65 "Lesnoi Village"
-// ALEUT TRIBES (R11-R99) Sugpiaq
 * #R67 "Sugpiaq"
-// ALEUT TRIBES (R11-R99) Suqpigaq
 * #R71 "Suqpigaq"
-// ALEUT TRIBES (R11-R99) Unangan Aleut
 * #R74 "UNANGAN ALEUT"
 * #R75 "Native Village of Akutan"
 * #R76 "Aleut Corporation"
@@ -1402,7 +1165,6 @@ Description: "RaceCode from https://www.cdc.gov/nchs/data/dvs/RaceCodeList.pdf"
 * #R86 "Pauloff Harbor Village"
 * #R87 "Qagan Toyagungin Tribe of Sand Point Village"
 * #R88 "Qawalangin Tribe of Unalaska"
-// ALEUT TRIBES (R11-R99) Unangan Aleut
 * #R89 "Saint George"
 * #R90 "Saint Paul"
 * #R91 "Sand Point"

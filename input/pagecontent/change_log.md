@@ -1,4 +1,9 @@
-### VRDR STU 2 Publication Version (Fall 2022)
+### VRDR STU 2.1 CI Build (Fall 2022)
+* __Pregnancy Status:__ Added missing code for 'Not reported on certificate.
+* __Race and Ethnicity:__ Added some missing codes
+* __References:__ Fixed references to MRE definition documents.
+
+### VRDR STU 2 Publication Version (August 31, 2022)
 #### General Changes
 * __Scope:__ The VRDR IG now supports standards-based interoperable exchange of death record information that is information-content equivalent with the legacy IJE, MRE, TRX, and Mortality Roster formats.   The mapping of legacy IJE fields to the FHIR profiles is clearly documented.   Profiles that did not support any data fields used for submission of death records to NCHS or for inter-jurisdictional exchange were eliminated.
 * __Documentation:__ A [death record data dictionary](DeathRecordDataDictionary.html) that maps IJE fields has been added, and each profile includes the data dictionary elements that the profile supports. A separate [mortality roster data dictionary](MortalityRosterDataDictionary.html) is also included.

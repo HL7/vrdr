@@ -4,7 +4,10 @@ Id: vrdr-coded-race-and-ethnicity
 Title: "Coded Race and Ethnicity"
 Description: "Coded (from NCHS) Race and Ethnicity (Observation). This is information that is coded by NCHS and sent back to jurisdictions, and will not be processed if submitted to NCHS by jurisdictions.
 
-This profile is only for use in a Vital Records Exchange. Systems looking to exchange this observation more broadly should reference US Core."
+This profile is only for use in a Vital Records Exchange. Systems looking to exchange this observation more broadly should reference US Core.
+
+Note:  NCHS stopped providing RaceRecode40 data in 2022.
+"
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
 * code = ObservationsCS#codedraceandethnicity
 * value[x] 0..0

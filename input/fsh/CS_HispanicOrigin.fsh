@@ -1,11 +1,10 @@
 CodeSystem: HispanicOriginCS
 Id: vrdr-hispanic-origin-cs
 Title: "HispanicOrigin CS"
-Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCodeTitles.pdf"
+Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/Appendix_D_Accessible_Hispanic_Origin_Code_List_Update_2011.pdf"
+
 * ^caseSensitive = true
 * ^experimental = false
-// 100-199 Not Hispanic
-* #100 "Not Hispanic"
 * #200 "Spaniard"
 * #201 "Andalusian"
 * #202 "Asturian"
@@ -16,19 +15,16 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #207 "Valencian"
 * #208 "Canarian"
 * #209 "Spanish Basque"
-// 210 -219 Mexican
-* #210 "Mexican"
-* #211 "Mexican 2"
+* #210 "Mexican Checkbox"
+* #211 "Mexican"
 * #212 "Mexican American"
 * #213 "Mexicano"
 * #214 "Chicano"
 * #215 "La Raza"
 * #216 "Mexican American Indian"
-* #217 "Caribbean"
+* #217 "Caribbean (Reassigned to 290)"
 * #218 "Mexico"
-// 220 -249 Central and South America
 * #220 "Central and South America"
-// 221 -229 Central American
 * #221 "Costa Rican"
 * #222 "Guatemalan"
 * #223 "Honduran"
@@ -38,7 +34,6 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #227 "Central American"
 * #228 "Central American Indian"
 * #229 "Canal Zone"
-// 231 -249 South American
 * #231 "Argentinean"
 * #232 "Bolivian"
 * #233 "Chilean"
@@ -51,20 +46,15 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #240 "South American Indian"
 * #241 "Criollo"
 * #242 "South American"
-// 250 -259 Latin American
 * #250 "Latin American"
 * #251 "Latin"
 * #252 "Latino"
-// 260 -269 Puerto Rican
-* #260 "Puerto Rican"
-* #261 "Puerto Rican 2"
-// 270 -274 Cuban
-* #270 "Cuban"
-* #271 "Cuban 2"
-// 275 -279 Dominican
+* #260 "Puerto Rican Checkbox"
+* #261 "Puerto Rican"
+* #270 "Cuban Checkbox"
+* #271 "Cuban"
 * #275 "Dominican"
-// 280 -299 Other Spanish/Hispanic
-* #280 "Other Spanish"
+* #280 "Other Spanish Checkbox"
 * #281 "Hispanic"
 * #282 "Spanish"
 * #283 "Californio"
@@ -74,11 +64,10 @@ Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/HispanicCode
 * #287 "Spanish American Indian"
 * #288 "Meso American Indian"
 * #289 "Mestizo"
+* #290 "Caribbean"
 * #291 "Multiple Hispanic Responses"
-* #299 "Other Spanish 2"
-// 996 -999 Uncodable, deferred, unknown
+* #299 "Other Spanish"
 * #996 "Uncodable"
 * #997 "Deferred"
-* #998 "Unknown 2"
+* #998 "Unknown"
 * #999 "First Pass Reject"
-* ^experimental = false
