@@ -79,7 +79,7 @@ Id: vrdr-race-code-vs
 Title: "Race Code Value Set"
 Description: "NCHS Race Codes.
 
-Mapping to IJE codes [here](ConceptMap-RaceCodeCSCM.html)."
+Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 //* include codes from system RaceCodeCSCS
 * RaceCodeCS#100 "White Checkbox"
 * RaceCodeCS#101 "White"
