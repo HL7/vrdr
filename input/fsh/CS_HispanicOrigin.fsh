@@ -1,10 +1,11 @@
 CodeSystem: HispanicOriginCS
 Id: vrdr-hispanic-origin-cs
 Title: "HispanicOrigin CS"
-Description: "HispanicOrigin from https://www.cdc.gov/nchs/data/dvs/Appendix_D_Accessible_Hispanic_Origin_Code_List_Update_2011.pdf"
+Description: "HispanicOrigin from [Appendix_D_Excel_Hispanic_Origin_Code_List_Update_2011](https://www.cdc.gov/nchs/data/dvs/Appendix_D_Excel_Hispanic_Origin_Code_List_Update_2011.xls"
 
 * ^caseSensitive = true
 * ^experimental = false
+* #100 "Non-Hispanic"
 * #200 "Spaniard"
 * #201 "Andalusian"
 * #202 "Asturian"
