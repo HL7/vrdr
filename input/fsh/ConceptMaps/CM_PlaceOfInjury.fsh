@@ -13,5 +13,5 @@ Usage: #definition
 * insert MapConcept( #6,  "Industrial and Construction Area",#LA14091-5, "Industrial or construction area")
 * insert MapConcept( #7,  "Farm",#LA14092-3, "Farm")
 * insert MapConcept( #9,  "Unspecified Place",#LA14093-1, "Unspecified")
-* insert AddGroup("TRX",$loinc)
+* insert AddGroup("TRX",$v3-NullFlavor)
 * insert MapConcept( #8,  "Other specified Place",#OTH, "Other")
