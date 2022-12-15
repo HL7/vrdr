@@ -88,6 +88,7 @@ Description: "Decedent-Example2 - with birth jurisdiction"
 * maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0 "Edit Passed"
 * contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"
+* contact.relationship.coding = $v2-0131#U
 
 Instance: Decedent-Example1
 InstanceOf: Decedent
@@ -124,3 +125,4 @@ Description: "Decedent-Example1"
 * maritalStatus.extension[bypassEditFlag].valueCodeableConcept = BypassEditFlagCS#0 "Edit Passed"
 * contact.name.text = "Joe Smith"
 * contact.relationship.text = "Friend of family"
+* contact.relationship.coding = $v2-0131#U
