@@ -16,7 +16,7 @@ Usage: #example
 Description: "Mortician-Example1"
 * insert AddMetaProfile(USCorePractitionerProfile)
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "212222AB"
+* identifier.value = "9941339100"
 * name.use = #official
 * name.family = "Smith"
 * name.given[0] = "Ronald"
