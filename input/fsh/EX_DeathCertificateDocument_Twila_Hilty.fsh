@@ -60,6 +60,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.name.family = "Hilty"
 * entry[=].resource.name.given[0] = "Twila"
 * entry[=].resource.name.given[+] = "Roxanne"
+* entry[=].resource.gender = #female
 * entry[=].resource.birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
 * entry[=].resource.birthDate.extension.extension[=].valueUnsignedInt = 2002
 * entry[=].resource.birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
@@ -100,6 +101,16 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.resourceType = "Practitioner"
 * entry[=].resource.id = "913e9260-bf2d-4344-895d-2252c426e2eb"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"
+* entry[=].resource
+  * name.family = "Black"
+  * name.given = "Jim"
+  * address.line = "44 South Street"
+  * address.city = "Bird in Hand"
+  * address.state = "PA"
+  * address.postalCode = "17505"
+  * address.country = "US"
+  * identifier.system = "http://hl7.org/fhir/sid/us-npi"
+  * identifier.value = "9941339100"
 * entry[+].fullUrl = "urn:uuid:40fd899e-b2d9-4a57-9b38-3d12f0a2b0ed"
 * entry[=].resource.resourceType = "Procedure"
 * entry[=].resource.id = "40fd899e-b2d9-4a57-9b38-3d12f0a2b0ed"
