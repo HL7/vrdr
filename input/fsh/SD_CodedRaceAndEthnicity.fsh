@@ -6,8 +6,7 @@ Description: "Coded (from NCHS) Race and Ethnicity (Observation). This is inform
 
 This profile is only for use in a Vital Records Exchange. Systems looking to exchange this observation more broadly should reference US Core.
 
-Note:  NCHS stopped providing RaceRecode40 data in 2022.
-"
+Note:  NCHS stopped providing RaceRecode40 data in 2022."
 * insert RequireMetaProfile(Profile: CodedRaceAndEthnicity)
 * code = ObservationsCS#codedraceandethnicity
 * value[x] 0..0
