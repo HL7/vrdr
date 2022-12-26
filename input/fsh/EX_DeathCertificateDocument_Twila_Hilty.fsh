@@ -137,7 +137,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.valueDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
 * entry[=].resource.valueDateTime.extension.extension[=].valueTime = "10:00:00"
 * entry[=].resource.valueDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
-* entry[=].resource.component.code = http://loinc.org#58332-8 "Place of death"
+* entry[=].resource.component.code = http://loinc.org#58332-8 "Location of death"
 * entry[=].resource.component.valueCodeableConcept = http://snomed.info/sct#16983000 "Death in hospital"
 * entry[+].fullUrl = "urn:uuid:916919d1-62ba-413b-9c14-81976f757a49"
 * entry[=].resource.resourceType = "Location"
