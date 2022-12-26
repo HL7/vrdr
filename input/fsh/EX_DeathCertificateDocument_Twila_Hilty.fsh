@@ -13,6 +13,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat"
 * entry[=].resource.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs#electronic "Electronic"
 * entry[=].resource.status = #final
+* entry[=].resource.date = "2020-11-15T16:39:54-05:00"
 * entry[=].resource.type = http://loinc.org#64297-5 "Death certificate"
 * entry[=].resource.subject.reference = "urn:uuid:4246ad39-25e4-4eee-82b7-1d11829a7eff"
 * entry[=].resource.author.reference = "urn:uuid:913e9260-bf2d-4344-895d-2252c426e2eb"
