@@ -119,7 +119,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * entry[=].resource.code = http://snomed.info/sct#308646001 "Death certification"
 * entry[=].resource.subject.reference = "urn:uuid:4246ad39-25e4-4eee-82b7-1d11829a7eff"
-* entry[=].resource.performer.function = http://snomed.info/sct#434651000124107 "Certifying physician-To the best of my knowledge, death occurred due to the cause(s) and manner stated."
+* entry[=].resource.performer.function = http://snomed.info/sct#434651000124107 "Death certification by physician"
 * entry[=].resource.performer.actor.reference = "urn:uuid:913e9260-bf2d-4344-895d-2252c426e2eb"
 * entry[=].resource.performedDateTime = "2020-11-14T16:39:40-05:00"
 * entry[+].fullUrl = "urn:uuid:a06dc671-f09d-4a3f-ab7e-900173e96110"
@@ -193,23 +193,23 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.id = "b0c258bb-3f51-45cf-bf7d-210c99ea8ed3"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
 * entry[=].resource.status = #final
-* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Input Race and Ethnicity"
+* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * entry[=].resource.subject.reference = "urn:uuid:4246ad39-25e4-4eee-82b7-1d11829a7eff"
-* entry[=].resource.component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican "HispanicMexican"
+* entry[=].resource.component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican "Hispanic Mexican"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicPuertoRican "HispanicPuertoRican"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicPuertoRican "Hispanic Puerto Rican"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicCuban "HispanicCuban"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicCuban "Hispanic Cuban"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther "HispanicOther"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther "Hispanic Other"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 * entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White "White"
 * entry[=].resource.component[=].valueBoolean = true
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "BlackOrAfricanAmerican"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "AmericanIndianOrAlaskanNative"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "AsianIndian"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
 * entry[=].resource.component[=].valueBoolean = false
 * entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Chinese "Chinese"
 * entry[=].resource.component[=].valueBoolean = false
@@ -223,15 +223,15 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.component[=].valueBoolean = false
 * entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "OtherAsian"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "NativeHawaiian"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "Native Hawaiian"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "GuamanianOrChamorro"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "Guamanian Or Chamorro"
 * entry[=].resource.component[=].valueBoolean = false
 * entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Samoan "Samoan"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "OtherPacificIslander"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "Other Pacific Islander"
 * entry[=].resource.component[=].valueBoolean = false
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "OtherRace"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "Other Race"
 * entry[=].resource.component[=].valueBoolean = false
 * entry[+].fullUrl = "urn:uuid:45445425-d382-40a5-9d73-7db09f285e7b"
 * entry[=].resource.resourceType = "Observation"
@@ -328,7 +328,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.id = "b5d159c6-7161-4a2a-92f6-28655c9084e2"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-emerging-issues"
 * entry[=].resource.status = #final
-* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#emergingissues "NCHS-required Parameter Slots for Emerging Issues"
+* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#emergingissues "Emerging Issues"
 * entry[=].resource.subject.reference = "urn:uuid:4246ad39-25e4-4eee-82b7-1d11829a7eff"
 * entry[=].resource.component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#EmergingIssue1_1
 * entry[=].resource.component.valueString = "Y"
