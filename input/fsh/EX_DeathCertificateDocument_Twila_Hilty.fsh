@@ -121,6 +121,7 @@ InstanceOf: DeathCertificateDocument
 * entry[=].resource.subject.reference = "urn:uuid:4246ad39-25e4-4eee-82b7-1d11829a7eff"
 * entry[=].resource.performer.function = http://snomed.info/sct#434651000124107 "Certifying physician-To the best of my knowledge, death occurred due to the cause(s) and manner stated."
 * entry[=].resource.performer.actor.reference = "urn:uuid:913e9260-bf2d-4344-895d-2252c426e2eb"
+* entry[=].resource.performedDateTime = "2020-11-14T16:39:40-05:00"
 * entry[+].fullUrl = "urn:uuid:a06dc671-f09d-4a3f-ab7e-900173e96110"
 * entry[=].resource.resourceType = "Observation"
 * entry[=].resource.id = "a06dc671-f09d-4a3f-ab7e-900173e96110"
