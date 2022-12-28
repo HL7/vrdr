@@ -11,16 +11,15 @@ Usage: #example
 * identifier.value = "2022MI200100"
 * entry[0].fullUrl = "urn:uuid:d96792a8-a5c6-47e3-a507-3e243f5fd9ad"
 * entry[=].resource.resourceType = "Composition"
-* entry[=].resource.id = "urn:uuid:d96792a8-a5c6-47e3-a507-3e243f5fd9ad"
+* entry[=].resource.id = "d96792a8-a5c6-47e3-a507-3e243f5fd9ad"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"
 * entry[=].resource.status = #final
 * entry[=].resource.title = "Death Certificate"
 * entry[=].resource.date = "2022-12-19"
 * entry[=].resource.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat"
 * entry[=].resource.extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs#paper "Paper"
-* entry[=].resource.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField"
 * entry[=].resource.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus"
-* entry[=].resource.extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs#updated "Updated Submission"
+* entry[=].resource.extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs#updated "updated record"
 * entry[=].resource.type = http://loinc.org#64297-5 "Death certificate"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.author.reference = "urn:uuid:a1d19edf-bde6-41a1-9c9c-08e5ce0e72b7"
@@ -49,14 +48,15 @@ Usage: #example
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:c1f0a91b-f770-45f8-8537-77c2af1f14a4"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:7f62991c-a3bf-483a-a182-708cc5126c1d"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:b836c1bc-ae51-45e0-9558-63f930f79069"
-* entry[=].resource.section[=].entry[+].reference = "urn:uuid:aead2835-84aa-42e7-80f0-18f1e9b7c033"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:74105aa4-6cde-439c-b047-5ed7c2df95a4"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathInvestigation
 * entry[=].resource.section[+].entry.reference = "urn:uuid:dcb9a71b-07fc-4199-ac90-6653f4900c99"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DecedentDisposition
 * entry[+].fullUrl = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.resourceType = "Patient"
-* entry[=].resource.id = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
+* entry[=].resource.id = "2648d64a-c95d-425e-9f10-59ddfc5204ee"
+* entry[=].resource
+  * gender = #female
 * entry[=].resource.name.family = "FHIRLast"
 * entry[=].resource.name.use = #official
 * entry[=].resource.name.given[0] = "FHIRFirst"
@@ -95,7 +95,7 @@ Usage: #example
 * entry[=].resource.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath"
 * entry[=].resource.extension[=].valueCodeableConcept = http://hl7.org/fhir/administrative-gender#female "Female"
 * entry[=].resource.extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
-* entry[=].resource.extension[=].valueAddress.state = "Michigan"
+* entry[=].resource.extension[=].valueAddress.state = "MI"
 * entry[=].resource.extension[=].valueAddress.country = "US"
 * entry[=].resource.extension[=].valueAddress.city = "Lansing"
 * entry[=].resource.identifier.system = "http://hl7.org/fhir/sid/us-ssn"
@@ -107,7 +107,7 @@ Usage: #example
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"
 * entry[+].fullUrl = "urn:uuid:aef60032-d8da-4df5-811e-3512025b5662"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:aef60032-d8da-4df5-811e-3512025b5662"
+* entry[=].resource.id = "aef60032-d8da-4df5-811e-3512025b5662"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -117,7 +117,7 @@ Usage: #example
 * entry[=].resource.component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 * entry[+].fullUrl = "urn:uuid:c6c6a78f-5252-41f0-86c7-e56b9a7a7761"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:c6c6a78f-5252-41f0-86c7-e56b9a7a7761"
+* entry[=].resource.id = "c6c6a78f-5252-41f0-86c7-e56b9a7a7761"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -143,7 +143,7 @@ Usage: #example
 * entry[=].resource.component[=].valueString = "10 min"
 * entry[+].fullUrl = "urn:uuid:20959afc-6c95-4c8f-89be-23e5d607d221"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:20959afc-6c95-4c8f-89be-23e5d607d221"
+* entry[=].resource.id = "20959afc-6c95-4c8f-89be-23e5d607d221"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -178,7 +178,7 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept.text = "Smoker"
 * entry[+].fullUrl = "urn:uuid:a1d19edf-bde6-41a1-9c9c-08e5ce0e72b7"
 * entry[=].resource.resourceType = "Practitioner"
-* entry[=].resource.id = "urn:uuid:a1d19edf-bde6-41a1-9c9c-08e5ce0e72b7"
+* entry[=].resource.id = "a1d19edf-bde6-41a1-9c9c-08e5ce0e72b7"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"
 * entry[=].resource.name.family = "Jones"
 * entry[=].resource.name.use = #official
@@ -188,6 +188,9 @@ Usage: #example
 * entry[=].resource.address.state = "MI"
 * entry[=].resource.address.postalCode = "48912"
 * entry[=].resource.address.line = "2909 E Grand River Ave Suite 102"
+* entry[=].resource
+  * identifier.system = "http://hl7.org/fhir/sid/us-npi"
+  * identifier.value = "9941339100"
 * entry[+].fullUrl = "urn:uuid:8d642f37-085e-467f-b017-03a2dad2df32"
 * entry[=].resource.resourceType = "Procedure"
 * entry[=].resource.id = "8d642f37-085e-467f-b017-03a2dad2df32"
@@ -195,18 +198,18 @@ Usage: #example
 * entry[=].resource.status = #completed
 * entry[=].resource.category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * entry[=].resource.code = http://snomed.info/sct#308646001 "Death certification"
-* entry[=].resource.subject.reference = "2648d64a-c95d-425e-9f10-59ddfc5204ee"
+* entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.performer.function = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#OTH "Other"
 * entry[=].resource.performer.function.text = "DO"
 * entry[=].resource.performer.actor.reference = "urn:uuid:a1d19edf-bde6-41a1-9c9c-08e5ce0e72b7"
 * entry[+].fullUrl = "urn:uuid:c1f0a91b-f770-45f8-8537-77c2af1f14a4"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:c1f0a91b-f770-45f8-8537-77c2af1f14a4"
+* entry[=].resource.id = "c1f0a91b-f770-45f8-8537-77c2af1f14a4"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.code = http://loinc.org#81956-5 "Date+time of death"
-* entry[=].resource.component[0].code = http://loinc.org#58332-8 "Place of death"
+* entry[=].resource.component[0].code = http://loinc.org#58332-8 "Location of death"
 * entry[=].resource.component[=].valueCodeableConcept = http://snomed.info/sct#16983000 "Death in hospital"
 * entry[=].resource.component[+].code = http://loinc.org#80616-6
 * entry[=].resource.component[=].valueDateTime = "2022-12-06T10:00:00-05:00"
@@ -221,7 +224,7 @@ Usage: #example
 * entry[=].resource.valueDateTime.extension.extension[=].valueTime = "10:00:00"
 * entry[+].fullUrl = "urn:uuid:7f62991c-a3bf-483a-a182-708cc5126c1d"
 * entry[=].resource.resourceType = "Location"
-* entry[=].resource.id = "urn:uuid:7f62991c-a3bf-483a-a182-708cc5126c1d"
+* entry[=].resource.id = "7f62991c-a3bf-483a-a182-708cc5126c1d"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"
 * entry[=].resource.name = "Sparrow Health Systems Sparrow"
 * entry[=].resource.address.state = "MI"
@@ -236,18 +239,17 @@ Usage: #example
 * entry[=].resource.type = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs#death "death location"
 * entry[+].fullUrl = "urn:uuid:d1fbae15-91cc-48cc-a876-7ccb103f7a8a"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:d1fbae15-91cc-48cc-a876-7ccb103f7a8a"
+* entry[=].resource.id = "d1fbae15-91cc-48cc-a876-7ccb103f7a8a"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-age"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.code = http://loinc.org#39016-1 "Age at death"
-* entry[=].resource.dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "unknown"
 * entry[=].resource.valueQuantity = 73 'a' "Years"
 * entry[=].resource.valueQuantity.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
 * entry[=].resource.valueQuantity.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0 "Edit Passed"
 * entry[+].fullUrl = "urn:uuid:dcb9a71b-07fc-4199-ac90-6653f4900c99"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:dcb9a71b-07fc-4199-ac90-6653f4900c99"
+* entry[=].resource.id = "dcb9a71b-07fc-4199-ac90-6653f4900c99"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-disposition-method"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -255,17 +257,17 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept = http://snomed.info/sct#449971000124106 "Burial"
 * entry[+].fullUrl = "urn:uuid:36ae7566-4641-44d1-b411-da0ac3f9ad8b"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:36ae7566-4641-44d1-b411-da0ac3f9ad8b"
+* entry[=].resource.id = "36ae7566-4641-44d1-b411-da0ac3f9ad8b"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-education-level"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.code = http://loinc.org#80913-7
-* entry[=].resource.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0360#BA "College or baccalaureate degree complete"
+* entry[=].resource.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0360#BA "Bachelor of Arts"
 * entry[=].resource.valueCodeableConcept.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
 * entry[=].resource.valueCodeableConcept.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0 "Edit Passed"
 * entry[+].fullUrl = "urn:uuid:e8128a7b-414a-480f-a3e3-a598426daba8"
 * entry[=].resource.resourceType = "RelatedPerson"
-* entry[=].resource.id = "urn:uuid:e8128a7b-414a-480f-a3e3-a598426daba8"
+* entry[=].resource.id = "e8128a7b-414a-480f-a3e3-a598426daba8"
 * entry[=].resource.active = true
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"
 * entry[=].resource.patient.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -277,7 +279,7 @@ Usage: #example
 * entry[=].resource.name.suffix = "Sr"
 * entry[+].fullUrl = "urn:uuid:c92f12c8-78b9-4025-b151-5b81be63c1b5"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:c92f12c8-78b9-4025-b151-5b81be63c1b5"
+* entry[=].resource.id = "c92f12c8-78b9-4025-b151-5b81be63c1b5"
 * entry[=].resource.status = #final
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-military-service"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -285,7 +287,7 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 * entry[+].fullUrl = "urn:uuid:b836c1bc-ae51-45e0-9558-63f930f79069"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:b836c1bc-ae51-45e0-9558-63f930f79069"
+* entry[=].resource.id = "b836c1bc-ae51-45e0-9558-63f930f79069"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -295,7 +297,7 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept.extension.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0 "Edit Passed"
 * entry[+].fullUrl = "urn:uuid:58842067-6a26-46f7-a1bf-515fcc0c2322"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:58842067-6a26-46f7-a1bf-515fcc0c2322"
+* entry[=].resource.id = "58842067-6a26-46f7-a1bf-515fcc0c2322"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -308,27 +310,27 @@ Usage: #example
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 * entry[+].fullUrl = "urn:uuid:0e980b2d-3ccd-4805-9b20-6c13e16a9b23"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:0e980b2d-3ccd-4805-9b20-6c13e16a9b23"
+* entry[=].resource.id = "0e980b2d-3ccd-4805-9b20-6c13e16a9b23"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
-* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Input Race and Ethnicity"
-* entry[=].resource.component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican "HispanicMexican"
+* entry[=].resource.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
+* entry[=].resource.component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican "Hispanic Mexican"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicPuertoRican "HispanicPuertoRican"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicPuertoRican "Hispanic Puerto Rican"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicCuban "HispanicCuban"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicCuban "Hispanic Cuban"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
-* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther "HispanicOther"
+* entry[=].resource.component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicOther "Hispanic Other"
 * entry[=].resource.component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 * entry[=].resource.component[+].valueBoolean = true
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White "White"
 * entry[=].resource.component[+].valueBoolean = true
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "BlackOrAfricanAmerican"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "AmericanIndianOrAlaskanNative"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "AsianIndian"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
 * entry[=].resource.component[+].valueBoolean = false
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Chinese "Chinese"
 * entry[=].resource.component[+].valueBoolean = false
@@ -342,18 +344,18 @@ Usage: #example
 * entry[=].resource.component[+].valueBoolean = false
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "OtherAsian"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "NativeHawaiian"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "Native Hawaiian"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "GuamanianOrChamorro"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "Guamanian Or Chamorro"
 * entry[=].resource.component[+].valueBoolean = false
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Samoan "Samoan"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "OtherPacificIslander"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "Other Pacific Islander"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "OtherRace"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "Other Race"
 * entry[+].fullUrl = "urn:uuid:44209d35-2ed3-41ea-99c5-b4a3a8e28aa4"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:44209d35-2ed3-41ea-99c5-b4a3a8e28aa4"
+* entry[=].resource.id = "44209d35-2ed3-41ea-99c5-b4a3a8e28aa4"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -362,7 +364,7 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept = http://snomed.info/sct#7878000 "Accidental death"
 * entry[+].fullUrl = "urn:uuid:74105aa4-6cde-439c-b047-5ed7c2df95a4"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:74105aa4-6cde-439c-b047-5ed7c2df95a4"
+* entry[=].resource.id = "74105aa4-6cde-439c-b047-5ed7c2df95a4"
 * entry[=].resource.status = #final
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"
@@ -370,10 +372,10 @@ Usage: #example
 * entry[=].resource.valueCodeableConcept = http://snomed.info/sct#373066001 "Yes"
 * entry[+].fullUrl = "urn:uuid:117eedfa-9678-4c43-b058-50d07217c00e"
 * entry[=].resource.resourceType = "Observation"
-* entry[=].resource.id = "urn:uuid:117eedfa-9678-4c43-b058-50d07217c00e"
+* entry[=].resource.id = "117eedfa-9678-4c43-b058-50d07217c00e"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"
 * entry[=].resource.status = #final
-* entry[=].resource.subject.reference = "2648d64a-c95d-425e-9f10-59ddfc5204ee"
+* entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
 * entry[=].resource.valueCodeableConcept.text = "Construction"
 * entry[=].resource.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "unknown"
 * entry[=].resource.category = http://terminology.hl7.org/CodeSystem/observation-category#social-history
