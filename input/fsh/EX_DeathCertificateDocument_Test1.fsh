@@ -1,6 +1,7 @@
 
 Instance: DeathCertificateDocument-Test1
 InstanceOf: DeathCertificateDocument
+Description: "DeathCertificateDocument-Test1 (from MI)"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"
 * timestamp = "2022-12-22T12:58:12-14:00"
@@ -49,6 +50,7 @@ Usage: #example
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:7f62991c-a3bf-483a-a182-708cc5126c1d"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:b836c1bc-ae51-45e0-9558-63f930f79069"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:74105aa4-6cde-439c-b047-5ed7c2df95a4"
+* entry[=].resource.section[+].entry[+].reference = "urn:uuid:58842067-6a26-46f7-a1bf-515fcc0c2322"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathInvestigation
 * entry[=].resource.section[+].entry.reference = "urn:uuid:dcb9a71b-07fc-4199-ac90-6653f4900c99"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DecedentDisposition
@@ -196,6 +198,7 @@ Usage: #example
 * entry[=].resource.id = "8d642f37-085e-467f-b017-03a2dad2df32"
 * entry[=].resource.meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"
 * entry[=].resource.status = #completed
+* entry[=].resource.performedDateTime = "2020-11-14T16:39:40-05:00"
 * entry[=].resource.category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * entry[=].resource.code = http://snomed.info/sct#308646001 "Death certification"
 * entry[=].resource.subject.reference = "urn:uuid:2648d64a-c95d-425e-9f10-59ddfc5204ee"
@@ -328,7 +331,7 @@ Usage: #example
 * entry[=].resource.component[+].valueBoolean = true
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * entry[=].resource.component[+].valueBoolean = false
-* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
+* entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
 * entry[=].resource.component[+].valueBoolean = false
 * entry[=].resource.component[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
 * entry[=].resource.component[+].valueBoolean = false
