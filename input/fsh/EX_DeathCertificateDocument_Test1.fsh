@@ -50,7 +50,7 @@ Usage: #example
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:7f62991c-a3bf-483a-a182-708cc5126c1d"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:b836c1bc-ae51-45e0-9558-63f930f79069"
 * entry[=].resource.section[=].entry[+].reference = "urn:uuid:74105aa4-6cde-439c-b047-5ed7c2df95a4"
-* entry[=].resource.section[+].entry[+].reference = "urn:uuid:58842067-6a26-46f7-a1bf-515fcc0c2322"
+* entry[=].resource.section[=].entry[+].reference = "urn:uuid:58842067-6a26-46f7-a1bf-515fcc0c2322"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathInvestigation
 * entry[=].resource.section[+].entry.reference = "urn:uuid:dcb9a71b-07fc-4199-ac90-6653f4900c99"
 * entry[=].resource.section[=].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DecedentDisposition
