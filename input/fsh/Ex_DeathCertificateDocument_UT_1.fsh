@@ -168,7 +168,7 @@ Usage: #inline
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative
 * component[=].valueBoolean = true
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskanNativeLiteral "FirstAmericanIndianOrAlaskanNativeLiteral"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskanNativeLiteral
 * component[=].valueString = "Cheyenne"
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Chinese
 * component[=].valueBoolean = false
@@ -220,7 +220,6 @@ Usage: #inline
 * address.state = "UT"
 * address.postalCode = "84111"
 * address.country = "US"
-* qualification.code = http://snomed.info/sct#434641000124105 "Pronouncing & Certifying physician-To the best of my knowledge, death occurred at the time, date, and place, and due to the cause(s) and manner stated."
 
 Instance: b2b59a71-0a15-41dd-97ef-84b494bcd2c0
 InstanceOf: BirthRecordIdentifier
@@ -293,7 +292,7 @@ Usage: #inline
 * valueDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
 * valueDateTime.extension.extension[=].valueTime = "18:23:00"
 * valueDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
-* component.code = http://loinc.org#58332-8 "Place of death"
+* component.code = http://loinc.org#58332-8 "Location of death"
 * component.valueCodeableConcept = http://snomed.info/sct#16983000 "Death in hospital"
 
 Instance: Inline-Instance-for-449f0be0-46ae-4006-ab61-319bc6c582be-6
@@ -408,7 +407,7 @@ Usage: #inline
 * category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * code = http://snomed.info/sct#308646001 "Death certification"
 * subject = Reference(urn:uuid:f906300e-3622-459c-8201-af0d9b90fb75)
-* performer.function = http://snomed.info/sct#434641000124105 "Pronouncing & Certifying physician-To the best of my knowledge, death occurred at the time, date, and place, and due to the cause(s) and manner stated."
+* performer.function = http://snomed.info/sct#434641000124105 "Death certification and verification by physician (procedure)"
 * performer.actor = Reference(urn:uuid:01bbed3c-a3ed-4e07-8048-30fde65a8302)
 * performedDateTime = "2021-11-14T16:39:40-05:00"
 
