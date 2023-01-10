@@ -9,6 +9,8 @@ This profile is only for use in a Vital Records Exchange. Systems looking to exc
 * code = ObservationsCS#inputraceandethnicity
 * value[x] 0..0
 * subject 1..1
+* status only code
+* status = #final (exactly)
 * subject only Reference(Decedent)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
