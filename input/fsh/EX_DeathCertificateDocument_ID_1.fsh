@@ -87,6 +87,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:9414f7a4-bfd6-487d-86aa-6e426e3387d0)
 * section[=].entry[+] = Reference(urn:uuid:53fe3ee9-0e75-49e5-accf-42154959223d)
 * section[=].entry[+] = Reference(urn:uuid:71eb963e-dfc4-49fb-b1df-9cdac7053db8)
+* section[=].entry[+] = Reference(urn:uuid:a0e3025d-2f56-41b2-bdfe-bf384d451c35)
 * section[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathCertification
 * section[=].entry[0] = Reference(urn:uuid:a4f9e235-a22d-435b-9352-67af8f8a4e09)
 * section[=].entry[+] = Reference(urn:uuid:f689fc48-bae2-48bb-b634-deb8697191f0)
@@ -442,7 +443,7 @@ Usage: #inline
 * id = "71eb963e-dfc4-49fb-b1df-9cdac7053db8"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
 * status = #final
-* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Input Race and Ethnicity"
+* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 // * component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#MissingValueReason "MissingValueReason"
 // * component[=].valueCodeableConcept.coding.system = "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"
@@ -460,7 +461,7 @@ Usage: #inline
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
 * component[=].valueBoolean = false
