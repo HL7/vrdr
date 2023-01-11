@@ -231,9 +231,9 @@ Usage: #inline
 * effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
 * component[0].code = http://loinc.org#69451-3 "Transportation role of decedent"
-* component[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * component[+].code = http://loinc.org#69444-8 "Did death result from injury at work"
-* component[=].valueCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0136"
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * component[+].code = http://loinc.org#69450-5 "Place of injury Facility"
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 
