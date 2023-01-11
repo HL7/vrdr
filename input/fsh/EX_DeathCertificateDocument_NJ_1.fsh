@@ -154,13 +154,14 @@ Usage: #inline
 * name.given[+] = "Scooby"
 
 Instance: a88c7f45-95ca-40d5-86d1-0ec679042932
-InstanceOf: Procedure
+InstanceOf: DeathCertification
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"
 * status = #completed
 * category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * code = http://snomed.info/sct#308646001 "Death certification"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
+* performedDateTime = "2021-11-14T16:39:40-05:00"
 
 Instance: c033d1ad-a657-45d4-965c-09f812a5a50e
 InstanceOf: Observation
@@ -178,7 +179,7 @@ Usage: #inline
 * valueDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
 * valueDateTime.extension.extension[=].valueTime = "18:23:00"
 * valueDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
-* component.code = http://loinc.org#58332-8 "Place of death"
+* component.code = http://loinc.org#58332-8 "Location of death"
 * component.valueCodeableConcept = http://snomed.info/sct#16983000 "Death in hospital"
 
 Instance: c37ea2ec-93ef-4268-9da7-8a09940e1839
@@ -300,14 +301,14 @@ Usage: #inline
 * component.valueCodeableConcept.text = "Never Worked"
 
 Instance: f7a8d073-7cac-40c8-b367-26cb5be3c6e7
-InstanceOf: Observation
+InstanceOf: BirthRecordIdentifier
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier"
 * status = #final
 * code = http://terminology.hl7.org/CodeSystem/v2-0203#BR "Birth registry number"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
 * valueString = "001023"
-* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "Unknown"
+// * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "Unknown"
 * component[0].code = http://loinc.org#80904-6 "Birth year"
 * component[=].valueDateTime = "2021"
 * component[+].code = http://loinc.org#21842-0 "Birthplace"
