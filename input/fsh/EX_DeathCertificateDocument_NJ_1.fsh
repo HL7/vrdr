@@ -87,7 +87,7 @@ Usage: #inline
 * section[=].entry = Reference(urn:uuid:d38265ca-8946-43cf-8aae-b535096889fa)
 
 Instance: Inline-Instance-for-d57efe8b-e601-45cf-8679-5c6ca0664d84-1
-InstanceOf: Patient
+InstanceOf: Decedent
 Usage: #inline
 * id = "2f154476-e4d0-4c44-9b67-3f3dbfc4661c"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"
@@ -103,6 +103,7 @@ Usage: #inline
 * name.family = "Lineberry"
 * name.given = "Davis"
 * name.suffix = "Jr"
+* gender = #female
 * birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
 * birthDate.extension.extension[=].valueUnsignedInt = 2021
 * birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
@@ -137,10 +138,20 @@ Usage: #inline
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#S "Never Married"
 
 Instance: Inline-Instance-for-d57efe8b-e601-45cf-8679-5c6ca0664d84-2
-InstanceOf: Practitioner
+InstanceOf: Certifier
 Usage: #inline
 * id = "7ca50e07-5b9f-48a0-aeec-0c2ce39c51a2"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "8657"
+* address.line = "801 POLE LINE RD WEST"
+* address.city = "TWIN FALLS"
+* address.state = "ID"
+* address.postalCode = "83301"
+* name.use = #official
+* name.family = "Doo"
+* name.given[0] = "The"
+* name.given[+] = "Scooby"
 
 Instance: a88c7f45-95ca-40d5-86d1-0ec679042932
 InstanceOf: Procedure
@@ -366,5 +377,5 @@ Usage: #inline
 * status = #final
 * code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#emergingissues "NCHS-required Parameter Slots for Emerging Issues"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
-* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#EmergingIssue20
-* component.valueString = "043-A-110234"
+* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#EmergingIssue8_1
+* component.valueString = "043-A-11"
