@@ -1,5 +1,6 @@
-Instance: DeathRecordDocument-ID-1
+Instance: DeathCertificateDocument-ID-1
 InstanceOf: DeathCertificateDocument
+Description: "Example Record from ID"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"
 * identifier.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/CertificateNumber"

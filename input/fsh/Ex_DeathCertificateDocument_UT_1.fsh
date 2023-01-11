@@ -1,5 +1,6 @@
 Instance: DeathCertificateDocument-UT-1
 InstanceOf: DeathCertificateDocument
+Description: "Example Record from UT"
 Usage: #example
 * timestamp = "2022-12-23T19:55:16.4587968+00:00"
 * identifier.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/CertificateNumber"
