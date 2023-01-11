@@ -1,5 +1,5 @@
 Instance: DeathRecordDocument-ID-1
-InstanceOf: Bundle
+InstanceOf: DeathCertificateDocument
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"
 * identifier.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/CertificateNumber"
@@ -60,14 +60,14 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-19
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-1
-InstanceOf: Composition
+InstanceOf: DeathCertificate
 Usage: #inline
 * id = "349f6cec-9055-4d28-8441-554c4cbd4f47"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"
 * extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat"
 * extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs#electronic "Electronic"
 * extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus"
-* extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-NchsraceCode1-status-cs#original "original record"
+* extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs#original "original record"
 * status = #final
 * date = "2022-12-01T02:46:13-05:00"
 * type = http://loinc.org#64297-5 "Death certificate"
@@ -108,7 +108,7 @@ Usage: #inline
 * section[=].entry = Reference(urn:uuid:5680b497-c0ae-4d4f-9be7-10acc7bd33a4)
 
 Instance: fae60419-2d35-4c55-8566-5c272496fb45
-InstanceOf: Patient
+InstanceOf: Decedent
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
@@ -124,6 +124,7 @@ Usage: #inline
 * name.family = "SARGER"
 * name.given[0] = "ALYSSA"
 * name.given[+] = "F"
+* gender = #female
 * birthDate.extension.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
 * birthDate.extension.extension[=].valueUnsignedInt = 1924
 * birthDate.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
@@ -159,7 +160,7 @@ Usage: #inline
 * address.postalCode = "83301"
 
 Instance: f689fc48-bae2-48bb-b634-deb8697191f0
-InstanceOf: Procedure
+InstanceOf: DeathCertification
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"
 * status = #completed
@@ -168,7 +169,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-2
-InstanceOf: Observation
+InstanceOf: DecedentDispositionMethod
 Usage: #inline
 * id = "20bbb5d9-d77d-40f7-9e86-b8c28ad805d1"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-disposition-method"
@@ -178,7 +179,7 @@ Usage: #inline
 * valueCodeableConcept = http://snomed.info/sct#449971000124106 "Burial"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-3
-InstanceOf: Observation
+InstanceOf: AutopsyPerformedIndicator
 Usage: #inline
 * id = "8f2ceeb6-958d-4c5e-b17a-78682855bd27"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"
@@ -190,7 +191,7 @@ Usage: #inline
 * component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NA "not applicable"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-4
-InstanceOf: Observation
+InstanceOf: DecedentPregnancyStatus
 Usage: #inline
 * id = "6e4eb14c-0264-4ec0-8036-e89a9c4542ef"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"
@@ -202,7 +203,7 @@ Usage: #inline
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-pregnancy-status-cs"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-5
-InstanceOf: Observation
+InstanceOf: InjuryIncident
 Usage: #inline
 * id = "803f68c8-7d91-49cd-a72c-0d19b594dbfb"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"
@@ -229,7 +230,7 @@ Usage: #inline
 * component[+].code = http://loinc.org#69450-5 "Place of injury Facility"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-6
-InstanceOf: Observation
+InstanceOf: TobaccoUseContributedToDeath
 Usage: #inline
 * id = "4e46275a-e38d-4860-bc40-e413cc2d1440"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"
@@ -239,7 +240,7 @@ Usage: #inline
 * valueCodeableConcept = http://snomed.info/sct#373067005 "No"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-7
-InstanceOf: Location
+InstanceOf: InjuryLocation
 Usage: #inline
 * id = "5d4523be-95ee-44cf-a2ac-3c777da11c65"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-location"
@@ -247,7 +248,7 @@ Usage: #inline
 * type = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs#injury "injury location"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-8
-InstanceOf: Location
+InstanceOf: DeathLocation
 Usage: #inline
 * id = "618e08e5-2a2d-4418-97d4-a85f6d38ca1a"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"
@@ -265,7 +266,7 @@ Usage: #inline
 * address.country = "US"
 
 Instance: e8674e63-7f5f-46df-80a6-58c79c711f7e
-InstanceOf: Observation
+InstanceOf: DeathDate
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"
 * status = #final
@@ -286,7 +287,7 @@ Usage: #inline
 * component[=].valueDateTime = "2022-01-31T09:47:00-05:00"
 
 Instance: cc5f0637-a520-42e7-9fd3-cda7310bb242
-InstanceOf: Observation
+InstanceOf: DecedentAge
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-age"
 * status = #final
@@ -297,7 +298,7 @@ Usage: #inline
 * valueQuantity = 97 'a' "Years"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-9
-InstanceOf: Observation
+InstanceOf: MannerOfDeath
 Usage: #inline
 * id = "5a9a1f68-dceb-4052-8ed1-4fbe6b0794be"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"
@@ -308,7 +309,7 @@ Usage: #inline
 * valueCodeableConcept = http://snomed.info/sct#38605008 "Natural death"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-10
-InstanceOf: Observation
+InstanceOf: CauseOfDeathPart2
 Usage: #inline
 * id = "62e747a5-7dce-41dc-adda-6035151a49dd"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part2"
@@ -316,9 +317,10 @@ Usage: #inline
 * code = http://loinc.org#69441-4 "Other significant causes or conditions of death"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 * performer = Reference(urn:uuid:a4f9e235-a22d-435b-9352-67af8f8a4e09)
+* valueCodeableConcept.text = "None"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-11
-InstanceOf: Observation
+InstanceOf: CauseOfDeathPart1
 Usage: #inline
 * id = "44ae24a1-473a-451a-9352-9c2e166b8788"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"
@@ -331,7 +333,7 @@ Usage: #inline
 * component.valueInteger = 1
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-12
-InstanceOf: Observation
+InstanceOf: CauseOfDeathPart1
 Usage: #inline
 * id = "8e7c3133-e784-408d-b635-537e437cb8e4"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"
@@ -344,7 +346,7 @@ Usage: #inline
 * component.valueInteger = 2
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-13
-InstanceOf: RelatedPerson
+InstanceOf: DecedentFather
 Usage: #inline
 * id = "32410b1f-ed6b-4dbe-9af5-b92e206cd976"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"
@@ -357,7 +359,7 @@ Usage: #inline
 * name.given[+] = "M"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-14
-InstanceOf: RelatedPerson
+InstanceOf: DecedentMother
 Usage: #inline
 * id = "1e36c471-4899-44ec-bd28-bd217d8eddb5"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"
@@ -371,7 +373,7 @@ Usage: #inline
 * name[=].family = "NEUKOM"
 
 Instance: a0e3025d-2f56-41b2-bdfe-bf384d451c35
-InstanceOf: Observation
+InstanceOf: DecedentEducationLevel
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-education-level"
 * status = #final
@@ -382,7 +384,7 @@ Usage: #inline
 * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-EducationLevel#HS "High School or secondary school degree complete"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-15
-InstanceOf: Observation
+InstanceOf: BirthRecordIdentifier
 Usage: #inline
 * id = "9f44eb01-84c1-478a-ae68-11c5d7bd5dd7"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier"
@@ -390,13 +392,11 @@ Usage: #inline
 * code = http://terminology.hl7.org/CodeSystem/v2-0203#BR "Birth registry number"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "Unknown"
-* component[0].code = http://loinc.org#21842-0 "Birthplace"
-* component[=].valueString = "ID"
-* component[+].code = http://loinc.org#80904-6 "Birth year"
-* component[=].valueDateTime = "1924"
+* component[birthJurisdiction].valueString = "ID"
+* component[birthYear].valueDateTime = "1924"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-16
-InstanceOf: Observation
+InstanceOf: DecedentUsualWork
 Usage: #inline
 * id = "9414f7a4-bfd6-487d-86aa-6e426e3387d0"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"
@@ -411,7 +411,7 @@ Usage: #inline
 * component.valueCodeableConcept.text = "OWN HOME"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-17
-InstanceOf: Observation
+InstanceOf: DecedentMilitaryService
 Usage: #inline
 * id = "53fe3ee9-0e75-49e5-accf-42154959223d"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-military-service"
@@ -421,7 +421,7 @@ Usage: #inline
 * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-18
-InstanceOf: Observation
+InstanceOf: InputRaceAndEthnicity
 Usage: #inline
 * id = "71eb963e-dfc4-49fb-b1df-9cdac7053db8"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
@@ -471,7 +471,7 @@ Usage: #inline
 * component[=].valueBoolean = false
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-19
-InstanceOf: Observation
+InstanceOf: CodedRaceAndEthnicity
 Usage: #inline
 * id = "5680b497-c0ae-4d4f-9be7-10acc7bd33a4"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coded-race-and-ethnicity"
