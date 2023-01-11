@@ -218,18 +218,26 @@ Usage: #inline
 * code = http://loinc.org#11374-6 "Injury incident description Narrative"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 * effectiveDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
-* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
-* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
-* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
-* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
-* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+]
+  * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
+  * valueUnsignedInt.extension
+    * url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+    * valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+]
+  * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
+  * valueUnsignedInt.extension
+    * url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+    * valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+]
+  * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
+  * valueUnsignedInt.extension
+    * url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+    * valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+]
+  * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
+  * valueTime.extension
+    * url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+    * valueCode = #temp-unknown
 * component[0].code = http://loinc.org#69451-3 "Transportation role of decedent"
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * component[+].code = http://loinc.org#69444-8 "Did death result from injury at work"
