@@ -149,7 +149,7 @@ Usage: #inline
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#W "Widowed"
 
 Instance: a4f9e235-a22d-435b-9352-67af8f8a4e09
-InstanceOf: Practitioner
+InstanceOf: Certifier
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
@@ -158,6 +158,10 @@ Usage: #inline
 * address.city = "TWIN FALLS"
 * address.state = "ID"
 * address.postalCode = "83301"
+* name.use = #official
+* name.family = "Doo"
+* name.given[0] = "The"
+* name.given[+] = "Scooby"
 
 Instance: f689fc48-bae2-48bb-b634-deb8697191f0
 InstanceOf: DeathCertification
@@ -167,6 +171,7 @@ Usage: #inline
 * category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * code = http://snomed.info/sct#308646001 "Death certification"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
+* performedDateTime = "2021-11-14T16:39:40-05:00"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-2
 InstanceOf: DecedentDispositionMethod
@@ -198,9 +203,11 @@ Usage: #inline
 * status = #final
 * code = http://loinc.org#69442-2 "Timing of recent pregnancy in relation to death"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
-* valueCodeableConcept.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
-* valueCodeableConcept.extension.valueCodeableConcept.coding.system = "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs"
+* valueCodeableConcept.extension[0].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/BypassEditFlag"
+* valueCodeableConcept.extension[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs#0 "Edit Passed"
+//* valueCodeableConcept.extension.valueCodeableConcept.coding.system = "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-bypass-edit-flag-cs"
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-pregnancy-status-cs"
+* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NA "Not applicable"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-5
 InstanceOf: InjuryIncident
@@ -210,24 +217,25 @@ Usage: #inline
 * status = #final
 * code = http://loinc.org#11374-6 "Injury incident description Narrative"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
-* effectiveDateTime.extension.extension[0].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[=].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
-* effectiveDateTime.extension.extension[+].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[=].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
-* effectiveDateTime.extension.extension[+].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[=].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
-* effectiveDateTime.extension.extension[+].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
-* effectiveDateTime.extension.extension[=].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
 * effectiveDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
+* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Day"
+* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Month"
+* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Year"
+* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
+* effectiveDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
+* effectiveDateTime.extension.extension[=].extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* effectiveDateTime.extension.extension[=].extension.valueCode = #temp-unknown
 * component[0].code = http://loinc.org#69451-3 "Transportation role of decedent"
 * component[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
 * component[+].code = http://loinc.org#69444-8 "Did death result from injury at work"
 * component[=].valueCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0136"
 * component[+].code = http://loinc.org#69450-5 "Place of injury Facility"
+* component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-6
 InstanceOf: TobaccoUseContributedToDeath
