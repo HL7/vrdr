@@ -1,7 +1,9 @@
-### VRDR STU 2.1 CI Build (Fall 2022)
-* __Pregnancy Status:__ Added missing code for 'Not reported on certificate.
+### VRDR STU 2.1 CI Build (January 2023)
+* __Pregnancy Status:__ Added missing code for 'Not reported on certificate'.
 * __Race and Ethnicity:__ Added some missing codes
+* __Certifier Types:__ Corrected display strings to align with SNOMEDCT
 * __References:__ Fixed references to MRE definition documents.
+* __Examples:__ Added additional examples
 
 ### VRDR STU 2 Publication Version (August 31, 2022)
 #### General Changes
