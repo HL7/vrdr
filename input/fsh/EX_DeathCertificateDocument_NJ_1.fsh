@@ -72,6 +72,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:6c50a6dd-7e45-49e4-a2c8-2dd5e2656175)
 * section[=].entry[+] = Reference(urn:uuid:f7a8d073-7cac-40c8-b367-26cb5be3c6e7)
 * section[=].entry[+] = Reference(urn:uuid:2a9fbe26-39f7-4b81-85ac-51c10bd66bec)
+* section[=].entry[+] = Reference(urn:uuid:b28bfa38-d47c-4e1b-bc61-047e5b352188)
 * section[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathCertification
 * section[=].entry[0] = Reference(urn:uuid:7ca50e07-5b9f-48a0-aeec-0c2ce39c51a2)
 * section[=].entry[+] = Reference(urn:uuid:a88c7f45-95ca-40d5-86d1-0ec679042932)
@@ -242,7 +243,7 @@ Usage: #inline
 * id = "208561f1-b2a1-4a9a-8baf-3105fbcc6c5b"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
 * status = #final
-* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Input Race and Ethnicity"
+* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
 * component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#HispanicMexican "Hispanic Mexican"
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#N "No"
