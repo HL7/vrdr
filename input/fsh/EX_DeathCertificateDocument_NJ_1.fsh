@@ -376,7 +376,7 @@ Usage: #inline
 * id = "2a9fbe26-39f7-4b81-85ac-51c10bd66bec"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-emerging-issues"
 * status = #final
-* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#emergingissues "NCHS-required Parameter Slots for Emerging Issues"
+* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#emergingissues "Emerging Issues"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
 * component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#EmergingIssue8_1
 * component.valueString = "043-A-11"

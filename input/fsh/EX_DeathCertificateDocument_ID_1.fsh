@@ -497,5 +497,5 @@ Usage: #inline
 * status = #final
 * code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#codedraceandethnicity "Coded Race and Ethnicity"
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
-* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstEditedCode "First Edited Race"
+* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstEditedCode "First Edited Race Code"
 * component.valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-race-code-cs#100 "White Checkbox"
