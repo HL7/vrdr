@@ -167,7 +167,7 @@ Usage: #inline
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskanNativeLiteral
 * component[=].valueString = "Cheyenne"
