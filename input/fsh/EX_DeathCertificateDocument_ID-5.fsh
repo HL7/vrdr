@@ -88,6 +88,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:a0ceb4e8-9cfc-4786-bcbb-6d46899d283b)
 * section[=].entry[+] = Reference(urn:uuid:c8344e17-6a53-4079-bf20-ceb2224beed2)
 * section[=].entry[+] = Reference(urn:uuid:5ea877cc-72e6-4bea-8b2d-b0a373184db5)
+* section[=].entry[+] = Reference(urn:uuid:eb6aad46-a174-4a36-9bdb-7c3bd3240f43)
 * section[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs#DeathCertification
 * section[=].entry[0] = Reference(urn:uuid:10874edd-9bd6-46db-ad56-488bdedc0e0f)
 * section[=].entry[+] = Reference(urn:uuid:5489a596-89d7-4318-98f2-c57566aa5c2d)
@@ -172,6 +173,7 @@ Usage: #inline
 * category = http://snomed.info/sct#103693007 "Diagnostic procedure"
 * code = http://snomed.info/sct#308646001 "Death certification"
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
+* performedDateTime = "2021-11-14T16:39:40-05:00"
 
 Instance: b6e9dab4-311a-42ed-a5af-03700556ee91
 InstanceOf: DecedentDispositionMethod
@@ -223,7 +225,7 @@ Usage: #inline
 * effectiveDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
 * valueCodeableConcept.text = "UNRESTRAINED EJECTED DRIVER IN ROLLOVER MOTOR VEHICLE ACCIDENT"
 * component[0].code = http://loinc.org#69451-3 "Transportation role of decedent"
-* component[=].valueCodeableConcept = http://snomed.info/sct#236320001 "Driver/Operator"
+* component[=].valueCodeableConcept = http://snomed.info/sct#236320001 "Vehicle driver"
 * component[+].code = http://loinc.org#69444-8 "Did death result from injury at work"
 * component[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0136#Y "Yes"
 * component[+].code = http://loinc.org#69450-5 "Place of injury Facility"
@@ -278,7 +280,7 @@ Usage: #inline
 * valueDateTime.extension.extension[+].url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/Date-Time"
 * valueDateTime.extension.extension[=].valueTime = "10:40:00"
 * valueDateTime.extension.url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/PartialDateTime"
-* component[0].code = http://loinc.org#58332-8 "Place of death"
+* component[0].code = http://loinc.org#58332-8 "Location of death"
 * component[=].valueCodeableConcept = http://snomed.info/sct#63238001 "Dead on arrival at hospital"
 * component[+].code = http://loinc.org#80616-6 "Date and time pronounced dead [US Standard Certificate of Death]"
 * component[=].valueDateTime = "2022-03-16T11:40:00-04:00"
@@ -434,7 +436,7 @@ Usage: #inline
 * id = "5ea877cc-72e6-4bea-8b2d-b0a373184db5"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-input-race-and-ethnicity"
 * status = #final
-* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "'Race and Ethnicity Data submitted by Jurisdictions to NCHS"
+* code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs#inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
 * component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#RACEMVR "Race Missing Value Reason"
 * component[=].valueCodeableConcept = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-missing-value-reason-cs#C "Not obtainable"
@@ -453,7 +455,7 @@ Usage: #inline
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * component[=].valueBoolean = true
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaskan Native"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
 * component[=].valueBoolean = false
