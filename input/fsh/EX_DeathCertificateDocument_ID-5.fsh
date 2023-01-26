@@ -415,11 +415,8 @@ Usage: #inline
 * category = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * code = http://loinc.org#21843-8 "History of Usual occupation"
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
-* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "unknown"
 * valueCodeableConcept.text = "CARPENTER"
-* component.code = http://loinc.org#21844-6 "History of Usual industry"
-* component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "unknown"
-* component.valueCodeableConcept.text = "CONSTRUCTION"
+* component[odh-UsualIndustry].valueCodeableConcept.text = "CONSTRUCTION"
 
 Instance: c8344e17-6a53-4079-bf20-ceb2224beed2
 InstanceOf: DecedentMilitaryService

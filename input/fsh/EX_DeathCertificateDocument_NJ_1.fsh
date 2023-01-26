@@ -287,7 +287,7 @@ Usage: #inline
 * component[=].valueString = "Cheyenne"
 
 Instance: Inline-Instance-for-d57efe8b-e601-45cf-8679-5c6ca0664d84-5
-InstanceOf: Observation
+InstanceOf: DecedentUsualWork
 Usage: #inline
 * id = "6c50a6dd-7e45-49e4-a2c8-2dd5e2656175"
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"
@@ -295,11 +295,8 @@ Usage: #inline
 * category = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * code = http://loinc.org#21843-8 "History of Usual occupation"
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
-* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "unknown"
 * valueCodeableConcept.text = "Infant"
-* component.code = http://loinc.org#21844-6 "History of Usual industry"
-* component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "unknown"
-* component.valueCodeableConcept.text = "Never Worked"
+* component[odh-UsualIndustry].valueCodeableConcept.text = "Never Worked"
 
 Instance: f7a8d073-7cac-40c8-b367-26cb5be3c6e7
 InstanceOf: BirthRecordIdentifier

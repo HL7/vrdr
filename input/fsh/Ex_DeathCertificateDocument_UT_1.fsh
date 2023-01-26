@@ -336,13 +336,9 @@ Usage: #inline
 * id = "0051e0b6-6990-4190-93a6-87442b4a50aa"
 * status = #final
 * subject = Reference(urn:uuid:f906300e-3622-459c-8201-af0d9b90fb75)
-* valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * valueCodeableConcept.text = "Infant"
-* component.code = http://loinc.org#21844-6 "History of Usual industry"
-* component.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
-* component.valueCodeableConcept.text = "Never Worked"
-* category = http://terminology.hl7.org/CodeSystem/observation-category#social-history
-* code = http://loinc.org#21843-8 "History of Usual occupation"
+* component[odh-UsualIndustry].valueCodeableConcept.text = "Never Worked"
+
 
 Instance: Inline-Instance-for-449f0be0-46ae-4006-ab61-319bc6c582be-10
 InstanceOf: DecedentMilitaryService
