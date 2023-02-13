@@ -55,7 +55,6 @@ The content is broken down into the following sections:
     * [CodingStatusValues]
 
 **Note:**
-NCHS will not process submissions where the death certificate contains a 'replace status' of updated_notforNCHS.
 For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
 The replacement status of a submission is now specified as a message parameter and described in the [NCHS Vital Records Messaging IG].
 
