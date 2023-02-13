@@ -36,7 +36,7 @@
 | 97 | Date of Registration--Month | DOR_MO| [DeathCertificate]| |date | dateTime | - | 
 | 98 | Date of Registration--Day | DOR_DY| [DeathCertificate]| |date | dateTime | - | 
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
-| 184 | Replacement Record  | REPLACE| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
+| 184 | Replacement Record  | REPLACE (*deprecated*)| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | NA | Death Record Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
 | 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.extension[ certificateNumber].value | string(6) | - | 
 | 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
