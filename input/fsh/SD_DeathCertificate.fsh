@@ -37,9 +37,9 @@ Description: "The body of the death certificate document (Composition)."
     FilingFormat named filingFormat 0..1 and
     ReplaceStatus named replaceStatus 0..1 and
     StateSpecificField named stateSpecificField 0..1
-* extension[FilingFormat] ^ short = "Filing Format"
-* extension[ReplaceStatus] ^ short = "Replace Status (deprecated)"
-* extension[StateSpecificField] ^ short = "State Specific Field"
+* extension[FilingFormat] ^short = "Filing Format"
+* extension[ReplaceStatus] ^short = "Replace Status (deprecated)"
+* extension[StateSpecificField] ^short = "State Specific Field"
 * subject 1..1
 * subject only Reference(Decedent)
 // * date 1..1
