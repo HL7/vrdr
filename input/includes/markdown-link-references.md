@@ -9,7 +9,10 @@
 [MITRE]: https://www.mitre.org/
 [Georgia Institute of Technology (GTRI)]: https://www.gatech.edu/
 [Hi3 Solutions Corporation]: https://www.facebook.com/hi3solutions/
-[MDI]: https://build.fhir.org/ig/HL7/fhir-mdi-ig/
+[MDI]: https://hl7.org/fhir/us/mdi/
+[NCHS Vital Records Messaging IG]: https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content
+[Vital Records Common Library IG]: https://hl7.org/fhir/us/vr-common-library/
+
 <!-- USCORE -->
 [USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
