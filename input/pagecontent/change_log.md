@@ -6,6 +6,7 @@
   * Concept Maps:  Updated to reflect added codes
 * __Profiles:__
   * Emerging Issues:  Fixed length of fields of length > 1
+  * Death Certificate:  Documented deprecation of the use of REPLACE within a death record submission.
 * __References in Narrative:__
   * Fixed references to MRE definition documents.
 * __Examples:__
