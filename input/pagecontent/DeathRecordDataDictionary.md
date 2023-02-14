@@ -3,7 +3,7 @@
 | **#** |  **Description**   |  **IJE Name**  | **Profile**  | **IJE only** |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| |value | codeable | [YesNoUnknownVS] | 
-| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[ autopsyPerformedIndicator ].value | codeable | [YesNoUnknownNotApplicableVS] | 
+| 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[ autopsyResultsAvailable ].value | codeable | [YesNoUnknownNotApplicableVS] | 
 | 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | - | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionsProvincesVS] | 
