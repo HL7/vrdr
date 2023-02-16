@@ -33,6 +33,8 @@ Description: "Date of death (Observation).  The PartialDatePartAbsent extension 
     placeOfDeath 0..1
 * component[datetimePronouncedDead] ^short = "Date/Time Pronounced Dead"
 * component[datetimePronouncedDead].value[x] only dateTime
+* component[datetimePronouncedDead].valueDateTime.extension contains
+    PartialDateTime named partialDateTime 0..1
 * component[datetimePronouncedDead].value[x] 1..1
 * component[datetimePronouncedDead].code = $loinc#80616-6 // "Date and time pronounced dead [US Standard Certificate of Death]"
 * component[placeOfDeath] ^short = "Place of Death"

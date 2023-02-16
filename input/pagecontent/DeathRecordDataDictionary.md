@@ -46,7 +46,7 @@
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime | - | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime | See [PartialDatesAndTimes] | 
 | 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].value | dateTime | - | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
