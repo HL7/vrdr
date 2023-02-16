@@ -7,6 +7,7 @@
 * __Profiles:__
   * Emerging Issues:  Fixed length of fields of length > 1
   * Death Certificate:  Documented deprecation of the use of REPLACE within a death record submission.
+  * Added a PartialDateTime on DeathDate.DeathDate.component[datetimePronouncedDead].valueDateTime to support specification of PPTIME without PPDATESIGNED, or a partial PPDATESIGNED.
 * __References in Narrative:__
   * Fixed references to MRE definition documents.
 * __Examples:__
