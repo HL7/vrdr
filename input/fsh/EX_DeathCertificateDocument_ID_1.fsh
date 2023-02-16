@@ -457,11 +457,11 @@ Usage: #inline
 * component[=].valueString = "Hispanic Other"
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White "White"
 * component[=].valueBoolean = true
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "BlackOrAfricanAmerican"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "AmericanIndianOrAlaskaNative"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "AsianIndian"
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Chinese "Chinese"
 * component[=].valueBoolean = false
@@ -473,17 +473,17 @@ Usage: #inline
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Vietnamese "Vietnamese"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "Other Asian"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "OtherAsian"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "Native Hawaiian"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "NativeHawaiian"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "Guamanian Or Chamorro"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#GuamanianOrChamorro "GuamanianOrChamorro"
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Samoan "Samoan"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "Other Pacific Islander"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherPacificIslander "OtherPacificIslander"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "Other Race"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherRace "OtherRace"
 * component[=].valueBoolean = false
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-19
