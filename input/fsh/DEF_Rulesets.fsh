@@ -91,7 +91,7 @@ RuleSet: obscodecomponent(code, valueSet)
 * component[{code}] ^short = "{code}"
 * component[{code}].value[x] from {valueSet}
 
-RuleSet: primobscodecomponent(code, type)
+RuleSet: primobscodecomponent(code, display,type)
 * component contains {code} 0..1
 * component[{code}].code 1..1
 * component[{code}].code = ComponentCS#{code}

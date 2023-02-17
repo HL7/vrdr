@@ -72,7 +72,7 @@ Description: "Local Component Codes for observation components that lack an appr
 * #Japanese "Japanese"
 * #Korean "Korean"
 * #Vietnamese "Vietnamese"
-* #OtherAsian "OtherAsian"
+* #OtherAsian "Other Asian"
 * #NativeHawaiian "Native Hawaiian"
 * #GuamanianOrChamorro "Guamanian Or Chamorro"
 * #Samoan "Samoan"

@@ -163,11 +163,11 @@ Usage: #inline
 * id = "0a1ded2c-6140-4abc-9128-0af93e2f2ea5"
 * status = #final
 * subject = Reference(urn:uuid:f906300e-3622-459c-8201-af0d9b90fb75)
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White "White"
+* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White
 * component[=].valueBoolean = true
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#FirstAmericanIndianOrAlaskanNativeLiteral
 * component[=].valueString = "Cheyenne"
@@ -181,7 +181,7 @@ Usage: #inline
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian "Asian Indian"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AsianIndian
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Korean
 * component[=].valueBoolean = false
