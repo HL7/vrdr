@@ -9,5 +9,5 @@ Usage: #definition
 * insert MapConcept( #N,  "No",#373067005, "No")
 * insert MapConcept( #P,  "Probably",#2931005, "Probably")
 * insert AddGroup("IJE",$v3-NullFlavor)
-* insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
-* insert MapConcept( #C,  "Not on certificate",#NI, "No Information")
+* insert MapConcept( #U,  "Unknown",#UNK, "unknown")
+* insert MapConcept( #C,  "Not on certificate",#NI, "no information")
