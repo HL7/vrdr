@@ -9,8 +9,8 @@ Usage: #definition
 * insert MapConcept( #N,  "No",#N, "No")
 * insert MapConcept( #Y,  "Yes",#Y, "Yes")
 * insert AddGroup("IJE",$v3-NullFlavor)
-* insert MapConcept( #X,  "Not Applicable",#NA, "Not Applicable")
-* insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
+* insert MapConcept( #X,  "Not Applicable",#NA, "not applicable")
+* insert MapConcept( #U,  "Unknown",#UNK, "unknown")
 
 Instance: YesNoUnknownCM
 InstanceOf: ConceptMap
@@ -22,7 +22,7 @@ Usage: #definition
 * insert MapConcept( #N,  "No",#N, "No")
 * insert MapConcept( #Y,  "Yes",#Y, "Yes")
 * insert AddGroup("IJE",$v3-NullFlavor)
-* insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
+* insert MapConcept( #U,  "Unknown",#UNK, "unknown")
 
 
 // Instance: NotApplicableCM

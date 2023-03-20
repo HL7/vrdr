@@ -12,4 +12,4 @@ Usage: #definition
 * insert MapConcept( #7,  "Not reported on certificate",#7, "Not reported on certificate")
 * insert MapConcept( #9,  "Unknown if pregnant within the past year",#9, "Unknown if pregnant within the past year")
 * insert AddGroup("None",$v3-NullFlavor)
-* insert MapConcept( #8 ,  "Not Applicable",#NA , "Not Applicable")
+* insert MapConcept( #8 ,  "Not Applicable",#NA , "not applicable")
