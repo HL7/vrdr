@@ -10,4 +10,4 @@ Usage: #definition
 * insert MapConcept( #P,  "Probably",#2931005, "Probably")
 * insert AddGroup("IJE",$v3-NullFlavor)
 * insert MapConcept( #U,  "Unknown",#UNK, "unknown")
-* insert MapConcept( #C,  "Not on certificate",#NI, "no information")
+* insert MapConcept( #C,  "Not on certificate",#NI, "NoInformation")
