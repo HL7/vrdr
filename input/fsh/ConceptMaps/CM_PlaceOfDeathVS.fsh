@@ -12,5 +12,5 @@ Usage: #definition
 * insert MapConcept( #5,  "Hospice Facility",#440071000124103, "Death in hospice")
 * insert MapConcept( #6,  "Nursing Home/Long Term Care Facility",#450381000124100, "Death in nursing home or long term care facility")
 * insert AddGroup("IJE",$v3-NullFlavor)
-* insert MapConcept( #7,  "Other",#OTH, "Other")
-* insert MapConcept( #9,  "Unknown",#UNK, "Unknown")
+* insert MapConcept( #7,  "Other",#OTH, "other")
+* insert MapConcept( #9,  "Unknown",#UNK, "unknown")

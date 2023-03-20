@@ -11,5 +11,5 @@ Usage: #definition
 * insert MapConcept( #E,  "Entombment",#449931000124108, "Entombment")
 * insert MapConcept( #R,  "Removal from State",#449941000124103, "Removal from State")
 * insert AddGroup("IJE",$v3-NullFlavor)
-* insert MapConcept( #O,  "Other",#OTH, "Other")
-* insert MapConcept( #U,  "Unknown",#UNK, "Unknown")
+* insert MapConcept( #O,  "Other",#OTH, "other")
+* insert MapConcept( #U,  "Unknown",#UNK, "unknown")

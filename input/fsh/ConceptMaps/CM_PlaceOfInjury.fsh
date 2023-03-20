@@ -15,4 +15,4 @@ Usage: #definition
 * insert MapConcept( #7,  "Farm",#LA14092-3, "Farm")
 * insert MapConcept( #9,  "Unspecified Place",#LA14093-1, "Unspecified")
 * insert AddGroup("TRX",$v3-NullFlavor)
-* insert MapConcept( #8,  "Other specified Place",#OTH, "Other")
+* insert MapConcept( #8,  "Other specified Place",#OTH, "other")
