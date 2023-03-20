@@ -2,11 +2,12 @@ Instance: RaceRecode40CM
 InstanceOf: ConceptMap
 // Id: vrdr-race-recode40-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(RaceRecode40, RaceRecode40VS)
 * insert AddGroup("MRE",Canonical(RaceRecode40CS))
 * insert MapConcept(#01, "White", #01,  "White")
 * insert MapConcept(#02, "Black", #02,  "Black")
-* insert MapConcept(#03, "American Indian or Alaskan Native - AIAN", #03,  "American Indian or Alaskan Native -AIAN")
+* insert MapConcept(#03, "American Indian or Alaskan Native (AIAN\)", #03,  "American Indian or Alaskan Native (AIAN\)")
 * insert MapConcept(#04, "Asian Indian", #04,  "Asian Indian")
 * insert MapConcept(#05, "Chinese", #05,  "Chinese")
 * insert MapConcept(#06, "Filipino", #06,  "Filipino")
@@ -24,10 +25,10 @@ Usage: #definition
 * insert MapConcept(#18, "AIAN and NHOPI", #18,  "AIAN and NHOPI")
 * insert MapConcept(#19, "NHOPI and White", #19,  "NHOPI and White")
 * insert MapConcept(#20, "AIAN and Asian", #20,  "AIAN and Asian")
-* insert MapConcept(#21, "AIAN and NHOPI", #21,  "AIAN and NHOPI")
+* insert MapConcept(#21, "AIAN and NHOPI-2", #21,  "AIAN and NHOPI-2")
 * insert MapConcept(#22, "Asian and White", #22,  "Asian and White")
 * insert MapConcept(#23, "Asian and NHOPI", #23,  "Asian and NHOPI")
-* insert MapConcept(#24, "NHOPI and White", #24,  "NHOPI and White")
+* insert MapConcept(#24, "NHOPI and White-2", #24,  "NHOPI and White-2")
 * insert MapConcept(#25, "Black\, AIAN and White", #25,  "Black\, AIAN and White")
 * insert MapConcept(#26, "Black\, AIAN and Asian", #26,  "Black\, AIAN and Asian")
 * insert MapConcept(#27, "Black\, AIAN and NHOPI", #27,  "Black\, AIAN and NHOPI")

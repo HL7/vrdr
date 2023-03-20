@@ -2,6 +2,7 @@
 Instance: ActivityAtTimeOfDeathCM
 InstanceOf: ConceptMap
 Description: "Concept Map for ActivityAtTimeOfDeath Value Set"
+* experimental = false
 * insert ConceptMapIntro(ActivityAtTimeOfDeath, ActivityAtTimeOfDeathVS)
 * insert AddGroup("TRX",Canonical(ActivityAtTimeOfDeathCS))
 * insert MapConcept(#0, "While engaged in sports activity", #0,  "While engaged in sports activity")

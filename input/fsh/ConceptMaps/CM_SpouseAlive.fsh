@@ -2,6 +2,7 @@ Instance: SpouseAliveCM
 InstanceOf: ConceptMap
 // Id: vrdr-marital-status-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(SpouseAlive, SpouseAliveVS)
 * insert AddGroup("IJE",$v2-0136)
 * insert MapConcept( #1,  "Yes",#Y, "Yes")

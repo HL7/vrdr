@@ -3,6 +3,7 @@ Instance: YesNoUnknownNotApplicableCM
 InstanceOf: ConceptMap
 // Id: vrdr-yes-no-unknown-not-applicable-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(YesNoUnknownNotApplicable, YesNoUnknownNotApplicableVS)
 * insert AddGroup("IJE",$v2-0136)
 * insert MapConcept( #N,  "No",#N, "No")
@@ -15,6 +16,7 @@ Instance: YesNoUnknownCM
 InstanceOf: ConceptMap
 // Id: vrdr-yes-no-unknown-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(YesNoUnknown , YesNoUnknownVS)
 * insert AddGroup("IJE",$v2-0136)
 * insert MapConcept( #N,  "No",#N, "No")

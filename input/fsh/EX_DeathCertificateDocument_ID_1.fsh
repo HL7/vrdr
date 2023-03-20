@@ -347,8 +347,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 * performer = Reference(urn:uuid:a4f9e235-a22d-435b-9352-67af8f8a4e09)
 * valueCodeableConcept.text = "SEPTIC SHOCK"
-* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber "line number"
-* component.valueInteger = 1
+* component[lineNumber].valueInteger = 1
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-12
 InstanceOf: CauseOfDeathPart1
@@ -360,8 +359,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:fae60419-2d35-4c55-8566-5c272496fb45)
 * performer = Reference(urn:uuid:a4f9e235-a22d-435b-9352-67af8f8a4e09)
 * valueCodeableConcept.text = "PRESUMED ISCHEMIC COLITIS"
-* component.code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber "line number"
-* component.valueInteger = 2
+* component[lineNumber].valueInteger = 2
 
 Instance: Inline-Instance-for-f7e70463-b5c1-4062-a7f5-fab5d8432c86-13
 InstanceOf: DecedentFather

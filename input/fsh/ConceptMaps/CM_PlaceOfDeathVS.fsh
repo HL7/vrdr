@@ -2,6 +2,7 @@ Instance: PlaceOfDeathCM
 InstanceOf: ConceptMap
 // Id: vrdr-place-of-death-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(PlaceOfDeath, PlaceOfDeathVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #1,  "Inpatient",#16983000, "Death in hospital")

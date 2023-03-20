@@ -327,10 +327,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
 * performer = Reference(urn:uuid:10874edd-9bd6-46db-ad56-488bdedc0e0f)
 * valueCodeableConcept.text = "BLUNT HEAD TRAUMA"
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber "line number"
-* component[=].valueInteger = 1
-* component[+].code = http://loinc.org#69440-6 "Disease onset to death interval"
-* component[=].valueString = "30 MINUTES"
+* component[lineNumber].valueInteger = 1
+* component[interval].valueString = "30 MINUTES"
 
 Instance: c65c58c8-f975-4d86-8c63-a4e6743bdb01
 InstanceOf: CauseOfDeathPart1
@@ -341,10 +339,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
 * performer = Reference(urn:uuid:10874edd-9bd6-46db-ad56-488bdedc0e0f)
 * valueCodeableConcept.text = "AUTOMOBILE ACCIDENT"
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber "line number"
-* component[=].valueInteger = 2
-* component[+].code = http://loinc.org#69440-6 "Disease onset to death interval"
-* component[=].valueString = "30 MINUTES"
+* component[lineNumber].valueInteger = 2
+* component[interval].valueString = "30 MINUTES"
 
 Instance: Inline-Instance-for-0d566713-abeb-42f6-94ff-bcfb2f2f28e7-9
 InstanceOf: CauseOfDeathPart1
@@ -356,10 +352,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
 * performer = Reference(urn:uuid:10874edd-9bd6-46db-ad56-488bdedc0e0f)
 * valueCodeableConcept.text = "EPILEPSY"
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber "line number"
-* component[=].valueInteger = 3
-* component[+].code = http://loinc.org#69440-6 "Disease onset to death interval"
-* component[=].valueString = "20 YEARS"
+* component[lineNumber].valueInteger = 3
+* component[interval].valueString = "20 YEARS"
 
 Instance: Inline-Instance-for-0d566713-abeb-42f6-94ff-bcfb2f2f28e7-10
 InstanceOf: DecedentFather
@@ -402,10 +396,8 @@ Usage: #inline
 * code = http://terminology.hl7.org/CodeSystem/v2-0203#BR "Birth registry number"
 * subject = Reference(urn:uuid:9c367ae3-1de1-4f7a-bc68-bea13cd0ae3d)
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "Unknown"
-* component[0].code = http://loinc.org#21842-0 "Birthplace"
-* component[=].valueString = "CA"
-* component[+].code = http://loinc.org#80904-6 "Birth year"
-* component[=].valueDateTime = "1960"
+* component[birthJurisdiction].valueString = "CA"
+* component[birthYear].valueDateTime = "1960"
 
 Instance: a0ceb4e8-9cfc-4786-bcbb-6d46899d283b
 InstanceOf: DecedentUsualWork

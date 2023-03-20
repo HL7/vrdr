@@ -3,6 +3,7 @@ Instance: SystemRejectCM
 InstanceOf: ConceptMap
 // Id: vrdr-System-reject-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(SystemReject, SystemRejectVS)
 * insert AddGroup("TRX",Canonical(SystemRejectCS))
 * insert MapConcept(#0, "Not Rejected", #0,  "Not Rejected")

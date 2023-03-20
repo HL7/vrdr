@@ -1,6 +1,7 @@
 Instance: PlaceOfInjuryCM
 InstanceOf: ConceptMap
 Usage: #definition
+* experimental = false
 // Id: vrdr-place-of-injury-cm
 * insert ConceptMapIntro(PlaceOfInjury, PlaceOfInjuryVS)
 * insert AddGroup("TRX",$loinc)

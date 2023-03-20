@@ -271,7 +271,7 @@ Usage: #inline
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#Vietnamese "Vietnamese"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "OtherAsian"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#OtherAsian "Other Asian"
 * component[=].valueBoolean = false
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#NativeHawaiian "Native Hawaiian"
 * component[=].valueBoolean = false
@@ -307,10 +307,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:2f154476-e4d0-4c44-9b67-3f3dbfc4661c)
 * valueString = "001023"
 // * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown "Unknown"
-* component[0].code = http://loinc.org#21842-0 "Birthplace"
-* component[=].valueString = "CO"
-* component[+].code = http://loinc.org#80904-6 "Birth year"
-* component[=].valueDateTime = "2021"
+* component[birthJurisdiction].valueString = "CO"
+* component[birthYear].valueDateTime = "2021"
 
 Instance: b188d332-aa3d-4ca1-a443-ed186a473928
 InstanceOf: Observation

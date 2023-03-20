@@ -2,6 +2,7 @@ Instance: PregnancyStatusCM
 InstanceOf: ConceptMap
 // Id: vrdr-pregnancy-status-cm
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(PregnancyStatus, PregnancyStatusVS)
 * insert AddGroup("IJE",Canonical(PregnancyStatusCS))
 * insert MapConcept( #1,  "Not pregnant within past year",#1, "Not pregnant within past year")
