@@ -187,12 +187,12 @@
 | 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |component[ OtherRace].valueBoolean | boolean | - | 
 | 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string | - | 
 | 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string | - | 
-| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral1].valueString | string | - | 
-| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ OtherAsianLiteral2].valueString | string | - | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral1].valueString | string | - | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ OtherPacificIslandLiteral2].valueString | string | - | 
-| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral1].valueString | string | - | 
-| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ OtherRaceLiteral2].valueString | string | - | 
+| 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ FirstOtherAsianLiteral].valueString | string | - | 
+| 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ SecondOtherAsianLiteral].valueString | string | - | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslandLiteral].valueString | string | - | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslandLiteral].valueString | string | - | 
+| 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ FirstOtherRaceLiteral].valueString | string | - | 
+| 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ SecondOtherRaceLiteral].valueString | string | - | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
 | 100 | Manner of Death | MANNER| [MannerOfDeath]| |value | codeable | [MannerOfDeathVS] | 
 | 248 | Blank for One-Byte Field 1 | PLACE1_1| [EmergingIssues]| |component[EmergingIssue1_1].value | string(1) | - | 

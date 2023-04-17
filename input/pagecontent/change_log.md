@@ -1,4 +1,8 @@
-### VRDR STU 2.1 CI Build (January 2023)
+### VRDR STU 2.2 CI Build
+* __InputRaceAndEthnicity__
+  * Aligned documentation of race literal fields with profiles (e.g., OtherRaceLiteral1 --> FirstOtherRaceLiteral )
+
+### VRDR STU 2.1 (March 2023)
 * __Terminology:__
   * Pregnancy Status:  Added missing code for 'Not reported on certificate'.
   * Race and Ethnicity: Added some missing codes
