@@ -20,7 +20,7 @@ Description: "An identifier associated by the submitting jurisdiction with a spe
 Extension: CertificateNumber
 Id: CertificateNumber
 Title: "Certificate Number"
-Description: "Death certificate number. Six digit number."
+Description: "Death certificate number. Six digit number.  Leading zeroes are optional."
 * ^context.type = #element
 * ^context.expression = "Identifier"
 * value[x] 1..1
