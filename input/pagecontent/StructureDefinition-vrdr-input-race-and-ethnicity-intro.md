@@ -23,8 +23,8 @@
 | 56 | Decedent's Race--Samoan | RACE13| |component[ Samoan].valueBoolean | boolean | - | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| |component[ OtherPacificIslander].valueBoolean | boolean | - | 
 | 58 | Decedent's Race--Other | RACE15| |component[ OtherRace].valueBoolean | boolean | - | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string | - | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string | - | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| |component[ FirstAmericanIndianorAlaskanNativeLiteral].valueString | string | - | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| |component[ SecondAmericanIndianorAlaskanNativeLiteral].valueString | string | - | 
 | 61 | Decedent's Race--First Other Asian Literal | RACE18| |component[ FirstOtherAsianLiteral].valueString | string | - | 
 | 62 | Decedent's Race--Second Other Asian Literal | RACE19| |component[ SecondOtherAsianLiteral].valueString | string | - | 
 | 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| |component[ FirstOtherPacificIslandLiteral].valueString | string | - | 
