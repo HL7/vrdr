@@ -2,7 +2,7 @@
 * __InputRaceAndEthnicity__
   * Aligned documentation of race literal fields with profiles (e.g., OtherRaceLiteral1 --> FirstOtherRaceLiteral )
   * Deleted 'leading zeroes' from description of Certificate Number and State Auxiliary Number
-* __DeathDate.component[datetimePronouncedDead]__
+* __DeathDate.component[datetimePronouncedDead]__  [FHIR-40898](https://jira.hl7.org/browse/FHIR-40898)
   * In STU2.1, we added a PartialDateTime extension which proved inappropriate.
   * This value can not be either a time or a dateTime and that addresses the problem in STU2 that a death time without a death date was awkward to specify.
 
