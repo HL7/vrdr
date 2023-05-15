@@ -46,8 +46,8 @@
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].value | dateTime | See [PartialDatesAndTimes] | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].value | dateTime | See [PartialDatesAndTimes] | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].valueDateTime | dateTime |  | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].valueDateTime if a date is also specified, or component[datetimePronouncedDead].valueTime if no date is specified | dateTime or time |  | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 
@@ -185,8 +185,8 @@
 | 56 | Decedent's Race--Samoan | RACE13| [InputRaceAndEthnicity]| |component[ Samoan].valueBoolean | boolean | - | 
 | 57 | Decedent's Race--Other Pacific Islander | RACE14| [InputRaceAndEthnicity]| |component[ OtherPacificIslander].valueBoolean | boolean | - | 
 | 58 | Decedent's Race--Other | RACE15| [InputRaceAndEthnicity]| |component[ OtherRace].valueBoolean | boolean | - | 
-| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral1].valueString | string | - | 
-| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string | - | 
+| 59 | Decedent's Race--First American Indian or Alaska Native Literal | RACE16| [InputRaceAndEthnicity]| |component[ FirstAmericanIndianOrAlaskanNativeLiteral].valueString | string | - | 
+| 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ SecondAmericanIndianOrAlaskanNativeLiteral].valueString | string | - | 
 | 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ FirstOtherAsianLiteral].valueString | string | - | 
 | 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ SecondOtherAsianLiteral].valueString | string | - | 
 | 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslanderLiteral].valueString | string | - | 
