@@ -189,8 +189,8 @@
 | 60 | Decedent's Race--Second American Indian or Alaska Native Literal | RACE17| [InputRaceAndEthnicity]| |component[ AmericanIndianorAlaskanNativeLiteral2].valueString | string | - | 
 | 61 | Decedent's Race--First Other Asian Literal | RACE18| [InputRaceAndEthnicity]| |component[ FirstOtherAsianLiteral].valueString | string | - | 
 | 62 | Decedent's Race--Second Other Asian Literal | RACE19| [InputRaceAndEthnicity]| |component[ SecondOtherAsianLiteral].valueString | string | - | 
-| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslandLiteral].valueString | string | - | 
-| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslandLiteral].valueString | string | - | 
+| 63 | Decedent's Race--First Other Pacific Islander Literal | RACE20| [InputRaceAndEthnicity]| |component[ FirstOtherPacificIslanderLiteral].valueString | string | - | 
+| 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| |component[ SecondOtherPacificIslanderLiteral].valueString | string | - | 
 | 65 | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| |component[ FirstOtherRaceLiteral].valueString | string | - | 
 | 66 | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| |component[ SecondOtherRaceLiteral].valueString | string | - | 
 | 83 | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| |component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
