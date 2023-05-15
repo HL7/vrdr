@@ -6,7 +6,10 @@ Description: "CauseOfDeathPart1-Example1"
 * valueCodeableConcept.text = "Cardiopulmonary arrest"
 * subject = Reference(Decedent-Example1)
 * component[lineNumber].valueInteger = 1
-* component[interval].valueString = "4 hours"
+* component[interval].valueQuantity
+  * code = #m
+  * value = 4
+  * system = $UCUM
 * performer = Reference(Certifier-Example1)
 * status = #final
 
