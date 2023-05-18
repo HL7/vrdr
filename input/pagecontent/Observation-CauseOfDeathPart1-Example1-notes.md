@@ -14,5 +14,5 @@ Usage: #example
   * valueInteger = 1
 * component[+]
   * code = http://loinc.org#69440-6
-  * valueQuantity = 4 'm'
+  * valueQuantity = 4 'mo' "Months"
 ```
