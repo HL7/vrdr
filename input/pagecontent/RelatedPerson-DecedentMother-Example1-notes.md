@@ -7,8 +7,9 @@ Usage: #example
 * active = true
 * patient = Reference(Decedent-Example1)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
-* name.use = #maiden
-* name.text = "Decedent Mom"
-* name.family = "Suzette"
-* name.given = "Jane"
+* name
+  * use = #maiden
+  * text = "Decedent Mom"
+  * family = "Suzette"
+  * given = "Jane"
 ```

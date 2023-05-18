@@ -10,7 +10,8 @@ Usage: #example
 * code = http://snomed.info/sct#308646001 "Death certification"
 * subject = Reference(Decedent-Example1)
 * performedDateTime = "2020-11-14T16:39:40-05:00"
-* performer.function = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#OTH "Other"
-  * text = "Nurse Practitioner"
-* performer.actor = Reference(Certifier-Example1)
+* performer
+  * function = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#OTH "Other"
+    * text = "Nurse Practitioner"
+  * actor = Reference(Certifier-Example1)
 ```

@@ -9,8 +9,10 @@ Usage: #example
 * subject = Reference(Decedent-Example1)
 * performer = Reference(Certifier-Example1)
 * valueCodeableConcept.text = "Cardiopulmonary arrest"
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber
-* component[=].valueInteger = 1
-* component[+].code = http://loinc.org#69440-6
-* component[=].valueString = "4 hours"
+* component[0]
+  * code = ComponentCS#lineNumber
+  * valueInteger = 1
+* component[+]
+  * code = http://loinc.org#69440-6
+  * valueQuantity = 4 'm'
 ```

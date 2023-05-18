@@ -8,10 +8,13 @@ Usage: #example
 * code = http://loinc.org#80356-9
 * subject.display = "NCHS generated"
 * valueCodeableConcept = http://hl7.org/fhir/sid/icd-10#X00
-* component[0].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#lineNumber
-* component[=].valueInteger = 2
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#position
-* component[=].valueInteger = 2
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#eCodeIndicator
-* component[=].valueBoolean = true
+* component[0]
+  * code = ComponentCS#lineNumber
+  * valueInteger = 2
+* component[+]
+  * code = ComponentCS#position
+  * valueInteger = 2
+* component[+]
+  * code = ComponentCS#eCodeIndicator
+  * valueBoolean = true
 ```

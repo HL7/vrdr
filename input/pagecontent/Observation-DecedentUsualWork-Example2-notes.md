@@ -8,6 +8,7 @@ Usage: #example
 * code = http://loinc.org#21843-8
 * subject = Reference(Decedent-Example1)
 * valueCodeableConcept.text = "secretary"
-* component.code = http://loinc.org#21844-6
-* component.valueCodeableConcept.text = "State agency"
+* component
+  * code = http://loinc.org#21844-6
+  * valueCodeableConcept.text = "State agency"
 ```

@@ -8,8 +8,10 @@ Usage: #example
 * code = http://terminology.hl7.org/CodeSystem/v2-0203#BR "Birth registry number"
 * subject = Reference(Decedent-Example1)
 * valueString = "717171"
-* component[0].code = http://loinc.org#21842-0
-* component[=].valueString = "YC"
-* component[+].code = http://loinc.org#80904-6
-* component[=].valueDateTime = "1961"
+* component[0]
+  * code = http://loinc.org#21842-0
+  * valueString = "YC"
+* component[+]
+  * code = http://loinc.org#80904-6
+  * valueDateTime = "1961"
 ```

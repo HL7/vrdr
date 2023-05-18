@@ -15,7 +15,9 @@ jsoninputfiles.each {|json|
   next if json.count("-") < 2
   filetype = json.split("-")[0]
   next if skiptypes.include?(filetype)
-  instancename = (json.split("-")[1] + "-" + json.split("-")[2]).split(".")[0]
+  instancename = json[json.index("-")+1 .. -1].split(".")[0]
+  puts instancename 
+  puts json 
   fsh = "fshoutput/input/fsh/instances/" + instancename + ".fsh"
   notes_file_name = filetype + "-" + instancename + "-notes.md"
   fshcontent = File.read(fsh)
