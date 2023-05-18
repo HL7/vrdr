@@ -7,9 +7,10 @@ Description: "CauseOfDeathPart1-Example1"
 * subject = Reference(Decedent-Example1)
 * component[lineNumber].valueInteger = 1
 * component[interval].valueQuantity
-  * code = #m
+  * code = #mo
   * value = 4
   * system = $UCUM
+  * unit = "Months"
 * performer = Reference(Certifier-Example1)
 * status = #final
 

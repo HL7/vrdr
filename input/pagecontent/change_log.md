@@ -5,7 +5,8 @@
 * __DeathDate.component[datetimePronouncedDead]__  [FHIR-40898](https://jira.hl7.org/browse/FHIR-40898)
   * In STU2.1, we added a PartialDateTime extension which proved inappropriate.
   * This value can not be either a time or a dateTime and that addresses the problem in STU2 that a death time without a death date was awkward to specify.
-
+* __CauseOfDeathPart1.component[interval]__  [FHIR-41314](https://jira.hl7.org/browse/FHIR-41314)
+  * Allow this interval to be specified as a string or a quantity
 ### VRDR STU 2.1 (March 2023)
 * __Terminology:__
   * Pregnancy Status:  Added missing code for 'Not reported on certificate'.
