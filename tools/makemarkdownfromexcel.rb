@@ -36,7 +36,9 @@ profiles["BirthRecordIdentifier"] = { :out => "StructureDefinition-vrdr-birth-re
                                      :desc => "The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record.
                          It is relevant only in the case where the birth took place in a recognized jurisdiction." }
 profiles["CauseOfDeathPart1"] = { :out => "StructureDefinition-vrdr-cause-of-death-part1-intro.md",
-                                 :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
+                                 :desc => "The [Certifier] is optionally referenced from this profile (performer).
+
+For submission to NCHS, intervals SHOULD be submitted as strings.                                 " }
 profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-death-part2-intro.md",
                                   :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["Certifier"] = { :out => "StructureDefinition-vrdr-certifier-intro.md",

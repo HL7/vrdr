@@ -8,13 +8,13 @@
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionsProvincesVS] | 
 | 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 1 | string(120) | - | 
-| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 1 | string(20) | - | 
+| 186 | Cause of Death Part I Interval, Line a | INTERVAL1A| [CauseOfDeathPart1]| |component[interval].valueString or component[interval].valueQuantity , component[lineNumber] = 1 | string(20), or Quantity | Note: Quantity not yet supported for NCHS Submissions.   [UnitsOfAgeVS] | 
 | 187 | Cause of Death Part I Line b | COD1B| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 2 | string(120) | - | 
-| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 2 | string(20) | - | 
+| 188 | Cause of Death Part I Interval, Line b | INTERVAL1B| [CauseOfDeathPart1]| |component[interval].valueString or component[interval].valueQuantity, component[lineNumber] = 2 | string(20), or Quantity | Note: Quantity not yet supported for NCHS Submissions.   [UnitsOfAgeVS] | 
 | 189 | Cause of Death Part I Line c | COD1C| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 3 | string(120) | - | 
-| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 3 | string(20) | - | 
+| 190 | Cause of Death Part I Interval, Line c | INTERVAL1C| [CauseOfDeathPart1]| |component[interval].valueString or component[interval].valueQuantity, component[lineNumber] = 3 | string(20), or Quantity | Note: Quantity not yet supported for NCHS Submissions.   [UnitsOfAgeVS] | 
 | 191 | Cause of Death Part I Line d | COD1D| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 4 | string(120) | - | 
-| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[interval].value, component[lineNumber] = 4 | string(20) | - | 
+| 192 | Cause of Death Part I Interval, Line d | INTERVAL1D| [CauseOfDeathPart1]| |component[interval].valueString or component[interval].valueQuantity, component[lineNumber] = 4 | string(20), or Quantity | Note: Quantity not yet supported for NCHS Submissions.   [UnitsOfAgeVS] | 
 | 193 | Cause of Death Part II | OTHERCONDITION| [CauseOfDeathPart2]| |value.text | string(240) | - | 
 | 220 | Certifier's First Name | CERTFIRST| [Certifier]| x|name.given , name.use = official | string | - | 
 | 221 | Certifier's Middle Name | CERTMIDDLE| [Certifier]| x|name.given , name.use = official | string | - | 
@@ -46,8 +46,8 @@
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].valueDateTime | dateTime |  | 
-| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].valueDateTime if a date is also specified, or component[datetimePronouncedDead].valueTime if no date is specified | dateTime or time |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead ].valueDateTime | dateTime |  | 
+| 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].valueDateTime if a date is also specified, or component[datetimePronouncedDead].valueTime if no date is specified | dateTime or Time |  | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 

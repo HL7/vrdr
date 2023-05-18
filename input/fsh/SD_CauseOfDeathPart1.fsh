@@ -25,8 +25,10 @@ Description: "Cause of death Part 1 (Observation). Cause of death prior to submi
 * component[interval].value[x] 1..1
 * component[interval].value[x] only Quantity or string  
 * component[interval] ^short = "Cause of Death Part 1 Interval, Line a,b,c,d"
-* component[interval].valueQuantity ^short = "Interval as Quantity"
-* component[interval].valueString ^short = "Interval"
+* component[interval]
+  * valueQuantity ^short = "Interval as Quantity"
+  * valueQuantity.code from UnitsOfAgeVS (required)
+* component[interval].valueString ^short = "Interval as free text"
 * component[interval].valueString ^maxLength = 20
 * component[lineNumber].code 1..1
 * component[lineNumber].code = ComponentCS#lineNumber
