@@ -29,7 +29,7 @@ Alias: $ssn = http://hl7.org/fhir/sid/us-ssn
 // Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $provinces = http://canadapost.ca
 
-Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+Alias: $dataabsentreason401 = http://hl7.org/fhir/CodeSystem/data-absent-reason|4.0.1  
 Alias: $DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson

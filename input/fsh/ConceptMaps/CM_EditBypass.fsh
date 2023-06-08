@@ -5,7 +5,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(EditBypass01234, EditBypass01234VS)
-* insert AddGroup("IJE",Canonical(BypassEditFlagCS))
+* insert AddGroup("IJE",[[Canonical(BypassEditFlagCS)]])
 * insert MapConcept(#0, "Edit Passed", #0,  "Edit Passed")
 * insert MapConcept(#1, "Edit Failed\, Data Queried\, and Verified", #1,  "Edit Failed\, Data Queried\, and Verified")
 * insert MapConcept(#2, "Edit Failed\, Data Queried\, but not Verified", #2,  "Edit Failed\, Data Queried\, but not Verified")
@@ -18,7 +18,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(EditBypass01, EditBypass01VS)
-* insert AddGroup("IJE",Canonical(BypassEditFlagCS))
+* insert AddGroup("IJE",[[Canonical(BypassEditFlagCS)]])
 * insert MapConcept(#0, "Edit Passed", #0,  "Edit Passed")
 * insert MapConcept(#1, "Edit Failed\, Data Queried\, and Verified", #1,  "Edit Failed\, Data Queried\, and Verified")
 
@@ -28,7 +28,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(EditBypass012, EditBypass012VS)
-* insert AddGroup("IJE",Canonical(BypassEditFlagCS))
+* insert AddGroup("IJE",[[Canonical(BypassEditFlagCS)]])
 * insert MapConcept(#0, "Edit Passed", #0,  "Edit Passed")
 * insert MapConcept(#1, "Edit Failed\, Data Queried\, and Verified", #1,  "Edit Failed\, Data Queried\, and Verified")
 * insert MapConcept(#2, "Edit Failed\, Data Queried\, but not Verified", #2,  "Edit Failed\, Data Queried\, but not Verified")
@@ -39,7 +39,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(EditBypass0124, EditBypass0124VS)
-* insert AddGroup("IJE",Canonical(BypassEditFlagCS))
+* insert AddGroup("IJE",[[Canonical(BypassEditFlagCS)]])
 * insert MapConcept(#0, "Edit Passed", #0,  "Edit Passed")
 * insert MapConcept(#1, "Edit Failed\, Data Queried\, and Verified", #1,  "Edit Failed\, Data Queried\, and Verified")
 * insert MapConcept(#2, "Edit Failed\, Data Queried\, but not Verified", #2,  "Edit Failed\, Data Queried\, but not Verified")
