@@ -442,7 +442,7 @@ Usage: #inline
 * component[=].valueString = "Hispanic Literal Value"
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#White "White"
 * component[=].valueBoolean = false
-* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "BlackOrAfricanAmerican"
+* component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#BlackOrAfricanAmerican "Black Or African American"
 * component[=].valueBoolean = true
 * component[+].code = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs#AmericanIndianOrAlaskanNative "American Indian Or Alaska Native"
 * component[=].valueBoolean = false
