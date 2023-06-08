@@ -4,7 +4,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(RaceCodes, MRE, RaceCodeVS)
-* insert AddGroup("MRE",Canonical(RaceCodeCS\))
+* insert AddGroup("MRE",[[Canonical(RaceCodeCS)]])
 * insert MapConcept(#100, "White Checkbox", #100,  "White Checkbox")
 * insert MapConcept(#101, "White", #101,  "White")
 * insert MapConcept(#102, "Arab", #102,  "Arab")
