@@ -11,5 +11,5 @@ Mapping to IJE codes [here](ConceptMap-PregnancyStatusCM.html)."
 * PregnancyStatusCS#4 "Not pregnant, but pregnant 43 days to 1 year before death"
 * PregnancyStatusCS#7 "Not reported on certificate"
 * PregnancyStatusCS#9 "Unknown if pregnant within the past year"
-* $v3-NullFlavor#NA "Not applicable"
+* $v3-NullFlavor#NA "not applicable"
 * ^experimental = false
