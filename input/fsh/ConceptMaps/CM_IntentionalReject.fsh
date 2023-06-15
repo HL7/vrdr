@@ -5,7 +5,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(IntentionalReject, IntentionalRejectVS)
-* insert AddGroup("TRX",Canonical(IntentionalRejectCS))
+* insert AddGroup("TRX",Canonical(IntentionalRejectCS\))
 * insert MapConcept(#1, "Reject1", #1,  "Reject1")
 * insert MapConcept(#2, "Reject2", #2,  "Reject2")
 * insert MapConcept(#3, "Reject3", #3,  "Reject3")
