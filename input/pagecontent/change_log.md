@@ -4,7 +4,7 @@
   * Deleted 'leading zeroes' from description of [Certificate Number](StructureDefinition-CertificateNumber.html) and [State Auxiliary Number 1](StructureDefinition-AuxiliaryStateIdentifier1.html) and [State Auxiliary Number 2](StructureDefinition-AuxiliaryStateIdentifier2.html)
 * __[DeathDate].component[datetimePronouncedDead]__  [FHIR-40898](https://jira.hl7.org/browse/FHIR-40898)
   * In STU2.1, we added a PartialDateTime extension which proved inappropriate.
-  * This value was constrained to a dateTime, and is now constrained to a dateTime or a time. This addresses the problem in STU2 that a death time without a death date was awkward to specify.  This is possible in IJE, but a FHIR dateTime must include the date component.   An [example][Observation-DeathDate-Example4.html] has been added to illustrate use of a time-only DeathDate.
+  * This value was constrained to a dateTime, and is now constrained to a dateTime or a time. This addresses the problem in STU2 that a death time without a death date was awkward to specify.  This is possible in IJE, but a FHIR dateTime must include the date component.   A [DeathDate example](Observation-DeathDate-Example4.html) has been added to illustrate use of a time-only DeathDate.
 
 
 ### VRDR STU 2.1 (March 2023)
