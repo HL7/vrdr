@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-hispanic-origin-cm
 Usage: #definition
 * insert ConceptMapIntro(HispanicOrigin, HispanicOriginVS)
-* insert AddGroup("MRE",Canonical(HispanicOriginCS))
+* insert AddGroup("MRE",Canonical(HispanicOriginCS\))
 * insert MapConcept(#100, "Not Hispanic", #100,  "Not Hispanic")
 * insert MapConcept(#200, "Spaniard", #200,  "Spaniard")
 * insert MapConcept(#201, "Andalusian", #201,  "Andalusian")
