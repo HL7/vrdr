@@ -1,3 +1,7 @@
+### VRDR STU2.2-Preview1 (documentation-only change)
+* Introduced versioining practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
+* LNAME is required by NCHS, and is expected to be UNKNOWN if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html) and [DeathDate].
+
 ### VRDR STU 2.2 CI Build
 * __[InputRaceAndEthnicity]__
   * Aligned documentation of race literal fields with profile's actual content(e.g., OtherRaceLiteral1 --> FirstOtherRaceLiteral , FirstOtherPacificIslandLiteral --> FirstOtherPacificIslanderLiteral, SecondOtherPacificIslandLiteral --> SecondOtherPacificIslanderLiteral).  The profile content was correct. This was only a change to the documentation in the [data dictionary](DeathRecordDataDictionary.html) and the narrative [introduction to the profile](StructureDefinition-vrdr-input-race-and-ethnicity.html#usage).

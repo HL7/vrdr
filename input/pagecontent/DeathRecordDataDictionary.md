@@ -46,7 +46,7 @@
 | 34 | Date of Death--Month | DOD_MO| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 35 | Date of Death--Day | DOD_DY| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
 | 36 | Time of Death | TOD| [DeathDate]| |value | dateTime | See [PartialDatesAndTimes] | 
-| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead	].valueDateTime | dateTime |  | 
+| 218 | Person Pronouncing Date Signed | PPDATESIGNED| [DeathDate]| x|component[datetimePronouncedDead ].valueDateTime | dateTime |  | 
 | 219 | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| x|component[datetimePronouncedDead].valueDateTime if a date is also specified, or component[datetimePronouncedDead].valueTime if no date is specified | dateTime or time |  | 
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
@@ -70,7 +70,7 @@
 | 240 | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| x|address.country  (expanded from 2 letter code) | string  | See [CountryLIterals].   Not used. For US Death certificates should be 'United States'. | 
 | 7 | Decedent's Legal Name--Given  | GNAME| [Decedent]| |name.given , name.use = official | string | - | 
 | 8 | Decedent's Legal Name--Middle | MNAME| [Decedent]| |name.given , name.use = official (first letter) | string | - | 
-| 9 | Decedent's Legal Name--Last | LNAME| [Decedent]| |name.family , name.use = official | string | - | 
+| 9 | Decedent's Legal Name--Last | LNAME| [Decedent]| |name.family , name.use = official. (absence is equivalent to UNKNOWN.) | string | Last name is required for NCHS submission.  If the decedent's legal name is not unknown, LNAME should be reported as UNKNOWN. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported. | 
 | 10 | Decedent's Legal Name--Suffix | SUFF| [Decedent]| |name.suffix , name.use = official | string | - | 
 | 13 | Sex | SEX| [Decedent]| |extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
 | 15 | Social Security Number | SSN| [Decedent]| |identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB" | string | - | 
