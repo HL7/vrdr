@@ -9,7 +9,7 @@ The Decedent profile contains basic information about the decedent, including da
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 7 | Decedent's Legal Name--Given  | GNAME| |name.given , name.use = official | string | - | 
 | 8 | Decedent's Legal Name--Middle | MNAME| |name.given , name.use = official (first letter) | string | - | 
-| 9 | Decedent's Legal Name--Last | LNAME| |name.family , name.use = official. (absence is equivalent to UNKNOWN.) | string | Last name is required for NCHS submission.  If the decedent's legal name is not unknown, LNAME should be reported as UNKNOWN. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported. | 
+| 9 | Decedent's Legal Name--Last | LNAME| |name.family , name.use = official. (absence is equivalent to UNKNOWN.) | string | Last name is required for NCHS submission.  If the decedent's legal name is unknown, name.family should be reported as UNKNOWN, or omitted. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported. | 
 | 10 | Decedent's Legal Name--Suffix | SUFF| |name.suffix , name.use = official | string | - | 
 | 13 | Sex | SEX| |extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
 | 15 | Social Security Number | SSN| |identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB" | string | - | 
