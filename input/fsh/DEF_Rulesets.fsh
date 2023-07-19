@@ -61,6 +61,10 @@ RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
 
+RuleSet: ExtensionContextResource(path)
+* insert ExtensionContext({path})
+//* insert ExtensionContext({path}.Extension)
+
 RuleSet: ParameterSlicing
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
