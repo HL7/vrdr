@@ -1,6 +1,7 @@
 ### VRDR STU2.2-Preview1 (documentation-only change)
 * Introduced versioning practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
 * LNAME is required by NCHS, and is expected to be UNKNOWN if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html) and [DeathDate].
+* Due to changes in publication requirements, the context of several extensions has been restricted ([FilingFormat],[StateSpecificField] [NVSSSexAtDeath], and [SpouseAlive]).  This should have no impact on implementers.
 
 ### VRDR STU 2.2 CI Build
 * __[InputRaceAndEthnicity]__

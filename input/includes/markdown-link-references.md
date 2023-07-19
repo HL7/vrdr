@@ -150,3 +150,7 @@
 [CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
 [MortalityRosterBundle]: StructureDefinition-vrdr-mortality-roster-bundle.html
 [DateOfDeathDeterminationMethodsVS]: ValueSet-vrdr-date-of-death-determination-methods-vs.html
+[FilingFormat]: StructureDefinition-FilingFormat.html
+[StateSpecificField]: StructureDefinition-StateSpecificField.html
+[NVSSSexAtDeath]: StructureDefinition-NVSS-SexAtDeath.html
+[SpouseAlive]: StructureDefinition-SpouseAlive.html
