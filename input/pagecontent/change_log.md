@@ -1,19 +1,19 @@
 ### VRDR STU2.2-Preview1 (documentation-only change)
-* Introduced versioning practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
-* LNAME is required by NCHS, and is expected to be UNKNOWN if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html) and [DeathDate].
-* Due to changes in publication requirements, the context of several extensions has been restricted ([FilingFormat],[StateSpecificField] [NVSSSexAtDeath], and [SpouseAlive]).  This should have no impact on implementers.
+* __Versioning__: Introduced versioning practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
+* __[Decedent]__ Decedent's last name (LNAME) is required by NCHS, and is expected to be UNKNOWN if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html) and [Decedent].    [FHIR-41611](https://jira.hl7.org/browse/FHIR-41611)
+* __Extension Contexts__: Due to changes in publication requirements and conformance to best practices, the context of several extensions has been restricted ([FilingFormat],[StateSpecificField] [NVSSSexAtDeath], and [SpouseAlive]).  This should have no impact on implementers. [FHIR-41612](https://jira.hl7.org/browse/FHIR-41612)
 
 ### VRDR STU 2.2 CI Build
 * __[InputRaceAndEthnicity]__
   * Aligned documentation of race literal fields with profile's actual content(e.g., OtherRaceLiteral1 --> FirstOtherRaceLiteral , FirstOtherPacificIslandLiteral --> FirstOtherPacificIslanderLiteral, SecondOtherPacificIslandLiteral --> SecondOtherPacificIslanderLiteral).  The profile content was correct. This was only a change to the documentation in the [data dictionary](DeathRecordDataDictionary.html) and the narrative [introduction to the profile](StructureDefinition-vrdr-input-race-and-ethnicity.html#usage).
-  * Deleted 'leading zeroes' from description of [Certificate Number](StructureDefinition-CertificateNumber.html) and [State Auxiliary Number 1](StructureDefinition-AuxiliaryStateIdentifier1.html) and [State Auxiliary Number 2](StructureDefinition-AuxiliaryStateIdentifier2.html)
+* __Leading Zeroes__: Deleted 'leading zeroes' from description of [Certificate Number](StructureDefinition-CertificateNumber.html) and [State Auxiliary Number 1](StructureDefinition-AuxiliaryStateIdentifier1.html) and [State Auxiliary Number 2](StructureDefinition-AuxiliaryStateIdentifier2.html)
 * __[DeathDate].component[datetimePronouncedDead]__  [FHIR-40898](https://jira.hl7.org/browse/FHIR-40898)
   * In STU2.1, we added a PartialDateTime extension which proved inappropriate.
   * This value was constrained to a dateTime, and is now constrained to a dateTime or a time. This addresses the problem in STU2 that a death time without a death date was awkward to specify.  This is possible in IJE, but a FHIR dateTime must include the date component.   A [DeathDate example](Observation-DeathDate-Example4.html) has been added to illustrate use of a time-only DeathDate.
 
 
 ### VRDR STU 2.1 (March 2023)
-* __Terminology:__
+* __Terminology:__ [FHIR-3946](https://jira.hl7.org/browse/FHIR-3946)
   * Pregnancy Status:  Added missing code for 'Not reported on certificate'.
   * Race and Ethnicity: Added some missing codes
   * Certifier Types: Corrected display strings to align with SNOMEDCT
