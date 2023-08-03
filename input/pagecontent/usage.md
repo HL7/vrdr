@@ -24,4 +24,12 @@ States and jurisdictions are consistently represented using two letter postal co
 ### Country Literals
 Countries are consistently represented using two letter postal codes bound to a string field.   The IJE typically represents countries using a 2 letter postal code and a separate literal field.  Mapping from the 2 letter codes to literals must be provided outside of the VRDR IG, and can leverage the [CountryCS].
 
+### Decedent Name
+Profile conformance requires that either a first, last, or middle name be provided based on US Core requirements.  If no name components are available, a data absent reason should be provided for at least one name component in order to conform to the profile requirements.
+
+NCHS submission requires only a last name. Last name is required for NCHS submission.  If the decedent's legal name is unknown, name.family should be reported as 'UNKNOWN', or omitted. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported.
+
+### Decedent Gender
+Profile conformance requires that gender be provided.   A value of 'unknown' will satisfy this requirement.   There is no IJE field that is mapped to the Decedent.gender field.
+
 {% include markdown-link-references.md %}

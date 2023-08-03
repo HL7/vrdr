@@ -7,10 +7,11 @@ The Decedent profile contains basic information about the decedent, including da
 
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 7 | Decedent's Legal Name--Given  | GNAME| |name.given , name.use = official | string | - | 
-| 8 | Decedent's Legal Name--Middle | MNAME| |name.given , name.use = official (first letter) | string | - | 
-| 9 | Decedent's Legal Name--Last | LNAME| |name.family , name.use = official. (absence is equivalent to UNKNOWN.) | string | Last name is required for NCHS submission.  If the decedent's legal name is unknown, name.family should be reported as UNKNOWN, or omitted. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported. | 
+| 7 | Decedent's Legal Name--Given  | GNAME| |name.given , name.use = official | string | See [Note on Decedent Name] | 
+| 8 | Decedent's Legal Name--Middle | MNAME| |name.given , name.use = official (first letter) | string | See [Note on Decedent Name] | 
+| 9 | Decedent's Legal Name--Last | LNAME| |name.family , name.use = official. (absence is equivalent to 'UNKNOWN'.) | string | See [Note on Decedent Name] | 
 | 10 | Decedent's Legal Name--Suffix | SUFF| |name.suffix , name.use = official | string | - | 
+| NA | Gender | *NO IJE MAPPING*| |gender | codeable | [AdministrativeGenderVS](http://hl7.org/fhir/R4/valueset-administrative-gender.html) - See [Note on Decedent Gender] | 
 | 13 | Sex | SEX| |extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
 | 15 | Social Security Number | SSN| |identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB" | string | - | 
 | 19 | Date of Birth--Year | DOB_YR| |birthDate | dateTime | See [PartialDatesAndTimes] | 

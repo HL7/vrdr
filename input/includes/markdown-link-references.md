@@ -124,6 +124,8 @@
 [ScopeOfVRDRIG]: scope_of_the_vrdr_fhir_ig.html
 [Terminology]: terminology_bindings.html
 [PartialDatesAndTimes]: usage.html#partial-dates-and-times
+[Note on Decedent Name]: usage.html#decedent-name
+[Note on Decedent Gender]: usage.html#decedent-gender
 [CityCodes]: usage.html#city-codes
 [CountyCodes]: usage.html#county-codes
 [StateLiterals]: usage.html#state-literals
