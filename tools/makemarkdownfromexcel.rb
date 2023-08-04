@@ -41,7 +41,7 @@ profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-dea
                                   :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["Certifier"] = { :out => "StructureDefinition-vrdr-certifier-intro.md",
                           :desc =>
-"Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
+"Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
 The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
 an identifier."
 }
@@ -136,7 +136,7 @@ profiles["DeathCertification"] = {
   :desc => "
   Note:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html),
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
   but is not required by the death record submission use case.
 
   The Death Certification profile includes:",
@@ -146,7 +146,7 @@ profiles["DeathLocation"] = { :out => "StructureDefinition-vrdr-death-location-i
 profiles["Decedent"] = { :out => "StructureDefinition-vrdr-decedent-intro.md",
   :desc => "The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
-  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) which requires gender.
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.
   The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
   due to lack of a value for gender." }
   profiles["DecedentAge"] = {
