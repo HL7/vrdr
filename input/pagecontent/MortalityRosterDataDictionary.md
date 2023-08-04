@@ -10,9 +10,9 @@
 | 30 | Death Country - Code | DCOUNTRYC|DTHCOUNTRYCD | [DeathLocation]| address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US.    | 
 | 1 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH|| [Decedent]| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 2 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST|| [Decedent]| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | [JurisdictionsProvincesVS] | 
-| 3 | Decedent's Legal Name--Given  | GNAME|| [Decedent]| name.given , name.use = official | string | See [Notes On Decedent Name] | 
-| 4 | Decedent's Legal Name--Middle | MIDNAME|| [Decedent]| name.given , name.use = official (first letter) | string | See [Notes On Decedent Name] | 
-| 5 | Decedent's Legal Name--Last | LNAME|| [Decedent]| name.family , name.use = official | string | See [Notes On Decedent Name] | 
+| 3 | Decedent's Legal Name--Given  | GNAME|| [Decedent]| name.given , name.use = official | string | See [Note on Decedent Name] | 
+| 4 | Decedent's Legal Name--Middle | MIDNAME|| [Decedent]| name.given , name.use = official (first letter) | string | See [Note on Decedent Name] | 
+| 5 | Decedent's Legal Name--Last | LNAME|| [Decedent]| name.family , name.use = official | string | See [Note on Decedent Name] | 
 | 11 | Date of Birth--Month | DOB_MO|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 12 | Date of Birth--Day | DOB_DY|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 13 | Date of Birth--Year | DOB_YR|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
