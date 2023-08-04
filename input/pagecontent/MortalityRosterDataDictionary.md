@@ -10,13 +10,14 @@
 | 30 | Death Country - Code | DCOUNTRYC|DTHCOUNTRYCD | [DeathLocation]| address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US.    | 
 | 1 | State, U.S. Territory or Canadian Province of Birth - literal | STATEBTH|| [Decedent]| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code) | string | See [StateLiterals] | 
 | 2 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST|| [Decedent]| extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present  | string | [JurisdictionsProvincesVS] | 
-| 3 | Decedent's Legal Name--Given  | GNAME|| [Decedent]| name.given , name.use = official | string | - | 
-| 4 | Decedent's Legal Name--Middle | MIDNAME|| [Decedent]| name.given , name.use = official (first letter) | string | - | 
-| 5 | Decedent's Legal Name--Last | LNAME|| [Decedent]| name.family , name.use = official | string | - | 
+| 3 | Decedent's Legal Name--Given  | GNAME|| [Decedent]| name.given , name.use = official | string | See [Notes On Decedent Name] | 
+| 4 | Decedent's Legal Name--Middle | MIDNAME|| [Decedent]| name.given , name.use = official (first letter) | string | See [Notes On Decedent Name] | 
+| 5 | Decedent's Legal Name--Last | LNAME|| [Decedent]| name.family , name.use = official | string | See [Notes On Decedent Name] | 
 | 11 | Date of Birth--Month | DOB_MO|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 12 | Date of Birth--Day | DOB_DY|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 13 | Date of Birth--Year | DOB_YR|| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
 | 14 | Sex | SEX|| [Decedent]| extension[NVSS-SexAtDeath]  | codeable | [AdministrativeGenderVS] | 
+| NA | Gender | *NO IJE MAPPING*|| [Decedent]| gender | codeable | [AdministrativeGenderVS](http://hl7.org/fhir/R4/valueset-administrative-gender.html) - See [Note on Decedent Gender] | 
 | 22 | Decedent's Suffix | SUFF|| [Decedent]| name.suffix , name.use = official | string | - | 
 | 26 | Decedent's Maiden Name | DMAIDEN|| [Decedent]| name.text , name.use=maiden | string |  | 
 | 27 | State, U.S. Territory or Canadian Province of Decedent's Residence - literal | STATETEXT_R || [Decedent]| address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
