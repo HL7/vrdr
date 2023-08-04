@@ -5,10 +5,8 @@ Id: PartialDate
 Title: "Partial Date"
 Description: "Provides values of a partial date (Extension)"
 * insert boilerplate
-* ^context[0].type = #element
-* ^context[=].expression = "date"
-* ^context[+].type = #element
-* ^context[=].expression = "dateTime"
+* insert ExtensionContextResource(date)
+* insert ExtensionContextResource(dateTime)
 * . ^short = "Partial Date"
 * . ^definition = "Provides a partial date."
 * extension contains
@@ -27,10 +25,8 @@ Id: PartialDateTime
 Title: "Partial Date Time"
 Description: "Provides values of a partial dateTime (Extension)"
 * insert boilerplate
-* ^context[0].type = #element
-* ^context[=].expression = "date"
-* ^context[+].type = #element
-* ^context[=].expression = "dateTime"
+* insert ExtensionContextResource(date)
+* insert ExtensionContextResource(dateTime)
 * . ^short = "Partial Date Time"
 * . ^definition = "Provides a partial date time."
 * extension contains
@@ -51,6 +47,7 @@ Extension: DateYear
 Id: Date-Year
 Title: "Date Year"
 Description: "The year portion (YYYY) of the partial date. (Extension)"
+* insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
 * valueUnsignedInt ^minValueInteger = 0
@@ -62,6 +59,7 @@ Extension: DateMonth
 Id: Date-Month
 Title: "Date Month"
 Description: "The month portion (MM) of the partial date. (Extension)"
+* insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
 * valueUnsignedInt ^minValueInteger = 1
@@ -73,6 +71,7 @@ Extension: DateDay
 Id: Date-Day
 Title: "Date Day"
 Description: "The day portion (DD) of the partial date. (Extension)"
+* insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
 * value[x] ^definition = "Specifies the day portion of a partial date."
@@ -85,6 +84,7 @@ Extension: DateTime
 Id: Date-Time
 Title: "Date Time"
 Description: "The time portion (DD) of the partial date. (Extension)"
+* insert ExtensionContextResource(Extension)
 * value[x] 1..1
 // * value[x] only time or code
 * value[x] only time
