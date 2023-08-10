@@ -116,7 +116,7 @@
 
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
-[FIlingFormatVS]: ValueSet-vrdr-filing-format-vs.html
+[FilingFormatVS]: ValueSet-vrdr-filing-format-vs.html
 [Artifacts]: artifacts.html
 [Background]: background.html
 [ChangeLog]: change_log.html
