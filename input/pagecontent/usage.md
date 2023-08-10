@@ -30,6 +30,6 @@ Profile conformance requires that either a first, last, or middle name be provid
 NCHS submission requires only a last name. Last name is required for NCHS submission.  If the decedent's legal name is unknown, name.family should be reported as 'UNKNOWN', or omitted. Placeholder names such as 'John Doe' or 'Jane Doe' should not be reported.
 
 ### Decedent Gender
-Profile conformance requires that gender be provided.   A value of 'UNKNOWN' will satisfy this requirement.   There is no IJE field that is mapped to the Decedent.gender field.
+Profile conformance requires that gender be provided.   A value of 'unknown' will satisfy this requirement.   There is no IJE field that is mapped to the Decedent.gender field.
 
 {% include markdown-link-references.md %}
