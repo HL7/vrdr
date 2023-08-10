@@ -1,6 +1,6 @@
 ### General Conformance Requirements
 This FHIR IG specifies the content of data bundles sent as part of the death registration process.
-The current agrement among the stakeholders in this process is codified in the Interjurisdictional Exchange (IJE) format.
+The current agreement among the stakeholders in this process is codified in the Interjurisdictional Exchange (IJE) format.
 Senders and receivers of data defined by the IJE standard, and thus by this IG, use various subsets of the data for their exchanges.  The primary conformance requirement is that the sender and the receiver of the data agree on the required fields for their exchange, with the required fields comprising a subset of the fields defined in the IJE format.   The data dictionary([html](DeathRecordDataDictionary.html), [xlsx](IJE_File_Layouts_Version_2021_FHIR.xlsx)) included in this IG specifies the mapping of these fields to FHIR elements.  The ability to generate and process the FHIR profiles, fields, and components referenced in the data dictionary required for the particular exchange between a sender and receiver represent the conformance requirements for this IG.   Creaters of content should consult with the intended recipient of the data to determine the precise set of fields that are required for their intended exchange.
 
 ### Capability Statement
