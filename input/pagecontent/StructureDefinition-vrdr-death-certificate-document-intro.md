@@ -3,7 +3,7 @@ The Death Certificate is a Bundle document that contains the [DeathCertificate] 
 
   Notes:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+  * The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
   * The unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
 
 In addition to  the [DeathCertificate] Composition it includes the following content:
