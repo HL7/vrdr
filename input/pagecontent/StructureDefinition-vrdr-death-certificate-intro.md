@@ -2,10 +2,10 @@
 The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
 
 Notes:
-* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+* The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
 Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
-Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+Further profiling of Practitioner and PractitionerRole may be called for in the future. At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
 For example:
 * Funeral Home Licensee (USCorePractitionerRole)
 * Mortician (USCorePractitioner)

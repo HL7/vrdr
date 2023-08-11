@@ -1,7 +1,7 @@
 ### Usage
 Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange,
   but coded values are not expected for death certificate submission. The underlying profile requires coded
-  values for validity, so a null flavor value can be used as in Example1. Similarly the effective period is required,
+  values for validity, so a null flavor value can be used as in Example1. Similarly, the effective period is required,
   and null flavor values can be substituted.  These constraints are expected to be relaxed in the ODH Usual Work profile prior
   to VRDR publication.
 
