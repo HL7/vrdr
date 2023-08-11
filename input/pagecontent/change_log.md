@@ -1,3 +1,7 @@
+### VRDR STU2.2-preview2 (documentation-only change)
+* __Typos__:  Fixed some typos and extra, missing commas
+* __Links__:  Fixed some broken links in the narrative
+
 ### VRDR STU2.2-Preview1 (documentation-only change)
 * __Versioning__: Introduced versioning practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
 * __[Decedent]__ Decedent's last name (LNAME) is required by NCHS, and is expected to be 'UNKNOWN' if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'.  Clarified with a [note](usage.html#decedent-name) that, based on USCore requirements, conformance to the profile requires that the last, middle, or first name be present, or have a data absent extension. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html), [Mortality Roster data dictionary](MortalityRosterDataDictionary.html) and [Decedent].    [FHIR-41611](https://jira.hl7.org/browse/FHIR-41611) [FHIR-41679](https://jira.hl7.org/browse/FHIR-41679)
