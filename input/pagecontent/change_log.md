@@ -1,21 +1,15 @@
-### VRDR STU2.2-preview2 (documentation-only change)
+### VRDR STU2.2 (August 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
 * __Links__:  Fixed some broken links in the narrative
-
-### VRDR STU2.2-Preview1 (documentation-only change)
-* __Versioning__: Introduced versioning practice that versions prior to STU2.2 publication will be versioned STU2.2-Preview<n> and aligned with software versions.
 * __[Decedent]__ Decedent's last name (LNAME) is required by NCHS, and is expected to be 'UNKNOWN' if missing.   Documented that not providing Decedent.name.fname is equivalent to LNAME='UNKNOWN'.  Clarified with a [note](usage.html#decedent-name) that, based on USCore requirements, conformance to the profile requires that the last, middle, or first name be present, or have a data absent extension. Changes are visible in [Death Record data dictionary](DeathRecordDataDictionary.html), [Mortality Roster data dictionary](MortalityRosterDataDictionary.html) and [Decedent].    [FHIR-41611](https://jira.hl7.org/browse/FHIR-41611) [FHIR-41679](https://jira.hl7.org/browse/FHIR-41679)
 * __[Decedent]__ Gender is *not* required by NCHS, but is required for USCore conformance.   Added Gender to the [Death Record data dictionary](DeathRecordDataDictionary.html), [Mortality Roster data dictionary](MortalityRosterDataDictionary.html)  and [Decedent], with an accompanying usage [note](https://build.fhir.org/ig/HL7/vrdr/branches/STU2.2-preview1/usage.html#decedent-gender). [FHIR-41679](https://jira.hl7.org/browse/FHIR-41679)
 * __Extension Contexts__: Due to changes in publication requirements and conformance to best practices, the context of several extensions has been restricted ([BypassEditFlag](StructureDefinition-BypassEditFlag.html), [DateDay], [DateMonth], [DateYear], [FilingFormat], [LocationJurisdictionId], [PartialDate], [PartialDateTime], [ReplaceStatus](StructureDefinition-ReplaceStatus.html), [StateSpecificField], [NVSSSexAtDeath], and [SpouseAlive]).  This should have no impact on implementers. [FHIR-41612](https://jira.hl7.org/browse/FHIR-41612)
-
-### VRDR STU 2.2 CI Build
 * __[InputRaceAndEthnicity]__
   * Aligned documentation of race literal fields with profile's actual content(e.g., OtherRaceLiteral1 --> FirstOtherRaceLiteral , FirstOtherPacificIslandLiteral --> FirstOtherPacificIslanderLiteral, SecondOtherPacificIslandLiteral --> SecondOtherPacificIslanderLiteral).  The profile content was correct. This was only a change to the documentation in the [data dictionary](DeathRecordDataDictionary.html) and the narrative [introduction to the profile](StructureDefinition-vrdr-input-race-and-ethnicity.html#usage).  [FHIR-41611](https://jira.hl7.org/browse/FHIR-41611)
 * __Leading Zeroes__: Deleted 'leading zeroes' from description of [Certificate Number](StructureDefinition-CertificateNumber.html) and [State Auxiliary Number 1](StructureDefinition-AuxiliaryStateIdentifier1.html) and [State Auxiliary Number 2](StructureDefinition-AuxiliaryStateIdentifier2.html) [FHIR-41611](https://jira.hl7.org/browse/FHIR-41611)
 * __[DeathDate].component[datetimePronouncedDead]__  [FHIR-40898](https://jira.hl7.org/browse/FHIR-40898)
   * In STU2.1, we added a PartialDateTime extension which proved inappropriate.
   * This value was constrained to a dateTime, and is now constrained to a dateTime or a time. This addresses the problem in STU2 that a death time without a death date was awkward to specify.  This is possible in IJE, but a FHIR dateTime must include the date component.   A [DeathDate example](Observation-DeathDate-Example4.html) has been added to illustrate use of a time-only DeathDate.
-
 
 ### VRDR STU 2.1 (March 2023)
 * __Terminology:__ [FHIR-3946](https://jira.hl7.org/browse/FHIR-3946)
