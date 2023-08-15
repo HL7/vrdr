@@ -39,8 +39,7 @@ Description: "InjuryLocation-Example1"
 Instance: InjuryIncident-Example3
 InstanceOf: InjuryIncident
 Description: "NewParitalDateTime - example 1. Year, Day and TIme are known. Month is unknown."
-Usage: #inline
-* id = "78cdbb12-c30a-429e-90e0-e59621db3176"
+Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"
 * status = #final
 * code = http://loinc.org#11374-6 "Injury incident description Narrative"
@@ -62,8 +61,7 @@ Usage: #inline
 Instance: InjuryIncident-Example4
 InstanceOf: InjuryIncident
 Description: "NewParitalDateTime - example 2. Only time is known. Year, Month, Day are unknown."
-Usage: #inline
-* id = "78cdbb12-c30a-429e-90e0-e59621db3176"
+Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"
 * status = #final
 * code = http://loinc.org#11374-6 "Injury incident description Narrative"
@@ -81,8 +79,7 @@ Usage: #inline
 Instance: InjuryIncident-Example5
 InstanceOf: InjuryIncident
 Description: "NewParitalDateTime - example 3.  Year, Month and Time are known.  Day is unknown."
-Usage: #inline
-* id = "78cdbb12-c30a-429e-90e0-e59621db3176"
+Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"
 * status = #final
 * code = http://loinc.org#11374-6 "Injury incident description Narrative"
