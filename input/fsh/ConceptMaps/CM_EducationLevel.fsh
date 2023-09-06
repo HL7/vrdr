@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-education-level-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(EducationLevel, EducationLevelVS)
+* insert ConceptMapIntro(EducationLevel, IJE, EducationLevelVS)
 * insert AddGroup("IJE",$HL7_EducationLevelCS)
 * insert MapConcept( #1,  "8th grade or less",#ELEM, "Elementary School")
 * insert MapConcept( #2,  "9th through 12th grade; no diploma",#SEC, "Some secondary or high school education")

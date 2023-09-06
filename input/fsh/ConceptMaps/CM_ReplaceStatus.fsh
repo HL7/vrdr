@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-replace-status-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(ReplaceStatus, ReplaceStatusVS)
+* insert ConceptMapIntro(ReplaceStatus, IJE, ReplaceStatusVS)
 * insert AddGroup("IJE",Canonical(ReplaceStatusCS\))
 * insert MapConcept(#0, "Original Submission", #original,  "original record")
 * insert MapConcept(#1, "Updated Submission", #updated,  "updated record")

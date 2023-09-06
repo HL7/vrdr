@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id:  vrdr-contributory-tobacco-use-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(ContributoryTobaccoUse, ContributoryTobaccoUseVS)
+* insert ConceptMapIntro(ContributoryTobaccoUse, IJE, ContributoryTobaccoUseVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #Y,  "Yes",#373066001, "Yes")
 * insert MapConcept( #N,  "No",#373067005, "No")

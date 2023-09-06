@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-race-code-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(RaceCodes, RaceCodeVS)
+* insert ConceptMapIntro(RaceCodes, MRE, RaceCodeVS)
 * insert AddGroup("MRE",Canonical(RaceCodeCS\))
 * insert MapConcept(#100, "White Checkbox", #100,  "White Checkbox")
 * insert MapConcept(#101, "White", #101,  "White")

@@ -4,7 +4,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-intentional-reject-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(IntentionalReject, IntentionalRejectVS)
+* insert ConceptMapIntro(IntentionalReject, TRX, IntentionalRejectVS)
 * insert AddGroup("TRX",Canonical(IntentionalRejectCS\))
 * insert MapConcept(#1, "Reject1", #1,  "Reject1")
 * insert MapConcept(#2, "Reject2", #2,  "Reject2")

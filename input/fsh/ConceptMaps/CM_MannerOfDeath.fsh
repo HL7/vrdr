@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-manner-of-death-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(MannerOfDeath, MannerOfDeathVS)
+* insert ConceptMapIntro(MannerOfDeath, IJE, MannerOfDeathVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #N,  "Natural",#38605008, "Natural death")
 * insert MapConcept( #A,  "Accident",#7878000, "Accidental death")

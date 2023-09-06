@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 // Id: vrdr-transportation-incident-role-cm
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(TransportationIncidentRole, TransportationIncidentRoleVS)
+* insert ConceptMapIntro(TransportationIncidentRole, IJE, TransportationIncidentRoleVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #DR,  "Driver/Operator",#236320001, "Vehicle driver")
 * insert MapConcept( #PA,  "Driver/Operator",#257500003, "Vehicle passenger")

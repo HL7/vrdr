@@ -3,7 +3,7 @@ Instance: CertifierTypesCM
 InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
-* insert ConceptMapIntro(CertifierTypes, CertifierTypesVS)
+* insert ConceptMapIntro(CertifierTypes, IJE, CertifierTypesVS)
 * insert AddGroup("IJE",$sct)
 * insert MapConcept( #D ,  "Certifying Physician",#434651000124107 , "Certifying physician.")
 * insert MapConcept( #P ,  "Pronouncing and Certifying Physician",#434641000124105 , "Pronouncing & Certifying physician.")
