@@ -49,10 +49,10 @@ profiles["DeathCertificate"] = { :out => "StructureDefinition-vrdr-death-certifi
                                 :desc => "The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
 
 Notes:
-* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+* The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
 Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
-Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+Further profiling of Practitioner and PractitionerRole may be called for in the future. At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
 For example:
 * Funeral Home Licensee (USCorePractitionerRole)
 * Mortician (USCorePractitioner)
@@ -111,7 +111,7 @@ profiles["DeathCertificateDocument"] = { :out => "StructureDefinition-vrdr-death
 
   Notes:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+  * The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
   * The unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
 
 In addition to  the [DeathCertificate] Composition it includes the following content:
