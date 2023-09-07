@@ -87,7 +87,7 @@
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
 | 29 | Marital Status | MARITAL| [Decedent]| |maritalStatus | codeable |  [MaritalStatusVS] | 
 | 30 | Marital Status--Edit Flag | MARITAL_BYPASS| [Decedent]| |maritalStatus.extension[ BypassEditFlag]  | codeable | [EditBypass0124VS] | 
-| 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| x|extension[SpouseAlive]  | codeable |  [SpouseAliveVS] | 
+| 143 | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| x|extension[ SpouseAlive]  | codeable |  [SpouseAliveVS] | 
 | 146 | Decedent's Residence - Street number | STNUM_R| [Decedent]| |address.extension[stnum] | string | - | 
 | 147 | Decedent's Residence - Pre Directional | PREDIR_R| [Decedent]| |address.extension[predir] | string | - | 
 | 148 | Decedent's Residence - Street name | STNAME_R| [Decedent]| |address.extension[stname] | string | - | 
