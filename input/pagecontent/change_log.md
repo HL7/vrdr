@@ -1,7 +1,6 @@
 ### VRDR STU2.2 (September 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
 * __Links__:  Fixed some broken links in the narrative
-* __
 * __Concept Maps__:  Added notes to all of the [ConceptMaps](artifacts.html#terminology-concept-maps) supporting mapping from legacy TRX, MRE and IJE terminology to the valuesets defined in this IG indicating that 'TRX', 'MRE' and 'IJE' are not proper URIs, and that proper URIs will be incorporated into future versions.
 * __Concept Map__ [UnitsOfAgeCM]: Corrected an error in the codesystem for the code UNK, changing it from UCUM to NullFlavor.
 * __Clarifying__ [PartialDate] __and__ [PartialDateTime]: Additional clarification on the use of these extensions has been has been added to the [usage](usage.html#partial-dates-and-times) page.
