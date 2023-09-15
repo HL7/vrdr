@@ -51,7 +51,7 @@
 | 119 | Title of Certifier | CERTL| [DeathCertification]| |performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
 | 235 | Certifier Date Signed | CERTDATE| [DeathCertification]| x|performed | dateTime | - | 
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 
-| 32 | County of Death Occurrence | COD| [DeathLocation]| |address.district.extension[countyCode] | integer | see [CountyCodes] | 
+| 32 | County of Death Occurrence | COD| [DeathLocation]| |address.district.extension[districtCode] | integer | see [CountyCodes] | 
 | 129 | Death Institution name | DINSTI| [DeathLocation]| x|name | string  | - | 
 | 130 | Long String address for place of death | ADDRESS_D| [DeathLocation]| x|address.line | string  | - | 
 | 131 | Place of death. Street number | STNUM_D| [DeathLocation]| x|address.extension[stnum] | string | - | 
@@ -81,7 +81,7 @@
 | 22 | Birthplace--Country | BPLACE_CNT| [Decedent]| |extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
 | 23 | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| |extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesProvincesVS] | 
 | 24 | Decedent's Residence--City | CITYC| [Decedent]| |address.city.extension[ cityCode ] | integer | see [CityCodes] | 
-| 25 | Decedent's Residence--County | COUNTYC| [Decedent]| |address.district.extension[ countyCode ] | integer | see [CountyCodes] | 
+| 25 | Decedent's Residence--County | COUNTYC| [Decedent]| |address.district.extension[ districtCode ] | integer | see [CountyCodes] | 
 | 26 | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| [Decedent]| |address.state | string | [StatesTerritoriesProvincesVS] | 
 | 27 | Decedent's Residence--Country | COUNTRYC| [Decedent]| |address.country | string | [ResidenceCountryVS] | 
 | 28 | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| |address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
@@ -159,7 +159,7 @@
 | 174 | Describe How Injury Occurred | HOWINJ| [InjuryIncident]| |value.text | string | - | 
 | 175 | If Transportation Accident, Specify | TRANSPRT| [InjuryIncident]| |component[ transportationRole ].value.  (if value.code = OTH) the role should be specified in value.text) | codeable | [TransportationIncidentRoleVS] | 
 | 176 | County of Injury - literal | COUNTYTEXT_I| [InjuryLocation]| x|address.district | string | - | 
-| 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
+| 177 | County of Injury code | COUNTYCODE_I| [InjuryLocation]| x|address.district.extension[ districtCode].value | integer | see [CountyCodes] | 
 | 178 | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| x|address.city | string | - | 
 | 179 | Town/city of Injury code | CITYCODE_I| [InjuryLocation]| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
 | 180 | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| x|address.state | string | [StatesTerritoriesProvincesVS] | 

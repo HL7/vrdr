@@ -4,7 +4,7 @@
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 
-| 32 | County of Death Occurrence | COD| |address.district.extension[countyCode] | integer | see [CountyCodes] | 
+| 32 | County of Death Occurrence | COD| |address.district.extension[districtCode] | integer | see [CountyCodes] | 
 | 129 | Death Institution name | DINSTI| x|name | string  | - | 
 | 130 | Long String address for place of death | ADDRESS_D| x|address.line | string  | - | 
 | 131 | Place of death. Street number | STNUM_D| x|address.extension[stnum] | string | - | 
