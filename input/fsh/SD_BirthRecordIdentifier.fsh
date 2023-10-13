@@ -3,7 +3,7 @@ Parent: Observation
 Id: vrdr-birth-record-identifier
 Title: "Birth Record Identifier"
 Description: "Birth Record Identifier (Observation).  This includes the record identifier, the jurisdiction, and the birth year."
-
+* insert WGExtension
 * status 1..1
 * status = #final (exactly)
 * code 1..1

@@ -4,6 +4,7 @@ Id: Location-Jurisdiction-Id
 Title: "Location Jurisdiction Id"
 Description: "Location Jurisdiction Id (Extension)"
 * insert boilerplate
+* insert WGExtension
 // * ^context.type = #extension
 // * ^context.expression = "Location"
 * insert ExtensionContextResource(string)

@@ -42,5 +42,6 @@ ValueSet: BirthplaceCountryVS
 Id: vrdr-birthplace-country-vs
 Title: "Birthplace Country Value Set"
 Description: "2 Letter Birthplace Country Codes from GEC and ISO 3166-1.  Includes historic countries that no longer exist."
+* insert WGExtension
 * include codes from system CountryCodeCS
 * ^experimental = false

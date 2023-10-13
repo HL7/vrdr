@@ -83,6 +83,7 @@ Description: "NCHS Race Codes.
 
 Mapping to IJE codes [here](ConceptMap-RaceCodeCM.html)."
 //* include codes from system RaceCodeCSCS
+* insert WGExtension
 * RaceCodeCS#100 "White Checkbox"
 * RaceCodeCS#101 "White"
 * RaceCodeCS#102 "Arab"
@@ -1263,6 +1264,7 @@ NCHS will stop delivering this coded data in this representation in 2022.
 
 Mapping to IJE codes [here](ConceptMap-RaceRecode40CM.html)."
 //* include codes from system RaceRecode40CS
+* insert WGExtension
 * RaceRecode40CS#01 "White"
 * RaceRecode40CS#02 "Black"
 * RaceRecode40CS#03 "American Indian or Alaskan Native (AIAN)"
