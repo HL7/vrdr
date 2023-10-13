@@ -5,6 +5,7 @@ Description: "Code values reflecting the death location of the decedent (e.g., h
 
 Mapping to IJE codes [here](ConceptMap-PlaceOfDeathCM.html)."
 * insert SNOMEDCopyright
+* insert WGExtension
 * $sct#63238001 "Dead on arrival at hospital"
 * $sct#440081000124100 "Death in home"
 * $sct#440071000124103 "Death in hospice"

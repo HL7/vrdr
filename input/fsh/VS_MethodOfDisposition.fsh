@@ -6,6 +6,7 @@ Description: "The set of codes used to indicate the method used to dispose of th
 Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html)."
 * insert boilerplate
 * insert SNOMEDCopyright
+* insert WGExtension
 * $sct#449931000124108 "Entombment"
 * $sct#449941000124103 "Removal from state"
 * $sct#449951000124101 "Donation"

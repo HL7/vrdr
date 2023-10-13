@@ -4,6 +4,7 @@ Title: "Intentional Reject ValueSet"
 Description: "Intentional Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."
+* insert WGExtension
 * IntentionalRejectCS#1 "Reject1"
 * IntentionalRejectCS#2 "Reject2"
 * IntentionalRejectCS#3 "Reject3"
@@ -18,6 +19,7 @@ Title: "System Reject ValueSet"
 Description: "System Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html)."
+* insert WGExtension
 * SystemRejectCS#0 "Not Rejected"
 * SystemRejectCS#1 "MICAR Reject Dictionary Match"
 * SystemRejectCS#2 "ACME Reject"
@@ -31,6 +33,7 @@ Title: "Transax Conversion ValueSet"
 Description: "Transax Conversion ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html)."
+* insert WGExtension
 * TransaxConversionCS#3 "Conversion using non-ambivalent table entries"
 * TransaxConversionCS#4 "Conversion using ambivalent table entries"
 * TransaxConversionCS#5 "Duplicate entity-axis codes deleted; no other action involved"
@@ -43,6 +46,7 @@ Title: "Activity at Time of Death VS"
 Description: "Activity at Time of Death.
 
 Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."
+* insert WGExtension
 * ActivityAtTimeOfDeathCS#0 "While engaged in sports activity"
 * ActivityAtTimeOfDeathCS#1 "While engaged in leisure activities."
 * ActivityAtTimeOfDeathCS#2 "While working for income"
@@ -58,5 +62,6 @@ ValueSet: ICD10CausesOfDeathVS
 Id: vrdr-icd10-causes-of-death-vs
 Title: "ICD10 Causes of Death VS"
 Description: "ICD10 Causes of Death VS"
+* insert WGExtension
 * include codes from system $icd10
 * ^experimental = false

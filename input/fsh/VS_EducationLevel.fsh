@@ -4,6 +4,7 @@ Title: "Education Level"
 Description: "Highest educational level achieved.
 
 Mapping to IJE codes [here](ConceptMap-EducationLevelCM.html)."
+* insert WGExtension
 * $HL7_EducationLevelCS#ELEM "Elementary School"
 * $HL7_EducationLevelCS#SEC "Some secondary or high school education"
 * $HL7_EducationLevelCS#HS "High School or secondary school degree complete"

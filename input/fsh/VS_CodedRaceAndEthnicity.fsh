@@ -6,6 +6,7 @@ Description: "NCHS HispanicOrigin Value Set.
 
 Mapping to IJE codes [here](ConceptMap-HispanicOriginCM.html)."
 //* include codes from system HispanicOriginCS
+* insert WGExtension
 * HispanicOriginCS#100 "Non-Hispanic"
 * HispanicOriginCS#200 "Spaniard"
 * HispanicOriginCS#201 "Andalusian"

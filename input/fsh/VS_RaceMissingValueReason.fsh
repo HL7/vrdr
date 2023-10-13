@@ -5,6 +5,7 @@ Description: "A set of code values used to indicate the reason decedent race dat
 
 Mapping to IJE codes [here](ConceptMap-RaceMissingValueReasonCM.html)."
 * insert boilerplate
+* insert WGExtension
 * MissingValueReasonCS#R "Refused"
 * MissingValueReasonCS#S "Sought, but unknown"
 * MissingValueReasonCS#C "Not obtainable"

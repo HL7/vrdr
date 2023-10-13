@@ -2,6 +2,7 @@ ValueSet: ResidenceCountryVS
 Id: vrdr-residence-country-vs
 Title: "Residence Country Value Set"
 Description: "2 Letter Residence Country Codes from GEC and ISO 3166-1.  Excludes historic countries that no longer exist"
+* insert WGExtension
 * include codes from system CountryCodeCS
 * exclude CountryCodeCS#CL
 * exclude CountryCodeCS#CZ

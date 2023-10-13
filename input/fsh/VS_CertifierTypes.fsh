@@ -4,6 +4,7 @@ Title: "Certifier Types VS"
 Description: "Certifier Types Value Set
 
 Mapping to IJE codes [here](ConceptMap-CertifierTypesCM.html)."
+* insert WGExtension
 * insert SNOMEDCopyright
 * $sct#455381000124109 "Death certification by medical examiner or coroner (procedure)"
 * $v3-NullFlavor#OTH "Other (Specify)"

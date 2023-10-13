@@ -4,6 +4,7 @@ Title: "Filing Format ValueSet"
 Description: "Filing Format
 
 Mapping to IJE codes [here](ConceptMap-FilingFormatCM.html)."
+* insert WGExtension
 * FilingFormatCS#electronic "Electronic"
 * FilingFormatCS#paper "Paper"
 * FilingFormatCS#mixed "Mixed"

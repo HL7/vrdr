@@ -5,6 +5,7 @@ Description: "Role of the decedent in a transportation incident resulting in a d
 
 Mapping to IJE codes [here](ConceptMap-TransportationIncidentRoleCM.html)."
 * insert SNOMEDCopyright
+* insert WGExtension
 * SNOMED_CT#236320001 "Vehicle driver"
 * SNOMED_CT#257500003 "Passenger"
 * SNOMED_CT#257518000 "Pedestrian"

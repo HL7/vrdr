@@ -14,6 +14,7 @@ Title: "Yes No Unknown"
 Description: "Value set with Yes, No and Unknown.
 
 Mapping to IJE codes [here](ConceptMap-YesNoUnknownCM.html)."
+* insert WGExtension
 * $v2-0136#N "No"
 * $v2-0136#Y "Yes"
 * $v3-NullFlavor#UNK "unknown"
@@ -25,6 +26,7 @@ Title: "Yes No Unknown NotApplicable"
 Description: "Valueset with Yes, No, Unknown, and Not Applicable.
 
 Mapping to IJE codes [here](ConceptMap-YesNoUnknownNotApplicableCM.html)."
+* insert WGExtension
 * $v2-0136#Y "Yes"
 * $v2-0136#N "No"
 * $v3-NullFlavor#UNK "unknown"

@@ -5,6 +5,7 @@ Description: "Did Tobacco Use Contribute to Death
 
 Mapping to IJE codes [here](ConceptMap-ContributoryTobaccoUseCM.html)."
 * insert SNOMEDCopyright
+* insert WGExtension
 * $sct#373066001 "Yes"
 * $sct#373067005 "No"
 * $sct#2931005 "Probably"

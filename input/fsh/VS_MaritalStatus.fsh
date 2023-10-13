@@ -4,6 +4,7 @@ Title: "Marital Status Value Set"
 Description: "The set of codes used to indicate the marital status of the decedent
 
 Mapping to IJE codes [here](ConceptMap-MaritalStatusCM.html)."
+* insert WGExtension
 * $v3-MaritalStatus#D "Divorced"
 * $v3-MaritalStatus#L "Legally Separated"
 * $v3-MaritalStatus#M "Married"
