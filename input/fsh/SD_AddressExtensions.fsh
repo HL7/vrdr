@@ -17,6 +17,7 @@ Id: DistrictCode
 Title: "District Code"
 Description: "District expressed as a numeric value.  As of the date of publication, in accordance with the [NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014](https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf). (Extension)"
 //* insert boilerplate
+* insert WGExtension
 * ^context.type = #element
 * ^context.expression = "Address.district"
 * value[x] 1..1
@@ -39,29 +40,35 @@ Extension: PreDirectional
 Id: PreDirectional
 Title: "PreDirectional"
 Description: "PreDirectional"
+* insert WGExtension
 * insert addressextension(10)
 Extension: StreetName
 Id: StreetName
 Title: "StreetName"
 Description: "StreetName"
+* insert WGExtension
 * insert addressextension(50)
 Extension: StreetNumber
 Id: StreetNumber
 Title: "StreetNumber"
 Description: "StreetNumber"
+* insert WGExtension
 * insert addressextension(10)
 Extension: StreetDesignator
 Id: StreetDesignator
 Title: "StreetDesignator"
 Description: "StreetDesignator"
+* insert WGExtension
 * insert addressextension(10)
 Extension: PostDirectional
 Id: PostDirectional
 Title: "PostDirectional"
 Description: "PostDirectional"
+* insert WGExtension
 * insert addressextension(10)
 Extension: UnitOrAptNumber
 Id: UnitOrAptNumber
 Title: "UnitOrAptNumber"
 Description: "UnitOrAptNumber"
+* insert WGExtension
 * insert addressextension(10)

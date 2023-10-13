@@ -97,6 +97,7 @@ Id: vrdr-organization-type-cs
 Title: "Local Organization Type"
 Description: "Local Organization Types"
 * insert boilerplate
+* insert WGExtension
 * ^content = #complete
 * ^caseSensitive = false
 * #funeralhome "Funeral Home" "Funeral Home."

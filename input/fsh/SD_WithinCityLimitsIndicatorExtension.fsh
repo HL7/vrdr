@@ -3,6 +3,7 @@ Id: WithinCityLimitsIndicator
 Title: "Within City Limits Indicator"
 Description: "Within City Limits Indicator (Extension)"
 * insert boilerplate
+* insert WGExtension
 * ^purpose = "Inclusion within city limits is used in determining juridictional responsiblity."
 * ^context.type = #element
 * ^context.expression = "Address"

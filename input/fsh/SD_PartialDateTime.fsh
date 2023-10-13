@@ -5,6 +5,7 @@ Id: PartialDate
 Title: "Partial Date"
 Description: "Provides values of a partial date (Extension)"
 * insert boilerplate
+* insert WGExtension
 * insert ExtensionContextResource(date)
 * insert ExtensionContextResource(dateTime)
 * . ^short = "Partial Date"
@@ -25,6 +26,7 @@ Id: PartialDateTime
 Title: "Partial Date Time"
 Description: "Provides values of a partial dateTime (Extension)"
 * insert boilerplate
+* insert WGExtension
 * insert ExtensionContextResource(date)
 * insert ExtensionContextResource(dateTime)
 * . ^short = "Partial Date Time"
@@ -47,6 +49,7 @@ Extension: DateYear
 Id: Date-Year
 Title: "Date Year"
 Description: "The year portion (YYYY) of the partial date. (Extension)"
+* insert WGExtension
 * insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
@@ -59,6 +62,7 @@ Extension: DateMonth
 Id: Date-Month
 Title: "Date Month"
 Description: "The month portion (MM) of the partial date. (Extension)"
+* insert WGExtension
 * insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
@@ -71,6 +75,7 @@ Extension: DateDay
 Id: Date-Day
 Title: "Date Day"
 Description: "The day portion (DD) of the partial date. (Extension)"
+* insert WGExtension
 * insert ExtensionContextResource(Extension)
 * value[x] 1..1
 * value[x] only unsignedInt
@@ -84,6 +89,7 @@ Extension: DateTime
 Id: Date-Time
 Title: "Date Time"
 Description: "The time portion (DD) of the partial date. (Extension)"
+* insert WGExtension
 * insert ExtensionContextResource(Extension)
 * value[x] 1..1
 // * value[x] only time or code

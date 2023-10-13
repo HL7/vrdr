@@ -2,6 +2,7 @@ Extension: NVSSSexAtDeath
 Id: NVSS-SexAtDeath
 Title: "NVSS SexAtDeath"
 Description: "Sex on visual inspection at the time of death by the funeral home"
+* insert WGExtension
 * insert ExtensionContextResource(Patient)
 * value[x] 1..1
 * value[x] only CodeableConcept
@@ -11,6 +12,7 @@ Extension: SpouseAlive
 Id: SpouseAlive
 Title: "Spouse Is Alive"
 Description: "Spouse is Alive."
+* insert WGExtension
 * insert ExtensionContextResource(Patient)
 * value[x] 1..1
 * value[x] only CodeableConcept

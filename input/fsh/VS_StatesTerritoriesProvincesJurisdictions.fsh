@@ -17,6 +17,7 @@ CodeSystem: CanadianProvincesCS
 Id: vrdr-canadian-provinces-cs
 Title: "Canadian Provinces"
 Description: "Canadian Provinces"
+* insert WGExtension
 * ^caseSensitive = true
 * #AB	"Alberta" "Alberta"
 * #BC	"British Columbia" "British Columbia"
@@ -96,6 +97,7 @@ ValueSet: USStatesAndTerritoriesVS
 Id: vrdr-usstates-territories-vs
 Title: "US States, Territories Value Set"
 Description: "2 Letter States and Territories Value Set"
+* insert WGExtension
 * ^status = #active
 * ^version = "1.0.0"
 * ^experimental = false
@@ -172,6 +174,7 @@ Description: "2 Letter States and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
 * ^experimental = false
+* insert WGExtension
 //* insert USStatesAndTerritories
 // * insert CanadaProvinces -- this doesn't work, don't be tempted
 * codes from valueset USStatesAndTerritoriesVS
@@ -185,6 +188,7 @@ Description: "2 Letter Jurisdictions and Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 * ^status = #active
 * ^experimental = false
+* insert WGExtension
 // * insert USStatesAndTerritories
 // * insert CanadaProvinces
 * codes from valueset USStatesAndTerritoriesVS
@@ -199,6 +203,7 @@ Title: "Canadian Provinces Value Set"
 Description: "2 Letter Canadian Provinces Value Set"
 * ^copyright = "The Canadian Province codesystem is copright Canada Health Infoway"
 // * insert CanadaProvinces
+* insert WGExtension
 * codes from system CanadianProvincesCS
 * ^experimental = false
 
@@ -206,6 +211,7 @@ ValueSet: JurisdictionVS
 Id: vrdr-jurisdiction-vs
 Title: "Jurisdictions Value Set"
 Description: "2 Letter Codes for all 57 Jurisdictions Reporting Deaths to NCHS"
+* insert WGExtension
 * codes from valueset USStatesAndTerritoriesVS
 * JurisdictionsCS#YC "New York City"
 * ^experimental = false

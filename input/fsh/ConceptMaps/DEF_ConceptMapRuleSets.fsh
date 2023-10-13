@@ -1,4 +1,7 @@
 RuleSet: ConceptMapIntro(name, legacy, vsname)
+* extension
+  * url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+  * valueCode = #pher
 * name = "{name}"
 * title = "{name} Concept Map"
 * status = #draft
