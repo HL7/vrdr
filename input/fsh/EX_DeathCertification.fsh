@@ -3,7 +3,7 @@
 Instance: DeathCertification-Example1
 InstanceOf: DeathCertification
 Usage: #example
-Description: "DeathCertification-Example1"
+Description: "DeathCertification Example1"
 * insert AddMetaProfile(DeathCertification)
 * identifier.value = "180"
 * status = #completed
@@ -19,7 +19,7 @@ Description: "DeathCertification-Example1"
 Instance: DeathCertification-Example2
 InstanceOf: DeathCertification
 Usage: #example
-Description: "DeathCertification-Example2"
+Description: "DeathCertification Example2"
 * insert AddMetaProfile(DeathCertification)
 * identifier.value = "180"
 * status = #completed
