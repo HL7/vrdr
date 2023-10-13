@@ -2,6 +2,7 @@ Extension: CityCode
 Id: CityCode
 Title: "City Code"
 Description: "City expressed as a numeric value.  As of the date of publication, in accordance with the [NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014](https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf). (Extension)"
+* insert WGExtension
 * ^context.type = #element
 * ^context.expression = "Address.city"
 * value[x] 1..1

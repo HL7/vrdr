@@ -6,6 +6,7 @@ Parent: Observation
 Id: vrdr-automated-underlying-cause-of-death
 Title: "Automated Underlying Cause Of Death"
 Description: "Automated Underlying Cause Of Death (Observation)"
+* insert WGExtension
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
 * code = $loinc#80358-5
 * value[x] 1..1
@@ -18,6 +19,7 @@ Parent: Observation
 Id: vrdr-manual-underlying-cause-of-death
 Title: "Manual Underlying Cause Of Death"
 Description: "Manual Underlying Cause Of Death (Observation)"
+* insert WGExtension
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
 * code = $loinc#80359-3
 * value[x] 1..1
@@ -31,6 +33,7 @@ Parent: Observation
 Id: vrdr-record-axis-cause-of-death
 Title: "Record Axis Cause Of Death"
 Description: "Record Axis Cause Of Death (Observation): Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
+* insert WGExtension
 * code = $loinc#80357-7
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
@@ -63,6 +66,7 @@ Parent: Observation
 Id: vrdr-entity-axis-cause-of-death
 Title: "Entity Axis Cause Of Death"
 Description: "Entity Axis Cause Of Death (Observation):   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
+* insert WGExtension
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9
 * value[x] 1..1

@@ -54,6 +54,7 @@ Instance: DeathCertificate-Example1
 InstanceOf: DeathCertificate
 Usage: #example
 Description: "DeathCertificate-Example1"
+Title: "DeathCertificate Example1"
 * meta.profile = Canonical(DeathCertificate)
 * status = #final
 *  type = $loinc#64297-5 "Death certificate"
@@ -116,6 +117,7 @@ Instance: DeathCertificate-Example2
 InstanceOf: DeathCertificate
 Usage: #example
 Description: "DeathCertificate-Example2 (with coded content)"
+Title: "DeathCertificate Example2"
 * meta.profile = Canonical(DeathCertificate)
 * status = #final
 *  type = $loinc#64297-5 "Death certificate"
