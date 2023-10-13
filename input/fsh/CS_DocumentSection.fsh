@@ -3,6 +3,7 @@ Id: vrdr-document-section-cs
 Title: "Document Section Code System"
 Description: "Document Section Code System"
 * insert boilerplate
+* insert WGExtension
 * ^content = #complete
 * ^caseSensitive = false
 * #DecedentDemographics "Decedent Demographics" "Contains decedent demographic data. Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this document section are provided by a decedent informant."

@@ -4,6 +4,7 @@ Title: "Date of Death Determination Methods"
 Description: "Date of Death Determination Methods"
 * ^content = #complete
 * ^caseSensitive = false
+* insert WGExtension
 * #exact "Exact"
 * #approximate "Approximate"
 * #presumed "Presumed Date of Death"

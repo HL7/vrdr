@@ -2,7 +2,7 @@ CodeSystem: HispanicOriginCS
 Id: vrdr-hispanic-origin-cs
 Title: "HispanicOrigin CS"
 Description: "HispanicOrigin from [Appendix_D_Excel_Hispanic_Origin_Code_List_Update_2011](https://www.cdc.gov/nchs/data/dvs/Appendix_D_Excel_Hispanic_Origin_Code_List_Update_2011.xls)"
-
+* insert WGExtension
 * ^caseSensitive = true
 * ^experimental = false
 * #100 "Non-Hispanic"

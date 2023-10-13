@@ -33,6 +33,10 @@ RuleSet: BundleSlice(name, min, max, short, def, class)
 * entry[{name}].resource only {class}
 //* entry[{name}].resource.meta.profile = Canonical({class})
 
+RuleSet: WGExtension
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #pher
+
 RuleSet: RequireMetaProfile(profile)
 // * meta 1..1
 // * meta.profile 1..*
@@ -43,8 +47,9 @@ RuleSet: RequireMetaProfile(profile)
 // * meta.profile ^slicing.description = "Slice based on value"
 // * meta.profile contains supportedProfile 1..1
 // * meta.profile[supportedProfile] = Canonical({profile})
-// this now does nothing
-* hello
+// this now just inserts this useless extension that is required by publisher
+* insert WGExtension 
+// * hello
 
 RuleSet: AddMetaProfile(profile)
 //* meta.profile = Canonical({profile})

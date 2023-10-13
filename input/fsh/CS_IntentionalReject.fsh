@@ -2,6 +2,7 @@ CodeSystem: IntentionalRejectCS
 Id: vrdr-intentional-reject-cs
 Title: "Intentional Reject CodeSystem"
 Description: "Intentional Reject CodeSystem"
+* insert WGExtension
 * ^caseSensitive = true
 * #1 "Reject1" "Reject1"
 * #2 "Reject2" "Reject2"

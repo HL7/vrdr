@@ -3,6 +3,7 @@ Id: vrdr-pregnancy-status-cs
 Title: "Pregnancy Status Codes"
 Description: "PHVS_PregnancyStatus_NCHS codes from PH_PHINVS_CDC"
 * ^caseSensitive = true
+* insert WGExtension
 * #1 "Not pregnant within past year"
 * #2 "Pregnant at time of death"
 * #3 "Not pregnant, but pregnant within 42 days of death"

@@ -3,6 +3,7 @@ Id: vrdr-location-type-cs
 Title: "Location Type Code System"
 Description: "Location Type Code System"
 * insert boilerplate
+* insert WGExtension
 * ^caseSensitive = false
 * ^compositional = true
 * ^versionNeeded = false

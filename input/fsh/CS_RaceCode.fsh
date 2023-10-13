@@ -4,6 +4,7 @@ Title: "Race Code CS"
 Description: "RaceCode from [Appendix E Excel Race Code List Update 2001](https://www.cdc.gov/nchs/data/dvs/Appendix_E_Excel_Race_Code_List_Update_2011.xls)"
 * ^caseSensitive = true
 * ^experimental = false
+* insert WGExtension
 * #100 "White Checkbox"
 * #101 "White"
 * #102 "Arab"

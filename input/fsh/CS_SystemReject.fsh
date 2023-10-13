@@ -3,6 +3,7 @@ CodeSystem: SystemRejectCS
 Id: vrdr-system-reject-cs
 Title: "System Reject Code System"
 Description: "System Reject Code System"
+* insert WGExtension
 * ^caseSensitive = true
 * ^experimental = false
 * #0 "Not Rejected" "Not Rejected"

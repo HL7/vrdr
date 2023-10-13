@@ -3,6 +3,7 @@ Id: vrdr-observations-cs
 Title: "Local Observation Codes"
 Description: "Local Observation Codes for observations that lack an appropriate LOINC code"
 * insert boilerplate
+* insert WGExtension
 * ^content = #complete
 * ^caseSensitive = false
 * #emergingissues "Emerging Issues" "NCHS-required emerging issues data."
@@ -20,6 +21,7 @@ Id: vrdr-component-cs
 Title: "Local Component Codes"
 Description: "Local Component Codes for observation components that lack an appropriate LOINC code"
 * insert boilerplate
+* insert WGExtension
 * ^content = #complete
 * ^caseSensitive = false
 * #position "position"

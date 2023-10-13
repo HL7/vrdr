@@ -11,3 +11,4 @@ Description: "Activity at Time of Death Codesystem based on PHVS_ActivityType_NC
 * #8 "While engaged in other specified activities."
 * #9 "During unspecified activity"
 * ^experimental = false
+* insert WGExtension

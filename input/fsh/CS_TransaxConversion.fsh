@@ -2,6 +2,7 @@ CodeSystem: TransaxConversionCS
 Id: vrdr-transax-conversion-cs
 Title: "Transax Conversion Code System"
 Description: "Transax Conversion Code System"
+* insert WGExtension
 * ^caseSensitive = true
 * ^experimental = false
 * #3 "Conversion using non-ambivalent table entries" "Conversion using non-ambivalent table entries"

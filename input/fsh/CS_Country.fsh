@@ -3,6 +3,7 @@ Id: vrdr-country-code-cs
 Title: "Country Codes"
 Description: "2 Letter Country Codes from GEC and ISO 3166-1"
 * ^caseSensitive = false
+* insert WGExtension
 * #AA "Aruba" "Aruba"
 * #AC "Antigua And Barbuda" "Antigua And Barbuda"
 * #AE "United Arab Emirates" "United Arab Emirates"
