@@ -4,7 +4,7 @@
 | :---------: | --------------- | ------------ | ---------- | :------------: | ---------- | ---------- | -------------- |
 | 109 | Was Autopsy performed | AUTOP| [AutopsyPerformedIndicator]| |value | codeable | [YesNoUnknownVS] | 
 | 110 | Were Autopsy Findings Available to Complete the Cause of Death? | AUTOPF| [AutopsyPerformedIndicator]| |component[ autopsyResultsAvailable ].value | codeable | [YesNoUnknownNotApplicableVS] | 
-| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | - | 
+| 88 | Infant Death/Birth Linking - birth certificate number | BCNO| [BirthRecordIdentifier]| |value | string(6) | Six digit number.  Leading zeroes optional. | 
 | 89 | Infant Death/Birth Linking - year of birth | IDOB_YR| [BirthRecordIdentifier]| |component[birthYear].value | dateTime | YYYY component | 
 | 90 | Infant Death/Birth Linking - State, U.S. Territory or Canadian Province of Birth - code | BSTATE| [BirthRecordIdentifier]| |component[birthJurisdiction].value | string | [JurisdictionsProvincesVS] | 
 | 185 | Cause of Death Part I Line a | COD1A| [CauseOfDeathPart1]| |value.text,   component[lineNumber] = 1 | string(120) | - | 
@@ -38,8 +38,8 @@
 | 122 | State Specific Data  | STATESP| [DeathCertificate]| |extension[ stateSpecificField] | string(30) | - | 
 | 184 | Replacement Record  | REPLACE (*deprecated*)| [DeathCertificate]| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
 | NA | Death Record Identifier | *NO IJE MAPPING*| [DeathCertificateDocument]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
-| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.extension[ certificateNumber].value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 3 | Certificate Number | FILENO| [DeathCertificateDocument]| |identifier.extension[ certificateNumber].value | string(6) | Six digit number.  Leading zeroes optional. | 
+| 5 | Auxiliary State file number | AUXNO| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | 12 digit number | 
 | 121 | Auxiliary State file number | AUXNO2| [DeathCertificateDocument]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | 1 | Date of Death--Year | DOD_YR| [DeathDate]| |value | dateTime | Required for processing | 
 | 31 | Place of Death | DPLACE| [DeathDate]| |component[placeOfDeath].value | codeable | [PlaceOfDeathVS] | 
@@ -244,12 +244,12 @@
 | 102 | Acme System Reject Codes | SYS_REJ| [CodingStatusValues]| |parameter[acmeSystemReject].value  | codeable | [ACMESystemRejectVS] | 
 | 107 | Transax conversion flag: Computer Generated | TRX_FLG| [CodingStatusValues]| |parameter[transaxConversion].value  | codeable | [TransaxConversionVS] | 
 | NA | Death Record Identifier | *NO IJE MAPPING*| [CauseOfDeathCodedContentBundle]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
-| 3 | Certificate Number | FILENO| [CauseOfDeathCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [CauseOfDeathCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 3 | Certificate Number | FILENO| [CauseOfDeathCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | Six digit number.  Leading zeroes optional. | 
+| 5 | Auxiliary State file number | AUXNO| [CauseOfDeathCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | 12 digit number | 
 | 121 | Auxiliary State file number | AUXNO2| [CauseOfDeathCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 | NA | Death Record Identifier | *NO IJE MAPPING*| [DemographicCodedContentBundle]| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
-| 3 | Certificate Number | FILENO| [DemographicCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| [DemographicCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 3 | Certificate Number | FILENO| [DemographicCodedContentBundle]| |identifier.extension[ certificateNumber].value | string(6) | Six digit number.  Leading zeroes optional. | 
+| 5 | Auxiliary State file number | AUXNO| [DemographicCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | 12 digit number | 
 | 121 | Auxiliary State file number | AUXNO2| [DemographicCodedContentBundle]| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 {: .grid }
 {% include markdown-link-references.md %}
