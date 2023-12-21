@@ -8,3 +8,6 @@ RuleSet: BundleIdentifiers
     CertificateNumber named certificateNumber 0..1 and
     AuxiliaryStateIdentifier1 named auxiliaryStateIdentifier1 0..1 and
     AuxiliaryStateIdentifier2 named auxiliaryStateIdentifier2 0..1
+* identifier.extension[auxiliaryStateIdentifier1] ^short = "Auxiliary State Identifier 1.  12 characters."
+* identifier.extension[auxiliaryStateIdentifier2] ^short = "Auxiliary State Identifier 2.  12 characters."
+* identifier.extension[certificateNumber] ^short = "Certificate Number.  Six digit number.  Leading zeroes are optional."

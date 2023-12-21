@@ -1,3 +1,7 @@
+### Post STU2.2 (December 2023 and onward)
+* Clarified description of [BirthRecordIdentifier] that it is only used for infant deaths.
+* Clarified that certificate numbers are 6 digit numbers with leading zeroes allowed.  They are (unfortunately) defined as FHIR strings.
+* Restricted [LocationJurisdictionId] Extension to Address.state context.
 ### VRDR STU2.2 (September 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
 * __Links__:  Fixed some broken links in the narrative
