@@ -8,11 +8,7 @@ Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing 
 * type 1..1
 * type only code
 * type = #collection (exactly)
-* entry.resource 1..1 // each entry must have a resource
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile"
+* insert BundleSlicingByProfile
 // Coded Content
 * insert BundleSlice(  ActivityAtTimeOfDeath,  0, 1,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath,  ActivityAtTimeOfDeath)
 * insert BundleSlice(  AutomatedUnderlyingCauseOfDeath,  0, 1,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath,  AutomatedUnderlyingCauseOfDeath)
@@ -44,11 +40,7 @@ Description: "Demographic Coded Content Bundle (Bundle): A bundle containing ins
 * type 1..1
 * type only code
 * type = #collection (exactly)
-* entry.resource 1..1 // each entry must have a resource
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile"
+* insert BundleSlicingByProfile
 * insert BundleSlice(  CodedRaceAndEthnicity,  0, 1,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity,  CodedRaceAndEthnicity)
 * insert BundleSlice(  InputRaceAndEthnicity,  0, 1,  InputRaceAndEthnicity,  InputRaceAndEthnicity,  InputRaceAndEthnicity)
 
@@ -62,9 +54,5 @@ Description: "Industry and Occupation Coded Content Bundle (Bundle):  A bundle c
 * type 1..1
 * type only code
 * type = #collection (exactly)
-* entry.resource 1..1 // each entry must have a resource
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile"
-* insert BundleSlice(  CodedIndustryAndOccupation,  0, 1, DecedentUsualWork  , DecedentUsualWork  ,  DecedentUsualWork )
+* insert BundleSlicingByProfile
+* insert BundleSlice(  CodedIndustryAndOccupation,  1, 1, DecedentUsualWork  , DecedentUsualWork  ,  DecedentUsualWork )
