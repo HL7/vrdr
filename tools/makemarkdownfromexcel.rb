@@ -34,7 +34,7 @@ profiles["AutopsyPerformedIndicator"] = { :out => "StructureDefinition-vrdr-auto
                                           :desc => "The Autopsy Performed Indicator profile captures the following values:" }
 profiles["BirthRecordIdentifier"] = { :out => "StructureDefinition-vrdr-birth-record-identifier-intro.md",
                                      :desc => "The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record.
-                         It is relevant only in the case where the birth took place in a recognized jurisdiction." }
+                         It is relevant only in the case where the decedent is an infant and the birth took place in a recognized jurisdiction." }
 profiles["CauseOfDeathPart1"] = { :out => "StructureDefinition-vrdr-cause-of-death-part1-intro.md",
                                  :desc => "The [Certifier] is optionally referenced from this profile (performer)." }
 profiles["CauseOfDeathPart2"] = { :out => "StructureDefinition-vrdr-cause-of-death-part2-intro.md",

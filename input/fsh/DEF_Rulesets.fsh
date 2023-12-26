@@ -33,6 +33,13 @@ RuleSet: BundleSlice(name, min, max, short, def, class)
 * entry[{name}].resource only {class}
 //* entry[{name}].resource.meta.profile = Canonical({class})
 
+RuleSet: BundleSlicingByProfile
+* entry.resource 1..1 // each entry must have a resource
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry ^slicing.description = "Slicing based on the profile"
+
 RuleSet: WGExtension
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #pher

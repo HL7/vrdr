@@ -1,3 +1,21 @@
+<div class="note-to-balloters" markdown="1">
+
+####  CI Build for Future STU3 Version of VRDR
+
+The version of VRDR in production use by NCHS and Jurisdictional Vital Records Offices is [VRDR STU2.2](https://hl7.org/fhir/us/vrdr/STU2.2/).
+
+This continuous integration build version of STU3 will evolve towards the candidate for a 2024 STU3 ballot.
+
+It initially addresses minor extensions to the VRDR STU2.2 specification along with minor improvements in documentation.
+Eventually, this version will incorporate changes driven by the [harmonization of vital records FHIR Implementation Guides](https://hl7.org/fhir/us/vr-common-library/2024Jan/vr_ig_harmonization.html).   
+
+Until that harmonization process begins, this version of VRDR will remain compatible with VRDR STU2.2, but incorporate new functionality such as the ability to exchange coded Industry and Occupation data.
+
+This header will be updated to highlight key divergences between STU2.2 and the future STU3.
+
+See the [change log](change_log.html) for an updated list of changes.
+  
+</div><!-- note-to-balloters -->
 ### Overview
 
 The VRDR FHIR IG provides guidance regarding the use of FHIR resources as a conduit for data required in the bidirectional exchange of mortality data between Jurisdictional Vital Records Offices (JVRO) in the US and U.S territories  and U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).

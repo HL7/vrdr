@@ -12,8 +12,8 @@
 | **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
 | :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
 | NA | Death Record Identifier | *NO IJE MAPPING*| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
-| 3 | Certificate Number | FILENO| |identifier.extension[ certificateNumber].value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
+| 3 | Certificate Number | FILENO| |identifier.extension[ certificateNumber].value | string(6) | Six digit number.  Leading zeroes optional. | 
+| 5 | Auxiliary State file number | AUXNO| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | 12 digit number | 
 | 121 | Auxiliary State file number | AUXNO2| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
 {: .grid }
 {% include markdown-link-references.md %}
