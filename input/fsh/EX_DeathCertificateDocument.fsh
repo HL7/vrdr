@@ -1,7 +1,3 @@
-RuleSet: addentry(type, id)
-* entry[+].resource = {id}
-* entry[=].fullUrl = "http://www.example.org/fhir/{type}/{id}"
-
 RuleSet: Identifiers2020NY000182
 * identifier.value = "2020NY000182"
 * identifier.extension[certificateNumber].valueString = "000182"
@@ -17,7 +13,7 @@ Description: "DeathCertificateDocument-Example1"
 * insert Identifiers2020NY000182
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
-* insert addentry(Bundle, DeathCertificate-Example1)
+* insert addentry(Composition, DeathCertificate-Example1)
 * insert addentry(Patient, Decedent-Example1)
 * insert addentry(RelatedPerson, DecedentFather-Example1)
 * insert addentry(RelatedPerson, DecedentMother-Example1)
@@ -55,136 +51,211 @@ InstanceOf: DeathCertificate
 Usage: #example
 Description: "DeathCertificate-Example1"
 Title: "DeathCertificate Example1"
-* meta.profile = Canonical(DeathCertificate)
-* status = #final
+*  status = #final
 *  type = $loinc#64297-5 "Death certificate"
-*  subject = Reference(Decedent-Example1)
+* insert addReferenceComposition(subject, Patient, Decedent-Example1)
 *  date = "2020-11-15T16:39:54-05:00"
-*  author = Reference(Certifier-Example1)
+* insert addReferenceComposition(author, Practitioner, Certifier-Example1)
 *  title = "Death Certificate"
 *  attester.mode = #legal
 *  attester.time = "2020-11-14T16:39:40-05:00"
-*  attester.party = Reference(Certifier-Example1)
-*  event.detail = Reference(DeathCertification-Example1)
+* insert addReferenceComposition(attester.party, Practitioner, Certifier-Example1)
+* insert addReferenceComposition(event.detail, Procedure, DeathCertification-Example1)
 *  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
 *  extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original
 *  extension[stateSpecificField].valueString = "State Specific Content"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
-*  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
-*  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
-*  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
-*  section[DecedentDemographics].entry[Mother] = Reference(DecedentMother-Example1)
-*  section[DecedentDemographics].entry[Spouse] = Reference(DecedentSpouse-Example1)
-*  section[DecedentDemographics].entry[Age] = Reference(DecedentAge-Example1)
-*  section[DecedentDemographics].entry[BirthRecordID] = Reference(BirthRecordIdentifier-Example1)
-*  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
-*  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
-*  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
-*  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
-*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
+//*  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
+* section[DecedentDemographics]
+  * insert addNamedEntryComposition(Decedent, Patient, Decedent-Example1) 
+  * insert addNamedEntryComposition(Father, RelatedPerson, DecedentFather-Example1) 
+  * insert addNamedEntryComposition(Mother, RelatedPerson, DecedentMother-Example1) 
+  * insert addNamedEntryComposition(Spouse, RelatedPerson, DecedentSpouse-Example1) 
+  * insert addNamedEntryComposition(Age, Observation, DecedentAge-Example1) 
+  * insert addNamedEntryComposition(BirthRecordID, Observation, BirthRecordIdentifier-Example1) 
+  * insert addNamedEntryComposition(EducationLevel, Observation, DecedentEducationLevel-Example1) 
+  * insert addNamedEntryComposition(MilitaryService, Observation, DecedentMilitaryService-Example1) 
+  * insert addNamedEntryComposition(UsualWork, Observation, DecedentUsualWork-Example1) 
+  * insert addNamedEntryComposition(InputRaceAndEthnicity, Observation, InputRaceAndEthnicity-Example1) 
+  * insert addNamedEntryComposition(EmergingIssues, Observation, EmergingIssues-Example1) 
+//*  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
+//*  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
+//*  section[DecedentDemographics].entry[Mother] = Reference(DecedentMother-Example1)
+//*  section[DecedentDemographics].entry[Spouse] = Reference(DecedentSpouse-Example1)
+//*  section[DecedentDemographics].entry[Age] = Reference(DecedentAge-Example1)
+//*  section[DecedentDemographics].entry[BirthRecordID] = Reference(BirthRecordIdentifier-Example1)
+//*  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
+//*  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
+//*  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
+//*  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
+//*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
 // The next line shouldn't be necessary
-*  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
-*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
-*  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)
-*  section[DeathInvestigation].entry[TobaccoUse] = Reference(TobaccoUseContributedToDeath-Example1)
-*  section[DeathInvestigation].entry[Autopsy] = Reference(AutopsyPerformedIndicator-Example1)
+//*  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
+* section[DeathInvestigation]
+  * insert addNamedEntryComposition(ExaminerContacted, Observation, ExaminerContacted-Example1) 
+  * insert addNamedEntryComposition(PregnancyStatus, Observation, DecedentPregnancyStatus-Example1) 
+  * insert addNamedEntryComposition(TobaccoUse, Observation, TobaccoUseContributedToDeath-Example1) 
+  * insert addNamedEntryComposition(Autopsy, Observation, AutopsyPerformedIndicator-Example1) 
+  * insert addNamedEntryComposition(DeathLocation, Location, DeathLocation-Example1) 
+  * insert addNamedEntryComposition(InjuryLocation, Location, InjuryLocation-Example1) 
+  * insert addNamedEntryComposition(InjuryIncident, Observation, InjuryIncident-Example1) 
+  * insert addNamedEntryComposition(DeathDate, Observation, DeathDate-Example1) 
+  * insert addNamedEntryComposition(SurgeryDate, Observation, SurgeryDate-Example1) 
+//*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
+//*  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)
+//*  section[DeathInvestigation].entry[TobaccoUse] = Reference(TobaccoUseContributedToDeath-Example1)
+//*  section[DeathInvestigation].entry[Autopsy] = Reference(AutopsyPerformedIndicator-Example1)
 //*  section[DeathInvestigation].entry[DeathOrInjuryLocation][0] = Reference(DeathLocation-Example1)
 //*  section[DeathInvestigation].entry[DeathOrInjuryLocation][1] = Reference(InjuryLocation-Example1)
-*  section[DeathInvestigation].entry[DeathLocation] = Reference(DeathLocation-Example1)
-*  section[DeathInvestigation].entry[InjuryLocation] = Reference(InjuryLocation-Example1)
-*  section[DeathInvestigation].entry[InjuryIncident] = Reference(InjuryIncident-Example1)
-*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
-*  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
-*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
+//*  section[DeathInvestigation].entry[DeathLocation] = Reference(DeathLocation-Example1)
+//*  section[DeathInvestigation].entry[InjuryLocation] = Reference(InjuryLocation-Example1)
+//*  section[DeathInvestigation].entry[InjuryIncident] = Reference(InjuryIncident-Example1)
+//*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example1)
+//*  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
+//*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
 // The next line shouldn't be necessary
-*  section[DeathCertification].code = DocumentSectionCS#DeathCertification
-*  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
-*  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
-*  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
-*  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
+//*  section[DeathCertification].code = DocumentSectionCS#DeathCertification
+* section[DeathCertification]
+  * insert addNamedEntryComposition(Certifier, Practitioner, Certifier-Example1) 
+  * insert addNamedEntryComposition(DeathCertification, Procedure, DeathCertification-Example1) 
+  * insert addNamedEntryComposition(MannerOfDeath, Observation, MannerOfDeath-Example1) 
+  * insert addNamedEntryComposition(CauseOfDeathPart1, Observation, CauseOfDeathPart1-Example1) 
+  * insert addNamedEntryComposition(CauseOfDeathPart1, Observation, CauseOfDeathPart1-Example2) 
+  * insert addNamedEntryComposition(CauseOfDeathPart2, Observation, CauseOfDeathPart2-Example1) 
+//*  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
+//*  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
+//*  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
+//*  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
 //*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary
-*  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
-*  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
-*  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
-*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)
-*  section[DecedentDisposition].entry[Mortician] = Reference(Mortician-Example1)
+//*  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
+* section[DecedentDisposition]
+  * insert addNamedEntryComposition(DispositionLocation, Location, DispositionLocation-Example1) 
+  * insert addNamedEntryComposition(FuneralHome, Organization, FuneralHome-Example1) 
+  * insert addNamedEntryComposition(DispositionMethod, Observation, DecedentDispositionMethod-Example1) 
+  * insert addNamedEntryComposition(Mortician, Practitioner, Mortician-Example1) 
+//*  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
+//*  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
+//*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)
+//*  section[DecedentDisposition].entry[Mortician] = Reference(Mortician-Example1)
 
 Instance: DeathCertificate-Example2
 InstanceOf: DeathCertificate
 Usage: #example
 Description: "DeathCertificate-Example2 (with coded content)"
 Title: "DeathCertificate Example2"
-* meta.profile = Canonical(DeathCertificate)
 * status = #final
 *  type = $loinc#64297-5 "Death certificate"
-*  subject = Reference(Decedent-Example1)
+* insert addReferenceComposition(subject, Patient, Decedent-Example1)
 *  date = "2020-11-15T16:39:54-05:00"
-*  author = Reference(Certifier-Example1)
+* insert addReferenceComposition(author, Practitioner, Certifier-Example1)
 *  title = "Death Certificate"
 *  attester.mode = #legal
 *  attester.time = "2020-11-14T16:39:40-05:00"
-*  attester.party = Reference(Certifier-Example1)
-*  event.detail = Reference(DeathCertification-Example1)
+* insert addReferenceComposition(attester.party, Practitioner, Certifier-Example1)
+* insert addReferenceComposition(event.detail, Procedure, DeathCertification-Example1)
 *  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
 *  extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original
 *  extension[stateSpecificField].valueString = "State Specific Content"
 // *  section[DecedentDemographics].entry[Decedent].resource = Decedent-Example1
 // The next line shouldn't be necessary
-*  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
-*  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
-*  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
-*  section[DecedentDemographics].entry[Mother] = Reference(DecedentMother-Example1)
-*  section[DecedentDemographics].entry[Spouse] = Reference(DecedentSpouse-Example1)
-*  section[DecedentDemographics].entry[Age] = Reference(DecedentAge-Example1)
-*  section[DecedentDemographics].entry[BirthRecordID] = Reference(BirthRecordIdentifier-Example1)
-*  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
-*  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
-*  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
-*  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
-*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
+//*  section[DecedentDemographics].code = DocumentSectionCS#DecedentDemographics
+* section[DecedentDemographics]
+  * insert addNamedEntryComposition(Decedent, Patient, Decedent-Example1) 
+  * insert addNamedEntryComposition(Father, RelatedPerson, DecedentFather-Example1) 
+  * insert addNamedEntryComposition(Mother, RelatedPerson, DecedentMother-Example1) 
+  * insert addNamedEntryComposition(Spouse, RelatedPerson, DecedentSpouse-Example1) 
+  * insert addNamedEntryComposition(Age, Observation, DecedentAge-Example1) 
+  * insert addNamedEntryComposition(BirthRecordID, Observation, BirthRecordIdentifier-Example1) 
+  * insert addNamedEntryComposition(EducationLevel, Observation, DecedentEducationLevel-Example1) 
+  * insert addNamedEntryComposition(MilitaryService, Observation, DecedentMilitaryService-Example1) 
+  * insert addNamedEntryComposition(UsualWork, Observation, DecedentUsualWork-Example1) 
+  * insert addNamedEntryComposition(InputRaceAndEthnicity, Observation, InputRaceAndEthnicity-Example1) 
+  * insert addNamedEntryComposition(EmergingIssues, Observation, EmergingIssues-Example1) 
+//*  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
+//*  section[DecedentDemographics].entry[Father] = Reference(DecedentFather-Example1)
+//*  section[DecedentDemographics].entry[Mother] = Reference(DecedentMother-Example1)
+//*  section[DecedentDemographics].entry[Spouse] = Reference(DecedentSpouse-Example1)
+//*  section[DecedentDemographics].entry[Age] = Reference(DecedentAge-Example1)
+//*  section[DecedentDemographics].entry[BirthRecordID] = Reference(BirthRecordIdentifier-Example1)
+//*  section[DecedentDemographics].entry[EducationLevel] = Reference(DecedentEducationLevel-Example1)
+//*  section[DecedentDemographics].entry[MilitaryService] = Reference(DecedentMilitaryService-Example1)
+//*  section[DecedentDemographics].entry[UsualWork] = Reference(DecedentUsualWork-Example1)
+//*  section[DecedentDemographics].entry[InputRaceAndEthnicity] = Reference(InputRaceAndEthnicity-Example1)
+//*  section[DecedentDemographics].entry[EmergingIssues] = Reference(EmergingIssues-Example1)
 // The next line shouldn't be necessary
-*  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
-*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
-*  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)
-*  section[DeathInvestigation].entry[TobaccoUse] = Reference(TobaccoUseContributedToDeath-Example1)
-*  section[DeathInvestigation].entry[Autopsy] = Reference(AutopsyPerformedIndicator-Example1)
+//*  section[DeathInvestigation].code = DocumentSectionCS#DeathInvestigation
+* section[DeathInvestigation]
+  * insert addNamedEntryComposition(ExaminerContacted, Observation, ExaminerContacted-Example1) 
+  * insert addNamedEntryComposition(PregnancyStatus, Observation, DecedentPregnancyStatus-Example1) 
+  * insert addNamedEntryComposition(TobaccoUse, Observation, TobaccoUseContributedToDeath-Example1) 
+  * insert addNamedEntryComposition(Autopsy, Observation, AutopsyPerformedIndicator-Example1) 
+  * insert addNamedEntryComposition(DeathLocation, Location, DeathLocation-Example1) 
+  * insert addNamedEntryComposition(InjuryLocation, Location, InjuryLocation-Example1) 
+  * insert addNamedEntryComposition(InjuryIncident, Observation, InjuryIncident-Example2) 
+  * insert addNamedEntryComposition(DeathDate, Observation, DeathDate-Example2) 
+  * insert addNamedEntryComposition(SurgeryDate, Observation, SurgeryDate-Example1) 
+//*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
+//*  section[DeathInvestigation].entry[PregnancyStatus] = Reference(DecedentPregnancyStatus-Example1)
+//*  section[DeathInvestigation].entry[TobaccoUse] = Reference(TobaccoUseContributedToDeath-Example1)
+//*  section[DeathInvestigation].entry[Autopsy] = Reference(AutopsyPerformedIndicator-Example1)
 //*  section[DeathInvestigation].entry[DeathOrInjuryLocation][0] = Reference(DeathLocation-Example1)
 //*  section[DeathInvestigation].entry[DeathOrInjuryLocation][1] = Reference(InjuryLocation-Example1)
-*  section[DeathInvestigation].entry[DeathLocation] = Reference(DeathLocation-Example1)
-*  section[DeathInvestigation].entry[InjuryLocation] = Reference(InjuryLocation-Example1)
-*  section[DeathInvestigation].entry[InjuryIncident] = Reference(InjuryIncident-Example2)
-*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example2)
-*  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
-*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
+//*  section[DeathInvestigation].entry[DeathLocation] = Reference(DeathLocation-Example1)
+//*  section[DeathInvestigation].entry[InjuryLocation] = Reference(InjuryLocation-Example1)
+//*  section[DeathInvestigation].entry[InjuryIncident] = Reference(InjuryIncident-Example2)
+//*  section[DeathInvestigation].entry[DeathDate] = Reference(DeathDate-Example2)
+//*  section[DeathInvestigation].entry[SurgeryDate] = Reference(SurgeryDate-Example1)
+//*  section[DeathInvestigation].entry[ExaminerContacted] = Reference(ExaminerContacted-Example1)
 // The next line shouldn't be necessary
-*  section[DeathCertification].code = DocumentSectionCS#DeathCertification
-*  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
-*  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
-*  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
-*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
-*  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
+//*  section[DeathCertification].code = DocumentSectionCS#DeathCertification
+* section[DeathCertification]
+  * insert addNamedEntryComposition(Certifier, Practitioner, Certifier-Example1) 
+  * insert addNamedEntryComposition(DeathCertification, Procedure, DeathCertification-Example1) 
+  * insert addNamedEntryComposition(MannerOfDeath, Observation, MannerOfDeath-Example1) 
+  * insert addNamedEntryComposition(CauseOfDeathPart1, Observation, CauseOfDeathPart1-Example1) 
+  * insert addNamedEntryComposition(CauseOfDeathPart1, Observation, CauseOfDeathPart1-Example2) 
+  * insert addNamedEntryComposition(CauseOfDeathPart2, Observation, CauseOfDeathPart2-Example1) 
+//*  section[DeathCertification].entry[Certifier] = Reference(Certifier-Example1)
+//*  section[DeathCertification].entry[DeathCertification] = Reference(DeathCertification-Example1)
+//*  section[DeathCertification].entry[MannerOfDeath] = Reference(MannerOfDeath-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPart1][0] = Reference(CauseOfDeathPart1-Example1)
+//*  section[DeathCertification].entry[CauseOfDeathPart1][+] = Reference(CauseOfDeathPart1-Example2)
+//*  section[DeathCertification].entry[CauseOfDeathPart2] = Reference(CauseOfDeathPart2-Example1)
 //*  section[DeathCertification].entry[CauseOfDeathPathway] = Reference(CauseOfDeathPathway-Example1)
 // The next line shouldn't be necessary
-*  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
-*  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
-*  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
-*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)
-*  section[DecedentDisposition].entry[Mortician] = Reference(Mortician-Example1)
+//*  section[DecedentDisposition].code = DocumentSectionCS#DecedentDisposition
+* section[DecedentDisposition]
+  * insert addNamedEntryComposition(DispositionLocation, Location, DispositionLocation-Example1) 
+  * insert addNamedEntryComposition(FuneralHome, Organization, FuneralHome-Example1) 
+  * insert addNamedEntryComposition(DispositionMethod, Observation, DecedentDispositionMethod-Example1) 
+  * insert addNamedEntryComposition(Mortician, Practitioner, Mortician-Example1) 
+//*  section[DecedentDisposition].entry[DispositionLocation] = Reference(DispositionLocation-Example1)
+//*  section[DecedentDisposition].entry[FuneralHome] = Reference(FuneralHome-Example1)
+//*  section[DecedentDisposition].entry[DispositionMethod] = Reference(DecedentDispositionMethod-Example1)
+//*  section[DecedentDisposition].entry[Mortician] = Reference(Mortician-Example1)
 // The next line shouldn't be necessary
-*  section[CodedContent].code = DocumentSectionCS#CodedContent
-*  section[CodedContent].entry[ActivityAtTimeOfDeath] = Reference(ActivityAtTimeOfDeath-Example1)
-*  section[CodedContent].entry[PlaceOfInjury] = Reference(PlaceOfInjury-Example1)
-*  section[CodedContent].entry[CodedRaceAndEthnicity] = Reference(CodedRaceAndEthnicity-Example1)
-*  section[CodedContent].entry[ManualUnderlyingCauseOfDeath] = Reference(ManualUnderlyingCauseOfDeath-Example1)
-*  section[CodedContent].entry[AutomatedUnderlyingCauseOfDeath] = Reference(AutomatedUnderlyingCauseOfDeath-Example1)
-*  section[CodedContent].entry[RecordAxisCauseOfDeath] = Reference(RecordAxisCauseOfDeath-Example1)
-*  section[CodedContent].entry[EntityAxisCauseOfDeath] = Reference(EntityAxisCauseOfDeath-Example1)
-*  section[CodedContent].entry[CodingStatusValues] = Reference(CodingStatusValues-Example1)
+//*  section[CodedContent].code = DocumentSectionCS#CodedContent
+* section[CodedContent]
+  * insert addNamedEntryComposition(ActivityAtTimeOfDeath, Observation, ActivityAtTimeOfDeath-Example1) 
+  * insert addNamedEntryComposition(PlaceOfInjury, Observation, PlaceOfInjury-Example1) 
+  * insert addNamedEntryComposition(CodedRaceAndEthnicity, Observation, CodedRaceAndEthnicity-Example1) 
+  * insert addNamedEntryComposition(ManualUnderlyingCauseOfDeath, Observation, ManualUnderlyingCauseOfDeath-Example1) 
+  * insert addNamedEntryComposition(AutomatedUnderlyingCauseOfDeath, Observation, AutomatedUnderlyingCauseOfDeath-Example1) 
+  * insert addNamedEntryComposition(RecordAxisCauseOfDeath, Observation, RecordAxisCauseOfDeath-Example1) 
+  * insert addNamedEntryComposition(EntityAxisCauseOfDeath, Observation, EntityAxisCauseOfDeath-Example1) 
+  * insert addNamedEntryComposition(CodingStatusValues, Parameters, CodingStatusValues-Example1) 
+//*  section[CodedContent].entry[ActivityAtTimeOfDeath] = Reference(ActivityAtTimeOfDeath-Example1)
+//*  section[CodedContent].entry[PlaceOfInjury] = Reference(PlaceOfInjury-Example1)
+//*  section[CodedContent].entry[CodedRaceAndEthnicity] = Reference(CodedRaceAndEthnicity-Example1)
+//*  section[CodedContent].entry[ManualUnderlyingCauseOfDeath] = Reference(ManualUnderlyingCauseOfDeath-Example1)
+//*  section[CodedContent].entry[AutomatedUnderlyingCauseOfDeath] = Reference(AutomatedUnderlyingCauseOfDeath-Example1)
+//*  section[CodedContent].entry[RecordAxisCauseOfDeath] = Reference(RecordAxisCauseOfDeath-Example1)
+//*  section[CodedContent].entry[EntityAxisCauseOfDeath] = Reference(EntityAxisCauseOfDeath-Example1)
+//*  section[CodedContent].entry[CodingStatusValues] = Reference(CodingStatusValues-Example1)
 
 Instance: DeathCertificateDocument-Example2
 InstanceOf: DeathCertificateDocument
@@ -195,7 +266,7 @@ Description: "DeathCertificateDocument-Example2 (with coded content)"
 * insert Identifiers2020NY000182
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
-* insert addentry(Bundle, DeathCertificate-Example2)
+* insert addentry(Composition, DeathCertificate-Example2)
 * insert addentry(Patient, Decedent-Example1)
 * insert addentry(RelatedPerson, DecedentFather-Example1)
 * insert addentry(RelatedPerson, DecedentMother-Example1)
