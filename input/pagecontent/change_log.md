@@ -1,5 +1,6 @@
-### Post STU2.2 (December 2023 and onward)
+### Post STU3-CIBuild (December 2023 and onward)
 * Clarified description of [BirthRecordIdentifier] that it is only used for infant deaths.
+* Added profiles supporting maternal death reporting requirements to link birth certificate ([BirthRecordIdentifierChild]) or fetal death report ([FetalDeathRecordIdentifier]) associated with maternal death, and added them as optional content in DeathCertificate composition. [FHIR-43626](https://jira.hl7.org/browse/FHIR-43626)
 * Clarified that certificate numbers are 6 digit numbers with leading zeroes allowed.  They are (unfortunately) defined as FHIR strings.
 * Restricted [LocationJurisdictionId] Extension to Address.state context.
 * Added a new bundle for [Coded Industry and Occupation][IndustryOccupationCodedContentBundle] with [example][IndustryOccupationCodedContentBundle-Example1] to address [FHIR-42748](https://jira.hl7.org/browse/FHIR-42748)
