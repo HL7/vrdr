@@ -11,6 +11,9 @@ version: 3.0.0-ci-build
 dependencies:
   hl7.fhir.us.core: 5.0.1
   hl7.fhir.us.odh: 1.2.0
+  hl7.fhir.us.vr-common-library: 
+    version: current 
+    id: hl7fhirusvrcommonlibrary
   us.cdc.phinvads:
     uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads
     version: 0.12.0
@@ -37,105 +40,104 @@ pages:
     title: Download Specification
   change_log.md:
     title: Change Log
+  content-transitions.md:
+    title: Content Transitions 
 menu:
   Home:
     Home: index.html
-    Credits: credits.html
     Background: background.html
     Scope: scope_of_the_vrdr_fhir_ig.html
-    Usage: usage.html
+    Credits: credits.html
+  Implementer Guidance:
+    Usage Notes: usage.html
     Conformance: conformance.html
-  Artifacts:
-    All FHIR Artifacts: artifacts.html
     Death Record Data Dictionary: DeathRecordDataDictionary.html
     Mortality Roster Data Dictionary: MortalityRosterDataDictionary.html
     IJE Mapping to FHIR (xlsx): IJE_File_Layouts_Version_2021_FHIR.xlsx
-  More:
-    Download Specification: downloads.html
-    Changes Made: change_log.html
-    Other Versions: https://hl7.org/fhir/us/vrdr/history.html
+  Artifacts: artifacts.html
+  Changes:
+    Change Log: change_log.html
+    STU2.2 to STU3 Changes: content-transitions.html
+  Downloads: downloads.html
 
 groups:
   DecedentDemographics:
     name: A. Decedent Demographics
     description: Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level and usual occupation. The information in this profile group are provided by a decedent informant.
     resources:
-    - StructureDefinition/vrdr-birth-record-identifier
-    - StructureDefinition/vrdr-decedent
-    - StructureDefinition/vrdr-decedent-age
-    - StructureDefinition/vrdr-decedent-education-level
-    - StructureDefinition/vrdr-decedent-mother
-    - StructureDefinition/vrdr-decedent-father
-    - StructureDefinition/vrdr-decedent-spouse
-    - StructureDefinition/vrdr-decedent-usual-work
-    - StructureDefinition/vrdr-decedent-military-service
-    - StructureDefinition/vrdr-input-race-and-ethnicity
-    - StructureDefinition/vrdr-emerging-issues
+    - BirthRecordIdentifier
+    - Decedent
+    - DecedentAge
+    - DecedentEducationLevel
+    - DecedentMother
+    - DecedentFather
+    - DecedentSpouse
+    # - StructureDefinition/vrdr-decedent-usual-work
+    - DecedentMilitaryService
+    # - StructureDefinition/vrdr-input-race-and-ethnicity
+    # - StructureDefinition/vrdr-emerging-issues
   DeathInvestigation:
     name: B. Death Investigation
     description: Data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopsy was performed, an injury incident occurred, or a transportation event was involved. The details on the pronouncement performer can be provided using USCore Practitioner profile.
     resources:
-    - StructureDefinition/vrdr-autopsy-performed-indicator
-    - StructureDefinition/vrdr-examiner-contacted
-    - StructureDefinition/vrdr-death-date
-    - StructureDefinition/vrdr-decedent-pregnancy-status
-    - StructureDefinition/vrdr-death-location
-    - StructureDefinition/vrdr-injury-location
-    - StructureDefinition/vrdr-injury-incident
-    - StructureDefinition/vrdr-surgery-date
-    - StructureDefinition/vrdr-tobacco-use-contributed-to-death
+    - AutopsyPerformedIndicator
+    - ExaminerContacted
+    - DeathDate 
+    - DecedentPregnancyStatus
+    - DeathLocation
+    - InjuryLocation
+    - InjuryIncident 
+    - SurgeryDate
+    - TobaccoUseContributedToDeath 
   DeathCertification:
     name: C. Death Certification
     description: Data related to the primary concern of the VRDR IG, Death Certification. In this group, the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).
     resources:
-    - StructureDefinition/vrdr-certifier
-    - StructureDefinition/vrdr-cause-of-death-part1
-    - StructureDefinition/vrdr-cause-of-death-part2
-    - StructureDefinition/vrdr-death-certification
-    - StructureDefinition/vrdr-manner-of-death
+    - Certifier
+    - CauseOfDeathPart1
+    - CauseOfDeathPart2
+    - DeathCertification 
+    - MannerOfDeath 
   DecedentDisposition:
     name: D. Decedent Disposition
     description: Data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director. Additional content can be included using standard USCore profiles, and can be included to specify the Funeral Home Director, the Licensee, and the Mortician.
     resources:
-    - StructureDefinition/vrdr-disposition-location
-    - StructureDefinition/vrdr-decedent-disposition-method
-    - StructureDefinition/vrdr-funeral-home
+    - DispositionLocation
+    - DecedentDispositionMethod
+    - FuneralHome
   CodedObservations:
     name: E. Coded Observations
     description: Coded Observations based on the submitted death record.
     resources:
-    - StructureDefinition/vrdr-activity-at-time-of-death
-    - StructureDefinition/vrdr-automated-underlying-cause-of-death
-    - StructureDefinition/vrdr-manual-underlying-cause-of-death
-    - StructureDefinition/vrdr-record-axis-cause-of-death
-    - StructureDefinition/vrdr-entity-axis-cause-of-death
-    - StructureDefinition/vrdr-place-of-injury
-    - StructureDefinition/vrdr-coded-race-and-ethnicity
-    - StructureDefinition/vrdr-coding-status-values
+    - ActivityAtTimeOfDeath
+    - AutomatedUnderlyingCauseOfDeath
+    - ManualUnderlyingCauseOfDeath
+    - RecordAxisCauseOfDeath
+    - EntityAxisCauseOfDeath
+    - PlaceOfInjury
+    # - StructureDefinition/vrdr-coded-race-and-ethnicity
+    - CodingStatusValues
   DocumentsAndBundles:
     name: F. Documents and Bundles
     description: Documents and Bundles used to transmit death record content.
     resources:
-    - StructureDefinition/vrdr-cause-of-death-coded-bundle
-    - StructureDefinition/vrdr-demographic-coded-bundle
-    - StructureDefinition/vrdr-death-certificate
-    - StructureDefinition/vrdr-death-certificate-document
-    - StructureDefinition/vrdr-mortality-roster-bundle
-    - StructureDefinition/vrdr-industry-occupation-coded-bundle
+    - CauseOfDeathCodedContentBundle
+    - DemographicCodedContentBundle
+    - DeathCertificate
+    - DeathCertificateDocument 
+    - MortalityRosterBundle
+    # - StructureDefinition/vrdr-industry-occupation-coded-bundle
   ExampleBundles:
     name: Example Bundles
     description: Example Death Certificate, Coded Content, and Mortality Roster Bundles
     resources:
-    - DeathCertificateDocument-Example1
-    - DeathCertificateDocument-Example2
-    - DeathCertificateDocument-ID-1
-    - DeathCertificateDocument-ID-5
-    - DeathCertificateDocument-NJ-1
     - DeathCertificateDocument-UT-1
+    - DeathCertificateUT-Example1
+    - DeathCertification-Example1
+    - DeathCertification-Example2
     - CauseOfDeathCodedContentBundle-Example1
     - DemographicCodedContentBundle-Example1
-    - IndustryOccupationCodedContentBundle-Example1
-    - MortalityRosterBundle-Example1
+    # - MortalityRosterBundle-Example1
 copyrightYear: 2022+
 publisher:
   name: HL7 International / Public Health
