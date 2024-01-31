@@ -1,11 +1,70 @@
-### Usage
 Implementors are free to use the name field for the name of the disposition location.
+### IJE Mapping
 
-| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 202 | State, U.S. Territory or Canadian Province of Disposition - code | DISPSTATECD| x|address.state | string | [StatesTerritoriesProvincesVS] | 
-| 203 | Disposition State or Territory - Literal | DISPSTATE| x|address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
-| 204 | Disposition City - Code | DISPCITYCODE| x|address.city.extension[ cityCode].value | integer | see [CityCodes] | 
-| 205 | Disposition City - Literal | DISPCITY| x|address.city | string | - | 
-{: .grid }
-{% include markdown-link-references.md %}
+<style>
+ .context-menu {cursor: context-menu; color: #438bca;}
+ .context-menu:hover {opacity: 0.5;}
+</style>
+<details open>
+
+<summary>
+
+<strong class='context-menu'> Mortality (Decedent) </strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Use Case</strong></th>
+    <th><strong>#</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>IJE Name</strong></th>
+    <th><strong>Field</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>Value Set/Comments</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>202</td>
+  <td>State, U.S. Territory or Canadian Province of Disposition - code</td>
+  <td>DISPSTATECD</td>
+  <td>address.state</td>
+  <td>string</td>
+  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>203</td>
+  <td>Disposition State or Territory - Literal</td>
+  <td>DISPSTATE</td>
+  <td>address.state (expanded from 2 letter code)</td>
+  <td>string</td>
+  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>204</td>
+  <td>Disposition City - Code</td>
+  <td>DISPCITYCODE</td>
+  <td>address.city.extension[ cityCode].value</td>
+  <td>integer</td>
+  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>205</td>
+  <td>Disposition City - Literal</td>
+  <td>DISPCITY</td>
+  <td>address.city</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+<p></p>
+

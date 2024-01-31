@@ -33,17 +33,6 @@ RuleSet: BundleSlice(name, min, max, short, def, class)
 * entry[{name}].resource only {class}
 //* entry[{name}].resource.meta.profile = Canonical({class})
 
-RuleSet: BundleSlicingByProfile
-* entry.resource 1..1 // each entry must have a resource
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile"
-
-RuleSet: WGExtension
-* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension.valueCode = #pher
-
 RuleSet: RequireMetaProfile(profile)
 // * meta 1..1
 // * meta.profile 1..*
@@ -54,9 +43,8 @@ RuleSet: RequireMetaProfile(profile)
 // * meta.profile ^slicing.description = "Slice based on value"
 // * meta.profile contains supportedProfile 1..1
 // * meta.profile[supportedProfile] = Canonical({profile})
-// this now just inserts this useless extension that is required by publisher
-* insert WGExtension 
-// * hello
+// this now does nothing
+* hello
 
 RuleSet: AddMetaProfile(profile)
 //* meta.profile = Canonical({profile})
@@ -72,10 +60,6 @@ RuleSet: LOINCCopyright
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
-
-RuleSet: ExtensionContextResource(path)
-* insert ExtensionContext({path})
-//* insert ExtensionContext({path}.Extension)
 
 RuleSet: ParameterSlicing
 * parameter ^slicing.discriminator.type = #value
@@ -116,7 +100,7 @@ RuleSet: primobscodecomponent(code, type)
 * component[{code}] ^short = "{code}"
 
 RuleSet: NCHSObservationCommon
-* subject only Reference(Decedent)
+* subject only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * subject ^short = "Decedent"
 // * effective[x] 1..1
 * effective[x] only dateTime
