@@ -31,17 +31,18 @@ Description: "The Observation - Cause of Death Part 1 profile reflects the order
 * component ^slicing.rules = #open
 * component contains
     lineNumber 1..1 and
-    interval 0..1   // no point in having a Part1 COD without the cause (value), but possible to have one with no interval
+    interval 1..1   // require the interval for MDI, but add an optional data absent reason
 * component[interval]
   * ^short = "Cause of Death Part 1 Interval, Line a,b,c,d"
   * code 1..1
   * code = $loinc#69440-6 // "Disease onset to death interval"
   * value[x] 1..1
-  * value[x] only string or Quantity
+  * value[x] only string or Quantity or CodeableConcept
   * valueString ^short = "Interval - string description"
   * valueString ^maxLength = 20
   * valueQuantity.code from ValueSetUnitsOfAgeVitalRecords (required)
   * valueQuantity ^short = "Interval - quantity with units of time"
+  * valueCodeableConcept ^short = "Interval Unknown"
 * component[lineNumber]
   * ^short = "lineNumber"
   * code 1..1
