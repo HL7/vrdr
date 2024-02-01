@@ -1,0 +1,193 @@
+﻿Order,Heading,Profile Name Condensed,Profile Name,Profile Usage,Form Mappng,IJE Mapping,Profile Location
+1,Input,AutopsyPerformedIndicator,vrdr-autopsy-performed-indicator,The Autopsy Performed Indicator profile captures the following values:,x,x,VRDR
+2,Input,BirthRecordIdentifier,vrdr-birth-record-identifier,The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record. It is relevant only in the case where the birth took place in a recognized jurisdiction.,,x,VRDR
+3,Input,CauseOfDeathPart1,vrdr-cause-of-death-part1,The [Certifier] is optionally referenced from this profile (performer).,x,x,VRDR
+4,Input,CauseOfDeathPart2,vrdr-cause-of-death-part2,The [Certifier] is optionally referenced from this profile (performer).,x,x,VRDR
+5,Input,Certifier,vrdr-certifier,"Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
+The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
+an identifier.",x,x,VRDR
+6,Input,DeathCertificate,vrdr-death-certificate,"The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
+
+Notes:
+* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+
+Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
+Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+For example:
+* Funeral Home Licensee (USCorePractitionerRole)
+* Mortician (USCorePractitioner)
+* Funeral Home Director (USCorePractitionerRole)
+* Death Pronouncement Performer (USCorePractitioner)
+
+The content is broken down into the following sections:
+* Decedent Demographics
+    * [BirthRecordIdentifier]
+    * [Decedent]
+    * [DecedentAge]
+    * [DecedentEducationLevel]
+    * [DecedentFather]
+    * [DecedentMilitaryService]
+    * [EmergingIssues]
+    * [DecedentMother]
+    * [DecedentSpouse]
+    * [DecedentUsualWork]
+* Death Investigation
+    * [AutopsyPerformedIndicator]
+    * [DeathDate]
+    * [DeathLocation]
+    * [DecedentPregnancyStatus]
+    * [ExaminerContacted]
+    * [InjuryIncident]
+    * [InjuryLocation]
+    * [SurgeryDate]
+    * [TobaccoUseContributedToDeath]
+* Death Certification
+    * [Certifier]
+    * [DeathCertification]
+    * [CauseOfDeathPart1]
+    * [CauseOfDeathPart2]
+    * [MannerOfDeath]
+* Decedent Disposition
+    * [DecedentDispositionMethod]
+    * [DispositionLocation]
+    * [FuneralHome]
+* Coded Content
+    * [ActivityAtTimeOfDeath]
+    * [AutomatedUnderlyingCauseOfDeath]
+    * [ManualUnderlyingCauseOfDeath]
+    * [CodedRaceAndEthnicity]
+    * [EntityAxisCauseOfDeath]
+    * [RecordAxisCauseOfDeath]
+    * [PlaceOfInjury]
+    * [CodingStatusValues]
+
+**Note:**
+For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
+The replacement status of a submission is now specified as a message parameter and described in the [NCHS Vital Records Messaging IG].
+
+The profile includes:",x,x,VRDR
+7,Input,DeathCertificateDocument,vrdr-death-certificate-document,"The Death Certificate is a Bundle document that contains the [DeathCertificate] Composition and the other instances comprising the content of the death record.
+
+  Notes:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+  * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+  * The unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
+
+In addition to  the [DeathCertificate] Composition it includes the following content:",,x,VRDR
+8,Input,DeathDate,vrdr-death-date,"The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
+
+  The certificate signing date is passed via the [DeathCertification] profile.
+
+  The death date specifies the date the death occurred, not the date the record was submitted.
+
+  The pronouncer of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument] and referenced from the [DeathCertificate].
+
+  The method of date of death determination is not used for the Death Record submission process, and thus does not appear in the table below.  The binding
+  to [DateOfDeathDeterminationMethodsVS] is included for compatibility with the Medicolegal Death Investigation ([MDI]) Implementation Guide.  The valueset only
+includes the values used by MDI, but is bound [extensibly](http://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires additional values (e.g., 'presumed'), these values can be used
+while remaining in full conformance with the VRDR IG.",x,x,VRDR
+9,Input,DeathCertification,vrdr-death-certification,"
+  Note:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
+  but is not required by the death record submission use case.
+
+  The Death Certification profile includes:",x,x,VRDR
+10,Input,DeathLocation,vrdr-death-location,,x,x,VRDR
+11,Input,Decedent,vrdr-decedent,"The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
+
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.
+  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
+  due to lack of a value for gender.",x,x,VRDR
+12,Input,DecedentAge,vrdr-decedent-age,"The DecedentAge profile of Observation records the decedents age at time of death.
+
+  Notes:
+  * When present, the effective date of this observation shall be equal to the decedent's date of death.
+  * Age is derived as the difference in time between the decedent's death date and birth date.  Age is an integer value, reported in the largest appropriate unit.
+  An age of 1 year and 1 month should be reported as 1 year, not 13 months, or 1.083 years.  Although the FHIR quantity provides a decimal value, only the integer component
+  of the value will be used by NCHS.
+  * The appropriate units for age are defined here:
+
+  |  Age Range  | Units |
+  |:---:|:---:|
+  | age < 1 hr | minutes |
+  | 1 hr &le; age < 24 hours | hours |
+  | 1 day &le; age < 28 days (1 \""month\"") | days |
+  | 1 month &le;  age  < 12 months | months |
+  | 1 year &le; age &le; 135 | years|
+  | age unknown | unknown |
+  {: .grid }
+
+  The Decedent Age profile includes:",x,x,VRDR
+13,Input,DecedentDispositionMethod,vrdr-decedent-disposition-method,,x,x,VRDR
+14,Input,DecedentEducationLevel,vrdr-decedent-education-level,,x,x,VRDR
+15,Input,DecedentFather,vrdr-decedent-father,,x,x,VRDR
+16,Input,DecedentMilitaryService,vrdr-decedent-military-service,,x,x,VRDR
+17,Input,DecedentMother,vrdr-decedent-mother,,x,x,VRDR
+18,Input,DecedentSpouse,vrdr-decedent-spouse,,x,x,VRDR
+19,Input,DecedentPregnancyStatus,vrdr-decedent-pregnancy-status,,x,x,VRDR
+20,Input,DecedentUsualWork,vrdr-decedent-usual-work,"Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange,
+  but coded values are not expected for death certificate submission. The underlying profile requires coded
+  values for validity, so a null flavor value can be used as in Example1. Similarly the effective period is required,
+  and null flavor values can be substituted.  These constraints are expected to be relaxed in the ODH Usual Work profile prior
+  to VRDR publication.
+
+  Note that the coded industry and occupation fields are bound to PHINVADs-hosted value sets.  These are the only PHINVADs
+  references in this IG.  For NCHS provided coded values the specific vocabulary used will depend on the death year.",,x,VRDR
+21,Input,DispositionLocation,vrdr-disposition-location,Implementors are free to use the name field for the name of the disposition location.,x,x,VRDR
+22,Input,ObservationEmergingIssuesVitalRecords,Observation-emerging-issues-vr,"EmergingIssues profile supports placeholder fields required for 2022 submissions to NCHS.
+                For documentation on their use see referenceTBD.
+                There are 6 1-char fields (PLACE1_1-6), 3 8-char fields (PLACE8_1-3), and one 20-char field (PLACE20-1).",,x,VRCPL
+23,Input,ExaminerContacted,vrdr-examiner-contacted,,x,x,VRDR
+24,Input,FuneralHome,vrdr-funeral-home,,x,x,VRDR
+25,Input,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
+26,Input,InjuryLocation,vrdr-injury-location,,x,x,VRDR
+27,Input,InputRaceAndEthnicity,vrdr-input-race-and-ethnicity,,,x,VRDR
+28,Input,MannerOfDeath,vrdr-manner-of-death,A reference to the [Certifier] may be provided through the performer field.,x,x,VRDR
+29,Input,SurgeryDate,vrdr-surgery-date,,,x,VRDR
+30,Input,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
+31,Coding,ActivityAtTimeOfDeath,vrdr-activity-at-time-of-death,,,x,VRDR
+32,Coding,AutomatedUnderlyingCauseOfDeath,vrdr-automated-underlying-cause-of-death,,,x,VRDR
+33,Coding,ManualUnderlyingCauseOfDeath,vrdr-manual-underlying-cause-of-death,,,x,VRDR
+34,Coding,RecordAxisCauseOfDeath,vrdr-record-axis-cause-of-death,"
+   Additional information on Record Axis Cause of death can be found in the case of multiple causes of death can be found in this CDC [publication](https://www.cdc.gov/nchs/data/dvs/Multiple-Cause-Record-Layout-2020.pdf)
+.  Previously a subset of records classified to ICD-10 CHAPTER XV - Pregnancy, childbirth and the puerperium (O00-O99) were flagged by the presence of a '1' in the 5th position of the 2nd condition (position = 2).
+These are instances where a decedent < 45 years of age has been classified as a maternal
+death using input from the information entered in the [DecedentPregnancyStatus], and the 2nd condition represents the cause of death
+to which the given record would be classified had the causes of death been processed without [National Vital Statistics Reports Volume 69, Number 2 January, 2020 (cdc.gov)](https://www.cdc.gov/nchs/data/nvsr/nvsr69/nvsr69-02-508.pdf).
+
+
+In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
+* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)",,x,VRDR
+35,Coding,EntityAxisCauseOfDeath,vrdr-entity-axis-cause-of-death,,,x,VRDR
+36,Coding,PlaceOfInjury,vrdr-place-of-injury,,,x,VRDR
+37,Coding,CodedRaceAndEthnicity,vrdr-coded-race-and-ethnicity,,,x,VRDR
+38,Coding,CodingStatusValues,vrdr-coding-status-values,,,x,VRDR
+39,Coding,CauseOfDeathCodedContentBundle,vrdr-cause-of-death-coded-content-bundle,"This bundle is information-content equivalent to the traditional NCHS TRX format.
+
+  This bundle contains:
+  * Coded Content:
+    * Activity at Time of Death [ActivityAtTimeOfDeath]
+    * Underlying Cause of Death -- [AutomatedUnderlyingCauseOfDeath] and [ManualUnderlyingCauseOfDeath]
+    * Entity Axis Cause of Death [EntityAxisCauseOfDeath]
+    * Record Axis Cause of Death [RecordAxisCauseOfDeath]
+    * Place of Injury [PlaceOfInjury]
+    * Coding Status Values [CodingStatusValues] - various flags that are part of the TRX format
+  * Input Content:
+    * Cause of Death Part 1 - [CauseOfDeathPart1]
+    * Cause of Death Part 2 - [CauseOfDeathPart2]
+    * Manner of Death - [MannerOfDeath]
+    * Autopsy Performed Indicator - [AutopsyPerformedIndicator]
+    * Death Certification - [DeathCertification]
+    * Injury Incident - [InjuryIncident]
+    * Tobacco Use Contributed to Death - [TobaccoUseContributedToDeath]
+    * Decedent Pregnancy Status - [DecedentPregnancyStatus]
+    * Surgery Date - [SurgeryDate]",,x,VRDR
+40,Coding,DemographicCodedContentBundle,vrdr-demographic-coded-content-bundle,"  This bundle is information-content equivalent to the traditional NCHS MRE format.
+
+  This bundle contains:
+  * Coded Content:
+    * Coded Race and Ethnicity [CodedRaceAndEthnicity]
+  * Input Content:
+    * Input Race and Ethnicity - [InputRaceAndEthnicity]",,x,VRDR
+41,Not Implemented,not implemented,,,,,VRDR

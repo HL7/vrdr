@@ -10,6 +10,7 @@ The profile includes a component for the time of death pronouncement that is not
   to <a href='ValueSet-vrdr-date-of-death-determination-methods-vs.html'>DateOfDeathDeterminationMethodsVS</a> is included for compatibility with the Medicolegal Death Investigation (<a href='https://hl7.org/fhir/us/mdi/'>MDI</a>) Implementation Guide.  The valueset only
 includes the values used by MDI, but is bound [extensibly](http://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires additional values (e.g., 'presumed'), these values can be used
 while remaining in full conformance with the VRDR IG.
+
 ### IJE Mapping
 
 <style>
@@ -160,3 +161,60 @@ while remaining in full conformance with the VRDR IG.
 </details>
 <p></p>
 
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>14</td>
+  <td>Place of Death</td>
+  <td>component[placeOfDeath].value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>24</td>
+  <td>Date Pronounced Dead</td>
+  <td>component[datetimePronouncedDead ].valueDateTime</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>25</td>
+  <td>Time Pronounced Dead</td>
+  <td>component[datetimePronouncedDead ].valueDateTime</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>28</td>
+  <td>Date signed</td>
+  <td>effective</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>29</td>
+  <td>Actual or Presumed Date of Death</td>
+  <td>value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>30</td>
+  <td>Actual or Presumed Time of Death</td>
+  <td>value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

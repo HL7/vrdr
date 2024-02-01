@@ -1,6 +1,7 @@
 Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
 The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
 an identifier.
+
 ### IJE Mapping
 
 <style>
@@ -169,3 +170,42 @@ an identifier.
 </details>
 <p></p>
 
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>46</td>
+  <td>Name, Address, and Zip Code of Person Completing Cause of Death</td>
+  <td>name, address</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>47</td>
+  <td>Title of Certifier</td>
+  <td>qualification</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>48</td>
+  <td>License Number</td>
+  <td>identifier:NPI</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

@@ -15,4 +15,4 @@ Usage: #example
 //   * family = "Jones"
 //   * given = "Avery"
 //   * suffix = "M.D."
-* qualification.code = $sct#76231001 "Osteopath (occupation)"
+* qualification.code = $sct#76231001 "Osteopath"

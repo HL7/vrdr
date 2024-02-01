@@ -5,6 +5,7 @@
   but is not required by the death record submission use case.
 
   The Death Certification profile includes:
+
 ### IJE Mapping
 
 <style>
@@ -56,3 +57,36 @@
 </details>
 <p></p>
 
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>45</td>
+  <td>Certifier</td>
+  <td>performer.function</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>49</td>
+  <td>Date Certified</td>
+  <td>performed</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

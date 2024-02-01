@@ -1,3 +1,4 @@
+
 ### IJE Mapping
 
 <style>
@@ -112,3 +113,59 @@
 </details>
 <p></p>
 
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>38</td>
+  <td>Date of Injury</td>
+  <td>effective</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>39</td>
+  <td>Time of Injury</td>
+  <td>effective</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>40</td>
+  <td>Place of Injury</td>
+  <td>component[ placeOfInjury ].value.text</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>41</td>
+  <td>Injury at Work?</td>
+  <td>component[InjuryAtWork].value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>43</td>
+  <td>Describe How Injury Occurred</td>
+  <td>value.text</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>44</td>
+  <td>If Transportation Injury, Specify</td>
+  <td>component[ transportationRole ].value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

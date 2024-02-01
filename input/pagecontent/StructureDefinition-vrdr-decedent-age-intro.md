@@ -18,6 +18,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   {: .grid }
 
   The Decedent Age profile includes:
+
 ### IJE Mapping
 
 <style>
@@ -78,3 +79,42 @@ The DecedentAge profile of Observation records the decedents age at time of deat
 </details>
 <p></p>
 
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>4a</td>
+  <td>Age</td>
+  <td>value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>4b</td>
+  <td>Under 1 Year</td>
+  <td>value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>4c</td>
+  <td>Under 1 Day</td>
+  <td>value</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

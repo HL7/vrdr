@@ -1,4 +1,5 @@
 The <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> is optionally referenced from this profile (performer).
+
 ### IJE Mapping
 
 <style>
@@ -41,3 +42,30 @@ The <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> is optionall
 </details>
 <p></p>
 
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>32Part2</td>
+  <td>Other Cause of Death</td>
+  <td>value.text</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>
