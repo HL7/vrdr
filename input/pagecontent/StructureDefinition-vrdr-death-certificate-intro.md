@@ -19,7 +19,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
     * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
     * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
-    * <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
+    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
     * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
     * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
     * [ObservationUsualWorkVitalRecords]
@@ -47,7 +47,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
     * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
-    * <a href='StructureDefinition-vrdr-coded-race-and-ethnicity.html'>CodedRaceAndEthnicity</a>
+    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
     * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>

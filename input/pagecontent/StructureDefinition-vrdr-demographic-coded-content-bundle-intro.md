@@ -2,9 +2,9 @@
 
   This bundle contains:
   * Coded Content:
-    * Coded Race and Ethnicity - <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
+    * Coded Race and Ethnicity - <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
   * Input Content:
-    * Input Race and Ethnicity - <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a>
+    * Input Race and Ethnicity - <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a>
 ### IJE Mapping
 
 <style>

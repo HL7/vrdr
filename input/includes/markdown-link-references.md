@@ -6,7 +6,7 @@
 [NCHS Vital Records Messaging IG]: https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content
 [Vital Records Common Library IG]: https://hl7.org/fhir/us/vr-common-library/
 <!-- USCORE -->
-[USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
+[USCoreBirthSex]: https://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 [MortalityRosterDataDictionary]: MortalityRosterDataDictionary.html
@@ -19,9 +19,9 @@
 [PlaceOfDeathCM]: ConceptMap-place-of-death.html
 [BypassEditFlagVS]: StructureDefinition-BypassEditFlag.html
 [DataAbsentReason]: StructureDefinition-Date-Absent-Reason.html
-[DateDay]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Day.html
-[DateMonth]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Month.html
-[DateYear]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Year.html
+[DateDay]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Day.html
+[DateMonth]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Month.html
+[DateYear]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Year.html
 [NVSSEthnicity]: StructureDefinition-NVSS-Ethnicity.html
 [NVSSRace]: StructureDefinition-NVSS-Race.html
 [AutopsyPerformedIndicator]: StructureDefinition-vrdr-autopsy-performed-indicator.html
@@ -57,8 +57,8 @@
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
-[PartialDate]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDate.html
-[PartialDateTime]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDateTime.html
+[PartialDate]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDate.html
+[PartialDateTime]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDateTime.html
 [SurgeryDate]: StructureDefinition-vrdr-surgery-date.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
 [WithinCityLimits]: StructureDefinition-vrdr-within-city-limits-indicator.html
@@ -150,13 +150,13 @@
 [ValueSetYesNoUnknownVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-vr.html
 [alueSetJurisdictionVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html
 [ValueSetStatesTerritoriesAndProvincesVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html
-[ObservationEmergingIssuesVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html
+[ObservationEmergingIssuesVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html
 [ValueSetJurisdictionVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html
 [ValueSetResidenceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html
 [ValueSetUnitsOfAgeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-units-of-age-vr.html
 [ValueSetEducationLevelVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-education-level-vr.html
-[ValueSetEditBypass01234VitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html
+[ValueSetEditBypass01234VitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html
 [ValueSetBirthplaceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html
 [ValueSetMaritalStatusVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html
-[ObservationCodedRaceAndEthnicityVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
-[ObservationInputRaceAndEthnicityVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html
+[ObservationCodedRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
+[ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html
