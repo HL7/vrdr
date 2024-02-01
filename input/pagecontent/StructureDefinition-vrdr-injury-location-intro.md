@@ -39,7 +39,7 @@
   <td>177</td>
   <td>County of Injury code</td>
   <td>COUNTYCODE_I</td>
-  <td>address.district.extension[ districtCode].value</td>
+  <td>address.district.extension[districtCode].value</td>
   <td>integer</td>
   <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
 </tr>
@@ -57,7 +57,7 @@
   <td>179</td>
   <td>Town/city of Injury code</td>
   <td>CITYCODE_I</td>
-  <td>address.city.extension[ cityCode].value</td>
+  <td>address.city.extension[cityCode].value</td>
   <td>integer</td>
   <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
 </tr>

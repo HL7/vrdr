@@ -49,7 +49,7 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
   <td>3</td>
   <td>Certificate Number</td>
   <td>FILENO</td>
-  <td>identifier.extension[ certificateNumber].value</td>
+  <td>identifier.extension[certificateNumber].value</td>
   <td>string(6)</td>
   <td>-</td>
 </tr>
@@ -58,7 +58,7 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
   <td>5</td>
   <td>Auxiliary State file number</td>
   <td>AUXNO</td>
-  <td>identifier.extension[ auxiliaryStateIdentifier1 ].value</td>
+  <td>identifier.extension[auxiliaryStateIdentifier1].value</td>
   <td>string(12)</td>
   <td>-</td>
 </tr>
@@ -67,7 +67,7 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
   <td>121</td>
   <td>Auxiliary State file number</td>
   <td>AUXNO2</td>
-  <td>identifier.extension[ auxiliaryStateIdentifier2 ].value</td>
+  <td>identifier.extension[auxiliaryStateIdentifier2].value</td>
   <td>string(12)</td>
   <td>-</td>
 </tr>

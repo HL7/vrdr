@@ -1,10 +1,3 @@
-<!-- Temporary changes to fix formatting for changelog -->
-<style>
-  ul.new-content {
-    padding-left: 25px !important;
-  }
-</style>
-
 <!-- MISC -->
 [MITRE]: https://www.mitre.org/
 [Georgia Institute of Technology (GTRI)]: https://www.gatech.edu/
@@ -12,14 +5,11 @@
 [MDI]: https://hl7.org/fhir/us/mdi/
 [NCHS Vital Records Messaging IG]: https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content
 [Vital Records Common Library IG]: https://hl7.org/fhir/us/vr-common-library/
-
 <!-- USCORE -->
 [USCoreBirthSex]: http://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
-
 [MortalityRosterDataDictionary]: MortalityRosterDataDictionary.html
-
 <!-- From the VRDR IG -->
 [BypassEditFlagCS]: CodeSystem-vrdr-bypass-edit-flag-cs.html
 [DocumentSectionCS]: CodeSystem-vrdr-document-section-cs.html
@@ -99,8 +89,6 @@
 [PHVS_Industry_CDC_Census2012VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8027
 [PHVS_Occupation_CDC_Census2018VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8065
 [PHVS_Industry_CDC_Census2018VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8066
-
-
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
 [FilingFormatVS]: ValueSet-vrdr-filing-format-vs.html
 [Artifacts]: artifacts.html
@@ -137,25 +125,38 @@
 [StateSpecificField]: StructureDefinition-StateSpecificField.html
 [NVSSSexAtDeath]: StructureDefinition-NVSS-SexAtDeath.html
 [SpouseAlive]: StructureDefinition-SpouseAlive.html
-
-
 <!-- Moved to VRCL IG -->
-<!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html -->
-<!-- [DistrictCode]: StructureDefinition-DistrictCode.html -->
-<!-- [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html -->
-<!-- [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html -->
-<!-- [EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html -->
-<!-- [DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html -->
-<!-- [InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
-[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html -->
-<!-- [HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html -->
-<!-- [RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html -->
-<!-- [EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html -->
-<!-- [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html -->
-<!-- [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html -->
-<!-- [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html -->
-<!-- [StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html -->
-<!-- [JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html -->
-<!-- [LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html -->
-<!-- [CityCode]: StructureDefinition-CityCode.html -->
-<!-- [CountryCS]: CodeSystem-vrdr-country-code-cs.html -->
+<!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html
+[DistrictCode]: StructureDefinition-DistrictCode.html
+[ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
+[BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
+[EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html
+[DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
+[InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
+[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
+[HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html
+[RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html
+[EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html
+[RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
+[RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
+[HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
+[StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html
+[JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
+[LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html
+[CityCode]: StructureDefinition-CityCode.html
+[CountryCS]: CodeSystem-vrdr-country-code-cs.html -->
+<!-- VRCL IG links -->
+[ValueSetYesNoUnknownNotApplicableVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-not-applicable-vr.html
+[ValueSetYesNoUnknownVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-vr.html
+[alueSetJurisdictionVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html
+[ValueSetStatesTerritoriesAndProvincesVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html
+[ObservationEmergingIssuesVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html
+[ValueSetJurisdictionVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html
+[ValueSetResidenceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html
+[ValueSetUnitsOfAgeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-units-of-age-vr.html
+[ValueSetEducationLevelVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-education-level-vr.html
+[ValueSetEditBypass01234VitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html
+[ValueSetBirthplaceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html
+[ValueSetMaritalStatusVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html
+[ObservationCodedRaceAndEthnicityVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
+[ObservationInputRaceAndEthnicityVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html

@@ -41,7 +41,7 @@
   <td>DEDUC_BYPASS</td>
   <td>value.extension[ByPassEdit].value</td>
   <td>codeable</td>
-  <td>[ValueSetEditBypass01234VitalRecords]</td>
+  <td><a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html'>ValueSetEditBypass01234VitalRecords</a></td>
 </tr>
 
 </tbody>

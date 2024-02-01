@@ -87,7 +87,7 @@ while remaining in full conformance with the VRDR IG.
   <td>218</td>
   <td>Person Pronouncing Date Signed</td>
   <td>PPDATESIGNED</td>
-  <td>component[datetimePronouncedDead ].valueDateTime</td>
+  <td>component[datetimePronouncedDead].valueDateTime</td>
   <td>dateTime</td>
   <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>

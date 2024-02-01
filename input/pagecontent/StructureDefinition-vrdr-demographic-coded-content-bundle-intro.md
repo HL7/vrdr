@@ -2,9 +2,9 @@
 
   This bundle contains:
   * Coded Content:
-    * Coded Race and Ethnicity [ObservationCodedRaceAndEthnicityVitalRecords]
+    * Coded Race and Ethnicity - <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
   * Input Content:
-    * Input Race and Ethnicity - [InputRaceAndEthnicity]
+    * Input Race and Ethnicity - <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a>
 ### IJE Mapping
 
 <style>
@@ -36,7 +36,7 @@
   <td>3</td>
   <td>Certificate Number</td>
   <td>FILENO</td>
-  <td>identifier.extension[ certificateNumber].value</td>
+  <td>identifier.extension[certificateNumber].value</td>
   <td>string(6)</td>
   <td>-</td>
 </tr>
@@ -45,7 +45,7 @@
   <td>5</td>
   <td>Auxiliary State file number</td>
   <td>AUXNO</td>
-  <td>identifier.extension[ auxiliaryStateIdentifier1 ].value</td>
+  <td>identifier.extension[auxiliaryStateIdentifier1].value</td>
   <td>string(12)</td>
   <td>-</td>
 </tr>
@@ -54,7 +54,7 @@
   <td>121</td>
   <td>Auxiliary State file number</td>
   <td>AUXNO2</td>
-  <td>identifier.extension[ auxiliaryStateIdentifier2 ].value</td>
+  <td>identifier.extension[auxiliaryStateIdentifier2].value</td>
   <td>string(12)</td>
   <td>-</td>
 </tr>

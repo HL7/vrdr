@@ -39,7 +39,7 @@
   <td>113</td>
   <td>If Female--Edit Flag: From EDR only</td>
   <td>PREG_BYPASS</td>
-  <td>value.extension[ BypassEditFlag ].value</td>
+  <td>value.extension[BypassEditFlag].value</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-edit-bypass-012-vs.html'>EditBypass012VS</a></td>
 </tr>

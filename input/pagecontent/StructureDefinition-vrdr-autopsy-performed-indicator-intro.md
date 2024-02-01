@@ -40,7 +40,7 @@ The Autopsy Performed Indicator profile captures the following values:
   <td>110</td>
   <td>Were Autopsy Findings Available to Complete the Cause of Death?</td>
   <td>AUTOPF</td>
-  <td>component[ autopsyResultsAvailable ].value</td>
+  <td>component[autopsyResultsAvailable].value</td>
   <td>codeable</td>
   <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-not-applicable-vr.html'>ValueSetYesNoUnknownNotApplicableVitalRecords</a></td>
 </tr>

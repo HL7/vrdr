@@ -152,7 +152,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>25</td>
   <td>Decedent's Residence--County</td>
   <td>COUNTYC</td>
-  <td>address.district.extension[ districtCode ]</td>
+  <td>address.district.extension[districtCode]</td>
   <td>integer</td>
   <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
 </tr>
@@ -179,7 +179,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>28</td>
   <td>Decedent's Residence--Inside City Limits</td>
   <td>LIMITS</td>
-  <td>address.city.extension[ withinCityLimits] </td>
+  <td>address.city.extension[withinCityLimits] </td>
   <td>codeable</td>
   <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-vr.html'>ValueSetYesNoUnknownVitalRecords</a></td>
 </tr>
@@ -197,7 +197,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>30</td>
   <td>Marital Status--Edit Flag</td>
   <td>MARITAL_BYPASS</td>
-  <td>maritalStatus.extension[ BypassEditFlag] </td>
+  <td>maritalStatus.extension[BypassEditFlag] </td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-edit-bypass-0124-vs.html'>EditBypass0124VS</a></td>
 </tr>
@@ -206,7 +206,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>143</td>
   <td>Decedent's spouse living at decedent's DOD?</td>
   <td>SPOUSELV</td>
-  <td>extension[ SpouseAlive ] </td>
+  <td>extension[SpouseAlive] </td>
   <td>codeable</td>
   <td> <a href='ValueSet-vrdr-spouse-alive-vs.html'>SpouseAliveVS</a></td>
 </tr>
@@ -341,7 +341,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>195</td>
   <td>Decedent's Birth Place City - Code</td>
   <td>DBPLACECITYCODE</td>
-  <td>extension[patient-birthPlace].value[x].city.extension[ cityCode]</td>
+  <td>extension[patient-birthPlace].value[x].city.extension[cityCode]</td>
   <td>integer</td>
   <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
 </tr>
@@ -368,7 +368,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>238</td>
   <td>State, U.S. Territory or Canadian Province of Birth - literal</td>
   <td>STATEBTH</td>
-  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
+  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
   <td>string</td>
   <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
 </tr>
@@ -413,7 +413,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>1</td>
   <td>State, U.S. Territory or Canadian Province of Birth - literal</td>
   <td>STATEBTH</td>
-  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
+  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
   <td>string</td>
   <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
 </tr>
@@ -422,7 +422,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>2</td>
   <td>State, U.S. Territory or Canadian Province of Birth - code</td>
   <td>BPLACE_ST</td>
-  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[ nationalReportingJurisdictionId] if present </td>
+  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present </td>
   <td>string</td>
   <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>

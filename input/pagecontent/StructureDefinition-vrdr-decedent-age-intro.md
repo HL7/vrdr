@@ -68,7 +68,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   <td>18</td>
   <td>Decedent's Age--Edit Flag</td>
   <td>AGE_BYPASS</td>
-  <td>value.extension[ BypassEditFlag ].value</td>
+  <td>value.extension[BypassEditFlag].value</td>
   <td>codeable</td>
   <td>See <a href='usage.html#decedent-name'>Note on Decedent Name</a></td>
 </tr>

@@ -19,7 +19,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
     * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
     * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
-    * [ObservationEmergingIssuesVitalRecords]
+    * <a href='http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
     * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
     * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
     * [ObservationUsualWorkVitalRecords]
@@ -47,7 +47,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
     * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
-    * [ObservationCodedRaceAndEthnicityVitalRecords]
+    * <a href='StructureDefinition-vrdr-coded-race-and-ethnicity.html'>CodedRaceAndEthnicity</a>
     * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
@@ -55,7 +55,7 @@ The content is broken down into the following sections:
 
 **Note:**
 For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
-The replacement status of a submission is now specified as a message parameter and described in the [NCHS Vital Records Messaging IG].
+The replacement status of a submission is now specified as a message parameter and described in the <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content'>NCHS Vital Records Messaging IG</a>.
 
 The profile includes:
 
@@ -90,7 +90,7 @@ The profile includes:
   <td>6</td>
   <td>Source flag: paper/electronic</td>
   <td>MFILED</td>
-  <td>extension[ filingFormat] </td>
+  <td>extension[filingFormat] </td>
   <td>codeable</td>
   <td> <a href='ValueSet-vrdr-filing-format-vs.html'>FilingFormatVS</a></td>
 </tr>
@@ -126,7 +126,7 @@ The profile includes:
   <td>122</td>
   <td>State Specific Data </td>
   <td>STATESP</td>
-  <td>extension[ stateSpecificField]</td>
+  <td>extension[stateSpecificField]</td>
   <td>string(30)</td>
   <td>-</td>
 </tr>
@@ -135,7 +135,7 @@ The profile includes:
   <td>184</td>
   <td>Replacement Record </td>
   <td>REPLACE (*deprecated*)</td>
-  <td>extension[ replaceStatus ].value</td>
+  <td>extension[replaceStatus].value</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-replace-status-vs.html'>ReplaceStatusVS</a></td>
 </tr>

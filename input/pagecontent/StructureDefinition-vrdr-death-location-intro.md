@@ -30,7 +30,7 @@
   <td>2</td>
   <td>State, U.S. Territory or Canadian Province of Death - code</td>
   <td>DSTATE</td>
-  <td>address.state or address.state.extension[nationalReportingJurisdictionId ]</td>
+  <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
   <td>codeable</td>
   <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> in state field or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a> in extension</td>
 </tr>
@@ -39,7 +39,7 @@
   <td>32</td>
   <td>County of Death Occurrence</td>
   <td>COD</td>
-  <td>address.district.extension[ districtCode ]</td>
+  <td>address.district.extension[districtCode]</td>
   <td>integer</td>
   <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
 </tr>
@@ -147,7 +147,7 @@
   <td>140</td>
   <td>Place of death. City FIPS code</td>
   <td>CITYCODE_D</td>
-  <td>address.city.extension[ cityCode]</td>
+  <td>address.city.extension[cityCode]</td>
   <td>integer</td>
   <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
 </tr>
@@ -228,7 +228,7 @@
   <td>7</td>
   <td>State, U.S. Territory or Canadian Province of Death - code</td>
   <td>DSTATE</td>
-  <td>address.state or address.state.extension[nationalReportingJurisdictionId ]</td>
+  <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
   <td>codeable</td>
   <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>

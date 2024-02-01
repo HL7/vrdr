@@ -49,7 +49,7 @@ Implementors are free to use the name field for the name of the disposition loca
   <td>204</td>
   <td>Disposition City - Code</td>
   <td>DISPCITYCODE</td>
-  <td>address.city.extension[ cityCode].value</td>
+  <td>address.city.extension[cityCode].value</td>
   <td>integer</td>
   <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
 </tr>

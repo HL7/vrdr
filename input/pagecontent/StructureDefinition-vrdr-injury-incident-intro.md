@@ -84,7 +84,7 @@
   <td>173</td>
   <td>Place of Injury- literal</td>
   <td>POILITRL</td>
-  <td>component[ placeOfInjury ].value.text</td>
+  <td>component[placeOfInjury].value.text</td>
   <td>string</td>
   <td>-</td>
 </tr>
@@ -102,7 +102,7 @@
   <td>175</td>
   <td>If Transportation Accident, Specify</td>
   <td>TRANSPRT</td>
-  <td>component[ transportationRole ].value.  (if value.code = OTH) the role should be specified in value.text)</td>
+  <td>component[transportationRole].value.  (if value.code = OTH) the role should be specified in value.text)</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-transportation-incident-role-vs.html'>TransportationIncidentRoleVS</a></td>
 </tr>
