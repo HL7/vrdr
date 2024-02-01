@@ -1,6 +1,6 @@
 ```
 Instance: CodedRaceAndEthnicity-Example1
-InstanceOf: CodedRaceAndEthnicity
+InstanceOf: ObservationCodedRaceAndEthnicityVitalRecords
 Title: "CodedRaceAndEthnicity-Example1"
 Description: "CodedRaceAndEthnicity-Example1"
 Usage: #example

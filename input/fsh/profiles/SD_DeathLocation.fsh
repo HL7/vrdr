@@ -2,7 +2,7 @@ Profile: DeathLocation
 Parent: LocationVitalRecords
 Id: vrdr-death-location
 Title: "Death Location"
-Description: "Death Location (USCoreLocation)"
+Description: "Death Location"
 * insert RequireMetaProfile(DeathLocation)
 // * name 1..1
 // * description 1..1

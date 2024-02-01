@@ -26,7 +26,7 @@
 | 64 | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [Decedent]| extension[ NVSSRace].extension[ OtherPacificIslandLiteral2].valueString | string |  |
 | 65 | Decedent's Race--First Other Literal | RACE22| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral1].valueString | string |  |
 | 66 | Decedent's Race--Second Other Literal | RACE23| [Decedent]| extension[ NVSSRace].extension[ OtherRaceLiteral2].valueString | string |  |
-| 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  |
+| 83 | Decedent's Race--Missing | RACE_MVR| [Decedent]| extension[ NVSSRace].extension[ MissingValueReason].valueCoding | codeable | [ValueSetRaceMissingValueReasonVitalRecords]  |
 {: .grid }
 
 ### Conformance

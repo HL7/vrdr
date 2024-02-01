@@ -1,6 +1,6 @@
 ```
 Instance: DecedentUsualWork-Example2
-InstanceOf: DecedentUsualWork
+InstanceOf: ObservationUsualWorkVitalRecords
 Title: "DecedentUsualWork-Example2"
 Description: "DecedentUsualWork-Example2 - with coded values"
 Usage: #example

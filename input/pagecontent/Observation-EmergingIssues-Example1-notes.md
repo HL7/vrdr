@@ -1,6 +1,6 @@
 ```
 Instance: EmergingIssues-Example1
-InstanceOf: EmergingIssues
+InstanceOf: ObservationEmergingIssuesVitalRecords
 Title: "EmergingIssues-Example1"
 Description: "EmergingIssues-Example1 make sure it is example"
 Usage: #example

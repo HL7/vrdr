@@ -67,10 +67,10 @@ The content is broken down into the following sections:
     * [DecedentEducationLevel]
     * [DecedentFather]
     * [DecedentMilitaryService]
-    * [EmergingIssues]
+    * [ObservationEmergingIssuesVitalRecords]
     * [DecedentMother]
     * [DecedentSpouse]
-    * [DecedentUsualWork]
+    * [ObservationUsualWorkVitalRecords]
 * Death Investigation
     * [AutopsyPerformedIndicator]
     * [DeathDate]
@@ -95,7 +95,7 @@ The content is broken down into the following sections:
     * [ActivityAtTimeOfDeath]
     * [AutomatedUnderlyingCauseOfDeath]
     * [ManualUnderlyingCauseOfDeath]
-    * [CodedRaceAndEthnicity]
+    * [ObservationCodedRaceAndEthnicityVitalRecords]
     * [EntityAxisCauseOfDeath]
     * [RecordAxisCauseOfDeath]
     * [PlaceOfInjury]
@@ -200,7 +200,7 @@ profiles["DecedentPregnancyStatus"] = {
   :out => "StructureDefinition-vrdr-decedent-pregnancy-status-intro.md",
   :desc => "",
 }
-profiles["DecedentUsualWork"] = {
+profiles["ObservationUsualWorkVitalRecords"] = {
   :out => "StructureDefinition-vrdr-decedent-usual-work-intro.md",
   :desc => "Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange,
   but coded values are not expected for death certificate submission. The underlying profile requires coded
@@ -239,9 +239,9 @@ profiles["MannerOfDeath"] = {
   :out => "StructureDefinition-vrdr-manner-of-death-intro.md",
   :desc => "A reference to the [Certifier] may be provided through the performer field.",
 }
-profiles["EmergingIssues"] = {
+profiles["ObservationEmergingIssuesVitalRecords"] = {
   :out => "StructureDefinition-vrdr-emerging-issues-intro.md",
-  :desc => "EmergingIssues profile supports placeholder fields required for 2022 submissions to NCHS.
+  :desc => "ObservationEmergingIssuesVitalRecords profile supports placeholder fields required for 2022 submissions to NCHS.
                 For documentation on their use see referenceTBD.
                 There are 6 1-char fields (PLACE1_1-6), 3 8-char fields (PLACE8_1-3), and one 20-char field (PLACE20-1).",
 }
@@ -277,7 +277,7 @@ profiles["PlaceOfInjury"] = {
   :out => "StructureDefinition-vrdr-place-of-injury-intro.md",
   :desc => "",
 }
-profiles["CodedRaceAndEthnicity"] = {
+profiles["ObservationCodedRaceAndEthnicityVitalRecords"] = {
   :out => "StructureDefinition-vrdr-coded-race-and-ethnicity-intro.md",
   :desc => "",
 }
@@ -316,7 +316,7 @@ profiles["CauseOfDeathCodedContentBundle"] = {
 
   This bundle contains:
   * Coded Content:
-    * Coded Race and Ethnicity [CodedRaceAndEthnicity]
+    * Coded Race and Ethnicity [ObservationCodedRaceAndEthnicityVitalRecords]
   * Input Content:
     * Input Race and Ethnicity - [InputRaceAndEthnicity]
      ",

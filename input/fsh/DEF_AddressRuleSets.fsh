@@ -7,7 +7,7 @@ RuleSet: CityCode
 
 RuleSet: CountyCode
 * address.district.extension contains
-    DistrictCode named districtCode 0..1
+    ExtensionDistrictCodeVitalRecords named districtCode 0..1
 * address.district.extension[districtCode] ^label = "County code"
 * address.district.extension[districtCode] ^short = "County code"
 // Add usage note that codes are from: https://ftp.cdc.gov/pub/health_Statistics/nchs/Manuals/Mortality/PLACE_CODES.txt and

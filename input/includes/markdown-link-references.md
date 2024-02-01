@@ -28,13 +28,10 @@
 [PregnancyStatusCS]: CodeSystem-vrdr-pregnancy-status-cs.html
 [PlaceOfDeathCM]: ConceptMap-place-of-death.html
 [BypassEditFlagVS]: StructureDefinition-BypassEditFlag.html
-[CityCode]: StructureDefinition-CityCode.html
 [DataAbsentReason]: StructureDefinition-Date-Absent-Reason.html
-[DateDay]: StructureDefinition-Date-Day.html
-[DateMonth]: StructureDefinition-Date-Month.html
-[DateYear]: StructureDefinition-Date-Year.html
-[DistrictCode]: StructureDefinition-DistrictCode.html
-[LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html
+[DateDay]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Day.html
+[DateMonth]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Month.html
+[DateYear]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Year.html
 [NVSSEthnicity]: StructureDefinition-NVSS-Ethnicity.html
 [NVSSRace]: StructureDefinition-NVSS-Race.html
 [AutopsyPerformedIndicator]: StructureDefinition-vrdr-autopsy-performed-indicator.html
@@ -58,7 +55,6 @@
 [DecedentMother]: StructureDefinition-vrdr-decedent-mother.html
 [DecedentPregnancyStatus]: StructureDefinition-vrdr-decedent-pregnancy-status.html
 [DecedentSpouse]: StructureDefinition-vrdr-decedent-spouse.html
-[DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
 [Decedent]: StructureDefinition-vrdr-decedent.html
 [DispositionLocation]: StructureDefinition-vrdr-disposition-location.html
 [ExaminerContacted]: StructureDefinition-vrdr-examiner-contacted.html
@@ -70,20 +66,16 @@
 [InterestedParty]: StructureDefinition-vrdr-interested-party.html
 [MannerOfDeath]: StructureDefinition-vrdr-manner-of-death.html
 [Mortician]: StructureDefinition-vrdr-mortician.html
-[EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html
 [ObservationLocation]: StructureDefinition-vrdr-observation-location.html
-[PartialDate]: StructureDefinition-PartialDate.html
-[PartialDateTime]: StructureDefinition-PartialDateTime.html
+[PartialDate]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDate.html
+[PartialDateTime]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-PartialDateTime.html
 [SurgeryDate]: StructureDefinition-vrdr-surgery-date.html
 [TobaccoUseContributedToDeath]: StructureDefinition-vrdr-tobacco-use-contributed-to-death.html
 [WithinCityLimits]: StructureDefinition-vrdr-within-city-limits-indicator.html
 [CanadaProvincesVS]: ValueSet-vrdr-canada-provinces-vs.html
 [EditBypass01VS]: ValueSet-vrdr-edit-bypass-01-vs.html
 [EditBypass012VS]: ValueSet-vrdr-edit-bypass-012-vs.html
-[EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html
 [EditBypass0124VS]: ValueSet-vrdr-edit-bypass-0124-vs.html
-[StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html
-[JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
 [ReplaceStatusVS]: ValueSet-vrdr-replace-status-vs.html
 [USStatesTerritoriesVS]: ValueSet-vrdr-usstates-territories-vs.html
 [RelatedPersonRelationshipVS]: ValueSet-vrdr-RelatedPersonRelationshipType.html
@@ -91,21 +83,16 @@
 [CertifierTypesVS]: ValueSet-vrdr-certifier-types-vs.html
 [ContributoryTobaccoUseVS]: ValueSet-vrdr-contributory-tobacco-use-vs.html
 [EducationLevelVS]: ValueSet-vrdr-education-level-vs.html
-[JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html
 [MannerOfDeathVS]: ValueSet-vrdr-manner-of-death-vs.html
 [MaritalStatusVS]: ValueSet-vrdr-marital-status-vs.html
 [MethodOfDispositionVS]: ValueSet-vrdr-method-of-disposition-vs.html
 [PlaceOfDeathVS]: ValueSet-vrdr-place-of-death-vs.html
 [PlaceOfInjuryVS]: ValueSet-vrdr-place-of-injury-vs.html
-[PregnancyStatusVS]: ValueSet-vrdr-pregnancy-status-vs.html
-[RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html
+[DeathPregnancyStatusVS]: ValueSet-ValueSet-death-pregnancy-status.html
 [TransportationIncidentRoleVS]: ValueSet-vrdr-transportation-incident-role-vs.html
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
 [YesNoUnknownVS]: ValueSet-vrdr-yes-no-unknown-vs.html
-[HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html
-[CountryCS]: CodeSystem-vrdr-country-code-cs.html
-[ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [PHVS_Occupation_CDC_Census2010VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [PHVS_Industry_CDC_Census2010VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 [PHVS_Occupation_CDC_Census2012VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8026
@@ -114,7 +101,6 @@
 [PHVS_Industry_CDC_Census2018VS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8066
 
 
-[BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [UnitsOfAgeVS]: ValueSet-vrdr-units-of-age-vs.html
 [FilingFormatVS]: ValueSet-vrdr-filing-format-vs.html
 [Artifacts]: artifacts.html
@@ -130,8 +116,6 @@
 [CountyCodes]: usage.html#county-codes
 [StateLiterals]: usage.html#state-literals
 [CountryLiterals]: usage.html#country-literals
-[InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
-[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
 [PlaceOfInjury]: StructureDefinition-vrdr-place-of-injury.html
 [EntityAxisCauseOfDeath]: StructureDefinition-vrdr-entity-axis-cause-of-death.html
 [RecordAxisCauseOfDeath]: StructureDefinition-vrdr-record-axis-cause-of-death.html
@@ -139,10 +123,7 @@
 [AutomatedUnderlyingCauseOfDeath]: StructureDefinition-vrdr-automated-underlying-cause-of-death.html
 [ActivityAtTimeOfDeath]: StructureDefinition-vrdr-activity-at-time-of-death.html
 [ActivityAtTimeOfDeathVS]: ValueSet-vrdr-activity-at-time-of-death-vs.html
-[RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
-[HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
 [SpouseAliveVS]: ValueSet-vrdr-spouse-alive-vs.html
-[RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
 [ICD10CausesOfDeathVS]: ValueSet-vrdr-icd10-causes-of-death-vs.html
 [IntentionalRejectVS]: ValueSet-vrdr-intentional-reject-vs.html
 [ACMESystemRejectVS]: ValueSet-vrdr-system-reject-vs.html
@@ -156,3 +137,25 @@
 [StateSpecificField]: StructureDefinition-StateSpecificField.html
 [NVSSSexAtDeath]: StructureDefinition-NVSS-SexAtDeath.html
 [SpouseAlive]: StructureDefinition-SpouseAlive.html
+
+
+<!-- Moved to VRCL IG -->
+<!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html -->
+<!-- [DistrictCode]: StructureDefinition-DistrictCode.html -->
+<!-- [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html -->
+<!-- [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html -->
+<!-- [EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html -->
+<!-- [DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html -->
+<!-- [InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
+[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html -->
+<!-- [HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html -->
+<!-- [RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html -->
+<!-- [EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html -->
+<!-- [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html -->
+<!-- [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html -->
+<!-- [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html -->
+<!-- [StatesTerritoriesProvincesVS]: ValueSet-vrdr-states-territories-provinces-vs.html -->
+<!-- [JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html -->
+<!-- [LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html -->
+<!-- [CityCode]: StructureDefinition-CityCode.html -->
+<!-- [CountryCS]: CodeSystem-vrdr-country-code-cs.html -->

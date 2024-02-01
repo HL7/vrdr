@@ -41,7 +41,7 @@
   <td>DEDUC_BYPASS</td>
   <td>value.extension[ByPassEdit].value</td>
   <td>codeable</td>
-  <td>[EditBypass01234VS]</td>
+  <td>[ValueSetEditBypass01234VitalRecords]</td>
 </tr>
 
 </tbody>

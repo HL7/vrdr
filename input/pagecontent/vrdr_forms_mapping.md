@@ -43,7 +43,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>2</td>
   <td>Sex</td>
   <td><a href='StructureDefinition-vrdr-decedent.html'>Decedent</a></td>
-  <td><a href='{{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-birthsex.html'>extension:NVSS-SexAtDeath</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-NVSS-SexAtDeath.html'>extension:NVSS-SexAtDeath</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>3</td>
