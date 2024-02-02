@@ -11,6 +11,8 @@ Description: "Decedent (PatientVitalRecords)"
 * extension[NVSS-SexAtDeath] ^short = "NVSS Sex at Death"
 * extension[Spouse-Alive] ^short = "Spouse Alive?"
 * extension[birthPlace] ^short = "Decedent birthplace"
+  * valueAddress
+    * state from ValueSetStatesTerritoriesAndProvincesVitalRecords  (required)
 * identifier 1..*
 * name 1..*
 * birthDate ^short = "Date of Birth"

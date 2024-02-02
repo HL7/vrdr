@@ -19,6 +19,7 @@
 [PlaceOfDeathCM]: ConceptMap-place-of-death.html
 [BypassEditFlagVS]: StructureDefinition-BypassEditFlag.html
 [DataAbsentReason]: StructureDefinition-Date-Absent-Reason.html
+[DateTime]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Time.html
 [DateDay]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Day.html
 [DateMonth]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Month.html
 [DateYear]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-Date-Year.html
@@ -130,13 +131,14 @@
 [DistrictCode]: StructureDefinition-DistrictCode.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
-[EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html
-[DecedentUsualWork]: StructureDefinition-vrdr-decedent-usual-work.html
-[InputRaceAndEthnicity]: StructureDefinition-vrdr-input-race-and-ethnicity.html
-[CodedRaceAndEthnicity]: StructureDefinition-vrdr-coded-race-and-ethnicity.html
+[EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html -->
+[DecedentUsualWork]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-usual-work.html
+[EmergingIssues]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-emerging-issues.html
+[InputRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-input-race-and-ethnicity.html
+[CodedRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-coded-race-and-ethnicity.html
+<!-- 
 [HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html
 [RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html
-[EmergingIssues]: StructureDefinition-vrdr-emerging-issues.html
 [RaceCodeVS]: ValueSet-vrdr-race-code-vs.html
 [RaceRecode40VS]: ValueSet-vrdr-race-recode-40-vs.html
 [HispanicOriginVS]: ValueSet-vrdr-hispanic-origin-vs.html
@@ -144,7 +146,7 @@
 [JurisdictionsProvincesVS]: ValueSet-vrdr-jurisdictions-provinces-vs.html
 [LocationJurisdictionId]: StructureDefinition-Location-Jurisdiction-Id.html
 [CityCode]: StructureDefinition-CityCode.html
-[CountryCS]: CodeSystem-vrdr-country-code-cs.html -->
+[CountryCS]: CodeSystem-vrdr-country-code-cs.html 
 <!-- VRCL IG links -->
 [ValueSetYesNoUnknownNotApplicableVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-not-applicable-vr.html
 [ValueSetYesNoUnknownVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-vr.html
@@ -159,4 +161,6 @@
 [ValueSetBirthplaceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html
 [ValueSetMaritalStatusVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html
 [ObservationCodedRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
-[ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html
+[ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.htmle
+<!-- [ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Extension-jurisdiction-id-vr.html -->
+[ObservationUsualWorkVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-usual-work-vr.html
