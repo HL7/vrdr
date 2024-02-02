@@ -126,6 +126,8 @@
 [StateSpecificField]: StructureDefinition-StateSpecificField.html
 [NVSSSexAtDeath]: StructureDefinition-NVSS-SexAtDeath.html
 [SpouseAlive]: StructureDefinition-SpouseAlive.html
+[UnitsOfAgeCM]: https://hl7.org/fhir/us/vrdr/STU2.2/ConceptMap-UnitsOfAgeCM.html
+[IndustryOccupationCodedContentBundle]: 
 <!-- Moved to VRCL IG -->
 <!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html
 [DistrictCode]: StructureDefinition-DistrictCode.html
@@ -136,6 +138,10 @@
 [EmergingIssues]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-emerging-issues.html
 [InputRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-input-race-and-ethnicity.html
 [CodedRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-coded-race-and-ethnicity.html
+[ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Extension-jurisdiction-id-vr.html
+[ExtensionPartialDateVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Extension-partial-date-vr.html
+[ExtensionPartialDateTimeVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Extension-partial-date-time-vr.html
+[ExtensionCityCodeVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-CityCode.html
 <!-- 
 [HispanicNoUnknownVS]: ValueSet-vrdr-hispanic-no-unknown-vs.html
 [RaceMissingValueReasonVS]: ValueSet-vrdr-race-missing-value-reason-vs.html

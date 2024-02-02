@@ -70,7 +70,7 @@ Title: "DeathCertificate Example1"
   * insert addNamedEntryComposition(BirthRecordID, Observation, BirthRecordIdentifier-Example1) 
   * insert addNamedEntryComposition(EducationLevel, Observation, DecedentEducationLevel-Example1) 
   * insert addNamedEntryComposition(MilitaryService, Observation, DecedentMilitaryService-Example1) 
-  * insert addNamedEntryComposition(UsualWork, Observation, DecedentUsualWork-Example1) 
+  // * insert addNamedEntryComposition(UsualWork, Observation, DecedentUsualWork-Example1) 
   * insert addNamedEntryComposition(InputRaceAndEthnicity, Observation, InputRaceAndEthnicity-Example1) 
   * insert addNamedEntryComposition(EmergingIssues, Observation, EmergingIssues-Example1) 
 //*  section[DecedentDemographics].entry[Decedent] = Reference(Decedent-Example1)
