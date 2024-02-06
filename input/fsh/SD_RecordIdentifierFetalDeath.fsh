@@ -29,7 +29,7 @@ Profile: FetalDeathRecordIdentifier
 Parent: Observation
 Id: vrdr-fetal-death-record-identifier
 Title: "Fetal Death Record Identifier"
-Description: "Fetal Death Record Identifier (Observation).  This includes the record identifier, the jurisdiction, and the birth year."
+Description: "Fetal Death Record Identifier (Observation).  For use in Maternal Death.  This includes the record identifier, the jurisdiction, and the birth year."
 * insert WGExtension
 * status 1..1
 * status = #final (exactly)
