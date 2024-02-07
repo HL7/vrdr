@@ -1,9 +1,13 @@
-### Post STU2.2 (December 2023 and onward)
+### STU3 Draft (February 2024)
+The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.
+#### Content Changes
 * Clarified description of [BirthRecordIdentifier] that it is only used for infant deaths.
 * Clarified that certificate numbers are 6 digit numbers with leading zeroes allowed.  They are (unfortunately) defined as FHIR strings.
 * Restricted [ExtensionLocationJurisdictionIdVitalRecords] Extension to Address.state context.
 * Added a new bundle for [Coded Industry and Occupation][IndustryOccupationCodedContentBundle] with [example][IndustryOccupationCodedContentBundle-Example1] to address [FHIR-42748](https://jira.hl7.org/browse/FHIR-42748)
 * Modified composition examples to use ruleset for general cleanup and to address publisher errors related to fullurl based rules around matching relative references
+#### Harmonization Changes
+* All references to Decedent are not references to PatientVitalRecords that is defined in VRCL.  The latter is essentially a USCorePatient profile with optional extensions for vital records uses.   This allows reuse of VRDR profiles in MDI STU2. Decedent is now a profile of PatientVitalRecords.  
 * MaritalStatus valueset and corresponding concept map were moved to VRCL for general utility. Decedent profile made to reference MaritalStatus VS in VRCL. [FHIR-43416](https://jira.hl7.org/browse/FHIR-43416)
 * [DeathLocation], [InjuryLocation], and [DispositionLocation] were updated to depend on the abstract [LocationVitalRecords](https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Location-vr.html) profile in VRCL. 
 * Edit flag valueset harmonization: Deleted BypassEditFlagCS and referenced [VRCL Edit Flags Codesystem](http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags) instead
