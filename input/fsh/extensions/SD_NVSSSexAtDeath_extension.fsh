@@ -5,7 +5,7 @@ Description: "Sex on visual inspection at the time of death by the funeral home"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from AdministrativeGenderVS (required)
-* insert ExtensionContextResource(dateTime)
+* insert ExtensionContextResource(Patient)
 
 
 Extension: SpouseAlive
@@ -15,4 +15,4 @@ Description: "Spouse is Alive."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from SpouseAliveVS (required)
-* insert ExtensionContextResource(dateTime)
+* insert ExtensionContextResource(Patient)

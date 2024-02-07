@@ -5,5 +5,5 @@ Description: "Filing Format Extension."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from FilingFormatVS (required)
-* insert ExtensionContextResource(dateTime)
+* insert ExtensionContextResource(Composition)
 

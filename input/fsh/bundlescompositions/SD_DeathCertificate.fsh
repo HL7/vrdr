@@ -1,25 +1,4 @@
-RuleSet: CompositionSectionEntrySlicing(section)
-* section contains {section} 0..1
-* section[{section}].code = DocumentSectionCS#{section}
-* section[{section}] ^label = "{section}"
-* section[{section}] ^short = "{section}"
-* section[{section}].entry ^slicing.discriminator.type = #profile
-* section[{section}].entry ^slicing.discriminator.path = "$this.resolve()"
-* section[{section}].entry ^slicing.rules = #open
 
-
-
-RuleSet: BundleSectionSlice(section, name, min, max, short, def, class)
-* section[{section}].entry contains {name} {min}..{max}
-* section[{section}].entry[{name}] ^short = "{short}"
-* section[{section}].entry[{name}] ^definition = "{def}"
-* section[{section}].entry[{name}] only Reference({class})
-// * section[DecedentDemographics].entry contains Decedent 0..1
-// * section[DecedentDemographics].entry[Decedent] ^short = "DecedentDemographics"
-// * section[DecedentDemographics].entry[Decedent] ^definition = "DecedentDemographics"
-// * section[DecedentDemographics].entry[Decedent] only Reference(Decedent)
-
-//* section[{section}].entry[{name}].resource.meta.profile = Canonical({class})
 
 Profile: DeathCertificate
 Parent: Composition

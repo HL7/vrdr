@@ -7,5 +7,6 @@ for a description of how to specify replace status at the message level."
 * value[x] only CodeableConcept
 * value[x] from ReplaceStatusVS (required)
 * value[x] ^short = "Replacement Status of a Death Record (deprecated)"
-* insert ExtensionContextResource(dateTime)
+* insert ExtensionContextResource(Composition)
+* insert ExtensionContextResource(Bundle)
 
