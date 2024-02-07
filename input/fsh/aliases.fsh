@@ -29,7 +29,7 @@ Alias: $ssn = http://hl7.org/fhir/sid/us-ssn
 // Alias: $provinces = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $provinces = http://canadapost.ca
 
-Alias: $dataabsentreason401 = http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1
+Alias: $dataabsentreason401 = http://hl7.org/fhir/CodeSystem/data-absent-reason|4.0.1  
 Alias: $DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 // USCore
 Alias: USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
@@ -43,15 +43,15 @@ Alias: $PHVS_Industry_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.1
 Alias: $PHVS_Occupation_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8026
 
 /// VRDR CS and VS
-Alias: $Yes-No-Unknown = YesNoUnknownVS
-Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS
-Alias: $raceMissingValueReason = RaceMissingValueReasonVS
-Alias: $place-of-death = PlaceOfDeathVS
-Alias: $vrdrYesNoUnknown = YesNoUnknownVS
-Alias: $manner-of-death = MannerOfDeathVS
-Alias: $marital-status = MaritalStatusVS
-Alias: $documentSectionCodeSystem = DocumentSectionCS
-Alias: $education-level = EducationLevelVS
-Alias: $bypassEditFlagCodeSystem = BypassEditFlagCS
-Alias: $Cause-Of-Death-Condition = CauseOfDeathCondition
-Alias: $administrative-gender_1 = AdministrativeGenderVS
+//Alias: $Yes-No-Unknown = YesNoUnknownVS
+//Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS
+//Alias: $raceMissingValueReason = RaceMissingValueReasonVS
+//Alias: $place-of-death = PlaceOfDeathVS
+//Alias: $vrdrYesNoUnknown = YesNoUnknownVS
+//Alias: $manner-of-death = MannerOfDeathVS
+//Alias: $marital-status = MaritalStatusVS
+//Alias: $documentSectionCodeSystem = DocumentSectionCS
+//Alias: $education-level = EducationLevelVS
+//Alias: $bypassEditFlagCodeSystem = BypassEditFlagCS
+//Alias: $Cause-Of-Death-Condition = CauseOfDeathCondition
+//Alias: $administrative-gender_1 = AdministrativeGenderVS

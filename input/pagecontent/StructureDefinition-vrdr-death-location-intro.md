@@ -1,25 +1,276 @@
-### Usage
 
+### IJE Mapping
 
-| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 2 | State, U.S. Territory or Canadian Province of Death - code | DSTATE| |address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 
-| 32 | County of Death Occurrence | COD| |address.district.extension[districtCode] | integer | see [CountyCodes] | 
-| 129 | Death Institution name | DINSTI| x|name | string  | - | 
-| 130 | Long String address for place of death | ADDRESS_D| x|address.line | string  | - | 
-| 131 | Place of death. Street number | STNUM_D| x|address.extension[stnum] | string | - | 
-| 132 | Place of death. Pre Directional | PREDIR_D| x|address.extension[predir] | string | - | 
-| 133 | Place of death. Street name | STNAME_D| x|address.extension[stname] | string | - | 
-| 134 | Place of death. Street designator | STDESIG_D| x|address.extension[stdesig] | string | - | 
-| 135 | Place of death. Post Directional | POSTDIR_D| x|address.extension[postdir] | string | - | 
-| 136 | Place of death. City or Town name | CITYTEXT_D| x|address.city | string | - | 
-| 137 | Place of death. State name literal | STATETEXT_D| x|address.state (expanded from 2 letter code) | string | - | 
-| 138 | Place of death. Zip code | ZIP9_D| x|address.postalCode | string | - | 
-| 139 | Place of death. County of Death | COUNTYTEXT_D| x|address.district | string | - | 
-| 140 | Place of death. City FIPS code | CITYCODE_D| x|address.city.extension[ cityCode] | integer | see [CityCodes] | 
-| 141 | Place of death. Longitude | LONG_D| x|position.longitude | float | - | 
-| 142 | Place of Death. Latitude | LAT_D| x|position.latitude | float | - | 
-| 239 | Country of Death - Code | DTHCOUNTRYCD| x|address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US | 
-| 240 | Country of Death - Literal | DTHCOUNTRY| x|address.country  (expanded from 2 letter code) | string  | See [CountryLIterals].   Not used. For US Death certificates should be 'United States'. | 
-{: .grid }
-{% include markdown-link-references.md %}
+<style>
+ .context-menu {cursor: context-menu; color: #438bca;}
+ .context-menu:hover {opacity: 0.5;}
+</style>
+<details open>
+
+<summary>
+
+<strong class='context-menu'> Mortality (Decedent) </strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Use Case</strong></th>
+    <th><strong>#</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>IJE Name</strong></th>
+    <th><strong>Field</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>Value Set/Comments</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>2</td>
+  <td>State, U.S. Territory or Canadian Province of Death - code</td>
+  <td>DSTATE</td>
+  <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
+  <td>codeable</td>
+  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> in state field or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a> in extension</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>32</td>
+  <td>County of Death Occurrence</td>
+  <td>COD</td>
+  <td>address.district.extension[districtCode]</td>
+  <td>integer</td>
+  <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>129</td>
+  <td>Death Institution name</td>
+  <td>DINSTI</td>
+  <td>name</td>
+  <td>string </td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>130</td>
+  <td>Long String address for place of death</td>
+  <td>ADDRESS_D</td>
+  <td>address.line</td>
+  <td>string </td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>131</td>
+  <td>Place of death. Street number</td>
+  <td>STNUM_D</td>
+  <td>address.extension[stnum]</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>132</td>
+  <td>Place of death. Pre Directional</td>
+  <td>PREDIR_D</td>
+  <td>address.extension[predir]</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>133</td>
+  <td>Place of death. Street name</td>
+  <td>STNAME_D</td>
+  <td>address.extension[stname]</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>134</td>
+  <td>Place of death. Street designator</td>
+  <td>STDESIG_D</td>
+  <td>address.extension[stdesig]</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>135</td>
+  <td>Place of death. Post Directional</td>
+  <td>POSTDIR_D</td>
+  <td>address.extension[postdir]</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>136</td>
+  <td>Place of death. City or Town name</td>
+  <td>CITYTEXT_D</td>
+  <td>address.city</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>137</td>
+  <td>Place of death. State name literal</td>
+  <td>STATETEXT_D</td>
+  <td>address.state (expanded from 2 letter code)</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>138</td>
+  <td>Place of death. Zip code</td>
+  <td>ZIP9_D</td>
+  <td>address.postalCode</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>139</td>
+  <td>Place of death. County of Death</td>
+  <td>COUNTYTEXT_D</td>
+  <td>address.district</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>140</td>
+  <td>Place of death. City FIPS code</td>
+  <td>CITYCODE_D</td>
+  <td>address.city.extension[cityCode]</td>
+  <td>integer</td>
+  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>141</td>
+  <td>Place of death. Longitude</td>
+  <td>LONG_D</td>
+  <td>position.longitude</td>
+  <td>float</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>142</td>
+  <td>Place of Death. Latitude</td>
+  <td>LAT_D</td>
+  <td>position.latitude</td>
+  <td>float</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>239</td>
+  <td>Country of Death - Code</td>
+  <td>DTHCOUNTRYCD</td>
+  <td>address.country </td>
+  <td>string </td>
+  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>240</td>
+  <td>Country of Death - Literal</td>
+  <td>DTHCOUNTRY</td>
+  <td>address.country  (expanded from 2 letter code)</td>
+  <td>string </td>
+  <td>See <a href='usage.html#country-literals'>CountryLiterals</a>.   Not used. For US Death certificates should be 'United States'.</td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+<p></p>
+
+<details>
+
+<summary>
+
+<strong class='context-menu'> Mortality Roster </strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Use Case</strong></th>
+    <th><strong>#</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>IJE Name</strong></th>
+    <th><strong>Field</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>Value Set/Comments</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>Mortality Roster</td>
+  <td>6</td>
+  <td>State, U.S. Territory or Canadian Province of Death - literal</td>
+  <td>STATETEXT_D</td>
+  <td>address.state (expanded from 2 letter code)</td>
+  <td>string</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality Roster</td>
+  <td>7</td>
+  <td>State, U.S. Territory or Canadian Province of Death - code</td>
+  <td>DSTATE</td>
+  <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
+  <td>codeable</td>
+  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality Roster</td>
+  <td>30</td>
+  <td>Death Country - Code</td>
+  <td>DCOUNTRYC</td>
+  <td>address.country </td>
+  <td>string </td>
+  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US.   </td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+<p></p>
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>17</td>
+  <td>County of Death</td>
+  <td>address.district</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

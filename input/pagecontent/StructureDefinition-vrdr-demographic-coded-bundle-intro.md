@@ -4,7 +4,7 @@
 
   This bundle contains:
   * Coded Content:
-    * Coded Race and Ethnicity [CodedRaceAndEthnicity]
+    * Coded Race and Ethnicity [ObservationCodedRaceAndEthnicityVitalRecords]
   * Input Content:
     * Input Race and Ethnicity - [InputRaceAndEthnicity]
      

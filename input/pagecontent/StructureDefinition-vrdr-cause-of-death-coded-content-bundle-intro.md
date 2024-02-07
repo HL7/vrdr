@@ -1,31 +1,89 @@
-### Usage
 This bundle is information-content equivalent to the traditional NCHS TRX format.
 
   This bundle contains:
   * Coded Content:
-    * Activity at Time of Death [ActivityAtTimeOfDeath]
-    * Underlying Cause of Death -- [AutomatedUnderlyingCauseOfDeath] and [ManualUnderlyingCauseOfDeath]
-    * Entity Axis Cause of Death [EntityAxisCauseOfDeath]
-    * Record Axis Cause of Death [RecordAxisCauseOfDeath]
-    * Place of Injury [PlaceOfInjury]
-    * Coding Status Values [CodingStatusValues] - various flags that are part of the TRX format
+    * Activity at Time of Death <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
+    * Underlying Cause of Death -- <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a> and <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
+    * Entity Axis Cause of Death <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
+    * Record Axis Cause of Death <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
+    * Place of Injury <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
+    * Coding Status Values <a href='StructureDefinition-vrdr-coding-status-values.html'>CodingStatusValues</a> - various flags that are part of the TRX format
   * Input Content:
-    * Cause of Death Part 1 - [CauseOfDeathPart1] and [CauseOfDeathPathway]
-    * Cause of Death Part 2 - [CauseOfDeathPart2]
-    * Manner of Death - [MannerOfDeath]
-    * Autopsy Performed Indicator - [AutopsyPerformedIndicator]
-    * Death Certification - [DeathCertification]
-    * Injury Incident - [InjuryIncident]
-    * Tobacco Use Contributed to Death - [TobaccoUseContributedToDeath]
-    * Decedent Pregnancy Status - [DecedentPregnancyStatus]
-    * Surgery Date - [SurgeryDate]
-     
+    * Cause of Death Part 1 - <a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a>
+    * Cause of Death Part 2 - <a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a>
+    * Manner of Death - <a href='StructureDefinition-vrdr-manner-of-death.html'>MannerOfDeath</a>
+    * Autopsy Performed Indicator - <a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a>
+    * Death Certification - <a href='StructureDefinition-vrdr-death-certification.html'>DeathCertification</a>
+    * Injury Incident - <a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a>
+    * Tobacco Use Contributed to Death - <a href='StructureDefinition-vrdr-tobacco-use-contributed-to-death.html'>TobaccoUseContributedToDeath</a>
+    * Decedent Pregnancy Status - <a href='StructureDefinition-vrdr-decedent-pregnancy-status.html'>DecedentPregnancyStatus</a>
+    * Surgery Date - <a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a>
+### IJE Mapping
 
-| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| NA | Death Record Identifier | *NO IJE MAPPING*| |identifier.value | string(12) | YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number | 
-| 3 | Certificate Number | FILENO| |identifier.extension[ certificateNumber].value | string(6) | - | 
-| 5 | Auxiliary State file number | AUXNO| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | - | 
-| 121 | Auxiliary State file number | AUXNO2| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
-{: .grid }
-{% include markdown-link-references.md %}
+<style>
+ .context-menu {cursor: context-menu; color: #438bca;}
+ .context-menu:hover {opacity: 0.5;}
+</style>
+<details open>
+
+<summary>
+
+<strong class='context-menu'> Mortality (Decedent) </strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Use Case</strong></th>
+    <th><strong>#</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>IJE Name</strong></th>
+    <th><strong>Field</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>Value Set/Comments</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>3</td>
+  <td>Certificate Number</td>
+  <td>FILENO</td>
+  <td>identifier.extension[certificateNumber].value</td>
+  <td>string(6)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>5</td>
+  <td>Auxiliary State file number</td>
+  <td>AUXNO</td>
+  <td>identifier.extension[auxiliaryStateIdentifier1].value</td>
+  <td>string(12)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>121</td>
+  <td>Auxiliary State file number</td>
+  <td>AUXNO2</td>
+  <td>identifier.extension[auxiliaryStateIdentifier2].value</td>
+  <td>string(12)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>NA</td>
+  <td>Death Record Identifier</td>
+  <td>*NO IJE MAPPING*</td>
+  <td>identifier.value</td>
+  <td>string(12)</td>
+  <td>YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number</td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+<p></p>
+
