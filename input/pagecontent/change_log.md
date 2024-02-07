@@ -1,4 +1,4 @@
-### STU3 Draft (February 2024)
+### VRDR STU3 Draft (for May 2024 Ballot)
 The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.
 #### Content Changes
 * Clarified description of [BirthRecordIdentifier] that it is only used for infant deaths.
