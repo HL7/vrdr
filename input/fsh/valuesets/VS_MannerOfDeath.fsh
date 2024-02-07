@@ -1,6 +1,6 @@
 ValueSet: MannerOfDeathVS
 Id: vrdr-manner-of-death-vs
-Title: "Manner of Death VS"
+Title: "Manner of Death"
 Description: "A set of code used to indicate a classification of the manner of death.
 
 

@@ -1,6 +1,6 @@
 ValueSet: IntentionalRejectVS
 Id: vrdr-intentional-reject-vs
-Title: "Intentional Reject ValueSet"
+Title: "Intentional Reject"
 Description: "Intentional Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."

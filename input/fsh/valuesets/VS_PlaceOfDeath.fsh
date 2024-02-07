@@ -1,6 +1,6 @@
 ValueSet: PlaceOfDeathVS
 Id: vrdr-place-of-death-vs
-Title: "Place of Death VS -- PHVS_PlaceOfDeath_NCHS"
+Title: "Place of Death"
 Description: "Code values reflecting the death location of the decedent (e.g., hospital, home, hospice).
 
 Mapping to IJE codes [here](ConceptMap-PlaceOfDeathCM.html)."

@@ -1,6 +1,6 @@
 ValueSet: CertifierTypesVS
 Id: vrdr-certifier-types-vs
-Title: "Certifier Types VS"
+Title: "Certifier Types"
 Description: "Certifier Types Value Set
 
 Mapping to IJE codes [here](ConceptMap-CertifierTypesCM.html)."

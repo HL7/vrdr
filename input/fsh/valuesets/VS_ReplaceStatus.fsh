@@ -1,6 +1,6 @@
 ValueSet: ReplaceStatusVS
 Id: vrdr-replace-status-vs
-Title: "Replacement Status VS"
+Title: "Replacement Status"
 Description: "Replacement Status Value Set.  NCHS will not process original or update submissions flagged 'updated_notforNCHS'.
 
 Mapping to IJE codes [here](ConceptMap-ReplaceStatusCM.html)."

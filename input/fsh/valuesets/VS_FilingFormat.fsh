@@ -1,6 +1,6 @@
 ValueSet: FilingFormatVS
 Id: vrdr-filing-format-vs
-Title: "Filing Format ValueSet"
+Title: "Filing Format"
 Description: "Filing Format
 
 Mapping to IJE codes [here](ConceptMap-FilingFormatCM.html)."
