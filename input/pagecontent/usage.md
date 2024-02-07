@@ -7,12 +7,17 @@
 ### Alias, Replace, Void Actions
 The ALIAS and VOID IJE fields are used to direct an action be performed on a death record.  These actions are now specified through message types in the accompanying Vital Records Messaging Implementation Guide message descriptions for [Alias](https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#alias) and [Void](https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#void).  Sending a replacement death record is also specified through the [Replace](https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#replace) message type, but the status of the replacement is mapped to the VRDR IG (see [DeathCertificate]).
 
+### Local Time
+All event times should be recorded as the local time and local time zone where they took place.
+ 
 ### Partial Dates and Times
 Several date/time fields (Date of Death, Date of Surgery, Date of Birth, and Date of Injury) in the IG allow components of the field to be unknown.  The FHIR [date](https://build.fhir.org/datatypes.html#date) and [datetime](https://build.fhir.org/datatypes.html#datetime) fields provide the ability to leave the less significant components unspecified (e.g., 2018, 1973-06, or 1905-08-23 are valid dates).  In addition to the built-in FHIR method for specifying partial dates, this IG provides extensions ([ExtensionPartialDateVitalRecords] and [ExtensionPartialDateTimeVitalRecords]) that allow the components to be specified independently.  When using these extensions, a value must be specified for each component (e.g., year, month, day), or a missing value code specified.  This allows dates where any component is missing to be specified.   Creators of conformant content are free to choose to always use the Partial date and datetime extensions to represent their dates and times.
 
 A value of unknown (all 9's) in IJE is equivalent to a null value and a DataAbsentReason extension with the value of "unknown".  See this [DeathDate](Observation-DeathDate-Example3.json.html) for an example of both unknown integer values -- the day of death, "99" in IJE -- and unknown time value -- the time of death, "9999" in IJE.  
 
 A value of blank (all ' ') in IJE is equivalent to a null value and a DataAbsentReason extension with the value of "temp-unknown".
+
+Note: The partial dates and times representation will be modified somewhat in the next update of VRDR.  See the [description in the draft Vital Records Common Library IG](https://build.fhir.org/ig/HL7/vr-common-library/usage.html#partial-dates-and-times).
 
 ### City Codes
 FHIR [addresses](https://build.fhir.org/datatypes.html#Address) support a string value for city. The death record submission requires a 5 digit coded value, so the IG defines an extension [ExtensionCityCodeVitalRecords] for this purpose. The code should be selected to match the literal content of the city field. As of the date of publication, these codes should be in accordance with the [NCHS Instruction Manual Part 8, Vital Records Geographic Classification, 2014](https://www.cdc.gov/nchs/data/dvs/IMP8_2014.pdf).
