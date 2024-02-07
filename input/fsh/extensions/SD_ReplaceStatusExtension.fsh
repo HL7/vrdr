@@ -9,4 +9,5 @@ for a description of how to specify replace status at the message level."
 * value[x] ^short = "Replacement Status of a Death Record (deprecated)"
 * insert ExtensionContextResource(Composition)
 * insert ExtensionContextResource(Bundle)
+* insert ExtensionContextResource(Bundle.meta)
 

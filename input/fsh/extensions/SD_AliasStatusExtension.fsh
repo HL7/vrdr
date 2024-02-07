@@ -6,3 +6,4 @@ Description: "Alias Status of a Death Roster.  If true, is an alias record."
 * value[x] only boolean
 * insert ExtensionContextResource(Bundle)
 * insert ExtensionContextResource(Composition)
+* insert ExtensionContextResource(Bundle.meta)
