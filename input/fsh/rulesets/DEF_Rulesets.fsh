@@ -57,10 +57,6 @@ RuleSet: SNOMEDCopyright
 RuleSet: LOINCCopyright
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 
-RuleSet: ExtensionContext(path)
-* ^context[+].type = #element
-* ^context[=].expression = "{path}"
-
 RuleSet: ParameterSlicing
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
@@ -118,3 +114,11 @@ RuleSet: addNamedEntryComposition(name, type, id)
 
 RuleSet: addReferenceComposition (field, type, id)
 * {field}.reference = "{type}/{id}"
+
+RuleSet: ExtensionContext(path)
+* ^context[+].type = #element
+* ^context[=].expression = "{path}"
+
+RuleSet: ExtensionContextResource(path)
+* insert ExtensionContext({path})
+//* insert ExtensionContext({path}.Extension)
