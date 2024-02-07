@@ -2,7 +2,7 @@ Profile: InjuryLocation
 Parent: LocationVitalRecords
 Id: vrdr-injury-location
 Title: "Injury Location"
-Description: "Injury Location (USCoreLocation)"
+Description: "Injury Location (LocationVitalRecords)"
 * insert RequireMetaProfile(InjuryLocation)
 * position ^short = "Lat/Long of Injury"
 * type = LocationTypeCS#injury
