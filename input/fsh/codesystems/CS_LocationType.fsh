@@ -1,6 +1,6 @@
 CodeSystem: LocationTypeCS
 Id: vrdr-location-type-cs
-Title: "Location Type Code System"
+Title: "Location Type"
 Description: "Location Type Code System"
 * insert boilerplate
 * ^caseSensitive = false

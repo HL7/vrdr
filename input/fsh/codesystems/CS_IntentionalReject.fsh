@@ -1,6 +1,6 @@
 CodeSystem: IntentionalRejectCS
 Id: vrdr-intentional-reject-cs
-Title: "Intentional Reject CodeSystem"
+Title: "Intentional Reject"
 Description: "Intentional Reject CodeSystem"
 * ^caseSensitive = true
 * #1 "Reject1" "Reject1"

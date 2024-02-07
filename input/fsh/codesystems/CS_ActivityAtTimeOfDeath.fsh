@@ -1,6 +1,6 @@
 CodeSystem: ActivityAtTimeOfDeathCS
 Id: vrdr-activity-at-time-of-death-cs
-Title: "Activity at Time of Death Codesystem"
+Title: "Activity at Time of Death"
 Description: "Activity at Time of Death Codesystem based on PHVS_ActivityType_NCHS"
 * ^caseSensitive = false
 * #0 "While engaged in sports activity"

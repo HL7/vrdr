@@ -1,6 +1,6 @@
 CodeSystem: DocumentSectionCS
 Id: vrdr-document-section-cs
-Title: "Document Section Code System"
+Title: "Document Section"
 Description: "Document Section Code System"
 * insert boilerplate
 * ^content = #complete
