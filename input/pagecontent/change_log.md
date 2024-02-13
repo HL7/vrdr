@@ -19,6 +19,7 @@ The STU3 draft of VRDR incorporates both content changes, and refactoring as par
 * [DateDay], [DateMonth], [DateYear], and [DateTime] had been used by [PartialDateTime], which has been moved to VRCL and no longer uses these extensions
 * To keep general demographic and non-death-specific information in VRCL, [CodedRaceAndEthnicity], [InputRaceAndEthnicity], [DecedentUsualWork] and [EmergingIssues] moved to VRCL
 * NA code added to [DeathPregnancyStatusVS] 
+* Made Certifier derive from [PractitionerVitalRecords](https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Practitioner-vr.html) 
 
 ### VRDR STU2.2 (September 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
