@@ -1,22 +1,27 @@
 
-/* Do we still need Certifier Profile?????  Probably Not.  Adds zero value... maybe consolidate with VRCL practitioner */
 Profile: Certifier
-Parent: USCorePractitionerProfile
+Parent: PractitionerVitalRecords
 Id: vrdr-certifier
-Title: "Certifier"
-Description: "Certifier (USCorePractitioner)"
+Title: "Death Certifier"
+Description: "Certifier (USCorePractitioner) used in VRDR"
 * insert RequireMetaProfile(Certifier)
-* name 1..1
-* name ^short = "name"
-* address ^short = "address"
-* address.city ^short = "city"
-* address.district ^short = "county"
-* address.postalCode ^short = "zip"
-* insert CityCode
-* insert CountyCode
-* insert AddressComponents
-* address.country from ValueSetResidenceCountryVitalRecords (required)
-* address.state from ValueSetStatesTerritoriesAndProvincesVitalRecords (required)
+//* name 1..1
+* name ^short = "certifier name"
+* identifier ^short = "Note: required by USCore"
+* address ^short = "Certifier address"
+* address.extension[predir] ^short = "PreDirectional"
+* address.extension[stnum] ^short = "StreetNumber"
+* address.extension[stname] ^short = "StreetName"
+* address.extension[stdesig] ^short = "StreetDesignator"
+* address.extension[postdir] ^short = "PostDirectional"
+* address.extension[unitnumber] ^short = "UnitOrAptNumber"
+* address.city ^short = "City"
+* address.city.extension[cityCode] ^short = "city code"
+* address.district ^short = "County"
+* address.district.extension[districtCode] ^short = "county code"
+* address.state ^short = "State"
+* address.postalCode ^short = "Zipcode"
+* address.country ^short = "Country"
 
 // * qualification 1..1
 // * qualification only BackboneElement
