@@ -127,14 +127,15 @@
 [NVSSSexAtDeath]: StructureDefinition-NVSS-SexAtDeath.html
 [SpouseAlive]: StructureDefinition-SpouseAlive.html
 [UnitsOfAgeCM]: https://hl7.org/fhir/us/vrdr/STU2.2/ConceptMap-UnitsOfAgeCM.html
-[IndustryOccupationCodedContentBundle]: 
+[Coded Industry and Occupation Bundle]: https://build.fhir.org/ig/HL7/vrdr/StructureDefinition-industry-occupation-coded-content-bundle.html
+[Decedent Usual Work]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Observation-usual-work-vr.html
 <!-- Moved to VRCL IG -->
 <!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html
 [DistrictCode]: StructureDefinition-DistrictCode.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html -->
-[DecedentUsualWork]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-usual-work.html
+[DecedentUsualWork]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Observation-usual-work-vr.html
 [EmergingIssues]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-emerging-issues.html
 [InputRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-input-race-and-ethnicity.html
 [CodedRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-coded-race-and-ethnicity.html
