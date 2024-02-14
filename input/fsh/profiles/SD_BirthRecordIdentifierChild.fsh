@@ -2,7 +2,8 @@ Profile: BirthRecordIdentifierChild
 Parent: Observation
 Id: vrdr-birth-record-identifier-child
 Title: "Birth Record Identifier Child"
-Description: "Birth Record Identifier (Observation).  For use in Maternal Death.  This includes the record identifier, the jurisdiction, and the birth year."
+Description: "Birth Record Identifier (Observation). For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year. 
+The focus is a Decedent (mother), whose death was related to the birth of the Subject (child)."
 * status 1..1
 * status = #final (exactly)
 * code 1..1
@@ -12,6 +13,7 @@ Description: "Birth Record Identifier (Observation).  For use in Maternal Death.
 // If focus is decedent (mother), role should be CHILD, and this is a child whose birth was related to the death
 * focus 1..1
 * focus only Reference(Decedent)
+  * ^short = "deceased mother"
 // * extension contains    // Extension makes it possible to query this encounter from bundle with simple FHIRPath query
 //   ExtensionRoleVitalRecords named role 1..1
 // * extension[role].valueCodeableConcept = $v3-RoleCode#CHILD
