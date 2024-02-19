@@ -22,6 +22,16 @@ Description: "Certifier (USCorePractitioner) used in VRDR"
 * address.state ^short = "State"
 * address.postalCode ^short = "Zipcode"
 * address.country ^short = "Country"
+* extension contains PractitionerRoleCertifier  named role 1..1
+
+Extension: PractitionerRoleCertifier
+Id: practitioner-role-certifier
+Title: "Practitioner Role - Certifier"
+Description: "Used to indicate that an instance relates to the certifier."
+* insert ExtensionContextResource(Practitioner)
+* value[x] 1..1
+* value[x] only code
+* valueCode = #certifier 
 
 // * qualification 1..1
 // * qualification only BackboneElement
