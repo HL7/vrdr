@@ -61,6 +61,6 @@ Description: "Certifier-Example1"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "9941339100"
 * qualification.code = $sct#434641000124105
-* extension[+]
+* extension
   * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role-death-certifier" 
   * valueCode = #certifier
