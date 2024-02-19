@@ -90,12 +90,12 @@
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-AliasStatus.html'>AliasStatus</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-AliasStatus.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-FilingFormat.html'>FilingFormat</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-FilingFormat.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-NVSS-SexAtDeath.html'>NVSSSexAtDeath</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-NVSS-SexAtDeath.html'>VRDR</a> </td><td>-</td></tr>
+<tr><td> <a href='http://build.fhir.org/ig/HL7/vrdr/StructureDefinition-practitioner-role-death-certifier.html'>PractitionerRoleDeathCertifier</a> </td><td>New</td><td>Distinguishes Death Certifier from other Practitioner types</td></tr>
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-ReplaceStatus.html'>ReplaceStatus</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-ReplaceStatus.html'>VRDR</a> </td><td> Deprecated </td></tr>
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-SpouseAlive.html'>SpouseAlive</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-SpouseAlive.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig/StructureDefinition-StateSpecificField.html'>StateSpecificField</a> </td><td><a href='http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-StateSpecificField.html'>VRDR</a> </td><td>-</td></tr>
 </tbody>
 </table>
-
 
 ### STU3 Valuesets
 

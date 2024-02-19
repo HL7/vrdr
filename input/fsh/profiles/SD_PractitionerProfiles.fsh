@@ -22,12 +22,12 @@ Description: "Certifier (USCorePractitioner) used in VRDR"
 * address.state ^short = "State"
 * address.postalCode ^short = "Zipcode"
 * address.country ^short = "Country"
-* extension contains PractitionerRoleCertifier  named role 1..1
+* extension contains PractitionerRoleDeathCertifier  named role 1..1
 
-Extension: PractitionerRoleCertifier
-Id: practitioner-role-certifier
-Title: "Practitioner Role - Certifier"
-Description: "Used to indicate that an instance relates to the certifier."
+Extension: PractitionerRoleDeathCertifier
+Id: practitioner-role-death-certifier
+Title: "Practitioner Role - Death Certifier"
+Description: "Used to indicate that an instance relates to the death certifier."
 * insert ExtensionContextResource(Practitioner)
 * value[x] 1..1
 * value[x] only code
