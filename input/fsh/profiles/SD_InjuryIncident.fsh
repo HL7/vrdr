@@ -32,16 +32,19 @@ Description: "This Observation provides the certified explanation of how the inj
     transportationRole 0..1
 * component[placeOfInjury] ^short = "Place of injury"
   * code = $loinc#69450-5
+    * ^short = "Place of injury Facility"
   * valueCodeableConcept 0..1
   * valueCodeableConcept only CodeableConcept
     * text ^short = "Place of Injury - Literal"
 * component[workInjuryIndicator] ^short = "Injury at Work?"
   * code = $loinc#69444-8
+    * ^short = "Did death result from injury at work"
   * value[x] only CodeableConcept
   * value[x] from ValueSetYesNoUnknownNotApplicableVitalRecords (required)
     * ^short = "Injury at Work?"
 * component[transportationRole]
   * code = $loinc#69451-3
+    * ^short = "Transportation role of decedent"
   * value[x] only CodeableConcept
   * value[x] from TransportationIncidentRoleVS (required)
     * ^short = "Transportation role of decedent"

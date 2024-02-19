@@ -7,7 +7,8 @@ Description: "Fetal Death Record Identifier (Observation).  This includes the re
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#FDR // "Fetal Death Record Number"
+* code = $v2-0203#FDR 
+  * ^short = "Fetal Death Record Number"
 // This needs to be documented in the notes
 // Decedent is mother.   Record is fetus whose delivery resulted in maternal death
 * focus 1..1

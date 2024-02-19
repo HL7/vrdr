@@ -14,12 +14,12 @@ RuleSet: RecordIdentifierObservation (type, code, jurisdiction, jurisdictionCode
     {year} 1..1
 * component[{jurisdiction}] ^short = "Record Jurisdiction"
 * component[{jurisdiction}].code 1..1
-* component[{jurisdiction}].code = {jurisdictionCode}  // Jurisdiction Code
+* component[{jurisdiction}].code = {jurisdictionCode}  "Jurisdiction Code"
 * component[{jurisdiction}].value[x] 1..1
 * component[{jurisdiction}].value[x] only string
 * component[{jurisdiction}].valueString from ValueSetJurisdictionVitalRecords (required)
 * component[{year}] ^short = "Year of {type}"
-* component[{year}].code = {code}             // "Date of Death/Birth"
+* component[{year}].code = {code} "Date of Death/Birth"
 * component[{year}].value[x] 1..1
 * component[{year}].value[x] only dateTime
 * component[{year}].value[x] ^comment = "The record year is expressed using the YYYY portion of date."

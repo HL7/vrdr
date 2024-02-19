@@ -7,7 +7,8 @@ Description: "Birth Record Identifier (Observation).  For use in Maternal Death.
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#BR // "Birth registry number"
+* code = $v2-0203#BR
+  * ^short = "Birth registry number"
 // This needs to be documented in the notes
 // If focus is decedent (mother), role should be CHILD, and this is a child whose birth was related to the death
 * focus 1..1
