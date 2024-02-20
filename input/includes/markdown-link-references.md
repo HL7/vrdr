@@ -134,7 +134,7 @@
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
 [BirthplaceCountryVS]: ValueSet-vrdr-birthplace-country-vs.html
 [EditBypass01234VS]: ValueSet-vrdr-edit-bypass-01234-vs.html -->
-[ExtensionDistrictCodeVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-DistrictCode.html
+[ExtensionDistrictCodeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-DistrictCode.html
 [DecedentUsualWork]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Observation-usual-work-vr.html
 [EmergingIssues]: http://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-emerging-issues.html
 [InputRaceAndEthnicity]: https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-input-race-and-ethnicity.html
@@ -171,4 +171,4 @@
 [ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.htmle
 <!-- [ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Extension-jurisdiction-id-vr.html -->
 [ObservationUsualWorkVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-usual-work-vr.html
-[CodeSystemCountryCodeVitalRecords]: http://hl7.org/fhir/us/vr-common-library/2024Jan/CodeSystem-CodeSystem-country-code-vr.html
+[CodeSystemCountryCodeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/CodeSystem-CodeSystem-country-code-vr.html
