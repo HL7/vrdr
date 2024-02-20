@@ -6,7 +6,10 @@ Title: "Death Certifier"
 Description: "Certifier (USCorePractitioner) used in VRDR"
 * insert RequireMetaProfile(Certifier)
 //* name 1..1
-* name ^short = "certifier name"
+* name ^short = "Certifier name"
+* name.given ^short = "Certifier given names"
+* name.family ^short = "Certifier family name"
+* name.suffix ^short = "Certifier suffix"
 * identifier ^short = "Note: required by USCore"
 * address ^short = "Certifier address"
 * address.extension[predir] ^short = "PreDirectional"
