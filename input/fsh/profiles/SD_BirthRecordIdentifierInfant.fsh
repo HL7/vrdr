@@ -8,7 +8,10 @@ Subject is constrained to Decedent (infant) to allow decedent linkage to birth r
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#BR // "Birth registry number"
+* code = $v2-0203#BR
+  * ^short = "Birth registry number"
+// This needs to be documented in the notes
+// If subject is decedent (infant), this is for an infant death
 * subject 1..1
 * subject only Reference(Decedent)
   * ^short = "deceased infant"

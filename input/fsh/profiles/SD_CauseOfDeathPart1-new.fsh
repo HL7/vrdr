@@ -12,7 +12,8 @@ Title: "Cause Of Death Part 1"
 // Description: "Cause of death Part 1 (Observation). Cause of death prior to submission of the completed death report.  Line number can be 1-4."
 Description: "The Observation - Cause of Death Part 1 profile reflects the ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. Line number can be 1-4 "
 // * insert RequireMetaProfile(Profile: CauseOfDeathPart1)
-* code = $loinc#69453-9 // "Cause of death [US Standard Certificate of Death]"
+* code = $loinc#69453-9 
+  * ^short = "Cause of death [US Standard Certificate of Death]"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept.text 1..1 // COD1X
@@ -35,7 +36,8 @@ Description: "The Observation - Cause of Death Part 1 profile reflects the order
 * component[interval]
   * ^short = "Cause of Death Part 1 Interval, Line a,b,c,d"
   * code 1..1
-  * code = $loinc#69440-6 // "Disease onset to death interval"
+  * code = $loinc#69440-6 
+    * ^short = "Disease onset to death interval"
   * value[x] 1..1
   * value[x] only string or Quantity or CodeableConcept
   * valueString ^short = "Interval - string description"

@@ -8,6 +8,7 @@ Title: "Automated Underlying Cause Of Death"
 Description: "Automated Underlying Cause Of Death (Observation)"
 * insert RequireMetaProfile(Profile: AutomatedUnderlyingCauseOfDeath)
 * code = $loinc#80358-5
+  * ^short = "Cause of death.underlying [Automated]"
 * value[x] 1..1
 * value[x] only CodeableConcept // ACME_UC
 * value[x] from ICD10CausesOfDeathVS
@@ -20,6 +21,7 @@ Title: "Manual Underlying Cause Of Death"
 Description: "Manual Underlying Cause Of Death (Observation)"
 * insert RequireMetaProfile(Profile: ManualUnderlyingCauseOfDeath)
 * code = $loinc#80359-3
+  * ^short = "Cause of death.underlying [Manual]"
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from ICD10CausesOfDeathVS (required)
@@ -32,6 +34,7 @@ Id: vrdr-record-axis-cause-of-death
 Title: "Record Axis Cause Of Death"
 Description: "Record Axis Cause Of Death (Observation): Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its position (1-20)."
 * code = $loinc#80357-7
+  * ^short = "Cause of death record axis code [Automated]"
 * value[x] 1..1
 * value[x] only CodeableConcept // MAN_UC
 * value[x] from ICD10CausesOfDeathVS (required)
@@ -65,6 +68,7 @@ Title: "Entity Axis Cause Of Death"
 Description: "Entity Axis Cause Of Death (Observation):   Up to 20 of instances of this profile may be included in a coding bundle.  Each instance is labeled with its lineNumber, Position and e-code indicator."
 * insert RequireMetaProfile(Profile: EntityAxisCauseOfDeath)
 * code = $loinc#80356-9
+  * ^short = "Cause of death entity axis code [Automated]"
 * value[x] 1..1
 * value[x] only CodeableConcept // EAC
 * value[x] from ICD10CausesOfDeathVS (required)

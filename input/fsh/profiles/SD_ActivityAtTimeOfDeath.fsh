@@ -5,6 +5,7 @@ Title: "Activity at Time of Death"
 Description: "Activity at Time of Death (Observation)"
 * insert RequireMetaProfile(Profile: ActivityAtTimeOfDeath)
 * code = $loinc#80626-5
+  * ^short = "Activity at time of death [CDC]"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from ActivityAtTimeOfDeathVS (required)
