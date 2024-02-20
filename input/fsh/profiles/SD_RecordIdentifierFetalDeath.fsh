@@ -2,7 +2,8 @@ Profile: FetalDeathRecordIdentifier
 Parent: Observation
 Id: vrdr-fetal-death-record-identifier
 Title: "Fetal Death Record Identifier"
-Description: "Fetal Death Record Identifier (Observation).  This includes the record identifier, the jurisdiction, and the birth year."
+Description: "Fetal Death Record Identifier (Observation).  For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year.
+The focus is the Decedent (mother), whose death was related to the birth of the Subject (fetus)."
 * status 1..1
 * status = #final (exactly)
 * code 1..1
@@ -12,4 +13,5 @@ Description: "Fetal Death Record Identifier (Observation).  This includes the re
 // Decedent is mother.   Record is fetus whose delivery resulted in maternal death
 * focus 1..1
 * focus only Reference(Decedent)
+  * ^short = "deceased mother"
 * insert RecordIdentifierObservation (Fetal Death, $loinc#81954-0, deathJurisdiction, $loinc#77969-4, year )  // date of death
