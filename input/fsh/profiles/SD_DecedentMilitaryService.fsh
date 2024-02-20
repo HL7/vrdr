@@ -7,7 +7,8 @@ Description: "Decedent Military Service (Observation)"
 * status 1..1
 * status only code
 * status = #final (exactly)
-* code = $loinc#55280-2 // "Military service Narrative"
+* code = $loinc#55280-2 
+  * ^short = "Military service Narrative"
 * subject 1..1
 * subject only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * value[x] 1..1

@@ -13,7 +13,8 @@ Title: "Cause of Death Part 2"
 Description: "The Observation - Contributing Cause of Death Part 2 profile is used to identify factors contributing to the cause of death as asserted by the death certifier."
 //* insert RequireMetaProfile(CauseOfDeathPart2)
 * code only CodeableConcept
-* code = $loinc#69441-4 // "Other significant causes or conditions of death"
+* code = $loinc#69441-4 
+  * ^short = "Other significant causes or conditions of death"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept

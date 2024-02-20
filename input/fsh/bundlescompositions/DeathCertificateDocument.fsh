@@ -1,7 +1,7 @@
 Profile: DeathCertificateDocument
 Parent: Bundle
 Id: vrdr-death-certificate-document
-Title: "Death Certificate Document New"
+Title: "Death Certificate Document"
 Description: "The resources comprising the death certificate composition (Bundle/Document)."
 * insert BundleIdentifiers
 * type = #document (exactly)
