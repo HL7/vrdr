@@ -12,7 +12,8 @@ Description: "Death Certification Procedure (USCoreProcedure). The procedure whe
 // * category = $sct#103693007 // "Diagnostic procedure"
 * code 1..1
 * code only CodeableConcept
-* code = $sct#308646001 // "Death certification"
+* code = $sct#308646001 
+  * ^short = "Death certification"
 // * performed[x] 1..1
 * performed[x] only dateTime
 * performed[x] ^short = "certification Datetime"

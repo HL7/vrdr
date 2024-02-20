@@ -64,3 +64,4 @@ Description: "Certifier-Example1"
 * extension
   * url = "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role-death-certifier" 
   * valueCode = #certifier
+

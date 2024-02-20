@@ -7,7 +7,8 @@ Description: "Date of Surgery (Observation).  The PartialDate extension supports
 * status 1..1
 * status = #final (exactly)
 * code 1..1
-* code = $loinc#80992-1 // "Date and time of surgery"
+* code = $loinc#80992-1 
+  * ^short = "Date and time of surgery"
 * subject 1..1
 * subject only Reference(PatientVitalRecords)
 //* effective[x] 1..1

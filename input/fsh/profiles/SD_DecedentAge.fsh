@@ -10,7 +10,8 @@ Description: "The decedent's chronological age at the time of death (Observation
 * status ^short = "status"
 * code 1..1
 * code only CodeableConcept
-* code = $loinc#39016-1 // "Age at death"
+* code = $loinc#39016-1 
+  * ^short = "Age at death"
 * code ^short = "code"
 * subject 1..1
 * subject only Reference(PatientVitalRecords) //generalized to PatientVitalRecords

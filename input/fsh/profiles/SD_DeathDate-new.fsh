@@ -14,6 +14,7 @@ Title: "Observation - Death Date"
 Description: "This Observation provides the death date, death pronouncer, and date pronounced dead. If the actual date of death is known, set value to type dateTime. If the date of death is not known, and a range is known, set value to type Period.
 This profile is designed to supplant the similar profiles in VRDR and MDI."
 * code = $loinc#81956-5
+  * ^short = "Date and time of death [TimeStamp]"
 //* code MS
   * ^short = "Date+time of death"
 * subject 1..1 
@@ -45,10 +46,12 @@ This profile is designed to supplant the similar profiles in VRDR and MDI."
     placeOfDeath 0..1
 * component[datetimePronouncedDead] ^short = "Date/Time Pronounced Dead"
   * code = $loinc#80616-6
+    * ^short = "Date and time pronounced dead [US Standard Certificate of Death]"
   * value[x] 1..1
   * value[x] only time or dateTime
 * component[placeOfDeath] ^short = "Place of Death"
   * code = $loinc#58332-8
+    * ^short = "Location of death"
   * value[x] 1..1
   * value[x] only CodeableConcept
   * value[x] from PlaceOfDeathVS (required) //need to consolidate on the right valueset. this references the VRCL valueset
