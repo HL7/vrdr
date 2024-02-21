@@ -1,6 +1,7 @@
 ### VRDR STU3 Draft (for May 2024 Ballot)
 The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.
 #### Content Changes
+* Changed the valueset for gender used by the [NVSSSexAtDeath] for compliance with USCore and VRCL.  Added a maximum binding for backward compability with STU2.2, and provided Concept Maps for mapping the [new valuesets]([AdministrativeGenderOldCM]) and [new valuesets]([AdministrativeGenderCM]) to IJE.
 * Clarified description of [BirthRecordIdentifier] that it is only used for infant deaths.
 * Added profiles supporting maternal death reporting requirements to link birth certificate ([BirthRecordIdentifierChild]) or fetal death report ([FetalDeathRecordIdentifier]) associated with maternal death, and added them as optional content in DeathCertificate composition. [FHIR-43626](https://jira.hl7.org/browse/FHIR-43626)
 * Clarified that certificate numbers are 6 digit numbers with leading zeroes allowed.  They are (unfortunately) defined as FHIR strings.
