@@ -1,17 +1,15 @@
 //redo parents and strip redundancies
 
 Profile: DecedentFather
-Parent: RelatedPersonFatherVitalRecords
+Parent: RelatedPersonParentVitalRecords
 Id: vrdr-decedent-father
 Title: "Decedent Father"
-Description: "Decedent Father (USCoreRelatedPerson)"
+Description: "Decedent Father (RelatedPersonParentVitalRecords)"
 * insert RequireMetaProfile(DecedentFather)
 * active = true
 //* patient 1..1
 //* patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * patient ^short = "Decedent"
-* relationship 1..1
-//* relationship only CodeableConcept
 * relationship = $v3-RoleCode#FTH // "father"
 * relationship.text = "Father"
 * relationship ^short = "relationship"
@@ -22,14 +20,12 @@ Profile: DecedentMother
 Parent: RelatedPersonParentVitalRecords
 Id: vrdr-decedent-mother
 Title: "Decedent Mother"
-Description: "Decedent Mother (USCoreRelatedPerson)"
+Description: "Decedent Mother (RelatedPersonParentVitalRecords)"
 * insert RequireMetaProfile(DecedentMother)
 * active = true
 //* patient 1..1
 * patient ^short = "Decedent"
 //* patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
-* relationship 1..1
-//* relationship only CodeableConcept
 * relationship = $v3-RoleCode#MTH // "mother"
 * relationship.text = "Mother"
 * name.family ^short = "Maiden name if name.use=maiden"
@@ -46,8 +42,6 @@ Description: "Decedent Spouse (USCoreRelatedPerson)"
 * patient 1..1
 * patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * patient ^short = "Decedent"
-* relationship 1..1
-* relationship only CodeableConcept
 * relationship = $v3-RoleCode#SPS // "spouse"
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
