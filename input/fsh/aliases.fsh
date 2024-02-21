@@ -1,6 +1,7 @@
 // External CS and VS
 Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $admingender = http://hl7.org/fhir/administrative-gender
+Alias: $v3-AdminGender = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 Alias: $maritalStatus = http://hl7.org/fhir/ValueSet/marital-status
 Alias: $roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $contactRole = http://terminology.hl7.org/CodeSystem/v2-0131
