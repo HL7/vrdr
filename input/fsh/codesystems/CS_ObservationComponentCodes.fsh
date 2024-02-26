@@ -10,11 +10,6 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * ^experimental = false
 
-
-RuleSet: PlaceComponentCode(len, number)
-* #EmergingIssue{len}_{number} "EmergingIssue{len}_{number}"
-
-
 CodeSystem: ComponentCS
 Id: vrdr-component-cs
 Title: "Local Component Codes"

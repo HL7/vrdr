@@ -21,6 +21,7 @@ The STU3 draft of VRDR incorporates both content changes, and refactoring as par
 * To keep general demographic and non-death-specific information in VRCL, [CodedRaceAndEthnicity], [InputRaceAndEthnicity], [DecedentUsualWork] and [EmergingIssues] moved to VRCL
 * NA code added to [DeathPregnancyStatusVS] 
 * Made Certifier derive from [PractitionerVitalRecords](https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Practitioner-vr.html) and added extension [PractitionerRoleDeathCertifier] that can be used to distinguish certifier from other practitioner types in the bundle 
+* Removed local codes meant fro VRCL from [ObservationsCS]
 
 ### VRDR STU2.2 (September 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
