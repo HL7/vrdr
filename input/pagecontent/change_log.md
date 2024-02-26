@@ -6,7 +6,7 @@ The STU3 draft of VRDR incorporates both content changes, and refactoring as par
 * Added profiles supporting maternal death reporting requirements to link birth certificate ([BirthRecordIdentifierChild]) or fetal death report ([FetalDeathRecordIdentifier]) associated with maternal death, and added them as optional content in DeathCertificate composition. [FHIR-43626](https://jira.hl7.org/browse/FHIR-43626)
 * Clarified that certificate numbers are 6 digit numbers with leading zeroes allowed.  They are (unfortunately) defined as FHIR strings.
 * Restricted [ExtensionLocationJurisdictionIdVitalRecords] Extension to Address.state context.
-* Added a new bundle for [Coded Industry and Occupation][IndustryOccupationCodedContentBundle] with [example][IndustryOccupationCodedContentBundle-Example1] to address [FHIR-42748](https://jira.hl7.org/browse/FHIR-42748)
+* Added a new bundle for Coded Industry and Occupation: [IndustryOccupationCodedContentBundle] with an [example](Bundle-IndustryOccupationCodedContentBundle-Example1.html) [IndustryOccupationCodedContentBundle-Example1] to address [FHIR-42748](https://jira.hl7.org/browse/FHIR-42748)
 * Modified composition examples to use ruleset for general cleanup and to address publisher errors related to fullurl based rules around matching relative references
 
 #### Harmonization Changes
@@ -21,7 +21,7 @@ The STU3 draft of VRDR incorporates both content changes, and refactoring as par
 * To keep general demographic and non-death-specific information in VRCL, [CodedRaceAndEthnicity], [InputRaceAndEthnicity], [DecedentUsualWork] and [EmergingIssues] moved to VRCL
 * NA code added to [DeathPregnancyStatusVS] 
 * Made Certifier derive from [PractitionerVitalRecords](https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Practitioner-vr.html) and added extension [PractitionerRoleDeathCertifier] that can be used to distinguish certifier from other practitioner types in the bundle 
-* Removed local codes meant fro VRCL from [ObservationsCS]
+* Removed local codes meant from VRCL from [ObservationsCS]
 
 ### VRDR STU2.2 (September 2023)
 * __Typos__:  Fixed some typos and extra, missing commas
