@@ -129,6 +129,10 @@
 [UnitsOfAgeCM]: https://hl7.org/fhir/us/vrdr/STU2.2/ConceptMap-UnitsOfAgeCM.html
 [Coded Industry and Occupation Bundle]: https://build.fhir.org/ig/HL7/vrdr/StructureDefinition-industry-occupation-coded-content-bundle.html
 [Decedent Usual Work]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Observation-usual-work-vr.html
+[PractitionerRoleDeathCertifier]: StructureDefinition-practitioner-role-death-certifier.html
+[BirthRecordIdentifierChild]: StructureDefinition-vrdr-birth-record-identifier-child.html
+[FetalDeathRecordIdentifier]: StructureDefinition-vrdr-birth-record-identifier.html
+[IndustryOccupationCodedContentBundle]: StructureDefinition-industry-occupation-coded-content-bundle.html
 <!-- Moved to VRCL IG -->
 <!-- [JurisdictionVS]: ValueSet-vrdr-jurisdiction-vs.html
 [ResidenceCountryVS]: ValueSet-vrdr-residence-country-vs.html
