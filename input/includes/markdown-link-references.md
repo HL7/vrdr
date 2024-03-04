@@ -172,7 +172,7 @@
 [ValueSetBirthplaceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html
 [ValueSetMaritalStatusVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html
 [ObservationCodedRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
-[ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.htmle
+[ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html
 <!-- [ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Extension-jurisdiction-id-vr.html -->
 [ObservationUsualWorkVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-usual-work-vr.html
 [CodeSystemCountryCodeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/CodeSystem-CodeSystem-country-code-vr.html

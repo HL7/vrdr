@@ -118,11 +118,6 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     profiles.each do |(x, y)| 
         #pOutputFile.puts "<tbody>"
         CSV.foreach(pSpreadsheet) do |row|
-            if row[6] == "OCCUPC4"
-              puts row[IJE_PROFILE_COL]
-              puts x
-              puts "---"
-            end
             next if row[IJE_USECASE_COL] != pRowFilter || row[IJE_PROFILE_COL] != x #|| row[IJE_PROFILE_COL].value.to_s == "not implemented"
             if notImplementedHeader == false && y.to_s == "Not Implemented"
                 pOutputFile.puts "</tbody>"
@@ -140,24 +135,6 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             fhirencoding = row[IJE_FHIR_COMMENTS_COL] if row[IJE_FHIR_COMMENTS_COL]   
             fhirunique = row[IJE_UNIQUENESS_COL] if row[IJE_UNIQUENESS_COL] 
             description = row[IJE_DESC_COL] if row[IJE_DESC_COL]
-            # if pRowFilterIG == "BFDR"
-            #     unless fhirfield.nil?
-            #         if fhirfield.include?("extension[")
-            #             specifiers = fhirfield.scan(/extension\[.*?\]/).to_set
-            #             specifiers.each { |spec| 
-            #                 just_spec = spec[/\[.*?\]/]
-            #                 unless just_spec == "x" || just_spec == "[reportedAge]"
-            #                     fhirfield = fhirfield.gsub("#{just_spec}", "[#{just_spec}]")
-            #                 end 
-            #             }
-            #         end
-            #     end
-            #     if fhirunique == "J"
-            #         pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center; color: darkviolet'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td style='text-align: center;'>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
-            #     else
-            #         pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td style='text-align: center;'>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
-            #     end
-              # else
                 pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
             # end
         end
