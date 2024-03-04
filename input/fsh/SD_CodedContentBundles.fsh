@@ -54,7 +54,7 @@ Description: "Demographic Coded Content Bundle (Bundle): A bundle containing ins
 
 Profile: IndustryOccupationCodedContentBundle
 Parent: Bundle
-Id: industry-occupation-coded-content-bundle
+Id: vrdr-industry-occupation-coded-content-bundle
 Title: "Industry Occupation Coded Content Bundle"
 Description: "Industry and Occupation Coded Content Bundle (Bundle):  A bundle containing  coded industry and occupation data for a decedent.   This bundle is information-content equivalent to the tranditional MIO files."
 * insert RequireMetaProfile(CodedContentDocument)
