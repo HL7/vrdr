@@ -9,5 +9,6 @@ Description: "A set of codes that reflect whether the decedent was pregnant at o
 * DeathPregnancyStatusCS#2 "Pregnant at time of death"
 * DeathPregnancyStatusCS#3 "Not pregnant, but pregnant within 42 days of death"
 * DeathPregnancyStatusCS#4 "Not pregnant, but pregnant 43 days to 1 year before death"
+* DeathPregnancyStatusCS#7 "Not reported on certificate"
 * DeathPregnancyStatusCS#9 "Unknown if pregnant within the past year"
 * $v3-NullFlavor#NA "Not applicable"
