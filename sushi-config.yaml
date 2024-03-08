@@ -65,24 +65,25 @@ menu:
 
 groups:
   DecedentDemographics:
-    name: A. Decedent Demographics
+    name: Decedent Demographics
     description: Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level. The information in this profile group are provided by a decedent informant.
     resources:
-    - BirthRecordIdentifier
-    - BirthRecordIdentifierChild
     - Decedent
     - DecedentAge
     - DecedentEducationLevel
     - DecedentMother
     - DecedentFather
     - DecedentSpouse
-    # - StructureDefinition/vrdr-decedent-usual-work
     - DecedentMilitaryService
-    # - StructureDefinition/vrdr-input-race-and-ethnicity
-    # - StructureDefinition/vrdr-emerging-issues
+  RecordLinkages:
+    name: Record Linkages
+    description: Record Linkages enable deaths to be linked to associated vital records reports
+    resources:
+    - BirthRecordIdentifier
+    - BirthRecordIdentifierChild
     - FetalDeathRecordIdentifier
   DeathInvestigation:
-    name: B. Death Investigation
+    name: Death Investigation
     description: Data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopsy was performed, an injury incident occurred, or a transportation event was involved. The details on the pronouncement performer can be provided using USCore Practitioner profile.
     resources:
     - AutopsyPerformedIndicator
@@ -95,7 +96,7 @@ groups:
     - SurgeryDate
     - TobaccoUseContributedToDeath 
   DeathCertification:
-    name: C. Death Certification
+    name: Death Certification
     description: Data related to the primary concern of the VRDR IG, Death Certification. In this group, the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).
     resources:
     - Certifier
@@ -104,14 +105,14 @@ groups:
     - DeathCertification 
     - MannerOfDeath 
   DecedentDisposition:
-    name: D. Decedent Disposition
+    name: Decedent Disposition
     description: Data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director. Additional content can be included using standard USCore profiles, and can be included to specify the Funeral Home Director, the Licensee, and the Mortician.
     resources:
     - DispositionLocation
     - DecedentDispositionMethod
     - FuneralHome
   CodedObservations:
-    name: E. Coded Observations
+    name: Coded Observations
     description: Coded Observations based on the submitted death record.
     resources:
     - ActivityAtTimeOfDeath
@@ -123,7 +124,7 @@ groups:
     # - StructureDefinition/vrdr-coded-race-and-ethnicity
     - CodingStatusValues
   DocumentsAndBundles:
-    name: F. Documents and Bundles
+    name: Documents and Bundles
     description: Documents and Bundles used to transmit death record content.
     resources:
     - CauseOfDeathCodedContentBundle
