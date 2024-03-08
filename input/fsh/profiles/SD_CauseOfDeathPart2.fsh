@@ -10,7 +10,7 @@ Profile: CauseOfDeathPart2
 Parent: Observation
 Id: vrdr-cause-of-death-part2
 Title: "Cause of Death Part 2"
-Description: "The Observation - Contributing Cause of Death Part 2 profile is used to identify factors contributing to the cause of death as asserted by the death certifier."
+Description: "The Contributing Cause of Death Part 2 (Observation) profile is used to identify factors contributing to the cause of death as asserted by the death certifier."
 //* insert RequireMetaProfile(CauseOfDeathPart2)
 * code only CodeableConcept
 * code = $loinc#69441-4 

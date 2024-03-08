@@ -2,7 +2,7 @@ Profile: DecedentEducationLevel
 Parent: ObservationEducationLevelVitalRecords
 Id: vrdr-decedent-education-level
 Title: "Decedent Education Level"
-Description: "Decedent Education Level (Observation)"
+Description: "Decedent Education Level (ObservationEducationLevelVitalRecords)"
 * insert RequireMetaProfile(DecedentEducationLevel)
 * status = #final (exactly)
 * code = $loinc#80913-7 

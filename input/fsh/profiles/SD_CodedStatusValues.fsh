@@ -3,7 +3,7 @@ Profile: CodingStatusValues
 Parent: Parameters
 Id: vrdr-coding-status-values
 Title:  "Coding Status Values"
-Description:   "Coding Status Values contains various status flags that result from the coding process"
+Description:   "Coding Status Values (Parameters) contains various status flags that result from the coding process"
 * insert RequireMetaProfile(CodingStatusValues)
 * insert ParameterSlicing
 * insert ParameterNameType(shipmentNumber, string, shipment number, shipment number)

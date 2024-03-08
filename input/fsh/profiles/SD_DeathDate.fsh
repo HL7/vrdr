@@ -11,7 +11,7 @@ Profile: DeathDate
 Parent: Observation
 Id: vrdr-death-date
 Title: "Observation - Death Date"
-Description: "This Observation provides the death date, death pronouncer, and date pronounced dead. If the actual date of death is known, set value to type dateTime. If the date of death is not known, and a range is known, set value to type Period.
+Description: "The Death Date profile (Observation) provides the death date, death pronouncer, and date pronounced dead. If the actual date of death is known, set value to type dateTime. If the date of death is not known, and a range is known, set value to type Period.
 This profile is designed to supplant the similar profiles in VRDR and MDI."
 * code = $loinc#81956-5
   * ^short = "Date and time of death [TimeStamp]"

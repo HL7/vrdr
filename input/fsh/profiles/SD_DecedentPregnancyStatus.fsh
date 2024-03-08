@@ -14,7 +14,7 @@ Profile: DecedentPregnancyStatus
 Parent: Observation
 Id: vrdr-decedent-pregnancy-status
 Title: "Observation - Decedent Pregnancy"
-Description: "This Observation provides an indication of the pregnancy status of the decedent.
+Description: "The Decedent Pregnancy Status profile (Observation) provides an indication of the pregnancy status of the decedent.
 This profile is designed to support VRDR and MDI"
 // * status 1..1 //in vrdr, status is fixed to final
 // * status only code

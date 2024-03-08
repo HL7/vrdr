@@ -10,7 +10,7 @@ Parent: Observation
 Id: vrdr-cause-of-death-part1
 Title: "Cause Of Death Part 1"
 // Description: "Cause of death Part 1 (Observation). Cause of death prior to submission of the completed death report.  Line number can be 1-4."
-Description: "The Observation - Cause of Death Part 1 profile reflects the ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. Line number can be 1-4 "
+Description: "The Cause of Death Part 1 (Observation) profile reflects the ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. Line number can be 1-4 "
 // * insert RequireMetaProfile(Profile: CauseOfDeathPart1)
 * code = $loinc#69453-9 
   * ^short = "Cause of death [US Standard Certificate of Death]"
