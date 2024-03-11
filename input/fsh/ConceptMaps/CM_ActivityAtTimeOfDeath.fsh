@@ -5,7 +5,7 @@ Description: "Concept Map for ActivityAtTimeOfDeath Value Set"
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(ActivityAtTimeOfDeath, ActivityAtTimeOfDeathVS)
-* insert AddGroup("TRX",[[Canonical(ActivityAtTimeOfDeathCS)]])
+* insert AddGroup($IJE,[[Canonical(ActivityAtTimeOfDeathCS)]])
 * insert MapConcept(#0, "While engaged in sports activity", #0,  "While engaged in sports activity")
 * insert MapConcept(#1, "While engaged in leisure activities.", #1,  "While engaged in leisure activities.")
 * insert MapConcept(#2, "While working for income", #2,  "While working for income")

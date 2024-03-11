@@ -10,6 +10,7 @@ Description: "Decedent Father (RelatedPersonParentVitalRecords)"
 //* patient 1..1
 //* patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * patient ^short = "Decedent"
+* relationship 1..1 
 * relationship = $v3-RoleCode#FTH // "father"
 * relationship.text = "Father"
 * relationship ^short = "relationship"
@@ -26,6 +27,7 @@ Description: "Decedent Mother (RelatedPersonParentVitalRecords)"
 //* patient 1..1
 * patient ^short = "Decedent"
 //* patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
+* relationship 1..1 
 * relationship = $v3-RoleCode#MTH // "mother"
 * relationship.text = "Mother"
 * name.family ^short = "Maiden name if name.use=maiden"
@@ -43,6 +45,7 @@ Description: "Decedent Spouse (USCoreRelatedPerson)"
 * patient only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * patient ^short = "Decedent"
 * relationship = $v3-RoleCode#SPS // "spouse"
+* relationship 1..1 
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
 * name.family ^short = "Maiden name if name.use=maiden"

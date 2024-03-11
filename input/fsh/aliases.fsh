@@ -43,6 +43,9 @@ Alias: $PHVS_Occupation_CDC_Census2018 = http://phinvads.cdc.gov/fhir/ValueSet/2
 Alias: $PHVS_Industry_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8027
 Alias: $PHVS_Occupation_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8026
 
+// Vital Records Common Library
+Alias: $IJE = http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr
+
 /// VRDR CS and VS
 //Alias: $Yes-No-Unknown = YesNoUnknownVS
 //Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS

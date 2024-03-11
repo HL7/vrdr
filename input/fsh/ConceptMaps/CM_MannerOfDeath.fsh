@@ -4,7 +4,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(MannerOfDeath, MannerOfDeathVS)
-* insert AddGroup("IJE",$sct)
+* insert AddGroup($IJE,$sct)
 * insert MapConcept( #N,  "Natural",#38605008, "Natural death")
 * insert MapConcept( #A,  "Accident",#7878000, "Accidental death")
 * insert MapConcept( #S,  "Suicide",#44301001, "Suicide")
