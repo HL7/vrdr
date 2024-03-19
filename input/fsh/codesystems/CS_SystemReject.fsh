@@ -5,6 +5,7 @@ Title: "System Reject"
 Description: "System Reject Code System"
 * ^caseSensitive = true
 * ^experimental = false
+* ^status = #active
 * #0 "Not Rejected" "Not Rejected"
 * #1 "MICAR Reject Dictionary Match" "MICAR Reject  Dictionary match"
 * #2 "ACME Reject" "ACME Reject"

@@ -8,3 +8,4 @@ Description: "Death Certificate Filing Formats"
 * #paper "Paper" "Paper mode"
 * #mixed "Mixed" "Mixed mode"
 * ^experimental = false
+* ^status = #active

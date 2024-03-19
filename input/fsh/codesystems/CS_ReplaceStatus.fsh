@@ -7,3 +7,4 @@ Description: "Replacement Status of Death Record Submission"
 * #original "original record"
 * #updated "updated record"
 * #updated_notforNCHS "updated record not for nchs"
+* ^status = #active

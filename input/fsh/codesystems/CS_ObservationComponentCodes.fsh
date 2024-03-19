@@ -9,6 +9,7 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #codedraceandethnicity "Coded Race and Ethnicity" "Coded Race and Ethnicity Data produced by NCHS from submitted death record"
 * #inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
 * ^experimental = false
+* ^status = #active
 
 CodeSystem: ComponentCS
 Id: vrdr-component-cs
@@ -22,6 +23,7 @@ Description: "Local Component Codes for observation components that lack an appr
 * #eCodeIndicator "e Code Indicator"
 * #wouldBeUnderlyingCauseOfDeathWithoutPregnancy "Would be underlying cause of death without pregnancy."
 * ^experimental = false
+* ^status = #active
 
 
 
@@ -34,3 +36,4 @@ Description: "Local Organization Types"
 * ^caseSensitive = false
 * #funeralhome "Funeral Home" "Funeral Home."
 * ^experimental = false
+* ^status = #active

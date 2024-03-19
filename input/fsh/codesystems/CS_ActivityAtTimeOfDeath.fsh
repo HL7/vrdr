@@ -3,6 +3,7 @@ Id: vrdr-activity-at-time-of-death-cs
 Title: "Activity at Time of Death"
 Description: "Activity at Time of Death Codesystem based on PHVS_ActivityType_NCHS"
 * ^caseSensitive = false
+* ^status = #active
 * #0 "While engaged in sports activity"
 * #1 "While engaged in leisure activities."
 * #2 "While working for income"

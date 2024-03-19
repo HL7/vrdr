@@ -11,3 +11,4 @@ Description: "Location Type Code System"
 * #disposition "Disposition Location"
 * #death "Death Location"
 * ^experimental = false
+* ^status = #active

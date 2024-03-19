@@ -9,3 +9,5 @@ Description: "Date of Death Determination Methods"
 * #presumed "Presumed Date of Death"
 * #court-appointed "Court Appointed"
 * ^experimental = false
+* ^status = #active
+
