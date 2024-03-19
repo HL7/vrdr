@@ -43,7 +43,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>2</td>
   <td>Sex</td>
   <td><a href='StructureDefinition-vrdr-decedent.html'>Decedent</a></td>
-  <td><a href='{{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-NVSS-SexAtDeath.html'>extension:NVSS-SexAtDeath</a></td>
+  <td><a href='StructureDefinition-NVSS-SexAtDeath.html'>extension:NVSS-SexAtDeath</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>3</td>
@@ -307,7 +307,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>34</td>
   <td>Were Autopsy Findings Available to Complete the Cause of Death?</td>
   <td><a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a></td>
-  <td>component[ autopsyResultsAvailable ].value</td>
+  <td>component[autopsyResultsAvailable].value</td>
 </tr>
 <tr>
   <td style='text-align: center'>35</td>
@@ -343,7 +343,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>40</td>
   <td>Place of Injury</td>
   <td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td>
-  <td>component[ placeOfInjury ].value.text</td>
+  <td>component[placeOfInjury].value.text</td>
 </tr>
 <tr>
   <td style='text-align: center'>41</td>
@@ -367,7 +367,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>44</td>
   <td>If Transportation Injury, Specify</td>
   <td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td>
-  <td>component[ transportationRole ].value</td>
+  <td>component[transportationRole].value</td>
 </tr>
 <tr>
   <td style='text-align: center'>45</td>

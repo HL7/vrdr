@@ -16,7 +16,7 @@ Description: "Decedent (PatientVitalRecords)"
 * identifier 1..*
 * identifier[SSN] ^short = "Decedent's Social Security Number"  // defined in USCore Patient
 * identifier contains SB 0..1 
-* identifier[SB].type = $v2-0203#SB"
+* identifier[SB].type = $v2-0203#SB
 * identifier[SB] ^short = "**Deprecated** Decedent's Social Security Number for Compatibility.  Use SSN."
 * name 1..*
 * birthDate ^short = "Date of Birth"
