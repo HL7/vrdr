@@ -35,3 +35,7 @@ Description: "Decedent (PatientVitalRecords)"
 // * contact.relationship from RelatedPersonRelationshipTypeVS (required)
 * contact.relationship.text ^short = "Informant Relationship (INFORMRELATE) - first 30 characters will be used"
 * deceasedBoolean = true  // Boolean only.  Death date should be passed in DeathDate Observation.
+* address.state ^short = "State/Jurisdiction of residence.  Provide both state and jurisdiction if different."
+* address.state.extension contains 
+    ExtensionLocationJurisdictionIdVitalRecords named residenceJurisdictionId 0..1  // jurisdiction_id  
+

@@ -1,6 +1,7 @@
 ### VRDR STU3 Draft (for May 2024 Ballot)
 The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.
 #### Content Changes
+* Support expression of state and jurisdiction for residence of decedent to support routing of records to jurisdiction [https://jira.hl7.org/browse/FHIR-42771]
 * Eliminated the requirement to specify [DeathCertification].category since it served no real purpose and used a vague and now inactive SNOMEDCT Code (103693007 "Diagnostic procedure (procedure)"). Allowed continued use of the inactive code for the required [DeathCertificate].event.code for compatibility, but added a preferred code (307930005 "Death certificate (record artifact)").
 * Documented the use of the Patient.identifier[SSN] slice for Decedent Social Security Number.  STU2.2 documented in narrative the use of the [SB] slice, but the examples used the [SSN] slice. 
 * Changed the valueset for gender used by the [NVSSSexAtDeath] to use the same codesystem used by USCore and VRCL.  Added a maximum binding for backward compability with STU2.2, and provided Concept Maps for mapping the old valuesets ([AdministrativeGenderOldCM]) and new valuesets([AdministrativeGenderCM]) to IJE.
