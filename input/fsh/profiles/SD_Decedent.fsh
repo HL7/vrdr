@@ -34,3 +34,4 @@ Description: "Decedent (PatientVitalRecords)"
 * contact.relationship only CodeableConcept
 // * contact.relationship from RelatedPersonRelationshipTypeVS (required)
 * contact.relationship.text ^short = "Informant Relationship (INFORMRELATE) - first 30 characters will be used"
+* deceasedBoolean = true  // Boolean only.  Death date should be passed in DeathDate Observation.
