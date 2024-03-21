@@ -1,14 +1,9 @@
 <div class="note-to-balloters" markdown="1">
 
-####  CI Build for Future STU3 Version of VRDR
-
 The version of VRDR in production use by NCHS and Jurisdictional Vital Records Offices is [VRDR STU2.2](https://hl7.org/fhir/us/vrdr/STU2.2/).
 
-This continuous integration build version of STU3 will evolve towards the candidate for a May 2024 STU3 ballot.
-
-Two types of changes are incorporated:
-
-* Minor extensions to the VRDR STU2.2 specification along with minor improvements in documentation.
+Two types of changes are incorporated into VRDR STU3:
+* Minor additions to the VRDR STU2.2 specification along with minor improvements in documentation.  The additions include support for linkages from maternal death records to associated fetal death or birth records, and support for exchange of coded industry and occupation data.
 * Refactoring of content driven by the [harmonization of vital records FHIR Implementation Guides](https://hl7.org/fhir/us/vr-common-library/2024Jan/vr_ig_harmonization.html).  This involves introduction of a dependency on the [Vital Records Common Library FHIR IG](https://hl7.org/fhir/us/vr-common-library/2024Jan) and loosening some unnecessary constraints so that VRDR resources can be reused within the [Medicolegal Death Investigation STU2 FHIR IG](https://build.fhir.org/ig/HL7/fhir-mdi-ig/) which is under development.
 
 See the [change log](change_log.html) for an updated list of changes.
