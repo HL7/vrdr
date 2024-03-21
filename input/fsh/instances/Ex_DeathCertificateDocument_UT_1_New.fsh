@@ -48,7 +48,7 @@ Description: "DeathCertificateUT-Example1"
 * author = Reference(PractitionerUT-Example1)
 * attester.mode = #legal
 * attester.party = Reference(PractitionerUT-Example1)
-* event.code = $sct#103693007 "Diagnostic procedure (procedure)"
+* event.code = $sct#307930005 "Death certificate (record artifact)"
 * event.detail = Reference(ProcedureDeathCertificationUT-Example1)
 * section[DecedentDemographics]
   * entry[0] = Reference(DecedentUT-Example1)

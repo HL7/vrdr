@@ -7,7 +7,6 @@ Description: "DeathCertification-Example1"
 * insert AddMetaProfile(DeathCertification)
 * identifier.value = "180"
 * status = #completed
-* category = $sct#103693007 "Diagnostic procedure"
 * code = $sct#308646001 "Death certification"
 * subject = Reference(Decedent-Example1)
 * performedDateTime = "2020-11-14T16:39:40-05:00"
@@ -23,7 +22,6 @@ Description: "DeathCertification-Example1"
 * insert AddMetaProfile(DeathCertification)
 * identifier.value = "180"
 * status = #completed
-* category = $sct#103693007 "Diagnostic procedure"
 * code = $sct#308646001 "Death certification"
 * subject = Reference(Decedent-Example1)
 * performedDateTime = "2020-11-14T16:39:40-05:00"

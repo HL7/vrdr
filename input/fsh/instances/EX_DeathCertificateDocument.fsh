@@ -53,6 +53,7 @@ Title: "DeathCertificate Example1"
 *  title = "Death Certificate"
 *  attester.mode = #legal
 *  attester.time = "2020-11-14T16:39:40-05:00"
+* event.code = $sct#307930005 "Death certificate (record artifact)"
 * insert addReferenceComposition(attester.party, Practitioner, Certifier-Example1)
 * insert addReferenceComposition(event.detail, Procedure, DeathCertification-Example1)
 *  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
@@ -106,6 +107,7 @@ Title: "DeathCertificate Example2"
 *  title = "Death Certificate"
 *  attester.mode = #legal
 *  attester.time = "2020-11-14T16:39:40-05:00"
+* event.code = $sct#307930005 "Death certificate (record artifact)"
 * insert addReferenceComposition(attester.party, Practitioner, Certifier-Example1)
 * insert addReferenceComposition(event.detail, Procedure, DeathCertification-Example1)
 *  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic

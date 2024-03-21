@@ -36,8 +36,8 @@ Description: "The body of the death certificate document (Composition)."
 * event only BackboneElement
 * event.code 1..1
 * event.code only CodeableConcept
-* event.code = $sct#103693007
-  * ^short = "Diagnostic procedure (procedure)"
+* event.code from DeathCertificationEventVS (preferred)
+* event.code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(DeathCertificationEventMaxVS)
 * event.detail 1..1
 * event.detail only Reference(DeathCertification)
 * section ^slicing.discriminator.type = #pattern
