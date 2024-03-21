@@ -1,14 +1,23 @@
-# ruby tools/makeVitalRecordsFormsMappingPage.rb input/mapping/BFDR_Forms_Mapping.csv
-# output file: generated/vrdr/vrdr_forms_mapping.md
+# NOTE: Before running this script, you should download a local copy of the latest spreadsheets from https://github.com/nightingaleproject/vital_records_sheets using either method below:
+
+#method 1 (Windows PC):
+#Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/Forms_Mapping.csv?raw=true -Outfile "./input/mapping/Forms_Mapping.csv"
+
+#method 2 (MAC):
+# require 'open-uri'
+# download1 = URI.open('https://github.com/nightingaleproject/vital_records_sheets/blob/main/Forms_Mapping.csv?raw=true')
+# IO.copy_stream(download1, 'input/mapping/Forms_Mapping.csv')
+
+#run:
+#ruby tools/makeVitalRecordsFormsMappingPage.rb input/mapping/Forms_Mapping.csv
+
+#output file: generated/VRDR/vrdr_forms_mapping.md. Copy or move generated file to /input/pagecontent in order for updated page to be included in IG
 
 require "json"
 require 'open-uri'
 require "pry"
 require "roo"
 require "csv"
-
-# download2 = URI.open('https://github.com/nightingaleproject/vital_records_sandbox_ig/blob/main/input/mapping/BFDR_Forms_Mapping.csv?raw=true')
-# IO.copy_stream(download2, 'input/mapping/BFDR_Forms_Mapping.csv')
 
 def get_file_type(file)
   File.extname(file).gsub(".", "")
