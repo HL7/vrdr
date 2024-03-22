@@ -39,4 +39,17 @@ NCHS submission requires only a last name. Last name is required for NCHS submis
 ### Decedent Gender
 Profile conformance requires that gender be provided.   A value of 'unknown' will satisfy this requirement.   There is no IJE field that is mapped to the Decedent.gender field.
 
+### Birthplace State and Country
+Recording birthplace state and country is described in [Instruction Manual Part 8a (2004), Section I](https://www.cdc.gov/nchs/data/dvs/imp8a_printversion_112706.pdf).
+
+| **address.country** | **address.state** | **BPLACE_CNT** | **BPLACE_ST** | **Comment** | 
+| ------------------- | ----------------- | -------------- | ------------- | ----------- | 
+| US or CA | Valid 2-letter state | Same as address.country | Same as address.state | &nbsp; | 
+| US or CA | Blank | Same as address.country | Blank | &nbsp; |
+| US or CA | UNK | Same as address.country | ZZ  | UNK is equivalent to ZZ. |
+| US or CA | Other content | Same as address.country | ZZ  | &nbsp; | 
+| Other valid country code (except ZZ) | All values. | Same as address.country | XX  | &nbsp; |
+| ZZ or other values | All values. | ZZ  | ZZ  | ZZ is a valid country code in the valueset. | 
+{: .grid }
+
 {% include markdown-link-references.md %}
