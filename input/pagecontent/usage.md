@@ -44,12 +44,12 @@ Recording birthplace state and country is described in [Instruction Manual Part 
 
 | **address.country** | **address.state** | **BPLACE_CNT** | **BPLACE_ST** | **Comment** | 
 | ------------------- | ----------------- | -------------- | ------------- | ----------- | 
-| US or CA | Valid 2-letter state | Same as address.country | Same as address.state | &nbsp; | 
-| US or CA | Blank | Same as address.country | Blank | &nbsp; |
-| US or CA | UNK | Same as address.country | ZZ  | UNK is equivalent to ZZ. |
-| US or CA | Other content | Same as address.country | ZZ  | &nbsp; | 
-| Other valid country code (except ZZ) | All values. | Same as address.country | XX  | &nbsp; |
-| ZZ or other values | All values. | ZZ  | ZZ  | ZZ is a valid country code in the valueset. | 
+| US or CA | Valid 2-letter state | Same as FHIR | Same as FHIR | &nbsp; 
+| US  | Invalid code, Blank, or UNK | US  | ZZ  |  UNK is equivalent to ZZ. | 
+| CA  | Invalid, Blank, or UNK | CA  | XX  |  | 
+| Other valid country code (except ZZ, and obviously US and CA) | All values. | Same as FHIR | XX  |  | 
+| ZZ or other invalid values | All values. | ZZ  | ZZ  | ZZ is a valid country code in the valueset. | 
 {: .grid }
 
 {% include markdown-link-references.md %}
+
