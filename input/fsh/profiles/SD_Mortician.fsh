@@ -48,13 +48,12 @@ Description: "Mortician.
 Note This profile is not needed for submission of records to NCHS but may be relevant for other use cases."
 * insert VRDRPractitioner(Mortician)
 
-Extension: PractitionerRoleDeathMortician
-Id: practitioner-role-mortician
-Title: "Practitioner Role - Mortician"
-Description: "Used to indicate that an instance relates to the mortician."
+Extension: PractitionerRole
+Id: practitioner-role
+Title: "Practitioner Role"
+Description: "Used to indicate the role played by a practitioner to facilitate simple FHIRPath-based queries."
 * insert ExtensionContextResource(Practitioner)
 * value[x] 1..1
 * value[x] only code
-* valueCode = #mortician 
 
 

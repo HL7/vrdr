@@ -19,4 +19,5 @@ RuleSet: VRDRPractitioner(role)
 * address.state ^short = "State"
 * address.postalCode ^short = "Zipcode"
 * address.country ^short = "Country"
-* extension contains PractitionerRoleDeath{role}  named role 1..1
+* extension contains PractitionerRole  named role 1..1
+* extension[PractitionerRole].valueCode = #{role}
