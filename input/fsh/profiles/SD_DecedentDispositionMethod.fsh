@@ -16,9 +16,8 @@ Description: "Decedent Disposition Method (Observation)"
 * subject 1..1
 * subject only Reference(PatientVitalRecords) //generalized to PatientVitalRecords
 * performer ^short = "Mortician"
-* performer ^definition = "Performer is optional, but if provided should be the Mortician using a USCorePractitioner."
-//  Performer is optional, and if recorded should reference Mortician. Shift to IJE vs DACF focus.
-//* performer only Reference(Mortician)
+* performer ^definition = "Performer is optional, but if provided should us the the Mortician Profile."
+* performer only Reference(Mortician)
 * value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from MethodOfDispositionVS (required)
