@@ -37,7 +37,7 @@
 </tr>
 <tr><td> <a href='StructureDefinition-vrdr-birth-record-identifier-child.html'>BirthRecordIdentifierChild</a> </td><td>Maternal Death Linkeage</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-fetal-death-record-identifier.html'>FetalDeathRecordIdentifier</a> </td><td>Maternal Death Linkeage</td></tr>
-<tr><td> <a href='StructureDefinition-industry-occupation-coded-content-bundle.html'>IndustryOccupationCodedContentBundle</a> <td>Support exchange of Coded Industry and Occupation</td></tr>
+<tr><td> <a href='StructureDefinition-industry-occupation-coded-content-bundle.html'>IndustryOccupationCodedContentBundle</a></td> <td>Support exchange of Coded Industry and Occupation</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-mortician.html'>Mortician</a> </td><td>Support of Funeral Home use cases</td></tr>
 </tbody>
 </table>
