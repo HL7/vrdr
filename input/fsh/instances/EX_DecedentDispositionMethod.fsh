@@ -11,7 +11,7 @@ Description: "DecedentDispositionMethod-Example1"
 
 /*  Mortician */
 Instance: Mortician-Example1
-InstanceOf: USCorePractitionerProfile
+InstanceOf: Mortician 
 Usage: #example
 Description: "Mortician-Example1"
 * insert AddMetaProfile(USCorePractitionerProfile)
