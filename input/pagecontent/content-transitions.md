@@ -26,6 +26,7 @@
 {% include transitions_documentation.md %}
 <br/><br/>
 
+
 ### New STU3 Profiles
 
 <table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
@@ -40,6 +41,7 @@
 <tr><td> <a href='StructureDefinition-vrdr-mortician.html'>Mortician</a> </td><td>Support of Funeral Home use cases</td></tr>
 </tbody>
 </table>
+
 
 ### STU3 Profiles
 
