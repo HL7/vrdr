@@ -1,6 +1,6 @@
 CodeSystem: TransaxConversionCS
 Id: vrdr-transax-conversion-cs
-Title: "Transax Conversion"
+Title: "Transax Conversion CodeSystem"
 Description: "Transax Conversion Code System"
 * ^caseSensitive = true
 * ^experimental = false

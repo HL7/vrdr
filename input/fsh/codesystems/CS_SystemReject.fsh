@@ -1,7 +1,7 @@
 
 CodeSystem: SystemRejectCS
 Id: vrdr-system-reject-cs
-Title: "System Reject"
+Title: "System Reject Code System"
 Description: "System Reject Code System"
 * ^caseSensitive = true
 * ^experimental = false

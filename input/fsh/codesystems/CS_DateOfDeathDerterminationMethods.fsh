@@ -1,7 +1,7 @@
 CodeSystem: DateOfDeathDeterminationMethodsCS
 Id: vrdr-date-of-death-determination-methods-cs
 Title: "Date of Death Determination Methods"
-Description: "Date of Death Determination Methods"
+Description: "Date of Death Determination Methods CodeSystem"
 * ^content = #complete
 * ^caseSensitive = false
 * #exact "Exact"

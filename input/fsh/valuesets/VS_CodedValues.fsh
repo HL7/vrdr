@@ -1,6 +1,6 @@
 ValueSet: IntentionalRejectVS
 Id: vrdr-intentional-reject-vs
-Title: "Intentional Reject"
+Title: "Intentional Reject ValueSet"
 Description: "Intentional Reject ValueSet.
 
 Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."
@@ -39,7 +39,7 @@ Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html)."
 
 ValueSet: ActivityAtTimeOfDeathVS
 Id: vrdr-activity-at-time-of-death-vs
-Title: "Activity at Time of Death VS"
+Title: "Activity at Time of Death ValueSet"
 Description: "Activity at Time of Death.
 
 Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."
@@ -56,7 +56,7 @@ Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."
 
 ValueSet: ICD10CausesOfDeathVS
 Id: vrdr-icd10-causes-of-death-vs
-Title: "ICD10 Causes of Death VS"
-Description: "ICD10 Causes of Death VS"
+Title: "ICD10 Causes of Death ValueSet"
+Description: "ICD10 Causes of Death ValueSet"
 * include codes from system $icd10
 * ^experimental = false

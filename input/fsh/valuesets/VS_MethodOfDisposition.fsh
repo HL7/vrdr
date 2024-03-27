@@ -1,6 +1,6 @@
 ValueSet: MethodOfDispositionVS
 Id: vrdr-method-of-disposition-vs
-Title: "Method of Disposition"
+Title: "Method of Disposition ValueSet"
 Description: "The set of codes used to indicate the method used to dispose of the decedents remains.
 
 Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html)."

@@ -1,6 +1,6 @@
 ValueSet: ContributoryTobaccoUseVS
 Id: vrdr-contributory-tobacco-use-vs
-Title: "Contributory Tobacco Use"
+Title: "Contributory Tobacco Use ValueSet"
 Description: "Did Tobacco Use Contribute to Death
 
 Mapping to IJE codes [here](ConceptMap-ContributoryTobaccoUseCM.html)."

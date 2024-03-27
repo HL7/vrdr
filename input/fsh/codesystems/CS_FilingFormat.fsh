@@ -2,7 +2,7 @@
 CodeSystem: FilingFormatCS
 Id: vrdr-filing-format-cs
 Title: "Filing Formats"
-Description: "Death Certificate Filing Formats"
+Description: "Death Certificate Filing Formats CodeSystem"
 * ^caseSensitive = false
 * #electronic "Electronic" "Electronic mode"
 * #paper "Paper" "Paper mode"

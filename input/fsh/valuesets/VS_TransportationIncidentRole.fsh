@@ -1,6 +1,6 @@
 ValueSet: TransportationIncidentRoleVS
 Id: vrdr-transportation-incident-role-vs
-Title: "Transportation Incident Role"
+Title: "Transportation Incident Role ValueSet"
 Description: "Role of the decedent in a transportation incident resulting in a death-related injury.
 
 Mapping to IJE codes [here](ConceptMap-TransportationIncidentRoleCM.html)."

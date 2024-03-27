@@ -1,7 +1,7 @@
 CodeSystem: DeathPregnancyStatusCS
 Id: CodeSystem-death-pregnancy-status
-Title: "Death Pregnancy Status"
-Description: "Codes that reflect whether the decedent was pregnant at or around the time of death. Includes the concepts defined in [Pregnancy Status (NCHS)[2.16.840.1.114222.4.11.6003]](https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003) which are from the [PHIN VS (CDC Local Coding System)[2.16.840.1.114222.4.5.274]](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.274)"
+Title: "Death Pregnancy Status Codesystem"
+Description: "Codes that reflect whether the decedent was pregnant at or around the time of death."
 * ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
