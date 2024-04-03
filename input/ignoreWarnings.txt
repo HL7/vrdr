@@ -25,7 +25,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/vrdr/StructureD
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier-child').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-fetal-death-record-identifier').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# May be best practice, but not needed in this IG
+# May be best practice, but not needed in this IG.  For vital records reporting the performer and effective time are  either/or/both not known, or not important.  These are not really clinical observations, but abstracted facts represented using Observation resources.
 Best Practice Recommendation: In general, all observations should have a performer
 Best Practice Recommendation: In general, all observations should have an effective[x] ()
 
@@ -131,7 +131,7 @@ WARNING: ConceptMap/TransportationIncidentRoleCM: ConceptMap.group[1].element[0]
 WARNING: ConceptMap/TransportationIncidentRoleCM: ConceptMap.group[1].element[1].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/TransportationIncidentRoleCM: ConceptMap.group[1].element[2].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 
-# Off-base info message, since there is no reference to the covid-expanded ICD10
+# Off-base info message, since there is no reference to the covid-expanded ICD10 -- reported https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Info.20message.20about.20ICD10.20References
 INFORMATION: Bundle/CauseOfDeathCodedContentBundle-Example1: Bundle.entry[1].resource.value.ofType(CodeableConcept): Reference to experimental CodeSystem http://hl7.org/fhir/sid/icd-10|2019-covid-expanded
 INFORMATION: Bundle/CauseOfDeathCodedContentBundle-Example1: Bundle.entry[1].resource/*Observation/ManualUnderlyingCauseOfDeath-Example1*/.value.ofType(CodeableConcept): Reference to experimental CodeSystem http://hl7.org/fhir/sid/icd-10|2019-covid-expanded
 INFORMATION: Bundle/CauseOfDeathCodedContentBundle-Example1: Bundle.entry[2].resource.value.ofType(CodeableConcept): Reference to experimental CodeSystem http://hl7.org/fhir/sid/icd-10|2019-covid-expanded
@@ -163,7 +163,7 @@ INFORMATION: Observation/ManualUnderlyingCauseOfDeath-Example1: Observation.valu
 INFORMATION: Observation/RecordAxisCauseOfDeath-Example1: Observation.value.ofType(CodeableConcept): Reference to experimental CodeSystem http://hl7.org/fhir/sid/icd-10|2019-covid-expanded
 INFORMATION: Observation/RecordAxisCauseOfDeath-Example2: Observation.value.ofType(CodeableConcept): Reference to experimental CodeSystem http://hl7.org/fhir/sid/icd-10|2019-covid-expanded
 
-# Incomplete Source Code Systems...nothing I can do about it.
+# Incomplete Source Code Systems...these codes have all been used in previous publications and are in production use. They have been thoroughly vetted.
 WARNING: ConceptMap/CertifierTypesCM: ConceptMap.group[0].target: Target Code System http://snomed.info/sct doesn't have all content (content = not-present), so the target codes cannot be checked
 WARNING: ConceptMap/ContributoryTobaccoUseCM: ConceptMap.group[0].target: Target Code System http://snomed.info/sct doesn't have all content (content = not-present), so the target codes cannot be checked
 WARNING: ConceptMap/MannerOfDeathCM: ConceptMap.group[0].target: Target Code System http://snomed.info/sct doesn't have all content (content = not-present), so the target codes cannot be checked
@@ -199,7 +199,7 @@ INFORMATION: Location/DispositionLocation-Example1: Location.physicalType: Refer
 # Value set too large -- out of my control 
 INFORMATION: ValueSet.where(id = 'vrdr-icd10-causes-of-death-vs'): The value set expansion is too large, and only a subset has been displayed
 
-# COntent cannot be checked -- It is OK
+# This codesystem is a placeholder codesystem representing a large collection of unpublished codes used by CDC for vital records purposes.   We use these conceptmaps in our software to translate between the FHIR and IJE worlds, so these codes have been thoroughly vetted over two years.
 WARNING: ConceptMap/ActivityAtTimeOfDeathCM: ConceptMap.group[0].source: Source Code System http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr doesn't have all content (content = not-present), so the source codes cannot be checked
 WARNING: ConceptMap/AdministrativeGenderCM: ConceptMap.group[0].source: Source Code System http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr doesn't have all content (content = not-present), so the source codes cannot be checked
 WARNING: ConceptMap/AdministrativeGenderCM: ConceptMap.group[1].source: Source Code System http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr doesn't have all content (content = not-present), so the source codes cannot be checked
@@ -230,7 +230,7 @@ WARNING: ConceptMap/TransaxConversionCM: ConceptMap.group[0].source: Source Code
 WARNING: ConceptMap/TransportationIncidentRoleCM: ConceptMap.group[0].source: Source Code System http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr doesn't have all content (content = not-present), so the source codes cannot be checked
 WARNING: ConceptMap/TransportationIncidentRoleCM: ConceptMap.group[1].source: Source Code System http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr doesn't have all content (content = not-present), so the source codes cannot be checked
 
-# Does not match any known slice.   Slicing is open.
+# Does not match any defined slice, but these slices are all correct and expected. 
 INFORMATION: Bundle/DeathCertificateDocument-Example1: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/DeathCertificateDocument-Example1: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/DeathCertificateDocument-Example1: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
