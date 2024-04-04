@@ -182,7 +182,8 @@ Description: "EducationUT-Example1"
 * subject = Reference(DecedentUT-Example1)
 * status = #final
 * code = $loinc#80913-7 "Highest level of education [US Standard Certificate of Death]"
-* valueCodeableConcept.extension[bypassEditFlag].valueCodeableConcept = CodeSystemEditFlagsVitalRecords#0 "Edit Passed"
+// comment out for ballot
+//  * valueCodeableConcept.extension[bypassEditFlag].valueCodeableConcept = CodeSystemEditFlagsVitalRecords#0 "Edit Passed"
 * valueCodeableConcept = $v3-EducationLevel#ELEM "Elementary School"
 
 Instance: FatherUT-Example1
