@@ -6,6 +6,8 @@ Two types of changes are incorporated into VRDR STU3:
 * Minor additions to the VRDR STU2.2 specification along with minor improvements in documentation.  The additions include support for linkages from maternal death records to associated fetal death or birth records, and support for exchange of coded industry and occupation data.
 * Refactoring of content driven by the [harmonization of vital records FHIR Implementation Guides](https://hl7.org/fhir/us/vr-common-library/2024Jan/vr_ig_harmonization.html).  This involves introduction of a dependency on the [Vital Records Common Library FHIR IG](https://hl7.org/fhir/us/vr-common-library/2024Jan) and loosening some unnecessary constraints so that VRDR resources can be reused within the [Medicolegal Death Investigation STU2 FHIR IG](https://build.fhir.org/ig/HL7/fhir-mdi-ig/) which is under development.
 
+The process of bringing VRDR STU3 to ballot prior to publication of VRCL STU2 introduces the need for temporary incorporation of VRCL content developed since the ballot into VRDR STU3.  This temporary artifacts are listed [here](artifacts.html#temporary-for-stu3-ballot). When published, VRDR STU3 will not include this content, and will refer to these resources defined in VRCL STU2.
+
 See the [change log](change_log.html) for an updated list of changes.
   
 </div><!-- note-to-balloters -->
