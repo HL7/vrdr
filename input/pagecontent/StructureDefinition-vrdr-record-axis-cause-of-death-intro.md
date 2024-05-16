@@ -14,7 +14,7 @@ In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a fla
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 

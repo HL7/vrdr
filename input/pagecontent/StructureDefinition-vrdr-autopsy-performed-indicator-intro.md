@@ -6,7 +6,7 @@ The Autopsy Performed Indicator profile captures the following values:
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 
@@ -79,7 +79,7 @@ The Autopsy Performed Indicator profile captures the following values:
 <tr>
   <td style='text-align: center'>34</td>
   <td>Were Autopsy Findings Available to Complete the Cause of Death?</td>
-  <td>component[ autopsyResultsAvailable ].value</td>
+  <td>component[autopsyResultsAvailable].value</td>
   <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
 </tr>
 </tbody>

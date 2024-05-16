@@ -5,7 +5,7 @@
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 
@@ -32,7 +32,7 @@
   <td>PREG</td>
   <td>value</td>
   <td>codeable</td>
-  <td><a href='ValueSet-ValueSet-death-pregnancy-status.html'>DeathPregnancyStatusVS</a></td>
+  <td><a href='ValueSet-vrdr-death-pregnancy-status-vs.html'>DeathPregnancyStatusVS</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
