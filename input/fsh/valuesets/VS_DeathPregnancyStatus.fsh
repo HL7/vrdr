@@ -1,5 +1,5 @@
 ValueSet: DeathPregnancyStatusVS
-Id: ValueSet-death-pregnancy-status
+Id: vrdr-death-pregnancy-status-vs
 Title: "Death Pregnancy Status ValueSet"
 Description: "A set of codes that reflect whether the decedent was pregnant at or around the time of death. Based on [Pregnancy Status (NCHS)[2.16.840.1.114222.4.11.6003]](https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003)."
 * ^status = #active
