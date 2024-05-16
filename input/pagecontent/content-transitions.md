@@ -151,7 +151,7 @@
 <tr><td> <a href='ValueSet-vrdr-system-reject-vs.html'>SystemRejectVS</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/ValueSet-vrdr-system-reject-vs.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='ValueSet-vrdr-transax-conversion-vs.html'>TransaxConversionVS</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/ValueSet-vrdr-transax-conversion-vs.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='ValueSet-vrdr-transportation-incident-role-vs.html'>TransportationIncidentRoleVS</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/ValueSet-vrdr-transportation-incident-role-vs.html'>VRDR</a> </td><td>-</td></tr>
-<tr><td> <a href='ValueSet-ValueSet-death-pregnancy-status.html'>DeathPregnancyStatusVS</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/ValueSet-vrdr-pregnancy-status-vs.html'>VRDR</a> </td><td>-</td></tr>
+<tr><td> <a href='ValueSet-vrdr-death-pregnancy-status-vs.html'>DeathPregnancyStatusVS</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/ValueSet-vrdr-pregnancy-status-vs.html'>VRDR</a> </td><td>-</td></tr>
 </tbody>
 </table>
 
