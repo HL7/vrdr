@@ -5,7 +5,7 @@ The BirthRecordIdentifier captures the key identifiers for the Decedent's birth 
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 

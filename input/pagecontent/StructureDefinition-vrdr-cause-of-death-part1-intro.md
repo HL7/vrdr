@@ -6,7 +6,7 @@ The <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> is optionall
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 

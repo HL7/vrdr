@@ -5,7 +5,7 @@
  .context-menu {cursor: context-menu; color: #438bca;}
  .context-menu:hover {opacity: 0.5;}
 </style>
-<details open>
+<details>
 
 <summary>
 
@@ -146,7 +146,7 @@
 <tr>
   <td style='text-align: center'>40</td>
   <td>Place of Injury</td>
-  <td>component[ placeOfInjury ].value.text</td>
+  <td>component[placeOfInjury].value.text</td>
   <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@
 <tr>
   <td style='text-align: center'>44</td>
   <td>If Transportation Injury, Specify</td>
-  <td>component[ transportationRole ].value</td>
+  <td>component[transportationRole].value</td>
   <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
 </tr>
 </tbody>

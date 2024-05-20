@@ -79,7 +79,7 @@
 [MethodOfDispositionVS]: ValueSet-vrdr-method-of-disposition-vs.html
 [PlaceOfDeathVS]: ValueSet-vrdr-place-of-death-vs.html
 [PlaceOfInjuryVS]: ValueSet-vrdr-place-of-injury-vs.html
-[DeathPregnancyStatusVS]: ValueSet-ValueSet-death-pregnancy-status.html
+[DeathPregnancyStatusVS]: ValueSet-vrdr-death-pregnancy-status-vs.html
 [TransportationIncidentRoleVS]: ValueSet-vrdr-transportation-incident-role-vs.html
 [YesNoNotApplicableVS]: ValueSet-vrdr-yes-no-not-applicable-vs.html
 [YesNoUnknownNotApplicableVS]: ValueSet-vrdr-yes-no-unknown-not-applicable-vs.html
