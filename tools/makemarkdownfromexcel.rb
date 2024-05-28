@@ -275,7 +275,11 @@ profiles["EntityAxisCauseOfDeath"] = {
 }
 profiles["PlaceOfInjury"] = {
   :out => "StructureDefinition-vrdr-place-of-injury-intro.md",
-  :desc => "",
+  :desc => "This profile is used to provide the coded Place of Injury.  The Observation.value must provide a value from [PlaceOfInjuryVS] which corresponds to 
+  the TRX codes provided by NCHS.  In addition, backwards compatibility with the SuperMICAR places
+  of injury is supported with an optional code from the [PlaceOfInjuryOtherVS] valueset, which corresponds to additional place values.   The SuperMICAR value
+  should only be provided when the coded place is 'Other'.  This backwards compatibility is provided for the convenience of jurisdictions.
+  NCHS does not generate SuperMICAR codes.",
 }
 profiles["ObservationCodedRaceAndEthnicityVitalRecords"] = {
   :out => "StructureDefinition-vrdr-coded-race-and-ethnicity-intro.md",
