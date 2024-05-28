@@ -17,3 +17,20 @@ Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."
 * $loinc#LA14093-1 "Unspecified"
 * $v3-NullFlavor#OTH "Other"
 * ^experimental = false
+
+ValueSet: PlaceOfInjuryOtherVS
+Id: vrdr-place-of-injury-other-vs
+Title: "Place of Injury - Other ValueSet"
+Description: "Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is 'Other'.
+
+Mapping to SuperMicar codes [here](ConceptMap-PlaceOfInjuryOtherCM.html)."
+
+* SuperMicarPlaceOfInjuryCS#D "Military Residence"
+* SuperMicarPlaceOfInjuryCS#E "Hospital"
+* SuperMicarPlaceOfInjuryCS#H "Garage/Warehouse"
+* SuperMicarPlaceOfInjuryCS#J "Mine/Quarry"
+* SuperMicarPlaceOfInjuryCS#L "Public Recreation Area"
+* SuperMicarPlaceOfInjuryCS#M "Institutional Recreation Area"
+* SuperMicarPlaceOfInjuryCS#P "Other specified place"
+* ^experimental = false
+
