@@ -201,7 +201,7 @@
 | 104 | Manual Underlying Cause  | MAN_UC| [ManualUnderlyingCauseOfDeath]| |value | codeable | [ICD10CausesOfDeathVS] | 
 | 108 | Record-axis codes | RAC| [RecordAxisCauseOfDeath]| |Each entry is a 3-tuple (value, component[position], component[WouldBeUnderlyingCauseOfDeathWithoutPregnancy]) | codeable | [ICD10CausesOfDeathVS] | 
 | 106 | Entity-axis codes | EAC| [EntityAxisCauseOfDeath]| |Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]   | codeable | [ICD10CausesOfDeathVS] | 
-| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | a code from [PlaceOfInjuryVS] is required, an optional code from [PlaceOfInjuryOtherVS] can also be provided. | 
+| 103 | Place of Injury (computer generated) | INJPL| [PlaceOfInjury]| |value | codeable | A code from [PlaceOfInjuryVS] is required, an optional code from [PlaceOfInjuryOtherVS] can also be provided when the primary code is Other. | 
 | 91 | Receipt date -- Year | R_YR| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 92 | Receipt date -- Month | R_MO| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
 | 93 | Receipt date -- Day | R_DY| [CodingStatusValues]| |parameter[receiptDate].value | date | See [PartialDatesAndTimes] | 
