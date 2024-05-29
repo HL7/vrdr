@@ -12,6 +12,7 @@ Description: "CauseofDeathCodedContentBundle-Example1"
 * insert AddMetaProfile(CauseOfDeathCodedContentBundle)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
 * insert Identifiers2020NY000182
+* identifier.extension[stateSpecificField].valueString = "state specific content"
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Observation, ActivityAtTimeOfDeath-Example1)
 * insert addentry(Observation, ManualUnderlyingCauseOfDeath-Example1)
