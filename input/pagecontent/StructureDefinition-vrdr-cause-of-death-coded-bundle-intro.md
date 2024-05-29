@@ -27,5 +27,6 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
 | 3 | Certificate Number | FILENO| |identifier.extension[ certificateNumber].value | string(6) | Six digit number.  Leading zeroes optional. | 
 | 5 | Auxiliary State file number | AUXNO| |identifier.extension[auxiliaryStateIdentifier1].value | string(12) | 12 digit number | 
 | 121 | Auxiliary State file number | AUXNO2| |identifier.extension[auxiliaryStateIdentifier2].value | string(12) | - | 
+| 122 | State Specific Data  | STATESP| |identifier.extension[ stateSpecificField] | string(30) | - | 
 {: .grid }
 {% include markdown-link-references.md %}
