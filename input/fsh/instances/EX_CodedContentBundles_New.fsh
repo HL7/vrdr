@@ -11,7 +11,9 @@ Usage: #example
 Description: "CauseofDeathCodedContentBundle-Example1"
 * insert AddMetaProfile(CauseOfDeathCodedContentBundle)
 * identifier.system = "http://nchs.cdc.gov/vrdr_id"
-* insert Identifiers2020NY000182
+* identifier.value = "2020NY000182"
+* identifier.extension[certificateNumber].valueString = "000182"
+* identifier.extension[auxiliaryStateIdentifier1].valueString = "000000000001"
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Observation, ActivityAtTimeOfDeath-Example1)
 * insert addentry(Observation, ManualUnderlyingCauseOfDeath-Example1)
