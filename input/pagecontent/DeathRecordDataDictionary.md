@@ -198,6 +198,23 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <tr><td style='text-align: center;'>124</td><td>Surgery Date--day</td><td style='text-align: center;'>SUR_DY</td><td><a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a></td><td>value</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
 <tr><td style='text-align: center;'>125</td><td>Surgery Date--year</td><td style='text-align: center;'>SUR_YR</td><td><a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a></td><td>value</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
 <tr><td style='text-align: center;'>111</td><td>Did Tobacco Use Contribute to Death?</td><td style='text-align: center;'>TOBAC</td><td><a href='StructureDefinition-vrdr-tobacco-use-contributed-to-death.html'>TobaccoUseContributedToDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-contributory-tobacco-use-vs.html'>ContributoryTobaccoUseVS</a></td></tr>
+</tbody>
+</table>
+### Coded Content (Death Cause or Condition)
+
+*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
+
+<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
+<tbody>
+<tr>
+<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
+<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
+<td style='background-color:#98c1d9;'><b>Field</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
+<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
+</tr>
 <tr><td style='text-align: center;'>120</td><td>Activity at time of death (computer generated)</td><td style='text-align: center;'>INACT</td><td><a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-activity-at-time-of-death-vs.html'>ActivityAtTimeOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>105</td><td>ACME Underlying Cause</td><td style='text-align: center;'>ACME_UC</td><td><a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>104</td><td>Manual Underlying Cause </td><td style='text-align: center;'>MAN_UC</td><td><a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
@@ -215,6 +232,23 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <tr><td style='text-align: center;'>3</td><td>Certificate Number</td><td style='text-align: center;'>FILENO</td><td><a href='StructureDefinition-vrdr-cause-of-death-coded-bundle.html'>CauseOfDeathCodedContentBundle</a></td><td>identifier.extension[certificateNumber].value</td><td>string(6)</td><td>-</td></tr>
 <tr><td style='text-align: center;'>5 or 121</td><td>Auxiliary State file number</td><td style='text-align: center;'>AUXNO or AUXNO2</td><td><a href='StructureDefinition-vrdr-cause-of-death-coded-bundle.html'>CauseOfDeathCodedContentBundle</a></td><td>identifier.extension[auxiliaryStateIdentifier1].value</td><td>string(12)</td><td>When the Jurisdiction provides AUXNO2, it will be stored in this field.  If the Jurisdiction only provides AUXNO, that value will be stored in this field</td></tr>
 <tr><td style='text-align: center;'>NA</td><td>Death Record Identifier</td><td style='text-align: center;'>*NO IJE MAPPING*</td><td><a href='StructureDefinition-vrdr-cause-of-death-coded-bundle.html'>CauseOfDeathCodedContentBundle</a></td><td>identifier.value</td><td>string(12)</td><td>YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number</td></tr>
+</tbody>
+</table>
+### Coded Content (Demographic)
+
+*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
+
+<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
+<tbody>
+<tr>
+<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
+<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
+<td style='background-color:#98c1d9;'><b>Field</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
+<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
+</tr>
 <tr><td style='text-align: center;'>3</td><td>Certificate Number</td><td style='text-align: center;'>FILENO</td><td><a href='StructureDefinition-vrdr-demographic-coded-bundle.html'>DemographicCodedContentBundle</a></td><td>identifier.extension[certificateNumber].value</td><td>string(6)</td><td>-</td></tr>
 <tr><td style='text-align: center;'>5</td><td>Auxiliary State file number</td><td style='text-align: center;'>AUXNO</td><td><a href='StructureDefinition-vrdr-demographic-coded-bundle.html'>DemographicCodedContentBundle</a></td><td>identifier.extension[auxiliaryStateIdentifier1].value</td><td>string(12)</td><td>-</td></tr>
 <tr><td style='text-align: center;'>121</td><td>Auxiliary State file number</td><td style='text-align: center;'>AUXNO2</td><td><a href='StructureDefinition-vrdr-demographic-coded-bundle.html'>DemographicCodedContentBundle</a></td><td>identifier.extension[auxiliaryStateIdentifier2].value</td><td>string(12)</td><td>-</td></tr>

@@ -66,13 +66,13 @@ def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
     # if hHeading == "### Natality (Live Birth) IJE Mapping" || hHeading == "### Fetal Death IJE Mapping"
     #     pOutputFile.puts "*IJE Names in <span style='color:darkviolet'>purple</span> text indicate element is unique to the Jurisdiction report, otherwise element is used for both Jurisdiction and Provider reports"
-    # elsif hHeading == "### Coded Content (Fetal Death Cause or Condition)"
-    #     pOutputFile.puts ""
-    #     pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
-    # elsif hHeading == "### Coded Content (Demographic)"
-    #     pOutputFile.puts ""
-    #     pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
-    # end
+    if hHeading == "### Coded Content (Death Cause or Condition)"
+        pOutputFile.puts ""
+        pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
+    elsif hHeading == "### Coded Content (Demographic)"
+        pOutputFile.puts ""
+        pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
+    end
     pOutputFile.puts ""
     pOutputFile.puts "<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>"
     pOutputFile.puts "<tbody>"
@@ -116,13 +116,23 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     </style>"
     printHeader(pHeading, pOutputFile, pRowFilterIG)
 
-    codedFDHeader = false
-    codedDHeader = false
+    codedDemoHeader = false
+    codedCODHeader = false
     notImplementedHeader = false
     profiles.each do |(x, y)| 
         #pOutputFile.puts "<tbody>"
         CSV.foreach(pSpreadsheet) do |row|
             next if row[IJE_USECASE_COL] != pRowFilter || row[IJE_PROFILE_COL] != x #|| row[IJE_PROFILE_COL].value.to_s == "not implemented"
+            if codedDemoHeader == false && y.to_s == "Coding-COD"
+              pOutputFile.puts "</tbody>"
+              pOutputFile.puts "</table>"
+              codedDemoHeader = printHeader("### Coded Content (Death Cause or Condition)", pOutputFile, pRowFilterIG)
+            end
+            if codedCODHeader == false && y.to_s == "Coding-Demographic"
+                pOutputFile.puts "</tbody>"
+                pOutputFile.puts "</table>"
+                codedCODHeader = printHeader("### Coded Content (Demographic)", pOutputFile, pRowFilterIG)
+            end
             if notImplementedHeader == false && y.to_s == "Not Implemented"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
