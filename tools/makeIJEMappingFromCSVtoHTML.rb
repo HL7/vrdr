@@ -54,7 +54,7 @@ IJE_UNIQUENESS_COL = 14
 INTRO_ORDER_COL = 0
 INTRO_HEADING_COL = 1 
 INTRO_PROFILE_NAME_COL = 2
-INTRO_PROFILE_ID_COL = 3
+# INTRO_PROFILE_ID_COL = 3
 INTRO_PROFILE_USAGE_COL = 4
 INTRO_FORM_MAPPING_COL = 5
 INTRO_IJE_MAPPING_COL = 6
@@ -123,6 +123,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
         #pOutputFile.puts "<tbody>"
         CSV.foreach(pSpreadsheet) do |row|
             next if row[IJE_USECASE_COL] != pRowFilter || row[IJE_PROFILE_COL] != x #|| row[IJE_PROFILE_COL].value.to_s == "not implemented"
+            puts x
             if codedDemoHeader == false && y.to_s == "Coding-COD"
               pOutputFile.puts "</tbody>"
               pOutputFile.puts "</table>"
