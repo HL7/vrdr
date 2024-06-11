@@ -118,8 +118,8 @@
 [ACMESystemRejectVS]: ValueSet-vrdr-system-reject-vs.html
 [TransaxConversionVS]: ValueSet-vrdr-transax-conversion-vs.html
 [CodingStatusValues]: StructureDefinition-vrdr-coding-status-values.html
-[DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-bundle.html
-[CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
+[DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-content-bundle.html
+[CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-content-bundle.html
 [MortalityRosterBundle]: StructureDefinition-vrdr-mortality-roster-bundle.html
 [DateOfDeathDeterminationMethodsVS]: ValueSet-vrdr-date-of-death-determination-methods-vs.html
 [FilingFormat]: StructureDefinition-FilingFormat.html
@@ -176,3 +176,4 @@
 <!-- [ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Extension-jurisdiction-id-vr.html -->
 [ObservationUsualWorkVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-usual-work-vr.html
 [CodeSystemCountryCodeVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/CodeSystem-CodeSystem-country-code-vr.html
+{% include fsh-link-references.md %}

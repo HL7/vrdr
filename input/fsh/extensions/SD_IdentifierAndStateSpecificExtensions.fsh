@@ -6,3 +6,5 @@ Description: "An arbitratry string included by a submitting jurisdiction"
 * value[x] only string
 * valueString ^maxLength = 30
 * insert ExtensionContextResource(Composition)
+* insert ExtensionContextResource(Identifier)
+* insert ExtensionContextResource(Bundle)

@@ -4,6 +4,7 @@
 ### VRDR STU3 Draft (for May 2024 Ballot)
 The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.
 #### Content Changes
+* Added support for sending the State Specific Field (STATESP) back to jurisdictions as part of the TRX-equivalent [CauseOfDeathCodedContentBundle]
 * Added a new [Mortician] profile in support of Funeral Home use cases.  Use of this profile is not required for submissions to NCHS.
 * Support expression of state and jurisdiction for residence of decedent to support routing of records to jurisdiction [https://jira.hl7.org/browse/FHIR-42771]
 * Eliminated the requirement to specify [DeathCertification].category since it served no real purpose and used a vague and now inactive SNOMEDCT Code (103693007 "Diagnostic procedure (procedure)"). Allowed continued use of the inactive code for the required [DeathCertificate].event.code for compatibility, but added a preferred code (307930005 "Death certificate (record artifact)").
