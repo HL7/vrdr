@@ -1,6 +1,6 @@
 Profile: CauseOfDeathCodedContentBundle
 Parent: Bundle
-Id: vrdr-cause-of-death-coded-bundle
+Id: vrdr-cause-of-death-coded-content-bundle
 Title: "Cause of Death Coded Content Bundle"
 Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format."
 * insert RequireMetaProfile(CauseOfDeathCodedContentBundle)

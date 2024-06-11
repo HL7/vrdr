@@ -118,8 +118,8 @@
 [ACMESystemRejectVS]: ValueSet-vrdr-system-reject-vs.html
 [TransaxConversionVS]: ValueSet-vrdr-transax-conversion-vs.html
 [CodingStatusValues]: StructureDefinition-vrdr-coding-status-values.html
-[DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-bundle.html
-[CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-bundle.html
+[DemographicCodedContentBundle]: StructureDefinition-vrdr-demographic-coded-content-bundle.html
+[CauseOfDeathCodedContentBundle]: StructureDefinition-vrdr-cause-of-death-coded-content-bundle.html
 [MortalityRosterBundle]: StructureDefinition-vrdr-mortality-roster-bundle.html
 [DateOfDeathDeterminationMethodsVS]: ValueSet-vrdr-date-of-death-determination-methods-vs.html
 [FilingFormat]: StructureDefinition-FilingFormat.html

@@ -1,6 +1,6 @@
 Profile: DemographicCodedContentBundle
 Parent: Bundle
-Id: vrdr-demographic-coded-bundle
+Id: vrdr-demographic-coded-content-bundle
 Title: "Demographic Coded Content Bundle"
 Description: "Demographic Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content. This bundle is information-content equivalent to the traditional NCHS MRE format."
 * insert RequireMetaProfile(CodedContentDocument)
