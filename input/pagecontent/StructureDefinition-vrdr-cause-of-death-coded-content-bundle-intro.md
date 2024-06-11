@@ -64,6 +64,15 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
+  <td>122</td>
+  <td>State Specific Data </td>
+  <td>STATESP</td>
+  <td>identifier.extension[stateSpecificField]</td>
+  <td>string(30)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
   <td>NA</td>
   <td>Death Record Identifier</td>
   <td>*NO IJE MAPPING*</td>

@@ -10,7 +10,7 @@ Description: "Cause of Death Coded Content Bundle (Bundle): A bundle containing 
 * identifier 1..1
 * identifier.extension contains
     CertificateNumberVitalRecords named certificateNumber 0..1 and
-    AuxiliaryStateIdentifier1VitalRecords named auxiliaryStateIdentifier1 0..1 
+    AuxiliaryStateIdentifier1VitalRecords named auxiliaryStateIdentifier1 0..1 and
 // There isn't really a good home for this extension, so we will tack it onto the identifier.
     StateSpecificField named stateSpecificField 0..1
 * type 1..1
