@@ -1,11 +1,10 @@
-### Usage
 The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
 
 Notes:
-* The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
 Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
-Further profiling of Practitioner and PractitionerRole may be called for in the future. At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
 For example:
 * Funeral Home Licensee (USCorePractitionerRole)
 * Mortician (USCorePractitioner)
@@ -14,59 +13,154 @@ For example:
 
 The content is broken down into the following sections:
 * Decedent Demographics
-    * [BirthRecordIdentifier]
-    * [Decedent]
-    * [DecedentAge]
-    * [DecedentEducationLevel]
-    * [DecedentFather]
-    * [DecedentMilitaryService]
-    * [ObservationEmergingIssuesVitalRecords]
-    * [DecedentMother]
-    * [DecedentSpouse]
-    * [ObservationUsualWorkVitalRecords]
+    * <a href='StructureDefinition-vrdr-birth-record-identifier.html'>BirthRecordIdentifier</a>
+    * <a href='StructureDefinition-vrdr-decedent.html'>Decedent</a>
+    * <a href='StructureDefinition-vrdr-decedent-age.html'>DecedentAge</a>
+    * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
+    * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
+    * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
+    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
+    * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
+    * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
+    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-usual-work-vr.html'>ObservationUsualWorkVitalRecords</a>
 * Death Investigation
-    * [AutopsyPerformedIndicator]
-    * [DeathDate]
-    * [DeathLocation]
-    * [DecedentPregnancyStatus]
-    * [ExaminerContacted]
-    * [InjuryIncident]
-    * [InjuryLocation]
-    * [SurgeryDate]
-    * [TobaccoUseContributedToDeath]
+    * <a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a>
+    * <a href='StructureDefinition-vrdr-death-date.html'>DeathDate</a>
+    * <a href='StructureDefinition-vrdr-death-location.html'>DeathLocation</a>
+    * <a href='StructureDefinition-vrdr-decedent-pregnancy-status.html'>DecedentPregnancyStatus</a>
+    * <a href='StructureDefinition-vrdr-examiner-contacted.html'>ExaminerContacted</a>
+    * <a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a>
+    * <a href='StructureDefinition-vrdr-injury-location.html'>InjuryLocation</a>
+    * <a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a>
+    * <a href='StructureDefinition-vrdr-tobacco-use-contributed-to-death.html'>TobaccoUseContributedToDeath</a>
 * Death Certification
-    * [Certifier]
-    * [DeathCertification]
-    * [CauseOfDeathPart1]
-    * [CauseOfDeathPart2]
-    * [MannerOfDeath]
+    * <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a>
+    * <a href='StructureDefinition-vrdr-death-certification.html'>DeathCertification</a>
+    * <a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a>
+    * <a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a>
+    * <a href='StructureDefinition-vrdr-manner-of-death.html'>MannerOfDeath</a>
 * Decedent Disposition
-    * [DecedentDispositionMethod]
-    * [DispositionLocation]
-    * [FuneralHome]
+    * <a href='StructureDefinition-vrdr-decedent-disposition-method.html'>DecedentDispositionMethod</a>
+    * <a href='StructureDefinition-vrdr-disposition-location.html'>DispositionLocation</a>
+    * <a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a>
 * Coded Content
-    * [ActivityAtTimeOfDeath]
-    * [AutomatedUnderlyingCauseOfDeath]
-    * [ManualUnderlyingCauseOfDeath]
-    * [ObservationCodedRaceAndEthnicityVitalRecords]
-    * [EntityAxisCauseOfDeath]
-    * [RecordAxisCauseOfDeath]
-    * [PlaceOfInjury]
-    * [CodingStatusValues]
+    * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
+    * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
+    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
+    * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
+    * <a href='StructureDefinition-vrdr-coding-status-values.html'>CodingStatusValues</a>
 
 **Note:**
 For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
-The replacement status of a submission is now specified as a message parameter and described in the [NCHS Vital Records Messaging IG].
+The replacement status of a submission is now specified as a message parameter and described in the <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content'>NCHS Vital Records Messaging IG</a>.
 
 The profile includes:
 
-| **#** |  **Description**   |  **IJE Name**   | IJE only |  **Field**  |  **Type**  | **Value Set**  |
-| :---------: | ------------- | ------------ | :----------: |---------- | -------- | -------- |
-| 6 | Source flag: paper/electronic | MFILED| |extension[ filingFormat]  | codeable |  [FilingFormatVS] | 
-| 96 | Date of Registration--Year | DOR_YR| |date | dateTime | - | 
-| 97 | Date of Registration--Month | DOR_MO| |date | dateTime | - | 
-| 98 | Date of Registration--Day | DOR_DY| |date | dateTime | - | 
-| 122 | State Specific Data  | STATESP| |extension[ stateSpecificField] | string(30) | - | 
-| 184 | Replacement Record  | REPLACE (*deprecated*)| |extension[replaceStatus].value | codeable | [ReplaceStatusVS] | 
-{: .grid }
-{% include markdown-link-references.md %}
+### IJE Mapping
+
+<style>
+ .context-menu {cursor: context-menu; color: #438bca;}
+ .context-menu:hover {opacity: 0.5;}
+</style>
+<details>
+
+<summary>
+
+<strong class='context-menu'> Mortality (Decedent) </strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Use Case</strong></th>
+    <th><strong>#</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>IJE Name</strong></th>
+    <th><strong>Field</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>Value Set/Comments</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>6</td>
+  <td>Source flag: paper/electronic</td>
+  <td>MFILED</td>
+  <td>extension[filingFormat] </td>
+  <td>codeable</td>
+  <td> <a href='ValueSet-vrdr-filing-format-vs.html'>FilingFormatVS</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>96</td>
+  <td>Date of Registration--Year</td>
+  <td>DOR_YR</td>
+  <td>date</td>
+  <td>dateTime</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>97</td>
+  <td>Date of Registration--Month</td>
+  <td>DOR_MO</td>
+  <td>date</td>
+  <td>dateTime</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>98</td>
+  <td>Date of Registration--Day</td>
+  <td>DOR_DY</td>
+  <td>date</td>
+  <td>dateTime</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>184</td>
+  <td>Replacement Record </td>
+  <td>REPLACE (*deprecated*)</td>
+  <td>extension[replaceStatus].value</td>
+  <td>codeable</td>
+  <td><a href='ValueSet-vrdr-replace-status-vs.html'>ReplaceStatusVS</a></td>
+</tr>
+
+</tbody>
+</table>
+
+</details>
+<p></p>
+
+
+### Form Mapping
+<details>
+
+<summary>
+
+<strong class='context-menu' >Form Mapping</strong>
+
+</summary>
+<table class='grid'>
+<thead>
+  <tr>
+    <th style='text-align: center'><strong>Item #</strong></th>
+    <th><strong>Form Field</strong></th>
+    <th><strong>FHIR Profile Field</strong></th>
+    <th><strong>Reference</strong></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td style='text-align: center'>50</td>
+  <td>For Registrar Only-Date Filed</td>
+  <td>date</td>
+  <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
+</tr>
+</tbody>
+</table>

@@ -186,7 +186,7 @@ For Canadian Provinces:
 1345,Birth Infant Death,4,13,1,Void flag,VOID,"0 = default; valid record
 1 = VOID record",,,,,,,,,,,,,
 10,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,DeathCertificateDocument,
-11,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,CauseOfDeathCodedContentBundle,
+11,Mortality,5 or 121,14,12,Auxiliary State file number,AUXNO or AUXNO2,000000000001-999999999999; Blank,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),"When the Jurisdiction provides AUXNO2, it will be stored in this field.  If the Jurisdiction only provides AUXNO, that value will be stored in this field",,y,,,,CauseOfDeathCodedContentBundle,
 12,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DemographicCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,DemographicCodedContentBundle,
 469,Natality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentBirthReport,identifier.extension[localFileNumber1].value,string(12),,B,,,,,AuxiliaryStateIdentifier1,
 1187,ITOP,5,14,12,Auxiliary State File Number,AUXNO,000000000001-999999999999; blank,,not implemented,not implemented,,,,,,,,,not implemented,
@@ -313,8 +313,8 @@ Codes: If AGETYPE = 1 then 001-135, 999
 F = Female
 U = Unknown",,VRDR,Decedent,extension[NVSS-SexAtDeath] ,codeable,[AdministrativeGenderVS],,y,,,,Decedent,
 442,Mortality Roster,13,207,4,Date of Birth--Year,DOB_YR,"4 digit year; <=year of death, 9999",,VRDR,Decedent,birthDate,dateTime,See [PartialDatesAndTimes],,,,,,Decedent,
-477,Natality,13,51,4,Facility ID (State-Assigned),SFN,,,BFDR,LocationBFDR,"identifier.extension[JFI], type:BFDR = ""birth""",Identifier,,B,,,,,Location-bfdr,
-830,Fetal Death,13,51,4,Facility ID (State-Assigned),SFN,,,BFDR,LocationBFDR,"identifier.extension[JFI], type:BFDR = ""birth""",Identifier,,B,,,,,Location-bfdr,
+477,Natality,13,51,4,Facility ID (State-Assigned),SFN,,,BFDR,LocationBFDR,"identifier.extension[JFI], type:BFDR = ""birth""",string(4),,B,,,,,Location-bfdr,
+830,Fetal Death,13,51,4,Facility ID (State-Assigned),SFN,,,BFDR,LocationBFDR,"identifier.extension[JFI], type:BFDR = ""birth""",string(4),,B,,,,,Location-bfdr,
 1354,Birth Infant Death,13,51,4,Facility ID (State-Assigned),SFN,,,,,,,,,,,,,,
 1195,ITOP,13,51,1,Place Type Where Termination Occurred,TPLACE,"1 = Hospital
 2 = Clinic
@@ -1211,7 +1211,7 @@ Now dead",PLBD,"00-30
 541,Natality,77,419,3,Mother's Race Tabulation Variable 23C,MRACE23C,NCHS Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[SecondOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityMother",codeable,[ValueSetRaceCodeVitalRecords],N,,,,,Observation-race-vr,
 894,Fetal Death,77,419,3,Mother's Race Tabulation Variable 23C,MRACE23C,Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[SecondOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityMother",codeable,[ValueSetRaceCodeVitalRecords],N,,,,,Observation-race-vr,
 1418,Birth Infant Death,77,419,3,Mother's Race Tabulation Variable 23C,MRACE23C,NCHS Appendix E,,,,,,,,,,,,,
-348,Surveillance,77,762,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,SurveillanceBundle,extension[stateSpecificField],string(30),-,,y,,,,SurveillanceBundle,
+348,Surveillance,77,762,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,CauseOfDeathCodedContentBundle,extension[stateSpecificField],string(30),-,,y,,,,CauseOfDeathCodedContentBundle,
 895,Fetal Death,78,422,1,Attendant,ATTEND,"1 = MD
 2 = DO
 3 = CNM/CM
@@ -1644,14 +1644,14 @@ Blank for natural death.",i,VRDR,InjuryLocation,address.district.extension[distr
 N = No
 U = Unknown",,not implemented,not implemented,,,,-,,,,,not implemented,
 131,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,DeathCertificateDocument,
-132,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,CauseOfDeathCodedContentBundle,
+132,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,,
 133,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,DemographicCodedContentBundle,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,DemographicCodedContentBundle,
 1303,ITOP,121,967,1,"Other complications 
 (at time of followup at other facility) ",OTHER_F2,"Y, N, U",,not implemented,not implemented,,,,,,,,,not implemented,
 393,Surveillance,122,2386,28,Town/city of Injury - literal,CITYTEXT_I,Valid town/city literal; blank for natural death.,i,VRDR,InjuryLocation,address.city,string,-,,,,,,InjuryLocation,
 586,Natality,122,745,3,Father's Race Tabulation Variable 22C,FRACE22C,NCHS Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[FirstOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetRaceCodeVitalRecords],N,,,,,Observation-race-vr,
 1463,Birth Infant Death,122,745,3,Father's Race Tabulation Variable 22C,FRACE22C,NCHS Appendix E,,,,,,,,,,,,,
-134,Mortality,122,1037,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,DeathCertificate,extension[stateSpecificField],string(30),-,,y,,,,DeathCertificate,
+134,Mortality,122,1037,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,Death+G507Certificate,extension[stateSpecificField],string(30),-,,y,,,,DeathCertificate,
 1304,ITOP,122,968,50,"Other complications literal 
 (at time of followup at other facility)",OTH_F2_LIT,Free form literal of specified other complication at time of followup at other facility.,,not implemented,not implemented,,,,,,,,,not implemented,
 939,Fetal Death,122,503,1,Infections Present--Syphilis(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),SYPH,"Y, N, U",,not implemented,not implemented,,,,-,,,,,not implemented,
@@ -1925,7 +1925,7 @@ year of child's birth, 8888, 9999",,,,,,,,,,,,,
 1490,Birth Infant Death,149,803,2,Number of Cigarettes Smoked in 3 months prior to Pregnancy,CIGPN,"00-98, 99",,,,,,,,,,,,,
 966,Fetal Death,149,534,1,Was a Histological Placental Examination Performed?,HISTOP,"Y = Yes
 N = No
-P = Planned",,BFDR,ObservationHistologicalPlacentalExamPerformed,value,codeable,[HistologicalPlacentalExaminationVS],B,,,,,Observation-histological-placental-exam-performed,
+P = Planned",,BFDR,ObservationHistologicalPlacentalExamPerformed,value,codeable,[PerformedNotPerformedPlannedVS],B,,,,,Observation-histological-placental-exam-performed,
 420,Surveillance,149,3505,30,Informant's Relationship,INFORMRELATE,,i,VRDR,Decedent,contact.type.text ,string (30 characters),-,,,,,,Decedent,
 161,Mortality,149,1533,10,Decedent's Residence - Street designator,STDESIG_R,,,VRDR,Decedent,address.extension[stdesig],string,-,,y,,,,Decedent,
 1331,ITOP,149,1191,1,Reason for Termination -- Contraceptive failure,REASON_CONTRA_FAIL,"Y, N",,not implemented,not implemented,,,,,,,,,not implemented,
@@ -2759,7 +2759,7 @@ types of relationships.",i,VRDR,Decedent,maritalStatus.text ,string,-,,,,,,Deced
 732,Natality,268,1672,50,Mother's Residence Street Address,ADDRESS,"The item is made up of one long string that includes Street number, Pre Directional, Street name, Street designator, Post Directional, and Unit or Apartment Number. Jurisdiction should use version of Mother's Residence address that's used in their system versus reprogramming.",,VRCPL,PatientMotherVitalRecords,address.line,string,,B,,,,,Patient-mother-vr,
 1609,Birth Infant Death,268,1672,50,Mother's Residence Street Address,ADDRESS,"The item is made up of one long string that includes Street number, Pre Directional, Street name, Street designator, Post Directional, and Unit or Apartment Number. Jurisdiction should use version of Mother's Residence address that's used in their system versus reprogramming.",,,,,,,,,,,,,
 1085,Fetal Death,268,4059,2,Father's Age (Calculated),FAGE_CALC,"0-98, 99",,not implemented,not implemented,,,,-,,,,,not implemented,
-1086,Fetal Death,269,4061,25,Occupation of Mother,MOM_OC_T,Literal for mother's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='MTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+1086,Fetal Death,269,4061,25,Occupation of Mother,MOM_OC_T,Literal for mother's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='MTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
@@ -2770,7 +2770,7 @@ Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
 1087,Fetal Death,270,4086,3,Occupation of Mother (coded),MOM_OC_C,,,not implemented,not implemented,,,,-,,,,,not implemented,
 735,Natality,271,1759,28,Mother's Residence City/Town (Literal),CITYTEXT,Valid city/town/place literal,,VRCPL,PatientMotherVitalRecords,address.city,string,,B,,,,,Patient-mother-vr,
 1612,Birth Infant Death,271,1759,28,Mother's Residence City/Town (Literal),CITYTEXT,Valid city/town/place literal,,,,,,,,,,,,,
-1088,Fetal Death,271,4089,25,Occupation of Father,DAD_OC_T,Literal for father's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='FTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+1088,Fetal Death,271,4089,25,Occupation of Father,DAD_OC_T,Literal for father's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
@@ -2779,11 +2779,11 @@ Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
 1613,Birth Infant Death,272,1787,28,"State, U.S. Territory or Canadian Province of Residence (Mother) - literal",STATETXT,"Valid state, U.S. territory or Canadian province literal, otherwise blank",,,,,,,,,,,,,
 737,Natality,273,1815,28,Mother's Residence Country (Literal),CNTRYTXT,Valid text for country of residence,,VRCPL,PatientMotherVitalRecords,address.country (expanded from 2 letter code),string,See [CountryLiterals],B,,,,,Patient-mother-vr,
 1614,Birth Infant Death,273,1815,28,Mother's Residence Country (Literal),CNTRYTXT,Valid text for country of residence,,,,,,,,,,,,,
-1090,Fetal Death,273,4117,25,Industry of Mother,MOM_IN_T,Literal for mother's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='MTH'",string(40),,B,,,Needs work,FHIR-41389,odh-UsualWork,
+1090,Fetal Death,273,4117,25,Industry of Mother,MOM_IN_T,Literal for mother's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='MTH'",string(25),,B,,,Needs work,FHIR-41389,odh-UsualWork,
 738,Natality,274,1843,50,Father's First Name,DADFNAME,Free form literal ,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.given, <br />name.use = official",string,,B,,,,,RelatedPerson-father-natural-vr,
 1615,Birth Infant Death,274,1843,50,Father's First Name,DADFNAME,Free form literal ,,,,,,,,,,,,,
 1091,Fetal Death,274,4142,3,Industry of Mother (coded),MOM_IN_C,,,not implemented,not implemented,,,,-,,,,,not implemented,
-1092,Fetal Death,275,4145,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='FTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+1092,Fetal Death,275,4145,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
@@ -2829,7 +2829,7 @@ For Canadian Provinces:
 1622,Birth Infant Death,281,2020,2,Father's Age (Calculated),FAGE_CALC,"0-98, 99",,,,,,,,,,,,,
 1098,Fetal Death,281,4233,28,"State, U.S. Territory or Canadian Province of Birth (Father) - literal",FBPLACE_ST_TER_TXT,"Valid state, U.S. territory or Canadian province literal, otherwise blank",,VRCPL,RelatedPersonFatherNaturalVitalRecords,extension[Extension-relatedperson-birthplace-vr].value[x].state (expanded from 2 letter code),string,See [StateLiterals],B,,,,,Extension-relatedperson-birthplace-vr,
 1099,Fetal Death,282,4261,28,Father's Country of Birth (Literal),FBPLACE_CNTRY_TXT,"Valid country literal when foreign, otherwise U.S.",,VRCPL,RelatedPersonFatherNaturalVitalRecords,extension[Extension-relatedperson-birthplace-vr].value[x].country (expanded from 2 letter code),string,See [CountryLiterals],B,,,,,Extension-relatedperson-birthplace-vr,
-746,Natality,282,2022,25,Occupation of Mother,MOM_OC_T,Literal for mother's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='MTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+746,Natality,282,2022,25,Occupation of Mother,MOM_OC_T,Literal for mother's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='MTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
@@ -2845,7 +2845,7 @@ Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
 9 = Unknown",,VRCPL,ObservationEducationLevelVitalRecords,"value, <br />code=87300-0 (Highest level of education Father)",codeable,[ValueSetEducationLevelVitalRecords],B,,,,,Observation-education-level-vr,
 747,Natality,283,2047,3,Occupation of Mother (coded),MOM_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,not implemented,
 1624,Birth Infant Death,283,2047,3,Occupation of Mother (coded),MOM_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,,
-748,Natality,284,2050,25,Occupation of Father,DAD_OC_T,Literal for father's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='FTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+748,Natality,284,2050,25,Occupation of Father,DAD_OC_T,Literal for father's usual occupation,,ODH,ObservationUsualWorkVitalRecords,"value.text, <br />extension[roleVitalRecords].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
@@ -2861,14 +2861,14 @@ U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[Hisp
 1103,Fetal Death,286,4292,1,Father of Hispanic Origin?--Puerto Rican,FETHNIC2,"N = No, Not Puerto Rican
 H = Yes, Puerto Rican
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicPuertoRican].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetHispanicNoUnknownVitalRecords],B,,,,,RelatedPerson-father-natural-vr,
-750,Natality,286,2078,25,Industry of Mother,MOM_IN_T,Literal for mother's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='MTH'",string(40),,B,,,Needs work,FHIR-41389,odh-UsualWork,
+750,Natality,286,2078,25,Industry of Mother,MOM_IN_T,Literal for mother's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='MTH'",string(25),,B,,,Needs work,FHIR-41389,odh-UsualWork,
 1627,Birth Infant Death,286,2078,25,Industry of Mother,MOM_IN_T,Literal for mother's corresponding industry,,,,,,,,,,,,,
 1104,Fetal Death,287,4293,1,Father of Hispanic Origin?--Cuban,FETHNIC3,"N = No, Not Cuban
 H = Yes, Cuban
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicCuban].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetHispanicNoUnknownVitalRecords],B,,,,,RelatedPerson-father-natural-vr,
 751,Natality,287,2103,3,Industry of Mother (coded),MOM_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,not implemented,
 1628,Birth Infant Death,287,2103,3,Industry of Mother (coded),MOM_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,,
-752,Natality,288,2106,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='FTH'",string(40),,B,,"Code used on 3 tabs: N, FD, & BID
+752,Natality,288,2106,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationUsualWorkVitalRecords,"component [odh-UsualIndustry].value.text, <br />extension[roleVitalRecords].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 VRCL defines ""ObservationUsualWorkVitalRecords"" profile. 
 Decision: BFDR should mimic VRDR",Needs work,FHIR-41389,odh-UsualWork,
