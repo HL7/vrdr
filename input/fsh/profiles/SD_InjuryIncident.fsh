@@ -1,7 +1,7 @@
 Profile: InjuryIncident
 Parent: Observation
 Id: vrdr-injury-incident
-Title: "Observation - Injury Incident"
+Title: "Injury Incident"
 Description: "This Observation provides the certified explanation of how the injury leading to death occurred."
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * . ^short = "The certified explanation of how the injury leading to death occurred."

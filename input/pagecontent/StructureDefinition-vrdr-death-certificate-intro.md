@@ -123,6 +123,15 @@ The profile includes:
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
+  <td>122</td>
+  <td>State Specific Data </td>
+  <td>STATESP</td>
+  <td>extension[stateSpecificField]</td>
+  <td>string(30)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
   <td>184</td>
   <td>Replacement Record </td>
   <td>REPLACE (*deprecated*)</td>
