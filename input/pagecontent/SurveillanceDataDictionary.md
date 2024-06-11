@@ -37,7 +37,7 @@
  | Person Pronouncing Time Pronounced | PPTIME| [DeathDate]| component[datetimePronouncedDead].value | dateTime | - | 
  | Title of Certifier | CERTL| [DeathCertification]| performer.function (note that if value is "OTH" then performed.function.text should contain 'Full Text for Other Individual Legally Allowed to Certify') | codeable | [CertifierTypesVS] | 
  | Certifier Date Signed | CERTDATE| [DeathCertification]| performed | dateTime | - | 
- | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [ValueSetStatesTerritoriesAndProvincesVitalRecords] in state field or [ValueSetJurisdictionVitalRecords] in extension | 
+ | State, U.S. Territory or Canadian Province of Death - code | DSTATE| [DeathLocation]| address.state or address.state.extension[nationalReportingJurisdictionId ] | codeable | [StatesTerritoriesProvincesVS] in state field or [JurisdictionVS] in extension | 
  | County of Death Occurrence | COD| [DeathLocation]| address.district.extension[countyCode] | integer | see [CountyCodes] | 
  | Death Institution name | DINSTI| [DeathLocation]| name | string  | - | 
  | Long String address for place of death | ADDRESS_D| [DeathLocation]| address.line | string  | - | 
@@ -53,7 +53,7 @@
  | Place of death. City FIPS code | CITYCODE_D| [DeathLocation]| address.city.extension[ cityCode] | integer | see [CityCodes] | 
  | Place of death. Longitude | LONG_D| [DeathLocation]| position.longitude | float | - | 
  | Place of Death. Latitude | LAT_D| [DeathLocation]| position.latitude | float | - | 
- | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| address.country  | string  | [ValueSetResidenceCountryVitalRecords].  Note: For US Death certificates should be US | 
+ | Country of Death - Code | DTHCOUNTRYCD| [DeathLocation]| address.country  | string  | [ResidenceCountryVS].  Note: For US Death certificates should be US | 
  | Country of Death - Literal | DTHCOUNTRY| [DeathLocation]| address.country  (expanded from 2 letter code) | string  | See [CountryLIterals].   Not used. For US Death certificates should be 'United States'. | 
  | Decedent's Legal Name--Given  | GNAME| [Decedent]| name.given , name.use = official | string | - | 
  | Decedent's Legal Name--Middle | MNAME| [Decedent]| name.given , name.use = official (first letter) | string | - | 
@@ -64,12 +64,12 @@
  | Date of Birth--Year | DOB_YR| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
  | Date of Birth--Month | DOB_MO| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
  | Date of Birth--Day | DOB_DY| [Decedent]| birthDate | dateTime | See [PartialDatesAndTimes] | 
- | Birthplace--Country | BPLACE_CNT| [Decedent]| extension[patient-birthPlace].value[x].country  | string | [ExtensionRelatedpersonBirthplaceVitalRecords] | 
- | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| extension[patient-birthPlace].value[x].state | string | [ValueSetStatesTerritoriesAndProvincesVitalRecords] | 
+ | Birthplace--Country | BPLACE_CNT| [Decedent]| extension[patient-birthPlace].value[x].country  | string | [BirthplaceCountryVS] | 
+ | State, U.S. Territory or Canadian Province of Birth - code | BPLACE_ST| [Decedent]| extension[patient-birthPlace].value[x].state | string | [StatesTerritoriesProvincesVS] | 
  | Decedent's Residence--City | CITYC| [Decedent]| address.city.extension[ cityCode ] | string | see [CityCodes] | 
  | Decedent's Residence--County | COUNTYC| [Decedent]| address.district.extension[ countyCode ] | string | see [CountyCodes] | 
- | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| [Decedent]| address.state | string | [ValueSetStatesTerritoriesAndProvincesVitalRecords] | 
- | Decedent's Residence--Country | COUNTRYC| [Decedent]| address.country | string | [ValueSetResidenceCountryVitalRecords] | 
+ | State, U.S. Territory or Canadian Province of Decedent's residence - code | STATEC| [Decedent]| address.state | string | [StatesTerritoriesProvincesVS] | 
+ | Decedent's Residence--Country | COUNTRYC| [Decedent]| address.country | string | [ResidenceCountryVS] | 
  | Decedent's Residence--Inside City Limits | LIMITS| [Decedent]| address.city.extension[ withinCityLimits]  | codeable | [YesNoUnknownVS] | 
  | Marital Status | MARITAL| [Decedent]| maritalStatus | codeable |  [MaritalStatusVS] | 
  | Decedent's spouse living at decedent's DOD? | SPOUSELV| [Decedent]| extension[SpouseAlive]  | codeable |  [SpouseAliveVS] | 
@@ -107,7 +107,7 @@
  | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | [DecedentSpouse]| name.family, name.use = 'maiden | string | - | 
  | Spouse's Middle Name | SPOUSEMIDNAME| [DecedentSpouse]| name.given , name.use = official | string | - | 
  | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| name.suffix , name.use = official | string | - | 
- | Pregnancy | PREG| [DecedentPregnancyStatus]| value | codeable | [DeathPregnancyStatusVS] | 
+ | Pregnancy | PREG| [DecedentPregnancyStatus]| value | codeable | [PregnancyStatusVS] | 
  | Date of injury--month | DOI_MO| [InjuryIncident]| effective | dateTime | See [PartialDatesAndTimes] | 
  | Date of injury--day | DOI_DY| [InjuryIncident]| effective | dateTime | See [PartialDatesAndTimes] | 
  | Date of injury--year | DOI_YR| [InjuryIncident]| effective | dateTime | See [PartialDatesAndTimes] | 
@@ -121,14 +121,14 @@
  | County of Injury code | COUNTYCODE_I| [InjuryLocation]| address.district.extension[ countyCode].value | integer | see [CountyCodes] | 
  | Town/city of Injury - literal | CITYTEXT_I| [InjuryLocation]| address.city | string | - | 
  | Town/city of Injury code | CITYCODE_I| [InjuryLocation]| address.city.extension[ cityCode].value | integer | see [CityCodes] | 
- | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| address.state | string | [ValueSetStatesTerritoriesAndProvincesVitalRecords] | 
+ | State, U.S. Territory or Canadian Province of Injury - code | STATECODE_I| [InjuryLocation]| address.state | string | [StatesTerritoriesProvincesVS] | 
  | Place of injury. Longitude | LONG_I| [InjuryLocation]| position.longitude | float | - | 
  | Place of injury. Latitude | LAT_I| [InjuryLocation]| position.latitude | float | - | 
  | State, U.S. Territory or Canadian Province of Injury - literal | STINJURY| [InjuryLocation]| address.state (expanded from 2 letter code) | string | See [StateLiterals] | 
- | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| component[ HispanicMexican].valueCoding | codeable | [ValueSetHispanicNoUnknownVitalRecords] | 
- | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| component[ HispanicPuertoRican].valueCoding | codeable | [ValueSetHispanicNoUnknownVitalRecords] | 
- | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| component[ HispanicCuban ].valueCoding | codeable | [ValueSetHispanicNoUnknownVitalRecords] | 
- | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| component[ HispanicOther ].valueCoding | codeable | [ValueSetHispanicNoUnknownVitalRecords] | 
+ | Decedent of Hispanic Origin?--Mexican | DETHNIC1| [InputRaceAndEthnicity]| component[ HispanicMexican].valueCoding | codeable | [HispanicNoUnknownVS] | 
+ | Decedent of Hispanic Origin?--Puerto Rican | DETHNIC2| [InputRaceAndEthnicity]| component[ HispanicPuertoRican].valueCoding | codeable | [HispanicNoUnknownVS] | 
+ | Decedent of Hispanic Origin?--Cuban | DETHNIC3| [InputRaceAndEthnicity]| component[ HispanicCuban ].valueCoding | codeable | [HispanicNoUnknownVS] | 
+ | Decedent of Hispanic Origin?--Other | DETHNIC4| [InputRaceAndEthnicity]| component[ HispanicOther ].valueCoding | codeable | [HispanicNoUnknownVS] | 
  | Decedent of Hispanic Origin?--Other, Literal | DETHNIC5| [InputRaceAndEthnicity]| component[ HispanicLiteral ].valueString | string | - | 
  | Decedent's Race--White | RACE1| [InputRaceAndEthnicity]| component[ White].valueBoolean | boolean | - | 
  | Decedent's Race--Black or African American | RACE2| [InputRaceAndEthnicity]| component[ BlackOrAfricanAmerican].valueBoolean | boolean | - | 
@@ -153,7 +153,7 @@
  | Decedent's Race--Second Other Pacific Islander Literal | RACE21| [InputRaceAndEthnicity]| component[ OtherPacificIslandLiteral2].valueString | string | - | 
  | Decedent's Race--First Other Literal | RACE22| [InputRaceAndEthnicity]| component[ OtherRaceLiteral1].valueString | string | - | 
  | Decedent's Race--Second Other Literal | RACE23| [InputRaceAndEthnicity]| component[ OtherRaceLiteral2].valueString | string | - | 
- | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| component[ MissingValueReason].valueCoding | codeable | [ValueSetRaceMissingValueReasonVitalRecords]  | 
+ | Decedent's Race--Missing | RACE_MVR| [InputRaceAndEthnicity]| component[ MissingValueReason].valueCoding | codeable | [RaceMissingValueReasonVS]  | 
  | Manner of Death | MANNER| [MannerOfDeath]| value | codeable | [MannerOfDeathVS] | 
  | Surgery Date--month | SUR_MO| [SurgeryDate]| value | dateTime | See [PartialDatesAndTimes] | 
  | Surgery Date--day | SUR_DY| [SurgeryDate]| value | dateTime | See [PartialDatesAndTimes] | 
