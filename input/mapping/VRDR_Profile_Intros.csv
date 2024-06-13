@@ -151,7 +151,7 @@ to which the given record would be classified had the causes of death been proce
 In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
 * insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)",,x,VRDR
 34,Coding-COD,EntityAxisCauseOfDeath,vrdr-entity-axis-cause-of-death,,,x,VRDR
-35,Coding-COD,PlaceOfInjury,vrdr-place-of-injury,,,x,VRDR
+35,Coding-COD,PlaceOfInjury,vrdr-place-of-injury,"This profile is used to provide the coded Place of Injury.  The Observation.value must provide a value from [PlaceOfInjuryVS] which corresponds to the TRX codes provided by NCHS.  In addition, backwards compatibility with the SuperMICAR places of injury is supported with an optional code from the [PlaceOfInjuryOtherVS] valueset, which corresponds to additional place values.   The SuperMICAR value should only be provided when the coded place is 'Other'.  This backwards compatibility is provided for the convenience of jurisdictions. NCHS does not generate SuperMICAR codes.",,x,VRDR
 36,Coding-COD,CodingStatusValues,vrdr-coding-status-values,,,x,VRDR
 37,Coding-COD,CauseOfDeathCodedContentBundle,vrdr-cause-of-death-coded-bundle,"This bundle is information-content equivalent to the traditional NCHS TRX format.
 
@@ -183,4 +183,3 @@ In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a fla
   * Input Content:
     * Input Race and Ethnicity - [ObservationInputRaceAndEthnicityVitalRecords]",,x,VRDR
 40,Not Implemented,not implemented,,,,,VRDR
-
