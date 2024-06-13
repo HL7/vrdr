@@ -55,21 +55,12 @@ This bundle is information-content equivalent to the traditional NCHS TRX format
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
-  <td>5</td>
+  <td>5 or 121</td>
   <td>Auxiliary State file number</td>
-  <td>AUXNO</td>
+  <td>AUXNO or AUXNO2</td>
   <td>identifier.extension[auxiliaryStateIdentifier1].value</td>
   <td>string(12)</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td style='text-align: center'>Mortality</td>
-  <td>121</td>
-  <td>Auxiliary State file number</td>
-  <td>AUXNO2</td>
-  <td>identifier.extension[auxiliaryStateIdentifier2].value</td>
-  <td>string(12)</td>
-  <td>-</td>
+  <td>When the Jurisdiction provides AUXNO2, it will be stored in this field.  If the Jurisdiction only provides AUXNO, that value will be stored in this field</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
