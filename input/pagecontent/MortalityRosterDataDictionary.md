@@ -74,5 +74,7 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 </tr>
 <tr><td style='text-align: center;'>25</td><td>Filler</td><td style='text-align: center;'>BLANK1</td><td></td></tr>
 <tr><td style='text-align: center;'>35</td><td>Blank for Future Expansion</td><td style='text-align: center;'>BLANK2</td><td></td></tr>
+<tr><td style='text-align: center;'>25</td><td>Filler</td><td style='text-align: center;'>BLANK1</td><td>[not implemented]</td><td></td><td></td><td></td></tr>
+<tr><td style='text-align: center;'>35</td><td>Blank for Future Expansion</td><td style='text-align: center;'>BLANK2</td><td>[not implemented]</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
