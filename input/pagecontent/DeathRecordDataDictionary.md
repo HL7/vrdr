@@ -172,6 +172,23 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <tr><td style='text-align: center;'>215</td><td>State, U.S. Territory or Canadian Province of Funeral Facility - code</td><td style='text-align: center;'>FUNSTATECD</td><td><a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a></td><td>address.state</td><td>string</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td></tr>
 <tr><td style='text-align: center;'>216</td><td>State, U.S. Territory or Canadian Province of Funeral Facility - literal</td><td style='text-align: center;'>FUNSTATE</td><td><a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a></td><td>address.state (expanded from 2 letter code)</td><td>string</td><td>See <a href='usage.html#state-literals'>StateLiterals</a></td></tr>
 <tr><td style='text-align: center;'>217</td><td>Funeral Facility - ZIP</td><td style='text-align: center;'>FUNZIP</td><td><a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a></td><td>address.postalCode</td><td>string</td><td>-</td></tr>
+</tbody>
+</table>
+### Coded Content (Death Cause or Condition)
+
+*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
+
+<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
+<tbody>
+<tr>
+<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
+<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
+<td style='background-color:#98c1d9;'><b>Field</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
+<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
+</tr>
 <tr><td style='text-align: center;'>114</td><td>Date of injury--month</td><td style='text-align: center;'>DOI_MO</td><td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td><td>effective</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
 <tr><td style='text-align: center;'>115</td><td>Date of injury--day</td><td style='text-align: center;'>DOI_DY</td><td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td><td>effective</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
 <tr><td style='text-align: center;'>116</td><td>Date of injury--year</td><td style='text-align: center;'>DOI_YR</td><td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td><td>effective</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
@@ -227,23 +244,6 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <tr><td style='text-align: center;'>65</td><td>Decedent's Race--First Other Literal</td><td style='text-align: center;'>RACE22</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a></td><td>component[FirstOtherRaceLiteral].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent</td><td>string</td><td>-</td></tr>
 <tr><td style='text-align: center;'>66</td><td>Decedent's Race--Second Other Literal</td><td style='text-align: center;'>RACE23</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a></td><td>component[SecondOtherRaceLiteral].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent</td><td>string</td><td>-</td></tr>
 <tr><td style='text-align: center;'>83</td><td>Decedent's Race--Missing</td><td style='text-align: center;'>RACE_MVR</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a></td><td>component[MissingValueReason].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent</td><td>codeable</td><td>[ValueSetRaceMissingValueReasonVitalRecords]</td></tr>
-</tbody>
-</table>
-### Coded Content (Death Cause or Condition)
-
-*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
-
-<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
-<tbody>
-<tr>
-<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
-<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>
-<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
-<td style='background-color:#98c1d9;'><b>Field</b></td>
-<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
-<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
-</tr>
 <tr><td style='text-align: center;'>120</td><td>Activity at time of death (computer generated)</td><td style='text-align: center;'>INACT</td><td><a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-activity-at-time-of-death-vs.html'>ActivityAtTimeOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>105</td><td>ACME Underlying Cause</td><td style='text-align: center;'>ACME_UC</td><td><a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>104</td><td>Manual Underlying Cause </td><td style='text-align: center;'>MAN_UC</td><td><a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
@@ -302,6 +302,15 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <tr><td style='text-align: center;'>160</td><td>Hispanic</td><td style='text-align: center;'>DETHNICE </td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a></td><td>component[HispanicCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent</td><td>codeable</td><td>[ValueSetHispanicOriginVitalRecords]</td></tr>
 <tr><td style='text-align: center;'>247</td><td>Hispanic Code for Literal</td><td style='text-align: center;'>DETHNIC5C</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a></td><td>component[HispanicCodeForLiteral].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent</td><td>codeable</td><td>[ValueSetHispanicOriginVitalRecords]</td></tr>
 <tr><td style='text-align: center;'>NA</td><td>Race Recode 40  (No longer provided as of 2022)</td><td style='text-align: center;'>*NO IJE MAPPING*</td><td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a></td><td>component[ValueSetRaceRecode40VitalRecords].value</td><td>codeable</td><td>[ValueSetRaceRecode40VitalRecords]</td></tr>
+<tr><td style='text-align: center;'>185</td><td>Cause of Death Part I Line a</td><td style='text-align: center;'>COD1A</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>value.text,   component[lineNumber] = 1</td><td>string(120)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>186</td><td>Cause of Death Part I Interval, Line a</td><td style='text-align: center;'>INTERVAL1A</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>component[interval].value, component[lineNumber] = 1</td><td>string(20)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>187</td><td>Cause of Death Part I Line b</td><td style='text-align: center;'>COD1B</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>value.text,   component[lineNumber] = 2</td><td>string(120)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>188</td><td>Cause of Death Part I Interval, Line b</td><td style='text-align: center;'>INTERVAL1B</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>component[interval].value, component[lineNumber] = 2</td><td>string(20)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>189</td><td>Cause of Death Part I Line c</td><td style='text-align: center;'>COD1C</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>value.text,   component[lineNumber] = 3</td><td>string(120)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>190</td><td>Cause of Death Part I Interval, Line c</td><td style='text-align: center;'>INTERVAL1C</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>component[interval].value, component[lineNumber] = 3</td><td>string(20)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>191</td><td>Cause of Death Part I Line d</td><td style='text-align: center;'>COD1D</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>value.text,   component[lineNumber] = 4</td><td>string(120)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>192</td><td>Cause of Death Part I Interval, Line d</td><td style='text-align: center;'>INTERVAL1D</td><td><a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a></td><td>component[interval].value, component[lineNumber] = 4</td><td>string(20)</td><td>-</td></tr>
+<tr><td style='text-align: center;'>193</td><td>Cause of Death Part II</td><td style='text-align: center;'>OTHERCONDITION</td><td><a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a></td><td>value.text</td><td>string(240)</td><td>-</td></tr>
 </tbody>
 </table>
 ### Not Implemented Content
