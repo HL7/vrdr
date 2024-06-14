@@ -32,7 +32,7 @@ This profile is used to provide the coded Place of Injury.  The Observation.valu
   <td>INJPL</td>
   <td>value</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a></td>
+  <td>A code from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> is required, an optional code from <a href='ValueSet-vrdr-place-of-injury-other-vs.html'>PlaceOfInjuryOtherVS</a> can also be provided when the primary code is Other.</td>
 </tr>
 
 </tbody>

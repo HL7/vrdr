@@ -21,9 +21,7 @@ Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."
 ValueSet: PlaceOfInjuryOtherVS
 Id: vrdr-place-of-injury-other-vs
 Title: "Place of Injury - Other ValueSet"
-Description: "Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is 'Other'.
-
-Mapping to SuperMicar codes [here](ConceptMap-PlaceOfInjuryOtherCM.html)."
+Description: "Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is 'Other'."
 
 * SuperMicarPlaceOfInjuryCS#D "Military Residence"
 * SuperMicarPlaceOfInjuryCS#E "Hospital"
