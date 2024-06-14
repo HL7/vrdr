@@ -174,15 +174,15 @@ For Canadian Provinces:
 820,Fetal Death,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[fetalDeathReportNumber].value,string(6),,B,,,,,CertificateNumber,
 1344,Birth Infant Death,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,,,,,,,,,,,,
 9,Mortality,4,13,1,Void flag,VOID,"0 =Default; Valid Record
-1 = VOID record",,not implemented,not implemented,,,-,,y,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,,y,,,,not implemented,
 276,Surveillance,4,13,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,SurveillanceBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,SurveillanceBundle,
 433,Mortality Roster,4,73,50,Decedent's Legal Name--Middle,MIDNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.given , name.use = official (first letter)",string,See [Note on Decedent Name],,,,,,Decedent,
 468,Natality,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,,not implemented,
 1186,ITOP,4,13,1,Void Flag,VOID,"0 = default; valid record
 1 = VOID record",,not implemented,not implemented,,,,,,,,,not implemented,
 821,Fetal Death,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,,not implemented,
 1345,Birth Infant Death,4,13,1,Void flag,VOID,"0 = default; valid record
 1 = VOID record",,,,,,,,,,,,,
 10,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,DeathCertificateDocument,
@@ -262,7 +262,7 @@ N = Not Yet Determined",,,,,,,,,,,,,
 F = Female
 U = Unknown",,VRDR,Decedent,extension[NVSS-SexAtDeath] ,codeable,[AdministrativeGenderVS],,y,,,,Decedent,
 18,Mortality,11,138,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,not implemented,not implemented,,,-,,y,,,,not implemented,
+1 = Alias Record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,y,,,,not implemented,
 475,Natality,11,38,1,Place Where Birth Occurred (type of place or institution),BPLACE,"1 = Hospital
 2 = Freestanding Birth Center
 3 = Home (Intended)
@@ -851,7 +851,7 @@ U = Unknown",,VRDR,InputRaceAndEthnicity,component[HispanicCuban].valueCoding,co
 1 = Edit Failed, Data Queried and Verified
 2 = Edit Failed, Data Queried, but not Verified",,,,,,,,,,,,,
 462,Mortality Roster,33,645,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,,,,,,,MortalityRosterBundle,
+1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,,,,,MortalityRosterBundle,
 41,Mortality,34,237,2,Date of Death--Month,DOD_MO,"01-12, 99",,VRDR,DeathDate,value,dateTime,See [PartialDatesAndTimes],,y,,,,DeathDate,
 306,Surveillance,34,242,1,Decedent of Hispanic Origin?--Other,DETHNIC4,"N = No, Not other Hispanic
 H = Yes, other Hispanic
