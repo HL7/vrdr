@@ -171,6 +171,7 @@
 [ValueSetEditBypass01234VitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html
 [ValueSetBirthplaceCountryVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html
 [ValueSetMaritalStatusVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html
+[ValueSetRaceMissingValueReasonVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-race-missing-value-reason-vr.html
 [ObservationCodedRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html
 [ObservationInputRaceAndEthnicityVitalRecords]: https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-input-race-and-ethnicity-vr.html
 <!-- [ExtensionLocationJurisdictionIdVitalRecords]: https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Extension-jurisdiction-id-vr.html -->
