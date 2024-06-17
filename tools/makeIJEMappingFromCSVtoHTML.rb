@@ -146,13 +146,14 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
               pOutputFile.puts "</tbody>"
               pOutputFile.puts "</table>"
               codedWorkHeader = printHeader("### Coded Content (Usual Work)", pOutputFile, pRowFilterIG)
-          end
+            end
             if notImplementedHeader == false && y.to_s == "Not Implemented"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
                 notImplementedHeader = printHeader("### Not Implemented Content", pOutputFile, pRowFilterIG)
             end
-            
+
+            next if y.to_s != "Coding-Work" && (row[IJE_NAME_COL] == "OCCUPC4" || row[IJE_NAME_COL] == "INDUSTC4")
             field = description = ijename = profile = vProvOutputFilename = fhirfield = fhirtype = fhirencoding = fhirig = fhirunique = ""
             field = row[IJE_FIELD_COL] if row[IJE_FIELD_COL]
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
