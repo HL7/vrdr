@@ -64,10 +64,7 @@ vSpreadsheet = ARGV[1]
 
 def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
-    if hHeading == "### Coded Content (Death Cause or Condition)"
-        pOutputFile.puts ""
-        pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
-    elsif hHeading == "### Coded Content (Demographic)"
+    if hHeading.start_with?("### Coded Content") 
         pOutputFile.puts ""
         pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
     end
@@ -130,6 +127,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     codedDemoHeader = false
     codedCODHeader = false
     notImplementedHeader = false
+    codedWorkHeader = false
     profiles.each do |(x, y)| 
         #pOutputFile.puts "<tbody>"
         CSV.foreach(pSpreadsheet) do |row|
@@ -137,13 +135,18 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             if codedDemoHeader == false && y.to_s == "Coding-COD"
               pOutputFile.puts "</tbody>"
               pOutputFile.puts "</table>"
-              codedDemoHeader = printHeader("### Coded Content (Death Cause or Condition)", pOutputFile, pRowFilterIG)
+              codedDemoHeader = printHeader("### Coded Content (Cause of Death)", pOutputFile, pRowFilterIG)
             end
             if codedCODHeader == false && y.to_s == "Coding-Demographic"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
                 codedCODHeader = printHeader("### Coded Content (Demographic)", pOutputFile, pRowFilterIG)
             end
+            if codedWorkHeader == false && y.to_s == "Coding-Work"
+              pOutputFile.puts "</tbody>"
+              pOutputFile.puts "</table>"
+              codedWorkHeader = printHeader("### Coded Content (Usual Work)", pOutputFile, pRowFilterIG)
+          end
             if notImplementedHeader == false && y.to_s == "Not Implemented"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
@@ -213,13 +216,6 @@ File.foreach(Dir.pwd + "/input/includes/markdown-link-references.md", chomp: tru
     s = "<a href='#{url}'>#{link}</a>"   
     aliases[parts[0]]=s
 end
-# File.foreach(Dir.pwd + "/fsh-generated/includes/fsh-link-references.md", chomp: true) do |line|
-#     parts = line.split(':',2)
-#     url =parts[1][1..] if !parts[1].nil?
-#     link = parts[0][1..-2]
-#     s = "<a href='#{url}'>#{link}</a>"   
-#     aliases[parts[0]]=s
-# end
 
 exchangeURLs(vOutputFile, aliases)
 exchangeURLs(vOutputFile1, aliases)
