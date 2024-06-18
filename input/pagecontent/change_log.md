@@ -1,5 +1,6 @@
 ### Post-May 2024-Ballot Changes
 - [FHIR-45720](https://jira.hl7.org/browse/FHIR-45720) - Documentation changes to align [CauseOfDeathCodedContentBundle] with TRX
+- [FHIR-46148](https://jira.hl7.org/browse/FHIR-46148) – Support expanded SuperMICAR codes for Place of Injury. 
 
 ### VRDR STU3 Draft (for May 2024 Ballot)
 The STU3 draft of VRDR incorporates both content changes, and refactoring as part of the harmonization of vital records and medicolegal death investigation IGs.

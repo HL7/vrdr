@@ -1,3 +1,4 @@
+This profile is used to provide the coded Place of Injury.  The Observation.value must provide a value from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> which corresponds to the TRX codes provided by NCHS.  In addition, backwards compatibility with the SuperMICAR places of injury is supported with an optional code from the <a href='ValueSet-vrdr-place-of-injury-other-vs.html'>PlaceOfInjuryOtherVS</a> valueset, which corresponds to additional place values.   The SuperMICAR value should only be provided when the coded place is 'Other'.  This backwards compatibility is provided for the convenience of jurisdictions. NCHS does not generate SuperMICAR codes.
 ### IJE Mapping
 
 <style>
@@ -31,7 +32,7 @@
   <td>INJPL</td>
   <td>value</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a></td>
+  <td>A code from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> is required, an optional code from <a href='ValueSet-vrdr-place-of-injury-other-vs.html'>PlaceOfInjuryOtherVS</a> can also be provided when the primary code is Other.</td>
 </tr>
 
 </tbody>

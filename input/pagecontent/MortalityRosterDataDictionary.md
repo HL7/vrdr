@@ -1,4 +1,4 @@
-The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for mortality to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information.
+The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for fetal death to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information.
 
 <style>
     table.style1 { 
@@ -70,9 +70,12 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
+<td style='background-color:#98c1d9;'><b>Field</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
 <td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
 </tr>
-<tr><td style='text-align: center;'>25</td><td>Filler</td><td style='text-align: center;'>BLANK1</td><td></td></tr>
-<tr><td style='text-align: center;'>35</td><td>Blank for Future Expansion</td><td style='text-align: center;'>BLANK2</td><td></td></tr>
+<tr><td style='text-align: center;'>25</td><td>Filler</td><td style='text-align: center;'>BLANK1</td><td>[not implemented]</td><td></td><td></td><td></td></tr>
+<tr><td style='text-align: center;'>35</td><td>Blank for Future Expansion</td><td style='text-align: center;'>BLANK2</td><td>[not implemented]</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
