@@ -167,6 +167,7 @@ For Canadian Provinces:
 6,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,DeathCertificateDocument,identifier.extension[certificateNumber].value,string(6),-,,y,,,,DeathCertificateDocument,
 7,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,,CauseOfDeathCodedContentBundle,
 8,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,DemographicCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,,DemographicCodedContentBundle,
+9,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,IndustryOccupationCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,,IndustryOccupationCodedContentBundle,
 432,Mortality Roster,3,23,50,Decedent's Legal Name--Given ,GNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.given , name.use = official",string,See [Note on Decedent Name],,,,,,Decedent,
 275,Surveillance,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,SurveillanceBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,,SurveillanceBundle,
 467,Natality,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,BFDR,BundleDocumentBirthReport,identifier.extension[birthCertificateNumber].value,string(6),,B,,,,,CertificateNumber,
@@ -174,20 +175,21 @@ For Canadian Provinces:
 820,Fetal Death,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[fetalDeathReportNumber].value,string(6),,B,,,,,CertificateNumber,
 1344,Birth Infant Death,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,,,,,,,,,,,,
 9,Mortality,4,13,1,Void flag,VOID,"0 =Default; Valid Record
-1 = VOID record",,not implemented,not implemented,,,-,,y,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,,y,,,,not implemented,
 276,Surveillance,4,13,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,SurveillanceBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,SurveillanceBundle,
 433,Mortality Roster,4,73,50,Decedent's Legal Name--Middle,MIDNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.given , name.use = official (first letter)",string,See [Note on Decedent Name],,,,,,Decedent,
 468,Natality,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,,not implemented,
 1186,ITOP,4,13,1,Void Flag,VOID,"0 = default; valid record
 1 = VOID record",,not implemented,not implemented,,,,,,,,,not implemented,
 821,Fetal Death,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,,not implemented,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,,not implemented,
 1345,Birth Infant Death,4,13,1,Void flag,VOID,"0 = default; valid record
 1 = VOID record",,,,,,,,,,,,,
 10,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,DeathCertificateDocument,
 11,Mortality,5 or 121,14,12,Auxiliary State file number,AUXNO or AUXNO2,000000000001-999999999999; Blank,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),"When the Jurisdiction provides AUXNO2, it will be stored in this field.  If the Jurisdiction only provides AUXNO, that value will be stored in this field",,y,,,,CauseOfDeathCodedContentBundle,
 12,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DemographicCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,DemographicCodedContentBundle,
+13,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,IndustryOccupationCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,,IndustryOccupationCodedContentBundle,
 469,Natality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentBirthReport,identifier.extension[localFileNumber1].value,string(12),,B,,,,,AuxiliaryStateIdentifier1,
 1187,ITOP,5,14,12,Auxiliary State File Number,AUXNO,000000000001-999999999999; blank,,not implemented,not implemented,,,,,,,,,not implemented,
 822,Fetal Death,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[localFileNumber1].value,string(12),,B,,,,,AuxiliaryStateIdentifier1,
@@ -262,7 +264,7 @@ N = Not Yet Determined",,,,,,,,,,,,,
 F = Female
 U = Unknown",,VRDR,Decedent,extension[NVSS-SexAtDeath] ,codeable,[AdministrativeGenderVS],,y,,,,Decedent,
 18,Mortality,11,138,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,not implemented,not implemented,,,-,,y,,,,not implemented,
+1 = Alias Record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,y,,,,not implemented,
 475,Natality,11,38,1,Place Where Birth Occurred (type of place or institution),BPLACE,"1 = Hospital
 2 = Freestanding Birth Center
 3 = Home (Intended)
@@ -851,7 +853,7 @@ U = Unknown",,VRDR,InputRaceAndEthnicity,component[HispanicCuban].valueCoding,co
 1 = Edit Failed, Data Queried and Verified
 2 = Edit Failed, Data Queried, but not Verified",,,,,,,,,,,,,
 462,Mortality Roster,33,645,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,,,,,,,MortalityRosterBundle,
+1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,,,,,MortalityRosterBundle,
 41,Mortality,34,237,2,Date of Death--Month,DOD_MO,"01-12, 99",,VRDR,DeathDate,value,dateTime,See [PartialDatesAndTimes],,y,,,,DeathDate,
 306,Surveillance,34,242,1,Decedent of Hispanic Origin?--Other,DETHNIC4,"N = No, Not other Hispanic
 H = Yes, other Hispanic
@@ -1504,7 +1506,7 @@ year of delivery, 8888, 9999",,not implemented,not implemented,,,,-,,,,,not impl
 1287,ITOP,105,902,1,"Uterine perforation 
 (at time of followup at this facility)",PERF_F1,"Y, N, U",,not implemented,not implemented,,,,,,,,,not implemented,
 923,Fetal Death,106,480,2,Number of Cigarettes Smoked in third trimester (RECOMMENDED CHANGE EFFECTIVE 2004),CIGLN,"00-98, 99",,BFDR,ObservationCigaretteSmokingBeforeDuringPregnancy,"value, <br />code=64795-8 (In the last 3 months of your pregnancy, how many cigarettes did you smoke on an average day)",integer,,B,,,,,Observation-cigarette-smoking-before-during-pregnancy,
-116,Mortality,106,715,160,Entity-axis codes,EAC,,,VRDR,EntityAxisCauseOfDeath,"Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]  ",codeable,[ICD10CausesOfDeathVS],,,,,,EntityAxisCauseOfDeath,
+116,Mortality,106,715,160,Entity-axis codes,EAC,,,VRDR,EntityAxisCauseOfDeath,"Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]) ",codeable,[ICD10CausesOfDeathVS],,,,,,EntityAxisCauseOfDeath,
 570,Natality,106,643,30,Father's Race--First Other Literal,FRACE22,Literal; blank,,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[OtherRaceLiteral1].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",string,,B,,,,,RelatedPerson-father-natural-vr,
 1447,Birth Infant Death,106,643,30,Father's Race--First Other Literal,FRACE22,Literal; blank,,,,,,,,,,,,,
 1288,ITOP,106,903,1,"Cervical laceration 
@@ -1646,6 +1648,7 @@ U = Unknown",,not implemented,not implemented,,,,-,,,,,not implemented,
 131,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,DeathCertificateDocument,
 132,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,,
 133,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,DemographicCodedContentBundle,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,DemographicCodedContentBundle,
+134,Mortality,121,1025,12,Auxiliary State file number,AUXNO2,,,VRDR,IndustryOccupationCodedContentBundle,identifier.extension[auxiliaryStateIdentifier2].value,string(12),-,,,,,,IndustryOccupationCodedContentBundle,
 1303,ITOP,121,967,1,"Other complications 
 (at time of followup at other facility) ",OTHER_F2,"Y, N, U",,not implemented,not implemented,,,,,,,,,not implemented,
 393,Surveillance,122,2386,28,Town/city of Injury - literal,CITYTEXT_I,Valid town/city literal; blank for natural death.,i,VRDR,InjuryLocation,address.city,string,-,,,,,,InjuryLocation,
@@ -3300,6 +3303,7 @@ Decision: Births should behave the same as deaths.",Needs work,FHIR-41387,Extens
 3,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,DeathCertificateDocument,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,,DeathCertificateDocument,
 4,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,CauseOfDeathCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,,CauseOfDeathCodedContentBundle,
 5,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,DemographicCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,,DemographicCodedContentBundle,
+6,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,IndustryOccupationCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,,IndustryOccupationCodedContentBundle,
 91,Mortality,NA,NA,NA,Race Recode 40  (No longer provided as of 2022),*NO IJE MAPPING*,,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,component[ValueSetRaceRecode40VitalRecords].value,codeable,[ValueSetRaceRecode40VitalRecords],,,,,,CodedRaceAndEthnicity,
 109,Mortality,NA,NA,NA,coder status ,"CS (TRX Field, no IJE Mapping)","Numeric, Valid codes: 0 -9 ",,VRDR,CodingStatusValues,parameter[coderStatus].value,integer,-,,,,,,CodingStatusValues,
 110,Mortality,NA,NA,NA,shipment number ,"SHIP (TRX Field, no IJE Mapping)",NCHS ID Information. Alpha\Numeric. Usually month of death or month of receipts,,VRDR,CodingStatusValues,parameter[shipmentNumber].value,string,-,,,,,,CodingStatusValues,

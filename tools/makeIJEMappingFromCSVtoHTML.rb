@@ -64,27 +64,51 @@ vSpreadsheet = ARGV[1]
 
 def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
-    # if hHeading == "### Natality (Live Birth) IJE Mapping" || hHeading == "### Fetal Death IJE Mapping"
-    #     pOutputFile.puts "*IJE Names in <span style='color:darkviolet'>purple</span> text indicate element is unique to the Jurisdiction report, otherwise element is used for both Jurisdiction and Provider reports"
-    if hHeading == "### Coded Content (Death Cause or Condition)"
+    if hHeading.include?("Death Record IJE Mapping")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content)."
+    end
+    if hHeading.include?("Cause of Death")
         pOutputFile.puts ""
-        pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
-    elsif hHeading == "### Coded Content (Demographic)"
+        pOutputFile.puts "These fields are included in the coded cause of death content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the Transax (TRX) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state."
+    end
+    if hHeading.include?("Demographic")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in the coded demographic content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the legacy Mortality, Race and Ethnicity (MRE) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state."
+    end
+    if hHeading.include?("Usual Work")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in the coded industry and occupation content that is produced by the National Institute of Occupational Safety and Health (NIOSH) and delivered to VROs via NCHS (including input, or non-coded, content)."
+    end
+    if hHeading.start_with?("### Coded Content") 
         pOutputFile.puts ""
         pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
     end
-    pOutputFile.puts ""
-    pOutputFile.puts "<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>"
-    pOutputFile.puts "<tbody>"
-    pOutputFile.puts "<tr>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9;'><b>Field</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>"
-    pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
-    pOutputFile.puts "</tr>"
+
+    if hHeading == "### Not Implemented Content"
+      pOutputFile.puts ""
+      pOutputFile.puts "<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>"
+      pOutputFile.puts "<tbody>"
+      pOutputFile.puts "<tr>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
+      pOutputFile.puts "</tr>"
+    else
+      pOutputFile.puts ""
+      pOutputFile.puts "<table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>"
+      pOutputFile.puts "<tbody>"
+      pOutputFile.puts "<tr>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9;'><b>Field</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
+      pOutputFile.puts "</tr>"
+    end
     return true
 end 
 
@@ -119,27 +143,33 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     codedDemoHeader = false
     codedCODHeader = false
     notImplementedHeader = false
+    codedWorkHeader = false
     profiles.each do |(x, y)| 
         #pOutputFile.puts "<tbody>"
         CSV.foreach(pSpreadsheet) do |row|
             next if row[IJE_USECASE_COL] != pRowFilter || row[IJE_PROFILE_COL] != x #|| row[IJE_PROFILE_COL].value.to_s == "not implemented"
-            puts x
             if codedDemoHeader == false && y.to_s == "Coding-COD"
               pOutputFile.puts "</tbody>"
               pOutputFile.puts "</table>"
-              codedDemoHeader = printHeader("### Coded Content (Death Cause or Condition)", pOutputFile, pRowFilterIG)
+              codedDemoHeader = printHeader("### Coded Content (Cause of Death)", pOutputFile, pRowFilterIG)
             end
             if codedCODHeader == false && y.to_s == "Coding-Demographic"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
                 codedCODHeader = printHeader("### Coded Content (Demographic)", pOutputFile, pRowFilterIG)
             end
+            if codedWorkHeader == false && y.to_s == "Coding-Work"
+              pOutputFile.puts "</tbody>"
+              pOutputFile.puts "</table>"
+              codedWorkHeader = printHeader("### Coded Content (Usual Work)", pOutputFile, pRowFilterIG)
+            end
             if notImplementedHeader == false && y.to_s == "Not Implemented"
                 pOutputFile.puts "</tbody>"
                 pOutputFile.puts "</table>"
                 notImplementedHeader = printHeader("### Not Implemented Content", pOutputFile, pRowFilterIG)
             end
-            
+
+            next if y.to_s != "Coding-Work" && (row[IJE_NAME_COL] == "OCCUPC4" || row[IJE_NAME_COL] == "INDUSTC4")
             field = description = ijename = profile = vProvOutputFilename = fhirfield = fhirtype = fhirencoding = fhirig = fhirunique = ""
             field = row[IJE_FIELD_COL] if row[IJE_FIELD_COL]
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
@@ -150,10 +180,12 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             fhirencoding = row[IJE_FHIR_COMMENTS_COL] if row[IJE_FHIR_COMMENTS_COL]   
             fhirunique = row[IJE_UNIQUENESS_COL] if row[IJE_UNIQUENESS_COL] 
             description = row[IJE_DESC_COL] if row[IJE_DESC_COL]
-                pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
-            # end
+            if y.to_s == "Not Implemented"
+              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + fhirencoding + "</td></tr>"
+            else
+              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
+            end
         end
-        #pOutputFile.puts "</tbody>"
     end
     pOutputFile.puts "</tbody>"
     pOutputFile.puts "</table>"
@@ -175,7 +207,7 @@ end
 vOutputFilename = "/generated/dataDictionaries/DeathRecordDataDictionary.md"
 puts vOutputFilename
 vOutputFile = File.open(Dir.pwd + vOutputFilename, "w")
-vOutputFile.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for birth to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
+vOutputFile.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for death to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
 
 vOutputFile.puts ""
 createMappingTable("VRDR", "Mortality", "### Death Record IJE Mapping", vOutputFile, vProfileIntrosSpreadsheet, vSpreadsheet)
@@ -187,7 +219,7 @@ createMappingTable("VRDR", "Mortality", "### Death Record IJE Mapping", vOutputF
 vOutputFilename1 = "/generated/dataDictionaries/MortalityRosterDataDictionary.md"
 puts vOutputFilename1
 vOutputFile1 = File.open(Dir.pwd + vOutputFilename1, "w")
-vOutputFile1.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for fetal death to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
+vOutputFile1.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for mortality to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
 
 vOutputFile1.puts ""
 createMappingTable("VRDR", "Mortality Roster", "### Mortality Roster IJE Mapping", vOutputFile1, vProfileIntrosSpreadsheet, vSpreadsheet)
@@ -195,13 +227,6 @@ createMappingTable("VRDR", "Mortality Roster", "### Mortality Roster IJE Mapping
 #create hash for mapping of links 
 aliases={}
 File.foreach(Dir.pwd + "/input/includes/markdown-link-references.md", chomp: true) do |line|
-    parts = line.split(':',2)
-    url =parts[1][1..] if !parts[1].nil?
-    link = parts[0][1..-2]
-    s = "<a href='#{url}'>#{link}</a>"   
-    aliases[parts[0]]=s
-end
-File.foreach(Dir.pwd + "/fsh-generated/includes/fsh-link-references.md", chomp: true) do |line|
     parts = line.split(':',2)
     url =parts[1][1..] if !parts[1].nil?
     link = parts[0][1..-2]

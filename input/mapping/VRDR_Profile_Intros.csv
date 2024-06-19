@@ -74,7 +74,14 @@ The profile includes:",x,x,VRDR
   * The unique record identifier for every record consistes of YYYYJJFFFFFF, where YYYY is the year, JJ is the two character jurisdiction code, and FFFFFF is the six digit death certificate number.
 
 In addition to  the [DeathCertificate] Composition it includes the following content:",,x,VRDR
-8,Input,DeathDate,vrdr-death-date,"The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
+8,Input,DeathCertification,vrdr-death-certification,"
+  Note:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
+  but is not required by the death record submission use case.
+
+  The Death Certification profile includes:",x,x,VRDR
+9,Input,DeathDate,vrdr-death-date,"The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
 
   The certificate signing date is passed via the [DeathCertification] profile.
 
@@ -86,13 +93,6 @@ In addition to  the [DeathCertificate] Composition it includes the following con
   to [DateOfDeathDeterminationMethodsVS] is included for compatibility with the Medicolegal Death Investigation ([MDI]) Implementation Guide.  The valueset only
 includes the values used by MDI, but is bound [extensibly](http://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires additional values (e.g., 'presumed'), these values can be used
 while remaining in full conformance with the VRDR IG.",x,x,VRDR
-9,Input,DeathCertification,vrdr-death-certification,"
-  Note:
-  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
-  but is not required by the death record submission use case.
-
-  The Death Certification profile includes:",x,x,VRDR
 10,Input,DeathLocation,vrdr-death-location,,x,x,VRDR
 11,Input,Decedent,vrdr-decedent,"The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
@@ -129,31 +129,18 @@ while remaining in full conformance with the VRDR IG.",x,x,VRDR
 20,Input,DispositionLocation,vrdr-disposition-location,Implementors are free to use the name field for the name of the disposition location.,x,x,VRDR
 21,Input,ExaminerContacted,vrdr-examiner-contacted,,x,x,VRDR
 22,Input,FuneralHome,vrdr-funeral-home,,x,x,VRDR
-23,Input,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
-24,Input,InjuryLocation,vrdr-injury-location,,x,x,VRDR
+23,Input,InjuryLocation,vrdr-injury-location,,x,x,VRDR
+24,Input,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
 25,Input,MannerOfDeath,vrdr-manner-of-death,A reference to the [Certifier] may be provided through the performer field.,x,x,VRDR
-26,Input,ObservationUsualWorkVitalRecords,Observation-usual-work-vr,,,x,VRCL
-27,Input,SurgeryDate,vrdr-surgery-date,,,x,VRDR
-28,Input,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
-29,Input,ObservationInputRaceAndEthnicityVitalRecords,input-race-and-ethnicity-vr,,x,x,VRCL
-30,Coding-COD,ActivityAtTimeOfDeath,vrdr-activity-at-time-of-death,,,x,VRDR
-31,Coding-COD,AutomatedUnderlyingCauseOfDeath,vrdr-automated-underlying-cause-of-death,,,x,VRDR
-32,Coding-COD,ManualUnderlyingCauseOfDeath,vrdr-manual-underlying-cause-of-death,,,x,VRDR
-33,Coding-COD,RecordAxisCauseOfDeath,vrdr-record-axis-cause-of-death,"
-
-   Additional information on Record Axis Cause of death can be found in the case of multiple causes of death can be found in this CDC [publication](https://www.cdc.gov/nchs/data/dvs/Multiple-Cause-Record-Layout-2020.pdf)
-.  Previously a subset of records classified to ICD-10 CHAPTER XV - Pregnancy, childbirth and the puerperium (O00-O99) were flagged by the presence of a '1' in the 5th position of the 2nd condition (position = 2).
-These are instances where a decedent < 45 years of age has been classified as a maternal
-death using input from the information entered in the [DecedentPregnancyStatus], and the 2nd condition represents the cause of death
-to which the given record would be classified had the causes of death been processed without [National Vital Statistics Reports Volume 69, Number 2 January, 2020 (cdc.gov)](https://www.cdc.gov/nchs/data/nvsr/nvsr69/nvsr69-02-508.pdf).
-
-
-In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
-* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)",,x,VRDR
-34,Coding-COD,EntityAxisCauseOfDeath,vrdr-entity-axis-cause-of-death,,,x,VRDR
-35,Coding-COD,PlaceOfInjury,vrdr-place-of-injury,"This profile is used to provide the coded Place of Injury.  The Observation.value must provide a value from [PlaceOfInjuryVS] which corresponds to the TRX codes provided by NCHS.  In addition, backwards compatibility with the SuperMICAR places of injury is supported with an optional code from the [PlaceOfInjuryOtherVS] valueset, which corresponds to additional place values.   The SuperMICAR value should only be provided when the coded place is 'Other'.  This backwards compatibility is provided for the convenience of jurisdictions. NCHS does not generate SuperMICAR codes.",,x,VRDR
-36,Coding-COD,CodingStatusValues,vrdr-coding-status-values,,,x,VRDR
-37,Coding-COD,CauseOfDeathCodedContentBundle,vrdr-cause-of-death-coded-bundle,"This bundle is information-content equivalent to the traditional NCHS TRX format.
+26,Input,ObservationEmergingIssuesVitalRecords,Observation-emerging-issues-vr,,x,x,VRCL
+27,Input,ObservationUsualWorkVitalRecords,Observation-usual-work-vr,,,x,VRCL
+28,Input,ObservationInputRaceAndEthnicityVitalRecords,input-race-and-ethnicity-vr,,x,x,VRCL
+29,Input,SurgeryDate,vrdr-surgery-date,,,x,VRDR
+30,Input,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
+31,Coding-COD,ActivityAtTimeOfDeath,vrdr-activity-at-time-of-death,,,x,VRDR
+32,Coding-COD,AutomatedUnderlyingCauseOfDeath,vrdr-automated-underlying-cause-of-death,,,x,VRDR
+33,Coding-COD,AutopsyPerformedIndicator,vrdr-autopsy-performed-indicator,The Autopsy Performed Indicator profile captures the following values:,x,x,VRDR
+34,Coding-COD,CauseOfDeathCodedContentBundle,vrdr-cause-of-death-coded-bundle,"This bundle is information-content equivalent to the traditional NCHS TRX format.
 
   This bundle contains:
   * Coded Content:
@@ -173,8 +160,36 @@ In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a fla
     * Tobacco Use Contributed to Death - [TobaccoUseContributedToDeath]
     * Decedent Pregnancy Status - [DecedentPregnancyStatus]
     * Surgery Date - [SurgeryDate]",,x,VRDR
-38,Coding-COD,ObservationOutputRaceAndEthnicityVitalRecords,output-race-and-ethnicity-vr,,x,x,VRCL
-39,Coding-Demographic,DemographicCodedContentBundle,vrdr-demographic-coded-content-bundle,"  This bundle is information-content equivalent to the traditional NCHS MRE format.
+35,Coding-COD,CauseOfDeathPart1,vrdr-cause-of-death-part1,,x,x,VRDR
+36,Coding-COD,CauseOfDeathPart2,vrdr-cause-of-death-part2,,x,x,VRDR
+37,Coding-COD,CodingStatusValues,vrdr-coding-status-values,,,x,VRDR
+38,Coding-COD,DeathCertification,vrdr-death-certification,"
+  Note:
+  * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
+  but is not required by the death record submission use case.
+
+  The Death Certification profile includes:",x,x,VRDR
+39,Coding-COD,DecedentPregnancyStatus,vrdr-decedent-pregnancy-status,,x,x,VRDR
+40,Coding-COD,EntityAxisCauseOfDeath,vrdr-entity-axis-cause-of-death,,,x,VRDR
+41,Coding-COD,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
+42,Coding-COD,MannerOfDeath,vrdr-manner-of-death,A reference to the [Certifier] may be provided through the performer field.,x,x,VRDR
+43,Coding-COD,ManualUnderlyingCauseOfDeath,vrdr-manual-underlying-cause-of-death,,,x,VRDR
+44,Coding-COD,PlaceOfInjury,vrdr-place-of-injury,"This profile is used to provide the coded Place of Injury.  The Observation.value must provide a value from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> which corresponds to the TRX codes provided by NCHS.  In addition, backwards compatibility with the SuperMICAR places of injury is supported with an optional code from the <a href='ValueSet-vrdr-place-of-injury-other-vs.html'>PlaceOfInjuryOtherVS</a> valueset, which corresponds to additional place values.   The SuperMICAR value should only be provided when the coded place is 'Other'.  This backwards compatibility is provided for the convenience of jurisdictions. NCHS does not generate SuperMICAR codes.",,x,VRDR
+45,Coding-COD,RecordAxisCauseOfDeath,vrdr-record-axis-cause-of-death,"
+
+   Additional information on Record Axis Cause of death can be found in the case of multiple causes of death can be found in this CDC [publication](https://www.cdc.gov/nchs/data/dvs/Multiple-Cause-Record-Layout-2020.pdf)
+.  Previously a subset of records classified to ICD-10 CHAPTER XV - Pregnancy, childbirth and the puerperium (O00-O99) were flagged by the presence of a '1' in the 5th position of the 2nd condition (position = 2).
+These are instances where a decedent < 45 years of age has been classified as a maternal
+death using input from the information entered in the [DecedentPregnancyStatus], and the 2nd condition represents the cause of death
+to which the given record would be classified had the causes of death been processed without [National Vital Statistics Reports Volume 69, Number 2 January, 2020 (cdc.gov)](https://www.cdc.gov/nchs/data/nvsr/nvsr69/nvsr69-02-508.pdf).
+
+
+In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
+* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)",,x,VRDR
+46,Coding-COD,SurgeryDate,vrdr-surgery-date,,,x,VRDR
+47,Coding-COD,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
+48,Coding-Demographic,DemographicCodedContentBundle,vrdr-demographic-coded-content-bundle,"  This bundle is information-content equivalent to the traditional NCHS MRE format.
 
 
   This bundle contains:
@@ -182,4 +197,8 @@ In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a fla
     * Coded Race and Ethnicity - [ObservationCodedRaceAndEthnicityVitalRecords]
   * Input Content:
     * Input Race and Ethnicity - [ObservationInputRaceAndEthnicityVitalRecords]",,x,VRDR
-40,Not Implemented,not implemented,,,,,VRDR
+49,Coding-Demographic,ObservationInputRaceAndEthnicityVitalRecords,input-race-and-ethnicity-vr,,x,x,VRCL
+50,Coding-Demographic,ObservationCodedRaceAndEthnicityVitalRecords,coded-race-and-ethnicity-vr,,,x,VRCPL
+51,Coding-Work,IndustryOccupationCodedContentBundle,industry-occupation-coded-content-bundle,,,x,VRDR
+52,Coding-Work,ObservationUsualWorkVitalRecords,Observation-usual-work-vr,,,x,VRCL
+53,Not Implemented,not implemented,,,,x,VRDR
