@@ -241,7 +241,7 @@ These fields are included in a VRO's submission of a death record (only input, o
 </table>
 ### Coded Content (Cause of Death)
 
-These fields are included in the coded cause of death content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the Transax (TRX) content.
+These fields are included in the coded cause of death content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the Transax (TRX) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state.
 
 *Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
 
@@ -297,7 +297,7 @@ These fields are included in the coded cause of death content sent by NCHS to VR
 <tr><td style='text-align: center;'>175</td><td>If Transportation Accident, Specify</td><td style='text-align: center;'>TRANSPRT</td><td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td><td>component[transportationRole].value.  (if value.code = OTH) the role should be specified in value.text)</td><td>codeable</td><td><a href='ValueSet-vrdr-transportation-incident-role-vs.html'>TransportationIncidentRoleVS</a></td></tr>
 <tr><td style='text-align: center;'>100</td><td>Manner of Death</td><td style='text-align: center;'>MANNER</td><td><a href='StructureDefinition-vrdr-manner-of-death.html'>MannerOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-manner-of-death-vs.html'>MannerOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>104</td><td>Manual Underlying Cause </td><td style='text-align: center;'>MAN_UC</td><td><a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a></td><td>value</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
-<tr><td style='text-align: center;'>103</td><td>Place of Injury (computer generated)</td><td style='text-align: center;'>INJPL</td><td><a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a></td><td>value</td><td>codeable</td><td>A code from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> is required, an optional code from <a href='ValueSet-vrdr-place-of-injury-other-vs.html'>PlaceOfInjuryOtherVS</a> can also be provided when the primary code is Other.</td></tr>
+<tr><td style='text-align: center;'>103</td><td>Place of Injury (computer generated)</td><td style='text-align: center;'>INJPL</td><td><a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a></td><td>value</td><td>codeable</td><td>A code from <a href='ValueSet-vrdr-place-of-injury-vs.html'>PlaceOfInjuryVS</a> is required, an optional code from [PlaceOfInjuryOtherVS] can also be provided when the primary code is Other.</td></tr>
 <tr><td style='text-align: center;'>108</td><td>Record-axis codes</td><td style='text-align: center;'>RAC</td><td><a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a></td><td>Each entry is a 3-tuple (value, component[position], component[WouldBeUnderlyingCauseOfDeathWithoutPregnancy])</td><td>codeable</td><td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td></tr>
 <tr><td style='text-align: center;'>123</td><td>Surgery Date--month</td><td style='text-align: center;'>SUR_MO</td><td><a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a></td><td>value</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
 <tr><td style='text-align: center;'>124</td><td>Surgery Date--day</td><td style='text-align: center;'>SUR_DY</td><td><a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a></td><td>value</td><td>dateTime</td><td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
@@ -307,7 +307,7 @@ These fields are included in the coded cause of death content sent by NCHS to VR
 </table>
 ### Coded Content (Demographic)
 
-These fields are included in the coded demographic content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the legacy Mortality, Race and Ethnicity (MRE) content.
+These fields are included in the coded demographic content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the legacy Mortality, Race and Ethnicity (MRE) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state.
 
 *Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
 
