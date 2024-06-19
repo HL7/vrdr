@@ -18,6 +18,8 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
     </style>
 ### Death Record IJE Mapping
 
+These fields are included in a VRO's submission of a death record (only input, or non-coded, content).
+
 <table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
 <tbody>
 <tr>
@@ -239,6 +241,8 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 </table>
 ### Coded Content (Cause of Death)
 
+These fields are included in the coded cause of death content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the Transax (TRX) content.
+
 *Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
 
 <table align='left' border='1' class='style1' cellpadding='1' cellspacing='1'>
@@ -302,6 +306,8 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 </tbody>
 </table>
 ### Coded Content (Demographic)
+
+These fields are included in the coded demographic content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the legacy Mortality, Race and Ethnicity (MRE) content.
 
 *Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
 
@@ -371,6 +377,8 @@ The following table illustrates the mappings of fields in the Interjurisdictiona
 </tbody>
 </table>
 ### Coded Content (Usual Work)
+
+These fields are included in the coded industry and occupation content that is produced by the National Institute of Occupational Safety and Health (NIOSH) and delivered to VROs via NCHS (including input, or non-coded, content).
 
 *Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports
 

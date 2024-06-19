@@ -64,6 +64,22 @@ vSpreadsheet = ARGV[1]
 
 def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
+    if hHeading.include?("Death Record IJE Mapping")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content)."
+    end
+    if hHeading.include?("Cause of Death")
+        pOutputFile.puts ""
+        pOutputFile.puts "These fields are included in the coded cause of death content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the Transax (TRX) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state."
+    end
+    if hHeading.include?("Demographic")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in the coded demographic content sent by NCHS to VROs (including input, or non-coded, content). In total, these are equivalent to the legacy Mortality, Race and Ethnicity (MRE) content. Although not mapped to IJE, the death record identifier (YYYYJJNNNNNN) also includes death year and death state."
+    end
+    if hHeading.include?("Usual Work")
+      pOutputFile.puts ""
+      pOutputFile.puts "These fields are included in the coded industry and occupation content that is produced by the National Institute of Occupational Safety and Health (NIOSH) and delivered to VROs via NCHS (including input, or non-coded, content)."
+    end
     if hHeading.start_with?("### Coded Content") 
         pOutputFile.puts ""
         pOutputFile.puts "*Coded content is used for compositions from NCHS to VRO, and is not included in Jurisdiction or Provider reports"
