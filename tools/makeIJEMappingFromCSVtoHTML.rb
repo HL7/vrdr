@@ -15,6 +15,7 @@
 
 #output files: after running script, generated files will be in the /generated/dataDictionaries folder. Copy or move generated files to /input/pagecontent in order for updated pages to be included in IG
 
+require "makeExcelFromCSV"
 require "json"
 require "pry"
 require "roo"

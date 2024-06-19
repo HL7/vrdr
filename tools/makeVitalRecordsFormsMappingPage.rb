@@ -13,6 +13,7 @@
 
 #output file: generated/VRDR/vrdr_forms_mapping.md. Copy or move generated file to /input/pagecontent in order for updated page to be included in IG
 
+require "makeExcelFromCSV"
 require "json"
 require 'open-uri'
 require "pry"

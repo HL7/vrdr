@@ -18,7 +18,7 @@
 
 #output: after running script, generated files will be in the /generated/VRDR folder. Copy or move generated files to /input/pagecontent in order for updated content to be included in IG
 
-
+require "makeExcelFromCSV"
 require "json"
 require "pry"
 require "roo"
