@@ -1,7 +1,7 @@
 require 'roo'
 require 'write_xlsx'
 # Open the CSV file
-csv = Roo::CSV.new('./input/mapping/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv')
+csv = Roo::CSV.new('./input/mapping/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv')
 # Create a hash to store the data for each sheet
 rows = {}
 sheets = {}
@@ -22,15 +22,21 @@ csv.each_with_index do |row, index|
   sheets[flow] = 0
 end
 # Create a new Excel workbook
-workbook = WriteXLSX.new('./input/images/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.xlsx')
-# Loop through each use case
-font = {
-  bold: 1
-}
-alignment = {
-  align: 1
-}
-
+workbook = WriteXLSX.new('./input/images/ IJE_File_Layouts_and_FHIR_Mapping_24-06-21.xlsx')
+# add front page
+worksheet = workbook.add_worksheet("Front Page")
+long_format = workbook.add_format(text_wrap: 1)
+link_format = workbook.add_format(color: 'navy', bold: 1)
+worksheet.set_column(0, 0, 64)
+link = '=Hyperlink("https://hl7.org/fhir/us/vrdr/STU2.2/IJE_File_Layouts_Version_2021_FHIR.xlsx", "*IJE_File_Layouts_Version_2021_FHIR.xlsx")'
+worksheet.write(1, 0, link, link_format)
+worksheet.write(0, 0,
+'This content was derived from the file IJE_File_Layouts_Version_2021_FHIR* and is automatically generated from the source file IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv.
+The CSV version of the file is used to drive the content of narrative generated for the Vital Records Implementation Guides (VRDR, BFDR, and VRCL).
+ 
+Revisions:
+  2024-6-21 -- Initial Version.   Reflects content of VRDR STU3, BFDR STU2, and VRCL STU2.', long_format)
+# add the rest of the sheets
 header_formats = {}
 hex_colors = {'Mortality' => ['#CCFFCC', 8], 'Surveillance' => ['#CCFFCC', 8], 'Mortality Roster' => ['#FF99CC', 9],
               'Natality' => ['#CCFFFF', 10], 'Fetal Death' => ['#FFCC99', 11], 'ITOP' => ['#CC99FF', 12], 'Birth Infant Death' => ['#C4BD97', 13]}
@@ -38,7 +44,6 @@ hex_colors.each do |use,color|
   workbook.set_custom_color(hex_colors[use][1], hex_colors[use][0])
 end 
 ije_format = workbook.add_format(bold: 1)
-long_format = workbook.add_format(text_wrap: 1)
 sheets.each_with_index do |(use_case, line), idx|
   # Create a new worksheet for use case
   worksheet = workbook.add_worksheet(use_case.to_s)
