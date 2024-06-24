@@ -22,7 +22,7 @@ csv.each_with_index do |row, index|
   sheets[flow] = 0
 end
 # Create a new Excel workbook
-workbook = WriteXLSX.new('./input/images/ IJE_File_Layouts_and_FHIR_Mapping_24-06-21.xlsx')
+workbook = WriteXLSX.new('./input/images/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.xlsx')
 # add front page
 worksheet = workbook.add_worksheet("Front Page")
 long_format = workbook.add_format(text_wrap: 1)

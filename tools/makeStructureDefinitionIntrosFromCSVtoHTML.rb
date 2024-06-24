@@ -1,20 +1,20 @@
 # NOTE: Before running this script, you should download a local copy of the latest spreadsheets from https://github.com/nightingaleproject/vital_records_sheets using either method below:
 
 #method 1 (Windows PC):
-#Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv?raw=true -Outfile "./input/mapping/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv"
-#Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv?raw=true -Outfile "./input/images/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv"
+#Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv?raw=true -Outfile "./input/mapping/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv"
+#Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv?raw=true -Outfile "./input/images/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv"
 #Invoke-Webrequest https://github.com/nightingaleproject/vital_records_sheets/blob/main/Forms_Mapping.csv?raw=true -Outfile "./input/mapping/Forms_Mapping.csv"
 
 #method 2 (MAC):
 # require 'open-uri'
-# download1 = URI.open('https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv?raw=true')
-# IO.copy_stream(download1, 'input/mapping/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv')
-# IO.copy_stream(download1, 'input/images/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv')
+# download1 = URI.open('https://github.com/nightingaleproject/vital_records_sheets/blob/main/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv?raw=true')
+# IO.copy_stream(download1, 'input/mapping/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv')
+# IO.copy_stream(download1, 'input/images/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv')
 # download2 = URI.open('https://github.com/nightingaleproject/vital_records_sheets/blob/main/Forms_Mapping.csv?raw=true')
 # IO.copy_stream(download2, 'input/mapping/Forms_Mapping.csv')
 
 #run:
-#ruby tools/makeStructureDefinitionIntrosFromCSVtoHTML.rb input/mapping/VRDR_Profile_Intros.csv input/mapping/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv input/mapping/Forms_Mapping.csv
+#ruby tools/makeStructureDefinitionIntrosFromCSVtoHTML.rb input/mapping/VRDR_Profile_Intros.csv input/mapping/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv input/mapping/Forms_Mapping.csv
 
 #output: after running script, generated files will be in the /generated/VRDR folder. Copy or move generated files to /input/pagecontent in order for updated content to be included in IG
 
@@ -37,7 +37,7 @@ def open_spreadsheet(file)
   end
 end
 
-# IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.csv columns
+# IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv columns
 IJE_USECASE_COL = 1
 IJE_FIELD_COL = 2
 IJE_BEGIN_COL = 3
@@ -82,7 +82,7 @@ vProfileIntrosSpreadsheet = ARGV[0]
 #vProfileIntrosSpreadsheet = open_spreadsheet(ARGV[0])
 #vProfileIntrosSpreadsheet.default_sheet = "BFDR"
 
-# ARGV[1] input/mapping/IJE_File_Layouts_Version_2021_FHIR-2023-02-22-All-Combined.xlsx 
+# ARGV[1] input/mapping/IJE_File_Layouts_and_FHIR_Mapping_24-06-21.xlsx 
 vSpreadsheet = ARGV[1]
 #vSpreadsheet = open_spreadsheet(ARGV[1])
 #vSpreadsheet.default_sheet = "IJE_File_Layouts_Version_2021_F"
