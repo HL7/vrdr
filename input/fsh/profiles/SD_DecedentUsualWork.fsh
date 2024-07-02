@@ -1,6 +1,6 @@
 Profile: DecedentUsualWork
 Parent: UsualWork
-Id: Observation-decedent-usual-work
+Id: vrdr-decedent-usual-work
 Title: "Observation - Decedent Usual Work"
 Description: "Used to send text-string industry and occupation information from Jurisdictions to NCHS, and coded versions from NCHS to Jurisdictions."
 * subject only Reference(PatientVitalRecords)  // Decedent... required by the Usual Work Profile
