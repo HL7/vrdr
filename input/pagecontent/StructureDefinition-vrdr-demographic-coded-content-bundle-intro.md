@@ -1,5 +1,6 @@
   This bundle is information-content equivalent to the traditional NCHS MRE format.
 
+
   This bundle contains:
   * Coded Content:
     * Coded Race and Ethnicity - <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>

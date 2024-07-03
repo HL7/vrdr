@@ -1,7 +1,7 @@
 Profile: DecedentUsualWork
 Parent: UsualWork
 Id: vrdr-decedent-usual-work
-Title: "Observation - Decedent Usual Work"
+Title: "Decedent Usual Work"
 Description: "Used to send text-string industry and occupation information from Jurisdictions to NCHS, and coded versions from NCHS to Jurisdictions."
 * subject only Reference(PatientVitalRecords)  // Decedent... required by the Usual Work Profile
 * component[odh-UsualIndustry] ^short = "Literal text string submitted to NCHS for industry"
