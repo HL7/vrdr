@@ -30,7 +30,7 @@ The content is broken down into the following sections:
     * [ObservationEmergingIssuesVitalRecords]
     * [DecedentMother]
     * [DecedentSpouse]
-    * [ObservationUsualWorkVitalRecords]
+    * [DecedentUsualWork]
 * Death Investigation
     * [AutopsyPerformedIndicator]
     * [DeathDate]
@@ -133,7 +133,12 @@ while remaining in full conformance with the VRDR IG.",x,x,VRDR
 24,Input,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
 25,Input,MannerOfDeath,vrdr-manner-of-death,A reference to the [Certifier] may be provided through the performer field.,x,x,VRDR
 26,Input,ObservationEmergingIssuesVitalRecords,Observation-emerging-issues-vr,,x,x,VRCL
-27,Input,ObservationUsualWorkVitalRecords,Observation-usual-work-vr,,,x,VRCL
+27,Input,DecedentUsualWork,vrdr-decedent-usual-work,"Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange, 
+but coded values are not expected for vital records submissions. 
+
+Note that the coded industry and occupation fields are bound to PHINVADs-hosted value sets. 
+
+For NCHS provided coded values the specific vocabulary used will depend on the death year.",,x,VRDR
 28,Input,ObservationInputRaceAndEthnicityVitalRecords,input-race-and-ethnicity-vr,,x,x,VRCL
 29,Input,SurgeryDate,vrdr-surgery-date,,,x,VRDR
 30,Input,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
@@ -166,7 +171,7 @@ while remaining in full conformance with the VRDR IG.",x,x,VRDR
 38,Coding-COD,DeathCertification,vrdr-death-certification,"
   Note:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile]({{hl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
   but is not required by the death record submission use case.
 
   The Death Certification profile includes:",x,x,VRDR
