@@ -126,26 +126,210 @@ groups:
     # - StructureDefinition/vrdr-coded-race-and-ethnicity
     - CodingStatusValues
   DocumentsAndBundles:
-    name: Documents and Bundles
-    description: Documents and Bundles used to transmit death record content.
+    name: Compositions and Bundles 
+    description: Compositions and Bundles used to transmit death record content.
     resources:
-    - CauseOfDeathCodedContentBundle
-    - DemographicCodedContentBundle
     - DeathCertificate
     - DeathCertificateDocument 
-    - MortalityRosterBundle
+    - CauseOfDeathCodedContentBundle
+    - DemographicCodedContentBundle
     - IndustryOccupationCodedContentBundle
-  ExampleBundles:
-    name: Example Bundles
-    description: Example Death Certificate, Coded Content, and Mortality Roster Bundles
+    - MortalityRosterBundle
+    - DeathCertificateDocument-Example1
+    - DeathCertificateDocument-Example2
+
+  Entensions:
+    name: Extensions 
+    description: Extensions 
+    resources:
+    - AliasStatus
+    - FilingFormat
+    - StateSpecificField
+    - NVSSSexAtDeath
+    - SpouseAlive
+    - ReplaceStatus
+    - PractitionerRole
+  
+  CodeSystems:
+    name: CodeSystems
+    description: CodeSystems 
+    resources:
+    - ActivityAtTimeOfDeathCS
+    - DateOfDeathDeterminationMethodsCS
+    - DeathPregnancyStatusCS
+    - DocumentSectionCS
+    - FilingFormatCS
+    - IntentionalRejectCS
+    - LocationTypeCS
+    - ObservationsCS
+    - ComponentCS
+    - OrganizationTypeCS
+    - ReplaceStatusCS
+    - SuperMicarPlaceOfInjuryCS
+    - SystemRejectCS
+    - TransaxConversionCS
+
+  ValueSets:
+    name: ValueSets
+    description: ValueSets 
+    resources: 
+    - AdministrativeGenderVS
+    - CertifierTypesVS
+    - IntentionalRejectVS
+    - SystemRejectVS
+    - TransaxConversionVS
+    - ActivityAtTimeOfDeathVS
+    - ICD10CausesOfDeathVS
+    - ContributoryTobaccoUseVS
+    - DateOfDeathDeterminationMethodsVS
+    - DeathCertificationEventVS
+    - DeathCertificationEventMaxVS
+    - DeathPregnancyStatusVS
+    - FilingFormatVS
+    - MannerOfDeathVS
+    - MethodOfDispositionVS
+    - PlaceOfDeathVS
+    - PlaceOfInjuryVS
+    - PlaceOfInjuryOtherVS
+    - ReplaceStatusVS
+    - SpouseAliveVS
+    - TransportationIncidentRoleVS
+    - vrdr-edit-bypass-01-vs
+    - vrdr-edit-bypass-012-vs
+    - vrdr-edit-bypass-0124-vs
+
+  ConceptMaps:
+    name: ConceptMaps
+    description: ConceptMaps 
+    resources: 
+    - ActivityAtTimeOfDeathCM
+    - AdministrativeGenderCM
+    - AdministrativeGenderCM
+    - CertifierTypesCM
+    - ContributoryTobaccoUseCM
+    - DeathPregnancyStatusCM
+    - EditBypass01CM
+    - EditBypass012CM
+    - EditBypass0124CM
+    - FilingFormatCM
+    - IntentionalRejectCM
+    - MannerOfDeathCM
+    - MethodOfDispositionCM
+    - PlaceOfDeathCM
+    - PlaceOfInjuryCM
+    - ReplaceStatusCM
+    - SpouseAliveCM
+    - SystemRejectCM
+    - TransaxConversionCM
+    - TransportationIncidentRoleCM
+
+  ExampleDeathRecord:
+    name: Example Death Record Submission
+    description: Example of a complete Death Record Submission 
     resources:
     - DeathCertificateDocument-UT-1
     - DeathCertificateUT-Example1
-    - DeathCertification-Example1
-    - DeathCertification-Example2
+    - DecedentUT-Example1 
+    - InputRaceAndEthnicityUT-Example1
+    - PractitionerUT-Certifier
+    - PractitionerUT-Pronouncer
+    - BirthRecordIdentifierUT-Example1 
+    - EducationUT-Example1
+    - FatherUT-Example1
+    - MotherUT-Example1
+    - AutopsyPerformedIndicatorUT-Example1
+    - CauseOfDeathPart1UT-Example1 
+    - DeathDateUT-Example1
+    - DeathLocationUT-Example1 
+    - AgeUT-Example1 
+    - DispositionMethodUT-Example1 
+    - DispositionLocationUT-Example1
+    - UsualWorkUT-Example1
+    - MilitaryServiceUT-Example1
+    - PregnancyUT-Example1 
+    - ExaminerContactedUT-Example1 
+    - FuneralHomeUT-Example1
+    - InjuryIncidentUT-Example1 
+    - MannerOfDeathUT-Example1 
+    - TobaccoUseUT-Example1 
+    - ProcedureDeathCertificationUT-Example1
+    - EmergingIssuesUT-Example1
+
+  ExampleBundles:
+    name: Other Example Bundles
+    description: Example Death Certificate, Coded Content, and Mortality Roster Bundles
+    resources:
     - CauseOfDeathCodedContentBundle-Example1
     - DemographicCodedContentBundle-Example1
+    - IndustryOccupationCodedContentBundle-Example1
     - MortalityRosterBundle-Example1
+
+  OtherExamples:
+    name: Other Example Instances 
+    description: Other Example instances illustrating various aspects of the profiles.
+    resources:
+    - DeathCertification-Example1
+    - DeathCertification-Example2  
+    - AutopsyPerformedIndicator-Example1
+    - BirthRecordIdentifier-Example1
+    - BirthRecordIdentifierChild-Example1
+    - FetalDeathRecordIdentifier-Example1
+    - CauseOfDeathPart1-Example1
+    - CauseOfDeathPart1-Example2
+    - CauseOfDeathPart2-Example1
+    - Certifier-Example1
+    - AutomatedUnderlyingCauseOfDeath-Example1
+    - RecordAxisCauseOfDeath-Example1
+    - RecordAxisCauseOfDeath-Example2
+    - EntityAxisCauseOfDeath-Example1
+    - EntityAxisCauseOfDeath-Example2
+    - EntityAxisCauseOfDeath-Example3
+    - EntityAxisCauseOfDeath-Example4
+    - ManualUnderlyingCauseOfDeath-Example1
+    - PlaceOfInjury-Example1
+    - ActivityAtTimeOfDeath-Example1
+    - CodedRaceAndEthnicity-Example1
+    - InputRaceAndEthnicity-Example1
+    - CodingStatusValues-Example1
+    - DeathCertificate-Example1
+    - DeathCertificate-Example2
+    - DeathDate-Example1
+    - DeathDate-Example2
+    - DeathDate-Example3
+    - DeathDate-Example4
+    - DeathLocation-Example1
+    - DeathLocation-Example2
+    - DeathLocation-Example3
+    - Decedent-Example3
+    - Decedent-Example2
+    - Decedent-Example1
+    - DecedentAge-Example1
+    - DecedentDispositionMethod-Example1
+    - Mortician-Example1
+    - DispositionLocation-Example1
+    - DecedentEducationLevel-Example1
+    - DecedentMilitaryService-Example1
+    - DecedentPregnancyStatus-Example1
+    - DecedentUsualWork-Example1
+    - DecedentUsualWork-Example2
+    - EmergingIssues-Example1
+    - ExaminerContacted-Example1
+    - DecedentFather-Example1
+    - DecedentMother-Example1
+    - DecedentSpouse-Example1
+    - FuneralHome-Example1
+    - InjuryIncident-Example1
+    - InjuryIncident-Example2
+    - InjuryLocation-Example1
+    - MannerOfDeath-Example1
+    - SurgeryDate-Example1
+    - TobaccoUseContributedToDeath-Example1
+    - location-death-vr-atlanta-ga-a-freeman
+    - location-injury-vr-atlanta-ga-a-freeman
+    - practitioner-vital-records-janet-seito
+    - procedure-death-certification-vr-a-freeman
+    - us-core-patient-vr-a-freeman
+
 copyrightYear: 2022+
 publisher:
   name: HL7 International / Public Health
