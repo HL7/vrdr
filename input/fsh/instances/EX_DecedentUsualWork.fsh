@@ -1,8 +1,8 @@
 Instance: DecedentUsualWork-Example1
-InstanceOf: ObservationUsualWorkVitalRecords
+InstanceOf: DecedentUsualWork
 Usage: #example
 Description: "DecedentUsualWork-Example1 - without coded values"
-* insert AddMetaProfile(ObservationUsualWorkVitalRecords)
+* insert AddMetaProfile(DecedentUsualWork)
 * status = #final
 * subject = Reference(Decedent-Example1)
 * valueCodeableConcept.text = "secretary"
@@ -14,10 +14,10 @@ Description: "DecedentUsualWork-Example1 - without coded values"
 //* effectivePeriod.end = "2005"
 
 Instance: DecedentUsualWork-Example2
-InstanceOf: ObservationUsualWorkVitalRecords
+InstanceOf: DecedentUsualWork
 Usage: #example
 Description: "DecedentUsualWork-Example2 - with coded values"
-* insert AddMetaProfile(ObservationUsualWorkVitalRecords)
+* insert AddMetaProfile(DecedentUsualWork)
 * status = #final
 * subject = Reference(Decedent-Example1)
 //* valueCodeableConcept.coding = $v3-NullFlavor#UNK "unknown"

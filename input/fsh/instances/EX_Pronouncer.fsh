@@ -1,4 +1,4 @@
-/*  Certifier */
+/*  Pronouncer */
 Instance: Pronouncer-Example1
 InstanceOf: USCorePractitionerProfile
 Usage: #example
@@ -14,4 +14,3 @@ Description: "Pronouncer-Example1"
 * address.country = "US"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "9941339101"
-* qualification.code = $sct#434641000124105

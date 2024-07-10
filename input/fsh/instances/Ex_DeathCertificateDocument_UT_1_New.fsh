@@ -155,9 +155,9 @@ Description: "PractitionerUT-Example1"
 * identifier.value = "161632-1999"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * name.use = #official
-* name.family = "Doo"
-* name.given[0] = "The"
-* name.given[+] = "Scooby"
+* name.family = "Harrison"
+* name.given[0] = "William"
+* name.given[+] = "Henry"
 * address.use = #work
 * address.line[0] = "123 Fake St"
 * address.line[+] = "apt # 123"
@@ -282,7 +282,7 @@ Description: "DispositionLocationUT-Example1"
 * address.country = "US"
 
 Instance: UsualWorkUT-Example1
-InstanceOf: ObservationUsualWorkVitalRecords
+InstanceOf: DecedentUsualWork
 Usage: #example
 Description: "UsualWorkUT-Example1"
 // * id = "0051e0b6-6990-4190-93a6-87442b4a50aa"
