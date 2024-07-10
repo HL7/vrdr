@@ -11,7 +11,7 @@ Usage: #example
 * insert addentry(Composition, DeathCertificateUT-Example1)
 * insert addentry(Patient,DecedentUT-Example1)
 * insert addentry(Procedure, ProcedureDeathCertificationUT-Example1)
-* insert addentry(Practitioner, PractitionerUT-Example1)
+* insert addentry(Practitioner, PractitionerUT-Certifier)
 * insert addentry(RelatedPerson, MotherUT-Example1)
 * insert addentry(RelatedPerson, FatherUT-Example1)
 * insert addentry(Observation, InputRaceAndEthnicityUT-Example1)
@@ -45,9 +45,9 @@ Description: "DeathCertificateUT-Example1"
 * type = $loinc#64297-5 "Death certificate"
 * subject = Reference(DecedentUT-Example1)
 * date = "2022-12-01T02:46:13-05:00"
-* author = Reference(PractitionerUT-Example1)
+* author = Reference(PractitionerUT-Certifier)
 * attester.mode = #legal
-* attester.party = Reference(PractitionerUT-Example1)
+* attester.party = Reference(PractitionerUT-Certifier)
 * event.code = $sct#307930005 "Death certificate (record artifact)"
 * event.detail = Reference(ProcedureDeathCertificationUT-Example1)
 * section[DecedentDemographics]
@@ -62,7 +62,7 @@ Description: "DeathCertificateUT-Example1"
   * entry[+] = Reference(MilitaryServiceUT-Example1)
   * entry[+] = Reference(EmergingIssuesUT-Example1)
 * section[DeathCertification]
-  * entry[0] = Reference(PractitionerUT-Example1)
+  * entry[0] = Reference(PractitionerUT-Certifier)
   * entry[+] = Reference(InjuryIncidentUT-Example1)
   * entry[+] = Reference(ProcedureDeathCertificationUT-Example1)
 //  * entry[+] = Reference(DeathCertificationUT-Example1)
@@ -147,10 +147,10 @@ Description: "InputRaceAndEthnicityUT-Example1"
 * component[HispanicPuertoRican].valueCodeableConcept = $v2-0136#N "No"
 * component[HispanicOther].valueCodeableConcept = $v2-0136#N "No"
 
-Instance: PractitionerUT-Example1
+Instance: PractitionerUT-Certifier
 InstanceOf: PractitionerVitalRecords
 Usage: #example
-Description: "PractitionerUT-Example1"
+Description: "PractitionerUT-Certifier"
 // * id = "practitioner-ut-example1"
 * identifier.value = "161632-1999"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
@@ -221,7 +221,7 @@ InstanceOf: CauseOfDeathPart1
 Usage: #example
 Description: "CauseOfDeathPart1UT-Example1 "
 * subject = Reference(DecedentUT-Example1)
-* performer = Reference(PractitionerUT-Example1)
+* performer = Reference(PractitionerUT-Certifier)
 * valueCodeableConcept.text = "Pending"
 * component[lineNumber].valueInteger = 1
 * component[interval].valueString = "Pending"
@@ -234,7 +234,7 @@ Description: "DeathDateUT-Example1"
 * status = #final 
 * subject = Reference(DecedentUT-Example1)
 * effectiveDateTime = "2022-01-17T20:23:00-05:00"
-* performer = Reference(PractitionerUT-Example1)
+* performer = Reference(PractitionerUT-Certifier)
 * valueDateTime.extension[partialDateTime]
   * extension[year].valueUnsignedInt = 2022
   * extension[month].valueUnsignedInt = 1
@@ -344,7 +344,7 @@ Usage: #example
 Description: "MannerOfDeathUT-Example1"
 * status = #final 
 * subject = Reference(DecedentUT-Example1)
-* performer = Reference(PractitionerUT-Example1)
+* performer = Reference(PractitionerUT-Certifier)
 * valueCodeableConcept = $sct#185973002 "Patient awaiting investigation"
 
 Instance: TobaccoUseUT-Example1 
@@ -366,7 +366,7 @@ Description: "ProcedureDeathCertificationUT-Example1"
 // * code = $sct#308646001 "Death certification"
 * subject = Reference(DecedentUT-Example1)
 * performer.function = $sct#434641000124105 "Death certification and verification by physician (procedure)"
-* performer.actor = Reference(PractitionerUT-Example1)
+* performer.actor = Reference(PractitionerUT-Certifier)
 * performedDateTime = "2021-11-14T16:39:40-05:00"
 
 Instance: EmergingIssuesUT-Example1
