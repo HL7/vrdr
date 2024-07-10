@@ -1,4 +1,3 @@
-The <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> is optionally referenced from this profile (performer).
 
 ### IJE Mapping
 
@@ -41,7 +40,6 @@ The <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> is optionall
 
 </details>
 <p></p>
-
 
 ### Form Mapping
 <details>

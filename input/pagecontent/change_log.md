@@ -1,4 +1,5 @@
 ### Post-May 2024-Ballot Changes
+- [FHIR-46275](https://jira.hl7.org/browse/FHIR-46275) - Recreated DecedentUsualWork.  Since UsualWork is only used by VRDR, it was inefficient to keep UsualWork profile in VRCL.
 - [FHIR-45720](https://jira.hl7.org/browse/FHIR-45720) - Documentation changes to align [CauseOfDeathCodedContentBundle] with TRX
 - [FHIR-46148](https://jira.hl7.org/browse/FHIR-46148) – Support expanded SuperMICAR codes for Place of Injury. 
 

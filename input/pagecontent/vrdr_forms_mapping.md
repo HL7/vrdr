@@ -426,13 +426,13 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
 <tr>
   <td style='text-align: center'>54</td>
   <td>Decedent's Usual Occupation</td>
-  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-usual-work-vr.html'>ObservationUsualWorkVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
   <td>value.text</td>
 </tr>
 <tr>
   <td style='text-align: center'>55</td>
   <td>Kind of Business/Industry</td>
-  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-usual-work-vr.html'>ObservationUsualWorkVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
   <td>component [odh-UsualIndustry].value.text</td>
 </tr>
 </tbody>

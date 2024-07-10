@@ -73,6 +73,7 @@
 <tr><td> <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-military-service.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-mother.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-spouse.html'>VRDR</a> </td><td>-</td></tr>
+<tr><td> <a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-usual-work.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-demographic-coded-content-bundle.html'>DemographicCodedContentBundle</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-demographic-coded-content-bundle.html'>VRDR</a> </td><td>-</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-disposition-location.html'>DispositionLocation</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-disposition-location.html'>VRDR</a> </td><td>Now depends on abstract <a href='https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Location-vr.html'>LocationVitalRecords</a> profile</td></tr>
 <tr><td> <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a> </td><td><a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-entity-axis-cause-of-death.html'>VRDR</a> </td><td>-</td></tr>
@@ -189,7 +190,6 @@
 <td style='background-color:#98c1d9; text-align: center; width: 20%;'><b>Current Version/Location</b></td>
 <td style='background-color:#98c1d9; text-align: center;'><b>Comments/Updates</b></td>
 </tr>
-<tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a> </td><td><a href='https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Observation-usual-work-vr.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-emerging-issues.html'>EmergingIssues</a> </td><td><a href='https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-Observation-emerging-issues-vr.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-input-race-and-ethnicity.html'>InputRaceAndEthnicity</a> </td><td><a href='https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-input-race-and-ethnicity-vr.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/StructureDefinition-vrdr-coded-race-and-ethnicity.html'>CodedRaceAndEthnicity</a> </td><td><a href='https://build.fhir.org/ig/HL7/vr-common-library/StructureDefinition-coded-race-and-ethnicity-vr.html'>VRCL</a> </td><td>-</td></tr>

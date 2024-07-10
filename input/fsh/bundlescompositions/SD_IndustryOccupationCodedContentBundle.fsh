@@ -13,6 +13,6 @@ Description: "Industry and Occupation Coded Content Bundle (Bundle):  A bundle c
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile"
-* insert BundleSlice(CodedIndustryAndOccupation,  0, 1, DecedentUsualWork, DecedentUsualWork,  ObservationUsualWorkVitalRecords)
+* insert BundleSlice(CodedIndustryAndOccupation,  0, 1, DecedentUsualWork, DecedentUsualWork,  DecedentUsualWork)
 
 
