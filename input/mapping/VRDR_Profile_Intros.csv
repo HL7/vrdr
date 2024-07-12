@@ -77,10 +77,8 @@ In addition to  the [DeathCertificate] Composition it includes the following con
 8,Input,DeathCertification,vrdr-death-certification,"
   Note:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-procedure.html),
-  but is not required by the death record submission use case.
-
-  The Death Certification profile includes:",x,x,VRDR
+  * The DeathCertification.performer.actor (Certifier) is required by the [USCore Procedure Profile]({{{{site.data.fhir.verhl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
+  but is not required by the death record submission use case. The referenced Practitioner instance should be included in the [DeathCertificateDocument].",x,x,VRDR
 9,Input,DeathDate,vrdr-death-date,"The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
 
   The certificate signing date is passed via the [DeathCertification] profile.
@@ -165,8 +163,10 @@ For NCHS provided coded values the specific vocabulary used will depend on the d
     * Tobacco Use Contributed to Death - [TobaccoUseContributedToDeath]
     * Decedent Pregnancy Status - [DecedentPregnancyStatus]
     * Surgery Date - [SurgeryDate]",,x,VRDR
-35,Coding-COD,CauseOfDeathPart1,vrdr-cause-of-death-part1,,x,x,VRDR
-36,Coding-COD,CauseOfDeathPart2,vrdr-cause-of-death-part2,,x,x,VRDR
+35,Coding-COD,CauseOfDeathPart1,vrdr-cause-of-death-part1,"The certifier of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument].
+",x,x,VRDR
+36,Coding-COD,CauseOfDeathPart2,vrdr-cause-of-death-part2,"The certifier of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the [DeathCertificateDocument].
+",x,x,VRDR
 37,Coding-COD,CodingStatusValues,vrdr-coding-status-values,,,x,VRDR
 38,Coding-COD,DeathCertification,vrdr-death-certification,"
   Note:

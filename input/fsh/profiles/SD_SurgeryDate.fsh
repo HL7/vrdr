@@ -16,5 +16,6 @@ Description: "Date of Surgery (Observation).  The PartialDate extension supports
 // Should be an invariant so that either value[x] or the partial date absent extension are provided.
 * value[x] 0..1
 * value[x] only dateTime
+* value[x] ^short = "Surgery date"
 * valueDateTime.extension contains
     ExtensionPartialDateTimeVitalRecords named partialDate 0..1
