@@ -32,7 +32,7 @@
   <td>DSTATE</td>
   <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> in state field or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a> in extension</td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> in state field or <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a> in extension</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -41,7 +41,7 @@
   <td>COD</td>
   <td>address.district.extension[districtCode]</td>
   <td>integer</td>
-  <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#county-codes'>CountyCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -149,7 +149,7 @@
   <td>CITYCODE_D</td>
   <td>address.city.extension[cityCode]</td>
   <td>integer</td>
-  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes'>CityCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -176,7 +176,7 @@
   <td>DTHCOUNTRYCD</td>
   <td>address.country </td>
   <td>string </td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US</td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -185,7 +185,7 @@
   <td>DTHCOUNTRY</td>
   <td>address.country  (expanded from 2 letter code)</td>
   <td>string </td>
-  <td>See <a href='usage.html#country-literals'>CountryLiterals</a>.   Not used. For US Death certificates should be 'United States'.</td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#country-literals'>CountryLiterals</a>.   Not used. For US Death certificates should be 'United States'.</td>
 </tr>
 
 </tbody>
@@ -230,7 +230,7 @@
   <td>DSTATE</td>
   <td>address.state or address.state.extension[nationalReportingJurisdictionId]</td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> or <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a> or <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -239,7 +239,7 @@
   <td>DCOUNTRYC</td>
   <td>address.country </td>
   <td>string </td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US.   </td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US.   </td>
 </tr>
 
 </tbody>

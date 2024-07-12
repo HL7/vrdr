@@ -1,4 +1,4 @@
-The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
+The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
 
 Notes:
 * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
@@ -19,7 +19,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
     * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
     * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
-    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
+    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
     * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
     * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
     * <a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a>
@@ -47,7 +47,7 @@ The content is broken down into the following sections:
     * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
     * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
-    * <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
+    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
     * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
     * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
@@ -57,7 +57,6 @@ The content is broken down into the following sections:
 For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
 The replacement status of a submission is now specified as a message parameter and described in the <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content'>NCHS Vital Records Messaging IG</a>.
 
-The profile includes:
 
 ### IJE Mapping
 

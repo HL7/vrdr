@@ -6,7 +6,7 @@
 5,Input,Certifier,vrdr-certifier,"Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
 The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
 an identifier.",x,x,VRDR
-6,Input,DeathCertificate,vrdr-death-certificate,"The Death Certificate profile is a composition (bundle) comprising the core content of a death registration.
+6,Input,DeathCertificate,vrdr-death-certificate,"The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
 
 Notes:
 * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
@@ -65,7 +65,7 @@ The content is broken down into the following sections:
 For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
 The replacement status of a submission is now specified as a message parameter and described in the [NCHS Vital Records Messaging IG].
 
-The profile includes:",x,x,VRDR
+",x,x,VRDR
 7,Input,DeathCertificateDocument,vrdr-death-certificate-document,"The Death Certificate is a Bundle document that contains the [DeathCertificate] Composition and the other instances comprising the content of the death record.
 
   Notes:
@@ -116,7 +116,7 @@ while remaining in full conformance with the VRDR IG.",x,x,VRDR
   | age unknown | unknown |
   {: .grid }
 
-  The Decedent Age profile includes:",x,x,VRDR
+",x,x,VRDR
 13,Input,DecedentDispositionMethod,vrdr-decedent-disposition-method,,x,x,VRDR
 14,Input,DecedentEducationLevel,vrdr-decedent-education-level,,x,x,VRDR
 15,Input,DecedentFather,vrdr-decedent-father,,x,x,VRDR
@@ -174,7 +174,7 @@ For NCHS provided coded values the specific vocabulary used will depend on the d
   * The DeathCertification.performer.actor is required by the [USCore Procedure Profile]({{hl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
   but is not required by the death record submission use case.
 
-  The Death Certification profile includes:",x,x,VRDR
+",x,x,VRDR
 39,Coding-COD,DecedentPregnancyStatus,vrdr-decedent-pregnancy-status,,x,x,VRDR
 40,Coding-COD,EntityAxisCauseOfDeath,vrdr-entity-axis-cause-of-death,,,x,VRDR
 41,Coding-COD,InjuryIncident,vrdr-injury-incident,,x,x,VRDR
@@ -191,7 +191,7 @@ to which the given record would be classified had the causes of death been proce
 
 
 In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
-* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)",,x,VRDR
+",,x,VRDR
 46,Coding-COD,SurgeryDate,vrdr-surgery-date,,,x,VRDR
 47,Coding-COD,TobaccoUseContributedToDeath,vrdr-tobacco-use-contributed-to-death,,x,x,VRDR
 48,Coding-Demographic,DemographicCodedContentBundle,vrdr-demographic-coded-content-bundle,"  This bundle is information-content equivalent to the traditional NCHS MRE format.

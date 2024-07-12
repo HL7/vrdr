@@ -31,7 +31,7 @@
   <td>R_YR</td>
   <td>parameter[receiptDate].value</td>
   <td>date</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -40,7 +40,7 @@
   <td>R_MO</td>
   <td>parameter[receiptDate].value</td>
   <td>date</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -49,7 +49,7 @@
   <td>R_DY</td>
   <td>parameter[receiptDate].value</td>
   <td>date</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -67,7 +67,7 @@
   <td>SYS_REJ</td>
   <td>parameter[acmeSystemReject].value </td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-system-reject-vs.html'>ACMESystemRejectVS</a></td>
+  <td>[ACMESystemRejectVS]</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
