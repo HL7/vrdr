@@ -8,7 +8,7 @@ is being reported.  For maternal death cases, see [BirthRecordIdentifierChild](S
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#BR
+* code = ObservationsCS#childbirthrecordidentifier
   * ^short = "Birth registry number"
 // This needs to be documented in the notes
 // If subject is decedent (infant), this is for an infant death

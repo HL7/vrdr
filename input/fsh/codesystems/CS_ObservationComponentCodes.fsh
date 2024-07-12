@@ -8,6 +8,9 @@ Description: "Local Observation Codes for observations that lack an appropriate 
 * #emergingissues "Emerging Issues" "NCHS-required emerging issues data."
 * #codedraceandethnicity "Coded Race and Ethnicity" "Coded Race and Ethnicity Data produced by NCHS from submitted death record"
 * #inputraceandethnicity "Race and Ethnicity Data submitted by Jurisdictions to NCHS"
+* #decedentbirthrecordidentifier "Birth Record Identifier of Decedent"
+* #childbirthrecordidentifier "Birth Record Identifier of Child"
+* #fetaldeathrecordidentifier "Fetal Death Record Identifier of Fetus"
 * ^experimental = false
 * ^status = #active
 
