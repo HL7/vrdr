@@ -1,27 +1,28 @@
 ﻿Order,Heading,Profile Name Condensed,Profile Name,Profile Usage,Form Mappng,IJE Mapping,Profile Location
 1,Input,AutopsyPerformedIndicator,vrdr-autopsy-performed-indicator,The Autopsy Performed Indicator profile captures the following values:,x,x,VRDR
 2,Input,BirthRecordIdentifier,vrdr-birth-record-identifier,The BirthRecordIdentifier captures the key identifiers for the Decedent's birth record. It is relevant only in the case where the birth took place in a recognized jurisdiction.,,x,VRDR
-3,Input,CauseOfDeathPart1,vrdr-cause-of-death-part1,The [Certifier] is optionally referenced from this profile (performer).,x,x,VRDR
-4,Input,CauseOfDeathPart2,vrdr-cause-of-death-part2,The [Certifier] is optionally referenced from this profile (performer).,x,x,VRDR
+3,Input,CauseOfDeathPart1,vrdr-cause-of-death-part1,The Certifier ([VitalRecordsPractitioner]) is optionally referenced from this profile (performer), and may use the [Certifier] profile.,x,x,VRDR
+4,Input,CauseOfDeathPart2,vrdr-cause-of-death-part2,The Certifier ([VitalRecordsPractitioner]) is optionally referenced from this profile (performer), and may use the [Certifier] profile..,x,x,VRDR
 5,Input,Certifier,vrdr-certifier,"Note: The Certifier profile is based on the [US Core Practitioner](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html) which requires an identifier be included.
 The death record submission process does not require an identifier.  As a result, death record submissions that are complete will be flagged as invalid by the FHIR validator, unless they include
-an identifier.",x,x,VRDR
+an identifier. The VRDR IG profiles require a [VitalRecordsPractitioner] instance for references to the Certifier.  This is to ensure that these profiles are not over-constrained for use by the MDI IG",x,x,VRDR
 6,Input,DeathCertificate,vrdr-death-certificate,"The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
 
 Notes:
 * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
-Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
-Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+Additional content can be included in the Death Certificate Document and should referenced in the Death Certificate  based on standard resources and profiles.
+At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
 For example:
-* Funeral Home Licensee (USCorePractitionerRole)
-* Mortician (USCorePractitioner)
-* Funeral Home Director (USCorePractitionerRole)
+* Funeral Home Licensee (USCorePractitioner)
+* Funeral Home Director (USCorePractitioner)
 * Death Pronouncement Performer (USCorePractitioner)
 
 The content is broken down into the following sections:
 * Decedent Demographics
     * [BirthRecordIdentifier]
+    * [FetalDeathRecordIdentifier]
+    * [BirthRecordIdentifierChild]
     * [Decedent]
     * [DecedentAge]
     * [DecedentEducationLevel]
@@ -77,8 +78,8 @@ In addition to  the [DeathCertificate] Composition it includes the following con
 8,Input,DeathCertification,vrdr-death-certification,"
   Note:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor (Certifier) is required by the [USCore Procedure Profile]({{site.data.fhir.verhl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
-  but is not required by the death record submission use case. The referenced Practitioner instance should be included in the [DeathCertificateDocument].",x,x,VRDR
+  * The DeathCertification.performer.actor ([VitalRecordsPractitioner]) is required by the [USCore Procedure Profile]({{site.data.fhir.verhl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
+  but is not required by the death record submission use case. The referenced Practitioner may use the [Certifier] profile and the instance should be included in the [DeathCertificateDocument].",x,x,VRDR
 9,Input,DeathDate,vrdr-death-date,"The profile includes a component for the time of death pronouncement that is not currently used for death certificate submission.
 
   The certificate signing date is passed via the [DeathCertification] profile.
