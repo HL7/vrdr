@@ -78,6 +78,7 @@
 [ValueSetRaceMissingValueReasonVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-race-missing-value-reason-vr.html
 [ObservationCodedRaceAndEthnicityVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-coded-race-and-ethnicity-vr.html
 [ObservationInputRaceAndEthnicityVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-input-race-and-ethnicity-vr.html
+[PractitionerVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Practitioner-vr.html
 <!-- [ExtensionLocationJurisdictionIdVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}//StructureDefinition-Extension-jurisdiction-id-vr.html -->
 [ObservationUsualWorkVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-usual-work-vr.html
 [CodeSystemCountryCodeVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-country-code-vr.html
