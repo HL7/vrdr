@@ -6,7 +6,6 @@
 [NCHS Vital Records Messaging IG]: https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content
 [Vital Records Common Library IG]: https://hl7.org/fhir/us/vr-common-library/
 <!-- USCORE -->
-[USCoreBirthSex]: {{site.data.fhir.ver.hl7fhiruscore}}/ValueSet-birthsex.html
 [USCore Procedure Profile]: {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-procedure.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
