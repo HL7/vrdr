@@ -29,7 +29,7 @@
   <td>106</td>
   <td>Entity-axis codes</td>
   <td>EAC</td>
-  <td>Each entry is a 4-tuble (value, component[position], component[lineNumber], component[e-code-indicator]) </td>
+  <td>Each entry is a 4-tuple (value, component[position], component[lineNumber], component[e-code-indicator]) </td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-icd10-causes-of-death-vs.html'>ICD10CausesOfDeathVS</a></td>
 </tr>
