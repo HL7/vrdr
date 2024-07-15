@@ -52,7 +52,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   <td>AGETYPE</td>
   <td>valueQuantity.code</td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-units-of-age-vr.html'>ValueSetUnitsOfAgeVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-units-of-age-vr.html'>ValueSetUnitsOfAgeVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>

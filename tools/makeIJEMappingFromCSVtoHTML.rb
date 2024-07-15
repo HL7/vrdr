@@ -235,5 +235,13 @@ File.foreach(Dir.pwd + "/input/includes/markdown-link-references.md", chomp: tru
     aliases[parts[0]]=s
 end
 
+File.foreach(Dir.pwd + "/fsh-generated/includes/fsh-link-references.md", chomp: true) do |line|
+  parts = line.split(':',2)
+  url =parts[1][1..] if !parts[1].nil?
+  link = parts[0][1..-2]
+  s = "<a href='#{url}'>#{link}</a>"   
+  aliases[parts[0]]=s
+end
+
 exchangeURLs(vOutputFile, aliases)
 exchangeURLs(vOutputFile1, aliases)
