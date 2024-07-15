@@ -16,7 +16,7 @@ Description: "Certifier-Example1"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "9941339100"
 
-Instance: Certifier-Example2
+Instance: Certifier-Example2-no-NPI
 InstanceOf: Certifier
 Usage: #example
 Description: "Certifier-Example2 (no NPI)"
