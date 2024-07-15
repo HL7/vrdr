@@ -3,17 +3,18 @@ The Death Certificate profile is a composition referencing the core content of a
 Notes:
 * THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
-Additional content can be included in the Death Certificate Document and referenced in the Death Certificate  based on standard resources and profiles.
-Further profiling of Practitioner and PractitionerRole may be called for in the future.   At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+Additional content can be included in the Death Certificate Document and should referenced in the Death Certificate  based on standard resources and profiles.
+At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
 For example:
-* Funeral Home Licensee (USCorePractitionerRole)
-* Mortician (USCorePractitioner)
-* Funeral Home Director (USCorePractitionerRole)
+* Funeral Home Licensee (USCorePractitioner)
+* Funeral Home Director (USCorePractitioner)
 * Death Pronouncement Performer (USCorePractitioner)
 
 The content is broken down into the following sections:
 * Decedent Demographics
     * <a href='StructureDefinition-vrdr-birth-record-identifier.html'>BirthRecordIdentifier</a>
+    * <a href='StructureDefinition-vrdr-fetal-death-record-identifier.html'>FetalDeathRecordIdentifier</a>
+    * <a href='StructureDefinition-vrdr-birth-record-identifier-child.html'>BirthRecordIdentifierChild</a>
     * <a href='StructureDefinition-vrdr-decedent.html'>Decedent</a>
     * <a href='StructureDefinition-vrdr-decedent-age.html'>DecedentAge</a>
     * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
