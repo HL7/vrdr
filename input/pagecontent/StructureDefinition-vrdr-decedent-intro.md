@@ -1,6 +1,6 @@
 The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
 
-  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.  A value of 'unknown' will satisfy this requirement.
   The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
   due to lack of a value for gender.
 
@@ -82,7 +82,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>*NO IJE MAPPING*</td>
   <td>gender</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='usage.html#decedent-gender'>Note on Decedent Gender</a></td>
+  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Decedent Gender</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -100,7 +100,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_YR</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -109,7 +109,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_MO</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -118,7 +118,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_DY</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -127,7 +127,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>BPLACE_CNT</td>
   <td>extension[patient-birthPlace].value[x].country </td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -136,7 +136,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>BPLACE_ST</td>
   <td>extension[patient-birthPlace].value[x].state</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -145,7 +145,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>CITYC</td>
   <td>address.city.extension[cityCode]</td>
   <td>integer</td>
-  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes'>CityCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -154,7 +154,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>COUNTYC</td>
   <td>address.district.extension[districtCode]</td>
   <td>integer</td>
-  <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#county-codes'>CountyCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -163,7 +163,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATEC</td>
   <td>address.state</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -172,7 +172,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>COUNTRYC</td>
   <td>address.country</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -181,7 +181,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>LIMITS</td>
   <td>address.city.extension[withinCityLimits] </td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-yes-no-unknown-vr.html'>ValueSetYesNoUnknownVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-yes-no-unknown-vr.html'>ValueSetYesNoUnknownVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -190,7 +190,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>MARITAL</td>
   <td>maritalStatus</td>
   <td>codeable</td>
-  <td> <a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-marital-status-vr.html'>ValueSetMaritalStatusVitalRecords</a></td>
+  <td> <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-marital-status-vr.html'>ValueSetMaritalStatusVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -298,7 +298,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATETEXT_R </td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -307,7 +307,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>COUNTRYTEXT_R</td>
   <td>address.country (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#country-literals'>CountryLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#country-literals'>CountryLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -343,7 +343,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DBPLACECITYCODE</td>
   <td>extension[patient-birthPlace].value[x].city.extension[cityCode]</td>
   <td>integer</td>
-  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes'>CityCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -370,7 +370,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATEBTH</td>
   <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -415,7 +415,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATEBTH</td>
   <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present    (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -424,7 +424,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>BPLACE_ST</td>
   <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present </td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -460,7 +460,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_MO</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -469,7 +469,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_DY</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -478,7 +478,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>DOB_YR</td>
   <td>birthDate</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -496,7 +496,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>*NO IJE MAPPING*</td>
   <td>gender</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='usage.html#decedent-gender'>Note on Decedent Gender</a></td>
+  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Decedent Gender</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -523,7 +523,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATETEXT_R </td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -532,7 +532,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>STATEC</td>
   <td>address.state</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -541,7 +541,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>BPLACE_CT</td>
   <td>extension[patient-birthPlace].value[x].country </td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a>.</td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a>.</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -550,7 +550,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>COUNTRYC</td>
   <td>address.country</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>

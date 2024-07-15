@@ -50,7 +50,7 @@ The BirthRecordIdentifier captures the key identifiers for the Decedent's birth 
   <td>BSTATE</td>
   <td>component[birthJurisdiction].value</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>
 
 </tbody>

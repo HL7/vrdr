@@ -62,7 +62,7 @@ while remaining in full conformance with the VRDR IG.
   <td>DOD_MO</td>
   <td>value</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -71,7 +71,7 @@ while remaining in full conformance with the VRDR IG.
   <td>DOD_DY</td>
   <td>value</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -80,7 +80,7 @@ while remaining in full conformance with the VRDR IG.
   <td>TOD</td>
   <td>value</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -89,7 +89,7 @@ while remaining in full conformance with the VRDR IG.
   <td>PPDATESIGNED</td>
   <td>component[datetimePronouncedDead].valueDateTime</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -98,7 +98,7 @@ while remaining in full conformance with the VRDR IG.
   <td>PPTIME</td>
   <td>component[datetimePronouncedDead].valueDateTime if a date is also specified, or component[datetimePronouncedDead].valueTime if no date is specified</td>
   <td>dateTime or time</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 
 </tbody>
@@ -134,7 +134,7 @@ while remaining in full conformance with the VRDR IG.
   <td>DOD_MO</td>
   <td>value</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
@@ -143,7 +143,7 @@ while remaining in full conformance with the VRDR IG.
   <td>DOD_DY</td>
   <td>value</td>
   <td>dateTime</td>
-  <td>See <a href='usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>

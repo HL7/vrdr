@@ -33,7 +33,7 @@ Implementors are free to use the name field for the name of the disposition loca
   <td>DISPSTATECD</td>
   <td>address.state</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -42,7 +42,7 @@ Implementors are free to use the name field for the name of the disposition loca
   <td>DISPSTATE</td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -51,7 +51,7 @@ Implementors are free to use the name field for the name of the disposition loca
   <td>DISPCITYCODE</td>
   <td>address.city.extension[cityCode].value</td>
   <td>integer</td>
-  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes'>CityCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>

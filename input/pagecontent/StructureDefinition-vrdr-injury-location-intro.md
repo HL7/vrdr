@@ -41,7 +41,7 @@
   <td>COUNTYCODE_I</td>
   <td>address.district.extension[districtCode].value</td>
   <td>integer</td>
-  <td>see <a href='usage.html#county-codes'>CountyCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#county-codes'>CountyCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -59,7 +59,7 @@
   <td>CITYCODE_I</td>
   <td>address.city.extension[cityCode].value</td>
   <td>integer</td>
-  <td>see <a href='usage.html#city-codes'>CityCodes</a></td>
+  <td>see <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes'>CityCodes</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -68,7 +68,7 @@
   <td>STATECODE_I</td>
   <td>address.state</td>
   <td>string</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-states-territories-provinces-vr.html'>ValueSetStatesTerritoriesAndProvincesVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -95,7 +95,7 @@
   <td>STINJURY</td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
-  <td>See <a href='usage.html#state-literals'>StateLiterals</a></td>
+  <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
 </tr>
 
 </tbody>

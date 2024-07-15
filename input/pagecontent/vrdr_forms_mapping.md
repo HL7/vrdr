@@ -415,24 +415,24 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>52</td>
   <td>Decedent of Hispanic Origin?</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a></td>
-  <td></td>
+  <td>component.value, subject is Decedent</td>
 </tr>
 <tr>
   <td style='text-align: center'>53</td>
   <td>Decedent's Race</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-input-race-and-ethnicity-vr.html'>ObservationInputRaceAndEthnicityVitalRecords</a></td>
-  <td></td>
+  <td>component.value, subject is Decedent</td>
 </tr>
 <tr>
   <td style='text-align: center'>54</td>
   <td>Decedent's Usual Occupation</td>
-  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
+  <td><a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
   <td>value.text</td>
 </tr>
 <tr>
   <td style='text-align: center'>55</td>
   <td>Kind of Business/Industry</td>
-  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
+  <td><a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a></td>
   <td>component [odh-UsualIndustry].value.text</td>
 </tr>
 </tbody>

@@ -32,7 +32,7 @@
   <td>DEDUC</td>
   <td>value</td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-ValueSet-education-level-vr.html'>ValueSetEducationLevelVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-education-level-vr.html'>ValueSetEducationLevelVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -41,7 +41,7 @@
   <td>DEDUC_BYPASS</td>
   <td>value.extension[ByPassEdit].value</td>
   <td>codeable</td>
-  <td><a href='https://hl7.org/fhir/us/vr-common-library/2024Jan/ValueSet-valueset-edit-bypass-01234-vr.html'>ValueSetEditBypass01234VitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-valueset-edit-bypass-01234-vr.html'>ValueSetEditBypass01234VitalRecords</a></td>
 </tr>
 
 </tbody>

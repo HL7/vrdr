@@ -6,7 +6,7 @@
 [NCHS Vital Records Messaging IG]: https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content
 [Vital Records Common Library IG]: https://hl7.org/fhir/us/vr-common-library/
 <!-- USCORE -->
-[USCoreBirthSex]: https://hl7.org/fhir/us/core/STU4/ValueSet-birthsex.html
+[USCore Procedure Profile]: {{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-procedure.html
 [CDCOccupationVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [CDCIndustryVS]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 [MortalityRosterDataDictionary]: MortalityRosterDataDictionary.html
@@ -33,7 +33,7 @@
 [Terminology]: terminology_bindings.html
 [PartialDatesAndTimes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times
 [Note on Decedent Name]: usage.html#decedent-name
-[Note on Decedent Gender]: usage.html#decedent-gender
+[Note on Decedent Gender]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender
 [CityCodes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes
 [CountyCodes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#county-codes
 [StateLiterals]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals
