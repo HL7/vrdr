@@ -8,7 +8,7 @@ The subject is the Decedent (mother), whose death was related to the birth of th
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#FDR 
+* code = ObservationsCS#fetaldeathrecordidentifier 
   * ^short = "Fetal Death Record Number"
 * focus 0..0
 * subject only Reference(Decedent)

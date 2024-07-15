@@ -15,4 +15,5 @@ is being reported.  For maternal death cases, see [BirthRecordIdentifierChild](S
 * subject 1..1
 * subject only Reference(Decedent)
   * ^short = "deceased infant"
+* focus 0..0
 * insert RecordIdentifierObservation (Birth, $loinc#80904-6, birthJurisdiction, $loinc#21842-0, birthYear)  // birth year

@@ -8,9 +8,9 @@ The subject is a Decedent (mother) whose death was related to the birth referenc
 * status = #final (exactly)
 * code 1..1
 * code only CodeableConcept
-* code = $v2-0203#BR
+* code = ObservationsCS#decedentbirthrecordidentifier
   * ^short = "Birth registry number"
-* focus 0..0
 * subject only Reference(Decedent)
   * ^short = "Deceased mother"
+* focus 0..0
 * insert RecordIdentifierObservation (Birth, $loinc#80904-6, birthJurisdiction, $loinc#21842-0, birthYear )  // birth year
