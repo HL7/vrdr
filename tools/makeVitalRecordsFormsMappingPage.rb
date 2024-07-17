@@ -54,7 +54,6 @@ vSpreadsheet = ARGV[0]
 # vSpreadsheet.default_sheet = "BFDR Form Items"
 
 vOutputFilename = "generated/VRDR/vrdr_forms_mapping.md"
-puts vOutputFilename
 vOutputFile = File.open(vOutputFilename, "w")
 
 vOutputFile.puts"<style>
@@ -151,9 +150,7 @@ def createMappingTable(pRowFilter, pRowFilterLink, pOutputFile, pSpreadsheet)
       elsif hasContext
         vProfileWithURL = "<a href='#{igMap[vMappingIg]}" + "StructureDefinition-" + "#{vProfile}" + ".html'>#{vProfileName}</a>"  
         vFieldProfile = row[FORMS_PROFILE_COL].to_s if row[FORMS_PROFILE_COL]
-        puts vFieldProfile
         vField = "<a href='#{igMap[vIg]}" + "StructureDefinition-" + "#{vFieldProfile}" + ".html'>#{vField}</a>"  
-        puts vField
         # vProfileWithURL = "[" + vProfile + "]" + "("+ igMap[vMappingIg] + "StructureDefinition-" + vProfile + ".html)"
       else
         vProfileWithURL = "<a href='#{igMap[vIg]}" + "StructureDefinition-" + "#{vProfile}" + ".html'>#{vProfileName}</a>"  

@@ -39,7 +39,7 @@
   <td>145</td>
   <td>Husband's Surname/Wife's Maiden Last Name</td>
   <td>SPOUSEL </td>
-  <td>name.family, name.use = maiden</td>
+  <td>name.family, name.use = 'maiden</td>
   <td>string</td>
   <td>-</td>
 </tr>
