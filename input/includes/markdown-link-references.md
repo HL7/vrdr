@@ -33,7 +33,7 @@
 [Terminology]: terminology_bindings.html
 [PartialDatesAndTimes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times
 [Note on Decedent Name]: usage.html#decedent-name
-[Note on Decedent Gender]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender
+[Note on Gender]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender
 [CityCodes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#city-codes
 [CountyCodes]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#county-codes
 [StateLiterals]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals

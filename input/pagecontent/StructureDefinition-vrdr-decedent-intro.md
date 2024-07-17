@@ -82,7 +82,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>*NO IJE MAPPING*</td>
   <td>gender</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Decedent Gender</a></td>
+  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Gender</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -496,7 +496,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>*NO IJE MAPPING*</td>
   <td>gender</td>
   <td>codeable</td>
-  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Decedent Gender</a></td>
+  <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a> - See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#gender'>Note on Gender</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
