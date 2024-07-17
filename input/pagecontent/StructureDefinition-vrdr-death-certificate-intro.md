@@ -23,7 +23,7 @@ The content is broken down into the following sections:
     * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
     * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
     * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
-    * <a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a>
+    * [DecedentUsualWork]
 * Death Investigation
     * <a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a>
     * <a href='StructureDefinition-vrdr-death-date.html'>DeathDate</a>

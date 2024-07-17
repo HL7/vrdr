@@ -2,7 +2,7 @@ Profile: IndustryOccupationCodedContentBundle
 Parent: Bundle
 Id: industry-occupation-coded-content-bundle
 Title: "Industry Occupation Coded Content Bundle"
-Description: "Industry and Occupation Coded Content Bundle (Bundle):  A bundle containing  coded industry and occupation data for a decedent.   This bundle is information-content equivalent to the tranditional MIO files."
+Description: "Industry and Occupation Coded Content Bundle (Bundle):  A bundle containing  coded industry and occupation data for a decedent.   This bundle is information-content equivalent to the traditional MIO files."
 * insert RequireMetaProfile(CodedContentDocument)
 * insert BundleIdentifiers
 * type 1..1

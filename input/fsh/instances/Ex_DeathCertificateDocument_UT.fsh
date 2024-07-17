@@ -99,10 +99,10 @@ Description: "DecedentUT-Example1"
   * suffix = "Jr"
 * gender = #male
 * birthDate = "2021-03-04"
-* birthDate.extension[partialDateTime]
-  * extension[year].valueUnsignedInt = 2021
-  * extension[month].valueUnsignedInt = 3
-  * extension[day].valueUnsignedInt = 4
+// * birthDate.extension[partialDateTime]
+//   * extension[year].valueUnsignedInt = 2021
+//   * extension[month].valueUnsignedInt = 3
+//   * extension[day].valueUnsignedInt = 4
 * address.extension[stnum].valueString = "2722"
 * address.extension[predir].valueString = "N"
 * address.extension[stname].valueString = "Pin Oak"
