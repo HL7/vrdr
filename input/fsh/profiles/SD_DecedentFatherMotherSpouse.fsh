@@ -14,7 +14,7 @@ Description: "Decedent Father (RelatedPersonParentVitalRecords)"
 * relationship = $v3-RoleCode#FTH // "father"
 * relationship.text = "Father"
 * relationship ^short = "relationship"
-* name ^short = "Name. If more than 1 use name.use = official"
+* name ^short = "Father's name. If more than 1 use name.use = official"
 * address 0..1
 
 Profile: DecedentMother
@@ -30,7 +30,8 @@ Description: "Decedent Mother (RelatedPersonParentVitalRecords)"
 * relationship 1..1 
 * relationship = $v3-RoleCode#MTH // "mother"
 * relationship.text = "Mother"
-* name.family ^short = "Maiden name if name.use=maiden"
+* name ^short = "Mother's name"
+* name.family ^short = "Mother's maiden name if name.use=maiden"
 * address 0..1
 
 
@@ -48,4 +49,5 @@ Description: "Decedent Spouse (USCoreRelatedPerson)"
 * relationship 1..1 
 * relationship ^short = "relationship"
 * relationship.text = "Spouse"
-* name.family ^short = "Maiden name if name.use=maiden"
+* name ^short = "Spouse's name"
+* name.family ^short = "Spouse's maiden name if name.use=maiden"

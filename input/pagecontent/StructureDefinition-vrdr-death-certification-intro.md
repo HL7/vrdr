@@ -1,10 +1,9 @@
 
   Note:
   * The DeathCertification.performed and DeathCertificateDocument.attester.time should both be set to the death certification time.
-  * The DeathCertification.performer.actor is required by the <a href='{{site.data.fhir.ver.hl7fhiruscore}}/StructureDefinition-us-core-procedure.html'>USCore Procedure Profile</a>,
+  * The DeathCertification.performer.actor is required by the [USCore Procedure Profile]({{site.data.fhir.verhl7fhiruscore}}/StructureDefinition-us-core-procedure.html),
   but is not required by the death record submission use case.
 
-  The Death Certification profile includes:
 
 ### IJE Mapping
 

@@ -8,7 +8,6 @@ to which the given record would be classified had the causes of death been proce
 
 
 In the FHIR encoding, in lieu of using the 5th position of the ICD10 code, a flag has been added to each Record Cause of Death condition that should be set to true in these cases, and should be absent or false elsewhere.
-* insert RequireMetaProfile(Profile: RecordAxisCauseOfDeath)
 ### IJE Mapping
 
 <style>

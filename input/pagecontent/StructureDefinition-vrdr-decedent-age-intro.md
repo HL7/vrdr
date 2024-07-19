@@ -17,7 +17,6 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   | age unknown | unknown |
   {: .grid }
 
-  The Decedent Age profile includes:
 
 ### IJE Mapping
 
