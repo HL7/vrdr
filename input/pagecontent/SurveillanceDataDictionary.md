@@ -104,7 +104,7 @@
  | Mother's Maiden Surname | DMOMMDN| [DecedentMother]| name.family , name.type=maiden | string  | - | 
  | Mother's Suffix | MOTHERSSUFFIX| [DecedentMother]| name.suffix , name.use = official | string | - | 
  | Spouse's First Name | SPOUSEF| [DecedentSpouse]| name.given | string | - | 
- | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | [DecedentSpouse]| name.family, name.use = 'maiden | string | - | 
+ | Husband's Surname/Wife's Maiden Last Name | SPOUSEL | [DecedentSpouse]| name.family, name.use = maiden | string | - | 
  | Spouse's Middle Name | SPOUSEMIDNAME| [DecedentSpouse]| name.given , name.use = official | string | - | 
  | Spouse's Suffix | SPOUSESUFFIX| [DecedentSpouse]| name.suffix , name.use = official | string | - | 
  | Pregnancy | PREG| [DecedentPregnancyStatus]| value | codeable | [PregnancyStatusVS] | 
