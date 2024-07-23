@@ -13,4 +13,5 @@ Description: "Funeral Home (USCoreOrganization)"
 * address.state from ValueSetStatesTerritoriesAndProvincesVitalRecords  (required)
 * address.city  ^short = "city"
 * address.postalCode  ^short = "zip"
+* address.line  ^short = "String address"
 * insert AddressComponents

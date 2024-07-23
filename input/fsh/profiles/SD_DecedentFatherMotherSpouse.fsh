@@ -15,6 +15,10 @@ Description: "Decedent Father (RelatedPersonParentVitalRecords)"
 * relationship.text = "Father"
 * relationship ^short = "relationship"
 * name ^short = "Father's name. If more than 1 use name.use = official"
+* name.family ^short = "Father's family name"
+* name.given ^short = "Father's given names"
+* name.suffix ^short = "Father's suffix"
+* name.use ^short = "Name use"
 * address 0..1
 
 Profile: DecedentMother
@@ -32,6 +36,9 @@ Description: "Decedent Mother (RelatedPersonParentVitalRecords)"
 * relationship.text = "Mother"
 * name ^short = "Mother's name"
 * name.family ^short = "Mother's maiden name if name.use=maiden"
+* name.given ^short = "Mother's given names"
+* name.suffix ^short = "Mother's suffix"
+* name.use ^short = "Name use"
 * address 0..1
 
 
@@ -51,3 +58,6 @@ Description: "Decedent Spouse (USCoreRelatedPerson)"
 * relationship.text = "Spouse"
 * name ^short = "Spouse's name"
 * name.family ^short = "Spouse's maiden name if name.use=maiden"
+* name.given ^short = "Spouse's given names"
+* name.suffix ^short = "Spouse's suffix"
+* name.use ^short = "Name use"
