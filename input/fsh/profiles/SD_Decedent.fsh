@@ -15,6 +15,8 @@ Description: "Decedent (PatientVitalRecords)"
     * state from ValueSetStatesTerritoriesAndProvincesVitalRecords  (required)
     * state ^short = "Birth state"
     * country ^short = "Birth country"
+    * city ^short = "Birth city"
+      * extension[cityCode] ^short = "Birth city code"
 * identifier 1..*
 * identifier[SSN] ^short = "Decedent's Social Security Number"  // defined in USCore Patient
 * identifier contains SB 0..1 
