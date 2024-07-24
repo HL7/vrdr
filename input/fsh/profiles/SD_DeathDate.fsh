@@ -15,7 +15,6 @@ Description: "The Death Date profile (Observation) provides the death date, deat
 This profile is designed to supplant the similar profiles in VRDR and MDI."
 * code = $loinc#81956-5
   * ^short = "Date and time of death [TimeStamp]"
-//* code MS
   * ^short = "Date+time of death"
 * subject 1..1 
 * subject only Reference(PatientVitalRecords) //generalized to patient
