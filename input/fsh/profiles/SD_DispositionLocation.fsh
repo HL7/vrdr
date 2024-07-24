@@ -7,7 +7,7 @@ Description: "Disposition Location (USCoreLocation)"
 * name ^short = "Name of Disposition Location"
 * address 1..1
 * address.city ^short = "City"
-  * extension[cityCode] ^short = "City Code"
+  * extension[cityCode] ^short = "city code"
 * address.state ^short = "State"
 * type = LocationTypeCS#disposition
 * type 1..1
