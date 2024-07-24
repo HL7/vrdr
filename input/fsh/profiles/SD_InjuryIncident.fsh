@@ -7,7 +7,6 @@ Description: "This Observation provides the certified explanation of how the inj
 * . ^short = "The certified explanation of how the injury leading to death occurred."
   * ^definition = "The certified explanation of how the injury leading to death occurred."
 * code = $loinc#11374-6
-* code MS
   * ^short = "Injury incident description Narrative"
   * ^definition = "Injury incident description Narrative"
 * subject only Reference(PatientVitalRecords)
