@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/PractitionerUT-Certifier> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PractitionerUT-Certifier"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerUT-Certifier\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerUT-Certifier&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-certifier.html\">Death Certifier</a></p></div><p><b>Practitioner Role</b>: Certifier</p><p><b>identifier</b>: id: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-npi.html&quot;&gt;NPI&lt;/a&gt;#161632-1999</p><p><b>name</b>: William Henry Harrison (OFFICIAL)</p><p><b>address</b>: 123 Fake St apt # 123 Salt Lake UT 84111 US (WORK)</p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Certifier" ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "161632-1999" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Harrison" ] ;
+     fhir:given ( [ fhir:v "William" ] [ fhir:v "Henry" ] )
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "123 Fake St" ] [ fhir:v "apt # 123" ] ) ;
+     fhir:city [ fhir:v "Salt Lake" ] ;
+     fhir:state [ fhir:v "UT" ] ;
+     fhir:postalCode [ fhir:v "84111" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

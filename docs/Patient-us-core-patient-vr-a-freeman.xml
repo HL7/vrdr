@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="us-core-patient-vr-a-freeman"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Alice J. Freeman </b> female, DoB: 1978-03-12 ( Social Security number: 987054321 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail:</td><td colspan="3">112 Miramar Ct Danville Nova Scotia CA (HOME)</td></tr><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.">US Core Ethnicity Extension:</td><td colspan="3"><ul><li>ombCategory: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2186-5">CDC Race and Ethnicity</a> 2186-5: Not Hispanic or Latino</li><li>text: Not Hispanic or Latino</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
+
+ - American Indian or Alaska Native
+ - Asian
+ - Black or African American
+ - Native Hawaiian or Other Pacific Islander
+ - White.">US Core Race Extension:</td><td colspan="3"><ul><li>detailed: <a href="http://terminology.hl7.org/5.0.0/CodeSystem-CDCREC.html#CDCREC-2029-7">CDC Race and Ethnicity</a> 2029-7: Asian Indian</li><li>text: Asian Indian</li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+    <extension url="detailed">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2029-7"/>
+        <display value="Asian Indian"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Asian Indian"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2186-5"/>
+        <display value="Not Hispanic or Latino"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Not Hispanic or Latino"/>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="SS"/>
+        <display value="Social Security number"/>
+      </coding>
+      <text value="Social Security number"/>
+    </type>
+    <system value="http://hospital.smarthealthit.org"/>
+    <value value="987054321"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Freeman"/>
+    <given value="Alice"/>
+    <given value="J."/>
+  </name>
+  <gender value="female"/>
+  <birthDate value="1978-03-12"/>
+  <address>
+    <use value="home"/>
+    <line value="112 Miramar Ct"/>
+    <city value="Danville"/>
+    <state value="Nova Scotia"/>
+    <country value="CA"/>
+  </address>
+</Patient>

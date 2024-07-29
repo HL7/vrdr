@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Procedure/DeathCertification-Example2> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DeathCertification-Example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"DeathCertification-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;DeathCertification-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certification.html\">Death Certification Procedure</a></p></div><p><b>identifier</b>: id: 180</p><p><b>status</b>: completed</p><p><b>code</b>: Death certification <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#308646001)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performed</b>: 2020-11-14 16:39:40-0500</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>Death certification and verification by physician (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#434641000124105)</span></td><td><a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "180" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:308646001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "308646001" ] ;
+       fhir:display [ fhir:v "Death certification" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performed [ fhir:v "2020-11-14T16:39:40-05:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         a sct:434641000124105 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "434641000124105" ] ;
+         fhir:display [ fhir:v "Death certification and verification by physician (procedure)" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+       fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Certifier-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"Certifier-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;Certifier-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-certifier.html\">Death Certifier</a></p></div><p><b>Practitioner Role</b>: Certifier</p><p><b>identifier</b>: id: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-npi.html&quot;&gt;NPI&lt;/a&gt;#9941339100</p><p><b>name</b>: Jim Black (OFFICIAL)</p><p><b>address</b>: 44 South Street Bird in Hand PA 17505 US </p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Certifier" ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9941339100" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Black" ] ;
+     fhir:given ( [ fhir:v "Jim" ] )
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "44 South Street" ] ) ;
+     fhir:city [ fhir:v "Bird in Hand" ] ;
+     fhir:state [ fhir:v "PA" ] ;
+     fhir:postalCode [ fhir:v "17505" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

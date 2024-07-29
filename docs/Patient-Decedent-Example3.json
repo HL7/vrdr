@@ -1,0 +1,55 @@
+{
+  "resourceType" : "Patient",
+  "id" : "Decedent-Example3",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Madelyn Patel (OFFICIAL)</b> female, DoB: 1978-03-12 ( Social Beneficiary Identifier: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#987654321)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Joyce McCain(MAIDEN)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">NY </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Sex on visual inspection at the time of death by the funeral home\"><a href=\"StructureDefinition-NVSS-SexAtDeath.html\">NVSS SexAtDeath:</a></td><td colspan=\"3\"><ul><li><span title=\"Codes: {http://hl7.org/fhir/administrative-gender unknown}\">Unknown</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place:</a></td><td colspan=\"3\"><ul><li>NY US </li></ul></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/administrative-gender",
+        "code" : "unknown",
+        "display" : "Unknown"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+    "valueAddress" : {
+      "state" : "NY",
+      "country" : "US"
+    }
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "SB",
+        "display" : "Social Beneficiary Identifier"
+      }]
+    },
+    "system" : "http://hl7.org/fhir/sid/us-ssn",
+    "value" : "987654321"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Patel",
+    "given" : ["Madelyn"]
+  },
+  {
+    "use" : "maiden",
+    "text" : "Joyce McCain",
+    "family" : "McCain",
+    "given" : ["Joyce"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1978-03-12",
+  "address" : [{
+    "state" : "NY"
+  }]
+}

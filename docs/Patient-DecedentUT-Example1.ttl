@@ -1,0 +1,119 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DecedentUT-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Davis Lineberry (OFFICIAL)</b> male, DoB: 2021-03-04 ( Social Security number: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#429471420)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">2722 N Pin Oak Dr Laramie WY 82070 US </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Sex on visual inspection at the time of death by the funeral home\"><a href=\"StructureDefinition-NVSS-SexAtDeath.html\">NVSS SexAtDeath:</a></td><td colspan=\"3\"><ul><li><span title=\"Codes: {http://hl7.org/fhir/administrative-gender male}\">Male</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place:</a></td><td colspan=\"3\"><ul><li>CO US (OLD)</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "male" ] ;
+         fhir:display [ fhir:v "Male" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Address ;
+       fhir:use [ fhir:v "old" ] ;
+       fhir:state [ fhir:v "CO" ] ;
+       fhir:country [ fhir:v "US" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SS" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-ssn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "429471420" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Lineberry" ] ;
+     fhir:given ( [ fhir:v "Davis" ] ) ;
+     fhir:suffix ( [ fhir:v "Jr" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2021-03-04"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetNumber"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2722" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/PreDirectional"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "N" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetName"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Pin Oak" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetDesignator"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Dr" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-within-city-limits-indicator-vr"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Y" ] ;
+         fhir:display [ fhir:v "Yes" ]
+       ]
+     ] ) ;
+     fhir:line ( [ fhir:v "2722 N Pin Oak Dr" ] ) ;
+     fhir:city [
+       fhir:v "Laramie" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CityCode"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "45050"^^xsd:positiveInteger ]
+       ] )
+     ] ;
+     fhir:district [
+       fhir:v "Albany" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/DistrictCode"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "1"^^xsd:positiveInteger ]
+       ] )
+     ] ;
+     fhir:state [ fhir:v "WY" ] ;
+     fhir:postalCode [ fhir:v "82070" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "0" ] ;
+           fhir:display [ fhir:v "Edit Passed" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Never Married" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

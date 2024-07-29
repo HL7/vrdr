@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/RelatedPerson/MotherUT-Example1> a fhir:RelatedPerson ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MotherUT-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"MotherUT-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;MotherUT-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-mother.html\">Decedent Mother</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-DecedentUT-Example1.html\">Patient/DecedentUT-Example1</a> &quot; LINEBERRY&quot;</p><p><b>relationship</b>: mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#MTH)</span></p><p><b>name</b>: * * * (OFFICIAL)</p></div>"
+  ] ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> ;
+     fhir:reference [ fhir:v "Patient/DecedentUT-Example1" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "MTH" ] ;
+       fhir:display [ fhir:v "mother" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "*" ] ;
+     fhir:given ( [ fhir:v "*" ] [ fhir:v "*" ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

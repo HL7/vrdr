@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="DecedentUT-Example1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Davis Lineberry (OFFICIAL)</b> male, DoB: 2021-03-04 ( Social Security number: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#429471420)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td colspan="3"><span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}">Never Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail:</td><td colspan="3">2722 N Pin Oak Dr Laramie WY 82070 US </td></tr><tr><td style="background-color: #f3f5da" title="Sex on visual inspection at the time of death by the funeral home"><a href="StructureDefinition-NVSS-SexAtDeath.html">NVSS SexAtDeath:</a></td><td colspan="3"><ul><li><span title="Codes: {http://hl7.org/fhir/administrative-gender male}">Male</span></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements."><a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html">Patient Birth Place:</a></td><td colspan="3"><ul><li>CO US (OLD)</li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/administrative-gender"/>
+        <code value="male"/>
+        <display value="Male"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+    <valueAddress>
+      <use value="old"/>
+      <state value="CO"/>
+      <country value="US"/>
+    </valueAddress>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="SS"/>
+      </coding>
+    </type>
+    <system value="http://hl7.org/fhir/sid/us-ssn"/>
+    <value value="429471420"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Lineberry"/>
+    <given value="Davis"/>
+    <suffix value="Jr"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="2021-03-04"/>
+  <address>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetNumber">
+      <valueString value="2722"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/PreDirectional">
+      <valueString value="N"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetName">
+      <valueString value="Pin Oak"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetDesignator">
+      <valueString value="Dr"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-within-city-limits-indicator-vr">
+      <valueCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0136"/>
+        <code value="Y"/>
+        <display value="Yes"/>
+      </valueCoding>
+    </extension>
+    <line value="2722 N Pin Oak Dr"/>
+    <city value="Laramie">
+      <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CityCode">
+        <valuePositiveInt value="45050"/>
+      </extension>
+    </city>
+    <district value="Albany">
+      <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/DistrictCode">
+        <valuePositiveInt value="1"/>
+      </extension>
+    </district>
+    <state value="WY"/>
+    <postalCode value="82070"/>
+    <country value="US"/>
+  </address>
+  <maritalStatus>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags"/>
+          <code value="0"/>
+          <display value="Edit Passed"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="S"/>
+      <display value="Never Married"/>
+    </coding>
+  </maritalStatus>
+</Patient>
