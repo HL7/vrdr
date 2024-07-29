@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-place-of-injury-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA14084-0/\">LA14084-0</a></td><td>Home</td></tr><tr><td><a href=\"https://loinc.org/LA14085-7/\">LA14085-7</a></td><td>Residential institution</td></tr><tr><td><a href=\"https://loinc.org/LA14086-5/\">LA14086-5</a></td><td>School</td></tr><tr><td><a href=\"https://loinc.org/LA14088-1/\">LA14088-1</a></td><td>Sports or recreational area</td></tr><tr><td><a href=\"https://loinc.org/LA14089-9/\">LA14089-9</a></td><td>Street or highway</td></tr><tr><td><a href=\"https://loinc.org/LA14090-7/\">LA14090-7</a></td><td>Trade or service area</td></tr><tr><td><a href=\"https://loinc.org/LA14091-5/\">LA14091-5</a></td><td>Industrial or construction area</td></tr><tr><td><a href=\"https://loinc.org/LA14092-3/\">LA14092-3</a></td><td>Farm</td></tr><tr><td><a href=\"https://loinc.org/LA14093-1/\">LA14093-1</a></td><td>Unspecified</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\"><code>http://terminology.hl7.org/CodeSystem/v3-NullFlavor</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH\">OTH</a></td><td>Other</td><td>**Description:**The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. (e.g., concept not provided by required code system).<br/><br/>**Usage Notes**: This flavor and its specializations are most commonly used with the CD datatype and its flavors. However, it may apply to \\*any\\* datatype where the constraints of the type are tighter than can be conveyed. For example, a PQ that is for a true measured amount whose units are not supported in UCUM, a need to convey a REAL when the type has been constrained to INT, etc.<br/><br/>With coded datatypes, this null flavor may only be used if the vocabulary binding has a coding strength of CNE. By definition, all local codes and original text are part of the value set if the coding strength is CWE.</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "PlaceOfInjuryVS"] ; # 
+  fhir:title [ fhir:v "Place of Injury ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Place of Injury from NCHS TRX Format.  THis contains all of the codes from https://loinc.org/LL1051-3/ except for LA14087-3 (Public Institution).\n\nMapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "LA14084-0" ] ;
+         fhir:display [ fhir:v "Home" ]
+       ] [
+         fhir:code [ fhir:v "LA14085-7" ] ;
+         fhir:display [ fhir:v "Residential institution" ]
+       ] [
+         fhir:code [ fhir:v "LA14086-5" ] ;
+         fhir:display [ fhir:v "School" ]
+       ] [
+         fhir:code [ fhir:v "LA14088-1" ] ;
+         fhir:display [ fhir:v "Sports or recreational area" ]
+       ] [
+         fhir:code [ fhir:v "LA14089-9" ] ;
+         fhir:display [ fhir:v "Street or highway" ]
+       ] [
+         fhir:code [ fhir:v "LA14090-7" ] ;
+         fhir:display [ fhir:v "Trade or service area" ]
+       ] [
+         fhir:code [ fhir:v "LA14091-5" ] ;
+         fhir:display [ fhir:v "Industrial or construction area" ]
+       ] [
+         fhir:code [ fhir:v "LA14092-3" ] ;
+         fhir:display [ fhir:v "Farm" ]
+       ] [
+         fhir:code [ fhir:v "LA14093-1" ] ;
+         fhir:display [ fhir:v "Unspecified" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "Other" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

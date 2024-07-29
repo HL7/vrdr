@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-date-of-death-determination-methods-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-date-of-death-determination-methods-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-vrdr-date-of-death-determination-methods-cs.html\"><code>http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-date-of-death-determination-methods-cs</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-vrdr-date-of-death-determination-methods-cs.html#vrdr-date-of-death-determination-methods-cs-exact\">exact</a></td><td>Exact</td></tr><tr><td><a href=\"CodeSystem-vrdr-date-of-death-determination-methods-cs.html#vrdr-date-of-death-determination-methods-cs-approximate\">approximate</a></td><td>Approximate</td></tr><tr><td><a href=\"CodeSystem-vrdr-date-of-death-determination-methods-cs.html#vrdr-date-of-death-determination-methods-cs-court-appointed\">court-appointed</a></td><td>Court Appointed</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-date-of-death-determination-methods-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "DateOfDeathDeterminationMethodsVS"] ; # 
+  fhir:title [ fhir:v "Date of Death Determination Methods Value Set"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Date of Death Determination Methods Value Set. The method of date of death determination is not used for the Death Record submission process.\nThe binding to this value set is included for compatibility with the Medicolegal Death Investigation ([MDI](https://build.fhir.org/ig/HL7/fhir-mdi-ig/)) Implementation Guide.  The valueset only\nincludes the values used by MDI, but is bound [extensibly](https://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires\nadditional values (e.g., 'presumed'), these values can be used while remaining in full conformance with the VRDR IG."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-date-of-death-determination-methods-cs"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "exact" ] ;
+         fhir:display [ fhir:v "Exact" ]
+       ] [
+         fhir:code [ fhir:v "approximate" ] ;
+         fhir:display [ fhir:v "Approximate" ]
+       ] [
+         fhir:code [ fhir:v "court-appointed" ] ;
+         fhir:display [ fhir:v "Court Appointed" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

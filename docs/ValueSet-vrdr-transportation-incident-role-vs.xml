@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vrdr-transportation-incident-role-vs"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/236320001">236320001</a></td><td>Vehicle driver</td></tr><tr><td><a href="http://snomed.info/id/257500003">257500003</a></td><td>Passenger</td></tr><tr><td><a href="http://snomed.info/id/257518000">257518000</a></td><td>Pedestrian</td></tr></table></li><li>Include these codes as defined in <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html"><code>http://terminology.hl7.org/CodeSystem/v3-NullFlavor</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH">OTH</a></td><td>Other</td><td>**Description:**The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. (e.g., concept not provided by required code system).<br/><br/>**Usage Notes**: This flavor and its specializations are most commonly used with the CD datatype and its flavors. However, it may apply to \*any\* datatype where the constraints of the type are tighter than can be conveyed. For example, a PQ that is for a true measured amount whose units are not supported in UCUM, a need to convey a REAL when the type has been constrained to INT, etc.<br/><br/>With coded datatypes, this null flavor may only be used if the vocabulary binding has a coding strength of CNE. By definition, all local codes and original text are part of the value set if the coding strength is CWE.</td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-UNK">UNK</a></td><td>unknown</td><td>**Description:**A proper value is applicable, but not known.<br/><br/>**Usage Notes**: This means the actual value is not known. If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used. No properties should be included for a datatype with this property unless:<br/><br/>1.  Those properties themselves directly translate to a semantic of &quot;unknown&quot;. (E.g. a local code sent as a translation that conveys 'unknown')<br/>2.  Those properties further qualify the nature of what is unknown. (E.g. specifying a use code of &quot;H&quot; and a URL prefix of &quot;tel:&quot; to convey that it is the home phone number that is unknown.)</td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA">NA</a></td><td>not applicable</td><td>Known to have no proper value (e.g., last menstrual period for a male).</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-transportation-incident-role-vs"/>
+  <version value="3.0.0-preview1"/>
+  <name value="TransportationIncidentRoleVS"/>
+  <title value="Transportation Incident Role ValueSet"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-07-29T13:06:08-04:00"/>
+  <publisher value="HL7 International / Public Health"/>
+  <contact>
+    <name value="HL7 International / Public Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="pher@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Role of the decedent in a transportation incident resulting in a death-related injury.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-TransportationIncidentRoleCM.html)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="236320001"/>
+        <display value="Vehicle driver"/>
+      </concept>
+      <concept>
+        <code value="257500003"/>
+        <display value="Passenger"/>
+      </concept>
+      <concept>
+        <code value="257518000"/>
+        <display value="Pedestrian"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+      <concept>
+        <code value="OTH"/>
+        <display value="Other"/>
+      </concept>
+      <concept>
+        <code value="UNK"/>
+        <display value="unknown"/>
+      </concept>
+      <concept>
+        <code value="NA"/>
+        <display value="not applicable"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

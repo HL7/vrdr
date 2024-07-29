@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-death-pregnancy-status-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-death-pregnancy-status-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html\"><code>http://hl7.org/fhir/us/vrdr/CodeSystem/CodeSystem-death-pregnancy-status</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-1\">1</a></td><td>Not pregnant within past year</td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-2\">2</a></td><td>Pregnant at time of death</td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-3\">3</a></td><td>Not pregnant, but pregnant within 42 days of death</td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-4\">4</a></td><td>Not pregnant, but pregnant 43 days to 1 year before death</td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-7\">7</a></td><td>Not reported on certificate</td></tr><tr><td><a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html#CodeSystem-death-pregnancy-status-9\">9</a></td><td>Unknown if pregnant within the past year</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\"><code>http://terminology.hl7.org/CodeSystem/v3-NullFlavor</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NA\">NA</a></td><td>Not applicable</td><td>Known to have no proper value (e.g., last menstrual period for a male).</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-death-pregnancy-status-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "DeathPregnancyStatusVS"] ; # 
+  fhir:title [ fhir:v "Death Pregnancy Status ValueSet"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A set of codes that reflect whether the decedent was pregnant at or around the time of death. Based on [Pregnancy Status (NCHS)[2.16.840.1.114222.4.11.6003]](https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/CodeSystem-death-pregnancy-status"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Not pregnant within past year" ]
+       ] [
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "Pregnant at time of death" ]
+       ] [
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "Not pregnant, but pregnant within 42 days of death" ]
+       ] [
+         fhir:code [ fhir:v "4" ] ;
+         fhir:display [ fhir:v "Not pregnant, but pregnant 43 days to 1 year before death" ]
+       ] [
+         fhir:code [ fhir:v "7" ] ;
+         fhir:display [ fhir:v "Not reported on certificate" ]
+       ] [
+         fhir:code [ fhir:v "9" ] ;
+         fhir:display [ fhir:v "Unknown if pregnant within the past year" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "NA" ] ;
+         fhir:display [ fhir:v "Not applicable" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

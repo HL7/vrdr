@@ -1,0 +1,63 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vrdr-certifier-types-vs",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/455381000124109\">455381000124109</a></td><td>Death certification by medical examiner or coroner (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/434641000124105\">434641000124105</a></td><td>Death certification and verification by physician (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/434651000124107\">434651000124107</a></td><td>Death certification by physician (procedure)</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\"><code>http://terminology.hl7.org/CodeSystem/v3-NullFlavor</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-OTH\">OTH</a></td><td>Other (Specify)</td><td>**Description:**The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. (e.g., concept not provided by required code system).<br/><br/>**Usage Notes**: This flavor and its specializations are most commonly used with the CD datatype and its flavors. However, it may apply to \\*any\\* datatype where the constraints of the type are tighter than can be conveyed. For example, a PQ that is for a true measured amount whose units are not supported in UCUM, a need to convey a REAL when the type has been constrained to INT, etc.<br/><br/>With coded datatypes, this null flavor may only be used if the vocabulary binding has a coding strength of CNE. By definition, all local codes and original text are part of the value set if the coding strength is CWE.</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pher"
+  }],
+  "url" : "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-certifier-types-vs",
+  "version" : "3.0.0-preview1",
+  "name" : "CertifierTypesVS",
+  "title" : "Certifier Types Value Set",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-29T13:06:08-04:00",
+  "publisher" : "HL7 International / Public Health",
+  "contact" : [{
+    "name" : "HL7 International / Public Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/pher"
+    },
+    {
+      "system" : "email",
+      "value" : "pher@lists.HL7.org"
+    }]
+  }],
+  "description" : "Certifier Types Value Set\n\nMapping to IJE codes [here](ConceptMap-CertifierTypesCM.html).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "455381000124109",
+        "display" : "Death certification by medical examiner or coroner (procedure)"
+      },
+      {
+        "code" : "434641000124105",
+        "display" : "Death certification and verification by physician (procedure)"
+      },
+      {
+        "code" : "434651000124107",
+        "display" : "Death certification by physician (procedure)"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept" : [{
+        "code" : "OTH",
+        "display" : "Other (Specify)"
+      }]
+    }]
+  }
+}

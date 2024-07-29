@@ -1,0 +1,360 @@
+{
+  "package": "hl7.fhir.us.vrdr",
+  "version": "3.0.0-preview1",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "US",
+  "extensions": [
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/AliasStatus",
+      "title": "Alias Status of a Death Roster",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat",
+      "title": "Filing Format",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath",
+      "title": "NVSS SexAtDeath",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus",
+      "title": "Replacement Status of a Death Record (deprecated)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/SpouseAlive",
+      "title": "Spouse Is Alive",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField",
+      "title": "State Specific Field",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role",
+      "title": "Practitioner Role",
+      "types": [
+        "code"
+      ]
+    }
+  ],
+  "profiles": {
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortality-roster-bundle",
+        "title": "Mortality Roster Bundle"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-place-of-injury",
+        "title": "Place Of Injury"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death",
+        "title": "Record Axis Cause Of Death"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-surgery-date",
+        "title": "Surgery Date"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death",
+        "title": "Tobacco Use Contributed To Death"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortician",
+        "title": "Mortician"
+      }
+    ],
+    "Parameters": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values",
+        "title": "Coding Status Values"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate",
+        "title": "Death Certificate"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification",
+        "title": "Death Certification Procedure"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-location",
+        "title": "Injury Location"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent",
+        "title": "Decedent"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-spouse",
+        "title": "Decedent Spouse"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-funeral-home",
+        "title": "Funeral Home"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence": [
+      "ConceptMap.group.element.target"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Patient.name.family",
+      "Patient.name.given",
+      "Practitioner.identifier"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthTime": [
+      "Patient.birthDate"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-multipleBirthTotal": [
+      "Patient.multipleBirth[x]"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier1": [
+      "Bundle.identifier"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier2": [
+      "Bundle.identifier"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag": [
+      "Bundle.entry.resource.maritalStatus",
+      "Bundle.entry.resource.valueCodeableConcept",
+      "Bundle.entry.resource.valueQuantity",
+      "Observation.valueCodeableConcept",
+      "Observation.valueQuantity",
+      "Observation.value[x]",
+      "Patient.birthDate",
+      "Patient.maritalStatus",
+      "Patient.multipleBirth[x]",
+      "RelatedPerson.birthDate"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CertificateNumber": [
+      "Bundle.identifier"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CityCode": [
+      "Bundle.entry.resource.address.city",
+      "Location.address.city",
+      "Patient.address.city",
+      "Patient.extension.value[x].city",
+      "Practitioner.address.city"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/DistrictCode": [
+      "Bundle.entry.resource.address.district",
+      "Location.address.district",
+      "Patient.address.district",
+      "Patient.extension.value[x].district",
+      "Practitioner.address.district"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-jurisdiction-id-vr": [
+      "Location.address.state",
+      "Patient.address.state",
+      "Patient.extension.value[x].state"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-time-vr": [
+      "Bundle.entry.resource.valueDateTime",
+      "Observation.effective[x]",
+      "Observation.valueDateTime",
+      "Observation.value[x]",
+      "Parameters.parameter.value[x]",
+      "Patient.birthDate"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-vr": [
+      "RelatedPerson.birthDate"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-patient-fetal-death-vr": [
+      "Patient.deceased[x]"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-relatedperson-birthplace-vr": [
+      "RelatedPerson"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-reported-parent-age-at-delivery-vr": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-within-city-limits-indicator-vr": [
+      "Bundle.entry.resource.address",
+      "Patient.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/PostDirectional": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/PreDirectional": [
+      "Bundle.entry.resource.address",
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetDesignator": [
+      "Bundle.entry.resource.address",
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetName": [
+      "Bundle.entry.resource.address",
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetNumber": [
+      "Bundle.entry.resource.address",
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/UnitOrAptNumber": [
+      "Location.address",
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/AliasStatus": [
+      "Bundle.meta"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat": [
+      "Bundle.entry.resource",
+      "Composition"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus": [
+      "Bundle.entry.resource",
+      "Bundle.meta",
+      "Composition"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/SpouseAlive": [
+      "Bundle.entry.resource",
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField": [
+      "Bundle.entry.resource",
+      "Bundle.identifier",
+      "Composition"
+    ],
+    "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role": [
+      "Bundle.entry.resource",
+      "Practitioner"
+    ]
+  }
+}

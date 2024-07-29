@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-manner-of-death-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-manner-of-death-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/38605008\">38605008</a></td><td>Natural death</td></tr><tr><td><a href=\"http://snomed.info/id/7878000\">7878000</a></td><td>Accidental death</td></tr><tr><td><a href=\"http://snomed.info/id/44301001\">44301001</a></td><td>Suicide</td></tr><tr><td><a href=\"http://snomed.info/id/27935005\">27935005</a></td><td>Homicide</td></tr><tr><td><a href=\"http://snomed.info/id/185973002\">185973002</a></td><td>Patient awaiting investigation</td></tr><tr><td><a href=\"http://snomed.info/id/65037004\">65037004</a></td><td>Death, manner undetermined</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-manner-of-death-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "MannerOfDeathVS"] ; # 
+  fhir:title [ fhir:v "Manner of Death ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A set of code used to indicate a classification of the manner of death.\n\n\nMapping to IJE codes [here](ConceptMap-MannerOfDeathCM.html)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "38605008" ] ;
+         fhir:display [ fhir:v "Natural death" ]
+       ] [
+         fhir:code [ fhir:v "7878000" ] ;
+         fhir:display [ fhir:v "Accidental death" ]
+       ] [
+         fhir:code [ fhir:v "44301001" ] ;
+         fhir:display [ fhir:v "Suicide" ]
+       ] [
+         fhir:code [ fhir:v "27935005" ] ;
+         fhir:display [ fhir:v "Homicide" ]
+       ] [
+         fhir:code [ fhir:v "185973002" ] ;
+         fhir:display [ fhir:v "Patient awaiting investigation" ]
+       ] [
+         fhir:code [ fhir:v "65037004" ] ;
+         fhir:display [ fhir:v "Death, manner undetermined" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

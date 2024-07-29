@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-filing-format-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-filing-format-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-vrdr-filing-format-cs.html\"><code>http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-vrdr-filing-format-cs.html#vrdr-filing-format-cs-electronic\">electronic</a></td><td>Electronic</td><td>Electronic mode</td></tr><tr><td><a href=\"CodeSystem-vrdr-filing-format-cs.html#vrdr-filing-format-cs-paper\">paper</a></td><td>Paper</td><td>Paper mode</td></tr><tr><td><a href=\"CodeSystem-vrdr-filing-format-cs.html#vrdr-filing-format-cs-mixed\">mixed</a></td><td>Mixed</td><td>Mixed mode</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-filing-format-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "FilingFormatVS"] ; # 
+  fhir:title [ fhir:v "Filing Format ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Filing Format ValueSet\n\nMapping to IJE codes [here](ConceptMap-FilingFormatCM.html)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "electronic" ] ;
+         fhir:display [ fhir:v "Electronic" ]
+       ] [
+         fhir:code [ fhir:v "paper" ] ;
+         fhir:display [ fhir:v "Paper" ]
+       ] [
+         fhir:code [ fhir:v "mixed" ] ;
+         fhir:display [ fhir:v "Mixed" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

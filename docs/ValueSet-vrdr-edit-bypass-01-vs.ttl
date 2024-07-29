@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-edit-bypass-01-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-edit-bypass-01-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-vr-edit-flags.html\"><code>http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-vr-edit-flags.html#CodeSystem-vr-edit-flags-0\">0</a></td><td>Edit Passed</td><td>Edit Passed</td></tr><tr><td><a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-vr-edit-flags.html#CodeSystem-vr-edit-flags-1\">1</a></td><td>Edit Failed, Data Queried, and Verified</td><td>Edit Failed, Data Queried, and Verified</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-edit-bypass-01-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "EditBypass01VS"] ; # 
+  fhir:title [ fhir:v "Edit Bypass 01"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A subset of code values (0 and 1) use to indicate the outcome of data validation assessment for unusual data values."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "Edit Passed" ]
+       ] [
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Edit Failed, Data Queried, and Verified" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

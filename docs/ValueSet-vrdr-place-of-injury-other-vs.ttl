@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-other-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vrdr-place-of-injury-other-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html\"><code>http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-placeofinjury-cs</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-D\">D</a></td><td>Military Residence</td><td>Military Residence</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-E\">E</a></td><td>Hospital</td><td>Hospital</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-H\">H</a></td><td>Garage/Warehouse</td><td>Garage/Warehouse</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-J\">J</a></td><td>Mine/Quarry</td><td>Mine/Quarry</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-L\">L</a></td><td>Public Recreation Area</td><td>Public Recreation Area</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-M\">M</a></td><td>Institutional Recreation Area</td><td>Institutional Recreation Area</td></tr><tr><td><a href=\"CodeSystem-vrdr-system-placeofinjury-cs.html#vrdr-system-placeofinjury-cs-P\">P</a></td><td>Other specified place</td><td>Other specified place</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-other-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "PlaceOfInjuryOtherVS"] ; # 
+  fhir:title [ fhir:v "Place of Injury - Other ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is 'Other'."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-placeofinjury-cs"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "D" ] ;
+         fhir:display [ fhir:v "Military Residence" ]
+       ] [
+         fhir:code [ fhir:v "E" ] ;
+         fhir:display [ fhir:v "Hospital" ]
+       ] [
+         fhir:code [ fhir:v "H" ] ;
+         fhir:display [ fhir:v "Garage/Warehouse" ]
+       ] [
+         fhir:code [ fhir:v "J" ] ;
+         fhir:display [ fhir:v "Mine/Quarry" ]
+       ] [
+         fhir:code [ fhir:v "L" ] ;
+         fhir:display [ fhir:v "Public Recreation Area" ]
+       ] [
+         fhir:code [ fhir:v "M" ] ;
+         fhir:display [ fhir:v "Institutional Recreation Area" ]
+       ] [
+         fhir:code [ fhir:v "P" ] ;
+         fhir:display [ fhir:v "Other specified place" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
