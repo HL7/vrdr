@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "CodingStatusValues-Example1",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values"]
+  },
+  "parameter" : [{
+    "name" : "shipmentNumber",
+    "valueString" : "A2B2"
+  },
+  {
+    "name" : "receiptDate",
+    "valueDate" : "2021-12-12"
+  },
+  {
+    "name" : "coderStatus",
+    "valueInteger" : 5
+  },
+  {
+    "name" : "intentionalReject",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-intentional-reject-cs",
+        "code" : "1",
+        "display" : "Reject1"
+      }]
+    }
+  },
+  {
+    "name" : "acmeSystemReject",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-reject-cs",
+        "code" : "0",
+        "display" : "Not Rejected"
+      }]
+    }
+  },
+  {
+    "name" : "transaxConversion",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-transax-conversion-cs",
+        "code" : "3",
+        "display" : "Conversion using non-ambivalent table entries"
+      }]
+    }
+  }]
+}

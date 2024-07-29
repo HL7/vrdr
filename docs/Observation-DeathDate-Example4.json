@@ -1,0 +1,81 @@
+{
+  "resourceType" : "Observation",
+  "id" : "DeathDate-Example4",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DeathDate-Example4\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DeathDate-Example4&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-date.html\">Death Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of death [TimeStamp] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#81956-5)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>effective</b>: 2020-11-12 16:39:40-0500</p><p><b>performer</b>: <a href=\"Practitioner-Pronouncer-Example1.html\">Practitioner/Pronouncer-Example1</a> &quot; PURPLE&quot;</p><p><b>value</b>: ??</p><blockquote><p><b>component</b></p><p><b>code</b>: Date and time pronounced dead [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80616-6)</span></p><p><b>value</b>: 16:39:40</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Location of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#58332-8)</span></p><p><b>value</b>: Death in hospital <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#16983000)</span></p></blockquote></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "81956-5"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Decedent-Example1"
+  },
+  "effectiveDateTime" : "2020-11-12T16:39:40-05:00",
+  "performer" : [{
+    "reference" : "Practitioner/Pronouncer-Example1"
+  }],
+  "_valueDateTime" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "day",
+        "_valueUnsignedInt" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode" : "unknown"
+          }]
+        }
+      },
+      {
+        "url" : "year",
+        "valueUnsignedInt" : 2020
+      },
+      {
+        "url" : "month",
+        "valueUnsignedInt" : 11
+      },
+      {
+        "url" : "time",
+        "valueTime" : "12:13:14",
+        "_valueTime" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode" : "unknown"
+          }]
+        }
+      }],
+      "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-time-vr"
+    }]
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "80616-6"
+      }]
+    },
+    "valueTime" : "16:39:40"
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "58332-8"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "16983000",
+        "display" : "Death in hospital"
+      }]
+    }
+  }]
+}

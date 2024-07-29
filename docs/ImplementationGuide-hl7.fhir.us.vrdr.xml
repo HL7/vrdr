@@ -1,0 +1,3211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.vrdr"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>VRDR</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr</pre></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr"/>
+  <version value="3.0.0-preview1"/>
+  <name value="VRDR"/>
+  <title value="Vital Records Death Reporting (VRDR) FHIR Implementation Guide"/>
+  <status value="draft"/>
+  <date value="2024-07-29T13:06:08-04:00"/>
+  <publisher value="HL7 International / Public Health"/>
+  <contact>
+    <name value="HL7 International / Public Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="pher@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.us.vrdr"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.0.2"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7fhiruscore">
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="5.0.1"/>
+  </dependsOn>
+  <dependsOn id="hl7fhirusvrcommonlibrary">
+    <uri value="http://hl7.org/fhir/us/vr-common-library/ImplementationGuide/hl7.fhir.us.vr-common-library"/>
+    <packageId value="hl7.fhir.us.vr-common-library"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="us_cdc_phinvads">
+    <uri value="http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads"/>
+    <packageId value="us.cdc.phinvads"/>
+    <version value="0.12.0"/>
+  </dependsOn>
+  <dependsOn id="odh">
+    <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
+    <packageId value="hl7.fhir.us.odh"/>
+    <version value="1.3.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="jira-code"/>
+      </extension>
+      <extension url="value">
+        <valueString value="vrdr"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../exp-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="version-comparison-master"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="auto-oid-root"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2.16.840.1.113883.4.642.40.10"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/us/vrdr/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#current"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="jira-code"/>
+      </extension>
+      <extension url="value">
+        <valueString value="vrdr"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../exp-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="version-comparison-master"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="auto-oid-root"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2.16.840.1.113883.4.642.40.10"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/us/vrdr/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <grouping id="DecedentDemographics">
+      <name value="Decedent Demographics"/>
+      <description value="Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level. The information in this profile group are provided by a decedent informant."/>
+    </grouping>
+    <grouping id="RecordLinkages">
+      <name value="Vital Records Linkages"/>
+      <description value="These profiles support exchange of vital records identifiers for events that are related to the decedent.  Jurisdictions may provide linkages to birth records for all deaths within the first year of life, and linkages to birth or fetal death records when the for pregnancy-related events within one year of death."/>
+    </grouping>
+    <grouping id="DeathInvestigation">
+      <name value="Death Investigation"/>
+      <description value="Data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopsy was performed, an injury incident occurred, or a transportation event was involved. The details on the pronouncement performer can be provided using USCore Practitioner profile."/>
+    </grouping>
+    <grouping id="DeathCertification">
+      <name value="Death Certification"/>
+      <description value="Data related to the primary concern of the VRDR IG, Death Certification. In this group, the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner)."/>
+    </grouping>
+    <grouping id="DecedentDisposition">
+      <name value="Decedent Disposition"/>
+      <description value="Data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director. Additional content can be included using standard USCore profiles, and can be included to specify the Funeral Home Director, the Licensee, and the Mortician."/>
+    </grouping>
+    <grouping id="CodedObservations">
+      <name value="Coded Observations"/>
+      <description value="Coded Observations based on the submitted death record."/>
+    </grouping>
+    <grouping id="DocumentsAndBundles">
+      <name value="Bundles and Compositions"/>
+      <description value="Bundles and Compositions used to transmit death record content."/>
+    </grouping>
+    <grouping id="Entensions">
+      <name value="Extensions"/>
+      <description value="Extensions"/>
+    </grouping>
+    <grouping id="CodeSystems">
+      <name value="CodeSystems"/>
+      <description value="CodeSystems"/>
+    </grouping>
+    <grouping id="ValueSets">
+      <name value="ValueSets"/>
+      <description value="ValueSets"/>
+    </grouping>
+    <grouping id="ConceptMaps">
+      <name value="ConceptMaps"/>
+      <description value="ConceptMaps"/>
+    </grouping>
+    <grouping id="ExampleDeathRecord">
+      <name value="Example Death Record Submission"/>
+      <description value="Example of a complete Death Record Submission"/>
+    </grouping>
+    <grouping id="ExampleBundles">
+      <name value="Other Example Bundles"/>
+      <description value="Example Death Certificate, Coded Content, and Mortality Roster Bundles"/>
+    </grouping>
+    <grouping id="OtherExamples">
+      <name value="Other Example Instances"/>
+      <description value="Other Example instances illustrating various aspects of the profiles."/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent"/>
+      </reference>
+      <name value="Decedent"/>
+      <description value="Decedent (PatientVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-age"/>
+      </reference>
+      <name value="Decedent Age"/>
+      <description value="The Decedent Age (Observation) profile provides the decedent's chronological age at the time of death."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-education-level"/>
+      </reference>
+      <name value="Decedent Education Level"/>
+      <description value="Decedent Education Level (ObservationEducationLevelVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-mother"/>
+      </reference>
+      <name value="Decedent Mother"/>
+      <description value="Decedent Mother (RelatedPersonParentVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-father"/>
+      </reference>
+      <name value="Decedent Father"/>
+      <description value="Decedent Father (RelatedPersonParentVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-spouse"/>
+      </reference>
+      <name value="Decedent Spouse"/>
+      <description value="Decedent Spouse (USCoreRelatedPerson)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-military-service"/>
+      </reference>
+      <name value="Decedent Military Service"/>
+      <description value="Decedent Military Service (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-usual-work"/>
+      </reference>
+      <name value="Decedent Usual Work"/>
+      <description value="Used to send text-string industry and occupation information from Jurisdictions to NCHS, and coded versions from NCHS to Jurisdictions."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDemographics"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-birth-record-identifier"/>
+      </reference>
+      <name value="Birth Record Identifier Infant"/>
+      <description value="Birth Record Identifier Infant (Observation).  This includes the record identifier, the jurisdiction, and the birth year of the decedent infant whose death&#xA;is being reported.  For maternal death cases, see [BirthRecordIdentifierChild](StructureDefinition-vrdr-birth-record-identifier-child.html) and [FetalDeathRecordIdentifier](StructureDefinition-vrdr-fetal-death-record-identifier.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="RecordLinkages"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-birth-record-identifier-child"/>
+      </reference>
+      <name value="Birth Record Identifier Child"/>
+      <description value="Birth Record Identifier (Observation). For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year of a child.&#xA;The subject is a Decedent (mother) whose death was related to the birth referenced by the identifier."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="RecordLinkages"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-fetal-death-record-identifier"/>
+      </reference>
+      <name value="Fetal Death Record Identifier"/>
+      <description value="Fetal Death Record Identifier (Observation).  For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year.&#xA;The subject is the Decedent (mother), whose death was related to the birth of the fetus referenced by the identifier."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="RecordLinkages"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-autopsy-performed-indicator"/>
+      </reference>
+      <name value="Autopsy Performed Indicator"/>
+      <description value="Autopsy Performed Indicator (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-death-date"/>
+      </reference>
+      <name value="Death Date"/>
+      <description value="The Death Date profile (Observation) provides the death date, death pronouncer, and date pronounced dead. If the actual date of death is known, set value to type dateTime. If the date of death is not known, and a range is known, set value to type Period.&#xA;This profile is designed to supplant the similar profiles in VRDR and MDI."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-pregnancy-status"/>
+      </reference>
+      <name value="Decedent Pregnancy"/>
+      <description value="The Decedent Pregnancy Status profile (Observation) provides an indication of the pregnancy status of the decedent.&#xA;This profile is designed to support VRDR and MDI"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-death-location"/>
+      </reference>
+      <name value="Death Location"/>
+      <description value="Death Location (LocationVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-examiner-contacted"/>
+      </reference>
+      <name value="Examiner Contacted"/>
+      <description value="Examiner Contacted (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-injury-location"/>
+      </reference>
+      <name value="Injury Location"/>
+      <description value="Injury Location (LocationVitalRecords)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-injury-incident"/>
+      </reference>
+      <name value="Injury Incident"/>
+      <description value="This Observation provides the certified explanation of how the injury leading to death occurred."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-surgery-date"/>
+      </reference>
+      <name value="Surgery Date"/>
+      <description value="Date of Surgery (Observation).  The PartialDate extension supports partial dates."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-tobacco-use-contributed-to-death"/>
+      </reference>
+      <name value="Tobacco Use Contributed To Death"/>
+      <description value="Tobacco Use Contributed To Death (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathInvestigation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-certifier"/>
+      </reference>
+      <name value="Death Certifier"/>
+      <description value="The Death Certification Practitioner"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathCertification"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-cause-of-death-part1"/>
+      </reference>
+      <name value="Cause Of Death Part 1"/>
+      <description value="The Cause of Death Part 1 (Observation) profile reflects the ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. Line number can be 1-4"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathCertification"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-cause-of-death-part2"/>
+      </reference>
+      <name value="Cause of Death Part 2"/>
+      <description value="The Contributing Cause of Death Part 2 (Observation) profile is used to identify factors contributing to the cause of death as asserted by the death certifier."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathCertification"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-death-certification"/>
+      </reference>
+      <name value="Death Certification Procedure"/>
+      <description value="Death Certification Procedure (USCoreProcedure). The procedure where the certification of death was performed by the certifier (USCoreProcedure)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathCertification"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-manner-of-death"/>
+      </reference>
+      <name value="Manner of Death"/>
+      <description value="Manner of Death (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DeathCertification"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-disposition-location"/>
+      </reference>
+      <name value="Disposition Location"/>
+      <description value="Disposition Location (USCoreLocation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDisposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-decedent-disposition-method"/>
+      </reference>
+      <name value="Decedent Disposition Method"/>
+      <description value="Decedent Disposition Method (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDisposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-funeral-home"/>
+      </reference>
+      <name value="Funeral Home"/>
+      <description value="Funeral Home (USCoreOrganization)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDisposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-mortician"/>
+      </reference>
+      <name value="Mortician"/>
+      <description value="Mortician.&#xA;&#xA;Note This profile is not needed for submission of records to NCHS but may be relevant for other use cases."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DecedentDisposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-activity-at-time-of-death"/>
+      </reference>
+      <name value="Activity at Time of Death"/>
+      <description value="Activity at Time of Death (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-automated-underlying-cause-of-death"/>
+      </reference>
+      <name value="Automated Underlying Cause Of Death"/>
+      <description value="Automated Underlying Cause Of Death (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-manual-underlying-cause-of-death"/>
+      </reference>
+      <name value="Manual Underlying Cause Of Death"/>
+      <description value="Manual Underlying Cause Of Death (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-record-axis-cause-of-death"/>
+      </reference>
+      <name value="Record Axis Cause Of Death"/>
+      <description value="Record Axis Cause Of Death (Observation): Up to 20 of instances of this profile may be included in a coding bundle.  &#xA;Each instance is labeled with its position (1-20), forming an ordered collection of codes.&#xA;&#xA;Record axis codes eliminate contradictions and repetitive codes to create a more concise and &#xA;consistent set of codes than provided by the Entity Axis codes. They may combine or modify codes to better reflect the &#xA;overall medical certification on the death certificate."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-entity-axis-cause-of-death"/>
+      </reference>
+      <name value="Entity Axis Cause Of Death"/>
+      <description value="Entity Axis Cause Of Death (Observation):   Up to 20 of instances of this profile may be included in a coding bundle.  &#xA;Each instance is labeled with its lineNumber, Position and e-code indicator.&#xA;&#xA;Entity Axis codes represent the raw data as originally reported on the death certificate by the certifier, maintaining the order and position of conditions as they appeared on the death certificate.&#xA;They include codes for all causes of death listed, including duplicate codes and potentially contradictory information."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-place-of-injury"/>
+      </reference>
+      <name value="Place Of Injury"/>
+      <description value="Place Of Injury  (Observation)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-coding-status-values"/>
+      </reference>
+      <name value="Coding Status Values"/>
+      <description value="Coding Status Values (Parameters) contains various status flags that result from the coding process"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodedObservations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-death-certificate"/>
+      </reference>
+      <name value="Death Certificate"/>
+      <description value="The body of the death certificate document (Composition)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-death-certificate-document"/>
+      </reference>
+      <name value="Death Certificate Document"/>
+      <description value="The resources comprising the death certificate composition (Bundle/Document)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-cause-of-death-coded-content-bundle"/>
+      </reference>
+      <name value="Cause of Death Coded Content Bundle"/>
+      <description value="Cause of Death Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-demographic-coded-content-bundle"/>
+      </reference>
+      <name value="Demographic Coded Content Bundle"/>
+      <description value="Demographic Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/industry-occupation-coded-content-bundle"/>
+      </reference>
+      <name value="Industry Occupation Coded Content Bundle"/>
+      <description value="Industry and Occupation Coded Content Bundle (Bundle):  A bundle containing  coded industry and occupation data for a decedent.   This bundle is information-content equivalent to the traditional MIO files."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/vrdr-mortality-roster-bundle"/>
+      </reference>
+      <name value="Mortality Roster Bundle"/>
+      <description value="Mortality Roster Bundle (Bundle): A bundle containing instances of the resources comprising mortality roster content.  This bundle is information-content equivalent to the traditional Mortality Roster.&#xA;The mortality roster is a supplemental report of death for the purpose of notifying the decedent's jurisdiction of birth that the death has occurred. The roster data points are sufficient to locate the birth certificate of the decedent but do not otherwise contain the full death record.&#xA;Once received, the jurisdiction of birth uses the mortality roster data to locate the record of birth and marks it as deceased."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/DeathCertificateDocument-Example1"/>
+      </reference>
+      <name value="DeathCertificateDocument-Example1"/>
+      <description value="DeathCertificateDocument-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/DeathCertificateDocument-Example2"/>
+      </reference>
+      <name value="DeathCertificateDocument-Example2"/>
+      <description value="DeathCertificateDocument-Example2 (with coded content)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"/>
+      <groupingId value="DocumentsAndBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/AliasStatus"/>
+      </reference>
+      <name value="Alias Status of a Death Roster"/>
+      <description value="Alias Status of a Death Roster.  If true, is an alias record."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FilingFormat"/>
+      </reference>
+      <name value="Filing Format"/>
+      <description value="Filing Format Extension."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/StateSpecificField"/>
+      </reference>
+      <name value="State Specific Field"/>
+      <description value="An arbitratry string included by a submitting jurisdiction"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/NVSS-SexAtDeath"/>
+      </reference>
+      <name value="NVSS SexAtDeath"/>
+      <description value="Sex on visual inspection at the time of death by the funeral home"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SpouseAlive"/>
+      </reference>
+      <name value="Spouse Is Alive"/>
+      <description value="Spouse is Alive."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ReplaceStatus"/>
+      </reference>
+      <name value="Replacement Status of a Death Record (deprecated)"/>
+      <description value="Replacement Status of a Death Record.  The use of this extension has been deprecated and wil be ignored for NCHS submissions.  See the [NCHS Vital Records Messaging IG]&#xA;for a description of how to specify replace status at the message level."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/practitioner-role"/>
+      </reference>
+      <name value="Practitioner Role"/>
+      <description value="Used to indicate the role played by a practitioner to facilitate simple FHIRPath-based queries."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Entensions"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-activity-at-time-of-death-cs"/>
+      </reference>
+      <name value="Activity at Time of Death CodeSystem"/>
+      <description value="Activity at Time of Death Codesystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-date-of-death-determination-methods-cs"/>
+      </reference>
+      <name value="Date of Death Determination Methods"/>
+      <description value="Date of Death Determination Methods CodeSystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CodeSystem-death-pregnancy-status"/>
+      </reference>
+      <name value="Death Pregnancy Status Codesystem"/>
+      <description value="Codes that reflect whether the decedent was pregnant at or around the time of death."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-document-section-cs"/>
+      </reference>
+      <name value="Document Section"/>
+      <description value="Document Section Code System"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-filing-format-cs"/>
+      </reference>
+      <name value="Filing Formats"/>
+      <description value="Death Certificate Filing Formats CodeSystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-intentional-reject-cs"/>
+      </reference>
+      <name value="Intentional Reject"/>
+      <description value="Intentional Reject CodeSystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-location-type-cs"/>
+      </reference>
+      <name value="Location Type"/>
+      <description value="Location Type Code System"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-observations-cs"/>
+      </reference>
+      <name value="Local Observation Codes"/>
+      <description value="Local Observation Codes for observations that lack an appropriate LOINC code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-component-cs"/>
+      </reference>
+      <name value="Local Component Codes"/>
+      <description value="Local Component Codes for observation components that lack an appropriate LOINC code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-organization-type-cs"/>
+      </reference>
+      <name value="Local Organization Type"/>
+      <description value="Local Organization Types"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-replace-status-cs"/>
+      </reference>
+      <name value="Replacement Status of Death Record Submission CodeSystem"/>
+      <description value="Replacement Status of Death Record Submission CodeSystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-system-placeofinjury-cs"/>
+      </reference>
+      <name value="Supermicar Place Of Injury CodeSystem"/>
+      <description value="Supermicar Place Of Injury CodeSystem"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-system-reject-cs"/>
+      </reference>
+      <name value="System Reject Code System"/>
+      <description value="System Reject Code System"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/vrdr-transax-conversion-cs"/>
+      </reference>
+      <name value="Transax Conversion CodeSystem"/>
+      <description value="Transax Conversion Code System"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="CodeSystems"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-administrative-gender-vs"/>
+      </reference>
+      <name value="Administrative Gender ValueSet"/>
+      <description value="The gender of a person used for administrative purposes.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-AdministrativeGenderCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-certifier-types-vs"/>
+      </reference>
+      <name value="Certifier Types Value Set"/>
+      <description value="Certifier Types Value Set&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-CertifierTypesCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-intentional-reject-vs"/>
+      </reference>
+      <name value="Intentional Reject ValueSet"/>
+      <description value="Intentional Reject ValueSet.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-IntentionalRejectCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-system-reject-vs"/>
+      </reference>
+      <name value="System Reject ValueSet"/>
+      <description value="System Reject ValueSet.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-SystemRejectCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-transax-conversion-vs"/>
+      </reference>
+      <name value="Transax Conversion ValueSet"/>
+      <description value="Transax Conversion ValueSet.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-TransaxConversionCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-activity-at-time-of-death-vs"/>
+      </reference>
+      <name value="Activity at Time of Death ValueSet"/>
+      <description value="Activity at Time of Death.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-ActivityAtTimeOfDeathCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-icd10-causes-of-death-vs"/>
+      </reference>
+      <name value="ICD10 Causes of Death ValueSet"/>
+      <description value="ICD10 Causes of Death ValueSet"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-contributory-tobacco-use-vs"/>
+      </reference>
+      <name value="Contributory Tobacco Use ValueSet"/>
+      <description value="Did Tobacco Use Contribute to Death&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-ContributoryTobaccoUseCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-date-of-death-determination-methods-vs"/>
+      </reference>
+      <name value="Date of Death Determination Methods Value Set"/>
+      <description value="Date of Death Determination Methods Value Set. The method of date of death determination is not used for the Death Record submission process.&#xA;The binding to this value set is included for compatibility with the Medicolegal Death Investigation ([MDI](https://build.fhir.org/ig/HL7/fhir-mdi-ig/)) Implementation Guide.  The valueset only&#xA;includes the values used by MDI, but is bound [extensibly](https://hl7.org/fhir/R4/terminologies.html#extensible).  If a jurisdiction chooses to use this field, and requires&#xA;additional values (e.g., 'presumed'), these values can be used while remaining in full conformance with the VRDR IG."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-death-certification-event-vs"/>
+      </reference>
+      <name value="Event Code for Death Certificate Composition"/>
+      <description value="The code used for Event.code for the Death Certificate Composition"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-death-certification-event-max-vs"/>
+      </reference>
+      <name value="Event Code for Death Certificate Composition - Max"/>
+      <description value="The maximum valueset for Event.code for Death Certificate Composition.  Includes an inactive but valid code used in STU2"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-death-pregnancy-status-vs"/>
+      </reference>
+      <name value="Death Pregnancy Status ValueSet"/>
+      <description value="A set of codes that reflect whether the decedent was pregnant at or around the time of death. Based on [Pregnancy Status (NCHS)[2.16.840.1.114222.4.11.6003]](https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-filing-format-vs"/>
+      </reference>
+      <name value="Filing Format ValueSet"/>
+      <description value="Filing Format ValueSet&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-FilingFormatCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-manner-of-death-vs"/>
+      </reference>
+      <name value="Manner of Death ValueSet"/>
+      <description value="A set of code used to indicate a classification of the manner of death.&#xA;&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-MannerOfDeathCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-method-of-disposition-vs"/>
+      </reference>
+      <name value="Method of Disposition ValueSet"/>
+      <description value="The set of codes used to indicate the method used to dispose of the decedents remains.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-place-of-death-vs"/>
+      </reference>
+      <name value="Place of Death ValueSet"/>
+      <description value="Code values reflecting the death location of the decedent (e.g., hospital, home, hospice).&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-PlaceOfDeathCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-place-of-injury-vs"/>
+      </reference>
+      <name value="Place of Injury ValueSet"/>
+      <description value="Place of Injury from NCHS TRX Format.  THis contains all of the codes from https://loinc.org/LL1051-3/ except for LA14087-3 (Public Institution).&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-PlaceOfInjuryCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-place-of-injury-other-vs"/>
+      </reference>
+      <name value="Place of Injury - Other ValueSet"/>
+      <description value="Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is 'Other'."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-replace-status-vs"/>
+      </reference>
+      <name value="Replacement Status ValueSet"/>
+      <description value="Replacement Status Value Set.  NCHS will not process original or update submissions flagged 'updated_notforNCHS'.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-ReplaceStatusCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-spouse-alive-vs"/>
+      </reference>
+      <name value="Spouse Alive ValueSet"/>
+      <description value="The set of codes used to indicate whether the decedent's spouse is alive.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-SpouseAliveCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-transportation-incident-role-vs"/>
+      </reference>
+      <name value="Transportation Incident Role ValueSet"/>
+      <description value="Role of the decedent in a transportation incident resulting in a death-related injury.&#xA;&#xA;Mapping to IJE codes [here](ConceptMap-TransportationIncidentRoleCM.html)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-edit-bypass-01-vs"/>
+      </reference>
+      <name value="Edit Bypass 01"/>
+      <description value="A subset of code values (0 and 1) use to indicate the outcome of data validation assessment for unusual data values."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-edit-bypass-012-vs"/>
+      </reference>
+      <name value="Edit Bypass 012"/>
+      <description value="A subset of code values (0, 1, and 2) use to indicate the outcome of data validation assessment for unusual data values."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vrdr-edit-bypass-0124-vs"/>
+      </reference>
+      <name value="Edit Bypass 0124"/>
+      <description value="A subset of code values (0, 1, 2, and 4) use to indicate the outcome of data validation assessment for unusual data values."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ValueSets"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/ActivityAtTimeOfDeathCM"/>
+      </reference>
+      <name value="ActivityAtTimeOfDeath Concept Map"/>
+      <description value="Concept Map for ActivityAtTimeOfDeath Value Set"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/AdministrativeGenderCM"/>
+      </reference>
+      <name value="AdministrativeGender Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR AdministrativeGender Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/CertifierTypesCM"/>
+      </reference>
+      <name value="CertifierTypes Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR CertifierTypes Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/ContributoryTobaccoUseCM"/>
+      </reference>
+      <name value="ContributoryTobaccoUse Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR ContributoryTobaccoUse Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/DeathPregnancyStatusCM"/>
+      </reference>
+      <name value="PregnancyStatus Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR PregnancyStatus Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/EditBypass01CM"/>
+      </reference>
+      <name value="EditBypass01 Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR EditBypass01 Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/EditBypass012CM"/>
+      </reference>
+      <name value="EditBypass012 Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR EditBypass012 Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/EditBypass0124CM"/>
+      </reference>
+      <name value="EditBypass0124 Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR EditBypass0124 Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FilingFormatCM"/>
+      </reference>
+      <name value="FilingFormat Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR FilingFormat Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/IntentionalRejectCM"/>
+      </reference>
+      <name value="IntentionalReject Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR IntentionalReject Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/MannerOfDeathCM"/>
+      </reference>
+      <name value="MannerOfDeath Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR MannerOfDeath Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/MethodOfDispositionCM"/>
+      </reference>
+      <name value="MethodOfDisposition Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR MethodOfDisposition Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PlaceOfDeathCM"/>
+      </reference>
+      <name value="PlaceOfDeath Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/PlaceOfInjuryCM"/>
+      </reference>
+      <name value="PlaceOfInjury Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR PlaceOfInjury Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/ReplaceStatusCM"/>
+      </reference>
+      <name value="ReplaceStatus Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR ReplaceStatus Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/SpouseAliveCM"/>
+      </reference>
+      <name value="SpouseAlive Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR SpouseAlive Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/SystemRejectCM"/>
+      </reference>
+      <name value="SystemReject Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR SystemReject Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/TransaxConversionCM"/>
+      </reference>
+      <name value="TransaxConversion Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR TransaxConversion Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/TransportationIncidentRoleCM"/>
+      </reference>
+      <name value="TransportationIncidentRole Concept Map"/>
+      <description value="A mapping between NCHS IJE and FHIR TransportationIncidentRole Value Sets"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="ConceptMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/DeathCertificateDocument-UT-1"/>
+      </reference>
+      <name value="DeathCertificateDocument-UT-1"/>
+      <description value="Example Record from UT"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/DeathCertificateUT-Example1"/>
+      </reference>
+      <name value="Death Certificate for Davis Lineberry Jr"/>
+      <description value="DeathCertificateUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/DecedentUT-Example1"/>
+      </reference>
+      <name value="DecedentUT-Example1"/>
+      <description value="DecedentUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/InputRaceAndEthnicityUT-Example1"/>
+      </reference>
+      <name value="InputRaceAndEthnicityUT-Example1"/>
+      <description value="InputRaceAndEthnicityUT-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PractitionerUT-Certifier"/>
+      </reference>
+      <name value="PractitionerUT-Certifier"/>
+      <description value="Certifying Practitioner"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PractitionerUT-Pronouncer"/>
+      </reference>
+      <name value="PractitionerUT-Pronouncer"/>
+      <description value="Pronouncing Practitioner"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BirthRecordIdentifierUT-Example1"/>
+      </reference>
+      <name value="BirthRecordIdentifierUT-Example1"/>
+      <description value="BirthRecordIdentifierUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EducationUT-Example1"/>
+      </reference>
+      <name value="EducationUT-Example1"/>
+      <description value="EducationUT-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/FatherUT-Example1"/>
+      </reference>
+      <name value="FatherUT-Example1"/>
+      <description value="FatherUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/MotherUT-Example1"/>
+      </reference>
+      <name value="MotherUT-Example1"/>
+      <description value="MotherUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/AutopsyPerformedIndicatorUT-Example1"/>
+      </reference>
+      <name value="AutopsyPerformedIndicatorUT-Example1"/>
+      <description value="AutopsyPerformedIndicatorUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CauseOfDeathPart1UT-Example1"/>
+      </reference>
+      <name value="CauseOfDeathPart1UT-Example1"/>
+      <description value="CauseOfDeathPart1UT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DeathDateUT-Example1"/>
+      </reference>
+      <name value="DeathDateUT-Example1"/>
+      <description value="DeathDateUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DeathLocationUT-Example1"/>
+      </reference>
+      <name value="DeathLocationUT-Example1"/>
+      <description value="DeathLocationUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/AgeUT-Example1"/>
+      </reference>
+      <name value="AgeUT-Example1"/>
+      <description value="AgeUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-age"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DispositionMethodUT-Example1"/>
+      </reference>
+      <name value="DispositionMethodUT-Example1"/>
+      <description value="DispositionMethodUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-disposition-method"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DispositionLocationUT-Example1"/>
+      </reference>
+      <name value="DispositionLocationUT-Example1"/>
+      <description value="DispositionLocationUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-disposition-location"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/UsualWorkUT-Example1"/>
+      </reference>
+      <name value="UsualWorkUT-Example1"/>
+      <description value="UsualWorkUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/MilitaryServiceUT-Example1"/>
+      </reference>
+      <name value="MilitaryServiceUT-Example1"/>
+      <description value="MilitaryServiceUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-military-service"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/PregnancyUT-Example1"/>
+      </reference>
+      <name value="PregnancyUT-Example1"/>
+      <description value="PregnancyUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExaminerContactedUT-Example1"/>
+      </reference>
+      <name value="ExaminerContactedUT-Example1"/>
+      <description value="ExaminerContactedUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-examiner-contacted"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/FuneralHomeUT-Example1"/>
+      </reference>
+      <name value="FuneralHomeUT-Example1"/>
+      <description value="FuneralHomeUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-funeral-home"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/InjuryIncidentUT-Example1"/>
+      </reference>
+      <name value="InjuryIncidentUT-Example1"/>
+      <description value="InjuryIncidentUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/MannerOfDeathUT-Example1"/>
+      </reference>
+      <name value="MannerOfDeathUT-Example1"/>
+      <description value="MannerOfDeathUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/TobaccoUseUT-Example1"/>
+      </reference>
+      <name value="TobaccoUseUT-Example1"/>
+      <description value="TobaccoUseUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedureDeathCertificationUT-Example1"/>
+      </reference>
+      <name value="ProcedureDeathCertificationUT-Example1"/>
+      <description value="ProcedureDeathCertificationUT-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EmergingIssuesUT-Example1"/>
+      </reference>
+      <name value="EmergingIssuesUT-Example1"/>
+      <description value="EmergingIssuesUT-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="ExampleDeathRecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/CauseOfDeathCodedContentBundle-Example1"/>
+      </reference>
+      <name value="CauseOfDeathCodedContentBundle-Example1"/>
+      <description value="CauseofDeathCodedContentBundle-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-coded-content-bundle"/>
+      <groupingId value="ExampleBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/DemographicCodedContentBundle-Example1"/>
+      </reference>
+      <name value="DemographicCodedContentBundle-Example1"/>
+      <description value="DemographicCodedContentBundle-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-demographic-coded-content-bundle"/>
+      <groupingId value="ExampleBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/IndustryOccupationCodedContentBundle-Example1"/>
+      </reference>
+      <name value="IndustryOccupationCodedContentBundle-Example1"/>
+      <description value="IndustryOccupationCodedContentBundle-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/industry-occupation-coded-content-bundle"/>
+      <groupingId value="ExampleBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/MortalityRosterBundle-Example1"/>
+      </reference>
+      <name value="MortalityRosterBundle-Example1"/>
+      <description value="MortalityRosterBundle-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortality-roster-bundle"/>
+      <groupingId value="ExampleBundles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/DeathCertification-Example1"/>
+      </reference>
+      <name value="DeathCertification-Example1"/>
+      <description value="DeathCertification-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/DeathCertification-Example2"/>
+      </reference>
+      <name value="DeathCertification-Example2"/>
+      <description value="DeathCertification-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/AutopsyPerformedIndicator-Example1"/>
+      </reference>
+      <name value="AutopsyPerformedIndicator-Example1"/>
+      <description value="AutopsyPerformedIndicator-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BirthRecordIdentifier-Example1"/>
+      </reference>
+      <name value="BirthRecordIdentifier-Example1"/>
+      <description value="BirthRecordIdentifier-Example1 - identifier of the decedent's birth certificate"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BirthRecordIdentifierChild-Example1"/>
+      </reference>
+      <name value="BirthRecordIdentifierChild-Example1"/>
+      <description value="BirthRecordIdentifierChild-Example1 - identifier of the decedent's child's birth certificate number"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier-child"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/FetalDeathRecordIdentifier-Example1"/>
+      </reference>
+      <name value="FetalDeathRecordIdentifier-Example1"/>
+      <description value="FetalDeathRecordIdentifier-Example1 - identifier of the decedent's fetus's fetal death record"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-fetal-death-record-identifier"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CauseOfDeathPart1-Example1"/>
+      </reference>
+      <name value="CauseOfDeathPart1-Example1"/>
+      <description value="CauseOfDeathPart1New-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CauseOfDeathPart1-Example2"/>
+      </reference>
+      <name value="CauseOfDeathPart1-Example2"/>
+      <description value="CauseOfDeathPart1New-Example2"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CauseOfDeathPart2-Example1"/>
+      </reference>
+      <name value="CauseOfDeathPart2-Example1"/>
+      <description value="CauseOfDeathPart2New-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part2"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Certifier-Example1"/>
+      </reference>
+      <name value="Certifier-Example1"/>
+      <description value="Certifier-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/AutomatedUnderlyingCauseOfDeath-Example1"/>
+      </reference>
+      <name value="AutomatedUnderlyingCauseOfDeath-Example1"/>
+      <description value="AutomatedUnderlyingCauseOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-automated-underlying-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/RecordAxisCauseOfDeath-Example1"/>
+      </reference>
+      <name value="RecordAxisCauseOfDeath-Example1"/>
+      <description value="RecordAxisCauseOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/RecordAxisCauseOfDeath-Example2"/>
+      </reference>
+      <name value="RecordAxisCauseOfDeath-Example2"/>
+      <description value="RecordAxisCauseOfDeath-Example2"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EntityAxisCauseOfDeath-Example1"/>
+      </reference>
+      <name value="EntityAxisCauseOfDeath-Example1"/>
+      <description value="EntityAxisCauseOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EntityAxisCauseOfDeath-Example2"/>
+      </reference>
+      <name value="EntityAxisCauseOfDeath-Example2"/>
+      <description value="EntityAxisCauseOfDeath-Example2"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EntityAxisCauseOfDeath-Example3"/>
+      </reference>
+      <name value="EntityAxisCauseOfDeath-Example3"/>
+      <description value="EntityAxisCauseOfDeath-Example3"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EntityAxisCauseOfDeath-Example4"/>
+      </reference>
+      <name value="EntityAxisCauseOfDeath-Example4"/>
+      <description value="EntityAxisCauseOfDeath-Example3"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ManualUnderlyingCauseOfDeath-Example1"/>
+      </reference>
+      <name value="ManualUnderlyingCauseOfDeath-Example1"/>
+      <description value="ManualUnderlyingCauseOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manual-underlying-cause-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/PlaceOfInjury-Example1"/>
+      </reference>
+      <name value="PlaceOfInjury-Example1"/>
+      <description value="PlaceOfInjury-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-place-of-injury"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ActivityAtTimeOfDeath-Example1"/>
+      </reference>
+      <name value="ActivityAtTimeOfDeath-Example1"/>
+      <description value="ActivityAtTimeOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-activity-at-time-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CodedRaceAndEthnicity-Example1"/>
+      </reference>
+      <name value="CodedRaceAndEthnicity-Example1"/>
+      <description value="CodedRaceAndEthnicity-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/InputRaceAndEthnicity-Example1"/>
+      </reference>
+      <name value="InputRaceAndEthnicity-Example1"/>
+      <description value="InputRaceAndEthnicity-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/CodingStatusValues-Example1"/>
+      </reference>
+      <name value="CodingStatusValues-Example1"/>
+      <description value="CodingStatusValues-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/DeathCertificate-Example1"/>
+      </reference>
+      <name value="DeathCertificate Example1"/>
+      <description value="DeathCertificate-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/DeathCertificate-Example2"/>
+      </reference>
+      <name value="DeathCertificate Example2"/>
+      <description value="DeathCertificate-Example2 (with coded content)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DeathDate-Example1"/>
+      </reference>
+      <name value="DeathDate-Example1"/>
+      <description value="DeathDate-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DeathDate-Example2"/>
+      </reference>
+      <name value="DeathDate-Example2"/>
+      <description value="DeathDate-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DeathDate-Example3"/>
+      </reference>
+      <name value="DeathDate-Example3"/>
+      <description value="DeathDate-Example3 - Stripped down for Mortality Roster"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DeathDate-Example4"/>
+      </reference>
+      <name value="DeathDate-Example4"/>
+      <description value="DeathDate-Example4 - an example with only a death time"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DeathLocation-Example1"/>
+      </reference>
+      <name value="DeathLocation-Example1"/>
+      <description value="DeathLocation-Example1 - State = Jurisdiction"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DeathLocation-Example2"/>
+      </reference>
+      <name value="DeathLocation-Example2"/>
+      <description value="DeathLocation-Example2 - State != Jurisdiction"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DeathLocation-Example3"/>
+      </reference>
+      <name value="DeathLocation-Example3"/>
+      <description value="DeathLocation-Example3 - Stripped Down for Mortality Roster"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Decedent-Example3"/>
+      </reference>
+      <name value="Decedent-Example3"/>
+      <description value="Decedent-Example3 - Stripped down for Mortality Roster"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Decedent-Example2"/>
+      </reference>
+      <name value="Decedent-Example2"/>
+      <description value="Decedent-Example2 - with birth jurisdiction"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Decedent-Example1"/>
+      </reference>
+      <name value="Decedent-Example1"/>
+      <description value="Decedent-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentAge-Example1"/>
+      </reference>
+      <name value="DecedentAge-Example1"/>
+      <description value="DecedentAge-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-age"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentDispositionMethod-Example1"/>
+      </reference>
+      <name value="DecedentDispositionMethod-Example1"/>
+      <description value="DecedentDispositionMethod-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-disposition-method"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Mortician-Example1"/>
+      </reference>
+      <name value="Mortician-Example1"/>
+      <description value="Mortician-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortician"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/DispositionLocation-Example1"/>
+      </reference>
+      <name value="DispositionLocation-Example1"/>
+      <description value="DispositionLocation-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-disposition-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentEducationLevel-Example1"/>
+      </reference>
+      <name value="DecedentEducationLevel-Example1"/>
+      <description value="DeathDate-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-education-level"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentMilitaryService-Example1"/>
+      </reference>
+      <name value="DecedentMilitaryService-Example1"/>
+      <description value="DecedentMilitaryService-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-military-service"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentPregnancyStatus-Example1"/>
+      </reference>
+      <name value="DecedentPregnancyStatus-Example1"/>
+      <description value="DecedentPregnancyStatus-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentUsualWork-Example1"/>
+      </reference>
+      <name value="DecedentUsualWork-Example1"/>
+      <description value="DecedentUsualWork-Example1 - without coded values"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/DecedentUsualWork-Example2"/>
+      </reference>
+      <name value="DecedentUsualWork-Example2"/>
+      <description value="DecedentUsualWork-Example2 - with coded values"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/EmergingIssues-Example1"/>
+      </reference>
+      <name value="EmergingIssues-Example1"/>
+      <description value="EmergingIssues-Example1 make sure it is example"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExaminerContacted-Example1"/>
+      </reference>
+      <name value="ExaminerContacted-Example1"/>
+      <description value="AutopsyPerformedIndicator-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-examiner-contacted"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/DecedentFather-Example1"/>
+      </reference>
+      <name value="DecedentFather-Example1"/>
+      <description value="DecedentFather-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/DecedentMother-Example1"/>
+      </reference>
+      <name value="DecedentMother-Example1"/>
+      <description value="DecedentFather-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/DecedentSpouse-Example1"/>
+      </reference>
+      <name value="DecedentSpouse-Example1"/>
+      <description value="DecedentSpouse-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-spouse"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/FuneralHome-Example1"/>
+      </reference>
+      <name value="FuneralHome-Example1"/>
+      <description value="FuneralHome-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-funeral-home"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/InjuryIncident-Example1"/>
+      </reference>
+      <name value="InjuryIncident-Example1"/>
+      <description value="InjuryIncident-Example1 (with literal transportationRole)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/InjuryIncident-Example2"/>
+      </reference>
+      <name value="InjuryIncident-Example2"/>
+      <description value="InjuryIncident-Example2 (with coded transportationRole)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/InjuryLocation-Example1"/>
+      </reference>
+      <name value="InjuryLocation-Example1"/>
+      <description value="InjuryLocation-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/MannerOfDeath-Example1"/>
+      </reference>
+      <name value="MannerOfDeath-Example1"/>
+      <description value="MannerOfDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/SurgeryDate-Example1"/>
+      </reference>
+      <name value="SurgeryDate-Example1"/>
+      <description value="SurgeryDate-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-surgery-date"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/TobaccoUseContributedToDeath-Example1"/>
+      </reference>
+      <name value="TobaccoUseContributedToDeath-Example1"/>
+      <description value="TobaccoUseContributedToDeath-Example1"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/location-death-vr-atlanta-ga-a-freeman"/>
+      </reference>
+      <name value="Atlanta GA Death Location - Freeman"/>
+      <description value="Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/location-injury-vr-atlanta-ga-a-freeman"/>
+      </reference>
+      <name value="Atlanta GA Injury Location - Freeman"/>
+      <description value="Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-location"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/practitioner-vital-records-janet-seito"/>
+      </reference>
+      <name value="Practitioner - Vital Records - Janet Seito"/>
+      <description value="Practitioner - Vital Records: Janet Seito example"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/procedure-death-certification-vr-a-freeman"/>
+      </reference>
+      <name value="Procedure - Death Certification Vital Records - A Freeman"/>
+      <description value="Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/us-core-patient-vr-a-freeman"/>
+      </reference>
+      <name value="USCorePatient - Patient example [A Freeman]"/>
+      <description value="Example of US Core Patient profile (A Freeman)"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Pronouncer-Example1"/>
+      </reference>
+      <name value="Pronouncer-Example1"/>
+      <description value="Pronouncer-Example1"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Certifier-Example2-no-NPI"/>
+      </reference>
+      <name value="Certifier-Example2-no-NPI"/>
+      <description value="Certifier-Example2 (no NPI)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"/>
+      <groupingId value="OtherExamples"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="credits.html"/>
+        </extension>
+        <nameUrl value="credits.html"/>
+        <title value="Credits"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="background.html"/>
+        </extension>
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="scope_of_the_vrdr_fhir_ig.html"/>
+        </extension>
+        <nameUrl value="scope_of_the_vrdr_fhir_ig.html"/>
+        <title value="Scope of the VRDR IG"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="usage.html"/>
+        </extension>
+        <nameUrl value="usage.html"/>
+        <title value="Usage"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conformance.html"/>
+        </extension>
+        <nameUrl value="conformance.html"/>
+        <title value="Conformance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="artifacts.html"/>
+        </extension>
+        <nameUrl value="artifacts.html"/>
+        <title value="Artifacts Summary"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="vrdr_forms_mapping.html"/>
+        </extension>
+        <nameUrl value="vrdr_forms_mapping.html"/>
+        <title value="VRDR Forms Mapping"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="DeathRecordDataDictionary.html"/>
+        </extension>
+        <nameUrl value="DeathRecordDataDictionary.html"/>
+        <title value="Death Record Data Dictionary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="MortalityRosterDataDictionary.html"/>
+        </extension>
+        <nameUrl value="MortalityRosterDataDictionary.html"/>
+        <title value="Mortality Roster Data Dictionary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Download Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="change_log.html"/>
+        </extension>
+        <nameUrl value="change_log.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="content-transitions.html"/>
+        </extension>
+        <nameUrl value="content-transitions.html"/>
+        <title value="Content Transitions"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

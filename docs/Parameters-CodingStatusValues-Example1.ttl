@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Parameters/CodingStatusValues-Example1> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CodingStatusValues-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "shipmentNumber" ] ;
+     fhir:value [ fhir:v "A2B2" ]
+  ] [
+     fhir:name [ fhir:v "receiptDate" ] ;
+     fhir:value [ fhir:v "2021-12-12"^^xsd:date ]
+  ] [
+     fhir:name [ fhir:v "coderStatus" ] ;
+     fhir:value [ fhir:v "5"^^xsd:integer ]
+  ] [
+     fhir:name [ fhir:v "intentionalReject" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-intentional-reject-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Reject1" ]
+       ] )
+     ]
+  ] [
+     fhir:name [ fhir:v "acmeSystemReject" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-reject-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "Not Rejected" ]
+       ] )
+     ]
+  ] [
+     fhir:name [ fhir:v "transaxConversion" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-transax-conversion-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "Conversion using non-ambivalent table entries" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
