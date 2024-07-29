@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ConceptMap/CertifierTypesCM> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CertifierTypesCM"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-certifier-types-vs.html\">Certifier Types Value Set</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR CertifierTypes Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>D (Certifying Physician)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>434651000124107 (Certifying physician.)</td></tr><tr><td>P (Pronouncing and Certifying Physician)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>434641000124105 (Pronouncing &amp; Certifying physician.)</td></tr><tr><td>M (Medical Examiner/Coroner)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>455381000124109 (Medical Examiner/Coroner)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>freetext (Other Individual Legally Allowed to Certify)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>OTH (other)</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ConceptMap/CertifierTypesCM"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "CertifierTypes"] ; # 
+  fhir:title [ fhir:v "CertifierTypes Concept Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A mapping between NCHS IJE and FHIR CertifierTypes Value Sets"] ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "focus" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "for IJE to FHIR alignment" ]
+     ]
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "To help implementers map from IJE to FHIR Vocabulary"] ; # 
+  fhir:target [
+     fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-certifier-types-vs"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-certifier-types-vs>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "D" ] ;
+       fhir:display [ fhir:v "Certifying Physician" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "434651000124107" ] ;
+         fhir:display [ fhir:v "Certifying physician." ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "P" ] ;
+       fhir:display [ fhir:v "Pronouncing and Certifying Physician" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "434641000124105" ] ;
+         fhir:display [ fhir:v "Pronouncing & Certifying physician." ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "M" ] ;
+       fhir:display [ fhir:v "Medical Examiner/Coroner" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "455381000124109" ] ;
+         fhir:display [ fhir:v "Medical Examiner/Coroner" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "freetext" ] ;
+       fhir:display [ fhir:v "Other Individual Legally Allowed to Certify" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "other" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="DeathCertificate-Example2"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Composition</b><a name="DeathCertificate-Example2"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Composition &quot;DeathCertificate-Example2&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-death-certificate.html">Death Certificate</a></p></div><p><b>Filing Format</b>: Electronic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-vrdr-filing-format-cs.html">Filing Formats</a>#electronic)</span></p><p><b>Replacement Status of a Death Record (deprecated)</b>: original record <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-vrdr-replace-status-cs.html">Replacement Status of Death Record Submission CodeSystem</a>#original)</span></p><p><b>State Specific Field</b>: State Specific Content</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2020-11-15 16:39:54-0500</p><p><b>author</b>: <a href="Practitioner-Certifier-Example1.html">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</p><p><b>title</b>: Death Certificate</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>legal</td><td>2020-11-14 16:39:40-0500</td><td><a href="Practitioner-Certifier-Example1.html">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</td></tr></table><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td>Death certificate (record artifact) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#307930005)</span></td><td><a href="Procedure-DeathCertification-Example1.html">Procedure/DeathCertification-Example1</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs"/>
+        <code value="electronic"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs"/>
+        <code value="original"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField">
+    <valueString value="State Specific Content"/>
+  </extension>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="64297-5"/>
+      <display value="Death certificate"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/Decedent-Example1"/>
+  </subject>
+  <date value="2020-11-15T16:39:54-05:00"/>
+  <author>
+    <reference value="Practitioner/Certifier-Example1"/>
+  </author>
+  <title value="Death Certificate"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2020-11-14T16:39:40-05:00"/>
+    <party>
+      <reference value="Practitioner/Certifier-Example1"/>
+    </party>
+  </attester>
+  <event>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="307930005"/>
+        <display value="Death certificate (record artifact)"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Procedure/DeathCertification-Example1"/>
+    </detail>
+  </event>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DecedentDemographics"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Patient/Decedent-Example1"/>
+    </entry>
+    <entry>
+      <reference value="RelatedPerson/DecedentFather-Example1"/>
+    </entry>
+    <entry>
+      <reference value="RelatedPerson/DecedentMother-Example1"/>
+    </entry>
+    <entry>
+      <reference value="RelatedPerson/DecedentSpouse-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentAge-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/BirthRecordIdentifier-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentEducationLevel-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentMilitaryService-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentUsualWork-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/InputRaceAndEthnicity-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/EmergingIssues-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DeathInvestigation"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Observation/ExaminerContacted-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentPregnancyStatus-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/TobaccoUseContributedToDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/AutopsyPerformedIndicator-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Location/DeathLocation-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Location/InjuryLocation-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/InjuryIncident-Example2"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DeathDate-Example2"/>
+    </entry>
+    <entry>
+      <reference value="Observation/SurgeryDate-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DeathCertification"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Practitioner/Certifier-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Procedure/DeathCertification-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/MannerOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/CauseOfDeathPart1-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/CauseOfDeathPart1-Example2"/>
+    </entry>
+    <entry>
+      <reference value="Observation/CauseOfDeathPart2-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DecedentDisposition"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Location/DispositionLocation-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Organization/FuneralHome-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DecedentDispositionMethod-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Practitioner/Mortician-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="CodedContent"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Observation/ActivityAtTimeOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/PlaceOfInjury-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/CodedRaceAndEthnicity-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/ManualUnderlyingCauseOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/AutomatedUnderlyingCauseOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/RecordAxisCauseOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/EntityAxisCauseOfDeath-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Parameters/CodingStatusValues-Example1"/>
+    </entry>
+  </section>
+</Composition>

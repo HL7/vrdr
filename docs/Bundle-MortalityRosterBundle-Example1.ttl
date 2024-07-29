@@ -1,0 +1,268 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Bundle/MortalityRosterBundle-Example1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MortalityRosterBundle-Example1"] ; # 
+  fhir:meta [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/AliasStatus"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "original" ] ;
+           fhir:display [ fhir:v "original record" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortality-roster-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortality-roster-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CertificateNumber"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "000182" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier1"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "000000000001" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier2"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "100000000001" ]
+     ] ) ;
+     fhir:value [ fhir:v "2020NY000182" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2020-10-20T14:48:35.401641-04:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Patient/Decedent-Example3"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Patient/Decedent-Example3> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/RelatedPerson/DecedentFather-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/RelatedPerson/DecedentFather-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/RelatedPerson/DecedentMother-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/RelatedPerson/DecedentMother-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/DeathDate-Example3"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/DeathDate-Example3> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Location/DeathLocation-Example3"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Location/DeathLocation-Example3> )
+  ] ) . # 
+
+<http://www.example.org/fhir/Patient/Decedent-Example3> a fhir:Patient ;
+  fhir:id [ fhir:v "Decedent-Example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Decedent-Example3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Decedent-Example3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent.html\">Decedent</a></p></div><p><b>NVSS SexAtDeath</b>: Unknown <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\">AdministrativeGender</a>#unknown)</span></p><p><b>Patient Birth Place</b>: NY US </p><p><b>identifier</b>: Social Beneficiary Identifier: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#987654321</p><p><b>name</b>: Madelyn Patel (OFFICIAL), Joyce McCain(MAIDEN)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1978-03-12</p><p><b>address</b>: NY </p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unknown" ] ;
+         fhir:display [ fhir:v "Unknown" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Address ;
+       fhir:state [ fhir:v "NY" ] ;
+       fhir:country [ fhir:v "US" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SB" ] ;
+         fhir:display [ fhir:v "Social Beneficiary Identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-ssn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "987654321" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Patel" ] ;
+     fhir:given ( [ fhir:v "Madelyn" ] )
+  ] [
+     fhir:use [ fhir:v "maiden" ] ;
+     fhir:text [ fhir:v "Joyce McCain" ] ;
+     fhir:family [ fhir:v "McCain" ] ;
+     fhir:given ( [ fhir:v "Joyce" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1978-03-12"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:state [ fhir:v "NY" ]
+  ] ) . # 
+
+<http://www.example.org/fhir/RelatedPerson/DecedentFather-Example1> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "DecedentFather-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"DecedentFather-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;DecedentFather-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-father.html\">Decedent Father</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>relationship</b>: father <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#FTH)</span></p><p><b>name</b>: Decedent Dad(OFFICIAL)</p></div>"
+  ] ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FTH" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Decedent Dad" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "John" ] ) ;
+     fhir:suffix ( [ fhir:v "Sr" ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> a fhir:us .
+
+<http://www.example.org/fhir/RelatedPerson/DecedentMother-Example1> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "DecedentMother-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"DecedentMother-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;DecedentMother-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-mother.html\">Decedent Mother</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>relationship</b>: mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#MTH)</span></p><p><b>name</b>: Decedent Mom(MAIDEN)</p></div>"
+  ] ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "MTH" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "maiden" ] ;
+     fhir:text [ fhir:v "Decedent Mom" ] ;
+     fhir:family [ fhir:v "Suzette" ] ;
+     fhir:given ( [ fhir:v "Jane" ] )
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/DeathDate-Example3> a fhir:Observation ;
+  fhir:id [ fhir:v "DeathDate-Example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DeathDate-Example3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DeathDate-Example3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-date.html\">Death Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of death [TimeStamp] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#81956-5)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example3\">See above (Patient/Decedent-Example3)</a></p><p><b>effective</b>: 2020-11-12 16:39:40-0500</p><p><b>value</b>: ??</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:81956-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "81956-5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example3> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example3" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2020-11-12T16:39:40-05:00"^^xsd:dateTime] ; # 
+  fhir:value [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "day"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:unsignedInt ;
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "unknown" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "year"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2020"^^xsd:nonNegativeInteger ]
+       ] [
+         fhir:url [ fhir:v "month"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "11"^^xsd:nonNegativeInteger ]
+       ] [
+         fhir:url [ fhir:v "time"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:time ;
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "unknown" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-time-vr"^^xsd:anyURI ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example3> a fhir:us .
+
+<http://www.example.org/fhir/Location/DeathLocation-Example3> a fhir:Location ;
+  fhir:id [ fhir:v "DeathLocation-Example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"DeathLocation-Example3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;DeathLocation-Example3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-location.html\">Death Location</a></p></div><p><b>name</b>: Pecan Grove Nursing Home</p><p><b>type</b>: Death Location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-location-type-cs.html\">Location Type</a>#death)</span></p><p><b>address</b>: NY US </p></div>"
+  ] ; # 
+  fhir:name [ fhir:v "Pecan Grove Nursing Home"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "death" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:state [ fhir:v "NY" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,190 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/ConceptMap/PlaceOfInjuryCM> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PlaceOfInjuryCM"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-place-of-injury-vs.html\">Place of Injury ValueSet</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR PlaceOfInjury Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html\">Logical Observation Identifiers, Names and Codes (LOINC)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>0 (Home)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14084-0 (Home)</td></tr><tr><td>1 (Residential Institution)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14085-7 (Residential Institution)</td></tr><tr><td>2 (School, Other Institutions, Administrative Area)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14086-5 (School)</td></tr><tr><td>3 (Sports and Recreation Area)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14088-1 (Sports or Recreation Area)</td></tr><tr><td>4 (Street/highway)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14089-9 (Street or highway)</td></tr><tr><td>5 (Trade and Service Area)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14090-7 (Trade or service area)</td></tr><tr><td>6 (Industrial and Construction Area)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14091-5 (Industrial or construction area)</td></tr><tr><td>7 (Farm)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14092-3 (Farm)</td></tr><tr><td>9 (Unspecified Place)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>LA14093-1 (Unspecified)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>8 (Other specified Place)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>OTH (other)</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pher" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/ConceptMap/PlaceOfInjuryCM"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-preview1"] ; # 
+  fhir:name [ fhir:v "PlaceOfInjury"] ; # 
+  fhir:title [ fhir:v "PlaceOfInjury Concept Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-29T13:06:08-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Public Health"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Public Health" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pher" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pher@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A mapping between NCHS IJE and FHIR PlaceOfInjury Value Sets"] ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "focus" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "for IJE to FHIR alignment" ]
+     ]
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "To help implementers map from IJE to FHIR Vocabulary"] ; # 
+  fhir:target [
+     fhir:v "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-vs"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-injury-vs>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "0" ] ;
+       fhir:display [ fhir:v "Home" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14084-0" ] ;
+         fhir:display [ fhir:v "Home" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "Residential Institution" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14085-7" ] ;
+         fhir:display [ fhir:v "Residential Institution" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "2" ] ;
+       fhir:display [ fhir:v "School, Other Institutions, Administrative Area" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14086-5" ] ;
+         fhir:display [ fhir:v "School" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "3" ] ;
+       fhir:display [ fhir:v "Sports and Recreation Area" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14088-1" ] ;
+         fhir:display [ fhir:v "Sports or Recreation Area" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "4" ] ;
+       fhir:display [ fhir:v "Street/highway" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14089-9" ] ;
+         fhir:display [ fhir:v "Street or highway" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "5" ] ;
+       fhir:display [ fhir:v "Trade and Service Area" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14090-7" ] ;
+         fhir:display [ fhir:v "Trade or service area" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "6" ] ;
+       fhir:display [ fhir:v "Industrial and Construction Area" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14091-5" ] ;
+         fhir:display [ fhir:v "Industrial or construction area" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "7" ] ;
+       fhir:display [ fhir:v "Farm" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14092-3" ] ;
+         fhir:display [ fhir:v "Farm" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "9" ] ;
+       fhir:display [ fhir:v "Unspecified Place" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "LA14093-1" ] ;
+         fhir:display [ fhir:v "Unspecified" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "8" ] ;
+       fhir:display [ fhir:v "Other specified Place" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "other" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

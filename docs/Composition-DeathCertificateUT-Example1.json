@@ -1,0 +1,159 @@
+{
+  "resourceType" : "Composition",
+  "id" : "DeathCertificateUT-Example1",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"DeathCertificateUT-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;DeathCertificateUT-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certificate.html\">Death Certificate</a></p></div><p><b>Filing Format</b>: Electronic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-filing-format-cs.html\">Filing Formats</a>#electronic)</span></p><p><b>State Specific Field</b>: 20220101</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2022-12-01 02:46:13-0500</p><p><b>author</b>: <a href=\"Practitioner-PractitionerUT-Certifier.html\">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</p><p><b>title</b>: Death Certificate for Davis Lineberry Jr</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>legal</td><td><a href=\"Practitioner-PractitionerUT-Certifier.html\">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</td></tr></table><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>Death certificate (record artifact) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#307930005)</span></td><td><a href=\"Procedure-ProcedureDeathCertificationUT-Example1.html\">Procedure/ProcedureDeathCertificationUT-Example1</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs",
+        "code" : "electronic"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField",
+    "valueString" : "20220101"
+  }],
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "64297-5",
+      "display" : "Death certificate"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/DecedentUT-Example1"
+  },
+  "date" : "2022-12-01T02:46:13-05:00",
+  "author" : [{
+    "reference" : "Practitioner/PractitionerUT-Certifier"
+  }],
+  "title" : "Death Certificate for Davis Lineberry Jr",
+  "attester" : [{
+    "mode" : "legal",
+    "party" : {
+      "reference" : "Practitioner/PractitionerUT-Certifier"
+    }
+  }],
+  "event" : [{
+    "code" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "307930005",
+        "display" : "Death certificate (record artifact)"
+      }]
+    }],
+    "detail" : [{
+      "reference" : "Procedure/ProcedureDeathCertificationUT-Example1"
+    }]
+  }],
+  "section" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+        "code" : "DecedentDemographics"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Patient/DecedentUT-Example1"
+    },
+    {
+      "reference" : "Observation/BirthRecordIdentifierUT-Example1"
+    },
+    {
+      "reference" : "Observation/InputRaceAndEthnicityUT-Example1"
+    },
+    {
+      "reference" : "Observation/EducationUT-Example1"
+    },
+    {
+      "reference" : "Observation/AgeUT-Example1"
+    },
+    {
+      "reference" : "RelatedPerson/FatherUT-Example1"
+    },
+    {
+      "reference" : "RelatedPerson/MotherUT-Example1"
+    },
+    {
+      "reference" : "Observation/UsualWorkUT-Example1"
+    },
+    {
+      "reference" : "Observation/MilitaryServiceUT-Example1"
+    },
+    {
+      "reference" : "Observation/EmergingIssuesUT-Example1"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+        "code" : "DeathCertification"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Practitioner/PractitionerUT-Certifier"
+    },
+    {
+      "reference" : "Observation/InjuryIncidentUT-Example1"
+    },
+    {
+      "reference" : "Procedure/ProcedureDeathCertificationUT-Example1"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+        "code" : "DeathInvestigation"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Observation/AutopsyPerformedIndicatorUT-Example1"
+    },
+    {
+      "reference" : "Observation/CauseOfDeathPart1UT-Example1"
+    },
+    {
+      "reference" : "Observation/DeathDateUT-Example1"
+    },
+    {
+      "reference" : "Observation/PregnancyUT-Example1"
+    },
+    {
+      "reference" : "Observation/TobaccoUseUT-Example1"
+    },
+    {
+      "reference" : "Location/DeathLocationUT-Example1"
+    },
+    {
+      "reference" : "Observation/MannerOfDeathUT-Example1"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+        "code" : "DecedentDisposition"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Organization/FuneralHomeUT-Example1"
+    },
+    {
+      "reference" : "Observation/DispositionMethodUT-Example1"
+    },
+    {
+      "reference" : "Location/DispositionLocationUT-Example1"
+    }]
+  }]
+}

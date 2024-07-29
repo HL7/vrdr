@@ -1,0 +1,79 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EditBypass01CM",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-edit-bypass-01-vs.html\">Edit Bypass 01</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR EditBypass01 Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-vr-edit-flags.html\">Birth and Death Edit Flags Vital Records</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>0 (Edit Passed)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>0 (Edit Passed)</td></tr><tr><td>1 (Edit Failed, Data Queried, and Verified)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>1 (Edit Failed, Data Queried, and Verified)</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pher"
+  }],
+  "url" : "http://hl7.org/fhir/us/vrdr/ConceptMap/EditBypass01CM",
+  "version" : "3.0.0-preview1",
+  "name" : "EditBypass01",
+  "title" : "EditBypass01 Concept Map",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-29T13:06:08-04:00",
+  "publisher" : "HL7 International / Public Health",
+  "contact" : [{
+    "name" : "HL7 International / Public Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/pher"
+    },
+    {
+      "system" : "email",
+      "value" : "pher@lists.HL7.org"
+    }]
+  }],
+  "description" : "A mapping between NCHS IJE and FHIR EditBypass01 Value Sets",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus"
+    },
+    "valueCodeableConcept" : {
+      "text" : "for IJE to FHIR alignment"
+    }
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "purpose" : "To help implementers map from IJE to FHIR Vocabulary",
+  "targetCanonical" : "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-edit-bypass-01-vs",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags",
+    "element" : [{
+      "code" : "0",
+      "display" : "Edit Passed",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "0",
+        "display" : "Edit Passed",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "1",
+      "display" : "Edit Failed, Data Queried, and Verified",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "1",
+        "display" : "Edit Failed, Data Queried, and Verified",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

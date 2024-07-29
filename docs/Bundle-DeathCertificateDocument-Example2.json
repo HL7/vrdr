@@ -1,0 +1,2078 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "DeathCertificateDocument-Example2",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate-document"]
+  },
+  "identifier" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CertificateNumber",
+      "valueString" : "000182"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier1",
+      "valueString" : "000000000001"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier2",
+      "valueString" : "100000000001"
+    }],
+    "system" : "http://nchs.cdc.gov/vrdr_id",
+    "value" : "2020NY000182"
+  },
+  "type" : "document",
+  "timestamp" : "2020-10-20T14:48:35.401641-04:00",
+  "entry" : [{
+    "fullUrl" : "http://www.example.org/fhir/Composition/DeathCertificate-Example2",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "DeathCertificate-Example2",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"DeathCertificate-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;DeathCertificate-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certificate.html\">Death Certificate</a></p></div><p><b>Filing Format</b>: Electronic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-filing-format-cs.html\">Filing Formats</a>#electronic)</span></p><p><b>Replacement Status of a Death Record (deprecated)</b>: original record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-replace-status-cs.html\">Replacement Status of Death Record Submission CodeSystem</a>#original)</span></p><p><b>State Specific Field</b>: State Specific Content</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2020-11-15 16:39:54-0500</p><p><b>author</b>: <a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></p><p><b>title</b>: Death Certificate</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>legal</td><td>2020-11-14 16:39:40-0500</td><td><a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></td></tr></table><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>Death certificate (record artifact) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#307930005)</span></td><td><a href=\"#Procedure_DeathCertification-Example1\">See above (Procedure/DeathCertification-Example1)</a></td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs",
+            "code" : "electronic"
+          }]
+        }
+      },
+      {
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs",
+            "code" : "original"
+          }]
+        }
+      },
+      {
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField",
+        "valueString" : "State Specific Content"
+      }],
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "64297-5",
+          "display" : "Death certificate"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "date" : "2020-11-15T16:39:54-05:00",
+      "author" : [{
+        "reference" : "Practitioner/Certifier-Example1"
+      }],
+      "title" : "Death Certificate",
+      "attester" : [{
+        "mode" : "legal",
+        "time" : "2020-11-14T16:39:40-05:00",
+        "party" : {
+          "reference" : "Practitioner/Certifier-Example1"
+        }
+      }],
+      "event" : [{
+        "code" : [{
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "307930005",
+            "display" : "Death certificate (record artifact)"
+          }]
+        }],
+        "detail" : [{
+          "reference" : "Procedure/DeathCertification-Example1"
+        }]
+      }],
+      "section" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+            "code" : "DecedentDemographics"
+          }]
+        },
+        "entry" : [{
+          "reference" : "Patient/Decedent-Example1"
+        },
+        {
+          "reference" : "RelatedPerson/DecedentFather-Example1"
+        },
+        {
+          "reference" : "RelatedPerson/DecedentMother-Example1"
+        },
+        {
+          "reference" : "RelatedPerson/DecedentSpouse-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentAge-Example1"
+        },
+        {
+          "reference" : "Observation/BirthRecordIdentifier-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentEducationLevel-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentMilitaryService-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentUsualWork-Example1"
+        },
+        {
+          "reference" : "Observation/InputRaceAndEthnicity-Example1"
+        },
+        {
+          "reference" : "Observation/EmergingIssues-Example1"
+        }]
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+            "code" : "DeathInvestigation"
+          }]
+        },
+        "entry" : [{
+          "reference" : "Observation/ExaminerContacted-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentPregnancyStatus-Example1"
+        },
+        {
+          "reference" : "Observation/TobaccoUseContributedToDeath-Example1"
+        },
+        {
+          "reference" : "Observation/AutopsyPerformedIndicator-Example1"
+        },
+        {
+          "reference" : "Location/DeathLocation-Example1"
+        },
+        {
+          "reference" : "Location/InjuryLocation-Example1"
+        },
+        {
+          "reference" : "Observation/InjuryIncident-Example2"
+        },
+        {
+          "reference" : "Observation/DeathDate-Example2"
+        },
+        {
+          "reference" : "Observation/SurgeryDate-Example1"
+        }]
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+            "code" : "DeathCertification"
+          }]
+        },
+        "entry" : [{
+          "reference" : "Practitioner/Certifier-Example1"
+        },
+        {
+          "reference" : "Procedure/DeathCertification-Example1"
+        },
+        {
+          "reference" : "Observation/MannerOfDeath-Example1"
+        },
+        {
+          "reference" : "Observation/CauseOfDeathPart1-Example1"
+        },
+        {
+          "reference" : "Observation/CauseOfDeathPart1-Example2"
+        },
+        {
+          "reference" : "Observation/CauseOfDeathPart2-Example1"
+        }]
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+            "code" : "DecedentDisposition"
+          }]
+        },
+        "entry" : [{
+          "reference" : "Location/DispositionLocation-Example1"
+        },
+        {
+          "reference" : "Organization/FuneralHome-Example1"
+        },
+        {
+          "reference" : "Observation/DecedentDispositionMethod-Example1"
+        },
+        {
+          "reference" : "Practitioner/Mortician-Example1"
+        }]
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs",
+            "code" : "CodedContent"
+          }]
+        },
+        "entry" : [{
+          "reference" : "Observation/ActivityAtTimeOfDeath-Example1"
+        },
+        {
+          "reference" : "Observation/PlaceOfInjury-Example1"
+        },
+        {
+          "reference" : "Observation/CodedRaceAndEthnicity-Example1"
+        },
+        {
+          "reference" : "Observation/ManualUnderlyingCauseOfDeath-Example1"
+        },
+        {
+          "reference" : "Observation/AutomatedUnderlyingCauseOfDeath-Example1"
+        },
+        {
+          "reference" : "Observation/RecordAxisCauseOfDeath-Example1"
+        },
+        {
+          "reference" : "Observation/EntityAxisCauseOfDeath-Example1"
+        },
+        {
+          "reference" : "Parameters/CodingStatusValues-Example1"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Patient/Decedent-Example1",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Decedent-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Decedent-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Decedent-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent.html\">Decedent</a></p></div><p><b>Spouse Is Alive</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p><p><b>NVSS SexAtDeath</b>: Unknown <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-administrative-gender.html\">AdministrativeGender</a>#unknown)</span></p><p><b>Patient Birth Place</b>: Roanoke VA US </p><p><b>identifier</b>: Social Beneficiary Identifier: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#987654321</p><p><b>name</b>: Madelyn Patel (OFFICIAL)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1978-03-12</p><p><b>address</b>: 5590 Lockwood Drive Danville VA US </p><p><b>maritalStatus</b>: Never Married <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-MaritalStatus.html\">MaritalStatus</a>#S)</span></p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Relationship</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>Friend of family <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#U)</span></td><td>Joe Smith</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/SpouseAlive",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y"
+          }]
+        }
+      },
+      {
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/administrative-gender",
+            "code" : "unknown",
+            "display" : "Unknown"
+          }]
+        }
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+        "valueAddress" : {
+          "city" : "Roanoke",
+          "state" : "VA",
+          "country" : "US"
+        }
+      }],
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "SB",
+            "display" : "Social Beneficiary Identifier"
+          }]
+        },
+        "system" : "http://hl7.org/fhir/sid/us-ssn",
+        "value" : "987654321"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Patel",
+        "given" : ["Madelyn"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1978-03-12",
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-within-city-limits-indicator-vr",
+          "valueCoding" : {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y",
+            "display" : "Yes"
+          }
+        },
+        {
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/StreetName",
+          "valueString" : "Lockwood"
+        }],
+        "line" : ["5590 Lockwood Drive"],
+        "city" : "Danville",
+        "_city" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CityCode",
+            "valuePositiveInt" : 1234
+          }]
+        },
+        "district" : "Fairfax",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/DistrictCode",
+            "valuePositiveInt" : 321
+          }]
+        },
+        "state" : "VA",
+        "country" : "US"
+      }],
+      "maritalStatus" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags",
+              "code" : "0",
+              "display" : "Edit Passed"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+          "code" : "S",
+          "display" : "Never Married"
+        }]
+      },
+      "contact" : [{
+        "relationship" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code" : "U"
+          }],
+          "text" : "Friend of family"
+        }],
+        "name" : {
+          "text" : "Joe Smith"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/RelatedPerson/DecedentFather-Example1",
+    "resource" : {
+      "resourceType" : "RelatedPerson",
+      "id" : "DecedentFather-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"DecedentFather-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;DecedentFather-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-father.html\">Decedent Father</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>relationship</b>: father <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#FTH)</span></p><p><b>name</b>: Decedent Dad(OFFICIAL)</p></div>"
+      },
+      "active" : true,
+      "patient" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "relationship" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FTH"
+        }]
+      }],
+      "name" : [{
+        "use" : "official",
+        "text" : "Decedent Dad",
+        "family" : "Smith",
+        "given" : ["John"],
+        "suffix" : ["Sr"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/RelatedPerson/DecedentMother-Example1",
+    "resource" : {
+      "resourceType" : "RelatedPerson",
+      "id" : "DecedentMother-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"DecedentMother-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;DecedentMother-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-mother.html\">Decedent Mother</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>relationship</b>: mother <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#MTH)</span></p><p><b>name</b>: Decedent Mom(MAIDEN)</p></div>"
+      },
+      "active" : true,
+      "patient" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "relationship" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "MTH"
+        }]
+      }],
+      "name" : [{
+        "use" : "maiden",
+        "text" : "Decedent Mom",
+        "family" : "Suzette",
+        "given" : ["Jane"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/RelatedPerson/DecedentSpouse-Example1",
+    "resource" : {
+      "resourceType" : "RelatedPerson",
+      "id" : "DecedentSpouse-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-spouse"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"DecedentSpouse-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;DecedentSpouse-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-spouse.html\">Decedent Spouse</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>relationship</b>: spouse <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\">RoleCode</a>#SPS)</span></p><p><b>name</b>: Decedent Spouse(MAIDEN)</p></div>"
+      },
+      "active" : true,
+      "patient" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "relationship" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "SPS"
+        }]
+      }],
+      "name" : [{
+        "use" : "maiden",
+        "text" : "Decedent Spouse",
+        "family" : "Gazette",
+        "given" : ["Samuel"],
+        "suffix" : ["III"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentAge-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentAge-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-age"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentAge-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentAge-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-age.html\">Decedent Age</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Age at death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#39016-1)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: 42 years<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code a = 'a')</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "39016-1"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueQuantity" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags",
+              "code" : "0",
+              "display" : "Edit Passed"
+            }]
+          }
+        }],
+        "value" : 42,
+        "unit" : "years",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "a"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/InputRaceAndEthnicity-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "InputRaceAndEthnicity-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vr-common-library/StructureDefinition/input-race-and-ethnicity-vr"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"InputRaceAndEthnicity-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;InputRaceAndEthnicity-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-input-race-and-ethnicity-vr.html\">Observation - Input Race and Ethnicity Vital Records</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Input Race and Ethnicity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-local-observation-codes-vr.html\">Local Observation Codes Vital Records</a>#inputraceandethnicity)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><blockquote><p><b>component</b></p><p><b>code</b>: White <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#White)</span></p><p><b>value</b>: true</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Black Or African American <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#BlackOrAfricanAmerican)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: American Indian Or Alaska Native <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#AmericanIndianOrAlaskanNative)</span></p><p><b>value</b>: true</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Asian Indian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#AsianIndian)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Chinese <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Chinese)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Filipino <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Filipino)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Japanese <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Japanese)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Korean <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Korean)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Vietnamese <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Vietnamese)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Other Asian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#OtherAsian)</span></p><p><b>value</b>: true</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Native Hawaiian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#NativeHawaiian)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Guamanian Or Chamorro <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#GuamanianOrChamorro)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Samoan <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#Samoan)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Other Pacific Islander <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#OtherPacificIslander)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Other Race <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#OtherRace)</span></p><p><b>value</b>: false</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: First Other Asian Literal <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#FirstOtherAsianLiteral)</span></p><p><b>value</b>: Malaysian</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: First American Indian Or Alaska Native Literal <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#FirstAmericanIndianOrAlaskanNativeLiteral)</span></p><p><b>value</b>: Arikara</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Hispanic Mexican <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#HispanicMexican)</span></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Hispanic Cuban <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#HispanicCuban)</span></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Hispanic Puerto Rican <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#HispanicPuertoRican)</span></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Hispanic Other <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#HispanicOther)</span></p><p><b>value</b>: No <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#N)</span></p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-local-observation-codes-vr",
+          "code" : "inputraceandethnicity"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "White"
+          }]
+        },
+        "valueBoolean" : true
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "BlackOrAfricanAmerican"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "AmericanIndianOrAlaskanNative"
+          }]
+        },
+        "valueBoolean" : true
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "AsianIndian"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Chinese"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Filipino"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Japanese"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Korean"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Vietnamese"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "OtherAsian"
+          }]
+        },
+        "valueBoolean" : true
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "NativeHawaiian"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "GuamanianOrChamorro"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "Samoan"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "OtherPacificIslander"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "OtherRace"
+          }]
+        },
+        "valueBoolean" : false
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "FirstOtherAsianLiteral"
+          }]
+        },
+        "valueString" : "Malaysian"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "FirstAmericanIndianOrAlaskanNativeLiteral"
+          }]
+        },
+        "valueString" : "Arikara"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "HispanicMexican"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y",
+            "display" : "Yes"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "HispanicCuban"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y",
+            "display" : "Yes"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "HispanicPuertoRican"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y",
+            "display" : "Yes"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "HispanicOther"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "N",
+            "display" : "No"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/BirthRecordIdentifier-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "BirthRecordIdentifier-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-birth-record-identifier"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"BirthRecordIdentifier-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;BirthRecordIdentifier-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-birth-record-identifier.html\">Birth Record Identifier Infant</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Birth Record Identifier of Child <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-observations-cs.html\">Local Observation Codes</a>#childbirthrecordidentifier)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: 717171</p><blockquote><p><b>component</b></p><p><b>code</b>: Birthplace <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#21842-0)</span></p><p><b>value</b>: YC</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Birth year <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80904-6)</span></p><p><b>value</b>: 1961</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-observations-cs",
+          "code" : "childbirthrecordidentifier"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueString" : "717171",
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21842-0"
+          }]
+        },
+        "valueString" : "YC"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "80904-6"
+          }]
+        },
+        "valueDateTime" : "1961"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentEducationLevel-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentEducationLevel-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-education-level"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentEducationLevel-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentEducationLevel-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-education-level.html\">Decedent Education Level</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Highest level of education [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80913-7)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Some secondary or high school education <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-EducationLevel.html\">Education Level</a>#SEC)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80913-7"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-EducationLevel",
+          "code" : "SEC",
+          "display" : "Some secondary or high school education"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentMilitaryService-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentMilitaryService-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-military-service"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentMilitaryService-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentMilitaryService-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-military-service.html\">Decedent Military Service</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Military service Narrative <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#55280-2)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "55280-2"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+          "code" : "Y",
+          "display" : "Yes"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentUsualWork-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentUsualWork-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-usual-work"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentUsualWork-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentUsualWork-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-usual-work.html\">Decedent Usual Work</a></p></div><p><b>status</b>: final</p><p><b>code</b>: History of Usual occupation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#21843-8)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: secretary <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>History of Usual industry <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#21844-6)</span></td><td>State agency <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></td></tr></table></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "21843-8"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "text" : "secretary"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21844-6"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "text" : "State agency"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/EmergingIssues-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "EmergingIssues-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Observation-emerging-issues-vr"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EmergingIssues-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EmergingIssues-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-Observation-emerging-issues-vr.html\">Observation - Emerging Issues Vital Records</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Emerging Issues <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-local-observation-codes-vr.html\">Local Observation Codes Vital Records</a>#emergingissues)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><blockquote><p><b>component</b></p><p><b>code</b>: EmergingIssue1_1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#EmergingIssue1_1)</span></p><p><b>value</b>: H</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: EmergingIssue1_2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#EmergingIssue1_2)</span></p><p><b>value</b>: I</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: EmergingIssue8_1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#EmergingIssue8_1)</span></p><p><b>value</b>: Hi 8_1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: EmergingIssue20 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#EmergingIssue20)</span></p><p><b>value</b>: Hi 20_1</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-local-observation-codes-vr",
+          "code" : "emergingissues"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "EmergingIssue1_1"
+          }]
+        },
+        "valueString" : "H"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "EmergingIssue1_2"
+          }]
+        },
+        "valueString" : "I"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "EmergingIssue8_1"
+          }]
+        },
+        "valueString" : "Hi 8_1"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "EmergingIssue20"
+          }]
+        },
+        "valueString" : "Hi 20_1"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentPregnancyStatus-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentPregnancyStatus-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentPregnancyStatus-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentPregnancyStatus-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-pregnancy-status.html\">Decedent Pregnancy</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Timing of recent pregnancy in relation to death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69442-2)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Pregnant at time of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html\">Death Pregnancy Status Codesystem</a>#2)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69442-2"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags",
+              "code" : "2",
+              "display" : "Edit Failed, Data Queried, but not Verified"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/CodeSystem-death-pregnancy-status",
+          "code" : "2",
+          "display" : "Pregnant at time of death"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/TobaccoUseContributedToDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "TobaccoUseContributedToDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"TobaccoUseContributedToDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;TobaccoUseContributedToDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-tobacco-use-contributed-to-death.html\">Tobacco Use Contributed To Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Did tobacco use contribute to death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69443-0)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69443-0",
+          "display" : "Did tobacco use contribute to death"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DeathDate-Example2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DeathDate-Example2",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DeathDate-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DeathDate-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-date.html\">Death Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of death [TimeStamp] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#81956-5)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>effective</b>: 2020-11-12 16:39:40-0500</p><p><b>performer</b>: <a href=\"#Practitioner_Pronouncer-Example1\">See above (Practitioner/Pronouncer-Example1)</a></p><p><b>value</b>: ??</p><blockquote><p><b>component</b></p><p><b>code</b>: Date and time pronounced dead [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80616-6)</span></p><p><b>value</b>: 2020-11-13 16:39:40-0500</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Location of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#58332-8)</span></p><p><b>value</b>: Death in hospital <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#16983000)</span></p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "81956-5"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "effectiveDateTime" : "2020-11-12T16:39:40-05:00",
+      "performer" : [{
+        "reference" : "Practitioner/Pronouncer-Example1"
+      }],
+      "_valueDateTime" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "day",
+            "_valueUnsignedInt" : {
+              "extension" : [{
+                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode" : "unknown"
+              }]
+            }
+          },
+          {
+            "url" : "year",
+            "valueUnsignedInt" : 2020
+          },
+          {
+            "url" : "month",
+            "valueUnsignedInt" : 11
+          },
+          {
+            "url" : "time",
+            "valueTime" : "12:13:14",
+            "_valueTime" : {
+              "extension" : [{
+                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode" : "unknown"
+              }]
+            }
+          }],
+          "url" : "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-time-vr"
+        }]
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "80616-6"
+          }]
+        },
+        "valueDateTime" : "2020-11-13T16:39:40-05:00"
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "58332-8"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "16983000",
+            "display" : "Death in hospital"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Practitioner/Pronouncer-Example1",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Pronouncer-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"Pronouncer-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;Pronouncer-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html\">US Core Practitioner Profile</a></p></div><p><b>identifier</b>: id:\u00a0&lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-npi.html&quot;&gt;NPI&lt;/a&gt;#9941339101</p><p><b>name</b>: Jane Purple (OFFICIAL)</p><p><b>address</b>: 44 South Street Rockville MD 20854 US </p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://hl7.org/fhir/sid/us-npi",
+        "value" : "9941339101"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Purple",
+        "given" : ["Jane"]
+      }],
+      "address" : [{
+        "line" : ["44 South Street"],
+        "city" : "Rockville",
+        "state" : "MD",
+        "postalCode" : "20854",
+        "country" : "US"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/SurgeryDate-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "SurgeryDate-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-surgery-date"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"SurgeryDate-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;SurgeryDate-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-surgery-date.html\">Surgery Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of surgery <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80992-1)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>effective</b>: 2019-11-12</p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80992-1"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "effectiveDateTime" : "2019-11-12"
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/ExaminerContacted-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExaminerContacted-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-examiner-contacted"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ExaminerContacted-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ExaminerContacted-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-examiner-contacted.html\">Examiner Contacted</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Medical examiner or coroner was contacted [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#74497-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "74497-9"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+          "code" : "Y",
+          "display" : "Yes"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/MannerOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "MannerOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"MannerOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;MannerOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-manner-of-death.html\">Manner of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Manner of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69449-7)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performer</b>: <a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></p><p><b>value</b>: Natural death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#38605008)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69449-7"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/Certifier-Example1"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "38605008",
+          "display" : "Natural death"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Location/DeathLocation-Example1",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "DeathLocation-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"DeathLocation-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;DeathLocation-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-location.html\">Death Location</a></p></div><p><b>name</b>: Pecan Grove Nursing Home</p><p><b>description</b>: nursing home</p><p><b>type</b>: Death Location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-location-type-cs.html\">Location Type</a>#death)</span></p><p><b>address</b>: Albany NY US </p><h3>Positions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td style=\"display: none\">*</td><td>-77.050636</td><td>38.889248</td></tr></table></div>"
+      },
+      "name" : "Pecan Grove Nursing Home",
+      "description" : "nursing home",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs",
+          "code" : "death"
+        }]
+      }],
+      "address" : {
+        "city" : "Albany",
+        "state" : "NY",
+        "country" : "US"
+      },
+      "position" : {
+        "longitude" : -77.050636,
+        "latitude" : 38.889248
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Location/InjuryLocation-Example1",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "InjuryLocation-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-location"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"InjuryLocation-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;InjuryLocation-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-injury-location.html\">Injury Location</a></p></div><p><b>name</b>: Home</p><p><b>description</b>: 5590 Lockwood Drive 20621 US</p><p><b>type</b>: Injury Location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-location-type-cs.html\">Location Type</a>#injury)</span></p><p><b>address</b>: 5590 Lockwood Drive 20621 US</p></div>"
+      },
+      "name" : "Home",
+      "description" : "5590 Lockwood Drive 20621 US",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs",
+          "code" : "injury"
+        }]
+      }],
+      "address" : {
+        "text" : "5590 Lockwood Drive 20621 US"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/InjuryIncident-Example2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "InjuryIncident-Example2",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"InjuryIncident-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;InjuryIncident-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-injury-incident.html\">Injury Incident</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Injury incident description Narrative <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11374-6)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>effective</b>: 2019-11-02 13:00:00-0500</p><p><b>value</b>: drug toxicity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Did death result from injury at work <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69444-8)</span></p><p><b>value</b>: No <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#N)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Place of injury Facility <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69450-5)</span></p><p><b>value</b>: Home <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Transportation role of decedent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69451-3)</span></p><p><b>value</b>: Pedestrian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#257518000)</span></p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11374-6"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "effectiveDateTime" : "2019-11-02T13:00:00-05:00",
+      "valueCodeableConcept" : {
+        "text" : "drug toxicity"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69444-8"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "N",
+            "display" : "No"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69450-5"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "text" : "Home"
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69451-3"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "257518000",
+            "display" : "Pedestrian"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Practitioner/Certifier-Example1",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Certifier-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-certifier"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"Certifier-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;Certifier-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-certifier.html\">Death Certifier</a></p></div><p><b>Practitioner Role</b>: Certifier</p><p><b>identifier</b>: id:\u00a0&lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-npi.html&quot;&gt;NPI&lt;/a&gt;#9941339100</p><p><b>name</b>: Jim Black (OFFICIAL)</p><p><b>address</b>: 44 South Street Bird in Hand PA 17505 US </p></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role",
+        "valueCode" : "Certifier"
+      }],
+      "identifier" : [{
+        "system" : "http://hl7.org/fhir/sid/us-npi",
+        "value" : "9941339100"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Black",
+        "given" : ["Jim"]
+      }],
+      "address" : [{
+        "line" : ["44 South Street"],
+        "city" : "Bird in Hand",
+        "state" : "PA",
+        "postalCode" : "17505",
+        "country" : "US"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Procedure/DeathCertification-Example1",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "DeathCertification-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"DeathCertification-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;DeathCertification-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certification.html\">Death Certification Procedure</a></p></div><p><b>identifier</b>: id:\u00a0180</p><p><b>status</b>: completed</p><p><b>code</b>: Death certification <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#308646001)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performed</b>: 2020-11-14 16:39:40-0500</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>Nurse Practitioner <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a>#OTH &quot;Other&quot;)</span></td><td><a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "value" : "180"
+      }],
+      "status" : "completed",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "308646001",
+          "display" : "Death certification"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performedDateTime" : "2020-11-14T16:39:40-05:00",
+      "performer" : [{
+        "function" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code" : "OTH",
+            "display" : "Other"
+          }],
+          "text" : "Nurse Practitioner"
+        },
+        "actor" : {
+          "reference" : "Practitioner/Certifier-Example1"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CauseOfDeathPart1-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart1-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart1-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part1.html\">Cause Of Death Part 1</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69453-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performer</b>: <a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></p><p><b>value</b>: Cardiopulmonary arrest <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Disease onset to death interval <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69440-6)</span></p><p><b>value</b>: 4 hours</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69453-9"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/Certifier-Example1"
+      }],
+      "valueCodeableConcept" : {
+        "text" : "Cardiopulmonary arrest"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs",
+            "code" : "lineNumber"
+          }]
+        },
+        "valueInteger" : 1
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69440-6"
+          }]
+        },
+        "valueString" : "4 hours"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CauseOfDeathPart1-Example2",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart1-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart1-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part1.html\">Cause Of Death Part 1</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69453-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performer</b>: <a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></p><p><b>value</b>: Eclampsia <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Disease onset to death interval <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69440-6)</span></p><p><b>value</b>: 3 months</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69453-9"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/Certifier-Example1"
+      }],
+      "valueCodeableConcept" : {
+        "text" : "Eclampsia"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs",
+            "code" : "lineNumber"
+          }]
+        },
+        "valueInteger" : 2
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69440-6"
+          }]
+        },
+        "valueString" : "3 months"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CauseOfDeathPart2-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part2"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart2-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart2-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part2.html\">Cause of Death Part 2</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Other significant causes or conditions of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69441-4)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performer</b>: <a href=\"#Practitioner_Certifier-Example1\">See above (Practitioner/Certifier-Example1)</a></p><p><b>value</b>: hypertensive heart disease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "69441-4"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/Certifier-Example1"
+      }],
+      "valueCodeableConcept" : {
+        "text" : "hypertensive heart disease"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Location/DispositionLocation-Example1",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "DispositionLocation-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-disposition-location"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"DispositionLocation-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;DispositionLocation-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-disposition-location.html\">Disposition Location</a></p></div><p><b>name</b>: Rosewood Cemetary</p><p><b>type</b>: Disposition Location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-location-type-cs.html\">Location Type</a>#disposition)</span></p><p><b>address</b>: 303 Rosewood Ave Danville VA 24541 US </p><p><b>physicalType</b>: Site <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-location-physical-type.html\">Location type</a>#si)</span></p></div>"
+      },
+      "name" : "Rosewood Cemetary",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs",
+          "code" : "disposition"
+        }]
+      }],
+      "address" : {
+        "line" : ["303 Rosewood Ave"],
+        "city" : "Danville",
+        "state" : "VA",
+        "postalCode" : "24541",
+        "country" : "US"
+      },
+      "physicalType" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+          "code" : "si",
+          "display" : "Site"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Organization/FuneralHome-Example1",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "FuneralHome-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-funeral-home"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"FuneralHome-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;FuneralHome-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-funeral-home.html\">Funeral Home</a></p></div><p><b>active</b>: true</p><p><b>type</b>: Funeral Home <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-organization-type-cs.html\">Local Organization Type</a>#funeralhome)</span></p><p><b>name</b>: Lancaster Funeral Home and Crematory</p><p><b>address</b>: 211 High Street Lancaster PA 17573 US </p></div>"
+      },
+      "active" : true,
+      "type" : [{
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-organization-type-cs",
+          "code" : "funeralhome",
+          "display" : "Funeral Home"
+        }]
+      }],
+      "name" : "Lancaster Funeral Home and Crematory",
+      "address" : [{
+        "line" : ["211 High Street"],
+        "city" : "Lancaster",
+        "state" : "PA",
+        "postalCode" : "17573",
+        "country" : "US"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/DecedentDispositionMethod-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "DecedentDispositionMethod-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-disposition-method"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentDispositionMethod-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentDispositionMethod-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-disposition-method.html\">Decedent Disposition Method</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Body disposition method <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80905-3)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>performer</b>: <a href=\"#Practitioner_Mortician-Example1\">See above (Practitioner/Mortician-Example1)</a></p><p><b>value</b>: Burial <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#449971000124106)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80905-3"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/Mortician-Example1"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "449971000124106",
+          "display" : "Burial"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/AutopsyPerformedIndicator-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "AutopsyPerformedIndicator-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"AutopsyPerformedIndicator-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;AutopsyPerformedIndicator-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-autopsy-performed-indicator.html\">Autopsy Performed Indicator</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Autopsy was performed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#85699-7)</span></p><p><b>subject</b>: <a href=\"#Patient_Decedent-Example1\">See above (Patient/Decedent-Example1)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Autopsy results available <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69436-4)</span></td><td>Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></td></tr></table></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85699-7"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Decedent-Example1"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+          "code" : "Y",
+          "display" : "Yes"
+        }]
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "69436-4"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+            "code" : "Y",
+            "display" : "Yes"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Practitioner/Mortician-Example1",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Mortician-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortician"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"Mortician-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;Mortician-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-mortician.html\">Mortician</a></p></div><p><b>Practitioner Role</b>: Mortician</p><p><b>identifier</b>: id:\u00a0&lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-npi.html&quot;&gt;NPI&lt;/a&gt;#212222AB</p><p><b>name</b>: Ronald Q Smith (OFFICIAL)</p></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/vrdr/StructureDefinition/practitioner-role",
+        "valueCode" : "Mortician"
+      }],
+      "identifier" : [{
+        "system" : "http://hl7.org/fhir/sid/us-npi",
+        "value" : "212222AB"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Smith",
+        "given" : ["Ronald",
+        "Q"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/ActivityAtTimeOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ActivityAtTimeOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-activity-at-time-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ActivityAtTimeOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ActivityAtTimeOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-activity-at-time-of-death.html\">Activity at Time of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Activity at time of death [CDC] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80626-5)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: While engaged in leisure activities. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-activity-at-time-of-death-cs.html\">Activity at Time of Death CodeSystem</a>#1)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80626-5"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-activity-at-time-of-death-cs",
+          "code" : "1",
+          "display" : "While engaged in leisure activities."
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/CodedRaceAndEthnicity-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CodedRaceAndEthnicity-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vr-common-library/StructureDefinition/coded-race-and-ethnicity-vr"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CodedRaceAndEthnicity-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CodedRaceAndEthnicity-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//StructureDefinition-coded-race-and-ethnicity-vr.html\">Observation - Coded Race and Ethnicity Vital Records</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Coded Race and Ethnicity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-local-observation-codes-vr.html\">Local Observation Codes Vital Records</a>#codedraceandethnicity)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><blockquote><p><b>component</b></p><p><b>code</b>: First Edited Race Code <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#FirstEditedCode)</span></p><p><b>value</b>: White <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-race-code-vr.html\">Race Code Vital Records</a>#101)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Second Edited Race Code <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#SecondEditedCode)</span></p><p><b>value</b>: Israeli <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-race-code-vr.html\">Race Code Vital Records</a>#122)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: First Edited American Indian Race Code <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#FirstAmericanIndianCode)</span></p><p><b>value</b>: Arikara <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-race-code-vr.html\">Race Code Vital Records</a>#A31)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Race Recode 40 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#RaceRecode40)</span></p><p><b>value</b>: AIAN and Asian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-race-recode-40-vr.html\">Race Recode 40 Vital Records</a>#20)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Hispanic Code <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-vr-component.html\">Local Component Codes</a>#HispanicCode)</span></p><p><b>value</b>: Chilean <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-CodeSystem-hispanic-origin-vr.html\">HispanicOrigin Vital Records</a>#233)</span></p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-local-observation-codes-vr",
+          "code" : "codedraceandethnicity"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "FirstEditedCode"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-race-code-vr",
+            "code" : "101",
+            "display" : "White"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "SecondEditedCode"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-race-code-vr",
+            "code" : "122",
+            "display" : "Israeli"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "FirstAmericanIndianCode"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-race-code-vr",
+            "code" : "A31",
+            "display" : "Arikara"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "RaceRecode40"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-race-recode-40-vr",
+            "code" : "20",
+            "display" : "AIAN and Asian"
+          }]
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-vr-component",
+            "code" : "HispanicCode"
+          }]
+        },
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-hispanic-origin-vr",
+            "code" : "233",
+            "display" : "Chilean"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/ManualUnderlyingCauseOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ManualUnderlyingCauseOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manual-underlying-cause-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ManualUnderlyingCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ManualUnderlyingCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-manual-underlying-cause-of-death.html\">Manual Underlying Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death.underlying [Manual] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80359-3)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80359-3"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/sid/icd-10",
+          "code" : "J96.0"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/AutomatedUnderlyingCauseOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "AutomatedUnderlyingCauseOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-automated-underlying-cause-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"AutomatedUnderlyingCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;AutomatedUnderlyingCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-automated-underlying-cause-of-death.html\">Automated Underlying Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death.underlying [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80358-5)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80358-5"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/sid/icd-10",
+          "code" : "J96.0"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/RecordAxisCauseOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "RecordAxisCauseOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"RecordAxisCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;RecordAxisCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-record-axis-cause-of-death.html\">Record Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death record axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80357-7)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></td><td>1</td></tr></table></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80357-7"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/sid/icd-10",
+          "code" : "J96.0"
+        }]
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs",
+            "code" : "position"
+          }]
+        },
+        "valueInteger" : 1
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "EntityAxisCauseOfDeath-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EntityAxisCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EntityAxisCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-entity-axis-cause-of-death.html\">Entity Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death entity axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80356-9)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></p><p><b>value</b>: 1</p></blockquote></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "80356-9"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/sid/icd-10",
+          "code" : "J96.0"
+        }]
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs",
+            "code" : "lineNumber"
+          }]
+        },
+        "valueInteger" : 1
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs",
+            "code" : "position"
+          }]
+        },
+        "valueInteger" : 1
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Observation/PlaceOfInjury-Example1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "PlaceOfInjury-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-place-of-injury"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"PlaceOfInjury-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;PlaceOfInjury-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-place-of-injury.html\">Place Of Injury</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Injury location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11376-1)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Home <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA14084-0)</span></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11376-1"
+        }]
+      },
+      "subject" : {
+        "display" : "NCHS generated"
+      },
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA14084-0",
+          "display" : "Home"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.example.org/fhir/Parameters/CodingStatusValues-Example1",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "CodingStatusValues-Example1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values"]
+      },
+      "parameter" : [{
+        "name" : "shipmentNumber",
+        "valueString" : "A2B2"
+      },
+      {
+        "name" : "receiptDate",
+        "valueDate" : "2021-12-12"
+      },
+      {
+        "name" : "coderStatus",
+        "valueInteger" : 5
+      },
+      {
+        "name" : "intentionalReject",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-intentional-reject-cs",
+            "code" : "1",
+            "display" : "Reject1"
+          }]
+        }
+      },
+      {
+        "name" : "acmeSystemReject",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-reject-cs",
+            "code" : "0",
+            "display" : "Not Rejected"
+          }]
+        }
+      },
+      {
+        "name" : "transaxConversion",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-transax-conversion-cs",
+            "code" : "3",
+            "display" : "Conversion using non-ambivalent table entries"
+          }]
+        }
+      }]
+    }
+  }]
+}

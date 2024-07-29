@@ -1,0 +1,2297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Vital Records Death Reporting (VRDR) FHIR Implementation Guide v3.0.0-preview1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Vital Records Death Reporting (VRDR) FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">3.0.0-preview1 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="scope_of_the_vrdr_fhir_ig.html">Scope</a>
+      </li>
+      <li>
+        <a href="credits.html">Credits</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementer Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usage.html">Usage Notes</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="DeathRecordDataDictionary.html">Death Record Data Dictionary</a>
+      </li>
+      <li>
+        <a href="MortalityRosterDataDictionary.html">Mortality Roster Data Dictionary</a>
+      </li>
+      <li>
+        <a href="IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv">IJE Mapping to FHIR (csv)</a>
+      </li>
+      <li>
+        <a href="IJE_File_Layouts_and_FHIR_Mapping_24-06-21.xlsx">IJE Mapping to FHIR (xlsx)</a>
+      </li>
+      <li>
+        <a href="vrdr_forms_mapping.html">Forms Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Changes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="change_log.html">Change Log</a>
+      </li>
+      <li>
+        <a href="content-transitions.html">STU2.2 to STU3 Changes</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Vital Records Death Reporting (VRDR) FHIR Implementation Guide - Local Development build (v3.0.0-preview1). See the <a href="http://hl7.org/fhir/us/vrdr/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Decedent Demographics</a>
+      </li>
+      <li>
+         <a href="#2">Vital Records Linkages</a>
+      </li>
+      <li>
+         <a href="#3">Death Investigation</a>
+      </li>
+      <li>
+         <a href="#4">Death Certification</a>
+      </li>
+      <li>
+         <a href="#5">Decedent Disposition</a>
+      </li>
+      <li>
+         <a href="#6">Coded Observations</a>
+      </li>
+      <li>
+         <a href="#7">Bundles and Compositions</a>
+      </li>
+      <li>
+         <a href="#8">Extensions</a>
+      </li>
+      <li>
+         <a href="#9">CodeSystems</a>
+      </li>
+      <li>
+         <a href="#10">ValueSets</a>
+      </li>
+      <li>
+         <a href="#11">ConceptMaps</a>
+      </li>
+      <li>
+         <a href="#12">Example Death Record Submission</a>
+      </li>
+      <li>
+         <a href="#13">Other Example Bundles</a>
+      </li>
+      <li>
+         <a href="#14">Other Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Decedent Demographics </h3>
+    <p>Demographic data includes information about related persons (Mother, Father, and Spouse) and social determinants such as education level. The information in this profile group are provided by a decedent informant.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent.html"
+                  title="StructureDefinition/vrdr-decedent">Decedent</a>
+            </td>
+            <td>
+<p>Decedent (PatientVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-age.html"
+                  title="StructureDefinition/vrdr-decedent-age">Decedent Age</a>
+            </td>
+            <td>
+<p>The Decedent Age (Observation) profile provides the decedent’s chronological age at the time of death.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-education-level.html"
+                  title="StructureDefinition/vrdr-decedent-education-level">Decedent Education Level</a>
+            </td>
+            <td>
+<p>Decedent Education Level (ObservationEducationLevelVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-mother.html"
+                  title="StructureDefinition/vrdr-decedent-mother">Decedent Mother</a>
+            </td>
+            <td>
+<p>Decedent Mother (RelatedPersonParentVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-father.html"
+                  title="StructureDefinition/vrdr-decedent-father">Decedent Father</a>
+            </td>
+            <td>
+<p>Decedent Father (RelatedPersonParentVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-spouse.html"
+                  title="StructureDefinition/vrdr-decedent-spouse">Decedent Spouse</a>
+            </td>
+            <td>
+<p>Decedent Spouse (USCoreRelatedPerson)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-military-service.html"
+                  title="StructureDefinition/vrdr-decedent-military-service">Decedent Military Service</a>
+            </td>
+            <td>
+<p>Decedent Military Service (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-usual-work.html"
+                  title="StructureDefinition/vrdr-decedent-usual-work">Decedent Usual Work</a>
+            </td>
+            <td>
+<p>Used to send text-string industry and occupation information from Jurisdictions to NCHS, and coded versions from NCHS to Jurisdictions.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Vital Records Linkages </h3>
+    <p>These profiles support exchange of vital records identifiers for events that are related to the decedent.  Jurisdictions may provide linkages to birth records for all deaths within the first year of life, and linkages to birth or fetal death records when the for pregnancy-related events within one year of death.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-birth-record-identifier.html"
+                  title="StructureDefinition/vrdr-birth-record-identifier">Birth Record Identifier Infant</a>
+            </td>
+            <td>
+<p>Birth Record Identifier Infant (Observation).  This includes the record identifier, the jurisdiction, and the birth year of the decedent infant whose death
+is being reported.  For maternal death cases, see <a href="StructureDefinition-vrdr-birth-record-identifier-child.html">BirthRecordIdentifierChild</a> and <a href="StructureDefinition-vrdr-fetal-death-record-identifier.html">FetalDeathRecordIdentifier</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-birth-record-identifier-child.html"
+                  title="StructureDefinition/vrdr-birth-record-identifier-child">Birth Record Identifier Child</a>
+            </td>
+            <td>
+<p>Birth Record Identifier (Observation). For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year of a child.
+The subject is a Decedent (mother) whose death was related to the birth referenced by the identifier.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-fetal-death-record-identifier.html"
+                  title="StructureDefinition/vrdr-fetal-death-record-identifier">Fetal Death Record Identifier</a>
+            </td>
+            <td>
+<p>Fetal Death Record Identifier (Observation).  For use in Maternal Death. This includes the record identifier, the jurisdiction, and the birth year.
+The subject is the Decedent (mother), whose death was related to the birth of the fetus referenced by the identifier.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Death Investigation </h3>
+    <p>Data obtained during the course of investigating a death. Many of these items are conditionally present in a death certification transaction depending on whether or not an autopsy was performed, an injury incident occurred, or a transportation event was involved. The details on the pronouncement performer can be provided using USCore Practitioner profile.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-autopsy-performed-indicator.html"
+                  title="StructureDefinition/vrdr-autopsy-performed-indicator">Autopsy Performed Indicator</a>
+            </td>
+            <td>
+<p>Autopsy Performed Indicator (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-death-date.html"
+                  title="StructureDefinition/vrdr-death-date">Death Date</a>
+            </td>
+            <td>
+<p>The Death Date profile (Observation) provides the death date, death pronouncer, and date pronounced dead. If the actual date of death is known, set value to type dateTime. If the date of death is not known, and a range is known, set value to type Period.
+This profile is designed to supplant the similar profiles in VRDR and MDI.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-pregnancy-status.html"
+                  title="StructureDefinition/vrdr-decedent-pregnancy-status">Decedent Pregnancy</a>
+            </td>
+            <td>
+<p>The Decedent Pregnancy Status profile (Observation) provides an indication of the pregnancy status of the decedent.
+This profile is designed to support VRDR and MDI</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-death-location.html"
+                  title="StructureDefinition/vrdr-death-location">Death Location</a>
+            </td>
+            <td>
+<p>Death Location (LocationVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-examiner-contacted.html"
+                  title="StructureDefinition/vrdr-examiner-contacted">Examiner Contacted</a>
+            </td>
+            <td>
+<p>Examiner Contacted (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-injury-location.html"
+                  title="StructureDefinition/vrdr-injury-location">Injury Location</a>
+            </td>
+            <td>
+<p>Injury Location (LocationVitalRecords)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-injury-incident.html"
+                  title="StructureDefinition/vrdr-injury-incident">Injury Incident</a>
+            </td>
+            <td>
+<p>This Observation provides the certified explanation of how the injury leading to death occurred.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-surgery-date.html"
+                  title="StructureDefinition/vrdr-surgery-date">Surgery Date</a>
+            </td>
+            <td>
+<p>Date of Surgery (Observation).  The PartialDate extension supports partial dates.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-tobacco-use-contributed-to-death.html"
+                  title="StructureDefinition/vrdr-tobacco-use-contributed-to-death">Tobacco Use Contributed To Death</a>
+            </td>
+            <td>
+<p>Tobacco Use Contributed To Death (Observation)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Death Certification </h3>
+    <p>Data related to the primary concern of the VRDR IG, Death Certification. In this group, the causes of death and the causal pathway are documented and attested to by a death certifier (coroner or medical examiner).</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-certifier.html"
+                  title="StructureDefinition/vrdr-certifier">Death Certifier</a>
+            </td>
+            <td>
+<p>The Death Certification Practitioner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-cause-of-death-part1.html"
+                  title="StructureDefinition/vrdr-cause-of-death-part1">Cause Of Death Part 1</a>
+            </td>
+            <td>
+<p>The Cause of Death Part 1 (Observation) profile reflects the ordered causes of death asserted by the death certifier. The cause of death is initially specified with text. Line number can be 1-4</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-cause-of-death-part2.html"
+                  title="StructureDefinition/vrdr-cause-of-death-part2">Cause of Death Part 2</a>
+            </td>
+            <td>
+<p>The Contributing Cause of Death Part 2 (Observation) profile is used to identify factors contributing to the cause of death as asserted by the death certifier.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-death-certification.html"
+                  title="StructureDefinition/vrdr-death-certification">Death Certification Procedure</a>
+            </td>
+            <td>
+<p>Death Certification Procedure (USCoreProcedure). The procedure where the certification of death was performed by the certifier (USCoreProcedure).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-manner-of-death.html"
+                  title="StructureDefinition/vrdr-manner-of-death">Manner of Death</a>
+            </td>
+            <td>
+<p>Manner of Death (Observation)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Decedent Disposition </h3>
+    <p>Data related to the disposition of the decedents remains. The data in this profile group is typically provided by the funeral home performing the disposition services. The content of this profile group is authenticated by the funeral home director. Additional content can be included using standard USCore profiles, and can be included to specify the Funeral Home Director, the Licensee, and the Mortician.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-disposition-location.html"
+                  title="StructureDefinition/vrdr-disposition-location">Disposition Location</a>
+            </td>
+            <td>
+<p>Disposition Location (USCoreLocation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-decedent-disposition-method.html"
+                  title="StructureDefinition/vrdr-decedent-disposition-method">Decedent Disposition Method</a>
+            </td>
+            <td>
+<p>Decedent Disposition Method (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-funeral-home.html"
+                  title="StructureDefinition/vrdr-funeral-home">Funeral Home</a>
+            </td>
+            <td>
+<p>Funeral Home (USCoreOrganization)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-mortician.html"
+                  title="StructureDefinition/vrdr-mortician">Mortician</a>
+            </td>
+            <td>
+<p>Mortician.</p>
+
+<p>Note This profile is not needed for submission of records to NCHS but may be relevant for other use cases.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Coded Observations </h3>
+    <p>Coded Observations based on the submitted death record.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-activity-at-time-of-death.html"
+                  title="StructureDefinition/vrdr-activity-at-time-of-death">Activity at Time of Death</a>
+            </td>
+            <td>
+<p>Activity at Time of Death (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-automated-underlying-cause-of-death.html"
+                  title="StructureDefinition/vrdr-automated-underlying-cause-of-death">Automated Underlying Cause Of Death</a>
+            </td>
+            <td>
+<p>Automated Underlying Cause Of Death (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-manual-underlying-cause-of-death.html"
+                  title="StructureDefinition/vrdr-manual-underlying-cause-of-death">Manual Underlying Cause Of Death</a>
+            </td>
+            <td>
+<p>Manual Underlying Cause Of Death (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-record-axis-cause-of-death.html"
+                  title="StructureDefinition/vrdr-record-axis-cause-of-death">Record Axis Cause Of Death</a>
+            </td>
+            <td>
+<p>Record Axis Cause Of Death (Observation): Up to 20 of instances of this profile may be included in a coding bundle.<br />
+Each instance is labeled with its position (1-20), forming an ordered collection of codes.</p>
+
+<p>Record axis codes eliminate contradictions and repetitive codes to create a more concise and 
+consistent set of codes than provided by the Entity Axis codes. They may combine or modify codes to better reflect the 
+overall medical certification on the death certificate.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-entity-axis-cause-of-death.html"
+                  title="StructureDefinition/vrdr-entity-axis-cause-of-death">Entity Axis Cause Of Death</a>
+            </td>
+            <td>
+<p>Entity Axis Cause Of Death (Observation):   Up to 20 of instances of this profile may be included in a coding bundle.<br />
+Each instance is labeled with its lineNumber, Position and e-code indicator.</p>
+
+<p>Entity Axis codes represent the raw data as originally reported on the death certificate by the certifier, maintaining the order and position of conditions as they appeared on the death certificate.
+They include codes for all causes of death listed, including duplicate codes and potentially contradictory information.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-place-of-injury.html"
+                  title="StructureDefinition/vrdr-place-of-injury">Place Of Injury</a>
+            </td>
+            <td>
+<p>Place Of Injury  (Observation)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-coding-status-values.html"
+                  title="StructureDefinition/vrdr-coding-status-values">Coding Status Values</a>
+            </td>
+            <td>
+<p>Coding Status Values (Parameters) contains various status flags that result from the coding process</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Bundles and Compositions </h3>
+    <p>Bundles and Compositions used to transmit death record content.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-death-certificate.html"
+                  title="StructureDefinition/vrdr-death-certificate">Death Certificate</a>
+            </td>
+            <td>
+<p>The body of the death certificate document (Composition).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-death-certificate-document.html"
+                  title="StructureDefinition/vrdr-death-certificate-document">Death Certificate Document</a>
+            </td>
+            <td>
+<p>The resources comprising the death certificate composition (Bundle/Document).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-cause-of-death-coded-content-bundle.html"
+                  title="StructureDefinition/vrdr-cause-of-death-coded-content-bundle">Cause of Death Coded Content Bundle</a>
+            </td>
+            <td>
+<p>Cause of Death Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising cause of death coded content.  This bundle is information-content equivalent to the traditional NCHS TRX format.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-demographic-coded-content-bundle.html"
+                  title="StructureDefinition/vrdr-demographic-coded-content-bundle">Demographic Coded Content Bundle</a>
+            </td>
+            <td>
+<p>Demographic Coded Content Bundle (Bundle): A bundle containing instances of the resources comprising demographic (race and ethnicity) coded content.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-industry-occupation-coded-content-bundle.html"
+                  title="StructureDefinition/industry-occupation-coded-content-bundle">Industry Occupation Coded Content Bundle</a>
+            </td>
+            <td>
+<p>Industry and Occupation Coded Content Bundle (Bundle):  A bundle containing  coded industry and occupation data for a decedent.   This bundle is information-content equivalent to the traditional MIO files.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vrdr-mortality-roster-bundle.html"
+                  title="StructureDefinition/vrdr-mortality-roster-bundle">Mortality Roster Bundle</a>
+            </td>
+            <td>
+<p>Mortality Roster Bundle (Bundle): A bundle containing instances of the resources comprising mortality roster content.  This bundle is information-content equivalent to the traditional Mortality Roster.
+The mortality roster is a supplemental report of death for the purpose of notifying the decedent’s jurisdiction of birth that the death has occurred. The roster data points are sufficient to locate the birth certificate of the decedent but do not otherwise contain the full death record.
+Once received, the jurisdiction of birth uses the mortality roster data to locate the record of birth and marks it as deceased.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-DeathCertificateDocument-Example1.html"
+                  title="Bundle/DeathCertificateDocument-Example1">DeathCertificateDocument-Example1</a>
+            </td>
+            <td>
+<p>DeathCertificateDocument-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-DeathCertificateDocument-Example2.html"
+                  title="Bundle/DeathCertificateDocument-Example2">DeathCertificateDocument-Example2</a>
+            </td>
+            <td>
+<p>DeathCertificateDocument-Example2 (with coded content)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Extensions </h3>
+    <p>Extensions</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AliasStatus.html"
+                  title="StructureDefinition/AliasStatus">Alias Status of a Death Roster</a>
+            </td>
+            <td>
+<p>Alias Status of a Death Roster.  If true, is an alias record.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FilingFormat.html"
+                  title="StructureDefinition/FilingFormat">Filing Format</a>
+            </td>
+            <td>
+<p>Filing Format Extension.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-StateSpecificField.html"
+                  title="StructureDefinition/StateSpecificField">State Specific Field</a>
+            </td>
+            <td>
+<p>An arbitratry string included by a submitting jurisdiction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-NVSS-SexAtDeath.html"
+                  title="StructureDefinition/NVSS-SexAtDeath">NVSS SexAtDeath</a>
+            </td>
+            <td>
+<p>Sex on visual inspection at the time of death by the funeral home</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-SpouseAlive.html"
+                  title="StructureDefinition/SpouseAlive">Spouse Is Alive</a>
+            </td>
+            <td>
+<p>Spouse is Alive.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ReplaceStatus.html"
+                  title="StructureDefinition/ReplaceStatus">Replacement Status of a Death Record (deprecated)</a>
+            </td>
+            <td>
+<p>Replacement Status of a Death Record.  The use of this extension has been deprecated and wil be ignored for NCHS submissions.  See the [NCHS Vital Records Messaging IG]
+for a description of how to specify replace status at the message level.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-practitioner-role.html"
+                  title="StructureDefinition/practitioner-role">Practitioner Role</a>
+            </td>
+            <td>
+<p>Used to indicate the role played by a practitioner to facilitate simple FHIRPath-based queries.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="9"> </a>
+   <h3>CodeSystems </h3>
+    <p>CodeSystems</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-activity-at-time-of-death-cs.html"
+                  title="CodeSystem/vrdr-activity-at-time-of-death-cs">Activity at Time of Death CodeSystem</a>
+            </td>
+            <td>
+<p>Activity at Time of Death Codesystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-date-of-death-determination-methods-cs.html"
+                  title="CodeSystem/vrdr-date-of-death-determination-methods-cs">Date of Death Determination Methods</a>
+            </td>
+            <td>
+<p>Date of Death Determination Methods CodeSystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CodeSystem-death-pregnancy-status.html"
+                  title="CodeSystem/CodeSystem-death-pregnancy-status">Death Pregnancy Status Codesystem</a>
+            </td>
+            <td>
+<p>Codes that reflect whether the decedent was pregnant at or around the time of death.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-document-section-cs.html"
+                  title="CodeSystem/vrdr-document-section-cs">Document Section</a>
+            </td>
+            <td>
+<p>Document Section Code System</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-filing-format-cs.html"
+                  title="CodeSystem/vrdr-filing-format-cs">Filing Formats</a>
+            </td>
+            <td>
+<p>Death Certificate Filing Formats CodeSystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-intentional-reject-cs.html"
+                  title="CodeSystem/vrdr-intentional-reject-cs">Intentional Reject</a>
+            </td>
+            <td>
+<p>Intentional Reject CodeSystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-location-type-cs.html"
+                  title="CodeSystem/vrdr-location-type-cs">Location Type</a>
+            </td>
+            <td>
+<p>Location Type Code System</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-observations-cs.html"
+                  title="CodeSystem/vrdr-observations-cs">Local Observation Codes</a>
+            </td>
+            <td>
+<p>Local Observation Codes for observations that lack an appropriate LOINC code</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-component-cs.html"
+                  title="CodeSystem/vrdr-component-cs">Local Component Codes</a>
+            </td>
+            <td>
+<p>Local Component Codes for observation components that lack an appropriate LOINC code</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-organization-type-cs.html"
+                  title="CodeSystem/vrdr-organization-type-cs">Local Organization Type</a>
+            </td>
+            <td>
+<p>Local Organization Types</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-replace-status-cs.html"
+                  title="CodeSystem/vrdr-replace-status-cs">Replacement Status of Death Record Submission CodeSystem</a>
+            </td>
+            <td>
+<p>Replacement Status of Death Record Submission CodeSystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-system-placeofinjury-cs.html"
+                  title="CodeSystem/vrdr-system-placeofinjury-cs">Supermicar Place Of Injury CodeSystem</a>
+            </td>
+            <td>
+<p>Supermicar Place Of Injury CodeSystem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-system-reject-cs.html"
+                  title="CodeSystem/vrdr-system-reject-cs">System Reject Code System</a>
+            </td>
+            <td>
+<p>System Reject Code System</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-vrdr-transax-conversion-cs.html"
+                  title="CodeSystem/vrdr-transax-conversion-cs">Transax Conversion CodeSystem</a>
+            </td>
+            <td>
+<p>Transax Conversion Code System</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="10"> </a>
+   <h3>ValueSets </h3>
+    <p>ValueSets</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-administrative-gender-vs.html"
+                  title="ValueSet/vrdr-administrative-gender-vs">Administrative Gender ValueSet</a>
+            </td>
+            <td>
+<p>The gender of a person used for administrative purposes.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-AdministrativeGenderCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-certifier-types-vs.html"
+                  title="ValueSet/vrdr-certifier-types-vs">Certifier Types Value Set</a>
+            </td>
+            <td>
+<p>Certifier Types Value Set</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-CertifierTypesCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-intentional-reject-vs.html"
+                  title="ValueSet/vrdr-intentional-reject-vs">Intentional Reject ValueSet</a>
+            </td>
+            <td>
+<p>Intentional Reject ValueSet.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-IntentionalRejectCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-system-reject-vs.html"
+                  title="ValueSet/vrdr-system-reject-vs">System Reject ValueSet</a>
+            </td>
+            <td>
+<p>System Reject ValueSet.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-SystemRejectCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-transax-conversion-vs.html"
+                  title="ValueSet/vrdr-transax-conversion-vs">Transax Conversion ValueSet</a>
+            </td>
+            <td>
+<p>Transax Conversion ValueSet.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-TransaxConversionCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-activity-at-time-of-death-vs.html"
+                  title="ValueSet/vrdr-activity-at-time-of-death-vs">Activity at Time of Death ValueSet</a>
+            </td>
+            <td>
+<p>Activity at Time of Death.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-ActivityAtTimeOfDeathCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-icd10-causes-of-death-vs.html"
+                  title="ValueSet/vrdr-icd10-causes-of-death-vs">ICD10 Causes of Death ValueSet</a>
+            </td>
+            <td>
+<p>ICD10 Causes of Death ValueSet</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-contributory-tobacco-use-vs.html"
+                  title="ValueSet/vrdr-contributory-tobacco-use-vs">Contributory Tobacco Use ValueSet</a>
+            </td>
+            <td>
+<p>Did Tobacco Use Contribute to Death</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-ContributoryTobaccoUseCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-date-of-death-determination-methods-vs.html"
+                  title="ValueSet/vrdr-date-of-death-determination-methods-vs">Date of Death Determination Methods Value Set</a>
+            </td>
+            <td>
+<p>Date of Death Determination Methods Value Set. The method of date of death determination is not used for the Death Record submission process.
+The binding to this value set is included for compatibility with the Medicolegal Death Investigation (<a href="https://build.fhir.org/ig/HL7/fhir-mdi-ig/">MDI</a>) Implementation Guide.  The valueset only
+includes the values used by MDI, but is bound <a href="https://hl7.org/fhir/R4/terminologies.html#extensible">extensibly</a>.  If a jurisdiction chooses to use this field, and requires
+additional values (e.g., ‘presumed’), these values can be used while remaining in full conformance with the VRDR IG.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-death-certification-event-vs.html"
+                  title="ValueSet/vrdr-death-certification-event-vs">Event Code for Death Certificate Composition</a>
+            </td>
+            <td>
+<p>The code used for Event.code for the Death Certificate Composition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-death-certification-event-max-vs.html"
+                  title="ValueSet/vrdr-death-certification-event-max-vs">Event Code for Death Certificate Composition - Max</a>
+            </td>
+            <td>
+<p>The maximum valueset for Event.code for Death Certificate Composition.  Includes an inactive but valid code used in STU2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-death-pregnancy-status-vs.html"
+                  title="ValueSet/vrdr-death-pregnancy-status-vs">Death Pregnancy Status ValueSet</a>
+            </td>
+            <td>
+<p>A set of codes that reflect whether the decedent was pregnant at or around the time of death. Based on <a href="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.6003">Pregnancy Status (NCHS)[2.16.840.1.114222.4.11.6003]</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-filing-format-vs.html"
+                  title="ValueSet/vrdr-filing-format-vs">Filing Format ValueSet</a>
+            </td>
+            <td>
+<p>Filing Format ValueSet</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-FilingFormatCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-manner-of-death-vs.html"
+                  title="ValueSet/vrdr-manner-of-death-vs">Manner of Death ValueSet</a>
+            </td>
+            <td>
+<p>A set of code used to indicate a classification of the manner of death.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-MannerOfDeathCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-method-of-disposition-vs.html"
+                  title="ValueSet/vrdr-method-of-disposition-vs">Method of Disposition ValueSet</a>
+            </td>
+            <td>
+<p>The set of codes used to indicate the method used to dispose of the decedents remains.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-MethodOfDispositionCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-place-of-death-vs.html"
+                  title="ValueSet/vrdr-place-of-death-vs">Place of Death ValueSet</a>
+            </td>
+            <td>
+<p>Code values reflecting the death location of the decedent (e.g., hospital, home, hospice).</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-PlaceOfDeathCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-place-of-injury-vs.html"
+                  title="ValueSet/vrdr-place-of-injury-vs">Place of Injury ValueSet</a>
+            </td>
+            <td>
+<p>Place of Injury from NCHS TRX Format.  THis contains all of the codes from https://loinc.org/LL1051-3/ except for LA14087-3 (Public Institution).</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-PlaceOfInjuryCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-place-of-injury-other-vs.html"
+                  title="ValueSet/vrdr-place-of-injury-other-vs">Place of Injury - Other ValueSet</a>
+            </td>
+            <td>
+<p>Place of Injury from NCHS SuperMicar Format.  This provides additional detail when the TRX code is ‘Other’.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-replace-status-vs.html"
+                  title="ValueSet/vrdr-replace-status-vs">Replacement Status ValueSet</a>
+            </td>
+            <td>
+<p>Replacement Status Value Set.  NCHS will not process original or update submissions flagged ‘updated_notforNCHS’.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-ReplaceStatusCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-spouse-alive-vs.html"
+                  title="ValueSet/vrdr-spouse-alive-vs">Spouse Alive ValueSet</a>
+            </td>
+            <td>
+<p>The set of codes used to indicate whether the decedent’s spouse is alive.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-SpouseAliveCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-transportation-incident-role-vs.html"
+                  title="ValueSet/vrdr-transportation-incident-role-vs">Transportation Incident Role ValueSet</a>
+            </td>
+            <td>
+<p>Role of the decedent in a transportation incident resulting in a death-related injury.</p>
+
+<p>Mapping to IJE codes <a href="ConceptMap-TransportationIncidentRoleCM.html">here</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-edit-bypass-01-vs.html"
+                  title="ValueSet/vrdr-edit-bypass-01-vs">Edit Bypass 01</a>
+            </td>
+            <td>
+<p>A subset of code values (0 and 1) use to indicate the outcome of data validation assessment for unusual data values.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-edit-bypass-012-vs.html"
+                  title="ValueSet/vrdr-edit-bypass-012-vs">Edit Bypass 012</a>
+            </td>
+            <td>
+<p>A subset of code values (0, 1, and 2) use to indicate the outcome of data validation assessment for unusual data values.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vrdr-edit-bypass-0124-vs.html"
+                  title="ValueSet/vrdr-edit-bypass-0124-vs">Edit Bypass 0124</a>
+            </td>
+            <td>
+<p>A subset of code values (0, 1, 2, and 4) use to indicate the outcome of data validation assessment for unusual data values.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="11"> </a>
+   <h3>ConceptMaps </h3>
+    <p>ConceptMaps</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-ActivityAtTimeOfDeathCM.html"
+                  title="ConceptMap/ActivityAtTimeOfDeathCM">ActivityAtTimeOfDeath Concept Map</a>
+            </td>
+            <td>
+<p>Concept Map for ActivityAtTimeOfDeath Value Set</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-AdministrativeGenderCM.html"
+                  title="ConceptMap/AdministrativeGenderCM">AdministrativeGender Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR AdministrativeGender Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-CertifierTypesCM.html"
+                  title="ConceptMap/CertifierTypesCM">CertifierTypes Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR CertifierTypes Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-ContributoryTobaccoUseCM.html"
+                  title="ConceptMap/ContributoryTobaccoUseCM">ContributoryTobaccoUse Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR ContributoryTobaccoUse Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-DeathPregnancyStatusCM.html"
+                  title="ConceptMap/DeathPregnancyStatusCM">PregnancyStatus Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR PregnancyStatus Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-EditBypass01CM.html" title="ConceptMap/EditBypass01CM">EditBypass01 Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR EditBypass01 Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-EditBypass012CM.html"
+                  title="ConceptMap/EditBypass012CM">EditBypass012 Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR EditBypass012 Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-EditBypass0124CM.html"
+                  title="ConceptMap/EditBypass0124CM">EditBypass0124 Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR EditBypass0124 Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FilingFormatCM.html" title="ConceptMap/FilingFormatCM">FilingFormat Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR FilingFormat Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-IntentionalRejectCM.html"
+                  title="ConceptMap/IntentionalRejectCM">IntentionalReject Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR IntentionalReject Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-MannerOfDeathCM.html"
+                  title="ConceptMap/MannerOfDeathCM">MannerOfDeath Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR MannerOfDeath Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-MethodOfDispositionCM.html"
+                  title="ConceptMap/MethodOfDispositionCM">MethodOfDisposition Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR MethodOfDisposition Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PlaceOfDeathCM.html" title="ConceptMap/PlaceOfDeathCM">PlaceOfDeath Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-PlaceOfInjuryCM.html"
+                  title="ConceptMap/PlaceOfInjuryCM">PlaceOfInjury Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR PlaceOfInjury Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-ReplaceStatusCM.html"
+                  title="ConceptMap/ReplaceStatusCM">ReplaceStatus Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR ReplaceStatus Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-SpouseAliveCM.html" title="ConceptMap/SpouseAliveCM">SpouseAlive Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR SpouseAlive Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-SystemRejectCM.html" title="ConceptMap/SystemRejectCM">SystemReject Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR SystemReject Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-TransaxConversionCM.html"
+                  title="ConceptMap/TransaxConversionCM">TransaxConversion Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR TransaxConversion Value Sets</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-TransportationIncidentRoleCM.html"
+                  title="ConceptMap/TransportationIncidentRoleCM">TransportationIncidentRole Concept Map</a>
+            </td>
+            <td>
+<p>A mapping between NCHS IJE and FHIR TransportationIncidentRole Value Sets</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="12"> </a>
+   <h3>Example Death Record Submission </h3>
+    <p>Example of a complete Death Record Submission</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-DeathCertificateDocument-UT-1.html"
+                  title="Bundle/DeathCertificateDocument-UT-1">DeathCertificateDocument-UT-1</a>
+            </td>
+            <td>
+<p>Example Record from UT</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-DeathCertificateUT-Example1.html"
+                  title="Composition/DeathCertificateUT-Example1">Death Certificate for Davis Lineberry Jr</a>
+            </td>
+            <td>
+<p>DeathCertificateUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DecedentUT-Example1.html"
+                  title="Patient/DecedentUT-Example1">DecedentUT-Example1</a>
+            </td>
+            <td>
+<p>DecedentUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-InputRaceAndEthnicityUT-Example1.html"
+                  title="Observation/InputRaceAndEthnicityUT-Example1">InputRaceAndEthnicityUT-Example1</a>
+            </td>
+            <td>
+<p>InputRaceAndEthnicityUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PractitionerUT-Certifier.html"
+                  title="Practitioner/PractitionerUT-Certifier">PractitionerUT-Certifier</a>
+            </td>
+            <td>
+<p>Certifying Practitioner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PractitionerUT-Pronouncer.html"
+                  title="Practitioner/PractitionerUT-Pronouncer">PractitionerUT-Pronouncer</a>
+            </td>
+            <td>
+<p>Pronouncing Practitioner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BirthRecordIdentifierUT-Example1.html"
+                  title="Observation/BirthRecordIdentifierUT-Example1">BirthRecordIdentifierUT-Example1</a>
+            </td>
+            <td>
+<p>BirthRecordIdentifierUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EducationUT-Example1.html"
+                  title="Observation/EducationUT-Example1">EducationUT-Example1</a>
+            </td>
+            <td>
+<p>EducationUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-FatherUT-Example1.html"
+                  title="RelatedPerson/FatherUT-Example1">FatherUT-Example1</a>
+            </td>
+            <td>
+<p>FatherUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-MotherUT-Example1.html"
+                  title="RelatedPerson/MotherUT-Example1">MotherUT-Example1</a>
+            </td>
+            <td>
+<p>MotherUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-AutopsyPerformedIndicatorUT-Example1.html"
+                  title="Observation/AutopsyPerformedIndicatorUT-Example1">AutopsyPerformedIndicatorUT-Example1</a>
+            </td>
+            <td>
+<p>AutopsyPerformedIndicatorUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CauseOfDeathPart1UT-Example1.html"
+                  title="Observation/CauseOfDeathPart1UT-Example1">CauseOfDeathPart1UT-Example1</a>
+            </td>
+            <td>
+<p>CauseOfDeathPart1UT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DeathDateUT-Example1.html"
+                  title="Observation/DeathDateUT-Example1">DeathDateUT-Example1</a>
+            </td>
+            <td>
+<p>DeathDateUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DeathLocationUT-Example1.html"
+                  title="Location/DeathLocationUT-Example1">DeathLocationUT-Example1</a>
+            </td>
+            <td>
+<p>DeathLocationUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-AgeUT-Example1.html"
+                  title="Observation/AgeUT-Example1">AgeUT-Example1</a>
+            </td>
+            <td>
+<p>AgeUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DispositionMethodUT-Example1.html"
+                  title="Observation/DispositionMethodUT-Example1">DispositionMethodUT-Example1</a>
+            </td>
+            <td>
+<p>DispositionMethodUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DispositionLocationUT-Example1.html"
+                  title="Location/DispositionLocationUT-Example1">DispositionLocationUT-Example1</a>
+            </td>
+            <td>
+<p>DispositionLocationUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-UsualWorkUT-Example1.html"
+                  title="Observation/UsualWorkUT-Example1">UsualWorkUT-Example1</a>
+            </td>
+            <td>
+<p>UsualWorkUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-MilitaryServiceUT-Example1.html"
+                  title="Observation/MilitaryServiceUT-Example1">MilitaryServiceUT-Example1</a>
+            </td>
+            <td>
+<p>MilitaryServiceUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-PregnancyUT-Example1.html"
+                  title="Observation/PregnancyUT-Example1">PregnancyUT-Example1</a>
+            </td>
+            <td>
+<p>PregnancyUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExaminerContactedUT-Example1.html"
+                  title="Observation/ExaminerContactedUT-Example1">ExaminerContactedUT-Example1</a>
+            </td>
+            <td>
+<p>ExaminerContactedUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-FuneralHomeUT-Example1.html"
+                  title="Organization/FuneralHomeUT-Example1">FuneralHomeUT-Example1</a>
+            </td>
+            <td>
+<p>FuneralHomeUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-InjuryIncidentUT-Example1.html"
+                  title="Observation/InjuryIncidentUT-Example1">InjuryIncidentUT-Example1</a>
+            </td>
+            <td>
+<p>InjuryIncidentUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-MannerOfDeathUT-Example1.html"
+                  title="Observation/MannerOfDeathUT-Example1">MannerOfDeathUT-Example1</a>
+            </td>
+            <td>
+<p>MannerOfDeathUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-TobaccoUseUT-Example1.html"
+                  title="Observation/TobaccoUseUT-Example1">TobaccoUseUT-Example1</a>
+            </td>
+            <td>
+<p>TobaccoUseUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-ProcedureDeathCertificationUT-Example1.html"
+                  title="Procedure/ProcedureDeathCertificationUT-Example1">ProcedureDeathCertificationUT-Example1</a>
+            </td>
+            <td>
+<p>ProcedureDeathCertificationUT-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EmergingIssuesUT-Example1.html"
+                  title="Observation/EmergingIssuesUT-Example1">EmergingIssuesUT-Example1</a>
+            </td>
+            <td>
+<p>EmergingIssuesUT-Example1</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="13"> </a>
+   <h3>Other Example Bundles </h3>
+    <p>Example Death Certificate, Coded Content, and Mortality Roster Bundles</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-CauseOfDeathCodedContentBundle-Example1.html"
+                  title="Bundle/CauseOfDeathCodedContentBundle-Example1">CauseOfDeathCodedContentBundle-Example1</a>
+            </td>
+            <td>
+<p>CauseofDeathCodedContentBundle-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-DemographicCodedContentBundle-Example1.html"
+                  title="Bundle/DemographicCodedContentBundle-Example1">DemographicCodedContentBundle-Example1</a>
+            </td>
+            <td>
+<p>DemographicCodedContentBundle-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-IndustryOccupationCodedContentBundle-Example1.html"
+                  title="Bundle/IndustryOccupationCodedContentBundle-Example1">IndustryOccupationCodedContentBundle-Example1</a>
+            </td>
+            <td>
+<p>IndustryOccupationCodedContentBundle-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-MortalityRosterBundle-Example1.html"
+                  title="Bundle/MortalityRosterBundle-Example1">MortalityRosterBundle-Example1</a>
+            </td>
+            <td>
+<p>MortalityRosterBundle-Example1</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="14"> </a>
+   <h3>Other Example Instances </h3>
+    <p>Other Example instances illustrating various aspects of the profiles.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-DeathCertification-Example1.html"
+                  title="Procedure/DeathCertification-Example1">DeathCertification-Example1</a>
+            </td>
+            <td>
+<p>DeathCertification-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-DeathCertification-Example2.html"
+                  title="Procedure/DeathCertification-Example2">DeathCertification-Example2</a>
+            </td>
+            <td>
+<p>DeathCertification-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-AutopsyPerformedIndicator-Example1.html"
+                  title="Observation/AutopsyPerformedIndicator-Example1">AutopsyPerformedIndicator-Example1</a>
+            </td>
+            <td>
+<p>AutopsyPerformedIndicator-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BirthRecordIdentifier-Example1.html"
+                  title="Observation/BirthRecordIdentifier-Example1">BirthRecordIdentifier-Example1</a>
+            </td>
+            <td>
+<p>BirthRecordIdentifier-Example1 - identifier of the decedent’s birth certificate</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BirthRecordIdentifierChild-Example1.html"
+                  title="Observation/BirthRecordIdentifierChild-Example1">BirthRecordIdentifierChild-Example1</a>
+            </td>
+            <td>
+<p>BirthRecordIdentifierChild-Example1 - identifier of the decedent’s child’s birth certificate number</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-FetalDeathRecordIdentifier-Example1.html"
+                  title="Observation/FetalDeathRecordIdentifier-Example1">FetalDeathRecordIdentifier-Example1</a>
+            </td>
+            <td>
+<p>FetalDeathRecordIdentifier-Example1 - identifier of the decedent’s fetus’s fetal death record</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CauseOfDeathPart1-Example1.html"
+                  title="Observation/CauseOfDeathPart1-Example1">CauseOfDeathPart1-Example1</a>
+            </td>
+            <td>
+<p>CauseOfDeathPart1New-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CauseOfDeathPart1-Example2.html"
+                  title="Observation/CauseOfDeathPart1-Example2">CauseOfDeathPart1-Example2</a>
+            </td>
+            <td>
+<p>CauseOfDeathPart1New-Example2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CauseOfDeathPart2-Example1.html"
+                  title="Observation/CauseOfDeathPart2-Example1">CauseOfDeathPart2-Example1</a>
+            </td>
+            <td>
+<p>CauseOfDeathPart2New-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Certifier-Example1.html"
+                  title="Practitioner/Certifier-Example1">Certifier-Example1</a>
+            </td>
+            <td>
+<p>Certifier-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-AutomatedUnderlyingCauseOfDeath-Example1.html"
+                  title="Observation/AutomatedUnderlyingCauseOfDeath-Example1">AutomatedUnderlyingCauseOfDeath-Example1</a>
+            </td>
+            <td>
+<p>AutomatedUnderlyingCauseOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-RecordAxisCauseOfDeath-Example1.html"
+                  title="Observation/RecordAxisCauseOfDeath-Example1">RecordAxisCauseOfDeath-Example1</a>
+            </td>
+            <td>
+<p>RecordAxisCauseOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-RecordAxisCauseOfDeath-Example2.html"
+                  title="Observation/RecordAxisCauseOfDeath-Example2">RecordAxisCauseOfDeath-Example2</a>
+            </td>
+            <td>
+<p>RecordAxisCauseOfDeath-Example2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EntityAxisCauseOfDeath-Example1.html"
+                  title="Observation/EntityAxisCauseOfDeath-Example1">EntityAxisCauseOfDeath-Example1</a>
+            </td>
+            <td>
+<p>EntityAxisCauseOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EntityAxisCauseOfDeath-Example2.html"
+                  title="Observation/EntityAxisCauseOfDeath-Example2">EntityAxisCauseOfDeath-Example2</a>
+            </td>
+            <td>
+<p>EntityAxisCauseOfDeath-Example2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EntityAxisCauseOfDeath-Example3.html"
+                  title="Observation/EntityAxisCauseOfDeath-Example3">EntityAxisCauseOfDeath-Example3</a>
+            </td>
+            <td>
+<p>EntityAxisCauseOfDeath-Example3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EntityAxisCauseOfDeath-Example4.html"
+                  title="Observation/EntityAxisCauseOfDeath-Example4">EntityAxisCauseOfDeath-Example4</a>
+            </td>
+            <td>
+<p>EntityAxisCauseOfDeath-Example3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ManualUnderlyingCauseOfDeath-Example1.html"
+                  title="Observation/ManualUnderlyingCauseOfDeath-Example1">ManualUnderlyingCauseOfDeath-Example1</a>
+            </td>
+            <td>
+<p>ManualUnderlyingCauseOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-PlaceOfInjury-Example1.html"
+                  title="Observation/PlaceOfInjury-Example1">PlaceOfInjury-Example1</a>
+            </td>
+            <td>
+<p>PlaceOfInjury-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ActivityAtTimeOfDeath-Example1.html"
+                  title="Observation/ActivityAtTimeOfDeath-Example1">ActivityAtTimeOfDeath-Example1</a>
+            </td>
+            <td>
+<p>ActivityAtTimeOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CodedRaceAndEthnicity-Example1.html"
+                  title="Observation/CodedRaceAndEthnicity-Example1">CodedRaceAndEthnicity-Example1</a>
+            </td>
+            <td>
+<p>CodedRaceAndEthnicity-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-InputRaceAndEthnicity-Example1.html"
+                  title="Observation/InputRaceAndEthnicity-Example1">InputRaceAndEthnicity-Example1</a>
+            </td>
+            <td>
+<p>InputRaceAndEthnicity-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Parameters-CodingStatusValues-Example1.html"
+                  title="Parameters/CodingStatusValues-Example1">CodingStatusValues-Example1</a>
+            </td>
+            <td>
+<p>CodingStatusValues-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-DeathCertificate-Example1.html"
+                  title="Composition/DeathCertificate-Example1">DeathCertificate Example1</a>
+            </td>
+            <td>
+<p>DeathCertificate-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-DeathCertificate-Example2.html"
+                  title="Composition/DeathCertificate-Example2">DeathCertificate Example2</a>
+            </td>
+            <td>
+<p>DeathCertificate-Example2 (with coded content)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DeathDate-Example1.html"
+                  title="Observation/DeathDate-Example1">DeathDate-Example1</a>
+            </td>
+            <td>
+<p>DeathDate-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DeathDate-Example2.html"
+                  title="Observation/DeathDate-Example2">DeathDate-Example2</a>
+            </td>
+            <td>
+<p>DeathDate-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DeathDate-Example3.html"
+                  title="Observation/DeathDate-Example3">DeathDate-Example3</a>
+            </td>
+            <td>
+<p>DeathDate-Example3 - Stripped down for Mortality Roster</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DeathDate-Example4.html"
+                  title="Observation/DeathDate-Example4">DeathDate-Example4</a>
+            </td>
+            <td>
+<p>DeathDate-Example4 - an example with only a death time</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DeathLocation-Example1.html"
+                  title="Location/DeathLocation-Example1">DeathLocation-Example1</a>
+            </td>
+            <td>
+<p>DeathLocation-Example1 - State = Jurisdiction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DeathLocation-Example2.html"
+                  title="Location/DeathLocation-Example2">DeathLocation-Example2</a>
+            </td>
+            <td>
+<p>DeathLocation-Example2 - State != Jurisdiction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DeathLocation-Example3.html"
+                  title="Location/DeathLocation-Example3">DeathLocation-Example3</a>
+            </td>
+            <td>
+<p>DeathLocation-Example3 - Stripped Down for Mortality Roster</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Decedent-Example3.html" title="Patient/Decedent-Example3">Decedent-Example3</a>
+            </td>
+            <td>
+<p>Decedent-Example3 - Stripped down for Mortality Roster</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Decedent-Example2.html" title="Patient/Decedent-Example2">Decedent-Example2</a>
+            </td>
+            <td>
+<p>Decedent-Example2 - with birth jurisdiction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Decedent-Example1.html" title="Patient/Decedent-Example1">Decedent-Example1</a>
+            </td>
+            <td>
+<p>Decedent-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentAge-Example1.html"
+                  title="Observation/DecedentAge-Example1">DecedentAge-Example1</a>
+            </td>
+            <td>
+<p>DecedentAge-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentDispositionMethod-Example1.html"
+                  title="Observation/DecedentDispositionMethod-Example1">DecedentDispositionMethod-Example1</a>
+            </td>
+            <td>
+<p>DecedentDispositionMethod-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Mortician-Example1.html"
+                  title="Practitioner/Mortician-Example1">Mortician-Example1</a>
+            </td>
+            <td>
+<p>Mortician-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-DispositionLocation-Example1.html"
+                  title="Location/DispositionLocation-Example1">DispositionLocation-Example1</a>
+            </td>
+            <td>
+<p>DispositionLocation-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentEducationLevel-Example1.html"
+                  title="Observation/DecedentEducationLevel-Example1">DecedentEducationLevel-Example1</a>
+            </td>
+            <td>
+<p>DeathDate-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentMilitaryService-Example1.html"
+                  title="Observation/DecedentMilitaryService-Example1">DecedentMilitaryService-Example1</a>
+            </td>
+            <td>
+<p>DecedentMilitaryService-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentPregnancyStatus-Example1.html"
+                  title="Observation/DecedentPregnancyStatus-Example1">DecedentPregnancyStatus-Example1</a>
+            </td>
+            <td>
+<p>DecedentPregnancyStatus-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentUsualWork-Example1.html"
+                  title="Observation/DecedentUsualWork-Example1">DecedentUsualWork-Example1</a>
+            </td>
+            <td>
+<p>DecedentUsualWork-Example1 - without coded values</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-DecedentUsualWork-Example2.html"
+                  title="Observation/DecedentUsualWork-Example2">DecedentUsualWork-Example2</a>
+            </td>
+            <td>
+<p>DecedentUsualWork-Example2 - with coded values</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-EmergingIssues-Example1.html"
+                  title="Observation/EmergingIssues-Example1">EmergingIssues-Example1</a>
+            </td>
+            <td>
+<p>EmergingIssues-Example1 make sure it is example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExaminerContacted-Example1.html"
+                  title="Observation/ExaminerContacted-Example1">ExaminerContacted-Example1</a>
+            </td>
+            <td>
+<p>AutopsyPerformedIndicator-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-DecedentFather-Example1.html"
+                  title="RelatedPerson/DecedentFather-Example1">DecedentFather-Example1</a>
+            </td>
+            <td>
+<p>DecedentFather-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-DecedentMother-Example1.html"
+                  title="RelatedPerson/DecedentMother-Example1">DecedentMother-Example1</a>
+            </td>
+            <td>
+<p>DecedentFather-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-DecedentSpouse-Example1.html"
+                  title="RelatedPerson/DecedentSpouse-Example1">DecedentSpouse-Example1</a>
+            </td>
+            <td>
+<p>DecedentSpouse-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-FuneralHome-Example1.html"
+                  title="Organization/FuneralHome-Example1">FuneralHome-Example1</a>
+            </td>
+            <td>
+<p>FuneralHome-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-InjuryIncident-Example1.html"
+                  title="Observation/InjuryIncident-Example1">InjuryIncident-Example1</a>
+            </td>
+            <td>
+<p>InjuryIncident-Example1 (with literal transportationRole)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-InjuryIncident-Example2.html"
+                  title="Observation/InjuryIncident-Example2">InjuryIncident-Example2</a>
+            </td>
+            <td>
+<p>InjuryIncident-Example2 (with coded transportationRole)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-InjuryLocation-Example1.html"
+                  title="Location/InjuryLocation-Example1">InjuryLocation-Example1</a>
+            </td>
+            <td>
+<p>InjuryLocation-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-MannerOfDeath-Example1.html"
+                  title="Observation/MannerOfDeath-Example1">MannerOfDeath-Example1</a>
+            </td>
+            <td>
+<p>MannerOfDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-SurgeryDate-Example1.html"
+                  title="Observation/SurgeryDate-Example1">SurgeryDate-Example1</a>
+            </td>
+            <td>
+<p>SurgeryDate-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-TobaccoUseContributedToDeath-Example1.html"
+                  title="Observation/TobaccoUseContributedToDeath-Example1">TobaccoUseContributedToDeath-Example1</a>
+            </td>
+            <td>
+<p>TobaccoUseContributedToDeath-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-location-death-vr-atlanta-ga-a-freeman.html"
+                  title="Location/location-death-vr-atlanta-ga-a-freeman">Atlanta GA Death Location - Freeman</a>
+            </td>
+            <td>
+<p>Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-location-injury-vr-atlanta-ga-a-freeman.html"
+                  title="Location/location-injury-vr-atlanta-ga-a-freeman">Atlanta GA Injury Location - Freeman</a>
+            </td>
+            <td>
+<p>Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-practitioner-vital-records-janet-seito.html"
+                  title="Practitioner/practitioner-vital-records-janet-seito">Practitioner - Vital Records - Janet Seito</a>
+            </td>
+            <td>
+<p>Practitioner - Vital Records: Janet Seito example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-procedure-death-certification-vr-a-freeman.html"
+                  title="Procedure/procedure-death-certification-vr-a-freeman">Procedure - Death Certification Vital Records - A Freeman</a>
+            </td>
+            <td>
+<p>Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-us-core-patient-vr-a-freeman.html"
+                  title="Patient/us-core-patient-vr-a-freeman">USCorePatient - Patient example [A Freeman]</a>
+            </td>
+            <td>
+<p>Example of US Core Patient profile (A Freeman)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Pronouncer-Example1.html"
+                  title="Practitioner/Pronouncer-Example1">Pronouncer-Example1</a>
+            </td>
+            <td>
+<p>Pronouncer-Example1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Certifier-Example2-no-NPI.html"
+                  title="Practitioner/Certifier-Example2-no-NPI">Certifier-Example2-no-NPI</a>
+            </td>
+            <td>
+<p>Certifier-Example2 (no NPI)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/pher">HL7 International / Public Health</a>.  Package hl7.fhir.us.vrdr#3.0.0-preview1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 29, 2024 13:06-0400">2024-07-29</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/vrdr/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

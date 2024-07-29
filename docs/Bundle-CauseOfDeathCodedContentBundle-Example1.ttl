@@ -1,0 +1,974 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Bundle/CauseOfDeathCodedContentBundle-Example1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CauseOfDeathCodedContentBundle-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-coded-content-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-coded-content-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CertificateNumber"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "000182" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier1"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "000000000001" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "state specific content" ]
+     ] ) ;
+     fhir:system [ fhir:v "http://nchs.cdc.gov/vrdr_id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2020NY000182" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2020-10-20T14:48:35.401641-04:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/ActivityAtTimeOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/ActivityAtTimeOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/ManualUnderlyingCauseOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/ManualUnderlyingCauseOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/AutomatedUnderlyingCauseOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/AutomatedUnderlyingCauseOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/RecordAxisCauseOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/RecordAxisCauseOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example2"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example2> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example3"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example3> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example4"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example4> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/PlaceOfInjury-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/PlaceOfInjury-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Parameter/CodingStatusValues-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Parameter/CodingStatusValues-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/DecedentPregnancyStatus-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/DecedentPregnancyStatus-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/TobaccoUseContributedToDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/TobaccoUseContributedToDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/SurgeryDate-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/SurgeryDate-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/MannerOfDeath-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/MannerOfDeath-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/InjuryIncident-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/InjuryIncident-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Procedure/DeathCertification-Example2"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Procedure/DeathCertification-Example2> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://www.example.org/fhir/Observation/AutopsyPerformedIndicator-Example1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://www.example.org/fhir/Observation/AutopsyPerformedIndicator-Example1> )
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/ActivityAtTimeOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "ActivityAtTimeOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-activity-at-time-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-activity-at-time-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ActivityAtTimeOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ActivityAtTimeOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-activity-at-time-of-death.html\">Activity at Time of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Activity at time of death [CDC] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80626-5)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: While engaged in leisure activities. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-activity-at-time-of-death-cs.html\">Activity at Time of Death CodeSystem</a>#1)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80626-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80626-5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-activity-at-time-of-death-cs"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "While engaged in leisure activities." ]
+     ] )
+  ] . # 
+
+<http://www.example.org/fhir/Observation/ManualUnderlyingCauseOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "ManualUnderlyingCauseOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manual-underlying-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manual-underlying-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ManualUnderlyingCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ManualUnderlyingCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-manual-underlying-cause-of-death.html\">Manual Underlying Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death.underlying [Manual] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80359-3)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80359-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80359-3" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J96.0" ]
+     ] )
+  ] . # 
+
+<http://www.example.org/fhir/Observation/AutomatedUnderlyingCauseOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "AutomatedUnderlyingCauseOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-automated-underlying-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-automated-underlying-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"AutomatedUnderlyingCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;AutomatedUnderlyingCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-automated-underlying-cause-of-death.html\">Automated Underlying Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death.underlying [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80358-5)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80358-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80358-5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J96.0" ]
+     ] )
+  ] . # 
+
+<http://www.example.org/fhir/Observation/RecordAxisCauseOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "RecordAxisCauseOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-record-axis-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"RecordAxisCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;RecordAxisCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-record-axis-cause-of-death.html\">Record Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death record axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80357-7)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></td><td>1</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80357-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80357-7" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J96.0" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "position" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "EntityAxisCauseOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EntityAxisCauseOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EntityAxisCauseOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-entity-axis-cause-of-death.html\">Entity Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death entity axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80356-9)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Acute respiratory failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#J96.0)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></p><p><b>value</b>: 1</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80356-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80356-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J96.0" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "position" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example2> a fhir:Observation ;
+  fhir:id [ fhir:v "EntityAxisCauseOfDeath-Example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EntityAxisCauseOfDeath-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EntityAxisCauseOfDeath-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-entity-axis-cause-of-death.html\">Entity Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death entity axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80356-9)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Burn of respiratory tract, part unspecified <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#T27.3)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></p><p><b>value</b>: 1</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80356-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80356-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "T27.3" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "position" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example3> a fhir:Observation ;
+  fhir:id [ fhir:v "EntityAxisCauseOfDeath-Example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EntityAxisCauseOfDeath-Example3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EntityAxisCauseOfDeath-Example3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-entity-axis-cause-of-death.html\">Entity Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death entity axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80356-9)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Exposure to uncontrolled fire in building or structure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#X00)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: e Code Indicator <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#eCodeIndicator)</span></p><p><b>value</b>: true</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80356-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80356-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "X00" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "position" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "eCodeIndicator" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "true"^^xsd:boolean ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/EntityAxisCauseOfDeath-Example4> a fhir:Observation ;
+  fhir:id [ fhir:v "EntityAxisCauseOfDeath-Example4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-entity-axis-cause-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"EntityAxisCauseOfDeath-Example4\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;EntityAxisCauseOfDeath-Example4&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-entity-axis-cause-of-death.html\">Entity Axis Cause Of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death entity axis code [Automated] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80356-9)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Burn of other parts of respiratory tract <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-icd10.html\">ICD-10</a>#T27.2)</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: position <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#position)</span></p><p><b>value</b>: 3</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: e Code Indicator <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#eCodeIndicator)</span></p><p><b>value</b>: false</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80356-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80356-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "T27.2" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "position" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "3"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "eCodeIndicator" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/PlaceOfInjury-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "PlaceOfInjury-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-place-of-injury"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-place-of-injury>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"PlaceOfInjury-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;PlaceOfInjury-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-place-of-injury.html\">Place Of Injury</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Injury location <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11376-1)</span></p><p><b>subject</b>: <span>: NCHS generated</span></p><p><b>value</b>: Home <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA14084-0)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11376-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11376-1" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "NCHS generated" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a loinc:LA14084-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "LA14084-0" ] ;
+       fhir:display [ fhir:v "Home" ]
+     ] )
+  ] . # 
+
+<http://www.example.org/fhir/Parameter/CodingStatusValues-Example1> a fhir:Parameters ;
+  fhir:id [ fhir:v "CodingStatusValues-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-coding-status-values>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "shipmentNumber" ] ;
+     fhir:value [ fhir:v "A2B2" ]
+  ] [
+     fhir:name [ fhir:v "receiptDate" ] ;
+     fhir:value [ fhir:v "2021-12-12"^^xsd:date ]
+  ] [
+     fhir:name [ fhir:v "coderStatus" ] ;
+     fhir:value [ fhir:v "5"^^xsd:integer ]
+  ] [
+     fhir:name [ fhir:v "intentionalReject" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-intentional-reject-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Reject1" ]
+       ] )
+     ]
+  ] [
+     fhir:name [ fhir:v "acmeSystemReject" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-system-reject-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "Not Rejected" ]
+       ] )
+     ]
+  ] [
+     fhir:name [ fhir:v "transaxConversion" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-transax-conversion-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "Conversion using non-ambivalent table entries" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/DecedentPregnancyStatus-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "DecedentPregnancyStatus-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-pregnancy-status>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"DecedentPregnancyStatus-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;DecedentPregnancyStatus-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-decedent-pregnancy-status.html\">Decedent Pregnancy</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Timing of recent pregnancy in relation to death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69442-2)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>value</b>: Pregnant at time of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-CodeSystem-death-pregnancy-status.html\">Death Pregnancy Status Codesystem</a>#2)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69442-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69442-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/vr-common-library/StructureDefinition/BypassEditFlag"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-vr-edit-flags"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "2" ] ;
+           fhir:display [ fhir:v "Edit Failed, Data Queried, but not Verified" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/CodeSystem-death-pregnancy-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2" ] ;
+       fhir:display [ fhir:v "Pregnant at time of death" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> a fhir:us .
+
+<http://www.example.org/fhir/Observation/TobaccoUseContributedToDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "TobaccoUseContributedToDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-tobacco-use-contributed-to-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"TobaccoUseContributedToDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;TobaccoUseContributedToDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-tobacco-use-contributed-to-death.html\">Tobacco Use Contributed To Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Did tobacco use contribute to death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69443-0)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69443-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69443-0" ] ;
+       fhir:display [ fhir:v "Did tobacco use contribute to death" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:373066001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "373066001" ] ;
+       fhir:display [ fhir:v "Yes" ]
+     ] )
+  ] . # 
+
+<http://www.example.org/fhir/Observation/SurgeryDate-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "SurgeryDate-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-surgery-date"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-surgery-date>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"SurgeryDate-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;SurgeryDate-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-surgery-date.html\">Surgery Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of surgery <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#80992-1)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>effective</b>: 2019-11-12</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80992-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80992-1" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2019-11-12"^^xsd:date] . # 
+
+<http://www.example.org/fhir/Observation/MannerOfDeath-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "MannerOfDeath-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-manner-of-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"MannerOfDeath-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;MannerOfDeath-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-manner-of-death.html\">Manner of Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Manner of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69449-7)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performer</b>: <a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</p><p><b>value</b>: Natural death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#38605008)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69449-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69449-7" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+     fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:38605008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "38605008" ] ;
+       fhir:display [ fhir:v "Natural death" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> a fhir:us .
+
+<http://www.example.org/fhir/Observation/InjuryIncident-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "InjuryIncident-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-injury-incident>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"InjuryIncident-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;InjuryIncident-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-injury-incident.html\">Injury Incident</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Injury incident description Narrative <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11374-6)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>effective</b>: 2019-11-02 13:00:00-0500</p><p><b>value</b>: drug toxicity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Did death result from injury at work <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69444-8)</span></p><p><b>value</b>: No <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#N)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Place of injury Facility <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69450-5)</span></p><p><b>value</b>: Home <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Transportation role of decedent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69451-3)</span></p><p><b>value</b>: Hoverboard Rider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a>#OTH &quot;Other&quot;)</span></p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11374-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11374-6" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2019-11-02T13:00:00-05:00"^^xsd:dateTime] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "drug toxicity" ]
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69444-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69444-8" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "No" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69450-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69450-5" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Home" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69451-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69451-3" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "Other" ]
+       ] ) ;
+       fhir:text [ fhir:v "Hoverboard Rider" ]
+     ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Procedure/DeathCertification-Example2> a fhir:Procedure ;
+  fhir:id [ fhir:v "DeathCertification-Example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certification>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"DeathCertification-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;DeathCertification-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certification.html\">Death Certification Procedure</a></p></div><p><b>identifier</b>: id: 180</p><p><b>status</b>: completed</p><p><b>code</b>: Death certification <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#308646001)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performed</b>: 2020-11-14 16:39:40-0500</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>Death certification and verification by physician (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#434641000124105)</span></td><td><a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "180" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:308646001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "308646001" ] ;
+       fhir:display [ fhir:v "Death certification" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performed [ fhir:v "2020-11-14T16:39:40-05:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         a sct:434641000124105 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "434641000124105" ] ;
+         fhir:display [ fhir:v "Death certification and verification by physician (procedure)" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+       fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+     ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "CauseOfDeathPart1-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart1-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart1-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part1.html\">Cause Of Death Part 1</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69453-9)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performer</b>: <a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</p><p><b>value</b>: Cardiopulmonary arrest <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 1</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Disease onset to death interval <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69440-6)</span></p><p><b>value</b>: 4 hours</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69453-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69453-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+     fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "Cardiopulmonary arrest" ]
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69440-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69440-6" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "4 hours" ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/CauseOfDeathPart1-Example2> a fhir:Observation ;
+  fhir:id [ fhir:v "CauseOfDeathPart1-Example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part1>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart1-Example2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart1-Example2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part1.html\">Cause Of Death Part 1</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Cause of death [US Standard Certificate of Death] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69453-9)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performer</b>: <a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</p><p><b>value</b>: Eclampsia <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><blockquote><p><b>component</b></p><p><b>code</b>: line number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-component-cs.html\">Local Component Codes</a>#lineNumber)</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Disease onset to death interval <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69440-6)</span></p><p><b>value</b>: 3 months</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69453-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69453-9" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+     fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "Eclampsia" ]
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "lineNumber" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69440-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69440-6" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "3 months" ]
+  ] ) . # 
+
+<http://www.example.org/fhir/Observation/CauseOfDeathPart2-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "CauseOfDeathPart2-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part2"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-cause-of-death-part2>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"CauseOfDeathPart2-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;CauseOfDeathPart2-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-cause-of-death-part2.html\">Cause of Death Part 2</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Other significant causes or conditions of death <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69441-4)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>performer</b>: <a href=\"Practitioner-Certifier-Example1.html\">Practitioner/Certifier-Example1</a> &quot; BLACK&quot;</p><p><b>value</b>: hypertensive heart disease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69441-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69441-4" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/Certifier-Example1> ;
+     fhir:reference [ fhir:v "Practitioner/Certifier-Example1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "hypertensive heart disease" ]
+  ] . # 
+
+<http://www.example.org/fhir/Observation/AutopsyPerformedIndicator-Example1> a fhir:Observation ;
+  fhir:id [ fhir:v "AutopsyPerformedIndicator-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-autopsy-performed-indicator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"AutopsyPerformedIndicator-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;AutopsyPerformedIndicator-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-autopsy-performed-indicator.html\">Autopsy Performed Indicator</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Autopsy was performed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#85699-7)</span></p><p><b>subject</b>: <a href=\"Patient-Decedent-Example1.html\">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Autopsy results available <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69436-4)</span></td><td>Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a>#Y)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:85699-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "85699-7" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/Decedent-Example1> ;
+     fhir:reference [ fhir:v "Patient/Decedent-Example1" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Y" ] ;
+       fhir:display [ fhir:v "Yes" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:69436-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "69436-4" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Y" ] ;
+         fhir:display [ fhir:v "Yes" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

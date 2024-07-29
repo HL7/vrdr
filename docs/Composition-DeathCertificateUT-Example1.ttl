@@ -1,0 +1,226 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/vrdr/Composition/DeathCertificateUT-Example1> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DeathCertificateUT-Example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"DeathCertificateUT-Example1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;DeathCertificateUT-Example1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-vrdr-death-certificate.html\">Death Certificate</a></p></div><p><b>Filing Format</b>: Electronic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-vrdr-filing-format-cs.html\">Filing Formats</a>#electronic)</span></p><p><b>State Specific Field</b>: 20220101</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2022-12-01 02:46:13-0500</p><p><b>author</b>: <a href=\"Practitioner-PractitionerUT-Certifier.html\">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</p><p><b>title</b>: Death Certificate for Davis Lineberry Jr</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>legal</td><td><a href=\"Practitioner-PractitionerUT-Certifier.html\">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</td></tr></table><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>Death certificate (record artifact) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#307930005)</span></td><td><a href=\"Procedure-ProcedureDeathCertificationUT-Example1.html\">Procedure/ProcedureDeathCertificationUT-Example1</a></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "electronic" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "20220101" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:64297-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "64297-5" ] ;
+       fhir:display [ fhir:v "Death certificate" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> ;
+     fhir:reference [ fhir:v "Patient/DecedentUT-Example1" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-12-01T02:46:13-05:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/PractitionerUT-Certifier> ;
+     fhir:reference [ fhir:v "Practitioner/PractitionerUT-Certifier" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Death Certificate for Davis Lineberry Jr"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:party [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/PractitionerUT-Certifier> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerUT-Certifier" ]
+     ]
+  ] ) ; # 
+  fhir:event ( [
+     fhir:code ( [
+       fhir:coding ( [
+         a sct:307930005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "307930005" ] ;
+         fhir:display [ fhir:v "Death certificate (record artifact)" ]
+       ] )
+     ] ) ;
+     fhir:detail ( [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Procedure/ProcedureDeathCertificationUT-Example1> ;
+       fhir:reference [ fhir:v "Procedure/ProcedureDeathCertificationUT-Example1" ]
+     ] )
+  ] ) ; # 
+  fhir:section ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DecedentDemographics" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> ;
+       fhir:reference [ fhir:v "Patient/DecedentUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/BirthRecordIdentifierUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/BirthRecordIdentifierUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/InputRaceAndEthnicityUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/InputRaceAndEthnicityUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/EducationUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/EducationUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/AgeUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/AgeUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/RelatedPerson/FatherUT-Example1> ;
+       fhir:reference [ fhir:v "RelatedPerson/FatherUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/RelatedPerson/MotherUT-Example1> ;
+       fhir:reference [ fhir:v "RelatedPerson/MotherUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/UsualWorkUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/UsualWorkUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/MilitaryServiceUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/MilitaryServiceUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/EmergingIssuesUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/EmergingIssuesUT-Example1" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DeathCertification" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Practitioner/PractitionerUT-Certifier> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerUT-Certifier" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/InjuryIncidentUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/InjuryIncidentUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Procedure/ProcedureDeathCertificationUT-Example1> ;
+       fhir:reference [ fhir:v "Procedure/ProcedureDeathCertificationUT-Example1" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DeathInvestigation" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/AutopsyPerformedIndicatorUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/AutopsyPerformedIndicatorUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/CauseOfDeathPart1UT-Example1> ;
+       fhir:reference [ fhir:v "Observation/CauseOfDeathPart1UT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/DeathDateUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/DeathDateUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/PregnancyUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/PregnancyUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/TobaccoUseUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/TobaccoUseUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Location/DeathLocationUT-Example1> ;
+       fhir:reference [ fhir:v "Location/DeathLocationUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/MannerOfDeathUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/MannerOfDeathUT-Example1" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DecedentDisposition" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Organization/FuneralHomeUT-Example1> ;
+       fhir:reference [ fhir:v "Organization/FuneralHomeUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Observation/DispositionMethodUT-Example1> ;
+       fhir:reference [ fhir:v "Observation/DispositionMethodUT-Example1" ]
+     ] [
+       fhir:link <http://hl7.org/fhir/us/vrdr/Location/DispositionLocationUT-Example1> ;
+       fhir:reference [ fhir:v "Location/DispositionLocationUT-Example1" ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/us/vrdr/Patient/DecedentUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Practitioner/PractitionerUT-Certifier> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Procedure/ProcedureDeathCertificationUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/BirthRecordIdentifierUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/InputRaceAndEthnicityUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/EducationUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/AgeUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/RelatedPerson/FatherUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/RelatedPerson/MotherUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/UsualWorkUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/MilitaryServiceUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/EmergingIssuesUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/InjuryIncidentUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/AutopsyPerformedIndicatorUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/CauseOfDeathPart1UT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/DeathDateUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/PregnancyUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/TobaccoUseUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Location/DeathLocationUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/MannerOfDeathUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Organization/FuneralHomeUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Observation/DispositionMethodUT-Example1> a fhir:us .
+
+<http://hl7.org/fhir/us/vrdr/Location/DispositionLocationUT-Example1> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

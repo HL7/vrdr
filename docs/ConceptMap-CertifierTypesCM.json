@@ -1,0 +1,109 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "CertifierTypesCM",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-certifier-types-vs.html\">Certifier Types Value Set</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR CertifierTypes Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>D (Certifying Physician)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>434651000124107 (Certifying physician.)</td></tr><tr><td>P (Pronouncing and Certifying Physician)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>434641000124105 (Pronouncing &amp; Certifying physician.)</td></tr><tr><td>M (Medical Examiner/Coroner)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>455381000124109 (Medical Examiner/Coroner)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>freetext (Other Individual Legally Allowed to Certify)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>OTH (other)</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pher"
+  }],
+  "url" : "http://hl7.org/fhir/us/vrdr/ConceptMap/CertifierTypesCM",
+  "version" : "3.0.0-preview1",
+  "name" : "CertifierTypes",
+  "title" : "CertifierTypes Concept Map",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-29T13:06:08-04:00",
+  "publisher" : "HL7 International / Public Health",
+  "contact" : [{
+    "name" : "HL7 International / Public Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/pher"
+    },
+    {
+      "system" : "email",
+      "value" : "pher@lists.HL7.org"
+    }]
+  }],
+  "description" : "A mapping between NCHS IJE and FHIR CertifierTypes Value Sets",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus"
+    },
+    "valueCodeableConcept" : {
+      "text" : "for IJE to FHIR alignment"
+    }
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "purpose" : "To help implementers map from IJE to FHIR Vocabulary",
+  "targetCanonical" : "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-certifier-types-vs",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://snomed.info/sct",
+    "element" : [{
+      "code" : "D",
+      "display" : "Certifying Physician",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "434651000124107",
+        "display" : "Certifying physician.",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "Pronouncing and Certifying Physician",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "434641000124105",
+        "display" : "Pronouncing & Certifying physician.",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "M",
+      "display" : "Medical Examiner/Coroner",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "455381000124109",
+        "display" : "Medical Examiner/Coroner",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "element" : [{
+      "code" : "freetext",
+      "display" : "Other Individual Legally Allowed to Certify",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "OTH",
+        "display" : "other",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

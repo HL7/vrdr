@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="MortalityRosterBundle-Example1"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/AliasStatus">
+      <valueBoolean value="false"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/ReplaceStatus">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-replace-status-cs"/>
+          <code value="original"/>
+          <display value="original record"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-mortality-roster-bundle"/>
+  </meta>
+  <identifier>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/CertificateNumber">
+      <valueString value="000182"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier1">
+      <valueString value="000000000001"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/AuxiliaryStateIdentifier2">
+      <valueString value="100000000001"/>
+    </extension>
+    <value value="2020NY000182"/>
+  </identifier>
+  <type value="collection"/>
+  <timestamp value="2020-10-20T14:48:35.401641-04:00"/>
+  <entry>
+    <fullUrl value="http://www.example.org/fhir/Patient/Decedent-Example3"/>
+    <resource>
+      <Patient>
+        <id value="Decedent-Example3"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Decedent-Example3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;Decedent-Example3&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-decedent.html">Decedent</a></p></div><p><b>NVSS SexAtDeath</b>: Unknown <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a>#unknown)</span></p><p><b>Patient Birth Place</b>: NY US </p><p><b>identifier</b>: Social Beneficiary Identifier: &lt;a href=&quot;http://terminology.hl7.org/5.0.0/NamingSystem-ssn.html&quot;&gt;SSN&lt;/a&gt;#987654321</p><p><b>name</b>: Madelyn Patel (OFFICIAL), Joyce McCain(MAIDEN)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1978-03-12</p><p><b>address</b>: NY </p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/NVSS-SexAtDeath">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/administrative-gender"/>
+              <code value="unknown"/>
+              <display value="Unknown"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+          <valueAddress>
+            <state value="NY"/>
+            <country value="US"/>
+          </valueAddress>
+        </extension>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="SB"/>
+              <display value="Social Beneficiary Identifier"/>
+            </coding>
+          </type>
+          <system value="http://hl7.org/fhir/sid/us-ssn"/>
+          <value value="987654321"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="Patel"/>
+          <given value="Madelyn"/>
+        </name>
+        <name>
+          <use value="maiden"/>
+          <text value="Joyce McCain"/>
+          <family value="McCain"/>
+          <given value="Joyce"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1978-03-12"/>
+        <address>
+          <state value="NY"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.example.org/fhir/RelatedPerson/DecedentFather-Example1"/>
+    <resource>
+      <RelatedPerson>
+        <id value="DecedentFather-Example1"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-father"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="DecedentFather-Example1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;DecedentFather-Example1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-decedent-father.html">Decedent Father</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href="Patient-Decedent-Example1.html">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>relationship</b>: father <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html">RoleCode</a>#FTH)</span></p><p><b>name</b>: Decedent Dad(OFFICIAL)</p></div>
+        </text>
+        <active value="true"/>
+        <patient>
+          <reference value="Patient/Decedent-Example1"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FTH"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <text value="Decedent Dad"/>
+          <family value="Smith"/>
+          <given value="John"/>
+          <suffix value="Sr"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.example.org/fhir/RelatedPerson/DecedentMother-Example1"/>
+    <resource>
+      <RelatedPerson>
+        <id value="DecedentMother-Example1"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-decedent-mother"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="DecedentMother-Example1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;DecedentMother-Example1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-decedent-mother.html">Decedent Mother</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href="Patient-Decedent-Example1.html">Patient/Decedent-Example1</a> &quot; PATEL&quot;</p><p><b>relationship</b>: mother <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html">RoleCode</a>#MTH)</span></p><p><b>name</b>: Decedent Mom(MAIDEN)</p></div>
+        </text>
+        <active value="true"/>
+        <patient>
+          <reference value="Patient/Decedent-Example1"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="maiden"/>
+          <text value="Decedent Mom"/>
+          <family value="Suzette"/>
+          <given value="Jane"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.example.org/fhir/Observation/DeathDate-Example3"/>
+    <resource>
+      <Observation>
+        <id value="DeathDate-Example3"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-date"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="DeathDate-Example3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;DeathDate-Example3&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-death-date.html">Death Date</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date and time of death [TimeStamp] <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#81956-5)</span></p><p><b>subject</b>: <a href="#Patient_Decedent-Example3">See above (Patient/Decedent-Example3)</a></p><p><b>effective</b>: 2020-11-12 16:39:40-0500</p><p><b>value</b>: ??</p></div>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="81956-5"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/Decedent-Example3"/>
+        </subject>
+        <effectiveDateTime value="2020-11-12T16:39:40-05:00"/>
+        <valueDateTime>
+          <extension url="http://hl7.org/fhir/us/vr-common-library/StructureDefinition/Extension-partial-date-time-vr">
+            <extension url="day">
+              <valueUnsignedInt>
+                <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+                  <valueCode value="unknown"/>
+                </extension>
+              </valueUnsignedInt>
+            </extension>
+            <extension url="year">
+              <valueUnsignedInt value="2020"/>
+            </extension>
+            <extension url="month">
+              <valueUnsignedInt value="11"/>
+            </extension>
+            <extension url="time">
+              <valueTime>
+                <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+                  <valueCode value="unknown"/>
+                </extension>
+              </valueTime>
+            </extension>
+          </extension>
+        </valueDateTime>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.example.org/fhir/Location/DeathLocation-Example3"/>
+    <resource>
+      <Location>
+        <id value="DeathLocation-Example3"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-location"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="DeathLocation-Example3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location &quot;DeathLocation-Example3&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-death-location.html">Death Location</a></p></div><p><b>name</b>: Pecan Grove Nursing Home</p><p><b>type</b>: Death Location <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-vrdr-location-type-cs.html">Location Type</a>#death)</span></p><p><b>address</b>: NY US </p></div>
+        </text>
+        <name value="Pecan Grove Nursing Home"/>
+        <type>
+          <coding>
+            <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs"/>
+            <code value="death"/>
+          </coding>
+        </type>
+        <address>
+          <state value="NY"/>
+          <country value="US"/>
+        </address>
+      </Location>
+    </resource>
+  </entry>
+</Bundle>

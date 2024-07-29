@@ -1,0 +1,109 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "SpouseAliveCM",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-spouse-alive-vs.html\">Spouse Alive ValueSet</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR SpouseAlive Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://hl7.org/fhir/R4/v2/0136/index.html\">v2 Y/N Indicator</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>1 (Yes)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>Y (Yes)</td></tr><tr><td>2 (No)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>N (No)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>8 (Unmarried)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>NA (not applicable)</td></tr><tr><td>9 (Unknown)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>UNK (unknown)</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pher"
+  }],
+  "url" : "http://hl7.org/fhir/us/vrdr/ConceptMap/SpouseAliveCM",
+  "version" : "3.0.0-preview1",
+  "name" : "SpouseAlive",
+  "title" : "SpouseAlive Concept Map",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-29T13:06:08-04:00",
+  "publisher" : "HL7 International / Public Health",
+  "contact" : [{
+    "name" : "HL7 International / Public Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/pher"
+    },
+    {
+      "system" : "email",
+      "value" : "pher@lists.HL7.org"
+    }]
+  }],
+  "description" : "A mapping between NCHS IJE and FHIR SpouseAlive Value Sets",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus"
+    },
+    "valueCodeableConcept" : {
+      "text" : "for IJE to FHIR alignment"
+    }
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "purpose" : "To help implementers map from IJE to FHIR Vocabulary",
+  "targetCanonical" : "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-spouse-alive-vs",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+    "element" : [{
+      "code" : "1",
+      "display" : "Yes",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "Y",
+        "display" : "Yes",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "2",
+      "display" : "No",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "N",
+        "display" : "No",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "element" : [{
+      "code" : "8",
+      "display" : "Unmarried",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "NA",
+        "display" : "not applicable",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "9",
+      "display" : "Unknown",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "UNK",
+        "display" : "unknown",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

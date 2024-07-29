@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="DeathCertificateUT-Example1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/vrdr/StructureDefinition/vrdr-death-certificate"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Composition</b><a name="DeathCertificateUT-Example1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Composition &quot;DeathCertificateUT-Example1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vrdr-death-certificate.html">Death Certificate</a></p></div><p><b>Filing Format</b>: Electronic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-vrdr-filing-format-cs.html">Filing Formats</a>#electronic)</span></p><p><b>State Specific Field</b>: 20220101</p><p><b>status</b>: final</p><p><b>type</b>: Death certificate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#64297-5)</span></p><p><b>date</b>: 2022-12-01 02:46:13-0500</p><p><b>author</b>: <a href="Practitioner-PractitionerUT-Certifier.html">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</p><p><b>title</b>: Death Certificate for Davis Lineberry Jr</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>legal</td><td><a href="Practitioner-PractitionerUT-Certifier.html">Practitioner/PractitionerUT-Certifier</a> &quot; HARRISON&quot;</td></tr></table><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td>Death certificate (record artifact) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#307930005)</span></td><td><a href="Procedure-ProcedureDeathCertificationUT-Example1.html">Procedure/ProcedureDeathCertificationUT-Example1</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/FilingFormat">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-filing-format-cs"/>
+        <code value="electronic"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/vrdr/StructureDefinition/StateSpecificField">
+    <valueString value="20220101"/>
+  </extension>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="64297-5"/>
+      <display value="Death certificate"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/DecedentUT-Example1"/>
+  </subject>
+  <date value="2022-12-01T02:46:13-05:00"/>
+  <author>
+    <reference value="Practitioner/PractitionerUT-Certifier"/>
+  </author>
+  <title value="Death Certificate for Davis Lineberry Jr"/>
+  <attester>
+    <mode value="legal"/>
+    <party>
+      <reference value="Practitioner/PractitionerUT-Certifier"/>
+    </party>
+  </attester>
+  <event>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="307930005"/>
+        <display value="Death certificate (record artifact)"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Procedure/ProcedureDeathCertificationUT-Example1"/>
+    </detail>
+  </event>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DecedentDemographics"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Patient/DecedentUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/BirthRecordIdentifierUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/InputRaceAndEthnicityUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/EducationUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/AgeUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="RelatedPerson/FatherUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="RelatedPerson/MotherUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/UsualWorkUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/MilitaryServiceUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/EmergingIssuesUT-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DeathCertification"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Practitioner/PractitionerUT-Certifier"/>
+    </entry>
+    <entry>
+      <reference value="Observation/InjuryIncidentUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Procedure/ProcedureDeathCertificationUT-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DeathInvestigation"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Observation/AutopsyPerformedIndicatorUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/CauseOfDeathPart1UT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DeathDateUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/PregnancyUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/TobaccoUseUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Location/DeathLocationUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/MannerOfDeathUT-Example1"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-document-section-cs"/>
+        <code value="DecedentDisposition"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Organization/FuneralHomeUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Observation/DispositionMethodUT-Example1"/>
+    </entry>
+    <entry>
+      <reference value="Location/DispositionLocationUT-Example1"/>
+    </entry>
+  </section>
+</Composition>

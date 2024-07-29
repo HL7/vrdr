@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="PlaceOfDeathCM"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Mapping from (not specified) to <a href="ValueSet-vrdr-place-of-death-vs.html">Place of Death ValueSet</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href="http://www.hl7.org/Special/committees/pher">http://www.hl7.org/Special/com...</a>, <a href="mailto:pher@lists.HL7.org">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets</p>
+</div><br/><p><b>Group 1</b>Mapping from <a href="https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html">Placeholder Code System for IJE in Vital Records</a> to <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>1 (Inpatient)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>16983000 (Death in hospital)</td></tr><tr><td>2 (Emergency Room/Outpatient)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>450391000124102 (Death in hospital-based emergency department or outpatient department)</td></tr><tr><td>3 (Dead on Arrival)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>63238001 (Dead on arrival at hospital)</td></tr><tr><td>4 (Decedent's Home)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>440081000124100 (Death in home)</td></tr><tr><td>5 (Hospice Facility)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>440071000124103 (Death in hospice)</td></tr><tr><td>6 (Nursing Home/Long Term Care Facility)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>450381000124100 (Death in nursing home or long term care facility)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href="https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html">Placeholder Code System for IJE in Vital Records</a> to <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html">NullFlavor</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>7 (Other)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>OTH (other)</td></tr><tr><td>9 (Unknown)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null"/></td><td>UNK (unknown)</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/vrdr/ConceptMap/PlaceOfDeathCM"/>
+  <version value="3.0.0-preview1"/>
+  <name value="PlaceOfDeath"/>
+  <title value="PlaceOfDeath Concept Map"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-07-29T13:06:08-04:00"/>
+  <publisher value="HL7 International / Public Health"/>
+  <contact>
+    <name value="HL7 International / Public Health"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="pher@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets"/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+    </code>
+    <valueCodeableConcept>
+      <text value="for IJE to FHIR alignment"/>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="To help implementers map from IJE to FHIR Vocabulary"/>
+  <targetCanonical value="http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-death-vs"/>
+  <group>
+    <source value="http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="1"/>
+      <display value="Inpatient"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="16983000"/>
+        <display value="Death in hospital"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2"/>
+      <display value="Emergency Room/Outpatient"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="450391000124102"/>
+        <display value="Death in hospital-based emergency department or outpatient department"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3"/>
+      <display value="Dead on Arrival"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="63238001"/>
+        <display value="Dead on arrival at hospital"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4"/>
+      <display value="Decedent's Home"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="440081000124100"/>
+        <display value="Death in home"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5"/>
+      <display value="Hospice Facility"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="440071000124103"/>
+        <display value="Death in hospice"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6"/>
+      <display value="Nursing Home/Long Term Care Facility"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="450381000124100"/>
+        <display value="Death in nursing home or long term care facility"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <element>
+      <code value="7"/>
+      <display value="Other"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9"/>
+      <display value="Unknown"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="UNK"/>
+        <display value="unknown"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

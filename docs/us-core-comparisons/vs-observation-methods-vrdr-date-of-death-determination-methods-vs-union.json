@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "7fb60456-b01b-41a4-9028-876b2c4e9e5a-563",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/7fb60456-b01b-41a4-9028-876b2c4e9e5a-563",
+  "name" : "UnionObservationMethodsAndDateOfDeathDeterminationMethodsVS",
+  "title" : "Union of Observation Methods And Date of Death Determination Methods Value Set",
+  "status" : "draft",
+  "date" : "2024-07-29T13:06:47-04:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "272394005"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "129264002"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "386053000"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-date-of-death-determination-methods-cs",
+      "concept" : [{
+        "code" : "exact",
+        "display" : "Exact"
+      },
+      {
+        "code" : "approximate",
+        "display" : "Approximate"
+      },
+      {
+        "code" : "court-appointed",
+        "display" : "Court Appointed"
+      }]
+    }]
+  }
+}

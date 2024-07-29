@@ -1,0 +1,161 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "PlaceOfDeathCM",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to <a href=\"ValueSet-vrdr-place-of-death-vs.html\">Place of Death ValueSet</a></p><p>DRAFT. Published on 2024-07-29 13:06:08-0400 by HL7 International / Public Health (HL7 International / Public Health: <a href=\"http://www.hl7.org/Special/committees/pher\">http://www.hl7.org/Special/com...</a>, <a href=\"mailto:pher@lists.HL7.org\">pher@lists.HL7.org</a>). </p><div><p>A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>1 (Inpatient)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>16983000 (Death in hospital)</td></tr><tr><td>2 (Emergency Room/Outpatient)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>450391000124102 (Death in hospital-based emergency department or outpatient department)</td></tr><tr><td>3 (Dead on Arrival)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>63238001 (Dead on arrival at hospital)</td></tr><tr><td>4 (Decedent's Home)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>440081000124100 (Death in home)</td></tr><tr><td>5 (Hospice Facility)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>440071000124103 (Death in hospice)</td></tr><tr><td>6 (Nursing Home/Long Term Care Facility)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>450381000124100 (Death in nursing home or long term care facility)</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"https://build.fhir.org/ig/HL7/vr-common-library//CodeSystem-codesystem-ije-vr.html\">Placeholder Code System for IJE in Vital Records</a> to <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-NullFlavor.html\">NullFlavor</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>7 (Other)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>OTH (other)</td></tr><tr><td>9 (Unknown)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#null\"/></td><td>UNK (unknown)</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pher"
+  }],
+  "url" : "http://hl7.org/fhir/us/vrdr/ConceptMap/PlaceOfDeathCM",
+  "version" : "3.0.0-preview1",
+  "name" : "PlaceOfDeath",
+  "title" : "PlaceOfDeath Concept Map",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-29T13:06:08-04:00",
+  "publisher" : "HL7 International / Public Health",
+  "contact" : [{
+    "name" : "HL7 International / Public Health",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/pher"
+    },
+    {
+      "system" : "email",
+      "value" : "pher@lists.HL7.org"
+    }]
+  }],
+  "description" : "A mapping between NCHS IJE and FHIR PlaceOfDeath Value Sets",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus"
+    },
+    "valueCodeableConcept" : {
+      "text" : "for IJE to FHIR alignment"
+    }
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "purpose" : "To help implementers map from IJE to FHIR Vocabulary",
+  "targetCanonical" : "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-place-of-death-vs",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://snomed.info/sct",
+    "element" : [{
+      "code" : "1",
+      "display" : "Inpatient",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "16983000",
+        "display" : "Death in hospital",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "2",
+      "display" : "Emergency Room/Outpatient",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "450391000124102",
+        "display" : "Death in hospital-based emergency department or outpatient department",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "3",
+      "display" : "Dead on Arrival",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "63238001",
+        "display" : "Dead on arrival at hospital",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "4",
+      "display" : "Decedent's Home",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "440081000124100",
+        "display" : "Death in home",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "5",
+      "display" : "Hospice Facility",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "440071000124103",
+        "display" : "Death in hospice",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "6",
+      "display" : "Nursing Home/Long Term Care Facility",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "450381000124100",
+        "display" : "Death in nursing home or long term care facility",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr",
+    "target" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "element" : [{
+      "code" : "7",
+      "display" : "Other",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "OTH",
+        "display" : "other",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "9",
+      "display" : "Unknown",
+      "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
+        "code" : "UNK",
+        "display" : "unknown",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
