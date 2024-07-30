@@ -519,7 +519,7 @@ For Canadian Provinces:
 485,Natality,21,73,3,Residence of Mother--County,COUNTYC,NCHS Instruction Manual: Part 8,,VRCPL,PatientMotherVitalRecords,address.district.extension[districtCode],integer,See [CountyCodes],B,,,,
 838,Fetal Death,21,73,3,Residence of Mother--County,COUNTYC,NCHS Instruction Manual: Part 8,,VRCPL,PatientMotherVitalRecords,address.district.extension[districtCode],integer,See [CountyCodes],B,,,,
 1362,Birth Infant Death,21,73,3,Residence of Mother--County,COUNTYC,NCHS Instruction Manual: Part 8,,,,,,,,,,,
-450,Mortality Roster,21,468,50,Mother's Maiden Surname,MOMMAIDNAME,"Free form literal, left justified; if unknown, leave blank",,VRDR,DecedentMother,"name.family , name.use=maiden",string ,-,,DMOMMDN,,,
+450,Mortality Roster,21,468,50,Mother's Maiden Surname,MOMMAIDNAME,"Free form literal, left justified; if unknown, leave blank",,VRDR,DecedentMother,"name.family , name.use = maiden",string ,-,,DMOMMDN,,,
 1203,ITOP,21,130,5,Patient's Residence - Zip Code,ZIP,5 digits,,not implemented,not implemented,,,,,,,,
 29,Mortality,22,213,2,Birthplace--Country,BPLACE_CNT,NCHS Instruction Manual: Part 8,,VRDR,Decedent,extension[patient-birthPlace].value[x].country ,string,[ValueSetBirthplaceCountryVitalRecords],,y,,,
 1204,ITOP,22,135,28,Patient's Residence city/town literal,CITYTXT,Valid city/town/place literal or blank if unknown,,not implemented,not implemented,,,,,,,,
@@ -701,7 +701,7 @@ For Canadian Provinces:
 490,Natality,26,85,2,Date of Birth (Father)--Month,FDOB_MO,"01-12, 99",,VRCPL,RelatedPersonFatherNaturalVitalRecords,birthDate.value,date,See [PartialDatesAndTimes],B,,,,
 843,Fetal Death,26,85,2,Date of Birth (Father)--Month,FDOB_MO,"01-12, 99",,VRCPL,RelatedPersonFatherNaturalVitalRecords,birthDate.value,date,See [PartialDatesAndTimes],B,,,,
 1367,Birth Infant Death,26,85,2,Date of Birth (Father)--Month,FDOB_MO,"01-12, 99",,,,,,,,,,,
-455,Mortality Roster,26,550,50,Decedent's Maiden Name,DMAIDEN,"Free form literal, left justified; if unknown, leave blank",,VRDR,Decedent,"name.text , name.use=maiden",string,,,,,,
+455,Mortality Roster,26,550,50,Decedent's Maiden Name,DMAIDEN,"Free form literal, left justified; if unknown, leave blank",,VRDR,Decedent,"name.text , name.use = maiden",string,,,,,,
 1208,ITOP,26,247,2,Old NCHS residence state code,RESSTATE,See codes used before new 200x codes -- receiving state will recode,,not implemented,not implemented,,,,,,,,
 34,Mortality,27,227,2,Decedent's Residence--Country,COUNTRYC,NCHS Instruction Manual: Part 8,,VRDR,Decedent,address.country,string,[ValueSetResidenceCountryVitalRecords],,y,,,
 299,Surveillance,27,228,3,County of Death Occurrence,COD,"NCHS Instruction Manual: Part 8
@@ -1608,7 +1608,7 @@ IJE Fetal Death Data Elements: PDIAB, GDIAB, PHYPE, GHYPE, PPB, INFT, PCES, EHYP
 1297,ITOP,115,961,1,"Infection 
 (at time of followup at other facility)",INFECT_F2,"Y, N, U",,not implemented,not implemented,,,,,,,,
 932,Fetal Death,115,495,1,Risk Factors--Poor Pregnancy Outcomes(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),PPO,"Y, N, U",,not implemented,not implemented,,,,-,,,,
-387,Surveillance,116,1975,50,Mother's Maiden Surname,DMOMMDN,"Free form literal; if unknown, leave blank",i,VRDR,DecedentMother,"name.family , name.use=maiden",string ,-,,,,,
+387,Surveillance,116,1975,50,Mother's Maiden Surname,DMOMMDN,"Free form literal; if unknown, leave blank",i,VRDR,DecedentMother,"name.family , name.use = maiden",string ,-,,,,,
 580,Natality,116,727,3,Father's Race Tabulation Variable 16C,FRACE16C,NCHS Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[FirstAmericanIndianCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#codedraceandethnicityFather",codeable,[ValueSetRaceCodeVitalRecords],N,,,,
 1457,Birth Infant Death,116,727,3,Father's Race Tabulation Variable 16C,FRACE16C,NCHS Appendix E,,,,,,,,,,,
 126,Mortality,116,985,4,Date of injury--year,DOI_YR,,,VRDR,InjuryIncident,effective.value,dateTime,See [PartialDatesAndTimes],,y,,,
@@ -1800,7 +1800,7 @@ U = Unknown",,,,,,,,,,,
 2 = Forceps
 3 = Vacuum
 4 = Cesarean
-9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,See  [note on missing method of delivery data],B,,,,
+9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,"[DeliveryRoutesVS] unless unknown, <br />See  [note on missing method of delivery data]",B,,,,
 406,Surveillance,135,,,Cause of Death Part I Line c (coded),*NO IJE MAPPING*,Coded Cause(s) of Death Associated with Text on  Line 1c,,VRDR,CauseOfDeathPart1,"value.coding,   component[lineNumber] = 3",codeable,[ICD10CausesOfDeathVS],,y,,,
 1317,ITOP,135,1128,1,Diagnostic Proc -- Cordocentesis,DIAG_CORD,"Y, N, U",,not implemented,not implemented,,,,,,,,
 599,Natality,135,773,2,Mother's Height--Inches,HIN,"00-11, 99",,BFDR,ObservationMotherHeight,value,quantity,,B,,,,
@@ -1881,7 +1881,7 @@ U = Unknown",,BFDR,ObservationMotherReceivedWICFood,value,codeable,[ValueSetYesN
 1482,Birth Infant Death,141,784,1,Did Mother get WIC Food for Herself?,WIC,"Y = Yes
 N = No
 U = Unknown",,,,,,,,,,,
-413,Surveillance,142,3342,50,Decedent's Maiden Name,DMAIDEN,,i,VRDR,Decedent,"name.text , name.use=maiden",string,-,,,,,
+413,Surveillance,142,3342,50,Decedent's Maiden Name,DMAIDEN,,i,VRDR,Decedent,"name.text , name.use = maiden",string,-,,,,,
 154,Mortality,142,1367,17,Place of Death. Latitude,LAT_D,"As coded by state of occurrence.  Commonly coded with space for a negative sign followed by 2 bytes, a decimal divider, and 6 decimal places.",I,VRDR,DeathLocation,position.latitude,float,-,,,,,
 606,Natality,142,785,2,Previous Live Births Now Living,PLBL,"00-30, 99",,BFDR,ObservationNumberBirthsNowLiving,value,integer,,B,,,,
 1483,Birth Infant Death,142,785,2,Previous Live Births Now Living,PLBL,"00-30, 99",,,,,,,,,,,
@@ -2133,7 +2133,7 @@ Decision: Mimic VRDR",Needs work,FHIR-41386
 635,Natality,171,835,1,Infections Present--Chlamydia,CHAM,"Y, N, U",,BFDR,ConditionInfectionPresentDuringPregnancy,code=105629000 (Chlamydial infection (disorder)),na,See [note on missing infections present data],B,,"Data flows are inconsistent on ""(NCHS DELETED ..)"", but BFDR STU 1 has a mapping",,
 1512,Birth Infant Death,171,835,1,Infections Present--Chlamydia,CHAM,"Y, N, U",,,,,,,,,,,
 988,Fetal Death,171,569,2,Mother's Reported Age,MAGER,"00-98, 99",,BFDR,PatientDecedentFetus,"extension[parentReportedAgeAtDelivery].extension[reportedAge].value, <br />extension[parentReportedAgeAtDelivery].extension[motherOrFather].value='MTH'",quantity,,B,,,Needs work,FHIR-41388
-183,Mortality,171,2058,50,Mother's Maiden Surname,DMOMMDN,"Free form literal; if unknown, leave blank",i,VRDR,DecedentMother,"name.family , name.use=maiden",string ,-,,,,,
+183,Mortality,171,2058,50,Mother's Maiden Surname,DMOMMDN,"Free form literal; if unknown, leave blank",i,VRDR,DecedentMother,"name.family , name.use = maiden",string ,-,,,,,
 989,Fetal Death,172,571,2,Father's Reported Age,FAGER,"00-98, 99",,BFDR,PatientDecedentFetus,"extension[parentReportedAgeAtDelivery].extension[reportedAge].value, <br />extension[parentReportedAgeAtDelivery].extension[motherOrFather].value='FTH'",quantity,,B,,,Needs work,FHIR-41388
 636,Natality,172,836,1,Infections Present--Hepatitis B,HEPB,"Y, N, U",,BFDR,ConditionInfectionPresentDuringPregnancy,code=66071002 (Viral hepatitis type B (disorder)),na,See [note on missing infections present data],B,,,,
 1513,Birth Infant Death,172,836,1,Infections Present--Hepatitis B,HEPB,"Y, N, U",,,,,,,,,,,
@@ -2300,7 +2300,7 @@ IJE Natality Data Elements: INDL, AUGL, NVPR, STER, ANTB, CHOR, ESAN",Replace Ob
 2 = Forceps
 3 = Vacuum
 4 = Cesarean
-9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,See  [note on missing method of delivery data],B,,,,
+9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,"[DeliveryRoutesVS] unless unknown, <br />See  [note on missing method of delivery data]",B,,,,
 1534,Birth Infant Death,193,857,1,Method of Delivery--Route and Method of Delivery,ROUT,"1 = Spontaneous
 2 = Forceps
 3 = Vacuum
@@ -2308,7 +2308,7 @@ IJE Natality Data Elements: INDL, AUGL, NVPR, STER, ANTB, CHOR, ESAN",Replace Ob
 9 = Unknown",,,,,,,,,,,
 1011,Fetal Death,194,1014,1,Other significant causes or conditions - Rupture of membranes prior to onset of labor,COD18b1,"Y = Yes
 N = No",,BFDR,ConditionFetalDeathOtherCauseOrCondition,code=44223004 (Premature rupture of membranes (disorder)),na,,B,,,,
-206,Mortality,194,3342,50,Decedent's Maiden Name,DMAIDEN,,i,VRDR,Decedent,"name.text , name.use=maiden",string,-,,,,,
+206,Mortality,194,3342,50,Decedent's Maiden Name,DMAIDEN,,i,VRDR,Decedent,"name.text , name.use = maiden",string,-,,,,,
 658,Natality,194,858,1,Method of Delivery--Trial of Labor Attempted,TLAB,"Y = Yes
 N = No
 U = Unknown
@@ -2772,10 +2772,10 @@ other = Other unknown = Unknown",,VRCPL,PatientMotherVitalRecords,gender,codeabl
 1081,Fetal Death,264,4029,10,Father's Legal Surname Suffix,DADSUFFIX,Valid suffix,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.suffix, <br />name.use = official",string,,B,,,,
 728,Natality,264,1617,28,Residence Street name,STNAME,parsed residence address,,VRCPL,PatientMotherVitalRecords,address.extension[stname],string,,B,,,,
 1605,Birth Infant Death,264,1617,28,Residence Street name,STNAME,parsed residence address,,,,,,,,,,,
-1082,Fetal Death,265,4039,9,Mother's Social Security Number,MOM_SSN,9 digit SSN; blank if unknown or not sharable,,VRCPL,PatientMotherVitalRecords,identifier.value where system = ‘http://terminology.hl7.org/CodeSystem/v2-0203' <br />and type.coding.code=”SS” ,string,"type.coding.code=""SB"" is deprecated but also supported for compatibility",B,,,,
+1082,Fetal Death,265,4039,9,Mother's Social Security Number,MOM_SSN,9 digit SSN; blank if unknown or not sharable,,VRCPL,PatientMotherVitalRecords,identifier.value where system = ‘http://terminology.hl7.org/CodeSystem/v2-0203' <br />and type.coding.code=”SS” ,string,,B,,,,
 729,Natality,265,1645,10,Residence Street designator,STDESIG,parsed residence address,,VRCPL,PatientMotherVitalRecords,address.extension[stdesig],string,,B,,,,
 1606,Birth Infant Death,265,1645,10,Residence Street designator,STDESIG,parsed residence address,,,,,,,,,,,
-1083,Fetal Death,266,4048,9,Father's Social Security Number,DAD_SSN,9 digit SSN; blank if unknown or not sharable,,VRCPL,RelatedPersonFatherNaturalVitalRecords,identifier.value where system = ‘http://terminology.hl7.org/CodeSystem/v2-0203' <br />and type.coding.code=”SS” ,string,"type.coding.code=""SB"" is deprecated but also supported for compatibility",B,,,,
+1083,Fetal Death,266,4048,9,Father's Social Security Number,DAD_SSN,9 digit SSN; blank if unknown or not sharable,,VRCPL,RelatedPersonFatherNaturalVitalRecords,identifier.value where system = ‘http://terminology.hl7.org/CodeSystem/v2-0203' <br />and type.coding.code=”SS” ,string,,B,,,,
 730,Natality,266,1655,10,Residence Post Directional,POSTDIR,parsed residence address,,VRCPL,PatientMotherVitalRecords,address.extension[postdir],string,,B,,,,
 1607,Birth Infant Death,266,1655,10,Residence Post Directional,POSTDIR,parsed residence address,,,,,,,,,,,
 1084,Fetal Death,267,4057,2,Mother's Age (Calculated),MAGE_CALC,"0-98, 99",,not implemented,not implemented,,,,-,,,,
