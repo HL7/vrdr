@@ -1,7 +1,7 @@
-The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
-
-  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.  A value of 'unknown' will satisfy this requirement.
-  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
+The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
+
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.  A value of 'unknown' will satisfy this requirement.
+  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
   due to lack of a value for gender.
 
 ### IJE Mapping
@@ -89,16 +89,16 @@ The Decedent profile contains basic information about the decedent, including da
   <td>15</td>
   <td>Social Security Number</td>
   <td>SSN</td>
-  <td>identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB"</td>
+  <td>identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SS"</td>
   <td>string</td>
-  <td>-</td>
+  <td>type.coding.code="SB" is deprecated but also supported for compatibility</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>19</td>
   <td>Date of Birth--Year</td>
   <td>DOB_YR</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -107,7 +107,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>20</td>
   <td>Date of Birth--Month</td>
   <td>DOB_MO</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -116,7 +116,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>21</td>
   <td>Date of Birth--Day</td>
   <td>DOB_DY</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -206,7 +206,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>143</td>
   <td>Decedent's spouse living at decedent's DOD?</td>
   <td>SPOUSELV</td>
-  <td>extension[SpouseAlive] </td>
+  <td>extension[Spouse-Alive] </td>
   <td>codeable</td>
   <td> <a href='ValueSet-vrdr-spouse-alive-vs.html'>SpouseAliveVS</a></td>
 </tr>
@@ -359,7 +359,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>201</td>
   <td>Informant's Relationship</td>
   <td>INFORMRELATE</td>
-  <td>contact.type.text </td>
+  <td>contact.relationship.text </td>
   <td>string (30 characters)</td>
   <td>-</td>
 </tr>
@@ -458,7 +458,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>11</td>
   <td>Date of Birth--Month</td>
   <td>DOB_MO</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -467,7 +467,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>12</td>
   <td>Date of Birth--Day</td>
   <td>DOB_DY</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -476,7 +476,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>13</td>
   <td>Date of Birth--Year</td>
   <td>DOB_YR</td>
-  <td>birthDate</td>
+  <td>birthDate.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -557,9 +557,9 @@ The Decedent profile contains basic information about the decedent, including da
   <td>32</td>
   <td>Decedent's SSN (may be used by some jurisdictions when allowed by law, to match with the SSN contained with the birth record)</td>
   <td>SSN</td>
-  <td>identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SB"</td>
+  <td>identifier.value where system = 'http://hl7.org/fhir/sid/us-ssn and type.coding.code="SS"</td>
   <td>string</td>
-  <td>-</td>
+  <td>type.coding.code="SB" is deprecated but also supported for compatibility</td>
 </tr>
 
 </tbody>

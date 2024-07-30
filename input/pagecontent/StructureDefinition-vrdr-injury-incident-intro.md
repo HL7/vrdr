@@ -30,7 +30,7 @@
   <td>114</td>
   <td>Date of injury--month</td>
   <td>DOI_MO</td>
-  <td>effective</td>
+  <td>effective.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -39,7 +39,7 @@
   <td>115</td>
   <td>Date of injury--day</td>
   <td>DOI_DY</td>
-  <td>effective</td>
+  <td>effective.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -48,7 +48,7 @@
   <td>116</td>
   <td>Date of injury--year</td>
   <td>DOI_YR</td>
-  <td>effective</td>
+  <td>effective.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -57,7 +57,7 @@
   <td>117</td>
   <td>Time of injury</td>
   <td>TOI_HR</td>
-  <td>effective</td>
+  <td>effective.value</td>
   <td>dateTime</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td>
 </tr>
@@ -66,7 +66,7 @@
   <td>118</td>
   <td>Injury at work</td>
   <td>WORKINJ</td>
-  <td>component[InjuryAtWork].value</td>
+  <td>component[workInjuryIndicator].value</td>
   <td>codeable</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-yes-no-unknown-not-applicable-vr.html'>ValueSetYesNoUnknownNotApplicableVitalRecords</a></td>
 </tr>
@@ -75,7 +75,7 @@
   <td>126</td>
   <td>Time of Injury Unit</td>
   <td>TOI_UNIT</td>
-  <td>effective</td>
+  <td>effective.value</td>
   <td>implicit</td>
   <td></td>
 </tr>
