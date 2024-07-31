@@ -151,7 +151,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>12</td>
   <td>Mother's Name Prior to First Marriage</td>
   <td><a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a></td>
-  <td>name</td>
+  <td>name , name.use = maiden</td>
 </tr>
 <tr>
   <td style='text-align: center'>13a</td>
@@ -349,7 +349,7 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
   <td style='text-align: center'>41</td>
   <td>Injury at Work?</td>
   <td><a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a></td>
-  <td>component[InjuryAtWork].value</td>
+  <td>component[workInjuryIndicator].value</td>
 </tr>
 <tr>
   <td style='text-align: center'>42</td>

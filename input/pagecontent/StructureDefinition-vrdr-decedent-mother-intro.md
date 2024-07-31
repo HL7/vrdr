@@ -152,7 +152,7 @@
 <tr>
   <td style='text-align: center'>12</td>
   <td>Mother's Name Prior to First Marriage</td>
-  <td>name</td>
+  <td>name , name.use = maiden</td>
   <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
 </tr>
 </tbody>
