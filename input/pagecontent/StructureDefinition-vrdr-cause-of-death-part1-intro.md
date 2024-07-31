@@ -1,4 +1,4 @@
-The certifier of death can be specified by reference to a USCore Practitioner instance from the 'performer' field.   This instance should be included in the <a href='StructureDefinition-vrdr-death-certificate-document.html'>DeathCertificateDocument</a>.
+The certifier of death can be specified by reference to a USCore Practitioner instance (the <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a> profile may be used) from the 'performer' field.   This instance should be included in the <a href='StructureDefinition-vrdr-death-certificate-document.html'>DeathCertificateDocument</a>. 
 
 ### IJE Mapping
 

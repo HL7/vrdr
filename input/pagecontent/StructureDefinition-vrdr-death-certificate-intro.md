@@ -1,7 +1,7 @@
-The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
+The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDocument Bundle.
 
 Notes:
-* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+* The DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
 
 Additional content can be included in the Death Certificate Document and should referenced in the Death Certificate  based on standard resources and profiles.
 At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
