@@ -333,6 +333,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>Decedent's Maiden Name</td>
   <td>DMAIDEN</td>
   <td>name.text , name.use = maiden</td>
+  <td>name.text , name.use = maiden</td>
   <td>string</td>
   <td>-</td>
 </tr>
