@@ -48,7 +48,7 @@
   <td>171</td>
   <td>Mother's Maiden Surname</td>
   <td>DMOMMDN</td>
-  <td>name.family , name.use = maiden</td>
+  <td>name.family , name.use=maiden</td>
   <td>string </td>
   <td>-</td>
 </tr>
@@ -111,7 +111,7 @@
   <td>21</td>
   <td>Mother's Maiden Surname</td>
   <td>MOMMAIDNAME</td>
-  <td>name.family , name.use = maiden</td>
+  <td>name.family , name.use=maiden</td>
   <td>string </td>
   <td>-</td>
 </tr>

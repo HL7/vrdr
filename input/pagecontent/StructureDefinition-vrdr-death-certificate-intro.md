@@ -1,63 +1,63 @@
-The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
-
-Notes:
-* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
-
-Additional content can be included in the Death Certificate Document and should referenced in the Death Certificate  based on standard resources and profiles.
-At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
-For example:
-* Funeral Home Licensee (USCorePractitioner)
-* Funeral Home Director (USCorePractitioner)
-* Death Pronouncement Performer (USCorePractitioner)
-
-The content is broken down into the following sections:
-* Decedent Demographics
-    * <a href='StructureDefinition-vrdr-birth-record-identifier.html'>BirthRecordIdentifier</a>
-    * <a href='StructureDefinition-vrdr-fetal-death-record-identifier.html'>FetalDeathRecordIdentifier</a>
-    * <a href='StructureDefinition-vrdr-birth-record-identifier-child.html'>BirthRecordIdentifierChild</a>
-    * <a href='StructureDefinition-vrdr-decedent.html'>Decedent</a>
-    * <a href='StructureDefinition-vrdr-decedent-age.html'>DecedentAge</a>
-    * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
-    * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
-    * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
-    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
-    * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
-    * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
-    * <a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a>
-* Death Investigation
-    * <a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a>
-    * <a href='StructureDefinition-vrdr-death-date.html'>DeathDate</a>
-    * <a href='StructureDefinition-vrdr-death-location.html'>DeathLocation</a>
-    * <a href='StructureDefinition-vrdr-decedent-pregnancy-status.html'>DecedentPregnancyStatus</a>
-    * <a href='StructureDefinition-vrdr-examiner-contacted.html'>ExaminerContacted</a>
-    * <a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a>
-    * <a href='StructureDefinition-vrdr-injury-location.html'>InjuryLocation</a>
-    * <a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a>
-    * <a href='StructureDefinition-vrdr-tobacco-use-contributed-to-death.html'>TobaccoUseContributedToDeath</a>
-* Death Certification
-    * <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a>
-    * <a href='StructureDefinition-vrdr-death-certification.html'>DeathCertification</a>
-    * <a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a>
-    * <a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a>
-    * <a href='StructureDefinition-vrdr-manner-of-death.html'>MannerOfDeath</a>
-* Decedent Disposition
-    * <a href='StructureDefinition-vrdr-decedent-disposition-method.html'>DecedentDispositionMethod</a>
-    * <a href='StructureDefinition-vrdr-disposition-location.html'>DispositionLocation</a>
-    * <a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a>
-* Coded Content
-    * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
-    * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
-    * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
-    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
-    * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
-    * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
-    * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
-    * <a href='StructureDefinition-vrdr-coding-status-values.html'>CodingStatusValues</a>
-
-**Note:**
-For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
-The replacement status of a submission is now specified as a message parameter and described in the <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content'>NCHS Vital Records Messaging IG</a>.
-
+The Death Certificate profile is a composition referencing the core content of a death registration transmitted in the associated DeathCertificateDOcument Bundle.
+
+Notes:
+* THe DeathCertificate is the first entry in the DeathCertificateDocument, and includes references to other entries in that Bundle.
+
+Additional content can be included in the Death Certificate Document and should referenced in the Death Certificate  based on standard resources and profiles.
+At present, standard USCore profiles can be used, and these are not cited in this Implementation Guide.
+For example:
+* Funeral Home Licensee (USCorePractitioner)
+* Funeral Home Director (USCorePractitioner)
+* Death Pronouncement Performer (USCorePractitioner)
+
+The content is broken down into the following sections:
+* Decedent Demographics
+    * <a href='StructureDefinition-vrdr-birth-record-identifier.html'>BirthRecordIdentifier</a>
+    * <a href='StructureDefinition-vrdr-fetal-death-record-identifier.html'>FetalDeathRecordIdentifier</a>
+    * <a href='StructureDefinition-vrdr-birth-record-identifier-child.html'>BirthRecordIdentifierChild</a>
+    * <a href='StructureDefinition-vrdr-decedent.html'>Decedent</a>
+    * <a href='StructureDefinition-vrdr-decedent-age.html'>DecedentAge</a>
+    * <a href='StructureDefinition-vrdr-decedent-education-level.html'>DecedentEducationLevel</a>
+    * <a href='StructureDefinition-vrdr-decedent-father.html'>DecedentFather</a>
+    * <a href='StructureDefinition-vrdr-decedent-military-service.html'>DecedentMilitaryService</a>
+    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-emerging-issues-vr.html'>ObservationEmergingIssuesVitalRecords</a>
+    * <a href='StructureDefinition-vrdr-decedent-mother.html'>DecedentMother</a>
+    * <a href='StructureDefinition-vrdr-decedent-spouse.html'>DecedentSpouse</a>
+    * <a href='StructureDefinition-vrdr-decedent-usual-work.html'>DecedentUsualWork</a>
+* Death Investigation
+    * <a href='StructureDefinition-vrdr-autopsy-performed-indicator.html'>AutopsyPerformedIndicator</a>
+    * <a href='StructureDefinition-vrdr-death-date.html'>DeathDate</a>
+    * <a href='StructureDefinition-vrdr-death-location.html'>DeathLocation</a>
+    * <a href='StructureDefinition-vrdr-decedent-pregnancy-status.html'>DecedentPregnancyStatus</a>
+    * <a href='StructureDefinition-vrdr-examiner-contacted.html'>ExaminerContacted</a>
+    * <a href='StructureDefinition-vrdr-injury-incident.html'>InjuryIncident</a>
+    * <a href='StructureDefinition-vrdr-injury-location.html'>InjuryLocation</a>
+    * <a href='StructureDefinition-vrdr-surgery-date.html'>SurgeryDate</a>
+    * <a href='StructureDefinition-vrdr-tobacco-use-contributed-to-death.html'>TobaccoUseContributedToDeath</a>
+* Death Certification
+    * <a href='StructureDefinition-vrdr-certifier.html'>Certifier</a>
+    * <a href='StructureDefinition-vrdr-death-certification.html'>DeathCertification</a>
+    * <a href='StructureDefinition-vrdr-cause-of-death-part1.html'>CauseOfDeathPart1</a>
+    * <a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a>
+    * <a href='StructureDefinition-vrdr-manner-of-death.html'>MannerOfDeath</a>
+* Decedent Disposition
+    * <a href='StructureDefinition-vrdr-decedent-disposition-method.html'>DecedentDispositionMethod</a>
+    * <a href='StructureDefinition-vrdr-disposition-location.html'>DispositionLocation</a>
+    * <a href='StructureDefinition-vrdr-funeral-home.html'>FuneralHome</a>
+* Coded Content
+    * <a href='StructureDefinition-vrdr-activity-at-time-of-death.html'>ActivityAtTimeOfDeath</a>
+    * <a href='StructureDefinition-vrdr-automated-underlying-cause-of-death.html'>AutomatedUnderlyingCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-manual-underlying-cause-of-death.html'>ManualUnderlyingCauseOfDeath</a>
+    * <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-coded-race-and-ethnicity-vr.html'>ObservationCodedRaceAndEthnicityVitalRecords</a>
+    * <a href='StructureDefinition-vrdr-entity-axis-cause-of-death.html'>EntityAxisCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-record-axis-cause-of-death.html'>RecordAxisCauseOfDeath</a>
+    * <a href='StructureDefinition-vrdr-place-of-injury.html'>PlaceOfInjury</a>
+    * <a href='StructureDefinition-vrdr-coding-status-values.html'>CodingStatusValues</a>
+
+**Note:**
+For NCHS submissions the replacement record status (REPLACE) has been deprecated within the VRDR IG, and this field be ignored.
+The replacement status of a submission is now specified as a message parameter and described in the <a href='https://build.fhir.org/ig/nightingaleproject/vital_records_fhir_messaging_ig/branches/main/message.html#message-structure-and-content'>NCHS Vital Records Messaging IG</a>.
+
 
 ### IJE Mapping
 
