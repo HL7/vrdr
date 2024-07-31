@@ -152,7 +152,7 @@
 <tr>
   <td style='text-align: center'>41</td>
   <td>Injury at Work?</td>
-  <td>component[InjuryAtWork].value</td>
+  <td>component[workInjuryIndicator].value</td>
   <td><a href='https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf'> Certificate of Death</a></td>
 </tr>
 <tr>
