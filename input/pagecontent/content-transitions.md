@@ -269,7 +269,7 @@
 <td style='background-color:#98c1d9; text-align: center; width: 20%;'><b>Current Version/Location</b></td>
 <td style='background-color:#98c1d9; text-align: center;'><b>Comments/Updates</b></td>
 </tr>
-<tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/CodeSystem-vrdr-bypass-edit-flag-cs.html'>BypassEditFlagCS</a> </td><td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-vr-edit-flags.html'>VRDR</a> </td><td>-</td></tr>
+<tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/CodeSystem-vrdr-bypass-edit-flag-cs.html'>BypassEditFlagCS</a> </td><td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-vr-edit-flags.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/CodeSystem-vrdr-canadian-provinces-cs.html'>CanadianProvincesCS</a> </td><td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-canadian-provinces-vr.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/CodeSystem-vrdr-country-code-cs.html'>CountryCodeCS</a> </td><td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-country-code-vr.html'>VRCL</a> </td><td>-</td></tr>
 <tr><td> <a href='https://hl7.org/fhir/us/vrdr/STU2.2/CodeSystem-vrdr-hispanic-origin-cs.html'>HispanicOriginCS</a> </td><td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/CodeSystem-CodeSystem-hispanic-origin-vr.html'>VRCL</a> </td><td>-</td></tr>
