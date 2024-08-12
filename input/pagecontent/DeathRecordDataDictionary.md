@@ -28,7 +28,7 @@ These fields are included in a VRO's submission of a death record (only input, o
 <tr>
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; width: 10%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
@@ -255,7 +255,7 @@ These fields are included in the coded cause of death content sent by NCHS to VR
 <tr>
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; width: 10%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
@@ -321,7 +321,7 @@ These fields are included in the coded demographic content sent by NCHS to VROs 
 <tr>
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; width: 10%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
@@ -392,7 +392,7 @@ These fields are included in the coded industry and occupation content that is p
 <tr>
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; width: 10%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
