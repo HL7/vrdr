@@ -107,7 +107,7 @@ def printHeader(hHeading, pOutputFile, pIG)
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9;'><b>Field</b></td>"
-      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 7%;'><b>Type</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
       pOutputFile.puts "</tr>"
     end

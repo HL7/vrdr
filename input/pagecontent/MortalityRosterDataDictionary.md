@@ -29,7 +29,7 @@ For example, name fields in IJE (e.g., DINSTI, GNAME) are restricted to 50 chara
 <td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
-<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>
+<td style='background-color:#98c1d9; text-align: center; width: 7%;'><b>Type</b></td>
 <td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>
 </tr>
 <tr><td style='text-align: center;'>8</td><td>Date of Death--Month</td><td>DOD_MO</td><td><a href='StructureDefinition-vrdr-death-date.html'>DeathDate</a></td><td>value</td><td>dateTime</td><td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#partial-dates-and-times'>PartialDatesAndTimes</a></td></tr>
