@@ -177,7 +177,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
             if row[IJE_ONLY_COL].to_s == 'I'
               #ijename = ijename + " &#x1F1FA;&#x1F1F8;"
-              ijename = "<img height='16' img src='usflag.png' alt='#{ijename}'/> #{ijename}"
+              ijename = "#{ijename} <img height='16' img src='usflag.png' alt='#{ijename}'/>"
             end
             fhirig = row[IJE_FHIR_IG_COL] if row[IJE_FHIR_IG_COL]
             profile = "[" + row[IJE_PROFILE_COL] + "]" if row[IJE_PROFILE_COL] 
