@@ -51,6 +51,7 @@ IJE_FHIR_FIELD_COL = 11
 IJE_FHIR_TYPE_COL = 12
 IJE_FHIR_COMMENTS_COL = 13
 IJE_UNIQUENESS_COL = 14
+IJE_NATIONAL_REPORTING_FLAG = 19
 
 # VRDR_Profile_Intros.xlsx columns
 INTRO_ORDER_COL = 0
@@ -175,7 +176,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             field = description = ijename = profile = vProvOutputFilename = fhirfield = fhirtype = fhirencoding = fhirig = fhirunique = ""
             field = row[IJE_FIELD_COL] if row[IJE_FIELD_COL]
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
-            if row[IJE_ONLY_COL].to_s == 'I'
+            if row[IJE_NATIONAL_REPORTING_FLAG].to_s == 'X'
               #ijename = ijename + " &#x1F1FA;&#x1F1F8;"
               ijename = "#{ijename} <img height='16' img src='usflag.png' alt='#{ijename}'/>"
             end
