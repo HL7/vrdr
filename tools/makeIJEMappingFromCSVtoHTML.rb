@@ -105,7 +105,7 @@ def printHeader(hHeading, pOutputFile, pIG)
       pOutputFile.puts "<tr>"
       pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
-      pOutputFile.puts "<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 13%;'><b>IJE Name*</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9;'><b>Field</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 7%;'><b>Type</b></td>"
@@ -141,7 +141,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     border-bottom: 2px solid #98c1d9;
     }
     </style>"
-    printHeader(pHeading, pOutputFile, pRowFilterIG)
+    inputHeader = printHeader(pHeading, pOutputFile, pRowFilterIG)
 
     codedDemoHeader = false
     codedCODHeader = false
@@ -176,10 +176,13 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             field = description = ijename = profile = vProvOutputFilename = fhirfield = fhirtype = fhirencoding = fhirig = fhirunique = ""
             field = row[IJE_FIELD_COL] if row[IJE_FIELD_COL]
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
-            if row[IJE_NATIONAL_REPORTING_FLAG].to_s == 'X'
-              #ijename = ijename + " &#x1F1FA;&#x1F1F8;"
-              ijename = "#{ijename} <img height='16' img src='usflag.png' alt='#{ijename}'/>"
+            if inputHeader == true && codedDemoHeader == false && codedCODHeader == false && notImplementedHeader == false && codedWorkHeader == false
+              if row[IJE_NATIONAL_REPORTING_FLAG].to_s == 'X'
+                #ijename = ijename + " &#x1F1FA;&#x1F1F8;"
+                ijename = "#{ijename} <img height='16' img src='usflag.png' alt='#{ijename}'/>"
+              end
             end
+  
             fhirig = row[IJE_FHIR_IG_COL] if row[IJE_FHIR_IG_COL]
             profile = "[" + row[IJE_PROFILE_COL] + "]" if row[IJE_PROFILE_COL] 
             fhirfield = row[IJE_FHIR_FIELD_COL] if row[IJE_FHIR_FIELD_COL]

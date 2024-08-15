@@ -26,7 +26,7 @@ For example, name fields in IJE (e.g., DINSTI, GNAME) are restricted to 50 chara
 <tr>
 <td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>
 <td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>
-<td style='background-color:#98c1d9; width: 12%;'><b>IJE Name*</b></td>
+<td style='background-color:#98c1d9; width: 13%;'><b>IJE Name*</b></td>
 <td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>
 <td style='background-color:#98c1d9;'><b>Field</b></td>
 <td style='background-color:#98c1d9; text-align: center; width: 7%;'><b>Type</b></td>
