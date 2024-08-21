@@ -70,6 +70,9 @@
 [ObservationEmergingIssuesVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/StructureDefinition-Observation-emerging-issues-vr.html
 [ValueSetJurisdictionVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html
 [ValueSetResidenceCountryVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html
+[ValueSetRaceCodeVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-race-code-vr.html
+[ValueSetHispanicOriginVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-hispanic-origin-vr.html
+[ValueSetRaceRecode40VitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-race-recode-40-vr.html
 [ValueSetUnitsOfAgeVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-units-of-age-vr.html
 [ValueSetEducationLevelVitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-education-level-vr.html
 [ValueSetEditBypass01234VitalRecords]: {{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-valueset-edit-bypass-01234-vr.html

@@ -18,7 +18,7 @@
 
 require_relative "makeExcelFromCSV"
 require "json"
-require "pry"
+#require "pry"
 require "roo"
 require "csv"
 require 'set'
@@ -51,6 +51,7 @@ IJE_FHIR_FIELD_COL = 11
 IJE_FHIR_TYPE_COL = 12
 IJE_FHIR_COMMENTS_COL = 13
 IJE_UNIQUENESS_COL = 14
+IJE_NATIONAL_REPORTING_FLAG = 19
 
 # VRDR_Profile_Intros.xlsx columns
 INTRO_ORDER_COL = 0
@@ -68,7 +69,7 @@ def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
     if hHeading.include?("Death Record IJE Mapping")
       pOutputFile.puts ""
-      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content)."
+      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content). IJE fields that are part of the national reporting standard are denoted with a US Flag symbol. <img height='16' src='usflag.png' alt='usflag'/>"
     end
     if hHeading.include?("Cause of Death")
         pOutputFile.puts ""
@@ -94,7 +95,7 @@ def printHeader(hHeading, pOutputFile, pIG)
       pOutputFile.puts "<tr>"
       pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
-      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 8%;'><b>IJE Name*</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
       pOutputFile.puts "</tr>"
     else
@@ -104,10 +105,10 @@ def printHeader(hHeading, pOutputFile, pIG)
       pOutputFile.puts "<tr>"
       pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 4%;'><b>#</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 16%;'><b>Description</b></td>"
-      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 8%;'><b>IJE Name*</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; width: 13%;'><b>IJE Name*</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 27%;'><b>Profile</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9;'><b>Field</b></td>"
-      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 6%;'><b>Type</b></td>"
+      pOutputFile.puts "<td style='background-color:#98c1d9; text-align: center; width: 7%;'><b>Type</b></td>"
       pOutputFile.puts "<td style='background-color:#98c1d9; width: 14%;'><b>Value Set/Comments</b></td>"
       pOutputFile.puts "</tr>"
     end
@@ -140,7 +141,7 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
     border-bottom: 2px solid #98c1d9;
     }
     </style>"
-    printHeader(pHeading, pOutputFile, pRowFilterIG)
+    inputHeader = printHeader(pHeading, pOutputFile, pRowFilterIG)
 
     codedDemoHeader = false
     codedCODHeader = false
@@ -175,6 +176,13 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             field = description = ijename = profile = vProvOutputFilename = fhirfield = fhirtype = fhirencoding = fhirig = fhirunique = ""
             field = row[IJE_FIELD_COL] if row[IJE_FIELD_COL]
             ijename = row[IJE_NAME_COL] if row[IJE_NAME_COL]
+            if inputHeader == true && codedDemoHeader == false && codedCODHeader == false && notImplementedHeader == false && codedWorkHeader == false
+              if row[IJE_NATIONAL_REPORTING_FLAG].to_s == 'X'
+                #ijename = ijename + " &#x1F1FA;&#x1F1F8;"
+                ijename = "#{ijename} <img height='16' img src='usflag.png' alt='#{ijename}'/>"
+              end
+            end
+  
             fhirig = row[IJE_FHIR_IG_COL] if row[IJE_FHIR_IG_COL]
             profile = "[" + row[IJE_PROFILE_COL] + "]" if row[IJE_PROFILE_COL] 
             fhirfield = row[IJE_FHIR_FIELD_COL] if row[IJE_FHIR_FIELD_COL]
@@ -183,9 +191,9 @@ def createMappingTable(pRowFilterIG, pRowFilter, pHeading, pOutputFile, pIntroSp
             fhirunique = row[IJE_UNIQUENESS_COL] if row[IJE_UNIQUENESS_COL] 
             description = row[IJE_DESC_COL] if row[IJE_DESC_COL]
             if y.to_s == "Not Implemented"
-              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + fhirencoding + "</td></tr>"
+              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td>" + ijename + "</td><td>" + fhirencoding + "</td></tr>"
             else
-              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td style='text-align: center;'>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
+              pOutputFile.puts "<tr><td style='text-align: center;'>" + field.chomp + "</td><td>" + description.chomp + "</td><td>" + ijename + "</td><td>" + profile + "</td><td>" + fhirfield + "</td><td>" + fhirtype + "</td><td>" + fhirencoding + "</td></tr>"
             end
         end
     end
@@ -209,7 +217,10 @@ end
 vOutputFilename = "/generated/dataDictionaries/DeathRecordDataDictionary.md"
 puts vOutputFilename
 vOutputFile = File.open(Dir.pwd + vOutputFilename, "w")
-vOutputFile.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for death to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
+vOutputFile.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for death to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information.
+
+Note that string fields in FHIR-formatted data will often be subject to the same string length limitations of the IJE format for the same content.
+For example, name fields in IJE (e.g., DINSTI, GNAME) are restricted to 50 characters. Including strings longer than the IJE strength length limitations may lead to data truncation and/or business rule violations when data is sent to certain receivers, including NCHS. The IG includes maximum length restrictions on FHIR strings for some fields, and the FHIR validator will flag violations of these conformance restrictions. The IG does not impose maximum length restrictions for general FHIR fields like names and addresses since this seemed an unnatural constraint of widely used FHIR resources."
 
 vOutputFile.puts ""
 createMappingTable("VRDR", "Mortality", "### Death Record IJE Mapping", vOutputFile, vProfileIntrosSpreadsheet, vSpreadsheet)
@@ -221,7 +232,10 @@ createMappingTable("VRDR", "Mortality", "### Death Record IJE Mapping", vOutputF
 vOutputFilename1 = "/generated/dataDictionaries/MortalityRosterDataDictionary.md"
 puts vOutputFilename1
 vOutputFile1 = File.open(Dir.pwd + vOutputFilename1, "w")
-vOutputFile1.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for mortality to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information."
+vOutputFile1.puts "The following table illustrates the mappings of fields in the Interjurisdictional Exchange (IJE) formats for mortality to profiles and fields within this FHIR Implementation guide. This information is provided to guide implementers who are transitioning from the familiar IJE to the new FHIR format for this information.
+
+Note that string fields in FHIR-formatted data will often be subject to the same string length limitations of the IJE format for the same content.
+For example, name fields in IJE (e.g., DINSTI, GNAME) are restricted to 50 characters. Including strings longer than the IJE strength length limitations may lead to data truncation and/or business rule violations when data is sent to certain receivers, including NCHS. The IG includes maximum length restrictions on FHIR strings for some fields, and the FHIR validator will flag violations of these conformance restrictions. The IG does not impose maximum length restrictions for general FHIR fields like names and addresses since this seemed an unnatural constraint of widely used FHIR resources."
 
 vOutputFile1.puts ""
 createMappingTable("VRDR", "Mortality Roster", "### Mortality Roster IJE Mapping", vOutputFile1, vProfileIntrosSpreadsheet, vSpreadsheet)
