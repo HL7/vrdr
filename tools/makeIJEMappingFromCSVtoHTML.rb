@@ -69,7 +69,7 @@ def printHeader(hHeading, pOutputFile, pIG)
     pOutputFile.puts hHeading
     if hHeading.include?("Death Record IJE Mapping")
       pOutputFile.puts ""
-      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content). IJE fields that are part of the national reporting standard are denoted with a US Flag symbol. <img height='16' src='usflag.png' alt='usflag'/>"
+      pOutputFile.puts "These fields are included in a VRO's submission of a death record (only input, or non-coded, content). IJE fields that are part of the [Vital Statistics Cooperative Program (VSCP)](https://www.ncbi.nlm.nih.gov/books/NBK219877/pdf/Bookshelf_NBK219877.pdf) reporting requirements as of 2022 are denoted with a US Flag." 
     end
     if hHeading.include?("Cause of Death")
         pOutputFile.puts ""
