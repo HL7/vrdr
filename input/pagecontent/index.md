@@ -2,7 +2,7 @@
 ### Overview
 
 The VRDR FHIR IG specifies the the use of FHIR resources for the bidirectional exchange of mortality data between Jurisdictional Vital Records Offices (JVRO), and between JVROs and the U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS).  Jurisdictional Vital Records Offices (JVROs) submit vital records data (deaths, births, and fetal deaths) to NCHS under the terms bilateral contracts under the  Vital Statistics Cooperative Program  ([VSCP](https://www.ncbi.nlm.nih.gov/books/NBK219877/pdf/Bookshelf_NBK219877.pdf)).
-The focus of this IG is the specification of data elements, not exchange mechanisms. The exchanged data entities are intended to be bundles representing death records and coded death record content.
+The focus of this IG is the specification of data elements, not exchange mechanisms. The exchanged data entities are intended to be bundles representing death records and associated coded content.
 
 Bidirectional exchange of mortality data between JVRO and NCHS is essential to support effective public health surveillance and emergency response efforts. Modernization of the reporting process should improve the timelineness of resporting and accuracy, and reduce costs. 
 
