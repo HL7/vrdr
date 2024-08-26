@@ -49,7 +49,7 @@
   <td>Death Institution name</td>
   <td>DINSTI</td>
   <td>name</td>
-  <td>string </td>
+  <td>string</td>
   <td>-</td>
 </tr>
 <tr>
@@ -58,7 +58,7 @@
   <td>Long String address for place of death</td>
   <td>ADDRESS_D</td>
   <td>address.line</td>
-  <td>string </td>
+  <td>string</td>
   <td>-</td>
 </tr>
 <tr>
@@ -174,8 +174,8 @@
   <td>239</td>
   <td>Country of Death - Code</td>
   <td>DTHCOUNTRYCD</td>
-  <td>address.country </td>
-  <td>string </td>
+  <td>address.country</td>
+  <td>string</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US</td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@
   <td>Country of Death - Literal</td>
   <td>DTHCOUNTRY</td>
   <td>address.country  (expanded from 2 letter code)</td>
-  <td>string </td>
+  <td>string</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#country-literals'>CountryLiterals</a>.   Not used. For US Death certificates should be 'United States'.</td>
 </tr>
 
@@ -237,9 +237,9 @@
   <td>30</td>
   <td>Death Country - Code</td>
   <td>DCOUNTRYC</td>
-  <td>address.country </td>
-  <td>string </td>
-  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US.   </td>
+  <td>address.country</td>
+  <td>string</td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-residence-country-vr.html'>ValueSetResidenceCountryVitalRecords</a>.  Note: For US Death certificates should be US.</td>
 </tr>
 
 </tbody>

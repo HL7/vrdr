@@ -1,9 +1,3 @@
-Implementors are free to use the coded fields with the defined valuesets for inter-jurisdictional exchange, 
-but coded values are not expected for vital records submissions. 
-
-Note that the coded industry and occupation fields are bound to PHINVADs-hosted value sets. 
-
-For NCHS provided coded values the specific vocabulary used will depend on the death year.
 ### IJE Mapping
 
 <style>
@@ -33,7 +27,7 @@ For NCHS provided coded values the specific vocabulary used will depend on the d
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>84</td>
-  <td>Occupation -- Literal </td>
+  <td>Occupation -- Literal</td>
   <td>OCCUP</td>
   <td>value.text</td>
   <td>string(40)</td>
@@ -42,7 +36,7 @@ For NCHS provided coded values the specific vocabulary used will depend on the d
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>86</td>
-  <td>Industry -- Literal </td>
+  <td>Industry -- Literal</td>
   <td>INDUST</td>
   <td>component [odh-UsualIndustry	].value.text</td>
   <td>string(40)</td>
@@ -51,20 +45,38 @@ For NCHS provided coded values the specific vocabulary used will depend on the d
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>94</td>
-  <td>Occupation -- 4 digit Code </td>
+  <td>Occupation -- 4 digit Code</td>
   <td>OCCUPC4</td>
-  <td>valueCodeableConcept.coding[occupationCDCCensus2018] </td>
+  <td>valueCodeableConcept.coding[occupationCDCCensus2018]</td>
   <td>codeable</td>
   <td><a href='https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8065'>PHVS_Occupation_CDC_Census2018VS</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>94</td>
+  <td>Occupation -- 2018 Standard Occupational Classification (SOC)</td>
+  <td>*NO IJE MAPPING*</td>
+  <td>valueCodeableConcept.coding[occupationCDCSOC2018]</td>
+  <td>codeable</td>
+  <td><a href='http://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8068'>PHVS_Occupation_CDC_SOC2018</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>95</td>
   <td>Industry -- 4 digit Code</td>
   <td>INDUSTC4</td>
-  <td>component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018] </td>
+  <td>component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018]</td>
   <td>codeable</td>
   <td><a href='https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8066'>PHVS_Industry_CDC_Census2018VS</a></td>
+</tr>
+<tr>
+  <td style='text-align: center'>Mortality</td>
+  <td>95</td>
+  <td>Industry -- North American Industry Classification System (NAICS)</td>
+  <td>*NO IJE MAPPING*</td>
+  <td>component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCNAICS2017]</td>
+  <td>codeable</td>
+  <td><a href='https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.8067'>PHVS_Industry_CDC_NAICS2017</a></td>
 </tr>
 
 </tbody>

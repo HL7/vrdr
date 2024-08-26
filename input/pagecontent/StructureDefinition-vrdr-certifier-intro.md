@@ -124,7 +124,7 @@ The VRDR IG profiles require a <a href='{{site.data.fhir.ver.hl7fhirusvrcommonli
   <td>230</td>
   <td>Long string address for Certifier same as above but allows states to choose the way they capture information.</td>
   <td>CERTADDRESS</td>
-  <td>address.line </td>
+  <td>address.line</td>
   <td>string</td>
   <td>-</td>
 </tr>
@@ -133,7 +133,7 @@ The VRDR IG profiles require a <a href='{{site.data.fhir.ver.hl7fhirusvrcommonli
   <td>231</td>
   <td>Certifier - City or Town name</td>
   <td>CERTCITYTEXT</td>
-  <td>address.city </td>
+  <td>address.city</td>
   <td>string</td>
   <td>-</td>
 </tr>

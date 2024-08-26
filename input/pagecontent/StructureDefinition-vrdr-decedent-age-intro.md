@@ -57,7 +57,7 @@ The DecedentAge profile of Observation records the decedents age at time of deat
   <td style='text-align: center'>Mortality</td>
   <td>17</td>
   <td>Decedent's Age--Units</td>
-  <td>AGE </td>
+  <td>AGE</td>
   <td>valueQuantity.value</td>
   <td>decimal</td>
   <td>-</td>

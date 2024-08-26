@@ -1,7 +1,7 @@
-The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
-
-  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.  A value of 'unknown' will satisfy this requirement.
-  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
+The Decedent profile contains basic information about the decedent, including data that are essential to the death record.
+
+  Note: The Decedent profile is based on the [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html) which requires gender.  A value of 'unknown' will satisfy this requirement.
+  The death record submission use case uses NCHS's definition of sex at time of death which is different than gender.  Complete death record submissions may fail FHIR validation
   due to lack of a value for gender.
 
 ### IJE Mapping
@@ -33,7 +33,7 @@ The Decedent profile contains basic information about the decedent, including da
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>7</td>
-  <td>Decedent's Legal Name--Given </td>
+  <td>Decedent's Legal Name--Given</td>
   <td>GNAME</td>
   <td>name.given , name.use = official</td>
   <td>string</td>
@@ -71,7 +71,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>13</td>
   <td>Sex</td>
   <td>SEX</td>
-  <td>extension[NVSS-SexAtDeath] </td>
+  <td>extension[NVSS-SexAtDeath]</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a></td>
 </tr>
@@ -125,7 +125,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>22</td>
   <td>Birthplace--Country</td>
   <td>BPLACE_CNT</td>
-  <td>extension[patient-birthPlace].value[x].country </td>
+  <td>extension[patient-birthPlace].value[x].country</td>
   <td>string</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a></td>
 </tr>
@@ -179,7 +179,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>28</td>
   <td>Decedent's Residence--Inside City Limits</td>
   <td>LIMITS</td>
-  <td>address.city.extension[withinCityLimits] </td>
+  <td>address.city.extension[withinCityLimits]</td>
   <td>codeable</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-yes-no-unknown-vr.html'>ValueSetYesNoUnknownVitalRecords</a></td>
 </tr>
@@ -190,14 +190,14 @@ The Decedent profile contains basic information about the decedent, including da
   <td>MARITAL</td>
   <td>maritalStatus</td>
   <td>codeable</td>
-  <td> <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-marital-status-vr.html'>ValueSetMaritalStatusVitalRecords</a></td>
+  <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-marital-status-vr.html'>ValueSetMaritalStatusVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>30</td>
   <td>Marital Status--Edit Flag</td>
   <td>MARITAL_BYPASS</td>
-  <td>maritalStatus.extension[BypassEditFlag] </td>
+  <td>maritalStatus.extension[BypassEditFlag]</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-edit-bypass-0124-vs.html'>EditBypass0124VS</a></td>
 </tr>
@@ -206,9 +206,9 @@ The Decedent profile contains basic information about the decedent, including da
   <td>143</td>
   <td>Decedent's spouse living at decedent's DOD?</td>
   <td>SPOUSELV</td>
-  <td>extension[Spouse-Alive] </td>
+  <td>extension[Spouse-Alive]</td>
   <td>codeable</td>
-  <td> <a href='ValueSet-vrdr-spouse-alive-vs.html'>SpouseAliveVS</a></td>
+  <td><a href='ValueSet-vrdr-spouse-alive-vs.html'>SpouseAliveVS</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -295,7 +295,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td style='text-align: center'>Mortality</td>
   <td>155</td>
   <td>Decedent's Residence - State name</td>
-  <td>STATETEXT_R </td>
+  <td>STATETEXT_R</td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
@@ -321,7 +321,7 @@ The Decedent profile contains basic information about the decedent, including da
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>166</td>
-  <td>Middle Name of Decedent </td>
+  <td>Middle Name of Decedent</td>
   <td>DMIDDLE</td>
   <td>name.given , name.use = official</td>
   <td>string</td>
@@ -359,7 +359,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>201</td>
   <td>Informant's Relationship</td>
   <td>INFORMRELATE</td>
-  <td>contact.relationship.text </td>
+  <td>contact.relationship.text</td>
   <td>string (30 characters)</td>
   <td>-</td>
 </tr>
@@ -377,7 +377,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>246</td>
   <td>Marital Descriptor</td>
   <td>MARITAL_DESCRIP</td>
-  <td>maritalStatus.text </td>
+  <td>maritalStatus.text</td>
   <td>string</td>
   <td>-</td>
 </tr>
@@ -422,14 +422,14 @@ The Decedent profile contains basic information about the decedent, including da
   <td>2</td>
   <td>State, U.S. Territory or Canadian Province of Birth - code</td>
   <td>BPLACE_ST</td>
-  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present </td>
+  <td>extension[patient-birthPlace].value[x].state or extension[patient-birthPlace].value[x].state.extension[nationalReportingJurisdictionId] if present</td>
   <td>string</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-jurisdiction-vr.html'>ValueSetJurisdictionVitalRecords</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality Roster</td>
   <td>3</td>
-  <td>Decedent's Legal Name--Given </td>
+  <td>Decedent's Legal Name--Given</td>
   <td>GNAME</td>
   <td>name.given , name.use = official</td>
   <td>string</td>
@@ -485,7 +485,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>14</td>
   <td>Sex</td>
   <td>SEX</td>
-  <td>extension[NVSS-SexAtDeath] </td>
+  <td>extension[NVSS-SexAtDeath]</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-administrative-gender-vs.html'>AdministrativeGenderVS</a></td>
 </tr>
@@ -520,7 +520,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td style='text-align: center'>Mortality Roster</td>
   <td>27</td>
   <td>State, U.S. Territory or Canadian Province of Decedent's Residence - literal</td>
-  <td>STATETEXT_R </td>
+  <td>STATETEXT_R</td>
   <td>address.state (expanded from 2 letter code)</td>
   <td>string</td>
   <td>See <a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/usage.html#state-literals'>StateLiterals</a></td>
@@ -539,7 +539,7 @@ The Decedent profile contains basic information about the decedent, including da
   <td>29</td>
   <td>Birthplace Country - Code</td>
   <td>BPLACE_CT</td>
-  <td>extension[patient-birthPlace].value[x].country </td>
+  <td>extension[patient-birthPlace].value[x].country</td>
   <td>string</td>
   <td><a href='{{site.data.fhir.ver.hl7fhirusvrcommonlibrary}}/ValueSet-ValueSet-birthplace-country-vr.html'>ValueSetBirthplaceCountryVitalRecords</a>.</td>
 </tr>

@@ -90,9 +90,9 @@ The replacement status of a submission is now specified as a message parameter a
   <td>6</td>
   <td>Source flag: paper/electronic</td>
   <td>MFILED</td>
-  <td>extension[filingFormat] </td>
+  <td>extension[filingFormat]</td>
   <td>codeable</td>
-  <td> <a href='ValueSet-vrdr-filing-format-vs.html'>FilingFormatVS</a></td>
+  <td><a href='ValueSet-vrdr-filing-format-vs.html'>FilingFormatVS</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -124,7 +124,7 @@ The replacement status of a submission is now specified as a message parameter a
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>122</td>
-  <td>State Specific Data </td>
+  <td>State Specific Data</td>
   <td>STATESP</td>
   <td>extension[stateSpecificField]</td>
   <td>string(30)</td>
@@ -133,7 +133,7 @@ The replacement status of a submission is now specified as a message parameter a
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>184</td>
-  <td>Replacement Record </td>
+  <td>Replacement Record</td>
   <td>REPLACE (*deprecated*)</td>
   <td>extension[replaceStatus]</td>
   <td>codeable</td>
