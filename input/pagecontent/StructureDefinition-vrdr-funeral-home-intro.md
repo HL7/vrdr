@@ -95,7 +95,7 @@
   <td>FUNFACADDRESS</td>
   <td>address.line</td>
   <td>string</td>
-  <td>address.line </td>
+  <td>address.line</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
@@ -104,7 +104,7 @@
   <td>FUNCITYTEXT</td>
   <td>address.city</td>
   <td>string</td>
-  <td>address.city </td>
+  <td>address.city</td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>

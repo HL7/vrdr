@@ -54,7 +54,7 @@
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>101</td>
-  <td>Intentional Reject </td>
+  <td>Intentional Reject</td>
   <td>INT_REJ</td>
   <td>parameter[intentionalReject].value</td>
   <td>codeable</td>
@@ -65,7 +65,7 @@
   <td>102</td>
   <td>Acme System Reject Codes</td>
   <td>SYS_REJ</td>
-  <td>parameter[acmeSystemReject].value </td>
+  <td>parameter[acmeSystemReject].value</td>
   <td>codeable</td>
   <td>[ACMESystemRejectVS]</td>
 </tr>
@@ -74,14 +74,14 @@
   <td>107</td>
   <td>Transax conversion flag: Computer Generated</td>
   <td>TRX_FLG</td>
-  <td>parameter[transaxConversion].value </td>
+  <td>parameter[transaxConversion].value</td>
   <td>codeable</td>
   <td><a href='ValueSet-vrdr-transax-conversion-vs.html'>TransaxConversionVS</a></td>
 </tr>
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>NA</td>
-  <td>coder status </td>
+  <td>coder status</td>
   <td>CS (TRX Field, no IJE Mapping)</td>
   <td>parameter[coderStatus].value</td>
   <td>integer</td>
@@ -90,7 +90,7 @@
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>NA</td>
-  <td>shipment number </td>
+  <td>shipment number</td>
   <td>SHIP (TRX Field, no IJE Mapping)</td>
   <td>parameter[shipmentNumber].value</td>
   <td>string</td>

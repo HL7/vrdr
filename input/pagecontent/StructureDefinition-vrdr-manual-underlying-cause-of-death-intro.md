@@ -27,7 +27,7 @@
 <tr>
   <td style='text-align: center'>Mortality</td>
   <td>104</td>
-  <td>Manual Underlying Cause </td>
+  <td>Manual Underlying Cause</td>
   <td>MAN_UC</td>
   <td>value</td>
   <td>codeable</td>
