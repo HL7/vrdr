@@ -10,6 +10,7 @@ RuleSet: ConceptMapIntro(name, vsname)
 * jurisdiction = urn:iso:std:iso:3166#US
 * purpose = "To help implementers map from IJE to FHIR Vocabulary"
 * targetCanonical = Canonical({vsname})
+* sourceCanonical = "#IJE"
 
 RuleSet: MapConcept(code, display, targetcode, targetdisplay)
 * group[=].element[+]
