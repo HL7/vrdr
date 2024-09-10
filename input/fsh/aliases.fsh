@@ -46,16 +46,3 @@ Alias: $PHVS_Occupation_CDC_Census2012 = http://phinvads.cdc.gov/fhir/ValueSet/2
 // Vital Records Common Library
 Alias: $IJE = http://hl7.org/fhir/us/vr-common-library/CodeSystem/codesystem-ije-vr
 
-/// VRDR CS and VS
-//Alias: $Yes-No-Unknown = YesNoUnknownVS
-//Alias: $Yes-No-Unknown-NotApplicable = YesNoUnknownNotApplicableVS
-//Alias: $raceMissingValueReason = RaceMissingValueReasonVS
-//Alias: $place-of-death = PlaceOfDeathVS
-//Alias: $vrdrYesNoUnknown = YesNoUnknownVS
-//Alias: $manner-of-death = MannerOfDeathVS
-//Alias: $marital-status = MaritalStatusVS
-//Alias: $documentSectionCodeSystem = DocumentSectionCS
-//Alias: $education-level = EducationLevelVS
-//Alias: $bypassEditFlagCodeSystem = BypassEditFlagCS
-//Alias: $Cause-Of-Death-Condition = CauseOfDeathCondition
-//Alias: $administrative-gender_1 = AdministrativeGenderVS
