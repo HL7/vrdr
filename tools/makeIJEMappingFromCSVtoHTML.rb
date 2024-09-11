@@ -245,6 +245,7 @@ createMappingTable("VRDR", "Mortality Roster", "### Mortality Roster IJE Mapping
 #create hash for mapping of links 
 aliases={}
 File.foreach(Dir.pwd + "/input/includes/markdown-link-references.md", chomp: true) do |line|
+    next if line.start_with?('<!-', '{%')|| line.strip.empty?
     parts = line.split(':',2)
     url =parts[1][1..] if !parts[1].nil?
     link = parts[0][1..-2]
