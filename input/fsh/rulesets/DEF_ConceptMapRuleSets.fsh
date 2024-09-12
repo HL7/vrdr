@@ -10,7 +10,8 @@ RuleSet: ConceptMapIntro(name, vsname)
 * jurisdiction = urn:iso:std:iso:3166#US
 * purpose = "To help implementers map from IJE to FHIR Vocabulary"
 * targetCanonical = Canonical({vsname})
-* sourceCanonical = "http://hl7.org/fhir/us/vr-common-library/ValueSet/ije-vr"
+* sourceCanonical = Canonical(ValueSetIJEVitalRecords)
+
 
 RuleSet: MapConcept(code, display, targetcode, targetdisplay)
 * group[=].element[+]
