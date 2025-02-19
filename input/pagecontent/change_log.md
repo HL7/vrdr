@@ -1,3 +1,6 @@
+### Unpublished Changes 
+* [FHIR-49764](https://jira.hl7.org/browse/FHIR-49764): IJE has two distinct 2-letter codoes for unknown.  The [States, Territories, and Provinces Value Set](https://hl7.org/fhir/us/vr-common-library/STU2/ValueSet-ValueSet-states-territories-provinces-vr.html) has incorporated a null flavor code of UNK since its inception in VRDR STU2, but that isn't adequate to represent IJE content.  This change needs to be propogated to VRDR that reference this value set.
+
 ### VRDR STU3 Changes
 - Documentation changes to align [CauseOfDeathCodedContentBundle] with TRX
 * Added support for sending the State Specific Field (STATESP) back to jurisdictions as part of the TRX-equivalent [CauseOfDeathCodedContentBundle]
