@@ -10,7 +10,7 @@ Mapping to IJE codes [here](ConceptMap-MethodOfDispositionCM.html)."
 * $sct#449941000124103 "Removal from state"
 * $sct#449951000124101 "Donation"
 * $sct#449961000124104 "Cremation"
-* $sct#449971000124106 "Burial"
+* $sct#449971000124106 "Patient status determination, deceased and buried (finding)"
 * $v3-NullFlavor#OTH "Other"
 * $v3-NullFlavor#UNK "Unknown"
 * ^experimental = false

@@ -5,7 +5,7 @@ Usage: #definition
 * experimental = false
 * insert ConceptMapIntro(MethodOfDisposition, MethodOfDispositionVS)
 * insert AddGroup($IJE,$sct)
-* insert MapConcept( #B,  "Burial",#449971000124106, "Burial")
+* insert MapConcept( #B,  "Burial",#449971000124106, "Patient status determination deceased and buried finding")
 * insert MapConcept( #C,  "Cremation",#449961000124104, "Cremation")
 * insert MapConcept( #D,  "Donation",#449951000124101, "Donation")
 * insert MapConcept( #E,  "Entombment",#449931000124108, "Entombment")

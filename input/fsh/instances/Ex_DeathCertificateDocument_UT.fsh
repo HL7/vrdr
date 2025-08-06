@@ -288,7 +288,7 @@ Usage: #example
 Description: "DispositionMethodUT-Example1"
 * status = #final 
 * subject = Reference(DecedentUT-Example1)
-* valueCodeableConcept = $sct#449971000124106 "Burial"
+* valueCodeableConcept = $sct#449971000124106 "Patient status determination, deceased and buried (finding)"
 
 Instance: DispositionLocationUT-Example1
 InstanceOf: DispositionLocation
