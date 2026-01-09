@@ -5,13 +5,14 @@ To help make the mortality data ecosystem more connected, adaptable, and robust,
 This implementation guide is an initial step to help define a common set of protocols and practices that developers can rely on to enhance their existing products and build solutions to help make mortality data flow more seamlessly.
 
 ### Use Cases
-The profiles were designed to enable standards-based interoperable exchange in support of four primary use cases:
+The profiles were designed to enable standards-based interoperable exchange in support of five primary use cases:
 * Transmission of Death Records by Jurisdictions to NCHS
 * Transmission of Coded Cause of Death, Demographics, and Industry/Occupation information by NCHS to Jurisdictions
 * Transmission of Death Records among Jurisdictions
 * Transmission of Mortality Rosters among Jurisdictions
+* Transmission of Death Records by Hospitals to Jurisdictions 
 
-The profiles defined in this IG along with the mappings to the existing InterJurisdictional Exchange ([IJE](IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv)) format, and associated Transax ([TRX](https://www.cdc.gov/nchs/data/dvs/2003tin.pdf)), and Mortality ([MRE](https://www.cdc.gov/nchs/data/dvs/200XMOR_web_with%20clearance%20revisions-acc.pdf)) documentation.  The narrative content for each profile shows the mapping of IJE-defined death record content to the fields of the profile.  Instances of these profiles are assembled as described below in bundles to support the three use cases.  Concept maps are provided for most valuesets defined in this IG (e.g., [Tobacco Use](ConceptMap-ContributoryTobaccoUseCM.html) that document mapping between the IJE, TRX, and MRE formats and the FHIR valuesets.
+The profiles defined in this IG along with the mappings to the existing InterJurisdictional Exchange ([IJE](IJE_File_Layouts_and_FHIR_Mapping_24-06-21.csv)) format, and associated Transax ([TRX](https://www.cdc.gov/nchs/data/dvs/2003tin.pdf)), and Mortality ([MRE](https://www.cdc.gov/nchs/data/dvs/200XMOR_web_with%20clearance%20revisions-acc.pdf)) documentation.  The narrative content for each profile shows the mapping of IJE-defined death record content to the fields of the profile.  Instances of these profiles are assembled as described below in bundles to support the three use cases.  Concept maps are provided for most valuesets defined in this IG (e.g., [Tobacco Use](ConceptMap-ContributoryTobaccoUseCM.html) that document mapping between the IJE, TRX, and MRE formats and the FHIR valuesets. Deaths reported by hospitals do not use the IJE format.
 
 #### Transmission of Death Records by Jurisdictions to NCHS
 Instances of these profiles are assembled as shown below in a [DeathCertificateDocument], a profile of a FHIR Bundle of type document.  Within that Bundle are contained a [DeathCertificate], a profile of a FHIR Composition, along with instances of FHIR profiles that are referenced from the DeathCertificate.  The content of the Death Record for submission is illustrated here.  The precise content requirements for submission are established by NCHS.
@@ -43,6 +44,10 @@ The VRDR IG is intended to support the full information content of the Mortality
 <center>
 <table><tr><td><img src="Slide24.png" style="width:60%;"/></td></tr></table>
 </center>
+
+#### Transmission of Death Records by Hospitals to Jurisdictions 
+The VRDR IG is intended to support the content used for hospital reported deaths. The content is constructed from a set of VRDR profiles, as illustrated here.
+
 
 ### References
 * [2022 Mortality Data reference](https://r20.rs6.net/tn.jsp?f=001u-eBMBj0UGlhPdHxUU_w_MafJMX_8rYmjFZga3pBUoUhwcUSSzMK5lw-ncpe9c1_OCJdI66kcNI-ILEyJKT9ILqF6v3RMIxQHe-k9-IYCzq96MQmC3sO0FgIOhAgnvf_zF7l6N4k8lCQjzRnFuzO-UmCFtlHJpOYd3fjY2Cw2StY-TA-wVQOw320Sj_WyhIuq2H9GPAtpsuuBkomxjl6jizGiL_Ql0yOwjp-cUjTOTA=&c=hrGtL9tmvJ1DKGpbzqPuF3KvUpFVK0qchygyr7StLU1Sluvl9ZBcLg==&ch=hptEZrbFDWPJdXxXwQsrUk7F-lUko-MpszM6NS4g8yVkg29mqPQHXA==)
