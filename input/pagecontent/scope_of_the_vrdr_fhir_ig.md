@@ -1,5 +1,5 @@
 ### Scope
-The primary scope of this VRDR FHIR IG is the reporting of incidents of death by State Registrars to the NCHS. The data content of this dataflow contains an aggregation of data collected in preceding dataflows and used in additional dataflows related to the secondary use of death information such as clinical research, law enforcement, and health policy determination. For the EHR workflow use case the scope has been expanded to support reporting deaths from a hospital to a jurisdictional vital records office.
+The primary scope of this VRDR FHIR IG is the reporting of incidents of death by State Registrars to the NCHS. The data content of this dataflow contains an aggregation of data collected in preceding dataflows and used in additional dataflows related to the secondary use of death information such as clinical research, law enforcement, and health policy determination. To support the EHR workflow the IG scope has been expanded to support reporting deaths from a hospital to a jurisdictional vital records office.
 
 <center>
 <table><tr><td><img src="Scope.png" style="width:100%;"/></td></tr></table>
