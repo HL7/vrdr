@@ -10,14 +10,8 @@ Description: "The body of the death certificate document (Composition) from EHR 
 * type 1..1
 * type only CodeableConcept
 * type = $loinc#64297-5 // "Death certificate"
-* extension contains
-    FilingFormat named filingFormat 0..1 and
-    ReplaceStatus named replaceStatus 0..1
-* extension[FilingFormat] ^short = "Filing Format"
 * subject 1..1
 * subject only Reference(Decedent)
-// * date 1..1
-* date ^short = "Date of Registration"
 //* attester 1..1
 * attester only BackboneElement
 * attester.mode 1..1

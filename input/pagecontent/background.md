@@ -46,7 +46,10 @@ The VRDR IG is intended to support the full information content of the Mortality
 </center>
 
 #### Transmission of Death Records by Hospitals to Jurisdictions 
-The VRDR IG is intended to support the content used for hospital reported deaths. The content is constructed from a set of VRDR profiles, as illustrated here.
+The VRDR IG is intended to support the content used for hospital reported deaths. The content is constructed from a set of VRDR profiles, as illustrated here. Demographics are optional for this use case since source information is most often provided by funeral homes. They are cases where hospitals may act as funeral homes.
+<center>
+<table><tr><td><img src="Slide25.png" style="width:60%;"/></td></tr></table>
+</center>
 
 
 ### References

@@ -56,8 +56,6 @@ Title: "DeathCertificateEHR Example"
 * event.code = $sct#307930005 "Death certificate (record artifact)"
 * insert addReferenceComposition(attester.party, Practitioner, Certifier-Example1)
 * insert addReferenceComposition(event.detail, Procedure, DeathCertification-Example1)
-*  extension[filingFormat].valueCodeableConcept = FilingFormatCS#electronic
-*  extension[replaceStatus].valueCodeableConcept = ReplaceStatusCS#original
 * section[DecedentDemographics]
   * insert addNamedEntryComposition(Decedent, Patient, Decedent-Example1) 
   * insert addNamedEntryComposition(Father, RelatedPerson, DecedentFather-Example1) 
