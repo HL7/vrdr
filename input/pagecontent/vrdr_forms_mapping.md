@@ -293,8 +293,8 @@ Information on updates to the death forms can be found at NVSS [Revisions of the
 </tr>
 <tr>
   <td style='text-align: center'>32Part2</td>
-  <td>Other Cause of Death</td>
-  <td><a href='StructureDefinition-vrdr-cause-of-death-part2.html'>CauseOfDeathPart2</a></td>
+  <td>Other Significant Conditions Contributing to Death</td>
+  <td><a href='StructureDefinition-vrdr-cause-of-death-part2.html'>Part 2 Other Significant Conditions Contributing to Death</a></td>
   <td>value.text</td>
 </tr>
 <tr>
