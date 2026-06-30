@@ -10,7 +10,6 @@ Description: "The resources comprising the death certificate composition (Bundle
   * ^slicing.rules = #open
   * ^slicing.description = "Slicing based on the profile"
 * entry contains DeathCertificateEHR 1..1
-  * resource 1..
 * entry[DeathCertificateEHR] ^short = "Death Certificate EHR"
   * ^definition = "Death Certificate EHR"
   * resource only DeathCertificateEHR

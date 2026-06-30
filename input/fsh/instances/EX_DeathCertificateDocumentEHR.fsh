@@ -3,7 +3,8 @@ InstanceOf: DeathCertificateDocumentEHR
 Usage: #example
 Description: "DeathCertificateDocumentEHR-Example"
 * insert AddMetaProfile(DeathCertificateDocumentEHR)
-* identifier.system = "http://nchs.cdc.gov/vrdr_id"
+* identifier.system = "http://emr.com/vrdr_id"
+* identifier.value = "1234567VRDR"
 * type = #document
 * timestamp = "2020-10-20T14:48:35.401641-04:00"
 * insert addentry(Composition, DeathCertificateEHR-Example)
@@ -46,7 +47,7 @@ Usage: #example
 Description: "DeathCertificateEHR-Example"
 Title: "DeathCertificateEHR Example"
 *  status = #final
-*  type = $loinc#64297-5 "Death certificate EHR"
+*  type = $loinc#64297-5 "Death certificate"
 * insert addReferenceComposition(subject, Patient, Decedent-Example1)
 *  date = "2020-11-15T16:39:54-05:00"
 * insert addReferenceComposition(author, Practitioner, Certifier-Example1)
